@@ -1,7 +1,7 @@
 name: zimanpro
 description: ZimanPro - فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی، دگەل سیستەمێ دەنگی ب دەنگێ تە.
 publish_to: 'none'
-version: 3.1.0+4
+version: 4.0.0+5
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -13,8 +13,11 @@ dependencies:
   record: ^6.0.0
   # لێدانا فایلێن دەنگی
   audioplayers: ^6.1.0
-  # جهێ پاشەکەفتکرنا فایلان ل سەر مۆبایلێ
-  path_provider: ^2.1.4
+  # پاشەکەفتکرنا دەنگان (IndexedDB ل iPhone/وێبێ، فایل ل Android)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  # Web Audio بۆ iPhone (Safari)
+  web: ^1.1.0
   # پاشەکەفتکرنا XP، Streak و پێشکەفتنێ
   shared_preferences: ^2.3.2
   # دەنگێ ئۆتۆماتیک بۆ ئەلمانی و ئینگلیزی (ئەگەر تە دەنگ تۆمار نەکربیت)

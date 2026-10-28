@@ -86,12 +86,12 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
 
   /// هاوردەکرنا voice_pack.zip کو ژ Colab هاتیە داگرتن (Downloads)
   Future<void> _importPack() async {
-    final res = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['zip']);
-    final path = res?.files.single.path;
-    if (path == null) return;
+    final res = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['zip'], withData: true);
+    final bytes = res?.files.single.bytes;
+    if (bytes == null) return;
     setState(() => busy = true);
     try {
-      final n = await voice.importPack(path);
+      final n = await voice.importPack(bytes);
       if (!mounted) return;
       _snack(n > 0
           ? tr(ui, '🎉 $n دەنگ هاتنە هاوردەکرن!', '🎉 $n Stimmen importiert!', '🎉 Imported $n voices!')
@@ -237,8 +237,13 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
                   IconButton(
                     tooltip: 'Share',
                     icon: const Icon(Icons.ios_share_rounded, color: Colors.white70),
-                    onPressed: () => Share.shareXFiles([XFile(voice.referencePath(lang))],
-                        text: 'ZimanPro voice sample (${lang.code})'),
+                    // ب Share دشێی نموونێ پاشەکەفت بکەی ل Files (Save to Files) بۆ Colab
+                    onPressed: () => Share.shareXFiles([
+                      XFile.fromData(voice.referenceBytes(lang)!,
+                          name: 'zimanpro_voice_${lang.code}.wav', mimeType: 'audio/wav'),
+                    ], fileNameOverrides: [
+                      'zimanpro_voice_${lang.code}.wav'
+                    ]),
                   ),
               ],
             ),

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -74,7 +73,7 @@ class CloneService {
       ..fields['consent'] = 'true';
     for (final lang in AppLanguage.values) {
       if (!v.hasReference(lang)) continue;
-      req.files.add(await http.MultipartFile.fromPath('ref_${lang.code}', v.referencePath(lang), filename: 'ref_${lang.code}.m4a'));
+      req.files.add(http.MultipartFile.fromBytes('ref_${lang.code}', v.referenceBytes(lang)!, filename: 'ref_${lang.code}.wav'));
       req.fields['ref_text_${lang.code}'] = referenceScripts[lang]!;
     }
     final res = await http.Response.fromStream(await req.send().timeout(const Duration(minutes: 2)));
@@ -95,7 +94,7 @@ class CloneService {
             body: jsonEncode({'speaker_id': speakerId, 'lang': lang.code, 'text': c.text(lang)}))
         .timeout(const Duration(minutes: 2));
     if (res.statusCode != 200) throw CloneException('TTS failed (${res.statusCode})');
-    await File(VoiceService.instance.clonedPathFor(lang, c.id)).writeAsBytes(res.bodyBytes);
+    await VoiceService.instance.putCloned(lang, c.id, res.bodyBytes);
   }
 
   /// هەمی وانەیان ب دەنگێ تە دروست بکە. [onProgress] (done, total)

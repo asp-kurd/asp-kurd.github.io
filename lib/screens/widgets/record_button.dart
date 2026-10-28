@@ -56,9 +56,7 @@ class _RecordButtonState extends State<RecordButton> {
       recording = true;
       seconds = 0;
     });
-    _ampSub = VoiceService.instance.amplitudeStream().listen((a) {
-      // dBFS: -60 (بێدەنگ) ... 0 (بلند)
-      final v = ((a.current + 50) / 50).clamp(0.0, 1.0);
+    _ampSub = VoiceService.instance.levelStream().listen((v) {
       if (mounted) setState(() => level = v);
     });
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {

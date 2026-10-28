@@ -1,66 +1,85 @@
-import 'dart:io';
+import 'dart:async';
+import 'dart:math' as math;
+import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:record/record.dart';
 
 import '../models.dart';
+import 'audio_out_native.dart' if (dart.library.js_interop) 'audio_out_web.dart';
 
 /// ژێدەرێ دەنگێ پەیڤەکێ
 enum VoiceSource { mine, cloned, pack, tts, none }
 
-/// سیستەمێ دەنگی. رێزا گرنگیێ بۆ هەر پەیڤەکێ:
-///   ١. mine   — دەنگێ تە یێ ب دەست تۆمارکری (ستۆدیۆ)
-///   ٢. cloned — دەنگێ تە یێ کلۆنکری ژ سێرڤەری (documents/cloned/)
-///   ٣. pack   — پاکێتا دەنگێ کلۆنکری ژ Colab (assets/voices/)
-///   ٤. tts    — دەنگێ ئۆتۆماتیک (تنێ ئەلمانی/ئینگلیزی)
+/// سیستەمێ دەنگی — ل سەر iPhone (Safari/وێب) و Android ژی کار دکەت.
+///
+/// هەمی دەنگ وەکی bytes د Hive دا (IndexedDB ل وێبێ) پاشەکەفت دبن، نە وەکی فایل.
+/// «path» / «key» ل ڤێرێ ناڤێ تۆمارێیە د Hive دا، بۆ نموونە `mine/ku_g1`.
+///
+/// رێزا گرنگیێ بۆ هەر پەیڤەکێ:
+///   ١. mine   — دەنگێ تە یێ ب دەست تۆمارکری
+///   ٢. cloned — دەنگێ تە یێ کلۆنکری (ژ سێرڤەری یان voice_pack.zip)
+///   ٣. pack   — assets/voices/ (د ناڤ ئەپی دا)
+///   ٤. tts    — دەنگێ ئۆتۆماتیک (ئەلمانی/ئینگلیزی)
 class VoiceService {
   VoiceService._();
   static final VoiceService instance = VoiceService._();
 
+  static const sampleRate = 22050;
+
   final AudioRecorder _recorder = AudioRecorder();
-  final AudioPlayer _player = AudioPlayer();
+  final AudioOut _out = AudioOut();
   final FlutterTts _tts = FlutterTts();
 
-  late Directory _voiceDir;
-  late Directory clonedDir;
-  late Directory referenceDir;
+  late LazyBox<dynamic> _box;
   Set<String> _packAssets = {};
+  final Map<String, Uint8List> _refCache = {}; // بۆ Share ا ب لەز (iOS)
   bool _ready = false;
-  String? _recordingPath;
 
-  bool get isRecording => _recordingPath != null;
+  // تۆمارکرن
+  String? _recordingKey;
+  StreamSubscription<Uint8List>? _pcmSub;
+  BytesBuilder? _pcm;
+  final _levels = StreamController<double>.broadcast();
+
+  bool get isRecording => _recordingKey != null;
 
   Future<void> init() async {
     if (_ready) return;
-    final docs = await getApplicationDocumentsDirectory();
-    _voiceDir = await Directory('${docs.path}/voices').create(recursive: true);
-    clonedDir = await Directory('${docs.path}/cloned').create(recursive: true);
-    referenceDir = await Directory('${docs.path}/reference').create(recursive: true);
+    await Hive.initFlutter('zimanpro');
+    _box = await Hive.openLazyBox<dynamic>('audio');
     try {
       final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
       _packAssets = manifest.listAssets().where((a) => a.startsWith('assets/voices/')).toSet();
     } catch (_) {
       _packAssets = {};
     }
-    await _tts.setSpeechRate(0.42);
+    for (final l in AppLanguage.values) {
+      final b = await _box.get(referencePath(l));
+      if (b is Uint8List) _refCache[referencePath(l)] = b;
+    }
+    _out.installUnlock();
+    try {
+      await _tts.setSpeechRate(0.42);
+    } catch (_) {}
     _ready = true;
   }
 
-  // ───────── رێڕەو ─────────
-  String pathFor(AppLanguage lang, String id) => '${_voiceDir.path}/${lang.code}_$id.m4a';
-  String clonedPathFor(AppLanguage lang, String id) => '${clonedDir.path}/${lang.code}_$id.mp3';
+  // ───────── کلیل (keys) ─────────
+  String pathFor(AppLanguage lang, String id) => 'mine/${lang.code}_$id';
+  String clonedPathFor(AppLanguage lang, String id) => 'cloned/${lang.code}_$id';
   String _packAsset(AppLanguage lang, String id) => 'assets/voices/${lang.code}_$id.mp3';
-  String referencePath(AppLanguage lang) => '${referenceDir.path}/ref_${lang.code}.m4a';
-  String get _practicePath => '${_voiceDir.path}/_practice.m4a';
-  String? get practiceRecording => File(_practicePath).existsSync() ? _practicePath : null;
+  String referencePath(AppLanguage lang) => 'ref/${lang.code}';
+  static const _practiceKey = 'practice';
+  String? get practiceRecording => _box.containsKey(_practiceKey) ? _practiceKey : null;
 
-  bool hasRecording(AppLanguage lang, String id) => File(pathFor(lang, id)).existsSync();
-  bool hasCloned(AppLanguage lang, String id) => File(clonedPathFor(lang, id)).existsSync();
-  bool hasReference(AppLanguage lang) => File(referencePath(lang)).existsSync();
+  bool hasRecording(AppLanguage lang, String id) => _box.containsKey(pathFor(lang, id));
+  bool hasCloned(AppLanguage lang, String id) => _box.containsKey(clonedPathFor(lang, id));
+  bool hasReference(AppLanguage lang) => _refCache.containsKey(referencePath(lang));
+  Uint8List? referenceBytes(AppLanguage lang) => _refCache[referencePath(lang)];
 
   VoiceSource sourceFor(WordConcept c, AppLanguage lang) {
     if (hasRecording(lang, c.id)) return VoiceSource.mine;
@@ -72,7 +91,6 @@ class VoiceService {
 
   bool canSpeak(WordConcept c, AppLanguage lang) => sourceFor(c, lang) != VoiceSource.none;
 
-  /// ئەگەر پەیڤ ب دەنگێ تە هەبیت (تۆمار، کلۆن، یان پاکێت)
   bool inMyVoice(WordConcept c, AppLanguage lang) {
     final s = sourceFor(c, lang);
     return s == VoiceSource.mine || s == VoiceSource.cloned || s == VoiceSource.pack;
@@ -81,76 +99,123 @@ class VoiceService {
   int countRecordings(AppLanguage lang, Iterable<WordConcept> cs) => cs.where((c) => hasRecording(lang, c.id)).length;
   int countMyVoice(AppLanguage lang, Iterable<WordConcept> cs) => cs.where((c) => inMyVoice(c, lang)).length;
 
-  // ───────── تۆمارکرن ─────────
+  Future<void> putCloned(AppLanguage lang, String id, Uint8List mp3) => _box.put(clonedPathFor(lang, id), mp3);
+
+  // ───────── تۆمارکرن (PCM ➔ WAV) ─────────
   Future<bool> hasPermission() => _recorder.hasPermission();
 
-  /// [path] ئەگەر هاتە دان، تۆمار دێ ل وێرێ پاشەکەفت بیت (بۆ نموونەیا کلۆنکرنێ)
+  /// [path] = کلیلا پاشەکەفتکرنێ (بۆ نموونە referencePath(lang))
   Future<bool> startRecording({AppLanguage? lang, String? conceptId, bool practice = false, String? path}) async {
     await init();
     if (!await _recorder.hasPermission()) return false;
     await stopPlayback();
-    final target = path ?? (practice ? _practicePath : pathFor(lang!, conceptId!));
-    await _recorder.start(
-      const RecordConfig(encoder: AudioEncoder.aacLc, bitRate: 128000, sampleRate: 44100, numChannels: 1),
-      path: '$target.tmp.m4a',
-    );
-    _recordingPath = target;
+    final key = path ?? (practice ? _practiceKey : pathFor(lang!, conceptId!));
+    _pcm = BytesBuilder(copy: false);
+    final stream = await _recorder.startStream(const RecordConfig(
+      encoder: AudioEncoder.pcm16bits,
+      sampleRate: sampleRate,
+      numChannels: 1,
+    ));
+    _pcmSub = stream.listen((chunk) {
+      _pcm?.add(chunk);
+      _levels.add(_level(chunk));
+    });
+    _recordingKey = key;
     return true;
   }
 
-  Future<String?> stopRecording() async {
-    final target = _recordingPath;
-    _recordingPath = null;
-    final tmp = await _recorder.stop();
-    if (target == null || tmp == null) return null;
-    final tmpFile = File(tmp);
-    if (!await tmpFile.exists() || await tmpFile.length() < 2000) {
-      if (await tmpFile.exists()) await tmpFile.delete();
-      return null;
+  /// بلندیا دەنگی 0..1 ژ PCM
+  double _level(Uint8List chunk) {
+    final n = chunk.length ~/ 2;
+    if (n == 0) return 0;
+    final bd = ByteData.sublistView(chunk);
+    var sum = 0.0;
+    for (var i = 0; i < n; i++) {
+      final s = bd.getInt16(i * 2, Endian.little) / 32768.0;
+      sum += s * s;
     }
-    final dest = File(target);
-    if (await dest.exists()) await dest.delete();
-    await tmpFile.rename(target);
-    return target;
+    final rms = math.sqrt(sum / n);
+    final db = 20 * math.log(rms + 1e-9) / math.ln10; // -inf..0
+    return ((db + 50) / 50).clamp(0.0, 1.0);
+  }
+
+  Stream<double> levelStream() => _levels.stream;
+
+  /// راوەستاندن و پاشەکەفتکرن. کلیلێ دزڤڕینیت، یان null ئەگەر تۆمار زۆر کورت بیت.
+  Future<String?> stopRecording() async {
+    final key = _recordingKey;
+    _recordingKey = null;
+    await _recorder.stop();
+    await Future.delayed(const Duration(milliseconds: 150)); // دویماهیک پارچە
+    await _pcmSub?.cancel();
+    _pcmSub = null;
+    final pcm = _pcm?.takeBytes();
+    _pcm = null;
+    if (key == null || pcm == null || pcm.length < sampleRate * 2 * 0.3) return null; // < ٠.٣ چرکە
+    final wav = _wav(pcm);
+    await _box.put(key, wav);
+    if (key.startsWith('ref/')) _refCache[key] = wav;
+    return key;
   }
 
   Future<void> cancelRecording() async {
-    _recordingPath = null;
+    _recordingKey = null;
     await _recorder.cancel();
+    await _pcmSub?.cancel();
+    _pcmSub = null;
+    _pcm = null;
   }
 
-  Future<void> deleteRecording(AppLanguage lang, String id) async {
-    final f = File(pathFor(lang, id));
-    if (await f.exists()) await f.delete();
+  Uint8List _wav(Uint8List pcm) {
+    const channels = 1, bits = 16;
+    final h = ByteData(44);
+    void str(int o, String s) {
+      for (var i = 0; i < s.length; i++) {
+        h.setUint8(o + i, s.codeUnitAt(i));
+      }
+    }
+
+    str(0, 'RIFF');
+    h.setUint32(4, 36 + pcm.length, Endian.little);
+    str(8, 'WAVE');
+    str(12, 'fmt ');
+    h.setUint32(16, 16, Endian.little);
+    h.setUint16(20, 1, Endian.little); // PCM
+    h.setUint16(22, channels, Endian.little);
+    h.setUint32(24, sampleRate, Endian.little);
+    h.setUint32(28, sampleRate * channels * bits ~/ 8, Endian.little);
+    h.setUint16(32, channels * bits ~/ 8, Endian.little);
+    h.setUint16(34, bits, Endian.little);
+    str(36, 'data');
+    h.setUint32(40, pcm.length, Endian.little);
+    return (BytesBuilder(copy: false)
+          ..add(h.buffer.asUint8List())
+          ..add(pcm))
+        .takeBytes();
   }
+
+  Future<void> deleteRecording(AppLanguage lang, String id) => _box.delete(pathFor(lang, id));
 
   Future<void> deleteAllCloned() async {
-    if (await clonedDir.exists()) {
-      await clonedDir.delete(recursive: true);
-      await clonedDir.create(recursive: true);
-    }
+    final keys = _box.keys.where((k) => k.toString().startsWith('cloned/')).toList();
+    await _box.deleteAll(keys);
   }
 
-  /// هاوردەکرنا voice_pack.zip ژ Colab راستەوخۆ ل سەر مۆبایلێ (بێ build).
-  /// فایلان دکەتە documents/cloned/ و ژمارا فایلێن هاوردەکری دزڤڕینیت.
-  Future<int> importPack(String zipPath) async {
+  /// هاوردەکرنا voice_pack.zip (ژ Colab). ژمارا دەنگێن هاوردەکری دزڤڕینیت.
+  Future<int> importPack(Uint8List zipBytes) async {
     await init();
-    final bytes = await File(zipPath).readAsBytes();
-    final archive = ZipDecoder().decodeBytes(bytes);
-    // تنێ ناڤێن وەکی ku_g1.mp3 — پاراستن ژ رێڕەوێن خەلەت
-    final valid = RegExp(r'^(ku|de|en)_[A-Za-z0-9_]+\.mp3$');
+    final archive = ZipDecoder().decodeBytes(zipBytes);
+    final valid = RegExp(r'^(ku|de|en)_([A-Za-z0-9_]+)\.mp3$');
     var count = 0;
     for (final f in archive) {
       if (!f.isFile) continue;
-      final name = f.name.split('/').last;
-      if (!valid.hasMatch(name)) continue;
-      await File('${clonedDir.path}/$name').writeAsBytes(f.content as List<int>);
+      final m = valid.firstMatch(f.name.split('/').last);
+      if (m == null) continue;
+      await _box.put('cloned/${m.group(1)}_${m.group(2)}', Uint8List.fromList(f.content as List<int>));
       count++;
     }
     return count;
   }
-
-  Stream<Amplitude> amplitudeStream() => _recorder.onAmplitudeChanged(const Duration(milliseconds: 120));
 
   // ───────── لێدان ─────────
   Future<bool> speak(WordConcept c, AppLanguage lang, {double rate = 1.0}) async {
@@ -158,38 +223,44 @@ class VoiceService {
     await stopPlayback();
     switch (sourceFor(c, lang)) {
       case VoiceSource.mine:
-        return _playDevice(pathFor(lang, c.id), rate);
+        return _playKey(pathFor(lang, c.id), rate);
       case VoiceSource.cloned:
-        return _playDevice(clonedPathFor(lang, c.id), rate);
+        return _playKey(clonedPathFor(lang, c.id), rate, mime: 'audio/mpeg');
       case VoiceSource.pack:
-        await _player.setPlaybackRate(rate);
-        // AssetSource پێشگرا 'assets/' ب خۆ زێدە دکەت
-        await _player.play(AssetSource(_packAsset(lang, c.id).substring('assets/'.length)));
+        final data = await rootBundle.load(_packAsset(lang, c.id));
+        await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
         return true;
       case VoiceSource.tts:
-        await _tts.setLanguage(lang.ttsCode!);
-        await _tts.setSpeechRate(0.42 * rate);
-        await _tts.speak(c.text(lang).replaceAll('...', ''));
-        return true;
+        try {
+          await _tts.setLanguage(lang.ttsCode!);
+          await _tts.setSpeechRate(0.42 * rate);
+          await _tts.speak(c.text(lang).replaceAll('...', ''));
+          return true;
+        } catch (_) {
+          return false;
+        }
       case VoiceSource.none:
         return false;
     }
   }
 
-  Future<bool> _playDevice(String path, double rate) async {
-    await _player.setPlaybackRate(rate);
-    await _player.play(DeviceFileSource(path));
+  Future<bool> _playKey(String key, double rate, {String mime = 'audio/wav'}) async {
+    final b = await _box.get(key);
+    if (b is! Uint8List) return false;
+    await _out.play(b, rate: rate, mime: mime);
     return true;
   }
 
-  Future<void> playFile(String path) async {
+  /// لێدانا تۆمارەکێ ب کلیلێ وێ
+  Future<void> playFile(String key) async {
     await stopPlayback();
-    await _player.setPlaybackRate(1.0);
-    await _player.play(DeviceFileSource(path));
+    await _playKey(key, 1.0, mime: key.startsWith('cloned/') ? 'audio/mpeg' : 'audio/wav');
   }
 
   Future<void> stopPlayback() async {
-    await _player.stop();
-    await _tts.stop();
+    await _out.stop();
+    try {
+      await _tts.stop();
+    } catch (_) {}
   }
 }
