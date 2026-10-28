@@ -57,8 +57,10 @@ class LessonUnit {
   final IconData icon;
   final Color color;
   final List<WordConcept> concepts;
+  final int section; // 1, 2, 3 ...
 
   const LessonUnit({
+    this.section = 1,
     required this.id,
     required this.titleKu,
     required this.titleDe,

@@ -112,9 +112,63 @@ class _LearnPath extends StatelessWidget {
               onTap: () => _open(context, null, weak),
             ),
           ),
+        _practiceCard(context, p),
         const SizedBox(height: 12),
-        for (var i = 0; i < appCurriculum.length; i++) _unitBlock(context, i),
+        for (var i = 0; i < appCurriculum.length; i++) ...[
+          if (i == 0 || appCurriculum[i].section != appCurriculum[i - 1].section) _sectionHeader(appCurriculum[i].section, n),
+          _unitBlock(context, i),
+        ],
+        if (p.completedUnits.length >= appCurriculum.length)
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(18)),
+            child: Text(
+              tr(n, '👑 تە هەمی قۆناغ تەمام کرن! ب «ڕاهێنانا ئازاد» بەردەوام بە دا ژ بیر نەکەی.',
+                  '👑 Alle Einheiten geschafft! Übe weiter mit „Freies Training“.',
+                  '👑 All units done! Keep practising with Free practice.'),
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+          ),
       ],
+    );
+  }
+
+  Widget _sectionHeader(int section, AppLanguage n) {
+    final title = section - 1 < appSections.length ? appSections[section - 1].title(n) : '';
+    return Padding(
+      padding: const EdgeInsets.only(top: 8, bottom: 16),
+      child: Row(children: [
+        const Expanded(child: Divider(color: Colors.white24)),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Text(title, style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
+        ),
+        const Expanded(child: Divider(color: Colors.white24)),
+      ]),
+    );
+  }
+
+  /// 🔁 ڕاهێنانا ئازاد — ٨ پەیڤێن هەڕەمەکی ژ قۆناغێن تە دیتین (هەرگیز ب دویماهی نائێت)
+  Widget _practiceCard(BuildContext context, ProgressService p) {
+    final n = p.nativeLang;
+    return Card(
+      color: AppColors.card,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: ListTile(
+        leading: const Icon(Icons.all_inclusive_rounded, color: AppColors.blue),
+        title: Text(tr(n, 'ڕاهێنانا ئازاد', 'Freies Training', 'Free practice'),
+            style: const TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Text(tr(n, '٨ پەیڤێن هەڕەمەکی ژ وانەیێن تە', '8 zufällige Wörter', '8 random words from your lessons')),
+        trailing: const Icon(Icons.play_arrow_rounded),
+        onTap: () {
+          final pool = [
+            for (var i = 0; i < appCurriculum.length; i++)
+              if (p.isUnlocked(i)) ...appCurriculum[i].concepts,
+          ]..shuffle();
+          _open(context, null, pool.take(8).toList());
+        },
+      ),
     );
   }
 
