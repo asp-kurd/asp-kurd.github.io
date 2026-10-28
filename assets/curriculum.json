@@ -1,0 +1,663 @@
+{
+ "version": 2,
+ "units": [
+  {
+   "id": "unit_1",
+   "titleKu": "قۆناغا ١: سلاڤ و بنەڕەت",
+   "titleDe": "Einheit 1: Begrüßung",
+   "titleEn": "Unit 1: Greetings",
+   "icon": "waving_hand",
+   "color": "#58CC02",
+   "concepts": [
+    {
+     "id": "g1",
+     "ku": "سلاڤ",
+     "kuLat": "Silav",
+     "de": "Hallo",
+     "deHint": "هالۆ",
+     "en": "Hello",
+     "enHint": "هێلۆ"
+    },
+    {
+     "id": "g2",
+     "ku": "سپێدە باش",
+     "kuLat": "Spêde baş",
+     "de": "Guten Morgen",
+     "deHint": "گوتن مۆرگن",
+     "en": "Good morning",
+     "enHint": "گود مۆرنینگ"
+    },
+    {
+     "id": "g3",
+     "ku": "تو چاوانی؟",
+     "kuLat": "Tu çawanî?",
+     "de": "Wie geht es dir?",
+     "deHint": "ڤی گێت ئێس دیر؟ (dir = Dativ)",
+     "en": "How are you?",
+     "enHint": "هاو ئار یوو؟"
+    },
+    {
+     "id": "g4",
+     "ku": "ئەز باشم",
+     "kuLat": "Ez başim",
+     "de": "Mir geht es gut",
+     "deHint": "میر گێت ئێس گوت",
+     "en": "I am fine",
+     "enHint": "ئای ئێم فاین"
+    },
+    {
+     "id": "g5",
+     "ku": "زۆر سوپاس",
+     "kuLat": "Zor supas",
+     "de": "Vielen Dank",
+     "deHint": "فیلن دانک",
+     "en": "Thank you very much",
+     "enHint": "سانک یوو ڤێری مەچ"
+    },
+    {
+     "id": "g6",
+     "ku": "ب خاترا تە",
+     "kuLat": "Bi xatra te",
+     "de": "Tschüss",
+     "deHint": "چووس",
+     "en": "Goodbye",
+     "enHint": "گودبای"
+    },
+    {
+     "id": "g7",
+     "ku": "بەلێ",
+     "kuLat": "Belê",
+     "de": "Ja",
+     "deHint": "یا",
+     "en": "Yes",
+     "enHint": "یێس"
+    },
+    {
+     "id": "g8",
+     "ku": "نەخێر",
+     "kuLat": "Nexêr",
+     "de": "Nein",
+     "deHint": "ناین",
+     "en": "No",
+     "enHint": "نۆ"
+    }
+   ]
+  },
+  {
+   "id": "unit_2",
+   "titleKu": "قۆناغا ٢: ژمارە",
+   "titleDe": "Einheit 2: Zahlen",
+   "titleEn": "Unit 2: Numbers",
+   "icon": "pin",
+   "color": "#1CB0F6",
+   "concepts": [
+    {
+     "id": "n1",
+     "ku": "یەک",
+     "kuLat": "Yek",
+     "de": "eins",
+     "deHint": "ئاینس",
+     "en": "one",
+     "enHint": "وەن"
+    },
+    {
+     "id": "n2",
+     "ku": "دوو",
+     "kuLat": "Du",
+     "de": "zwei",
+     "deHint": "تسڤای",
+     "en": "two",
+     "enHint": "توو"
+    },
+    {
+     "id": "n3",
+     "ku": "سێ",
+     "kuLat": "Sê",
+     "de": "drei",
+     "deHint": "درای",
+     "en": "three",
+     "enHint": "سری"
+    },
+    {
+     "id": "n4",
+     "ku": "چار",
+     "kuLat": "Çar",
+     "de": "vier",
+     "deHint": "فیر",
+     "en": "four",
+     "enHint": "فۆر"
+    },
+    {
+     "id": "n5",
+     "ku": "پێنج",
+     "kuLat": "Pênc",
+     "de": "fünf",
+     "deHint": "فوونف",
+     "en": "five",
+     "enHint": "فایڤ"
+    },
+    {
+     "id": "n6",
+     "ku": "دەه",
+     "kuLat": "Deh",
+     "de": "zehn",
+     "deHint": "تسێن",
+     "en": "ten",
+     "enHint": "تێن"
+    }
+   ]
+  },
+  {
+   "id": "unit_3",
+   "titleKu": "قۆناغا ٣: مالبات",
+   "titleDe": "Einheit 3: Familie",
+   "titleEn": "Unit 3: Family",
+   "icon": "family",
+   "color": "#FF9600",
+   "concepts": [
+    {
+     "id": "f1",
+     "ku": "دایک",
+     "kuLat": "Dayk",
+     "de": "die Mutter",
+     "deHint": "دی موتەر (die = مێ)",
+     "en": "mother",
+     "enHint": "مەذەر"
+    },
+    {
+     "id": "f2",
+     "ku": "باب",
+     "kuLat": "Bab",
+     "de": "der Vater",
+     "deHint": "دێر فاتەر (der = نێر)",
+     "en": "father",
+     "enHint": "فاذەر"
+    },
+    {
+     "id": "f3",
+     "ku": "برا",
+     "kuLat": "Bira",
+     "de": "der Bruder",
+     "deHint": "دێر برودەر",
+     "en": "brother",
+     "enHint": "برەذەر"
+    },
+    {
+     "id": "f4",
+     "ku": "خویشک",
+     "kuLat": "Xweşk",
+     "de": "die Schwester",
+     "deHint": "دی شڤێستەر",
+     "en": "sister",
+     "enHint": "سیستەر"
+    },
+    {
+     "id": "f5",
+     "ku": "زارۆک",
+     "kuLat": "Zarok",
+     "de": "das Kind",
+     "deHint": "داس کیند (das = بێلایەن)",
+     "en": "child",
+     "enHint": "چایلد"
+    },
+    {
+     "id": "f6",
+     "ku": "مالبات",
+     "kuLat": "Malbat",
+     "de": "die Familie",
+     "deHint": "دی فامیلیە",
+     "en": "family",
+     "enHint": "فامیلی"
+    }
+   ]
+  },
+  {
+   "id": "unit_4",
+   "titleKu": "قۆناغا ٤: خوارن و بازاڕ",
+   "titleDe": "Einheit 4: Essen & Einkaufen",
+   "titleEn": "Unit 4: Food & Shopping",
+   "icon": "shopping",
+   "color": "#CE82FF",
+   "concepts": [
+    {
+     "id": "s1",
+     "ku": "ئاڤ",
+     "kuLat": "Av",
+     "de": "das Wasser",
+     "deHint": "داس ڤاسەر",
+     "en": "water",
+     "enHint": "ووتەر"
+    },
+    {
+     "id": "s2",
+     "ku": "نان",
+     "kuLat": "Nan",
+     "de": "das Brot",
+     "deHint": "داس برۆت",
+     "en": "bread",
+     "enHint": "برێد"
+    },
+    {
+     "id": "s3",
+     "ku": "چا",
+     "kuLat": "Ça",
+     "de": "der Tee",
+     "deHint": "دێر تێ",
+     "en": "tea",
+     "enHint": "تی"
+    },
+    {
+     "id": "s4",
+     "ku": "ئەز حەز ژ قەهوێ دکەم",
+     "kuLat": "Ez hez ji qehwê dikem",
+     "de": "Ich mag Kaffee",
+     "deHint": "ئیش ماگ کافێ",
+     "en": "I like coffee",
+     "enHint": "ئای لایک کۆفی"
+    },
+    {
+     "id": "s5",
+     "ku": "ئەز برسیمە",
+     "kuLat": "Ez birsîme",
+     "de": "Ich habe Hunger",
+     "deHint": "ئیش هابە هونگەر",
+     "en": "I am hungry",
+     "enHint": "ئای ئێم هەنگری"
+    },
+    {
+     "id": "s6",
+     "ku": "ئەڤە ب چەندێ یە؟",
+     "kuLat": "Eve bi çendê ye?",
+     "de": "Was kostet das?",
+     "deHint": "ڤاس کۆستەت داس؟",
+     "en": "How much is this?",
+     "enHint": "هاو مەچ ئیز ذیس؟"
+    }
+   ]
+  },
+  {
+   "id": "unit_5",
+   "titleKu": "قۆناغا ٥: جه و ئاراستە",
+   "titleDe": "Einheit 5: Orte",
+   "titleEn": "Unit 5: Places",
+   "icon": "city",
+   "color": "#FF4B4B",
+   "concepts": [
+    {
+     "id": "p1",
+     "ku": "مال",
+     "kuLat": "Mal",
+     "de": "das Haus",
+     "deHint": "داس هاوس",
+     "en": "house",
+     "enHint": "هاوس"
+    },
+    {
+     "id": "p2",
+     "ku": "قوتابخانە",
+     "kuLat": "Qutabxane",
+     "de": "die Schule",
+     "deHint": "دی شولە",
+     "en": "school",
+     "enHint": "سکوول"
+    },
+    {
+     "id": "p3",
+     "ku": "کار",
+     "kuLat": "Kar",
+     "de": "die Arbeit",
+     "deHint": "دی ئاربایت",
+     "en": "work",
+     "enHint": "وۆرک"
+    },
+    {
+     "id": "p4",
+     "ku": "نەخۆشخانە",
+     "kuLat": "Nexweşxane",
+     "de": "das Krankenhaus",
+     "deHint": "داس کرانکەنهاوس",
+     "en": "hospital",
+     "enHint": "هۆسپیتەل"
+    },
+    {
+     "id": "p5",
+     "ku": "تەوالێت ل کیرێ یە؟",
+     "kuLat": "Tewalêt li kîrê ye?",
+     "de": "Wo ist die Toilette?",
+     "deHint": "ڤۆ ئیست دی تۆالێتە؟",
+     "en": "Where is the toilet?",
+     "enHint": "وێر ئیز ذە تۆیلێت؟"
+    },
+    {
+     "id": "p6",
+     "ku": "ئەز هاریکاریا تە دکەم",
+     "kuLat": "Ez harîkariya te dikem",
+     "de": "Ich helfe dir",
+     "deHint": "ئیش هێلفە دیر (helfen + Dativ)",
+     "en": "I help you",
+     "enHint": "ئای هێلپ یوو"
+    }
+   ]
+  },
+  {
+   "id": "unit_6",
+   "titleKu": "قۆناغا ٦: دەم و ئاخفتن",
+   "titleDe": "Einheit 6: Zeit & Gespräch",
+   "titleEn": "Unit 6: Time & Talk",
+   "icon": "schedule",
+   "color": "#2B70C9",
+   "concepts": [
+    {
+     "id": "t1",
+     "ku": "ئەڤرۆ",
+     "kuLat": "Evro",
+     "de": "heute",
+     "deHint": "هۆیتە",
+     "en": "today",
+     "enHint": "تودەی"
+    },
+    {
+     "id": "t2",
+     "ku": "سوبەهی",
+     "kuLat": "Sibehî",
+     "de": "morgen",
+     "deHint": "مۆرگن",
+     "en": "tomorrow",
+     "enHint": "تومۆرۆ"
+    },
+    {
+     "id": "t3",
+     "ku": "دوهی",
+     "kuLat": "Duhî",
+     "de": "gestern",
+     "deHint": "گێستەرن",
+     "en": "yesterday",
+     "enHint": "یێستەردەی"
+    },
+    {
+     "id": "t4",
+     "ku": "ئەز تێناگەهم",
+     "kuLat": "Ez tênagehim",
+     "de": "Ich verstehe nicht",
+     "deHint": "ئیش فێرشتێهە نیشت",
+     "en": "I do not understand",
+     "enHint": "ئای دوو نۆت ئەندەرستاند"
+    },
+    {
+     "id": "t5",
+     "ku": "هێدی باخڤە، هیڤییە",
+     "kuLat": "Hêdî baxive, hîvîye",
+     "de": "Bitte langsam sprechen",
+     "deHint": "بیتە لانگزام شپرێشن",
+     "en": "Please speak slowly",
+     "enHint": "پلیز سپیک سلۆلی"
+    },
+    {
+     "id": "t6",
+     "ku": "ناڤێ من ئازادە",
+     "kuLat": "Navê min Azad e",
+     "de": "Ich heiße Azad",
+     "deHint": "ئیش هایسە ئازاد",
+     "en": "My name is Azad",
+     "enHint": "مای نەیم ئیز ئازاد"
+    }
+   ]
+  },
+  {
+   "id": "unit_7",
+   "titleKu": "قۆناغا ٧: رەنگ",
+   "titleDe": "Einheit 7: Farben",
+   "titleEn": "Unit 7: Colors",
+   "icon": "palette",
+   "color": "#FFC800",
+   "concepts": [
+    {
+     "id": "k1",
+     "ku": "سۆر",
+     "kuLat": "Sor",
+     "de": "rot",
+     "deHint": "رۆت",
+     "en": "red",
+     "enHint": "رێد"
+    },
+    {
+     "id": "k2",
+     "ku": "شین",
+     "kuLat": "Şîn",
+     "de": "blau",
+     "deHint": "بلاو",
+     "en": "blue",
+     "enHint": "بلوو"
+    },
+    {
+     "id": "k3",
+     "ku": "کەسک",
+     "kuLat": "Kesk",
+     "de": "grün",
+     "deHint": "گروون",
+     "en": "green",
+     "enHint": "گرین"
+    },
+    {
+     "id": "k4",
+     "ku": "زەر",
+     "kuLat": "Zer",
+     "de": "gelb",
+     "deHint": "گێلب",
+     "en": "yellow",
+     "enHint": "یێلۆ"
+    },
+    {
+     "id": "k5",
+     "ku": "ڕەش",
+     "kuLat": "Reş",
+     "de": "schwarz",
+     "deHint": "شڤارتس",
+     "en": "black",
+     "enHint": "بلاک"
+    },
+    {
+     "id": "k6",
+     "ku": "سپی",
+     "kuLat": "Spî",
+     "de": "weiß",
+     "deHint": "ڤایس",
+     "en": "white",
+     "enHint": "وایت"
+    }
+   ]
+  },
+  {
+   "id": "unit_8",
+   "titleKu": "قۆناغا ٨: لەش",
+   "titleDe": "Einheit 8: Körper",
+   "titleEn": "Unit 8: Body",
+   "icon": "body",
+   "color": "#FF86D0",
+   "concepts": [
+    {
+     "id": "b1",
+     "ku": "سەر",
+     "kuLat": "Ser",
+     "de": "der Kopf",
+     "deHint": "دێر کۆپف",
+     "en": "head",
+     "enHint": "هێد"
+    },
+    {
+     "id": "b2",
+     "ku": "دەست",
+     "kuLat": "Dest",
+     "de": "die Hand",
+     "deHint": "دی هاند",
+     "en": "hand",
+     "enHint": "هاند"
+    },
+    {
+     "id": "b3",
+     "ku": "چاڤ",
+     "kuLat": "Çav",
+     "de": "das Auge",
+     "deHint": "داس ئاوگە",
+     "en": "eye",
+     "enHint": "ئای"
+    },
+    {
+     "id": "b4",
+     "ku": "پێ",
+     "kuLat": "Pê",
+     "de": "der Fuß",
+     "deHint": "دێر فووس",
+     "en": "foot",
+     "enHint": "فووت"
+    },
+    {
+     "id": "b5",
+     "ku": "دل",
+     "kuLat": "Dil",
+     "de": "das Herz",
+     "deHint": "داس هێرتس",
+     "en": "heart",
+     "enHint": "هارت"
+    },
+    {
+     "id": "b6",
+     "ku": "دەڤ",
+     "kuLat": "Dev",
+     "de": "der Mund",
+     "deHint": "دێر موند",
+     "en": "mouth",
+     "enHint": "ماوس"
+    }
+   ]
+  },
+  {
+   "id": "unit_9",
+   "titleKu": "قۆناغا ٩: کار و کریار",
+   "titleDe": "Einheit 9: Verben",
+   "titleEn": "Unit 9: Verbs",
+   "icon": "run",
+   "color": "#00CD9C",
+   "concepts": [
+    {
+     "id": "v1",
+     "ku": "ئەز دچم",
+     "kuLat": "Ez diçim",
+     "de": "Ich gehe",
+     "deHint": "ئیش گێهە",
+     "en": "I go",
+     "enHint": "ئای گۆ"
+    },
+    {
+     "id": "v2",
+     "ku": "ئەز دخۆم",
+     "kuLat": "Ez dixom",
+     "de": "Ich esse",
+     "deHint": "ئیش ئێسە",
+     "en": "I eat",
+     "enHint": "ئای ئیت"
+    },
+    {
+     "id": "v3",
+     "ku": "ئەز ڤەدخۆم",
+     "kuLat": "Ez vedixom",
+     "de": "Ich trinke",
+     "deHint": "ئیش ترینکە",
+     "en": "I drink",
+     "enHint": "ئای درینک"
+    },
+    {
+     "id": "v4",
+     "ku": "ئەز دنڤم",
+     "kuLat": "Ez dinivim",
+     "de": "Ich schlafe",
+     "deHint": "ئیش شلافە",
+     "en": "I sleep",
+     "enHint": "ئای سلیپ"
+    },
+    {
+     "id": "v5",
+     "ku": "ئەز فێر دبم",
+     "kuLat": "Ez fêr dibim",
+     "de": "Ich lerne",
+     "deHint": "ئیش لێرنە",
+     "en": "I learn",
+     "enHint": "ئای لێرن"
+    },
+    {
+     "id": "v6",
+     "ku": "ئەز کار دکەم",
+     "kuLat": "Ez kar dikem",
+     "de": "Ich arbeite",
+     "deHint": "ئیش ئاربایتە",
+     "en": "I work",
+     "enHint": "ئای وۆرک"
+    }
+   ]
+  },
+  {
+   "id": "unit_10",
+   "titleKu": "قۆناغا ١٠: رستەیێن ژیانێ",
+   "titleDe": "Einheit 10: Sätze",
+   "titleEn": "Unit 10: Real sentences",
+   "icon": "chat",
+   "color": "#A560E8",
+   "concepts": [
+    {
+     "id": "r1",
+     "ku": "ئەز ژ کوردستانێ مە",
+     "kuLat": "Ez ji Kurdistanê me",
+     "de": "Ich komme aus Kurdistan",
+     "deHint": "ئیش کۆمە ئاوس کوردستان",
+     "en": "I am from Kurdistan",
+     "enHint": "ئای ئێم فرۆم کوردستان"
+    },
+    {
+     "id": "r2",
+     "ku": "ئەز ئەلمانی فێر دبم",
+     "kuLat": "Ez Almanî fêr dibim",
+     "de": "Ich lerne Deutsch",
+     "deHint": "ئیش لێرنە دۆیچ",
+     "en": "I am learning German",
+     "enHint": "ئای ئێم لێرنینگ جێرمەن"
+    },
+    {
+     "id": "r3",
+     "ku": "ئەڤرۆ هەوا خۆشە",
+     "kuLat": "Evro hewa xweş e",
+     "de": "Heute ist das Wetter schön",
+     "deHint": "هۆیتە ئیست داس ڤێتەر شۆن",
+     "en": "The weather is nice today",
+     "enHint": "ذە وێذەر ئیز نایس تودەی"
+    },
+    {
+     "id": "r4",
+     "ku": "تو دشێی هاریکاریا من بکەی؟",
+     "kuLat": "Tu dişêy harîkariya min bikey?",
+     "de": "Kannst du mir helfen?",
+     "deHint": "کانست دو میر هێلفن؟",
+     "en": "Can you help me?",
+     "enHint": "کان یوو هێلپ می؟"
+    },
+    {
+     "id": "r5",
+     "ku": "ئەز دچمە بازاڕی",
+     "kuLat": "Ez diçime bazarî",
+     "de": "Ich gehe zum Markt",
+     "deHint": "ئیش گێهە تسوم مارکت",
+     "en": "I am going to the market",
+     "enHint": "ئای ئێم گۆینگ تو ذە مارکێت"
+    },
+    {
+     "id": "r6",
+     "ku": "ئەڤە کتێبا منە",
+     "kuLat": "Eve kitêba min e",
+     "de": "Das ist mein Buch",
+     "deHint": "داس ئیست ماین بوخ",
+     "en": "This is my book",
+     "enHint": "ذیس ئیز مای بووک"
+    }
+   ]
+  }
+ ]
+}

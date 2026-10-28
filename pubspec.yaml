@@ -1,0 +1,41 @@
+name: zimanpro
+description: ZimanPro - فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی، دگەل سیستەمێ دەنگی ب دەنگێ تە.
+publish_to: 'none'
+version: 3.1.0+4
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # تۆمارکرنا دەنگی ژ مایکرۆفۆنێ
+  record: ^6.0.0
+  # لێدانا فایلێن دەنگی
+  audioplayers: ^6.1.0
+  # جهێ پاشەکەفتکرنا فایلان ل سەر مۆبایلێ
+  path_provider: ^2.1.4
+  # پاشەکەفتکرنا XP، Streak و پێشکەفتنێ
+  shared_preferences: ^2.3.2
+  # دەنگێ ئۆتۆماتیک بۆ ئەلمانی و ئینگلیزی (ئەگەر تە دەنگ تۆمار نەکربیت)
+  flutter_tts: ^4.2.0
+  # پەیوەندی ب سێرڤەرێ کلۆنکرنا دەنگی (voice_lab/server.py)
+  http: ^1.2.2
+  # هنارتنا نموونەیا دەنگێ تە (بۆ Colab / Telegram / ...)
+  share_plus: ^10.1.0
+  # هەلبژارتنا voice_pack.zip ژ مۆبایلێ (بێ پێدڤی ب کۆمپیوتەری)
+  file_picker: ^8.1.2
+  # ڤەکرنا zip
+  archive: ^3.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/curriculum.json
+    # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)
+    - assets/voices/
