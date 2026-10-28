@@ -1,0 +1,25 @@
+name: Build APK
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: for f in *.zip; do unzip -qo "$f"; done
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - working-directory: zimanpro
+        run: |
+          flutter create . --platforms=android --project-name zimanpro --org com.zimanpro
+          python3 .github/scripts/patch_android.py
+          flutter pub get
+          flutter build apk --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ZimanPro-apk
+          path: zimanpro/build/app/outputs/flutter-apk/app-release.apk
