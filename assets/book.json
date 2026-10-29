@@ -1,0 +1,5197 @@
+{
+ "version": 1,
+ "title": "A1.1 mit Poya",
+ "parts": [
+  {
+   "id": 0,
+   "ku": "دەستپێک",
+   "de": "Einstieg",
+   "en": "Start"
+  },
+  {
+   "id": 1,
+   "ku": "پشکا ١: بنیات",
+   "de": "Teil 1: Grundlagen",
+   "en": "Part 1: Basics"
+  },
+  {
+   "id": 2,
+   "ku": "پشکا ٢: ناڤ و ئارتیکل",
+   "de": "Teil 2: Nomen und Artikel",
+   "en": "Part 2: Nouns & articles"
+  },
+  {
+   "id": 3,
+   "ku": "پشکا ٣: حالەتێن رێزمانی",
+   "de": "Teil 3: Die Fälle",
+   "en": "Part 3: Cases"
+  },
+  {
+   "id": 4,
+   "ku": "پشکا ٤: دەم",
+   "de": "Teil 4: Zeit und Zeitformen",
+   "en": "Part 4: Time & tenses"
+  },
+  {
+   "id": 5,
+   "ku": "پشکا ٥: پراکتیک",
+   "de": "Teil 5: Praxis",
+   "en": "Part 5: Practice"
+  }
+ ],
+ "chapters": [
+  {
+   "id": "ch0",
+   "part": 0,
+   "icon": "flag",
+   "color": "#1CB0F6",
+   "title": "پێشەکی: چەوا ڤێ پەرتووکێ بخوینی",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "ئەڤ پەرتووکە هەمی ئەو ٢٠ فایلێن تە کۆم دکەت، ب رێزبەندیا دروستا فێربوونا زمانێ ئەلمانی، ژ ئاستێ سفر هەتا دووماهیا A1 و دەستپێکا A2. هەر بەشەک ل سەر بەشێ بەری خۆ ئاڤا دبیت، لەوما ب رێزێ بخوینە."
+    },
+    {
+     "t": "p",
+     "text": "کوردیا ڤێ پەرتووکێ ب رێنڤیسا بادینی هاتیە راستڤەکرن، و هندەک شاشیێن ئەلمانی یێن د فایلێن کەڤن دا ژی هاتینە چاککرن (بۆ نموونە: ohne Zucker نە ohne den Zucker)."
+    },
+    {
+     "t": "p",
+     "text": "**نەخشەیا پەرتووکێ:**"
+    },
+    {
+     "t": "ol",
+     "items": [
+      "**بنیات (بەش ١–٦):** ئەلفوبێ، سلاڤ، خۆناساندن، هژمار و دەم، کار و رێزبەندیا رستێ.",
+      "**ناڤ و ئارتیکل (بەش ٧–٨):** der / die / das، کۆ، kein / nicht، mein / dein.",
+      "**حالەتێن رێزمانی (بەش ٩–١٣):** نۆمیناتیڤ، ئاکوزاتیڤ، داتیڤ، ئامرازێن دوو-لایەنە، دوو بەرکار د ئێک رستێ دا.",
+      "**دەم (بەش ١٤–١٦):** دەربڕینێن دەمی، Perfekt، Präteritum و Futur I.",
+      "**پراکتیک (بەش ١٧ و پاشکۆ):** دیالۆگ، فەرهەنگۆکا ٣٠٠ ناڤان، راهێنان و بەرسڤ."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**سێ یاسایێن زێڕین یێن هەمی پەرتووکێ:**"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "هەر ناڤەکی دگەل ئارتیکلا وی ژبەر بکە: der Tisch، die Lampe، das Buch.",
+      "د رستا ئاسایی دا کار هەردەم ل جهێ **دووێ** یە.",
+      "هەمی ناڤ د ئەلمانی دا ب پیتا مەزن دهێنە نڤیسین: der Mann، die Schule."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "part": 1,
+   "icon": "abc",
+   "color": "#58CC02",
+   "title": "بەشێ ١: ئەلفوبێ و دەنگسازی (Alphabet und Aussprache)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "ئەلمانی ٢٦ پیتێن لاتینی و ٤ پیتێن تایبەت هەنە. ئەلمانی وەکی دهێتە نڤیسین دهێتە خواندن، ئەگەر تو ڤان یاسایان بزانی."
+    },
+    {
+     "t": "h",
+     "text": "١.١ پیتێن تایبەت"
+    },
+    {
+     "t": "table",
+     "head": [
+      "پیت",
+      "ناڤ",
+      "دەنگ ب بادینی",
+      "نموونە",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "Ä / ä",
+       "A-Umlaut",
+       "وەکی «ێ»یا ڤەکری",
+       "Äpfel",
+       "سێڤ (کۆ)"
+      ],
+      [
+       "Ö / ö",
+       "O-Umlaut",
+       "لێڤ گرۆڤەر و «ێ» دبێژی",
+       "schön",
+       "جوان"
+      ],
+      [
+       "Ü / ü",
+       "U-Umlaut",
+       "لێڤ گرۆڤەر و «ی» دبێژی",
+       "Tür",
+       "دەرگەه"
+      ],
+      [
+       "ß",
+       "Eszett",
+       "«س»یا تیژ (ss)",
+       "Straße",
+       "جادە / کۆلان"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١.٢ پیتێن لێکدای و دەنگێن وان"
+    },
+    {
+     "t": "table",
+     "head": [
+      "نڤیسین",
+      "دەنگ",
+      "نموونە",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "ei",
+       "«ئای»",
+       "mein, nein",
+       "یێ من، نەخێر"
+      ],
+      [
+       "ie",
+       "«ی»یا درێژ",
+       "sie, Liebe",
+       "ئەو، ڤیان"
+      ],
+      [
+       "eu / äu",
+       "«ئۆی»",
+       "heute, Häuser",
+       "ئەڤرۆ، خانی (کۆ)"
+      ],
+      [
+       "ch (پشتی a, o, u)",
+       "«خ»",
+       "Buch, acht",
+       "پەرتووک، هەشت"
+      ],
+      [
+       "ch (پشتی e, i)",
+       "«ش»یا نەرم",
+       "ich, nicht",
+       "ئەز، نە"
+      ],
+      [
+       "sch",
+       "«ش»",
+       "Schule",
+       "قوتابخانە"
+      ],
+      [
+       "sp / st (ل دەستپێکێ)",
+       "«شپ» / «شت»",
+       "Sport, Stadt",
+       "وەرزش، باژێڕ"
+      ],
+      [
+       "w",
+       "«ڤ»",
+       "Wasser, wo",
+       "ئاڤ، ل کیڤە"
+      ],
+      [
+       "v",
+       "پترییا جاران «ف»",
+       "Vater, vier",
+       "باب، چار"
+      ],
+      [
+       "z",
+       "«تس»",
+       "Zimmer, zwei",
+       "ژوور، دوو"
+      ],
+      [
+       "j",
+       "«ی»",
+       "ja, Jahr",
+       "بەلێ، ساڵ"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**بیرانین:** هەمی ناڤ (Nomen) ب پیتا مەزن دهێنە نڤیسین، چ ل دەستپێکا رستێ بن یان ل ناڤەڕاستێ: Ich lese das Buch."
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "part": 1,
+   "icon": "waving_hand",
+   "color": "#58CC02",
+   "title": "بەشێ ٢: سلاڤ و گۆتنێن رێزێ (Begrüßung und Höflichkeit)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "د ئەلمانی دا سلاڤ ل دویڤ دەمێ رۆژێ و ل دویڤ نێزیکاتیێ (فەرمی یان نەفەرمی) دگوهۆڕیت."
+    },
+    {
+     "t": "h",
+     "text": "٢.١ سلاڤ و خاترخواستن"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "کەنگی؟"
+     ],
+     "rows": [
+      [
+       "Guten Morgen!",
+       "سپێدە باش!",
+       "هەتا دەمژمێر ١١ێ سپێدێ"
+      ],
+      [
+       "Guten Tag!",
+       "رۆژ باش!",
+       "ژ نیڤڕۆ هەتا ئێڤاری (فەرمی)"
+      ],
+      [
+       "Guten Abend!",
+       "ئێڤار باش!",
+       "پشتی دەمژمێر ١٨"
+      ],
+      [
+       "Hallo!",
+       "سلاڤ!",
+       "دگەل هەڤال و کەسێن نێزیک"
+      ],
+      [
+       "Gute Nacht!",
+       "شەڤ باش!",
+       "بەری نڤستنێ"
+      ],
+      [
+       "Auf Wiedersehen!",
+       "ب خاترا تە / هەوە!",
+       "خاترخواستنا فەرمی"
+      ],
+      [
+       "Tschüss!",
+       "خاترا تە!",
+       "خاترخواستنا نەفەرمی"
+      ],
+      [
+       "Auf Wiederhören!",
+       "ب خاترا تە (ل تەلەفۆنێ)",
+       "دووماهیا ئاخفتنا تەلەفۆنێ"
+      ],
+      [
+       "Bis bald! / Bis später!",
+       "هەتا دیدارەکا نێزیک! / هەتا پاشی!",
+       "دەمێ تو زوو دێ وی بینی"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٢.٢ گۆتنێن رێزێ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "تێبینی"
+     ],
+     "rows": [
+      [
+       "Danke / Danke schön!",
+       "سوپاس / گەلەک سوپاس!",
+       "سوپاسیا ئاسایی"
+      ],
+      [
+       "Bitte / Bitte schön!",
+       "فەرموو / ب سەر چاڤان",
+       "بەرسڤا سوپاسیێ یان داخواز"
+      ],
+      [
+       "Entschuldigung!",
+       "ببوورە!",
+       "بۆ گازیکرن یان لێبوورین"
+      ],
+      [
+       "Es tut mir leid.",
+       "ببوورە، ب راستی ب خەمم.",
+       "دەمێ تشتەکێ خراب رووددەت"
+      ],
+      [
+       "Kein Problem!",
+       "چو ئاریشە نینن!",
+       "بەرسڤا رۆژانە"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**du یان Sie؟** دگەل کەسێن نەناس، مەزنان و ل کاری **Sie** (هوین، ب رێز) بکاربینە. دگەل هەڤال، خێزان و زارۆکان **du** (تو)."
+    },
+    {
+     "t": "h",
+     "text": "دیالۆگ ١: سلاڤا رۆژانە"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Aram:** Guten Tag, Herr Müller! — رۆژ باش، بەڕێز مولەر!",
+      "**Müller:** Guten Tag, Aram! Wie geht es Ihnen? — رۆژ باش ئارام! هوین چەوانن؟",
+      "**Aram:** Danke, gut! Und Ihnen? — سوپاس، باشم! و هوین؟",
+      "**Müller:** Auch gut, danke. Auf Wiedersehen! — ئەز ژی باشم، سوپاس. ب خاترا تە!"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch3",
+   "part": 1,
+   "icon": "badge",
+   "color": "#58CC02",
+   "title": "بەشێ ٣: خۆناساندن (Sich vorstellen)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "بۆ ناسینا کەسەکێ نوو، پرسیارێن ب پیتا W دەستپێدکەن دهێنە بکارئینان. بەرسڤ هەردەم ب کارێ ل جهێ دووێ دهێت."
+    },
+    {
+     "t": "h",
+     "text": "٣.١ پرسیار و بەرسڤ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "پرسیار",
+      "بادینی",
+      "بەرسڤ",
+      "رامانا بەرسڤێ"
+     ],
+     "rows": [
+      [
+       "Wie heißen Sie?",
+       "ناڤێ هەوە چییە؟ (فەرمی)",
+       "Ich heiße Azad.",
+       "ناڤێ من ئازادە."
+      ],
+      [
+       "Wie heißt du?",
+       "ناڤێ تە چییە؟",
+       "Mein Name ist Sara.",
+       "ناڤێ من سارایە."
+      ],
+      [
+       "Woher kommen Sie?",
+       "هوین ژ کیڤەنە؟ (فەرمی)",
+       "Ich komme aus Kurdistan.",
+       "ئەز ژ کوردستانێمە."
+      ],
+      [
+       "Woher kommst du?",
+       "تو ژ کیڤەیی؟",
+       "Ich komme aus dem Irak.",
+       "ئەز ژ عیراقێمە."
+      ],
+      [
+       "Wo wohnen Sie?",
+       "هوین ل کیڤە دژین؟",
+       "Ich wohne in Berlin.",
+       "ئەز ل بەرلین دژیم."
+      ],
+      [
+       "Wo wohnst du?",
+       "تو ل کیڤە دژی؟",
+       "Ich wohne in Duhok.",
+       "ئەز ل دهۆکێ دژیم."
+      ],
+      [
+       "Welche Sprachen sprechen Sie?",
+       "هوین ب کیژ زمانان دئاخڤن؟",
+       "Ich spreche Kurdisch und Deutsch.",
+       "ئەز ب کوردی و ئەلمانی دئاخڤم."
+      ],
+      [
+       "Was sind Sie von Beruf?",
+       "کارێ هەوە چییە؟",
+       "Ich bin Lehrer.",
+       "ئەز مامۆستامە."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٣.٢ وەلات و زمان"
+    },
+    {
+     "t": "table",
+     "head": [
+      "وەلات (Land)",
+      "بادینی",
+      "زمان (Sprache)",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Deutschland",
+       "ئەلمانیا",
+       "Deutsch",
+       "ئەلمانی"
+      ],
+      [
+       "Kurdistan",
+       "کوردستان",
+       "Kurdisch",
+       "کوردی"
+      ],
+      [
+       "der Irak",
+       "عیراق",
+       "Arabisch",
+       "عەرەبی"
+      ],
+      [
+       "Österreich",
+       "نەمسا",
+       "Englisch",
+       "ئینگلیزی"
+      ],
+      [
+       "die Schweiz",
+       "سویسرا",
+       "Türkisch",
+       "تورکی"
+      ],
+      [
+       "Syrien",
+       "سووریا",
+       "Persisch",
+       "فارسی"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**تێبینی:** هندەک وەلات ئارتیکل دگەل خۆ دبەن، ئینا aus دبیتە داتیڤ: aus dem Irak، aus der Schweiz، aus den USA."
+    },
+    {
+     "t": "h",
+     "text": "دیالۆگ ٢: د پۆلێ دا"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Renas:** Hallo! Ich bin Renas. Und wer bist du? — سلاڤ! ئەز رێناسم. و تو کییی؟",
+      "**Elena:** Hallo Renas! Ich heiße Elena. Woher kommst du? — سلاڤ رێناس! ناڤێ من ئێلێنایە. تو ژ کیڤەیی؟",
+      "**Renas:** Ich komme aus Duhok, aus Kurdistan. Und du? — ئەز ژ دهۆکێمە، ژ کوردستانێ. و تو؟",
+      "**Elena:** Ich komme aus Spanien, aber ich wohne jetzt in München. — ئەز ژ ئیسپانیامە، بەلێ نوکە ل میونشن دژیم."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch4",
+   "part": 1,
+   "icon": "pin",
+   "color": "#58CC02",
+   "title": "بەشێ ٤: هژمار، رۆژ، هەیڤ و دەمژمێر",
+   "blocks": [
+    {
+     "t": "h",
+     "text": "٤.١ هژمار ٠–٢٠ و دەهان"
+    },
+    {
+     "t": "table",
+     "head": [
+      "هژمار",
+      "ئەلمانی",
+      "بادینی",
+      "هژمار",
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "0",
+       "null",
+       "سفر",
+       "11",
+       "elf",
+       "یازدە"
+      ],
+      [
+       "1",
+       "eins",
+       "ئێک",
+       "12",
+       "zwölf",
+       "دوازدە"
+      ],
+      [
+       "2",
+       "zwei",
+       "دوو",
+       "13",
+       "dreizehn",
+       "سێزدە"
+      ],
+      [
+       "3",
+       "drei",
+       "سێ",
+       "14",
+       "vierzehn",
+       "چاردە"
+      ],
+      [
+       "4",
+       "vier",
+       "چار",
+       "15",
+       "fünfzehn",
+       "پازدە"
+      ],
+      [
+       "5",
+       "fünf",
+       "پێنج",
+       "16",
+       "sechzehn",
+       "شازدە"
+      ],
+      [
+       "6",
+       "sechs",
+       "شەش",
+       "17",
+       "siebzehn",
+       "حەڤدە"
+      ],
+      [
+       "7",
+       "sieben",
+       "حەفت",
+       "18",
+       "achtzehn",
+       "هەژدە"
+      ],
+      [
+       "8",
+       "acht",
+       "هەشت",
+       "19",
+       "neunzehn",
+       "نۆزدە"
+      ],
+      [
+       "9",
+       "neun",
+       "نەه",
+       "20",
+       "zwanzig",
+       "بیست"
+      ],
+      [
+       "10",
+       "zehn",
+       "دەه",
+       "30",
+       "dreißig",
+       "سیه"
+      ],
+      [
+       "40",
+       "vierzig",
+       "چل",
+       "50",
+       "fünfzig",
+       "پێنجی"
+      ],
+      [
+       "60",
+       "sechzig",
+       "شێست",
+       "70",
+       "siebzig",
+       "حەفتێ"
+      ],
+      [
+       "80",
+       "achtzig",
+       "هەشتێ",
+       "90",
+       "neunzig",
+       "نۆت"
+      ],
+      [
+       "100",
+       "hundert",
+       "سەد",
+       "1000",
+       "tausend",
+       "هزار"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**یاسا ٢١–٩٩:** ئێکان دبێژی پاشی دەهان، وەکی «ئێک و بیست»: 21 = einundzwanzig، 25 = fünfundzwanzig، 48 = achtundvierzig."
+    },
+    {
+     "t": "h",
+     "text": "٤.٢ رۆژێن حەفتیێ (هەمی der نە)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "هەر حەفتی (خوو)"
+     ],
+     "rows": [
+      [
+       "der Montag",
+       "دووشەمبی",
+       "montags"
+      ],
+      [
+       "der Dienstag",
+       "سێشەمبی",
+       "dienstags"
+      ],
+      [
+       "der Mittwoch",
+       "چارشەمبی",
+       "mittwochs"
+      ],
+      [
+       "der Donnerstag",
+       "پێنجشەمبی",
+       "donnerstags"
+      ],
+      [
+       "der Freitag",
+       "ئەینی",
+       "freitags"
+      ],
+      [
+       "der Samstag",
+       "شەمبی",
+       "samstags"
+      ],
+      [
+       "der Sonntag",
+       "ئێکشەمبی",
+       "sonntags"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٤.٣ هەیڤ و وەرز (هەمی der نە)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Januar",
+       "کانوونا دووێ",
+       "Juli",
+       "تەممووز"
+      ],
+      [
+       "Februar",
+       "شوبات",
+       "August",
+       "تەباخ"
+      ],
+      [
+       "März",
+       "ئادار",
+       "September",
+       "ئەیلوول"
+      ],
+      [
+       "April",
+       "نیسان",
+       "Oktober",
+       "چریا ئێکێ"
+      ],
+      [
+       "Mai",
+       "گولان",
+       "November",
+       "چریا دووێ"
+      ],
+      [
+       "Juni",
+       "حوزەیران",
+       "Dezember",
+       "کانوونا ئێکێ"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "وەرز: der Frühling (بهار)، der Sommer (هاڤین)، der Herbst (پاییز)، der Winter (زڤستان)."
+    },
+    {
+     "t": "h",
+     "text": "٤.٤ دەمژمێر (Uhrzeit)"
+    },
+    {
+     "t": "p",
+     "text": "پرسیار: **Wie spät ist es?** یان **Wie viel Uhr ist es?** — دەمژمێر چەندە؟"
+    },
+    {
+     "t": "table",
+     "head": [
+      "دەم",
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "08:00",
+       "Es ist acht Uhr.",
+       "دەمژمێر هەشتە."
+      ],
+      [
+       "08:10",
+       "Es ist zehn nach acht.",
+       "هەشت و دەه خولەکن."
+      ],
+      [
+       "08:15",
+       "Es ist Viertel nach acht.",
+       "هەشت و چارەکە."
+      ],
+      [
+       "08:30",
+       "Es ist halb neun.",
+       "هەشت و نیڤە."
+      ],
+      [
+       "08:45",
+       "Es ist Viertel vor neun.",
+       "چارەک بۆ نەهێ ماوە."
+      ],
+      [
+       "08:50",
+       "Es ist zehn vor neun.",
+       "دەه خولەک بۆ نەهێ ماوە."
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**هشیار بە:** halb neun = 8:30 (نیڤ دەمژمێر مایە هەتا نەهێ)، نە 9:30!"
+    }
+   ]
+  },
+  {
+   "id": "ch5",
+   "part": 1,
+   "icon": "person",
+   "color": "#58CC02",
+   "title": "بەشێ ٥: جێناڤ و کار د دەمێ نوکە دا (Präsens)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "کار ژ دوو پارچان پێکدهێت: **رەگ + پاشگر**. پاشگر ل دویڤ کەسی دگوهۆڕیت: lern-en → ich lern-e."
+    },
+    {
+     "t": "h",
+     "text": "٥.١ جێناڤێن کەسی و پاشگرێن کاری"
+    },
+    {
+     "t": "table",
+     "head": [
+      "جێناڤ",
+      "بادینی",
+      "پاشگر",
+      "wohnen (ژیان / ئاکنجیبوون)",
+      "lernen (فێربوون)"
+     ],
+     "rows": [
+      [
+       "ich",
+       "ئەز",
+       "-e",
+       "ich wohne",
+       "ich lerne"
+      ],
+      [
+       "du",
+       "تو",
+       "-st",
+       "du wohnst",
+       "du lernst"
+      ],
+      [
+       "er / sie / es",
+       "ئەو (نێر / مێ / بێلایەن)",
+       "-t",
+       "er wohnt",
+       "sie lernt"
+      ],
+      [
+       "wir",
+       "ئەم",
+       "-en",
+       "wir wohnen",
+       "wir lernen"
+      ],
+      [
+       "ihr",
+       "هوین (هەڤال)",
+       "-t",
+       "ihr wohnt",
+       "ihr lernt"
+      ],
+      [
+       "sie / Sie",
+       "ئەو (کۆ) / هوین (ب رێز)",
+       "-en",
+       "Sie wohnen",
+       "sie lernen"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٥.٢ دوو کارێن هەرە گرنگ: sein و haben"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کەس",
+      "sein (بوون)",
+      "بادینی",
+      "haben (هەبوون)",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "bin",
+       "ئەز ...م",
+       "habe",
+       "من هەیە"
+      ],
+      [
+       "du",
+       "bist",
+       "تو ...ی",
+       "hast",
+       "تە هەیە"
+      ],
+      [
+       "er / sie / es",
+       "ist",
+       "ئەو ...ە",
+       "hat",
+       "وی / وێ هەیە"
+      ],
+      [
+       "wir",
+       "sind",
+       "ئەم ...ین",
+       "haben",
+       "مە هەیە"
+      ],
+      [
+       "ihr",
+       "seid",
+       "هوین ...ن",
+       "habt",
+       "هەوە هەیە"
+      ],
+      [
+       "sie / Sie",
+       "sind",
+       "ئەو / هوین ...ن",
+       "haben",
+       "وان / هەوە هەیە"
+      ]
+     ]
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Ich bin müde. — ئەز یێ وەستیایمە.",
+      "Ich habe Hunger. — ئەز یێ برسیمە.",
+      "Er hat Zeit. — دەمێ وی هەیە."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٥.٣ کارێن ب هێز: دەنگ دگوهۆڕیت (تنێ دگەل du و er/sie/es)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "ich",
+      "du",
+      "er / sie / es",
+      "wir",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "helfen",
+       "helfe",
+       "**hilfst**",
+       "**hilft**",
+       "helfen",
+       "هاریکاریکرن"
+      ],
+      [
+       "geben",
+       "gebe",
+       "**gibst**",
+       "**gibt**",
+       "geben",
+       "دان"
+      ],
+      [
+       "sprechen",
+       "spreche",
+       "**sprichst**",
+       "**spricht**",
+       "sprechen",
+       "ئاخفتن"
+      ],
+      [
+       "nehmen",
+       "nehme",
+       "**nimmst**",
+       "**nimmt**",
+       "nehmen",
+       "برن / وەرگرتن"
+      ],
+      [
+       "essen",
+       "esse",
+       "**isst**",
+       "**isst**",
+       "essen",
+       "خوارن"
+      ],
+      [
+       "sehen",
+       "sehe",
+       "**siehst**",
+       "**sieht**",
+       "sehen",
+       "دیتن"
+      ],
+      [
+       "lesen",
+       "lese",
+       "**liest**",
+       "**liest**",
+       "lesen",
+       "خواندن"
+      ],
+      [
+       "fahren",
+       "fahre",
+       "**fährst**",
+       "**fährt**",
+       "fahren",
+       "چوون (ب ترومبێلێ)"
+      ],
+      [
+       "schlafen",
+       "schlafe",
+       "**schläfst**",
+       "**schläft**",
+       "schlafen",
+       "نڤستن"
+      ],
+      [
+       "tragen",
+       "trage",
+       "**trägst**",
+       "**trägt**",
+       "tragen",
+       "هەلگرتن / لبەرکرن"
+      ],
+      [
+       "waschen",
+       "wasche",
+       "**wäschst**",
+       "**wäscht**",
+       "waschen",
+       "شویشتن"
+      ],
+      [
+       "laufen",
+       "laufe",
+       "**läufst**",
+       "**läuft**",
+       "laufen",
+       "بەزین / پیادە چوون"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**شاشیا بەربەلاڤ:** «ich hilfe» شاشە. دروست: ich helfe، بەلێ du hilfst و er hilft."
+    },
+    {
+     "t": "h",
+     "text": "٥.٤ کارێن مۆدال (Modalverben)"
+    },
+    {
+     "t": "p",
+     "text": "کارێن مۆدال د تاکێ دا دەنگێ خۆ دگوهۆڕن، و ich و er وەکی ئێکن (بێ پاشگرێ -t). کارێ سەرەکی ب شێوەیێ چاڤگ دچیتە دووماهیا رستێ."
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "ich",
+      "du",
+      "er / sie / es",
+      "wir / sie / Sie",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "können",
+       "kann",
+       "kannst",
+       "kann",
+       "können",
+       "شیان"
+      ],
+      [
+       "müssen",
+       "muss",
+       "musst",
+       "muss",
+       "müssen",
+       "پێدڤیبوون / نەچاربوون"
+      ],
+      [
+       "dürfen",
+       "darf",
+       "darfst",
+       "darf",
+       "dürfen",
+       "دەستووری هەبوون"
+      ],
+      [
+       "wollen",
+       "will",
+       "willst",
+       "will",
+       "wollen",
+       "ڤیان / خواستن"
+      ],
+      [
+       "sollen",
+       "soll",
+       "sollst",
+       "soll",
+       "sollen",
+       "دڤێت (داخوازا کەسەکێ دی)"
+      ],
+      [
+       "möchten",
+       "möchte",
+       "möchtest",
+       "möchte",
+       "möchten",
+       "حەزکرن (ب رێز)"
+      ],
+      [
+       "wissen*",
+       "weiß",
+       "weißt",
+       "weiß",
+       "wissen",
+       "زانین"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "* wissen نە مۆدالە، بەلێ وەکی وان دگوهۆڕیت."
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Ich **kann** gut Deutsch **sprechen**. — ئەز دشێم باش ب ئەلمانی باخڤم.",
+      "Du **musst** heute **arbeiten**. — دڤێت تو ئەڤرۆ کار بکەی."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch6",
+   "part": 1,
+   "icon": "help",
+   "color": "#58CC02",
+   "title": "بەشێ ٦: رێزبەندیا رستێ و پرسیار (Satzbau und W-Fragen)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "د رستا ئاسایی و پرسیارا W دا، کار ل جهێ **دووێ** یە. د پرسیارا بەلێ/نەخێر دا، کار ل جهێ **ئێکێ** یە."
+    },
+    {
+     "t": "h",
+     "text": "٦.١ جهێ کاری"
+    },
+    {
+     "t": "table",
+     "head": [
+      "جۆرێ رستێ",
+      "جهێ کاری",
+      "نموونە",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "رستا ئاسایی",
+       "٢",
+       "Ich **wohne** in Duhok.",
+       "ئەز ل دهۆکێ دژیم."
+      ],
+      [
+       "رستا ئاسایی (دەم ل پێش)",
+       "٢",
+       "Heute **lerne** ich Deutsch.",
+       "ئەڤرۆ ئەز ئەلمانی فێردبم."
+      ],
+      [
+       "پرسیارا W",
+       "٢",
+       "Wo **wohnst** du?",
+       "تو ل کیڤە دژی؟"
+      ],
+      [
+       "پرسیارا بەلێ / نەخێر",
+       "١",
+       "**Lernst** du Deutsch?",
+       "ئەرێ تو ئەلمانی فێردبی؟"
+      ],
+      [
+       "دگەل کارێ مۆدال",
+       "٢ + دووماهی",
+       "Ich **kann** heute nicht **kommen**.",
+       "ئەز ئەڤرۆ نەشێم بێم."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٦.٢ پرسیارێن W یێن سەرەکی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "پرسیار",
+      "بادینی",
+      "نموونە",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "Was?",
+       "چ؟",
+       "Was machst du?",
+       "تو چ دکەی؟"
+      ],
+      [
+       "Wer?",
+       "کێ؟ (بکەر)",
+       "Wer ist das?",
+       "ئەڤە کێیە؟"
+      ],
+      [
+       "Wen?",
+       "کێ؟ (بەرکار)",
+       "Wen suchst du?",
+       "تو ل کێ دگەڕی؟"
+      ],
+      [
+       "Wem?",
+       "بۆ کێ؟",
+       "Wem gehört das?",
+       "ئەڤە یا کێیە؟"
+      ],
+      [
+       "Wessen?",
+       "یێ کێ؟",
+       "Wessen Buch ist das?",
+       "ئەڤە پەرتووکا کێیە؟"
+      ],
+      [
+       "Wo?",
+       "ل کیڤە؟ (جه)",
+       "Wo wohnst du?",
+       "تو ل کیڤە دژی؟"
+      ],
+      [
+       "Wohin?",
+       "بۆ کیڤە؟ (چوون)",
+       "Wohin gehst du?",
+       "تو دچییە کیڤە؟"
+      ],
+      [
+       "Woher?",
+       "ژ کیڤە؟",
+       "Woher kommst du?",
+       "تو ژ کیڤە هاتی؟"
+      ],
+      [
+       "Wann?",
+       "کەنگی؟",
+       "Wann beginnt der Kurs?",
+       "خول کەنگی دەستپێدکەت؟"
+      ],
+      [
+       "Wie?",
+       "چەوا؟",
+       "Wie geht es dir?",
+       "تو چەوانی؟"
+      ],
+      [
+       "Warum? / Wieso?",
+       "بۆچی؟",
+       "Warum lernst du Deutsch?",
+       "بۆچی تو ئەلمانی فێردبی؟"
+      ],
+      [
+       "Wozu?",
+       "بۆ چ مەبەست؟",
+       "Wozu brauchst du das?",
+       "ئەڤە بۆ چ پێدڤییە؟"
+      ],
+      [
+       "Welcher / Welche / Welches?",
+       "کیژ؟",
+       "Welches Auto gefällt dir?",
+       "کیژ ترومبێل ب دلێ تەیە؟"
+      ],
+      [
+       "Was für ein …?",
+       "چ جۆرە …؟",
+       "Was für Musik hörst du?",
+       "تو گوهداریا چ جۆرە مۆزیکێ دکەی؟"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٦.٣ Wie + ئاوەلناڤ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "پرسیار",
+      "بادینی",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "Wie viel?",
+       "چەند؟ (نەهژمارتی)",
+       "Wie viel kostet das? — بهایێ ڤێ چەندە؟"
+      ],
+      [
+       "Wie viele?",
+       "چەند؟ (هژمارتی)",
+       "Wie viele Kinder hast du? — تە چەند زارۆک هەنە؟"
+      ],
+      [
+       "Wie alt?",
+       "تەمەن چەندە؟",
+       "Wie alt bist du? — تو چەند سالی؟"
+      ],
+      [
+       "Wie lange?",
+       "چەند دەم؟",
+       "Wie lange dauert der Flug? — فڕین چەند دکێشیت؟"
+      ],
+      [
+       "Wie oft?",
+       "چەند جاران؟",
+       "Wie oft machst du Sport? — تو چەند جاران وەرزشێ دکەی؟"
+      ],
+      [
+       "Wie weit?",
+       "چەند دوورە؟",
+       "Wie weit ist es nach Berlin? — هەتا بەرلین چەند دوورە؟"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٦.٤ Wo + ئامراز (بۆ تشتان)"
+    },
+    {
+     "t": "p",
+     "text": "Womit? (ب چ؟)، Worüber? (ل سەر چ؟)، Wofür? (بۆ چ؟)، Woran? (ل چ هزر دکەی؟)، Worauf? (چاڤەڕێیا چ؟)، Wonach? (ل دویڤ چ؟). ئەڤە تنێ بۆ تشتانن؛ بۆ مرۆڤان دبێژی: Mit wem? (دگەل کێ؟)، Über wen? (ل سەر کێ؟)."
+    }
+   ]
+  },
+  {
+   "id": "ch7",
+   "part": 2,
+   "icon": "article",
+   "color": "#CE82FF",
+   "title": "بەشێ ٧: ناڤ و ئارتیکل (der, die, das)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "هەر ناڤەکێ ئەلمانی رەگەزەک هەیە: **نێر (der)**، **مێ (die)** یان **بێلایەن (das)**. د کۆیێ دا هەمی دبنە **die**."
+    },
+    {
+     "t": "h",
+     "text": "٧.١ ئارتیکلا دیار، نەدیار و نەرێنی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "رەگەز",
+      "دیار",
+      "نەدیار",
+      "نەرێنی (kein)",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "نێر",
+       "der Stuhl",
+       "ein Stuhl",
+       "kein Stuhl",
+       "کورسی"
+      ],
+      [
+       "مێ",
+       "die Tasche",
+       "eine Tasche",
+       "keine Tasche",
+       "جانتا"
+      ],
+      [
+       "بێلایەن",
+       "das Auto",
+       "ein Auto",
+       "kein Auto",
+       "ترومبێل"
+      ],
+      [
+       "کۆ",
+       "die Autos",
+       "Autos (بێ ئارتیکل)",
+       "keine Autos",
+       "ترومبێل (کۆ)"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "ئارتیکلا دیار وەکی پاشگرێ «-ەکە» یە د کوردی دا (der Mann = زەلامەکە)؛ ئارتیکلا نەدیار وەکی «-ەک» (ein Mann = زەلامەک)."
+    },
+    {
+     "t": "h",
+     "text": "٧.٢ رەگەزێ ناڤی ژ دووماهیا وی بزانە"
+    },
+    {
+     "t": "table",
+     "head": [
+      "رەگەز",
+      "دووماهی",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "**die** (نێزیکی ١٠٠٪)",
+       "-ung, -heit, -keit, -schaft, -tät, -ion",
+       "die Zeitung، die Freiheit، die Möglichkeit، die Freundschaft، die Universität، die Information"
+      ],
+      [
+       "**die** (پترییا جاران)",
+       "-ik, -ur, -ei, -in, -ie, -enz, -anz, -ade, -age, -e",
+       "die Musik، die Natur، die Bäckerei، die Lehrerin، die Familie، die Konferenz، die Garage، die Lampe"
+      ],
+      [
+       "**der**",
+       "-ling, -ismus, -ist, -or, -ant, -ent",
+       "der Frühling، der Tourismus، der Polizist، der Motor، der Elefant، der Student"
+      ],
+      [
+       "**der** (پترییا جاران)",
+       "-er, -ich, -ig, -us, -eur, -är",
+       "der Lehrer، der Teppich، der König، der Rhythmus، der Friseur، der Sekretär"
+      ],
+      [
+       "**das** (١٠٠٪)",
+       "-chen, -lein",
+       "das Mädchen، das Brötchen، das Büchlein"
+      ],
+      [
+       "**das** (پترییا جاران)",
+       "-ment, -um, -ma, -nis, -o, -ing، کار وەکی ناڤ",
+       "das Dokument، das Museum، das Thema، das Ergebnis، das Auto، das Training، das Essen"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**گرووپێن بێ پاشگر:**"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**هەردەم der:** رۆژ (der Montag)، هەیڤ (der Mai)، وەرز (der Winter)، ئاراستە (der Norden)، کەش (der Regen، der Schnee، der Wind).",
+      "**هەردەم die:** ناڤێن هژماران (die Eins)، پترییا ناڤێن گولان و داران (die Rose، die Eiche).",
+      "**هەردەم das:** رەنگ وەکی ناڤ (das Rot)، کانزا (das Gold)، پیتێن ئەلفوبێ (das A)، پترییا ناڤێن ب Ge- (das Gespräch، das Gebäude)."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**تێبینی:** ئەڤ یاسایە هاریکارن، بەلێ هندەک ناڤێن جیاواز هەنە (der Käse ب -e دووماهی دهێت). لەوما هەردەم ناڤی دگەل ئارتیکلێ ژبەر بکە."
+    },
+    {
+     "t": "h",
+     "text": "٧.٣ کۆ (Plural)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "تاک",
+      "کۆ",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "der Tisch",
+       "die Tische",
+       "مێز"
+      ],
+      [
+       "die Frau",
+       "die Frauen",
+       "ژن"
+      ],
+      [
+       "das Kind",
+       "die Kinder",
+       "زارۆک"
+      ],
+      [
+       "das Buch",
+       "die Bücher",
+       "پەرتووک"
+      ],
+      [
+       "das Auto",
+       "die Autos",
+       "ترومبێل"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٧.٤ جیاوازیا kein و nicht"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**kein / keine** ناڤەکی نەرێنی دکەت کو ئارتیکلا وی ein بیت یان بێ ئارتیکل بیت: Das ist **kein** Problem. — ئەڤە چو ئاریشە نینە. / Ich habe **keine** Zeit. — دەمێ من نینە.",
+      "**nicht** کار، ئاوەلناڤ و ناڤێن ب der/die/das نەرێنی دکەت: Ich verstehe **nicht**. — ئەز تێناگەهم. / Das Auto ist **nicht** neu. — ترومبێل نە نوویە."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch8",
+   "part": 2,
+   "icon": "family",
+   "color": "#CE82FF",
+   "title": "بەشێ ٨: جێناڤێن خودانیێ و خێزان (Possessivartikel und Familie)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "جێناڤێن خودانیێ (mein، dein…) وەکی ein دگوهۆڕن: دگەل ناڤێن مێ و کۆ پیتا **-e** وەردگرن."
+    },
+    {
+     "t": "h",
+     "text": "٨.١ جێناڤێن خودانیێ بۆ هەمی کەسان"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کەس",
+      "جێناڤ",
+      "بادینی",
+      "نێر / بێلایەن",
+      "مێ / کۆ"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mein",
+       "یێ من",
+       "mein Vater",
+       "meine Mutter"
+      ],
+      [
+       "du",
+       "dein",
+       "یێ تە",
+       "dein Vater",
+       "deine Mutter"
+      ],
+      [
+       "er / es",
+       "sein",
+       "یێ وی",
+       "sein Vater",
+       "seine Mutter"
+      ],
+      [
+       "sie",
+       "ihr",
+       "یێ وێ",
+       "ihr Vater",
+       "ihre Mutter"
+      ],
+      [
+       "wir",
+       "unser",
+       "یێ مە",
+       "unser Vater",
+       "unsere Mutter"
+      ],
+      [
+       "ihr",
+       "euer",
+       "یێ هەوە",
+       "euer Vater",
+       "eure Mutter"
+      ],
+      [
+       "sie / Sie",
+       "ihr / Ihr",
+       "یێ وان / یێ هەوە (ب رێز)",
+       "Ihr Vater",
+       "Ihre Mutter"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**تێبینی:** euer دەمێ پاشگر وەردگریت e یا ناڤینێ ژ دەست ددەت: eure، euren، eurem."
+    },
+    {
+     "t": "h",
+     "text": "٨.٢ ئەندامێن خێزانێ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "تاک",
+      "بادینی",
+      "کۆ"
+     ],
+     "rows": [
+      [
+       "der Vater",
+       "باب",
+       "die Väter"
+      ],
+      [
+       "die Mutter",
+       "دایک",
+       "die Mütter"
+      ],
+      [
+       "die Eltern",
+       "دایک و باب",
+       "(تنێ کۆ)"
+      ],
+      [
+       "der Sohn",
+       "کوڕ",
+       "die Söhne"
+      ],
+      [
+       "die Tochter",
+       "کچ",
+       "die Töchter"
+      ],
+      [
+       "der Bruder",
+       "برا",
+       "die Brüder"
+      ],
+      [
+       "die Schwester",
+       "خویشک",
+       "die Schwestern"
+      ],
+      [
+       "der Großvater (Opa)",
+       "باپیر",
+       "die Großväter"
+      ],
+      [
+       "die Großmutter (Oma)",
+       "داپیر",
+       "die Großmütter"
+      ],
+      [
+       "der Onkel",
+       "مام / خال",
+       "die Onkel"
+      ],
+      [
+       "die Tante",
+       "مەت / خالەت",
+       "die Tanten"
+      ],
+      [
+       "das Kind",
+       "زارۆک",
+       "die Kinder"
+      ]
+     ]
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Das ist **meine** Schwester und das ist **mein** Bruder. — ئەڤە خویشکا منە و ئەڤە برایێ منە.",
+      "Wie heißt **deine** Mutter? — ناڤێ دایکا تە چییە؟"
+     ]
+    },
+    {
+     "t": "p",
+     "text": "گوهۆڕینا ڤان جێناڤان د ئاکوزاتیڤ و داتیڤ دا د بەشێن ١٠ و ١١ دا هاتییە."
+    }
+   ]
+  },
+  {
+   "id": "ch9",
+   "part": 3,
+   "icon": "looks_one",
+   "color": "#FF9600",
+   "title": "بەشێ ٩: حالەتێن رێزمانی و نۆمیناتیڤ (Kasus und Nominativ)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "د ئەلمانی دا ناڤ و ئارتیکل ل دویڤ رۆلێ خۆ د رستێ دا دگوهۆڕن. ئەڤ رۆلە **حالەت (Kasus)** دهێتە گۆتن. بۆ A1 و A2 سێ حالەت فەرن."
+    },
+    {
+     "t": "h",
+     "text": "٩.١ سێ حالەت ب کورتی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "حالەت",
+      "رۆل",
+      "پرسیار",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "Nominativ",
+       "بکەر: کارێ دکەت",
+       "Wer? / Was? (کێ؟ / چ؟)",
+       "**Der Vater** kauft ein Auto."
+      ],
+      [
+       "Akkusativ",
+       "بەرکارێ راستەوخۆ: کار ل سەر دکەڤیت",
+       "Wen? / Was? (کێ؟ / چ؟)",
+       "Ich sehe **den Vater**."
+      ],
+      [
+       "Dativ",
+       "بەرکارێ نەراستەوخۆ: وەرگر، بۆ کێ",
+       "Wem? (بۆ کێ؟ / دگەل کێ؟)",
+       "Ich helfe **dem Vater**."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٩.٢ خشتەیا ئارتیکلان د هەر سێ حالەتان دا"
+    },
+    {
+     "t": "table",
+     "head": [
+      "حالەت",
+      "نێر",
+      "مێ",
+      "بێلایەن",
+      "کۆ"
+     ],
+     "rows": [
+      [
+       "Nominativ",
+       "der / ein",
+       "die / eine",
+       "das / ein",
+       "die / –"
+      ],
+      [
+       "Akkusativ",
+       "**den / einen**",
+       "die / eine",
+       "das / ein",
+       "die / –"
+      ],
+      [
+       "Dativ",
+       "**dem / einem**",
+       "**der / einer**",
+       "**dem / einem**",
+       "**den + n**"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**ب ئێک رستێ هەر سێ:** Der Vater gibt dem Sohn einen Apfel. — باب سێڤەکێ ددەتە کوڕێ خۆ."
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Der Vater** = Nominativ (ئەو ددەت)",
+      "**dem Sohn** = Dativ (ئەو وەردگریت)",
+      "**einen Apfel** = Akkusativ (ئەو تشتێ دهێتە دان)"
+     ]
+    },
+    {
+     "t": "h",
+     "text": "٩.٣ نۆمیناتیڤ: بکەرێ رستێ"
+    },
+    {
+     "t": "p",
+     "text": "بکەر هەردەم نۆمیناتیڤە و ئارتیکلا وی ناگوهۆڕیت. پشتی کارێن **sein، werden، bleiben، heißen** ژی ناڤ نۆمیناتیڤ دمینیت."
+    },
+    {
+     "t": "table",
+     "head": [
+      "رستە",
+      "بادینی",
+      "بۆچی نۆمیناتیڤ؟"
+     ],
+     "rows": [
+      [
+       "Der Lehrer erklärt die Grammatik.",
+       "مامۆستا رێزمانێ شرۆڤە دکەت.",
+       "مامۆستا کارێ دکەت"
+      ],
+      [
+       "Das Kind schläft im Bett.",
+       "زارۆک د جهێ نڤستنێ دا دنڤیت.",
+       "زارۆک بکەرە"
+      ],
+      [
+       "Die Frau liest eine Zeitung.",
+       "ژن رۆژنامەیەکێ دخوینیت.",
+       "Wer liest? → die Frau"
+      ],
+      [
+       "Die Studenten lernen fleißig.",
+       "قوتابی ب کۆشش فێردبن.",
+       "بکەر کۆیە"
+      ],
+      [
+       "Das ist ein schnelles Auto.",
+       "ئەڤە ترومبێلەکا ب لەزە.",
+       "پشتی sein"
+      ],
+      [
+       "Mein Bruder wird Arzt.",
+       "برایێ من دێ بیتە نوژدار.",
+       "پشتی werden"
+      ],
+      [
+       "Er bleibt ein guter Freund.",
+       "ئەو هەڤالەکێ باش دمینیت.",
+       "پشتی bleiben"
+      ],
+      [
+       "Wer hat an die Tür geklopft?",
+       "کێ ل دەرگەهی دا؟",
+       "Wer بخۆ نۆمیناتیڤە"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch10",
+   "part": 3,
+   "icon": "looks_two",
+   "color": "#FF9600",
+   "title": "بەشێ ١٠: ئاکوزاتیڤ (Akkusativ)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "د ئاکوزاتیڤ دا **تنێ نێر** دگوهۆڕیت: der → den، ein → einen، mein → meinen. مێ، بێلایەن و کۆ وەکی خۆ دمینن."
+    },
+    {
+     "t": "h",
+     "text": "١٠.١ کەنگی ناڤ دبیتە ئاکوزاتیڤ؟"
+    },
+    {
+     "t": "ol",
+     "items": [
+      "پشتی کارەکێ کو بەرکارەکێ راستەوخۆ دخوازیت (کڕین، دیتن، خوارن…).",
+      "پشتی ئێک ژ پێنج ئامرازێن ئاکوزاتیڤ: **für، um، durch، ohne، gegen** (ژبەرکرن: FUDOG)."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "بۆ دیتنا ئاکوزاتیڤێ پرسیارێ ژ کاری بکە: **Was?** یان **Wen?** — Ich kaufe einen Apfel. → Was kaufe ich? → einen Apfel."
+    },
+    {
+     "t": "h",
+     "text": "١٠.٢ خشتەیا تەمام"
+    },
+    {
+     "t": "table",
+     "head": [
+      "رەگەز",
+      "Nominativ",
+      "Akkusativ (دیار)",
+      "نەدیار",
+      "نەرێنی",
+      "mein / dein / sein …"
+     ],
+     "rows": [
+      [
+       "نێر",
+       "der Tisch",
+       "**den** Tisch",
+       "**einen** Tisch",
+       "**keinen** Tisch",
+       "**meinen** Tisch"
+      ],
+      [
+       "مێ",
+       "die Tasche",
+       "die Tasche",
+       "eine Tasche",
+       "keine Tasche",
+       "meine Tasche"
+      ],
+      [
+       "بێلایەن",
+       "das Buch",
+       "das Buch",
+       "ein Buch",
+       "kein Buch",
+       "mein Buch"
+      ],
+      [
+       "کۆ",
+       "die Bücher",
+       "die Bücher",
+       "–",
+       "keine Bücher",
+       "meine Bücher"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٠.٣ کارێن ئاکوزاتیڤ یێن بەربەلاڤ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "رامان",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "haben",
+       "هەبوون",
+       "Ich habe **einen** Bruder.",
+       "من برایەک هەیە."
+      ],
+      [
+       "brauchen",
+       "پێدڤیبوون",
+       "Er braucht **den** Schlüssel.",
+       "پێدڤیا وی ب کلیلێ هەیە."
+      ],
+      [
+       "kaufen",
+       "کڕین",
+       "Wir kaufen **einen** Tisch.",
+       "ئەم مێزەکێ دکڕین."
+      ],
+      [
+       "suchen",
+       "لگەڕیان",
+       "Er sucht **seinen** Pass.",
+       "ئەو ل پاسپۆرتا خۆ دگەڕیت."
+      ],
+      [
+       "sehen",
+       "دیتن",
+       "Ich sehe **den** Lehrer.",
+       "ئەز مامۆستای دبینم."
+      ],
+      [
+       "finden",
+       "دیتنەڤە / هزرکرن",
+       "Ich finde **den** Film gut.",
+       "ب دیتنا من فلم یێ باشە."
+      ],
+      [
+       "essen",
+       "خوارن",
+       "Er isst **einen** Kuchen.",
+       "ئەو کێکەکێ دخۆت."
+      ],
+      [
+       "trinken",
+       "ڤەخوارن",
+       "Ich trinke **einen** Kaffee.",
+       "ئەز قاوەیەکێ ڤەدخۆم."
+      ],
+      [
+       "besuchen",
+       "سەرەدانکرن",
+       "Wir besuchen **unseren** Onkel.",
+       "ئەم سەرەدانا مامێ خۆ دکەین."
+      ],
+      [
+       "fragen",
+       "پرسیارکرن",
+       "Das Kind fragt **den** Polizisten.",
+       "زارۆک پرسیارێ ژ پۆلیسی دکەت."
+      ],
+      [
+       "verstehen",
+       "تێگەهشتن",
+       "Ich verstehe **den** Satz.",
+       "ئەز ل رستێ تێدگەهم."
+      ],
+      [
+       "lieben",
+       "حەزکرن",
+       "Er liebt **seinen** Hund.",
+       "ئەو حەز ژ سەیێ خۆ دکەت."
+      ],
+      [
+       "anrufen",
+       "تەلەفۆنکرن",
+       "Ich rufe **meinen** Onkel an.",
+       "ئەز تەلەفۆنێ بۆ مامێ خۆ دکەم."
+      ],
+      [
+       "einladen",
+       "داوەتکرن",
+       "Er lädt **seinen** Chef ein.",
+       "ئەو بەرپرسێ خۆ داوەت دکەت."
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**یاسایا haben:** پشتی haben ناڤێ نێر هەردەم دبیتە einen یان keinen: Ich habe **keinen** Hunger. — ئەز نە برسیمە."
+    },
+    {
+     "t": "h",
+     "text": "١٠.٤ ئامرازێن ئاکوزاتیڤ (FUDOG)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئامراز",
+      "رامان",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "für",
+       "بۆ",
+       "Das Geschenk ist für **den** Vater.",
+       "دیاری بۆ بابییە."
+      ],
+      [
+       "um",
+       "ل دۆر / ل دەمژمێر",
+       "Wir gehen um **den** Park.",
+       "ئەم ل دۆر پارکێ دگەڕین."
+      ],
+      [
+       "durch",
+       "ب ناڤ …دا",
+       "Wir fahren durch **den** Tunnel.",
+       "ئەم ب ناڤ تونێلێ دا دچین."
+      ],
+      [
+       "ohne",
+       "بێ",
+       "Ich gehe nicht ohne **meinen** Schirm.",
+       "ئەز بێ چەترێ خۆ ناچم."
+      ],
+      [
+       "gegen",
+       "دژی / ل بەر",
+       "Das Auto fährt gegen **einen** Baum.",
+       "ترومبێل ل دارەکێ ددەت."
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "دگەل مێ و بێلایەن چو ناگوهۆڕیت: für meine Mutter، ohne mein Kind، für die Kinder."
+    },
+    {
+     "t": "h",
+     "text": "١٠.٥ ein یان einen؟ بەراوردکرن"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Hier ist **ein** Mann. — ل ڤێرێ زەلامەک هەیە. (زەلام بکەرە → ein)",
+      "Ich kenne **einen** Mann. — ئەز زەلامەکی دنیاسم. (زەلام بەرکارە → einen)",
+      "Das ist **mein** Schlüssel. — ئەڤە کلیلا منە. (پشتی sein → mein)",
+      "Ich suche **meinen** Schlüssel. — ئەز ل کلیلا خۆ دگەڕیم. (بەرکار → meinen)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch11",
+   "part": 3,
+   "icon": "looks_3",
+   "color": "#FF9600",
+   "title": "بەشێ ١١: داتیڤ (Dativ)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "داتیڤ ئەو کەسە یێ کار **بۆ وی** دهێتە کرن یان تشتەکی **وەردگریت**. پرسیارا وێ **Wem?** یە (بۆ کێ؟ / دگەل کێ؟). د داتیڤ دا **هەمی ئارتیکل** دگوهۆڕن."
+    },
+    {
+     "t": "h",
+     "text": "١١.١ خشتەیا تەمام"
+    },
+    {
+     "t": "table",
+     "head": [
+      "رەگەز",
+      "Nominativ",
+      "Dativ (دیار)",
+      "نەدیار",
+      "نەرێنی",
+      "mein …",
+      "پاشگر"
+     ],
+     "rows": [
+      [
+       "نێر",
+       "der Mann",
+       "**dem** Mann",
+       "**einem** Mann",
+       "**keinem** Mann",
+       "**meinem** Mann",
+       "-em"
+      ],
+      [
+       "مێ",
+       "die Frau",
+       "**der** Frau",
+       "**einer** Frau",
+       "**keiner** Frau",
+       "**meiner** Frau",
+       "-er"
+      ],
+      [
+       "بێلایەن",
+       "das Kind",
+       "**dem** Kind",
+       "**einem** Kind",
+       "**keinem** Kind",
+       "**meinem** Kind",
+       "-em"
+      ],
+      [
+       "کۆ",
+       "die Kinder",
+       "**den** Kinder**n**",
+       "–",
+       "**keinen** Kinder**n**",
+       "**meinen** Kinder**n**",
+       "-en + n"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**یاسایا کۆیێ:** د داتیڤ دا ناڤێ کۆ پیتا **-n** وەردگریت (die Kinder → den Kindern)، ئەگەر ب -n یان -s ب دووماهی نەهێت (den Eltern، den Autos)."
+    },
+    {
+     "t": "p",
+     "text": "**بۆچی meiner Mutter؟** Mutter مێیە (die). helfen داتیڤ دخوازیت، ئینا die دبیتە der، و هەمان پاشگر دچیتە سەر mein: mein + er = **meiner**."
+    },
+    {
+     "t": "table",
+     "head": [
+      "کەس",
+      "نێر / بێلایەن (-em)",
+      "مێ (-er)",
+      "کۆ (-en)"
+     ],
+     "rows": [
+      [
+       "ich",
+       "meinem Bruder",
+       "meiner Mutter",
+       "meinen Freunden"
+      ],
+      [
+       "du",
+       "deinem Bruder",
+       "deiner Mutter",
+       "deinen Freunden"
+      ],
+      [
+       "er",
+       "seinem Bruder",
+       "seiner Mutter",
+       "seinen Freunden"
+      ],
+      [
+       "sie",
+       "ihrem Bruder",
+       "ihrer Mutter",
+       "ihren Freunden"
+      ],
+      [
+       "wir",
+       "unserem Bruder",
+       "unserer Mutter",
+       "unseren Freunden"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١١.٢ کارێن داتیڤ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "رامان",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "helfen",
+       "هاریکاریکرن",
+       "Ich helfe **meiner** Mutter.",
+       "ئەز هاریکاریا دایکا خۆ دکەم."
+      ],
+      [
+       "danken",
+       "سوپاسیکرن",
+       "Wir danken **der** Lehrerin.",
+       "ئەم سوپاسیا مامۆستایێ دکەین."
+      ],
+      [
+       "gehören",
+       "یێ کەسەکی بوون",
+       "Das Auto gehört **meinem** Vater.",
+       "ترومبێل یا بابێ منە."
+      ],
+      [
+       "gefallen",
+       "ب دل بوون",
+       "Das Haus gefällt **meiner** Mutter.",
+       "خانی ب دلێ دایکا منە."
+      ],
+      [
+       "gratulieren",
+       "پیرۆزباهیکرن",
+       "Ich gratuliere **dem** Kind.",
+       "ئەز پیرۆزباهیێ ل زارۆکی دکەم."
+      ],
+      [
+       "antworten",
+       "بەرسڤدان",
+       "Er antwortet **den** Schülern.",
+       "ئەو بەرسڤا قوتابیان ددەت."
+      ],
+      [
+       "schmecken",
+       "تامخۆشبوون",
+       "Die Suppe schmeckt **dem** Gast.",
+       "شۆربە ب تامە ل دەف مێڤانی."
+      ],
+      [
+       "passen",
+       "ل هاتن (قیاس)",
+       "Die Hose passt **dem** Jungen.",
+       "پانتۆل ل کوڕکی دهێت."
+      ],
+      [
+       "glauben",
+       "باوەرکرن",
+       "Ich glaube **diesem** Mann nicht.",
+       "ئەز باوەریێ ب ڤی زەلامی ناکەم."
+      ],
+      [
+       "vertrauen",
+       "متمانەکرن",
+       "Sie vertraut **ihrem** Freund.",
+       "ئەو متمانێ ب هەڤالێ خۆ دکەت."
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "هەروەسا: **Wie geht es dir / Ihnen?** — تو / هوین چەوانن؟ (dir و Ihnen داتیڤن)."
+    },
+    {
+     "t": "h",
+     "text": "١١.٣ هەشت ئامرازێن داتیڤ"
+    },
+    {
+     "t": "p",
+     "text": "پشتی ڤان ئامرازان ناڤ هەردەم داتیڤە: **aus، bei، mit، nach، seit، von، zu، gegenüber**."
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئامراز",
+      "رامان",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "aus",
+       "ژ (ژ ناڤ …دا)، ژ ماددێ",
+       "Ich komme aus **dem** Haus. / Er nimmt den Schlüssel aus **der** Tasche.",
+       "ئەز ژ مالێ دەردکەڤم. / ئەو کلیلێ ژ جانتایێ دەردئێخیت."
+      ],
+      [
+       "bei",
+       "ل دەف، ل جهێ کاری",
+       "Ich wohne bei **meinen** Eltern. / Er arbeitet bei **einer** Firma.",
+       "ئەز ل دەف دایک و بابێن خۆ دژیم. / ئەو ل کۆمپانیەکێ کار دکەت."
+      ],
+      [
+       "mit",
+       "دگەل، ب (ئامراز / ترومبێل)",
+       "Ich fahre mit **dem** Bus. / Ich trinke Kaffee mit Milch.",
+       "ئەز ب پاسێ دچم. / ئەز قاوێ دگەل شیری ڤەدخۆم."
+      ],
+      [
+       "nach",
+       "پشتی (دەم)، بۆ (باژێڕ / وەلات)",
+       "Nach **der** Arbeit rufe ich dich an. / Wir fliegen nach Deutschland.",
+       "پشتی کاری ئەز دێ تەلەفۆنێ بۆ تە کەم. / ئەم دێ فڕینە ئەلمانیا."
+      ],
+      [
+       "seit",
+       "ژ …ڤە (هێشتا بەردەوامە)",
+       "Ich wohne seit **einem** Monat hier.",
+       "هەیڤەکە ئەز ل ڤێرێ دژیم."
+      ],
+      [
+       "von",
+       "ژ، ژ لایێ …ڤە",
+       "Das Geschenk ist von **meiner** Schwester.",
+       "دیاری ژ لایێ خویشکا منڤەیە."
+      ],
+      [
+       "zu",
+       "بۆ دەف (کەس / جه)",
+       "Ich gehe zu **dem** (zum) Arzt.",
+       "ئەز دچمە دەف نوژداری."
+      ],
+      [
+       "gegenüber",
+       "بەرانبەر",
+       "Die Post liegt gegenüber **der** Bank.",
+       "پۆستەخانە بەرانبەر بانکێیە."
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**کورتکرن:** bei + dem = **beim** · von + dem = **vom** · zu + dem = **zum** · zu + der = **zur**"
+    },
+    {
+     "t": "p",
+     "text": "**تێبینی:**"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "دگەل seit کار هەردەم د دەمێ نوکە دا یە: Ich lerne **seit** einem Jahr Deutsch. — سالەکە ئەز ئەلمانی فێردبم.",
+      "«چوونە مالێ» = **nach Hause**، و «ل مالێ» = **zu Hause**.",
+      "هەمی ترومبێل و هۆکارێن هاتووچۆیێ دگەل mit: mit dem Auto، mit der Bahn، mit dem Flugzeug.",
+      "gegenüber دشێت پشتی جێناڤی بهێت: Er wohnt mir gegenüber. — ئەو بەرانبەر من دژیت."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch12",
+   "part": 3,
+   "icon": "swap",
+   "color": "#FF9600",
+   "title": "بەشێ ١٢: ئامرازێن دوو-لایەنە (Wechselpräpositionen)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "نەه ئامراز جارەکێ ئاکوزاتیڤ و جارەکێ داتیڤ دخوازن. پرسیار ب تنێ بڕیارێ ددەت:"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Wohin?** (بۆ کیڤە؟) = لڤین بەرەڤ جهەکی → **Akkusativ**: Ich gehe **in die** Schule. — ئەز دچمە قوتابخانێ.",
+      "**Wo?** (ل کیڤە؟) = مان ل جهەکی → **Dativ**: Ich bin **in der** Schule. — ئەز ل قوتابخانێمە."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٢.١ هەر نەه ئامراز"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئامراز",
+      "رامان",
+      "Wohin? (Akkusativ)",
+      "Wo? (Dativ)"
+     ],
+     "rows": [
+      [
+       "in",
+       "د ناڤ …دا",
+       "ins Kino (in das)",
+       "im Kino (in dem)"
+      ],
+      [
+       "an",
+       "ل نک / ل قەراخ",
+       "an das (ans) Meer",
+       "am Meer (an dem)"
+      ],
+      [
+       "auf",
+       "ل سەر (رووی ئاسۆیی)",
+       "auf den Tisch",
+       "auf dem Tisch"
+      ],
+      [
+       "unter",
+       "ل بن",
+       "unter das Bett",
+       "unter dem Bett"
+      ],
+      [
+       "über",
+       "ل سەر (بێ بەرکەفتن)",
+       "über die Brücke",
+       "über der Stadt"
+      ],
+      [
+       "vor",
+       "ل پێشیا",
+       "vor die Tür",
+       "vor der Tür"
+      ],
+      [
+       "hinter",
+       "ل پشت",
+       "hinter das Haus",
+       "hinter dem Haus"
+      ],
+      [
+       "neben",
+       "ل تەنشت",
+       "neben den Schrank",
+       "neben dem Schrank"
+      ],
+      [
+       "zwischen",
+       "د ناڤبەرا",
+       "zwischen die Stühle",
+       "zwischen den Stühlen"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٢.٢ کارێن جووتی: لڤین و مان"
+    },
+    {
+     "t": "table",
+     "head": [
+      "لڤین (Akkusativ)",
+      "مان (Dativ)",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "legen (دانان، درێژ)",
+       "liegen (درێژ بوون)",
+       "Ich lege das Buch auf **den** Tisch. → Das Buch liegt auf **dem** Tisch."
+      ],
+      [
+       "stellen (دانان، راوەستیای)",
+       "stehen (راوەستیان)",
+       "Ich stelle die Flasche in **den** Kühlschrank. → Die Flasche steht im Kühlschrank."
+      ],
+      [
+       "hängen (هەلاویستن)",
+       "hängen (هەلاویستی بوون)",
+       "Ich hänge das Bild an **die** Wand. → Das Bild hängt an **der** Wand."
+      ],
+      [
+       "gehen (چوون)",
+       "sein (بوون)",
+       "Ich gehe ins Restaurant. → Ich bin im Restaurant."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٢.٣ چوون بۆ جهان: zu، in یان bei؟"
+    },
+    {
+     "t": "table",
+     "head": [
+      "جه",
+      "Wohin? (چوون)",
+      "Wo? (بوون)",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "die Bank",
+       "zur Bank",
+       "bei der Bank / in der Bank",
+       "دچمە بانکێ / ل بانکێمە"
+      ],
+      [
+       "der Arzt (کەس)",
+       "zum Arzt",
+       "beim Arzt",
+       "دچمە دەف نوژداری / ل دەف نوژدارییمە"
+      ],
+      [
+       "der Markt",
+       "zum Markt",
+       "auf dem Markt",
+       "دچمە بازاڕی / ل بازاڕیمە"
+      ],
+      [
+       "der Zoo",
+       "zum Zoo / in den Zoo",
+       "im Zoo",
+       "دچمە باخچێ ئاژەلان / تێدامە"
+      ],
+      [
+       "das Restaurant",
+       "ins Restaurant",
+       "im Restaurant",
+       "دچمە خوارنگەهێ / تێدامە"
+      ],
+      [
+       "der Flughafen",
+       "zum Flughafen",
+       "am Flughafen",
+       "دچمە فڕۆکەخانێ / ل فڕۆکەخانێمە"
+      ],
+      [
+       "die Kirche",
+       "in die Kirche",
+       "in der Kirche",
+       "دچمە کەنیسێ / ل کەنیسێمە"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**یاسا:** بۆ کەسان هەردەم zu (چوون) و bei (بوون): zum Arzt → beim Arzt. نە in!"
+    },
+    {
+     "t": "p",
+     "text": "**کورتکرن:** in + das = **ins** · in + dem = **im** · an + das = **ans** · an + dem = **am**"
+    }
+   ]
+  },
+  {
+   "id": "ch13",
+   "part": 3,
+   "icon": "call_split",
+   "color": "#FF9600",
+   "title": "بەشێ ١٣: دوو بەرکار د ئێک رستێ دا",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "هندەک کار دوو بەرکاران دخوازن: **کەس = Dativ** (بۆ کێ؟) و **تشت = Akkusativ** (چ؟). وەکی: geben (دان)، schenken (دیاریکرن)، kaufen (کڕین)، zeigen (نیشاندان)، erklären (شرۆڤەکرن)، bringen (ئینان)، schicken (هنارتن)."
+    },
+    {
+     "t": "h",
+     "text": "١٣.١ جێناڤێن کەسی د هەر سێ حالەتان دا"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Nominativ",
+      "Akkusativ",
+      "Dativ",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "mir",
+       "ئەز / من / بۆ من"
+      ],
+      [
+       "du",
+       "dich",
+       "dir",
+       "تو / تە / بۆ تە"
+      ],
+      [
+       "er",
+       "ihn",
+       "ihm",
+       "ئەو (نێر) / وی / بۆ وی"
+      ],
+      [
+       "sie",
+       "sie",
+       "ihr",
+       "ئەو (مێ) / وێ / بۆ وێ"
+      ],
+      [
+       "es",
+       "es",
+       "ihm",
+       "ئەو (بێلایەن) / وی / بۆ وی"
+      ],
+      [
+       "wir",
+       "uns",
+       "uns",
+       "ئەم / مە / بۆ مە"
+      ],
+      [
+       "ihr",
+       "euch",
+       "euch",
+       "هوین / هەوە / بۆ هەوە"
+      ],
+      [
+       "sie / Sie",
+       "sie / Sie",
+       "ihnen / Ihnen",
+       "ئەو / وان / بۆ وان (هوین ب رێز)"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٣.٢ سێ یاسایێن رێزبەندیێ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "حالەت",
+      "یاسا",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "هەردوو ناڤن",
+       "Dativ ل پێش Akkusativ",
+       "Ich gebe **dem Mann** **das Buch**.",
+       "ئەز پەرتووکێ ددەمە زەلامی."
+      ],
+      [
+       "هەردوو جێناڤن",
+       "Akkusativ ل پێش Dativ",
+       "Ich gebe **es** **ihm**.",
+       "ئەز وێ ددەمە وی."
+      ],
+      [
+       "ئێک ناڤ و ئێک جێناڤ",
+       "جێناڤ هەردەم ل پێش",
+       "Ich gebe **es** dem Mann. / Ich gebe **ihm** das Buch.",
+       "ئەز وێ ددەمە زەلامی. / ئەز پەرتووکێ ددەمە وی."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٣.٣ نموونە"
+    },
+    {
+     "t": "table",
+     "head": [
+      "بکەر",
+      "کار",
+      "Dativ (کەس)",
+      "Akkusativ (تشت)",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Der Vater",
+       "gibt",
+       "dem Sohn",
+       "einen Apfel.",
+       "باب سێڤەکێ ددەتە کوڕی."
+      ],
+      [
+       "Ich",
+       "schenke",
+       "meiner Mutter",
+       "eine Blume.",
+       "ئەز گولەکێ دیاری ددەمە دایکا خۆ."
+      ],
+      [
+       "Der Lehrer",
+       "erklärt",
+       "den Schülern",
+       "die Grammatik.",
+       "مامۆستا رێزمانێ بۆ قوتابیان شرۆڤە دکەت."
+      ],
+      [
+       "Er",
+       "kauft",
+       "seinem Kind",
+       "ein Spielzeug.",
+       "ئەو یاریەکێ بۆ زارۆکێ خۆ دکڕیت."
+      ],
+      [
+       "Der Arzt",
+       "gibt",
+       "dem Patienten",
+       "ein Medikament.",
+       "نوژدار دەرمانەکی ددەتە نەخۆشی."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٣.٤ چار پێنگاڤ بۆ شرۆڤەکرنا هەر رستەکێ"
+    },
+    {
+     "t": "ol",
+     "items": [
+      "**کاری ببینە:** داتیڤ دخوازیت (helfen، danken)؟ یان دوو بەرکار (geben، schenken)؟",
+      "**ئامرازی ببینە:** FUDOG = Akkusativ · aus، bei، mit، nach، seit، von، zu، gegenüber = Dativ · دوو-لایەنە = پرسیارا Wo یان Wohin بکە.",
+      "**پرسیار بکە:** Wer? = Nominativ · Was / Wen? = Akkusativ · Wem? = Dativ.",
+      "**رەگەزێ ناڤی بزانە:** der / die / das بڕیارێ ددەت کا کیژ پاشگر دهێت."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**نموونەیا هەمیان:** Der Mann gibt der Frau das Buch mit der Post. — زەلام ب رێکا پۆستێ پەرتووکێ ددەتە ژنێ."
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Der Mann** → Nominativ · **der Frau** → Dativ (وەرگر) · **das Buch** → Akkusativ · **mit der Post** → Dativ (پشتی mit)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch14",
+   "part": 4,
+   "icon": "schedule",
+   "color": "#FF4B4B",
+   "title": "بەشێ ١٤: دەربڕینێن دەمی (Zeitangaben)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "سێ ئامرازێن سەرەکی ژبەر بکە: **um** بۆ دەمژمێرێ، **am** بۆ رۆژێ، **im** بۆ هەیڤ و وەرزان."
+    },
+    {
+     "t": "h",
+     "text": "١٤.١ پرسیارێن دەمی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "پرسیار",
+      "بادینی",
+      "نموونە و بەرسڤ"
+     ],
+     "rows": [
+      [
+       "Wann?",
+       "کەنگی؟",
+       "Wann kommst du? — Um 18 Uhr. (دەمژمێر ٦ێ ئێڤاری)"
+      ],
+      [
+       "Wie lange?",
+       "چەند دەم؟",
+       "Wie lange bleibst du? — Drei Tage. (سێ رۆژان)"
+      ],
+      [
+       "Seit wann?",
+       "ژ کەنگیڤە؟",
+       "Seit wann lernst du Deutsch? — Seit einem Jahr. (سالەکە)"
+      ],
+      [
+       "Bis wann?",
+       "هەتا کەنگی؟",
+       "Bis wann musst du fertig sein? — Bis morgen. (هەتا سوبەهی)"
+      ],
+      [
+       "Ab wann?",
+       "ژ کەنگی پێڤە؟",
+       "Ab wann hast du Urlaub? — Ab Montag. (ژ دووشەمبی پێڤە)"
+      ],
+      [
+       "Wie oft?",
+       "چەند جاران؟",
+       "Wie oft trainierst du? — Zweimal pro Woche. (حەفتیێ دوو جاران)"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٤.٢ پەیڤێن دەمی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "vorgestern",
+       "پێرێ",
+       "jetzt",
+       "نوکە"
+      ],
+      [
+       "gestern",
+       "دوهی",
+       "sofort",
+       "ئێکسەر"
+      ],
+      [
+       "heute",
+       "ئەڤرۆ",
+       "gleich / bald",
+       "پشتی کێمەکێ / زوو"
+      ],
+      [
+       "morgen",
+       "سوبەهی",
+       "früher",
+       "بەرێ"
+      ],
+      [
+       "übermorgen",
+       "دووسوبەهی",
+       "später",
+       "پاشتر"
+      ],
+      [
+       "schon",
+       "ئێکسەر / بەرێ نوکە",
+       "noch",
+       "هێشتا"
+      ],
+      [
+       "wieder",
+       "دیسان",
+       "damals",
+       "وی دەمی"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٤.٣ دەمێن رۆژێ"
+    },
+    {
+     "t": "p",
+     "text": "ب پیتا مەزن = ناڤ (am Morgen = ل سپێدێ، جارەکێ). ب پیتا بچووک و -s = خوو (morgens = هەمی سپێدان)."
+    },
+    {
+     "t": "table",
+     "head": [
+      "ناڤ",
+      "خوو",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "am Morgen",
+       "morgens",
+       "سپێدێ / هەمی سپێدان"
+      ],
+      [
+       "am Vormittag",
+       "vormittags",
+       "بەری نیڤڕۆ"
+      ],
+      [
+       "am Mittag",
+       "mittags",
+       "نیڤڕۆ"
+      ],
+      [
+       "am Nachmittag",
+       "nachmittags",
+       "پشتی نیڤڕۆ"
+      ],
+      [
+       "am Abend",
+       "abends",
+       "ئێڤاری / هەمی ئێڤاران"
+      ],
+      [
+       "in der Nacht",
+       "nachts",
+       "شەڤێ / هەمی شەڤان"
+      ]
+     ]
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Am Montag habe ich einen Termin. — دووشەمبیا بهێت ژڤانەکێ من هەیە (ئێک جار).",
+      "Montags habe ich Deutschkurs. — هەمی دووشەمبیان خولا من یا ئەلمانی هەیە."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٤.٤ ئامرازێن دەمی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئامراز",
+      "دگەل",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "um",
+       "دەمژمێر",
+       "um 8 Uhr",
+       "ل دەمژمێر هەشتێ"
+      ],
+      [
+       "am",
+       "رۆژ، رێکەفت",
+       "am Montag، am 3. Mai",
+       "دووشەمبی، ٣ی گولانێ"
+      ],
+      [
+       "im",
+       "هەیڤ، وەرز",
+       "im April، im Sommer",
+       "د نیسانێ دا، د هاڤینێ دا"
+      ],
+      [
+       "von … bis",
+       "ژ … هەتا",
+       "von 8 bis 16 Uhr",
+       "ژ هەشتێ هەتا چارێ پشتی نیڤڕۆ"
+      ],
+      [
+       "ab",
+       "ژ … پێڤە (داهاتی)",
+       "ab morgen",
+       "ژ سوبەهی پێڤە"
+      ],
+      [
+       "seit + Dativ",
+       "ژ …ڤە (بەردەوام)",
+       "seit einem Jahr",
+       "سالەکە"
+      ],
+      [
+       "vor + Dativ",
+       "بەری",
+       "vor dem Essen، vor zwei Tagen",
+       "بەری خوارنێ، بەری دوو رۆژان"
+      ],
+      [
+       "nach + Dativ",
+       "پشتی",
+       "nach der Arbeit",
+       "پشتی کاری"
+      ],
+      [
+       "in + Dativ",
+       "پشتی (داهاتی)",
+       "in einer Stunde",
+       "پشتی دەمژمێرەکێ"
+      ],
+      [
+       "während + Genitiv",
+       "دەمێ",
+       "während des Unterrichts",
+       "دەمێ وانێ"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**in یان vor؟** in zwei Tagen = پشتی دوو رۆژان (داهاتی). vor zwei Tagen = بەری دوو رۆژان (بۆری)."
+    },
+    {
+     "t": "h",
+     "text": "١٤.٥ گرێدەرێن رێزبەندیێ"
+    },
+    {
+     "t": "p",
+     "text": "ئەڤە ل جهێ ئێکێ دهێن، ئینا کار دکەڤیتە جهێ دووێ: **Zuerst frühstücke ich.** (نە Zuerst ich frühstücke)."
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "zuerst",
+       "ل دەستپێکێ"
+      ],
+      [
+       "dann / danach",
+       "پاشی / پشتی وێ"
+      ],
+      [
+       "später",
+       "پاشتر"
+      ],
+      [
+       "vorher",
+       "بەری وێ"
+      ],
+      [
+       "inzwischen",
+       "د ڤێ ناڤبەرێ دا"
+      ],
+      [
+       "anschließend",
+       "ئێکسەر پشتی وێ"
+      ],
+      [
+       "schließlich / zum Schluss",
+       "ل دووماهیێ"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**رۆژا من:** Zuerst frühstücke ich. Danach gehe ich zur Arbeit. Schließlich gehe ich schlafen. — ل دەستپێکێ تێشتێ دخۆم. پاشی دچمە سەر کاری. ل دووماهیێ دچم دنڤم."
+    },
+    {
+     "t": "h",
+     "text": "١٤.٦ چەند جاران؟"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "رێژە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "immer",
+       "١٠٠٪",
+       "هەردەم"
+      ],
+      [
+       "oft",
+       "~٧٥٪",
+       "گەلەک جاران"
+      ],
+      [
+       "manchmal",
+       "~٥٠٪",
+       "هندەک جاران"
+      ],
+      [
+       "selten",
+       "~١٥٪",
+       "کێم جاران"
+      ],
+      [
+       "nie",
+       "٠٪",
+       "چو جاران"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "هەروەسا: täglich (رۆژانە)، wöchentlich (حەفتیانە)، monatlich (هەیڤانە)، den ganzen Tag (هەمی رۆژێ)، zwei Stunden lang (بۆ دوو دەمژمێران)."
+    }
+   ]
+  },
+  {
+   "id": "ch15",
+   "part": 4,
+   "icon": "history",
+   "color": "#FF4B4B",
+   "title": "بەشێ ١٥: دەمێ بۆری (Perfekt)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Perfekt دەمێ بۆرییە بۆ ئاخفتنا رۆژانە: پتر ژ ٨٠٪ یا ئاخفتنا ل سەر بۆری ب Perfekt دهێتە کرن. ئەو ژ دوو پارچان پێکدهێت: **haben یان sein** (ل جهێ دووێ) + **Partizip II** (ل دووماهیا رستێ)."
+    },
+    {
+     "t": "p",
+     "text": "**قالب:** بکەر + haben / sein + … + ge…t / ge…en"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Ich **habe** ein Auto **gekauft**. — من ترومبێلەک کڕی."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٥.١ پێنج جۆرێن Partizip II"
+    },
+    {
+     "t": "table",
+     "head": [
+      "جۆرێ کاری",
+      "یاسا",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "کارێن رێکخستی",
+       "ge + رەگ + t",
+       "machen → gemacht · kaufen → gekauft · hören → gehört · lernen → gelernt · kochen → gekocht · wohnen → gewohnt"
+      ],
+      [
+       "کارێن نەرێکخستی",
+       "ge + رەگ (دەنگ دگوهۆڕیت) + en",
+       "trinken → getrunken · sehen → gesehen · schreiben → geschrieben · essen → gegessen · lesen → gelesen · schlafen → geschlafen · sprechen → gesprochen · finden → gefunden"
+      ],
+      [
+       "کارێن ب -ieren",
+       "بێ ge، رەگ + t",
+       "studieren → studiert · reparieren → repariert · telefonieren → telefoniert · reservieren → reserviert"
+      ],
+      [
+       "پێشگرێن نەجودابوو (be-, ver-, er-, ent-, emp-, ge-, zer-, miss-)",
+       "بێ ge",
+       "bezahlen → bezahlt · besuchen → besucht · erklären → erklärt · verstehen → verstanden · vergessen → vergessen"
+      ],
+      [
+       "کارێن جودابوو (auf-, an-, ein-, aus-, mit-, zu-, ab-)",
+       "پێشگر + ge + رەگ",
+       "einkaufen → eingekauft · aufstehen → aufgestanden · anrufen → angerufen · mitbringen → mitgebracht · zumachen → zugemacht"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**کارێن جودابوو د دەمێ نوکە دا:** پێشگر دچیتە دووماهیێ: Ich **kaufe** morgen **ein**. د Perfekt دا: Ich habe gestern **eingekauft**."
+    },
+    {
+     "t": "h",
+     "text": "١٥.٢ نموونە"
+    },
+    {
+     "t": "table",
+     "head": [
+      "نوکە (Präsens)",
+      "بۆری (Perfekt)",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Ich kaufe ein Auto.",
+       "Ich habe ein Auto gekauft.",
+       "من ترومبێلەک کڕی."
+      ],
+      [
+       "Er trinkt einen Tee.",
+       "Er hat einen Tee getrunken.",
+       "وی چایەک ڤەخوار."
+      ],
+      [
+       "Wir lernen Deutsch.",
+       "Wir haben Deutsch gelernt.",
+       "مە ئەلمانی خواند."
+      ],
+      [
+       "Sie schreibt eine E-Mail.",
+       "Sie hat eine E-Mail geschrieben.",
+       "وێ ئیمەیلەک نڤیسی."
+      ],
+      [
+       "Ali repariert das Auto.",
+       "Ali hat das Auto repariert.",
+       "عەلی ترومبێل چێکر."
+      ],
+      [
+       "Er bezahlt die Rechnung.",
+       "Er hat die Rechnung bezahlt.",
+       "وی پارێ حسابێ دا."
+      ],
+      [
+       "Sara ruft mich an.",
+       "Sara hat mich angerufen.",
+       "سارایێ تەلەفۆن بۆ من کر."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٥.٣ haben یان sein؟"
+    },
+    {
+     "t": "p",
+     "text": "نێزیکی ٩٠٪ یا کاران **haben** وەردگرن. **sein** تنێ دگەل ڤان دهێت:"
+    },
+    {
+     "t": "ol",
+     "items": [
+      "**لڤین ژ جهەکی بۆ جهەکێ دی:** gehen → ist gegangen · fahren → ist gefahren · fliegen → ist geflogen · kommen → ist gekommen · laufen → ist gelaufen",
+      "**گوهۆڕینا رەوشێ:** aufstehen → ist aufgestanden · einschlafen → ist eingeschlafen · sterben → ist gestorben · werden → ist geworden",
+      "**ب تایبەت:** sein → ist gewesen · bleiben → ist geblieben · passieren → ist passiert"
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      "haben",
+      "sein"
+     ],
+     "rows": [
+      [
+       "Ich habe ein Buch gelesen. — من پەرتووکەک خواند.",
+       "Ich bin nach Hause gegangen. — ئەز چوومە مالێ."
+      ],
+      [
+       "Er hat den Kaffee getrunken. — وی قاوە ڤەخوار.",
+       "Er ist nach Berlin gefahren. — ئەو چوو بەرلین."
+      ],
+      [
+       "Wir haben Fußball gespielt. — مە تۆپا پێ یاری کر.",
+       "Er ist um 7 Uhr aufgestanden. — ئەو دەمژمێر ٧ێ رابوو."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch16",
+   "part": 4,
+   "icon": "update",
+   "color": "#FF4B4B",
+   "title": "بەشێ ١٦: Präteritum و Futur I",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "بۆ ئاخفتنێ Perfekt بکاربینە، بەلێ بۆ **sein**، **haben** و کارێن مۆدال Präteritum ساناهیترە و پتر دهێتە گۆتن: Ich **war** gestern müde. (نە ich bin müde gewesen)."
+    },
+    {
+     "t": "h",
+     "text": "١٦.١ چار دەمێن سەرەکی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "دەم",
+      "بکارئینان",
+      "قالب",
+      "نموونە",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Präsens",
+       "نوکە، راستیا گشتی",
+       "رەگ + پاشگر",
+       "Ich lerne Deutsch.",
+       "ئەز ئەلمانی فێردبم."
+      ],
+      [
+       "Perfekt",
+       "بۆری (ئاخفتن)",
+       "haben / sein + Partizip II",
+       "Ich habe Deutsch gelernt.",
+       "من ئەلمانی خواند."
+      ],
+      [
+       "Präteritum",
+       "بۆری (نڤیسین، چیرۆک)",
+       "شێوێ دووێ یێ کاری",
+       "Ich lernte Deutsch.",
+       "من ئەلمانی دخواند."
+      ],
+      [
+       "Futur I",
+       "داهاتی، پێشبینی",
+       "werden + چاڤگ",
+       "Ich werde Deutsch lernen.",
+       "ئەز دێ ئەلمانی فێربم."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٦.٢ sein، haben و werden"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کەس",
+      "sein: دوهی (war)",
+      "sein: ئەڤرۆ",
+      "haben: دوهی (hatte)",
+      "werden: سوبەهی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "war",
+       "bin",
+       "hatte",
+       "werde"
+      ],
+      [
+       "du",
+       "warst",
+       "bist",
+       "hattest",
+       "wirst"
+      ],
+      [
+       "er / sie / es",
+       "war",
+       "ist",
+       "hatte",
+       "wird"
+      ],
+      [
+       "wir",
+       "waren",
+       "sind",
+       "hatten",
+       "werden"
+      ],
+      [
+       "ihr",
+       "wart",
+       "seid",
+       "hattet",
+       "werdet"
+      ],
+      [
+       "sie / Sie",
+       "waren",
+       "sind",
+       "hatten",
+       "werden"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**راستڤەکرن:** د فایلێ کەڤن دا «ihr werk» هاتبوو نڤیسین؛ دروست **ihr wart** ە (هوین بوون)."
+    },
+    {
+     "t": "h",
+     "text": "١٦.٣ Präteritum یا کارێن مۆدال"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "ich / er",
+      "du",
+      "wir / sie",
+      "رامان"
+     ],
+     "rows": [
+      [
+       "können",
+       "konnte",
+       "konntest",
+       "konnten",
+       "شیام"
+      ],
+      [
+       "müssen",
+       "musste",
+       "musstest",
+       "mussten",
+       "پێدڤی بوو"
+      ],
+      [
+       "wollen",
+       "wollte",
+       "wolltest",
+       "wollten",
+       "من ڤیا"
+      ],
+      [
+       "dürfen",
+       "durfte",
+       "durftest",
+       "durften",
+       "دەستوور هەبوو"
+      ]
+     ]
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Gestern **konnte** ich nicht kommen. — دوهی من نەشیا بێم."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٦.٤ Futur I"
+    },
+    {
+     "t": "p",
+     "text": "werden ل جهێ دووێ دهێتە گوهۆڕین، و کارێ سەرەکی ب شێوەیێ چاڤگ دچیتە دووماهیێ:"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Ich **werde** morgen Deutsch **lernen**. — ئەز دێ سوبەهی ئەلمانی فێربم.",
+      "Er **wird** Arzt. — ئەو دێ بیتە نوژدار. (werden ب تنێ = بوون / بوونە)"
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**تێبینی:** د ئاخفتنا رۆژانە دا ئەلمان بۆ داهاتیێ پترییا جاران Präsens + پەیڤەکا دەمی بکاردئینن: Morgen **fahre** ich nach Berlin. — سوبەهی ئەز دێ چمە بەرلین."
+    },
+    {
+     "t": "table",
+     "head": [
+      "دوهی (Präteritum)",
+      "ئەڤرۆ (Präsens)",
+      "سوبەهی (Futur I)"
+     ],
+     "rows": [
+      [
+       "Gestern war ich zu Hause. — دوهی ئەز ل مالێ بووم.",
+       "Heute bin ich in der Schule. — ئەڤرۆ ئەز ل قوتابخانێمە.",
+       "Morgen werde ich in Berlin sein. — سوبەهی ئەز دێ ل بەرلین بم."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch17",
+   "part": 5,
+   "icon": "chat",
+   "color": "#1CB0F6",
+   "title": "بەشێ ١٧: ژیانا رۆژانە و دیالۆگ (Alltag)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "ئەڤ بەشە هەمی رێزمانا بەرێ د ئاخفتنا راستەقینە دا بکاردئینیت."
+    },
+    {
+     "t": "h",
+     "text": "١٧.١ خوارن و ڤەخوارن"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی",
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "das Brot",
+       "نان",
+       "das Wasser",
+       "ئاڤ"
+      ],
+      [
+       "die Milch",
+       "شیر",
+       "der Tee",
+       "چا"
+      ],
+      [
+       "der Käse",
+       "پەنیر",
+       "der Kaffee",
+       "قاوە"
+      ],
+      [
+       "das Fleisch",
+       "گۆشت",
+       "der Saft",
+       "شەربەت"
+      ],
+      [
+       "das Ei / die Eier",
+       "هێک",
+       "der Reis",
+       "برنج"
+      ],
+      [
+       "der Apfel",
+       "سێڤ",
+       "die Kartoffel",
+       "پەتاتە"
+      ],
+      [
+       "die Tomate",
+       "تەماتە",
+       "das Obst",
+       "مێوە"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٧.٢ ل بازاڕی"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Was kostet das? / Wie viel kostet das?",
+       "ئەڤە ب چەندە؟"
+      ],
+      [
+       "Das kostet 2 Euro.",
+       "بهایێ وێ ٢ یۆرۆیە."
+      ],
+      [
+       "Ich möchte bitte ein Kilo Tomaten.",
+       "ئەز کیلۆیەک تەماتە دخوازم، ب رێز."
+      ],
+      [
+       "Haben Sie Brot?",
+       "ئەرێ نان ل دەف هەوە هەیە؟"
+      ],
+      [
+       "Zahlen Sie bar oder mit Karte?",
+       "هوین ب کاش ددەن یان ب کارتێ؟"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٧.٣ رۆژا من (Tagesablauf)"
+    },
+    {
+     "t": "table",
+     "head": [
+      "کار",
+      "بادینی",
+      "نموونە"
+     ],
+     "rows": [
+      [
+       "aufstehen",
+       "ژ خەو رابوون",
+       "Ich stehe um 7 Uhr auf. — ئەز دەمژمێر ٧ێ رادبم."
+      ],
+      [
+       "frühstücken",
+       "تێشت خوارن",
+       "Wir frühstücken zusammen. — ئەم پێکڤە تێشتێ دخۆین."
+      ],
+      [
+       "arbeiten",
+       "کارکرن",
+       "Er arbeitet bei Siemens. — ئەو ل سیمێنس کار دکەت."
+      ],
+      [
+       "lernen",
+       "فێربوون",
+       "Ich lerne Deutsch. — ئەز ئەلمانی فێردبم."
+      ],
+      [
+       "Fußball spielen",
+       "تۆپا پێ یاریکرن",
+       "Sie spielt gern Fußball. — ئەو حەز دکەت تۆپا پێ یاری بکەت."
+      ],
+      [
+       "Musik hören",
+       "گوهداریا مۆزیکێ",
+       "Ich höre oft Musik. — ئەز گەلەک جاران گوهداریا مۆزیکێ دکەم."
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "دیالۆگ ٣: ل سووپەرمارکێتێ"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Verkäufer:** Guten Tag! Kann ich Ihnen helfen? — رۆژ باش! ئەرێ دشێم هاریکاریا هەوە بکەم؟",
+      "**Kunde:** Ja, bitte. Ich suche einen guten Käse. — بەلێ، ب رێز. ئەز ل پەنیرەکێ باش دگەڕیم.",
+      "**Verkäufer:** Hier haben wir einen leckeren Gouda. Möchten Sie probieren? — ل ڤێرێ پەنیرێ گۆدا یێ خۆش مە هەیە. حەز دکەن تام بکەن؟",
+      "**Kunde:** Gern. Haben Sie auch frische Äpfel? — ب کەیف. ئەرێ سێڤێن تازە ژی هەنە؟",
+      "**Verkäufer:** Ja, dort drüben. Sonst noch etwas? — بەلێ، ل وێرێ. تشتەکێ دی؟",
+      "**Kunde:** Nein, danke. Das ist alles. — نەخێر، سوپاس. ئەڤە هەمییە."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "دیالۆگ ٤: دوهی تە چ کر؟ (Perfekt)"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Dilovan:** Hallo Raman! Was hast du gestern gemacht? — سلاڤ رامان! دوهی تە چ کر؟",
+      "**Raman:** Ich habe meinen Freund besucht und wir haben Pizza gegessen. — من سەرەدانا هەڤالێ خۆ کر و مە پیتزا خوار.",
+      "**Dilovan:** Seid ihr auch ins Kino gegangen? — ئەرێ هوین چوونە سینەمایێ ژی؟",
+      "**Raman:** Nein, wir haben zu Hause einen Film gesehen. — نەخێر، مە ل مالێ فلمەک دیت."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "دیالۆگ ٥: کلیلا بەرزە"
+    },
+    {
+     "t": "ul",
+     "items": [
+      "**Azad:** Hast du meinen Schlüssel gesehen? — ئەرێ تە کلیلا من دیتییە؟",
+      "**Sara:** Nein, ich habe deinen Schlüssel nicht gesehen. Suchst du auch deinen Pass? — نەخێر، من کلیلا تە نەدیتییە. ئەرێ تو ل پاسپۆرتا خۆ ژی دگەڕی؟",
+      "**Azad:** Ja, ich habe meinen Pass gestern auf den Tisch gelegt. — بەلێ، دوهی من پاسپۆرتا خۆ دانابوو سەر مێزێ."
+     ]
+    },
+    {
+     "t": "h",
+     "text": "١٧.٤ هەڤۆکێن فریاکەفتنێ"
+    },
+    {
+     "t": "table",
+     "head": [
+      "ئەلمانی",
+      "بادینی"
+     ],
+     "rows": [
+      [
+       "Sprechen Sie Kurdisch / Englisch?",
+       "ئەرێ هوین ب کوردی / ئینگلیزی دئاخڤن؟"
+      ],
+      [
+       "Ich spreche nur ein bisschen Deutsch.",
+       "ئەز تنێ کێمەکێ ئەلمانی دزانم."
+      ],
+      [
+       "Können Sie das bitte wiederholen?",
+       "دشێن ب رێز ڤێ دووبارە بکەن؟"
+      ],
+      [
+       "Bitte sprechen Sie langsam!",
+       "ب رێز هێدی باخڤن!"
+      ],
+      [
+       "Wie bitte?",
+       "ببوورە، چ؟ (تێنەگەهشتم)"
+      ],
+      [
+       "Ich habe eine Frage.",
+       "پرسیارەکا من هەیە."
+      ],
+      [
+       "Wie heißt das auf Deutsch?",
+       "ئەڤە ب ئەلمانی چ دبێژنێ؟"
+      ],
+      [
+       "Ich weiß es nicht.",
+       "ئەز نزانم."
+      ],
+      [
+       "Ich brauche Hilfe!",
+       "پێدڤیا من ب هاریکاریێ هەیە!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch18",
+   "part": 5,
+   "icon": "menu_book",
+   "color": "#FFC800",
+   "title": "پاشکۆ: فەرهەنگۆکا ٣٠٠ ناڤان (١٠٠ der، ١٠٠ die، ١٠٠ das)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "هەر ناڤەکی ب ڤێ قالبێ بگوهۆڕە، ئیدی پێدڤی ب نڤیسینا هەر سێ حالەتان نینە:"
+    },
+    {
+     "t": "table",
+     "head": [
+      "رەگەز",
+      "Nominativ",
+      "Akkusativ",
+      "Dativ",
+      "Genitiv"
+     ],
+     "rows": [
+      [
+       "der",
+       "der Tisch",
+       "den Tisch",
+       "dem Tisch",
+       "des Tisch**es**"
+      ],
+      [
+       "die",
+       "die Lampe",
+       "die Lampe",
+       "der Lampe",
+       "der Lampe"
+      ],
+      [
+       "das",
+       "das Buch",
+       "das Buch",
+       "dem Buch",
+       "des Buch**es**"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "**ناڤێن -n (نێرێن تایبەت):** هندەک ناڤێن نێر د Akkusativ، Dativ و Genitiv دا پیتا -n وەردگرن: der Junge → den Jung**en**، der Nachbar → den Nachbar**n**، der Löwe، der Hase، der Elefant، der Student، der Polizist. هەروەسا der Name → des Namen**s**."
+    },
+    {
+     "t": "h",
+     "text": "ناڤێن نێر (der)"
+    },
+    {
+     "t": "vocab",
+     "gender": "der",
+     "items": [
+      [
+       "der Mann",
+       "زەلام"
+      ],
+      [
+       "der Vater",
+       "باب"
+      ],
+      [
+       "der Sohn",
+       "کوڕ"
+      ],
+      [
+       "der Bruder",
+       "برا"
+      ],
+      [
+       "der Onkel",
+       "مام / خال"
+      ],
+      [
+       "der Junge",
+       "کوڕک"
+      ],
+      [
+       "der Freund",
+       "هەڤال"
+      ],
+      [
+       "der Nachbar",
+       "جیران"
+      ],
+      [
+       "der Lehrer",
+       "مامۆستا"
+      ],
+      [
+       "der Arzt",
+       "نوژدار"
+      ],
+      [
+       "der Tisch",
+       "مێز"
+      ],
+      [
+       "der Stuhl",
+       "کورسی"
+      ],
+      [
+       "der Schrank",
+       "دۆلاب"
+      ],
+      [
+       "der Teppich",
+       "راخەر / فەرش"
+      ],
+      [
+       "der Spiegel",
+       "نەینک"
+      ],
+      [
+       "der Schlüssel",
+       "کلیل"
+      ],
+      [
+       "der Fernseher",
+       "تەلەفزیۆن"
+      ],
+      [
+       "der Herd",
+       "تەباخ"
+      ],
+      [
+       "der Kühlschrank",
+       "سەلاجە"
+      ],
+      [
+       "der Balkon",
+       "باڵکۆن"
+      ],
+      [
+       "der Stift",
+       "قەلەم"
+      ],
+      [
+       "der Bleistift",
+       "قەلەمێ رەساس"
+      ],
+      [
+       "der Kugelschreiber",
+       "قەلەمێ جاف"
+      ],
+      [
+       "der Computer",
+       "کۆمپیوتەر"
+      ],
+      [
+       "der Drucker",
+       "چاپکەر"
+      ],
+      [
+       "der Bildschirm",
+       "شاشە"
+      ],
+      [
+       "der Brief",
+       "نامە"
+      ],
+      [
+       "der Block",
+       "دەفتەرۆک"
+      ],
+      [
+       "der Kalender",
+       "رۆژژمێر"
+      ],
+      [
+       "der Ordner",
+       "دۆسیە"
+      ],
+      [
+       "der Tag",
+       "رۆژ"
+      ],
+      [
+       "der Morgen",
+       "سپێدە"
+      ],
+      [
+       "der Abend",
+       "ئێڤار"
+      ],
+      [
+       "der Monat",
+       "هەیڤ (مەه)"
+      ],
+      [
+       "der Frühling",
+       "بهار"
+      ],
+      [
+       "der Sommer",
+       "هاڤین"
+      ],
+      [
+       "der Herbst",
+       "پاییز"
+      ],
+      [
+       "der Winter",
+       "زڤستان"
+      ],
+      [
+       "der Montag",
+       "دووشەمبی"
+      ],
+      [
+       "der Urlaub",
+       "بێهنڤەدان / مۆلەت"
+      ],
+      [
+       "der Wagen",
+       "ترومبێل"
+      ],
+      [
+       "der Bus",
+       "پاس"
+      ],
+      [
+       "der Zug",
+       "شەمەندەفەر"
+      ],
+      [
+       "der Bahnhof",
+       "وێستگەها شەمەندەفەرێ"
+      ],
+      [
+       "der Flughafen",
+       "فڕۆکەخانە"
+      ],
+      [
+       "der Koffer",
+       "جانتایا گەشتێ"
+      ],
+      [
+       "der Pass",
+       "پاسپۆرت"
+      ],
+      [
+       "der Park",
+       "پارک"
+      ],
+      [
+       "der Markt",
+       "بازاڕ"
+      ],
+      [
+       "der Platz",
+       "جه / گۆڕەپان"
+      ],
+      [
+       "der Mantel",
+       "پالتۆ"
+      ],
+      [
+       "der Anzug",
+       "قات"
+      ],
+      [
+       "der Pullover",
+       "بلووز"
+      ],
+      [
+       "der Schuh",
+       "پێلاڤ"
+      ],
+      [
+       "der Hut",
+       "شەپقە"
+      ],
+      [
+       "der Gürtel",
+       "پشتێن"
+      ],
+      [
+       "der Ring",
+       "گوستیل"
+      ],
+      [
+       "der Kopf",
+       "سەر"
+      ],
+      [
+       "der Arm",
+       "باسک"
+      ],
+      [
+       "der Fuß",
+       "پێ"
+      ],
+      [
+       "der Apfel",
+       "سێڤ"
+      ],
+      [
+       "der Tee",
+       "چا"
+      ],
+      [
+       "der Kaffee",
+       "قاوە"
+      ],
+      [
+       "der Saft",
+       "شەربەت"
+      ],
+      [
+       "der Kuchen",
+       "کێک"
+      ],
+      [
+       "der Käse",
+       "پەنیر"
+      ],
+      [
+       "der Salat",
+       "زەلاتە"
+      ],
+      [
+       "der Fisch",
+       "ماسی"
+      ],
+      [
+       "der Reis",
+       "برنج"
+      ],
+      [
+       "der Pfeffer",
+       "بیبەر"
+      ],
+      [
+       "der Berg",
+       "چیا"
+      ],
+      [
+       "der Fluss",
+       "رووبار"
+      ],
+      [
+       "der See",
+       "گۆل"
+      ],
+      [
+       "der Baum",
+       "دار"
+      ],
+      [
+       "der Wald",
+       "دارستان"
+      ],
+      [
+       "der Regen",
+       "باران"
+      ],
+      [
+       "der Schnee",
+       "بەفر"
+      ],
+      [
+       "der Wind",
+       "با"
+      ],
+      [
+       "der Himmel",
+       "ئەسمان"
+      ],
+      [
+       "der Mond",
+       "هەیڤ"
+      ],
+      [
+       "der Hund",
+       "سە"
+      ],
+      [
+       "der Vogel",
+       "تەیر"
+      ],
+      [
+       "der Löwe",
+       "شێر"
+      ],
+      [
+       "der Wolf",
+       "گورگ"
+      ],
+      [
+       "der Bär",
+       "هرچ"
+      ],
+      [
+       "der Hase",
+       "کەروێشک"
+      ],
+      [
+       "der Elefant",
+       "فیل"
+      ],
+      [
+       "der Esel",
+       "کەر"
+      ],
+      [
+       "der Fuchs",
+       "رێڤی"
+      ],
+      [
+       "der Hahn",
+       "دیک"
+      ],
+      [
+       "der Preis",
+       "بها"
+      ],
+      [
+       "der Fehler",
+       "شاشی"
+      ],
+      [
+       "der Name",
+       "ناڤ"
+      ],
+      [
+       "der Rat",
+       "شیرەت"
+      ],
+      [
+       "der Erfolg",
+       "سەرکەفتن"
+      ],
+      [
+       "der Traum",
+       "خەون"
+      ],
+      [
+       "der Grund",
+       "ئەگەر"
+      ],
+      [
+       "der Plan",
+       "پلان"
+      ],
+      [
+       "der Sinn",
+       "رامان"
+      ],
+      [
+       "der Anfang",
+       "دەستپێک"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "ناڤێن مێ (die)"
+    },
+    {
+     "t": "vocab",
+     "gender": "die",
+     "items": [
+      [
+       "die Frau",
+       "ژن"
+      ],
+      [
+       "die Mutter",
+       "دایک"
+      ],
+      [
+       "die Tochter",
+       "کچ"
+      ],
+      [
+       "die Schwester",
+       "خویشک"
+      ],
+      [
+       "die Oma",
+       "داپیر"
+      ],
+      [
+       "die Tante",
+       "مەت / خالەت"
+      ],
+      [
+       "die Freundin",
+       "هەڤال (مێ)"
+      ],
+      [
+       "die Lehrerin",
+       "مامۆستا (مێ)"
+      ],
+      [
+       "die Ärztin",
+       "نوژدار (مێ)"
+      ],
+      [
+       "die Kollegin",
+       "هەڤکار (مێ)"
+      ],
+      [
+       "die Stadt",
+       "باژێڕ"
+      ],
+      [
+       "die Schule",
+       "قوتابخانە"
+      ],
+      [
+       "die Wohnung",
+       "شوقە"
+      ],
+      [
+       "die Küche",
+       "مەتبەخ"
+      ],
+      [
+       "die Straße",
+       "جادە"
+      ],
+      [
+       "die Tür",
+       "دەرگەه"
+      ],
+      [
+       "die Universität",
+       "زانکۆ"
+      ],
+      [
+       "die Bank",
+       "بانک"
+      ],
+      [
+       "die Post",
+       "پۆستەخانە"
+      ],
+      [
+       "die Apotheke",
+       "دەرمانخانە"
+      ],
+      [
+       "die Lampe",
+       "گلۆپ"
+      ],
+      [
+       "die Tasche",
+       "جانتا"
+      ],
+      [
+       "die Uhr",
+       "دەمژمێر (ئامیر)"
+      ],
+      [
+       "die Flasche",
+       "شووشە / بوتڵ"
+      ],
+      [
+       "die Tasse",
+       "فنجان"
+      ],
+      [
+       "die Gabel",
+       "چەتال"
+      ],
+      [
+       "die Wand",
+       "دیوار"
+      ],
+      [
+       "die Decke",
+       "بەتانی"
+      ],
+      [
+       "die Brille",
+       "بەرچاڤک"
+      ],
+      [
+       "die Zeitung",
+       "رۆژنامە"
+      ],
+      [
+       "die Hose",
+       "پانتۆل"
+      ],
+      [
+       "die Jacke",
+       "چاکێت"
+      ],
+      [
+       "die Mütze",
+       "کولاڤ"
+      ],
+      [
+       "die Krawatte",
+       "بۆینباخ"
+      ],
+      [
+       "die Bluse",
+       "بلووزا ژنان"
+      ],
+      [
+       "die Socke",
+       "گۆرە"
+      ],
+      [
+       "die Hand",
+       "دەست"
+      ],
+      [
+       "die Nase",
+       "دفن"
+      ],
+      [
+       "die Zunge",
+       "ئەزمان"
+      ],
+      [
+       "die Schulter",
+       "مل"
+      ],
+      [
+       "die Liebe",
+       "ڤیان"
+      ],
+      [
+       "die Freude",
+       "کەیفخۆشی"
+      ],
+      [
+       "die Angst",
+       "ترس"
+      ],
+      [
+       "die Hoffnung",
+       "هیڤی"
+      ],
+      [
+       "die Gesundheit",
+       "ساخلەمی"
+      ],
+      [
+       "die Krankheit",
+       "نەخۆشی"
+      ],
+      [
+       "die Ruhe",
+       "ئارامی"
+      ],
+      [
+       "die Kraft",
+       "هێز"
+      ],
+      [
+       "die Musik",
+       "مۆزیک"
+      ],
+      [
+       "die Kunst",
+       "هونەر"
+      ],
+      [
+       "die Milch",
+       "شیر"
+      ],
+      [
+       "die Butter",
+       "نیڤشک"
+      ],
+      [
+       "die Suppe",
+       "شۆربە"
+      ],
+      [
+       "die Schokolade",
+       "چکلێت"
+      ],
+      [
+       "die Banane",
+       "مۆز"
+      ],
+      [
+       "die Tomate",
+       "تەماتە"
+      ],
+      [
+       "die Kartoffel",
+       "پەتاتە"
+      ],
+      [
+       "die Zitrone",
+       "لیمۆن"
+      ],
+      [
+       "die Zwiebel",
+       "پیڤاز"
+      ],
+      [
+       "die Wurst",
+       "سۆسج"
+      ],
+      [
+       "die Sonne",
+       "رۆژ / تاڤ"
+      ],
+      [
+       "die Erde",
+       "ئەرد"
+      ],
+      [
+       "die Blume",
+       "گول"
+      ],
+      [
+       "die Pflanze",
+       "رووەک"
+      ],
+      [
+       "die Luft",
+       "هەوا"
+      ],
+      [
+       "die Wolke",
+       "عەور"
+      ],
+      [
+       "die Natur",
+       "سرووشت"
+      ],
+      [
+       "die Insel",
+       "دوورگە"
+      ],
+      [
+       "die Wiese",
+       "مێرگ"
+      ],
+      [
+       "die Quelle",
+       "کانی"
+      ],
+      [
+       "die Zeit",
+       "دەم"
+      ],
+      [
+       "die Stunde",
+       "دەمژمێر (٦٠ خولەک)"
+      ],
+      [
+       "die Minute",
+       "خولەک"
+      ],
+      [
+       "die Sekunde",
+       "چرکە"
+      ],
+      [
+       "die Woche",
+       "حەفتی"
+      ],
+      [
+       "die Nacht",
+       "شەڤ"
+      ],
+      [
+       "die Zahl",
+       "هژمار"
+      ],
+      [
+       "die Pause",
+       "بێهنڤەدان"
+      ],
+      [
+       "die Reise",
+       "گەشت"
+      ],
+      [
+       "die Ecke",
+       "قوژبن"
+      ],
+      [
+       "die Katze",
+       "پشیک"
+      ],
+      [
+       "die Kuh",
+       "چێل"
+      ],
+      [
+       "die Maus",
+       "مشک"
+      ],
+      [
+       "die Ente",
+       "وەردەک"
+      ],
+      [
+       "die Fliege",
+       "مێش"
+      ],
+      [
+       "die Biene",
+       "مێشا هنگڤینی"
+      ],
+      [
+       "die Spinne",
+       "پیرێڤۆک"
+      ],
+      [
+       "die Gans",
+       "قاز"
+      ],
+      [
+       "die Taube",
+       "کۆتر"
+      ],
+      [
+       "die Schlange",
+       "مار"
+      ],
+      [
+       "die Frage",
+       "پرسیار"
+      ],
+      [
+       "die Antwort",
+       "بەرسڤ"
+      ],
+      [
+       "die Sprache",
+       "زمان"
+      ],
+      [
+       "die Arbeit",
+       "کار"
+      ],
+      [
+       "die Idee",
+       "بیرۆکە"
+      ],
+      [
+       "die Welt",
+       "جیهان"
+      ],
+      [
+       "die Zukunft",
+       "پاشەڕۆژ"
+      ],
+      [
+       "die Wahrheit",
+       "راستی"
+      ],
+      [
+       "die Meinung",
+       "بۆچوون"
+      ],
+      [
+       "die Freiheit",
+       "ئازادی"
+      ]
+     ]
+    },
+    {
+     "t": "h",
+     "text": "ناڤێن بێلایەن (das)"
+    },
+    {
+     "t": "vocab",
+     "gender": "das",
+     "items": [
+      [
+       "das Kind",
+       "زارۆک"
+      ],
+      [
+       "das Baby",
+       "ساڤا"
+      ],
+      [
+       "das Mädchen",
+       "کچک"
+      ],
+      [
+       "das Haus",
+       "خانی / مال"
+      ],
+      [
+       "das Zimmer",
+       "ژوور"
+      ],
+      [
+       "das Fenster",
+       "پەنجەرە"
+      ],
+      [
+       "das Bett",
+       "جهێ نڤستنێ"
+      ],
+      [
+       "das Bad",
+       "حەمام"
+      ],
+      [
+       "das Sofa",
+       "قەنەفە"
+      ],
+      [
+       "das Bild",
+       "وێنە"
+      ],
+      [
+       "das Buch",
+       "پەرتووک"
+      ],
+      [
+       "das Heft",
+       "دەفتەر"
+      ],
+      [
+       "das Wort",
+       "پەیڤ"
+      ],
+      [
+       "das Wörterbuch",
+       "فەرهەنگ"
+      ],
+      [
+       "das Blatt",
+       "پەلک / پەڕ"
+      ],
+      [
+       "das Gedicht",
+       "هەلبەست"
+      ],
+      [
+       "das Dokument",
+       "بەلگەنامە"
+      ],
+      [
+       "das Zeugnis",
+       "بڕوانامە"
+      ],
+      [
+       "das Rätsel",
+       "مەتەلۆک"
+      ],
+      [
+       "das Alphabet",
+       "ئەلفوبێ"
+      ],
+      [
+       "das Auto",
+       "ترومبێل"
+      ],
+      [
+       "das Fahrrad",
+       "پاسکیل"
+      ],
+      [
+       "das Flugzeug",
+       "فڕۆکە"
+      ],
+      [
+       "das Schiff",
+       "کەشتی"
+      ],
+      [
+       "das Boot",
+       "بەلەم"
+      ],
+      [
+       "das Taxi",
+       "تەکسی"
+      ],
+      [
+       "das Ticket",
+       "بلیت"
+      ],
+      [
+       "das Hotel",
+       "ئوتێل"
+      ],
+      [
+       "das Ziel",
+       "ئارمانج"
+      ],
+      [
+       "das Gleis",
+       "هێلا شەمەندەفەرێ"
+      ],
+      [
+       "das Brot",
+       "نان"
+      ],
+      [
+       "das Brötchen",
+       "سەموون"
+      ],
+      [
+       "das Wasser",
+       "ئاڤ"
+      ],
+      [
+       "das Fleisch",
+       "گۆشت"
+      ],
+      [
+       "das Ei",
+       "هێک"
+      ],
+      [
+       "das Salz",
+       "خوێ"
+      ],
+      [
+       "das Öl",
+       "زەیت / رۆن"
+      ],
+      [
+       "das Obst",
+       "مێوە"
+      ],
+      [
+       "das Gemüse",
+       "زەرزەوات"
+      ],
+      [
+       "das Eis",
+       "دۆندرمە / قەشا"
+      ],
+      [
+       "das Glück",
+       "بەخت"
+      ],
+      [
+       "das Recht",
+       "ماف"
+      ],
+      [
+       "das Gesetz",
+       "یاسا"
+      ],
+      [
+       "das Land",
+       "وەلات"
+      ],
+      [
+       "das Volk",
+       "گەل"
+      ],
+      [
+       "das Problem",
+       "ئاریشە"
+      ],
+      [
+       "das Thema",
+       "بابەت"
+      ],
+      [
+       "das Geheimnis",
+       "نهێنی"
+      ],
+      [
+       "das Ergebnis",
+       "ئەنجام"
+      ],
+      [
+       "das Spiel",
+       "یاری"
+      ],
+      [
+       "das Auge",
+       "چاڤ"
+      ],
+      [
+       "das Ohr",
+       "گوه"
+      ],
+      [
+       "das Bein",
+       "لاق / پێ"
+      ],
+      [
+       "das Haar",
+       "پرچ"
+      ],
+      [
+       "das Gesicht",
+       "روو"
+      ],
+      [
+       "das Herz",
+       "دل"
+      ],
+      [
+       "das Kleid",
+       "فستان"
+      ],
+      [
+       "das Hemd",
+       "قەمیس"
+      ],
+      [
+       "das T-Shirt",
+       "تیشێرت"
+      ],
+      [
+       "das Pflaster",
+       "لەزقا برینێ"
+      ],
+      [
+       "das Wetter",
+       "کەش و هەوا"
+      ],
+      [
+       "das Tier",
+       "ئاژەل"
+      ],
+      [
+       "das Pferd",
+       "هەسپ"
+      ],
+      [
+       "das Schaf",
+       "پەز"
+      ],
+      [
+       "das Schwein",
+       "بەراز"
+      ],
+      [
+       "das Huhn",
+       "مریشک"
+      ],
+      [
+       "das Meer",
+       "دەریا"
+      ],
+      [
+       "das Gras",
+       "گیا"
+      ],
+      [
+       "das Feuer",
+       "ئاگر"
+      ],
+      [
+       "das Licht",
+       "رۆناهی"
+      ],
+      [
+       "das Jahr",
+       "ساڵ"
+      ],
+      [
+       "das Jahrhundert",
+       "سەدە"
+      ],
+      [
+       "das Wochenende",
+       "دووماهیا حەفتیێ"
+      ],
+      [
+       "das Datum",
+       "رێکەفت"
+      ],
+      [
+       "das Leben",
+       "ژیان"
+      ],
+      [
+       "das Alter",
+       "تەمەن"
+      ],
+      [
+       "das Fest",
+       "جەژن / ئاهەنگ"
+      ],
+      [
+       "das Geschenk",
+       "دیاری"
+      ],
+      [
+       "das Produkt",
+       "بەرهەم"
+      ],
+      [
+       "das Werk",
+       "بەرهەم / کارگەه"
+      ],
+      [
+       "das Handy",
+       "مۆبایل"
+      ],
+      [
+       "das Telefon",
+       "تەلەفۆن"
+      ],
+      [
+       "das Radio",
+       "رادیۆ"
+      ],
+      [
+       "das Internet",
+       "ئینتەرنێت"
+      ],
+      [
+       "das Geld",
+       "پارە"
+      ],
+      [
+       "das Messer",
+       "کێر"
+      ],
+      [
+       "das Glas",
+       "پەرداخ"
+      ],
+      [
+       "das Regal",
+       "رەف"
+      ],
+      [
+       "das Werkzeug",
+       "ئامراز"
+      ],
+      [
+       "das Schloss",
+       "کۆشک (هەروەسا قفل)"
+      ],
+      [
+       "das Konzert",
+       "کۆنسێرت"
+      ],
+      [
+       "das Theater",
+       "شانۆ"
+      ],
+      [
+       "das Museum",
+       "مۆزەخانە"
+      ],
+      [
+       "das Kino",
+       "سینەما"
+      ],
+      [
+       "das Café",
+       "کافێ"
+      ],
+      [
+       "das Restaurant",
+       "خوارنگەه"
+      ],
+      [
+       "das Dorf",
+       "گوند"
+      ],
+      [
+       "das Gebäude",
+       "ئاڤاهی"
+      ],
+      [
+       "das Dach",
+       "بان"
+      ],
+      [
+       "das Ende",
+       "دووماهی"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ch19",
+   "part": 5,
+   "icon": "quiz",
+   "color": "#FFC800",
+   "title": "راهێنان و بەرسڤ (Übungen und Lösungen)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "پێشی رەگەزێ ناڤی ببینە، پاشی کار یان ئامرازی، پاشی بڕیارێ بدە. بەرسڤ ل دووماهیێ نە."
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ١: ein یان einen؟ (بەشێ ١٠)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Ich brauche ______ Kugelschreiber (der) zum Schreiben.",
+       "a": "einen"
+      },
+      {
+       "q": "Hier ist ______ Tisch (der) aus Holz.",
+       "a": "ein"
+      },
+      {
+       "q": "Er kauft ______ Fernseher (der) für das Wohnzimmer.",
+       "a": "einen"
+      },
+      {
+       "q": "Hast du ______ Bruder (der)?",
+       "a": "einen"
+      },
+      {
+       "q": "Das ist ______ Auto (das) von Ali.",
+       "a": "ein"
+      },
+      {
+       "q": "Wir trinken ______ Tee (der) zusammen.",
+       "a": "einen"
+      },
+      {
+       "q": "Sie sucht ______ Wohnung (die) in Berlin.",
+       "a": "eine"
+      }
+     ],
+     "why": "brauchen، kaufen، haben و trinken ئاکوزاتیڤن؛ ل ٢ مێز بکەرە؛ das و die ناگوهۆڕن"
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ٢: mein / meinen / dein / deinen (بەشێن ٨ و ١٠)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Wo ist ______ Pass (der)? Ich finde ______ Pass nicht!",
+       "a": "dein / meinen"
+      },
+      {
+       "q": "Liebst du ______ Vater (der)? – Ja, ich liebe ______ Vater.",
+       "a": "deinen / meinen"
+      },
+      {
+       "q": "Das ist ______ Mutter (die) und das ist ______ Bruder (der).",
+       "a": "meine / mein"
+      },
+      {
+       "q": "Rufst du heute ______ Arzt (der) an?",
+       "a": "deinen"
+      },
+      {
+       "q": "Ich habe ______ Schlüssel (der) zu Hause vergessen.",
+       "a": "meinen"
+      },
+      {
+       "q": "Ist das ______ Koffer (der)? – Ja, das ist ______ Koffer.",
+       "a": "dein / mein"
+      }
+     ],
+     "why": "پشتی sein = Nominativ؛ بەرکارێ نێر = -en"
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ٣: ئامرازێن داتیڤ (بەشێ ١١)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Er trinkt Wasser aus ______ Flasche (die).",
+       "a": "der"
+      },
+      {
+       "q": "Wir gehen schnell aus ______ Zimmer (das).",
+       "a": "dem"
+      },
+      {
+       "q": "Er wohnt noch bei ______ Eltern (seine, کۆ).",
+       "a": "seinen"
+      },
+      {
+       "q": "Kommst du mit ______ Fahrrad (das) zur Schule?",
+       "a": "dem"
+      },
+      {
+       "q": "Nach ______ Schule (die) treffe ich meine Freunde.",
+       "a": "der"
+      },
+      {
+       "q": "Seit ______ Jahr (ein, das) lerne ich Deutsch.",
+       "a": "einem"
+      },
+      {
+       "q": "Das ist das Auto ______ (von + dem) Onkel.",
+       "a": "vom"
+      },
+      {
+       "q": "Er geht jeden Tag ______ (zu + der) Universität.",
+       "a": "zur"
+      },
+      {
+       "q": "Die Bäckerei liegt gegenüber ______ Park (der).",
+       "a": "dem"
+      },
+      {
+       "q": "Er fährt morgen mit ______ Zug (der) nach Berlin.",
+       "a": "dem"
+      },
+      {
+       "q": "Das Geschenk ist von ______ (mein) besten Freund.",
+       "a": "meinem"
+      },
+      {
+       "q": "Wir waren gestern bei ______ Großeltern (die, کۆ).",
+       "a": "den"
+      }
+     ],
+     "why": "هەمی ئامراز داتیڤن؛ کۆ = den / -en"
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ٤: Akkusativ یان Dativ؟ (بەشێن ١٢ و ١٣)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Ich kaufe ______ Computer (der) für ______ Sohn (mein).",
+       "a": "den / meinen"
+      },
+      {
+       "q": "Er hilft ______ Dame (die) mit ______ Gepäck (das).",
+       "a": "der / dem"
+      },
+      {
+       "q": "Wir schenken ______ Vater (unser) ______ Uhr (eine).",
+       "a": "unserem / eine"
+      },
+      {
+       "q": "Das Kind legt das Buch auf ______ Tisch (der).",
+       "a": "den"
+      },
+      {
+       "q": "Das Buch liegt auf ______ Tisch (der).",
+       "a": "dem"
+      }
+     ],
+     "why": "kaufen + für = Akk؛ helfen + mit = Dat؛ کەس = Dat، تشت = Akk؛ legen = Wohin، liegen = Wo"
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ٥: بکە Perfekt (بەشێ ١٥)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Ich kaufe ein Buch. → Ich ______ ein Buch ______.",
+       "a": "habe / gekauft"
+      },
+      {
+       "q": "Er trinkt einen Kaffee. → Er ______ einen Kaffee ______.",
+       "a": "hat / getrunken"
+      },
+      {
+       "q": "Wir wohnen in München. → Wir ______ in München ______.",
+       "a": "haben / gewohnt"
+      },
+      {
+       "q": "Ali geht nach Hause. → Ali ______ nach Hause ______.",
+       "a": "ist / gegangen"
+      },
+      {
+       "q": "Sie schreibt eine E-Mail. → Sie ______ eine E-Mail ______.",
+       "a": "hat / geschrieben"
+      },
+      {
+       "q": "Wann stehst du auf? → Wann ______ du ______?",
+       "a": "bist / aufgestanden"
+      },
+      {
+       "q": "Der Mechaniker repariert das Auto. → Er ______ das Auto ______.",
+       "a": "hat / repariert"
+      }
+     ],
+     "why": "gehen و aufstehen = sein؛ reparieren بێ ge"
+    },
+    {
+     "t": "h",
+     "text": "راهێنانا ٦: haben یان sein؟ (بەشێ ١٥)"
+    },
+    {
+     "t": "quiz",
+     "items": [
+      {
+       "q": "Ich (habe / bin) nach Deutschland gekommen.",
+       "a": "bin"
+      },
+      {
+       "q": "Wir (haben / sind) gestern Fußball gespielt.",
+       "a": "haben"
+      },
+      {
+       "q": "Er (hat / ist) bis 9 Uhr geschlafen.",
+       "a": "hat"
+      },
+      {
+       "q": "Sie (hat / ist) mit dem Zug gefahren.",
+       "a": "ist"
+      },
+      {
+       "q": "Was (hast / bist) du gestern Abend gemacht?",
+       "a": "hast"
+      }
+     ],
+     "why": "لڤین = sein، یێن دی = haben"
+    },
+    {
+     "t": "p",
+     "text": "**پیرۆزە!** ئەگەر تە ئەڤ پەرتووکە ب رێزێ خواند و راهێنان کرن، تە بنیاتەکێ ب هێز بۆ ئاستێ A1 و دەستپێکا A2 ئاڤاکر."
+    }
+   ]
+  }
+ ]
+}

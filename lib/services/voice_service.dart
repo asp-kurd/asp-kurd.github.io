@@ -244,6 +244,18 @@ class VoiceService {
     }
   }
 
+  /// خواندنا دەقەکێ ئازاد ب TTS (بۆ پەرتووکا رێزمانێ)
+  Future<void> speakText(String text, AppLanguage lang) async {
+    if (lang.ttsCode == null || text.trim().isEmpty) return;
+    await init();
+    await stopPlayback();
+    try {
+      await _tts.setLanguage(lang.ttsCode!);
+      await _tts.setSpeechRate(0.42);
+      await _tts.speak(text);
+    } catch (_) {}
+  }
+
   Future<bool> _playKey(String key, double rate, {String mime = 'audio/wav'}) async {
     final b = await _box.get(key);
     if (b is! Uint8List) return false;

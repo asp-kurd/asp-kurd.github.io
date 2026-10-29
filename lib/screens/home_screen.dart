@@ -4,6 +4,7 @@ import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
+import 'book_screen.dart';
 import 'lesson_screen.dart';
 import 'onboarding_screen.dart';
 import 'profile_screen.dart';
@@ -38,6 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 // ignore: prefer_const_constructors
                 _LearnPath(),
+                // ignore: prefer_const_constructors
+                BookScreen(),
                 VoiceStudioScreen(key: ValueKey('studio_$n')),
                 // ignore: prefer_const_constructors
                 ProfileScreen(),
@@ -49,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onDestinationSelected: (i) => setState(() => tab = i),
               destinations: [
                 NavigationDestination(icon: const Icon(Icons.home_rounded), label: tr(n, 'فێربوون', 'Lernen', 'Learn')),
+                NavigationDestination(icon: const Icon(Icons.menu_book_rounded), label: tr(n, 'رێزمان', 'Grammatik', 'Grammar')),
                 NavigationDestination(icon: const Icon(Icons.mic_rounded), label: tr(n, 'دەنگێ من', 'Meine Stimme', 'My Voice')),
                 NavigationDestination(icon: const Icon(Icons.person_rounded), label: tr(n, 'پرۆفایل', 'Profil', 'Profile')),
               ],

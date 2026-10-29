@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'data/book.dart';
 import 'data/curriculum.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
@@ -11,6 +12,7 @@ import 'ui.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadCurriculum();
+  await loadBook();
   await ProgressService.instance.init();
   await VoiceService.instance.init();
   await CloneService.instance.load();

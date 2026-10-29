@@ -20,6 +20,22 @@
 | 🏅 **١٠ دەستکەفت** | Streak، وانەیا بێ خەلەتی، دەنگێ کلۆنکری ... |
 | 📄 **curriculum.json** | ئێک فایل بۆ ئەپی و بۆ دروستکرنا دەنگان ژی |
 
+## 📖 پەرتووکا رێزمانێ — «A1.1 mit Poya» (نوو ل 4.1)
+تابەکا نوو یا **رێزمان** هاتە زێدەکرن: ٢٠ بەش، ب رێزبەندیا فێربوونێ، ژ ئەلفوبێ هەتا Perfekt، هەمی ب بادینی.
+
+| | |
+|---|---|
+| 🗂️ **٥ پشک / ٢٠ بەش** | بنیات ➔ ناڤ و ئارتیکل ➔ Nominativ / Akkusativ / Dativ ➔ دەم ➔ پراکتیک |
+| 🔊 **دەنگ** | ل سەر هەر خانەیەکا ئەلمانی د خشتێ دا یان ل سەر 🔊 بدە، ئەپ دێ بێژیت |
+| 🎨 **فەرهەنگۆکا ٣٠٠ ناڤان** | der شین، die سۆر، das سەوز. «خۆ تاقی بکە» رامانێ ڤەدشێریت |
+| ✅ **راهێنان** | ٤٢ پرسیار ب بەرسڤا ڤەشارتی و رستا تەمام ب دەنگ |
+| 📈 **پێشکەفتن** | هەر بەشێ تە خواندی ✓ وەردگریت |
+
+**گوهۆڕینا پەرتووکێ:** `book/A1_mit_Poya.md` بگوهۆڕە، پاشان:
+```bash
+python voice_lab/build_book.py book/A1_mit_Poya.md assets/book.json
+```
+
 ## سیستەمێ دەنگی — رێزا گرنگیێ
 بۆ هەر پەیڤەکێ ئەپ ڤی رێزی دشۆپینیت:
 1. 🎤 **تۆمارێ تە ب دەست** (ستۆدیۆ). ئەڤە هەردەم ل پێشیێیە
@@ -85,18 +101,21 @@ flutter run
 ## پێکهاتا پرۆژەی
 ```
 assets/curriculum.json          ← هەمی وانە (پەیڤێن نوو ل ڤێرێ زێدە بکە)
+assets/book.json                ← پەرتووکا رێزمانێ (ژ book/A1_mit_Poya.md)
+book/A1_mit_Poya.md             ← دەقێ پەرتووکێ (Markdown)
 assets/voices/                  ← پاکێتا دەنگێ کلۆنکری ژ Colab
 lib/
   main.dart · models.dart · ui.dart
   data/curriculum.dart          ← خواندنا JSON
+  data/book.dart                ← خواندنا پەرتووکا رێزمانێ
   services/voice_service.dart   ← تۆمار، لێدان، رێزا ژێدەرێن دەنگی
   services/clone_service.dart   ← پەیوەندی دگەل سێرڤەرێ کلۆنکرنێ
   services/progress_service.dart← XP، Streak، دل، ئارمانج، دەستکەفت
-  screens/  onboarding · home · lesson · voice_studio · voice_clone · profile
+  screens/  onboarding · home · lesson · book · voice_studio · voice_clone · profile
   screens/widgets/record_button.dart
 voice_lab/
   ZimanPro_Voice_Lab.ipynb      ← Colab (بێ پارە)
-  voice_core.py · generate_pack.py · server.py · curriculum.json
+  voice_core.py · generate_pack.py · server.py · curriculum.json · build_book.py
 ```
 
 ## زێدەکرنا پەیڤان
