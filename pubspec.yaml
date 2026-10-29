@@ -1,7 +1,7 @@
 name: zimanpro
 description: ZimanPro - فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی، دگەل سیستەمێ دەنگی ب دەنگێ تە.
 publish_to: 'none'
-version: 4.1.0+6
+version: 5.0.0+7
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -42,5 +42,7 @@ flutter:
     - assets/curriculum.json
     # پەرتووکا رێزمانێ «A1.1 mit Poya» (ژ book/A1_mit_Poya.md)
     - assets/book.json
+    # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)
+    - assets/sfx/
     # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)
     - assets/voices/

@@ -26,9 +26,11 @@ class WordConcept {
   final String ku, kuLat; // بادینی + خوێندنا لاتینی
   final String de, deHint; // ئەلمانی + خوێندن ب کوردی / تێبینیا رێزمانێ
   final String en, enHint; // ئینگلیزی + خوێندن ب کوردی
+  final String emoji; // وێنەیێ پەیڤێ (ئیمۆجی)
 
   const WordConcept(
     this.id, {
+    this.emoji = '',
     required this.ku,
     required this.kuLat,
     required this.de,
@@ -42,6 +44,9 @@ class WordConcept {
         AppLanguage.german => de,
         AppLanguage.english => en,
       };
+
+  /// وێنە بۆ یاریان؛ ئەگەر نەبیت 💬
+  String get pic => emoji.isEmpty ? '💬' : emoji;
 
   String hint(AppLanguage l) => switch (l) {
         AppLanguage.badini => kuLat,

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -29,6 +31,24 @@ class ProgressService extends ChangeNotifier {
   int perfectLessons = 0;
   int bestStreak = 0;
 
+  // 📊 ئامار: هەر رۆژ ➔ XP و چرکە
+  Map<String, int> dayXp = {};
+  Map<String, int> daySeconds = {};
+  int correctTotal = 0;
+  int wrongTotal = 0;
+
+  // 🔁 Spaced Repetition (Leitner): conceptId ➔ (box, dueDay)
+  static const srsIntervals = [0, 1, 2, 4, 7, 15, 30]; // رۆژ
+  Map<String, (int, int)> srs = {};
+
+  // ⭐ ستێرێن یاریان: 'game|unitId' ➔ 0..3
+  Map<String, int> stars = {};
+
+  // ⚙️ ڕێکخستن
+  bool gameSounds = true;
+  bool funnySounds = true;
+  bool paleLetters = true;
+
   double get dailyProgress => (todayXp / dailyGoal).clamp(0.0, 1.0);
   bool get dailyGoalMet => todayXp >= dailyGoal;
 
@@ -45,12 +65,34 @@ class ProgressService extends ChangeNotifier {
     lessonsDone = _p.getInt('lessons_done') ?? 0;
     perfectLessons = _p.getInt('perfect_lessons') ?? 0;
     bestStreak = _p.getInt('best_streak') ?? 0;
+    correctTotal = _p.getInt('correct_total') ?? 0;
+    wrongTotal = _p.getInt('wrong_total') ?? 0;
+    dayXp = _intMap(_p.getString('day_xp'));
+    daySeconds = _intMap(_p.getString('day_sec'));
+    gameSounds = _p.getBool('set_sounds') ?? true;
+    funnySounds = _p.getBool('set_funny') ?? true;
+    paleLetters = _p.getBool('set_pale') ?? true;
     _loadPair();
     _refreshDaily();
   }
 
+  static Map<String, int> _intMap(String? raw) {
+    if (raw == null) return {};
+    try {
+      return (jsonDecode(raw) as Map<String, dynamic>).map((k, v) => MapEntry(k, (v as num).toInt()));
+    } catch (_) {
+      return {};
+    }
+  }
+
   void _loadPair() {
     completedUnits = (_p.getStringList('done_$_pairKey') ?? []).toSet();
+    srs = {};
+    for (final e in _p.getStringList('srs_$_pairKey') ?? <String>[]) {
+      final parts = e.split(':');
+      if (parts.length == 3) srs[parts[0]] = (int.tryParse(parts[1]) ?? 0, int.tryParse(parts[2]) ?? 0);
+    }
+    stars = _intMap(_p.getString('stars_$_pairKey'));
     mistakes = {};
     for (final e in _p.getStringList('mist_$_pairKey') ?? <String>[]) {
       final parts = e.split(':');
@@ -122,13 +164,20 @@ class ProgressService extends ChangeNotifier {
   }
 
   Future<void> completeLesson({required String? unitId, required int earnedXp, bool perfect = false}) async {
-    _refreshDaily(); // ئەگەر ئەپ ژ دوهی ڤەکری مابیت
-    xp += earnedXp;
-    todayXp += earnedXp;
     lessonsDone++;
     if (perfect) perfectLessons++;
     if (unitId != null) completedUnits.add(unitId);
+    await earn(earnedXp);
+  }
+
+  /// XP بۆ هەر چالاکیەکێ (وانە، یاری، دووبارەکرن) — Streak و ئامارێن رۆژانە ژی نوی دکەت
+  Future<void> earn(int earnedXp) async {
+    _refreshDaily(); // ئەگەر ئەپ ژ دوهی ڤەکری مابیت
+    xp += earnedXp;
+    todayXp += earnedXp;
     final today = _day(DateTime.now());
+    dayXp[today] = (dayXp[today] ?? 0) + earnedXp;
+    await _p.setString('day_xp', jsonEncode(dayXp));
     final lastStudy = _p.getString('last_study');
     if (lastStudy != today) {
       final yesterday = _day(DateTime.now().subtract(const Duration(days: 1)));
@@ -143,6 +192,93 @@ class ProgressService extends ChangeNotifier {
     await _p.setInt('lessons_done', lessonsDone);
     await _p.setInt('perfect_lessons', perfectLessons);
     await _p.setStringList('done_$_pairKey', completedUnits.toList());
+    notifyListeners();
+  }
+
+  // ───────── 📊 ئامار ─────────
+  int get _todayNum {
+    final n = DateTime.now();
+    return DateTime.utc(n.year, n.month, n.day).difference(DateTime.utc(2024)).inDays;
+  }
+
+  /// هەر بەرسڤەک: ئامار + Spaced Repetition
+  Future<void> recordAnswer(String conceptId, bool ok) async {
+    if (ok) {
+      correctTotal++;
+    } else {
+      wrongTotal++;
+    }
+    final (box, _) = srs[conceptId] ?? (0, 0);
+    final last = srsIntervals.length - 1;
+    final nb = ok ? (box + 1 > last ? last : box + 1) : 0;
+    srs[conceptId] = (nb, _todayNum + srsIntervals[nb]);
+    await _p.setInt('correct_total', correctTotal);
+    await _p.setInt('wrong_total', wrongTotal);
+    await _p.setStringList('srs_$_pairKey', srs.entries.map((e) => '${e.key}:${e.value.$1}:${e.value.$2}').toList());
+  }
+
+  /// ئەو پەیڤێن دەمێ دووبارەکرنا وان هاتی (کەڤنترین ل پێشیێ)
+  List<WordConcept> get dueConcepts {
+    final today = _todayNum;
+    final due = allConcepts.where((c) {
+      final s = srs[c.id];
+      return s != null && s.$2 <= today;
+    }).toList()
+      ..sort((a, b) => srs[a.id]!.$2.compareTo(srs[b.id]!.$2));
+    return due;
+  }
+
+  /// پەیڤێن فێربووی = ٢ جاران ل دویف ئێک دروست
+  int get wordsLearned => srs.values.where((v) => v.$1 >= 2).length;
+
+  int get accuracy {
+    final t = correctTotal + wrongTotal;
+    return t == 0 ? 0 : (correctTotal * 100 / t).round();
+  }
+
+  Future<void> addStudyTime(Duration d) async {
+    final sec = d.inSeconds > 3600 ? 3600 : d.inSeconds;
+    if (sec < 3) return;
+    final today = _day(DateTime.now());
+    daySeconds[today] = (daySeconds[today] ?? 0) + sec;
+    await _p.setString('day_sec', jsonEncode(daySeconds));
+    notifyListeners();
+  }
+
+  int get totalSeconds => daySeconds.values.fold(0, (a, b) => a + b);
+  int get daysPracticed => {...dayXp.keys.where((k) => (dayXp[k] ?? 0) > 0), ...daySeconds.keys}.length;
+
+  int xpOn(DateTime d) => dayXp[_day(d)] ?? 0;
+  int secondsOn(DateTime d) => daySeconds[_day(d)] ?? 0;
+
+  // ───────── ⭐ ستێر ─────────
+  int starsFor(String game, String unitId) => stars['$game|$unitId'] ?? 0;
+  int totalStars(String game) => stars.entries.where((e) => e.key.startsWith('$game|')).fold(0, (a, e) => a + e.value);
+
+  Future<void> setStars(String game, String unitId, int value) async {
+    final k = '$game|$unitId';
+    if ((stars[k] ?? 0) >= value) return;
+    stars[k] = value;
+    await _p.setString('stars_$_pairKey', jsonEncode(stars));
+    notifyListeners();
+  }
+
+  // ───────── ⚙️ ڕێکخستن ─────────
+  Future<void> setGameSounds(bool v) async {
+    gameSounds = v;
+    await _p.setBool('set_sounds', v);
+    notifyListeners();
+  }
+
+  Future<void> setFunnySounds(bool v) async {
+    funnySounds = v;
+    await _p.setBool('set_funny', v);
+    notifyListeners();
+  }
+
+  Future<void> setPaleLetters(bool v) async {
+    paleLetters = v;
+    await _p.setBool('set_pale', v);
     notifyListeners();
   }
 

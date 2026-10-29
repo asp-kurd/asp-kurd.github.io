@@ -83,6 +83,7 @@ Future<void> loadCurriculum() async {
           deHint: x['deHint'] as String,
           en: x['en'] as String,
           enHint: x['enHint'] as String,
+          emoji: (x['emoji'] as String?) ?? '',
         );
       }).toList(),
     );

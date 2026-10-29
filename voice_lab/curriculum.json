@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "units": [
   {
    "id": "unit_1",
@@ -16,7 +16,8 @@
      "de": "Hallo",
      "deHint": "هالۆ",
      "en": "Hello",
-     "enHint": "هێلۆ"
+     "enHint": "هێلۆ",
+     "emoji": "👋"
     },
     {
      "id": "g2",
@@ -25,7 +26,8 @@
      "de": "Guten Morgen",
      "deHint": "گوتن مۆرگن",
      "en": "Good morning",
-     "enHint": "گود مۆرنینگ"
+     "enHint": "گود مۆرنینگ",
+     "emoji": "🌅"
     },
     {
      "id": "g3",
@@ -34,7 +36,8 @@
      "de": "Wie geht es dir?",
      "deHint": "ڤی گێت ئێس دیر؟ (dir = Dativ)",
      "en": "How are you?",
-     "enHint": "هاو ئار یوو؟"
+     "enHint": "هاو ئار یوو؟",
+     "emoji": "🙂"
     },
     {
      "id": "g4",
@@ -43,7 +46,8 @@
      "de": "Mir geht es gut",
      "deHint": "میر گێت ئێس گوت",
      "en": "I am fine",
-     "enHint": "ئای ئێم فاین"
+     "enHint": "ئای ئێم فاین",
+     "emoji": "😊"
     },
     {
      "id": "g5",
@@ -52,7 +56,8 @@
      "de": "Vielen Dank",
      "deHint": "فیلن دانک",
      "en": "Thank you very much",
-     "enHint": "سانک یوو ڤێری مەچ"
+     "enHint": "سانک یوو ڤێری مەچ",
+     "emoji": "🙏"
     },
     {
      "id": "g6",
@@ -61,7 +66,8 @@
      "de": "Tschüss",
      "deHint": "چووس",
      "en": "Goodbye",
-     "enHint": "گودبای"
+     "enHint": "گودبای",
+     "emoji": "👋🏼"
     },
     {
      "id": "g7",
@@ -70,7 +76,8 @@
      "de": "Ja",
      "deHint": "یا",
      "en": "Yes",
-     "enHint": "یێس"
+     "enHint": "یێس",
+     "emoji": "👍"
     },
     {
      "id": "g8",
@@ -79,7 +86,8 @@
      "de": "Nein",
      "deHint": "ناین",
      "en": "No",
-     "enHint": "نۆ"
+     "enHint": "نۆ",
+     "emoji": "👎"
     }
    ],
    "section": 1
@@ -99,7 +107,8 @@
      "de": "eins",
      "deHint": "ئاینس",
      "en": "one",
-     "enHint": "وەن"
+     "enHint": "وەن",
+     "emoji": "1️⃣"
     },
     {
      "id": "n2",
@@ -108,7 +117,8 @@
      "de": "zwei",
      "deHint": "تسڤای",
      "en": "two",
-     "enHint": "توو"
+     "enHint": "توو",
+     "emoji": "2️⃣"
     },
     {
      "id": "n3",
@@ -117,7 +127,8 @@
      "de": "drei",
      "deHint": "درای",
      "en": "three",
-     "enHint": "سری"
+     "enHint": "سری",
+     "emoji": "3️⃣"
     },
     {
      "id": "n4",
@@ -126,7 +137,8 @@
      "de": "vier",
      "deHint": "فیر",
      "en": "four",
-     "enHint": "فۆر"
+     "enHint": "فۆر",
+     "emoji": "4️⃣"
     },
     {
      "id": "n5",
@@ -135,7 +147,8 @@
      "de": "fünf",
      "deHint": "فوونف",
      "en": "five",
-     "enHint": "فایڤ"
+     "enHint": "فایڤ",
+     "emoji": "5️⃣"
     },
     {
      "id": "n6",
@@ -144,7 +157,8 @@
      "de": "zehn",
      "deHint": "تسێن",
      "en": "ten",
-     "enHint": "تێن"
+     "enHint": "تێن",
+     "emoji": "🔟"
     }
    ],
    "section": 1
@@ -164,7 +178,8 @@
      "de": "die Mutter",
      "deHint": "دی موتەر (die = مێ)",
      "en": "mother",
-     "enHint": "مەذەر"
+     "enHint": "مەذەر",
+     "emoji": "👩"
     },
     {
      "id": "f2",
@@ -173,7 +188,8 @@
      "de": "der Vater",
      "deHint": "دێر فاتەر (der = نێر)",
      "en": "father",
-     "enHint": "فاذەر"
+     "enHint": "فاذەر",
+     "emoji": "👨"
     },
     {
      "id": "f3",
@@ -182,7 +198,8 @@
      "de": "der Bruder",
      "deHint": "دێر برودەر",
      "en": "brother",
-     "enHint": "برەذەر"
+     "enHint": "برەذەر",
+     "emoji": "👦"
     },
     {
      "id": "f4",
@@ -191,7 +208,8 @@
      "de": "die Schwester",
      "deHint": "دی شڤێستەر",
      "en": "sister",
-     "enHint": "سیستەر"
+     "enHint": "سیستەر",
+     "emoji": "👧"
     },
     {
      "id": "f5",
@@ -200,7 +218,8 @@
      "de": "das Kind",
      "deHint": "داس کیند (das = بێلایەن)",
      "en": "child",
-     "enHint": "چایلد"
+     "enHint": "چایلد",
+     "emoji": "🧒"
     },
     {
      "id": "f6",
@@ -209,7 +228,8 @@
      "de": "die Familie",
      "deHint": "دی فامیلیە",
      "en": "family",
-     "enHint": "فامیلی"
+     "enHint": "فامیلی",
+     "emoji": "👨‍👩‍👧‍👦"
     }
    ],
    "section": 1
@@ -229,7 +249,8 @@
      "de": "das Wasser",
      "deHint": "داس ڤاسەر",
      "en": "water",
-     "enHint": "ووتەر"
+     "enHint": "ووتەر",
+     "emoji": "💧"
     },
     {
      "id": "s2",
@@ -238,7 +259,8 @@
      "de": "das Brot",
      "deHint": "داس برۆت",
      "en": "bread",
-     "enHint": "برێد"
+     "enHint": "برێد",
+     "emoji": "🍞"
     },
     {
      "id": "s3",
@@ -247,7 +269,8 @@
      "de": "der Tee",
      "deHint": "دێر تێ",
      "en": "tea",
-     "enHint": "تی"
+     "enHint": "تی",
+     "emoji": "🍵"
     },
     {
      "id": "s4",
@@ -256,7 +279,8 @@
      "de": "Ich mag Kaffee",
      "deHint": "ئیش ماگ کافێ",
      "en": "I like coffee",
-     "enHint": "ئای لایک کۆفی"
+     "enHint": "ئای لایک کۆفی",
+     "emoji": "☕"
     },
     {
      "id": "s5",
@@ -265,7 +289,8 @@
      "de": "Ich habe Hunger",
      "deHint": "ئیش هابە هونگەر",
      "en": "I am hungry",
-     "enHint": "ئای ئێم هەنگری"
+     "enHint": "ئای ئێم هەنگری",
+     "emoji": "🍽️"
     },
     {
      "id": "s6",
@@ -274,7 +299,8 @@
      "de": "Was kostet das?",
      "deHint": "ڤاس کۆستەت داس؟",
      "en": "How much is this?",
-     "enHint": "هاو مەچ ئیز ذیس؟"
+     "enHint": "هاو مەچ ئیز ذیس؟",
+     "emoji": "🏷️"
     }
    ],
    "section": 1
@@ -294,7 +320,8 @@
      "de": "das Haus",
      "deHint": "داس هاوس",
      "en": "house",
-     "enHint": "هاوس"
+     "enHint": "هاوس",
+     "emoji": "🏠"
     },
     {
      "id": "p2",
@@ -303,7 +330,8 @@
      "de": "die Schule",
      "deHint": "دی شولە",
      "en": "school",
-     "enHint": "سکوول"
+     "enHint": "سکوول",
+     "emoji": "🏫"
     },
     {
      "id": "p3",
@@ -312,7 +340,8 @@
      "de": "die Arbeit",
      "deHint": "دی ئاربایت",
      "en": "work",
-     "enHint": "وۆرک"
+     "enHint": "وۆرک",
+     "emoji": "💼"
     },
     {
      "id": "p4",
@@ -321,7 +350,8 @@
      "de": "das Krankenhaus",
      "deHint": "داس کرانکەنهاوس",
      "en": "hospital",
-     "enHint": "هۆسپیتەل"
+     "enHint": "هۆسپیتەل",
+     "emoji": "🏥"
     },
     {
      "id": "p5",
@@ -330,7 +360,8 @@
      "de": "Wo ist die Toilette?",
      "deHint": "ڤۆ ئیست دی تۆالێتە؟",
      "en": "Where is the toilet?",
-     "enHint": "وێر ئیز ذە تۆیلێت؟"
+     "enHint": "وێر ئیز ذە تۆیلێت؟",
+     "emoji": "🚻"
     },
     {
      "id": "p6",
@@ -339,7 +370,8 @@
      "de": "Ich helfe dir",
      "deHint": "ئیش هێلفە دیر (helfen + Dativ)",
      "en": "I help you",
-     "enHint": "ئای هێلپ یوو"
+     "enHint": "ئای هێلپ یوو",
+     "emoji": "🤝"
     }
    ],
    "section": 1
@@ -359,7 +391,8 @@
      "de": "heute",
      "deHint": "هۆیتە",
      "en": "today",
-     "enHint": "تودەی"
+     "enHint": "تودەی",
+     "emoji": "📅"
     },
     {
      "id": "t2",
@@ -368,7 +401,8 @@
      "de": "morgen",
      "deHint": "مۆرگن",
      "en": "tomorrow",
-     "enHint": "تومۆرۆ"
+     "enHint": "تومۆرۆ",
+     "emoji": "➡️"
     },
     {
      "id": "t3",
@@ -377,7 +411,8 @@
      "de": "gestern",
      "deHint": "گێستەرن",
      "en": "yesterday",
-     "enHint": "یێستەردەی"
+     "enHint": "یێستەردەی",
+     "emoji": "⬅️"
     },
     {
      "id": "t4",
@@ -386,7 +421,8 @@
      "de": "Ich verstehe nicht",
      "deHint": "ئیش فێرشتێهە نیشت",
      "en": "I do not understand",
-     "enHint": "ئای دوو نۆت ئەندەرستاند"
+     "enHint": "ئای دوو نۆت ئەندەرستاند",
+     "emoji": "🤷"
     },
     {
      "id": "t5",
@@ -395,7 +431,8 @@
      "de": "Bitte langsam sprechen",
      "deHint": "بیتە لانگزام شپرێشن",
      "en": "Please speak slowly",
-     "enHint": "پلیز سپیک سلۆلی"
+     "enHint": "پلیز سپیک سلۆلی",
+     "emoji": "🐢"
     },
     {
      "id": "t6",
@@ -404,7 +441,8 @@
      "de": "Ich heiße Azad",
      "deHint": "ئیش هایسە ئازاد",
      "en": "My name is Azad",
-     "enHint": "مای نەیم ئیز ئازاد"
+     "enHint": "مای نەیم ئیز ئازاد",
+     "emoji": "🪪"
     }
    ],
    "section": 1
@@ -424,7 +462,8 @@
      "de": "rot",
      "deHint": "رۆت",
      "en": "red",
-     "enHint": "رێد"
+     "enHint": "رێد",
+     "emoji": "🔴"
     },
     {
      "id": "k2",
@@ -433,7 +472,8 @@
      "de": "blau",
      "deHint": "بلاو",
      "en": "blue",
-     "enHint": "بلوو"
+     "enHint": "بلوو",
+     "emoji": "🔵"
     },
     {
      "id": "k3",
@@ -442,7 +482,8 @@
      "de": "grün",
      "deHint": "گروون",
      "en": "green",
-     "enHint": "گرین"
+     "enHint": "گرین",
+     "emoji": "🟢"
     },
     {
      "id": "k4",
@@ -451,7 +492,8 @@
      "de": "gelb",
      "deHint": "گێلب",
      "en": "yellow",
-     "enHint": "یێلۆ"
+     "enHint": "یێلۆ",
+     "emoji": "🟡"
     },
     {
      "id": "k5",
@@ -460,7 +502,8 @@
      "de": "schwarz",
      "deHint": "شڤارتس",
      "en": "black",
-     "enHint": "بلاک"
+     "enHint": "بلاک",
+     "emoji": "⚫"
     },
     {
      "id": "k6",
@@ -469,7 +512,8 @@
      "de": "weiß",
      "deHint": "ڤایس",
      "en": "white",
-     "enHint": "وایت"
+     "enHint": "وایت",
+     "emoji": "⚪"
     }
    ],
    "section": 1
@@ -489,7 +533,8 @@
      "de": "der Kopf",
      "deHint": "دێر کۆپف",
      "en": "head",
-     "enHint": "هێد"
+     "enHint": "هێد",
+     "emoji": "🗣️"
     },
     {
      "id": "b2",
@@ -498,7 +543,8 @@
      "de": "die Hand",
      "deHint": "دی هاند",
      "en": "hand",
-     "enHint": "هاند"
+     "enHint": "هاند",
+     "emoji": "✋"
     },
     {
      "id": "b3",
@@ -507,7 +553,8 @@
      "de": "das Auge",
      "deHint": "داس ئاوگە",
      "en": "eye",
-     "enHint": "ئای"
+     "enHint": "ئای",
+     "emoji": "👁️"
     },
     {
      "id": "b4",
@@ -516,7 +563,8 @@
      "de": "der Fuß",
      "deHint": "دێر فووس",
      "en": "foot",
-     "enHint": "فووت"
+     "enHint": "فووت",
+     "emoji": "🦶"
     },
     {
      "id": "b5",
@@ -525,7 +573,8 @@
      "de": "das Herz",
      "deHint": "داس هێرتس",
      "en": "heart",
-     "enHint": "هارت"
+     "enHint": "هارت",
+     "emoji": "❤️"
     },
     {
      "id": "b6",
@@ -534,7 +583,8 @@
      "de": "der Mund",
      "deHint": "دێر موند",
      "en": "mouth",
-     "enHint": "ماوس"
+     "enHint": "ماوس",
+     "emoji": "👄"
     }
    ],
    "section": 1
@@ -554,7 +604,8 @@
      "de": "Ich gehe",
      "deHint": "ئیش گێهە",
      "en": "I go",
-     "enHint": "ئای گۆ"
+     "enHint": "ئای گۆ",
+     "emoji": "🚶"
     },
     {
      "id": "v2",
@@ -563,7 +614,8 @@
      "de": "Ich esse",
      "deHint": "ئیش ئێسە",
      "en": "I eat",
-     "enHint": "ئای ئیت"
+     "enHint": "ئای ئیت",
+     "emoji": "🍴"
     },
     {
      "id": "v3",
@@ -572,7 +624,8 @@
      "de": "Ich trinke",
      "deHint": "ئیش ترینکە",
      "en": "I drink",
-     "enHint": "ئای درینک"
+     "enHint": "ئای درینک",
+     "emoji": "🥤"
     },
     {
      "id": "v4",
@@ -581,7 +634,8 @@
      "de": "Ich schlafe",
      "deHint": "ئیش شلافە",
      "en": "I sleep",
-     "enHint": "ئای سلیپ"
+     "enHint": "ئای سلیپ",
+     "emoji": "😴"
     },
     {
      "id": "v5",
@@ -590,7 +644,8 @@
      "de": "Ich lerne",
      "deHint": "ئیش لێرنە",
      "en": "I learn",
-     "enHint": "ئای لێرن"
+     "enHint": "ئای لێرن",
+     "emoji": "📖"
     },
     {
      "id": "v6",
@@ -599,7 +654,8 @@
      "de": "Ich arbeite",
      "deHint": "ئیش ئاربایتە",
      "en": "I work",
-     "enHint": "ئای وۆرک"
+     "enHint": "ئای وۆرک",
+     "emoji": "👷"
     }
    ],
    "section": 1
@@ -619,7 +675,8 @@
      "de": "Ich komme aus Kurdistan",
      "deHint": "ئیش کۆمە ئاوس کوردستان",
      "en": "I am from Kurdistan",
-     "enHint": "ئای ئێم فرۆم کوردستان"
+     "enHint": "ئای ئێم فرۆم کوردستان",
+     "emoji": "☀️"
     },
     {
      "id": "r2",
@@ -628,7 +685,8 @@
      "de": "Ich lerne Deutsch",
      "deHint": "ئیش لێرنە دۆیچ",
      "en": "I am learning German",
-     "enHint": "ئای ئێم لێرنینگ جێرمەن"
+     "enHint": "ئای ئێم لێرنینگ جێرمەن",
+     "emoji": "🇩🇪"
     },
     {
      "id": "r3",
@@ -637,7 +695,8 @@
      "de": "Heute ist das Wetter schön",
      "deHint": "هۆیتە ئیست داس ڤێتەر شۆن",
      "en": "The weather is nice today",
-     "enHint": "ذە وێذەر ئیز نایس تودەی"
+     "enHint": "ذە وێذەر ئیز نایس تودەی",
+     "emoji": "🌤️"
     },
     {
      "id": "r4",
@@ -646,7 +705,8 @@
      "de": "Kannst du mir helfen?",
      "deHint": "کانست دو میر هێلفن؟",
      "en": "Can you help me?",
-     "enHint": "کان یوو هێلپ می؟"
+     "enHint": "کان یوو هێلپ می؟",
+     "emoji": "🆘"
     },
     {
      "id": "r5",
@@ -655,7 +715,8 @@
      "de": "Ich gehe zum Markt",
      "deHint": "ئیش گێهە تسوم مارکت",
      "en": "I am going to the market",
-     "enHint": "ئای ئێم گۆینگ تو ذە مارکێت"
+     "enHint": "ئای ئێم گۆینگ تو ذە مارکێت",
+     "emoji": "🛒"
     },
     {
      "id": "r6",
@@ -664,7 +725,8 @@
      "de": "Das ist mein Buch",
      "deHint": "داس ئیست ماین بوخ",
      "en": "This is my book",
-     "enHint": "ذیس ئیز مای بووک"
+     "enHint": "ذیس ئیز مای بووک",
+     "emoji": "📘"
     }
    ],
    "section": 1
@@ -685,7 +747,8 @@
      "de": "sechs",
      "deHint": "زێکس",
      "en": "six",
-     "enHint": "سیکس"
+     "enHint": "سیکس",
+     "emoji": "6️⃣"
     },
     {
      "id": "n8",
@@ -694,7 +757,8 @@
      "de": "sieben",
      "deHint": "زیبن",
      "en": "seven",
-     "enHint": "سێڤن"
+     "enHint": "سێڤن",
+     "emoji": "7️⃣"
     },
     {
      "id": "n9",
@@ -703,7 +767,8 @@
      "de": "acht",
      "deHint": "ئاخت",
      "en": "eight",
-     "enHint": "ئەیت"
+     "enHint": "ئەیت",
+     "emoji": "8️⃣"
     },
     {
      "id": "n10",
@@ -712,7 +777,8 @@
      "de": "neun",
      "deHint": "نۆین",
      "en": "nine",
-     "enHint": "ناین"
+     "enHint": "ناین",
+     "emoji": "9️⃣"
     },
     {
      "id": "n11",
@@ -721,7 +787,8 @@
      "de": "elf",
      "deHint": "ئێلف",
      "en": "eleven",
-     "enHint": "ئیلێڤن"
+     "enHint": "ئیلێڤن",
+     "emoji": "🕚"
     },
     {
      "id": "n12",
@@ -730,7 +797,8 @@
      "de": "zwölf",
      "deHint": "تسڤۆلف",
      "en": "twelve",
-     "enHint": "توێلڤ"
+     "enHint": "توێلڤ",
+     "emoji": "🕛"
     },
     {
      "id": "n13",
@@ -739,7 +807,8 @@
      "de": "zwanzig",
      "deHint": "تسڤانتسیش",
      "en": "twenty",
-     "enHint": "توێنتی"
+     "enHint": "توێنتی",
+     "emoji": "2️⃣0️⃣"
     },
     {
      "id": "n14",
@@ -748,7 +817,8 @@
      "de": "hundert",
      "deHint": "هوندەرت",
      "en": "one hundred",
-     "enHint": "وەن هەندرەد"
+     "enHint": "وەن هەندرەد",
+     "emoji": "💯"
     }
    ]
   },
@@ -768,7 +838,8 @@
      "de": "Montag",
      "deHint": "مۆنتاگ",
      "en": "Monday",
-     "enHint": "مەندەی"
+     "enHint": "مەندەی",
+     "emoji": "🌙"
     },
     {
      "id": "d2",
@@ -777,7 +848,8 @@
      "de": "Dienstag",
      "deHint": "دینستاگ",
      "en": "Tuesday",
-     "enHint": "تیوزدەی"
+     "enHint": "تیوزدەی",
+     "emoji": "⚔️"
     },
     {
      "id": "d3",
@@ -786,7 +858,8 @@
      "de": "Mittwoch",
      "deHint": "میتڤۆخ",
      "en": "Wednesday",
-     "enHint": "وێنزدەی"
+     "enHint": "وێنزدەی",
+     "emoji": "🐫"
     },
     {
      "id": "d4",
@@ -795,7 +868,8 @@
      "de": "Donnerstag",
      "deHint": "دۆنەرستاگ",
      "en": "Thursday",
-     "enHint": "سێرزدەی"
+     "enHint": "سێرزدەی",
+     "emoji": "⚡"
     },
     {
      "id": "d5",
@@ -804,7 +878,8 @@
      "de": "Freitag",
      "deHint": "فرایتاگ",
      "en": "Friday",
-     "enHint": "فرایدەی"
+     "enHint": "فرایدەی",
+     "emoji": "🕌"
     },
     {
      "id": "d6",
@@ -813,7 +888,8 @@
      "de": "Samstag",
      "deHint": "زامستاگ",
      "en": "Saturday",
-     "enHint": "ساتەردەی"
+     "enHint": "ساتەردەی",
+     "emoji": "🎉"
     },
     {
      "id": "d7",
@@ -822,7 +898,8 @@
      "de": "Sonntag",
      "deHint": "زۆنتاگ",
      "en": "Sunday",
-     "enHint": "سەندەی"
+     "enHint": "سەندەی",
+     "emoji": "☀️"
     },
     {
      "id": "d8",
@@ -831,7 +908,8 @@
      "de": "die Woche",
      "deHint": "دی ڤۆخە",
      "en": "week",
-     "enHint": "ویک"
+     "enHint": "ویک",
+     "emoji": "🗓️"
     }
    ]
   },
@@ -851,7 +929,8 @@
      "de": "der Frühling",
      "deHint": "دێر فرووهلینگ",
      "en": "spring",
-     "enHint": "سپرینگ"
+     "enHint": "سپرینگ",
+     "emoji": "🌸"
     },
     {
      "id": "y2",
@@ -860,7 +939,8 @@
      "de": "der Sommer",
      "deHint": "دێر زۆمەر",
      "en": "summer",
-     "enHint": "سەمەر"
+     "enHint": "سەمەر",
+     "emoji": "🏖️"
     },
     {
      "id": "y3",
@@ -869,7 +949,8 @@
      "de": "der Herbst",
      "deHint": "دێر هێربست",
      "en": "autumn",
-     "enHint": "ئۆتەم"
+     "enHint": "ئۆتەم",
+     "emoji": "🍂"
     },
     {
      "id": "y4",
@@ -878,7 +959,8 @@
      "de": "der Winter",
      "deHint": "دێر ڤینتەر",
      "en": "winter",
-     "enHint": "وینتەر"
+     "enHint": "وینتەر",
+     "emoji": "⛄"
     },
     {
      "id": "y5",
@@ -887,7 +969,8 @@
      "de": "das Jahr",
      "deHint": "داس یار",
      "en": "year",
-     "enHint": "ییەر"
+     "enHint": "ییەر",
+     "emoji": "🎆"
     },
     {
      "id": "y6",
@@ -896,7 +979,8 @@
      "de": "der Monat",
      "deHint": "دێر مۆنات",
      "en": "month",
-     "enHint": "مەنس"
+     "enHint": "مەنس",
+     "emoji": "🌙"
     },
     {
      "id": "y7",
@@ -905,7 +989,8 @@
      "de": "der Tag",
      "deHint": "دێر تاگ",
      "en": "day",
-     "enHint": "دەی"
+     "enHint": "دەی",
+     "emoji": "🌞"
     },
     {
      "id": "y8",
@@ -914,7 +999,8 @@
      "de": "die Stunde",
      "deHint": "دی شتوندە",
      "en": "hour",
-     "enHint": "ئاوەر"
+     "enHint": "ئاوەر",
+     "emoji": "⏳"
     }
    ]
   },
@@ -934,7 +1020,8 @@
      "de": "Wie spät ist es?",
      "deHint": "ڤی شپێت ئیست ئێس؟",
      "en": "What time is it?",
-     "enHint": "وۆت تایم ئیز ئیت؟"
+     "enHint": "وۆت تایم ئیز ئیت؟",
+     "emoji": "⌚"
     },
     {
      "id": "h2",
@@ -943,7 +1030,8 @@
      "de": "Es ist acht Uhr",
      "deHint": "ئێس ئیست ئاخت ئوور",
      "en": "It is eight o'clock",
-     "enHint": "ئیت ئیز ئەیت ئۆکلۆک"
+     "enHint": "ئیت ئیز ئەیت ئۆکلۆک",
+     "emoji": "🕗"
     },
     {
      "id": "h3",
@@ -952,7 +1040,8 @@
      "de": "am Morgen",
      "deHint": "ئام مۆرگن",
      "en": "in the morning",
-     "enHint": "ئین ذە مۆرنینگ"
+     "enHint": "ئین ذە مۆرنینگ",
+     "emoji": "🌄"
     },
     {
      "id": "h4",
@@ -961,7 +1050,8 @@
      "de": "am Abend",
      "deHint": "ئام ئابەنت",
      "en": "in the evening",
-     "enHint": "ئین ذی ئیڤنینگ"
+     "enHint": "ئین ذی ئیڤنینگ",
+     "emoji": "🌇"
     },
     {
      "id": "h5",
@@ -970,7 +1060,8 @@
      "de": "in der Nacht",
      "deHint": "ئین دێر ناخت",
      "en": "at night",
-     "enHint": "ئات نایت"
+     "enHint": "ئات نایت",
+     "emoji": "🌃"
     },
     {
      "id": "h6",
@@ -979,7 +1070,8 @@
      "de": "jetzt",
      "deHint": "یێتست",
      "en": "now",
-     "enHint": "ناو"
+     "enHint": "ناو",
+     "emoji": "⏰"
     },
     {
      "id": "h7",
@@ -988,7 +1080,8 @@
      "de": "später",
      "deHint": "شپێتەر",
      "en": "later",
-     "enHint": "لەیتەر"
+     "enHint": "لەیتەر",
+     "emoji": "⏭️"
     },
     {
      "id": "h8",
@@ -997,7 +1090,8 @@
      "de": "früh",
      "deHint": "فرووە",
      "en": "early",
-     "enHint": "ئێرلی"
+     "enHint": "ئێرلی",
+     "emoji": "🐓"
     }
    ]
   },
@@ -1017,7 +1111,8 @@
      "de": "Wie ist das Wetter?",
      "deHint": "ڤی ئیست داس ڤێتەر؟",
      "en": "How is the weather?",
-     "enHint": "هاو ئیز ذە وێذەر؟"
+     "enHint": "هاو ئیز ذە وێذەر؟",
+     "emoji": "🌦️"
     },
     {
      "id": "w2",
@@ -1026,7 +1121,8 @@
      "de": "Es ist kalt",
      "deHint": "ئێس ئیست کالت",
      "en": "It is cold",
-     "enHint": "ئیت ئیز کۆڵد"
+     "enHint": "ئیت ئیز کۆڵد",
+     "emoji": "🥶"
     },
     {
      "id": "w3",
@@ -1035,7 +1131,8 @@
      "de": "Es ist warm",
      "deHint": "ئێس ئیست ڤارم",
      "en": "It is warm",
-     "enHint": "ئیت ئیز وۆرم"
+     "enHint": "ئیت ئیز وۆرم",
+     "emoji": "🥵"
     },
     {
      "id": "w4",
@@ -1044,7 +1141,8 @@
      "de": "Es regnet",
      "deHint": "ئێس رێگنەت",
      "en": "It is raining",
-     "enHint": "ئیت ئیز رەینینگ"
+     "enHint": "ئیت ئیز رەینینگ",
+     "emoji": "🌧️"
     },
     {
      "id": "w5",
@@ -1053,7 +1151,8 @@
      "de": "Es schneit",
      "deHint": "ئێس شنایت",
      "en": "It is snowing",
-     "enHint": "ئیت ئیز سنۆوینگ"
+     "enHint": "ئیت ئیز سنۆوینگ",
+     "emoji": "🌨️"
     },
     {
      "id": "w6",
@@ -1062,7 +1161,8 @@
      "de": "die Sonne",
      "deHint": "دی زۆنە",
      "en": "the sun",
-     "enHint": "ذە سەن"
+     "enHint": "ذە سەن",
+     "emoji": "☀️"
     },
     {
      "id": "w7",
@@ -1071,7 +1171,8 @@
      "de": "der Wind",
      "deHint": "دێر ڤیند",
      "en": "wind",
-     "enHint": "ویند"
+     "enHint": "ویند",
+     "emoji": "🌬️"
     },
     {
      "id": "w8",
@@ -1080,7 +1181,8 @@
      "de": "Es ist bewölkt",
      "deHint": "ئێس ئیست بەڤۆلکت",
      "en": "It is cloudy",
-     "enHint": "ئیت ئیز کلاودی"
+     "enHint": "ئیت ئیز کلاودی",
+     "emoji": "☁️"
     }
    ]
   },
@@ -1100,7 +1202,8 @@
      "de": "das Zimmer",
      "deHint": "داس تسیمەر",
      "en": "room",
-     "enHint": "رووم"
+     "enHint": "رووم",
+     "emoji": "🛋️"
     },
     {
      "id": "m2",
@@ -1109,7 +1212,8 @@
      "de": "die Küche",
      "deHint": "دی کووشە",
      "en": "kitchen",
-     "enHint": "کیچن"
+     "enHint": "کیچن",
+     "emoji": "🍳"
     },
     {
      "id": "m3",
@@ -1118,7 +1222,8 @@
      "de": "das Bett",
      "deHint": "داس بێت",
      "en": "bed",
-     "enHint": "بێد"
+     "enHint": "بێد",
+     "emoji": "🛏️"
     },
     {
      "id": "m4",
@@ -1127,7 +1232,8 @@
      "de": "der Tisch",
      "deHint": "دێر تیش",
      "en": "table",
-     "enHint": "تەیبڵ"
+     "enHint": "تەیبڵ",
+     "emoji": "🪑"
     },
     {
      "id": "m5",
@@ -1136,7 +1242,8 @@
      "de": "der Stuhl",
      "deHint": "دێر شتوول",
      "en": "chair",
-     "enHint": "چێر"
+     "enHint": "چێر",
+     "emoji": "💺"
     },
     {
      "id": "m6",
@@ -1145,7 +1252,8 @@
      "de": "die Tür",
      "deHint": "دی توور",
      "en": "door",
-     "enHint": "دۆر"
+     "enHint": "دۆر",
+     "emoji": "🚪"
     },
     {
      "id": "m7",
@@ -1154,7 +1262,8 @@
      "de": "das Fenster",
      "deHint": "داس فێنستەر",
      "en": "window",
-     "enHint": "ویندۆ"
+     "enHint": "ویندۆ",
+     "emoji": "🪟"
     },
     {
      "id": "m8",
@@ -1163,7 +1272,8 @@
      "de": "das Bad",
      "deHint": "داس بات",
      "en": "bathroom",
-     "enHint": "باسروم"
+     "enHint": "باسروم",
+     "emoji": "🛁"
     }
    ]
   },
@@ -1183,7 +1293,8 @@
      "de": "die Jacke",
      "deHint": "دی یاکە",
      "en": "jacket",
-     "enHint": "جاکێت"
+     "enHint": "جاکێت",
+     "emoji": "🧥"
     },
     {
      "id": "c2",
@@ -1192,7 +1303,8 @@
      "de": "die Hose",
      "deHint": "دی هۆزە",
      "en": "trousers",
-     "enHint": "تراوزەرز"
+     "enHint": "تراوزەرز",
+     "emoji": "👖"
     },
     {
      "id": "c3",
@@ -1201,7 +1313,8 @@
      "de": "das Hemd",
      "deHint": "داس هێمت",
      "en": "shirt",
-     "enHint": "شێرت"
+     "enHint": "شێرت",
+     "emoji": "👔"
     },
     {
      "id": "c4",
@@ -1210,7 +1323,8 @@
      "de": "die Schuhe",
      "deHint": "دی شووە",
      "en": "shoes",
-     "enHint": "شووز"
+     "enHint": "شووز",
+     "emoji": "👟"
     },
     {
      "id": "c5",
@@ -1219,7 +1333,8 @@
      "de": "das Kleid",
      "deHint": "داس کلایت",
      "en": "dress",
-     "enHint": "درێس"
+     "enHint": "درێس",
+     "emoji": "👗"
     },
     {
      "id": "c6",
@@ -1228,7 +1343,8 @@
      "de": "die Mütze",
      "deHint": "دی موتسە",
      "en": "hat",
-     "enHint": "هات"
+     "enHint": "هات",
+     "emoji": "🧢"
     },
     {
      "id": "c7",
@@ -1237,7 +1353,8 @@
      "de": "Ich trage eine Jacke",
      "deHint": "ئیش تراگە ئاینە یاکە",
      "en": "I am wearing a jacket",
-     "enHint": "ئای ئێم وێرینگ ئە جاکێت"
+     "enHint": "ئای ئێم وێرینگ ئە جاکێت",
+     "emoji": "🙋‍♂️"
     },
     {
      "id": "c8",
@@ -1246,7 +1363,8 @@
      "de": "Das ist zu groß",
      "deHint": "داس ئیست تسو گرۆس",
      "en": "This is too big",
-     "enHint": "ذیس ئیز توو بیگ"
+     "enHint": "ذیس ئیز توو بیگ",
+     "emoji": "📏"
     }
    ]
   },
@@ -1266,7 +1384,8 @@
      "de": "das Fleisch",
      "deHint": "داس فلایش",
      "en": "meat",
-     "enHint": "میت"
+     "enHint": "میت",
+     "emoji": "🥩"
     },
     {
      "id": "e2",
@@ -1275,7 +1394,8 @@
      "de": "das Huhn",
      "deHint": "داس هوون",
      "en": "chicken",
-     "enHint": "چیکن"
+     "enHint": "چیکن",
+     "emoji": "🍗"
     },
     {
      "id": "e3",
@@ -1284,7 +1404,8 @@
      "de": "der Reis",
      "deHint": "دێر رایس",
      "en": "rice",
-     "enHint": "رایس"
+     "enHint": "رایس",
+     "emoji": "🍚"
     },
     {
      "id": "e4",
@@ -1293,7 +1414,8 @@
      "de": "das Gemüse",
      "deHint": "داس گەمووزە",
      "en": "vegetables",
-     "enHint": "ڤێجتەبڵز"
+     "enHint": "ڤێجتەبڵز",
+     "emoji": "🥦"
     },
     {
      "id": "e5",
@@ -1302,7 +1424,8 @@
      "de": "das Obst",
      "deHint": "داس ئۆبست",
      "en": "fruit",
-     "enHint": "فرووت"
+     "enHint": "فرووت",
+     "emoji": "🍇"
     },
     {
      "id": "e6",
@@ -1311,7 +1434,8 @@
      "de": "der Apfel",
      "deHint": "دێر ئاپفل",
      "en": "apple",
-     "enHint": "ئاپڵ"
+     "enHint": "ئاپڵ",
+     "emoji": "🍎"
     },
     {
      "id": "e7",
@@ -1320,7 +1444,8 @@
      "de": "die Milch",
      "deHint": "دی میلش",
      "en": "milk",
-     "enHint": "میلک"
+     "enHint": "میلک",
+     "emoji": "🥛"
     },
     {
      "id": "e8",
@@ -1329,7 +1454,8 @@
      "de": "der Zucker",
      "deHint": "دێر تسوکەر",
      "en": "sugar",
-     "enHint": "شوگەر"
+     "enHint": "شوگەر",
+     "emoji": "🍬"
     }
    ]
   },
@@ -1349,7 +1475,8 @@
      "de": "Die Speisekarte, bitte",
      "deHint": "دی شپایزەکارتە، بیتە",
      "en": "The menu, please",
-     "enHint": "ذە مێنیو، پلیز"
+     "enHint": "ذە مێنیو، پلیز",
+     "emoji": "📋"
     },
     {
      "id": "o2",
@@ -1358,7 +1485,8 @@
      "de": "Ich möchte bestellen",
      "deHint": "ئیش مۆشتە بەشتێلن",
      "en": "I would like to order",
-     "enHint": "ئای وود لایک تو ئۆردەر"
+     "enHint": "ئای وود لایک تو ئۆردەر",
+     "emoji": "🧑‍🍳"
     },
     {
      "id": "o3",
@@ -1367,7 +1495,8 @@
      "de": "Die Rechnung, bitte",
      "deHint": "دی رێشنونگ، بیتە",
      "en": "The bill, please",
-     "enHint": "ذە بیل، پلیز"
+     "enHint": "ذە بیل، پلیز",
+     "emoji": "🧾"
     },
     {
      "id": "o4",
@@ -1376,7 +1505,8 @@
      "de": "Das schmeckt gut",
      "deHint": "داس شمێکت گوت",
      "en": "This tastes good",
-     "enHint": "ذیس تەیستس گود"
+     "enHint": "ذیس تەیستس گود",
+     "emoji": "😋"
     },
     {
      "id": "o5",
@@ -1385,7 +1515,8 @@
      "de": "Ein Wasser, bitte",
      "deHint": "ئاین ڤاسەر، بیتە",
      "en": "A water, please",
-     "enHint": "ئە ووتەر، پلیز"
+     "enHint": "ئە ووتەر، پلیز",
+     "emoji": "🚰"
     },
     {
      "id": "o6",
@@ -1394,7 +1525,8 @@
      "de": "Ich bin satt",
      "deHint": "ئیش بین زات",
      "en": "I am full",
-     "enHint": "ئای ئێم فول"
+     "enHint": "ئای ئێم فول",
+     "emoji": "😌"
     },
     {
      "id": "o7",
@@ -1403,7 +1535,8 @@
      "de": "Guten Appetit",
      "deHint": "گوتن ئاپەتیت",
      "en": "Enjoy your meal",
-     "enHint": "ئینجۆی یۆر میل"
+     "enHint": "ئینجۆی یۆر میل",
+     "emoji": "🍲"
     },
     {
      "id": "o8",
@@ -1412,7 +1545,8 @@
      "de": "Ohne Fleisch, bitte",
      "deHint": "ئۆنە فلایش، بیتە",
      "en": "Without meat, please",
-     "enHint": "ویذاوت میت، پلیز"
+     "enHint": "ویذاوت میت، پلیز",
+     "emoji": "🥗"
     }
    ]
   },
@@ -1432,7 +1566,8 @@
      "de": "der Bus",
      "deHint": "دێر بوس",
      "en": "bus",
-     "enHint": "بەس"
+     "enHint": "بەس",
+     "emoji": "🚌"
     },
     {
      "id": "x2",
@@ -1441,7 +1576,8 @@
      "de": "der Zug",
      "deHint": "دێر تسووگ",
      "en": "train",
-     "enHint": "ترەین"
+     "enHint": "ترەین",
+     "emoji": "🚆"
     },
     {
      "id": "x3",
@@ -1450,7 +1586,8 @@
      "de": "das Auto",
      "deHint": "داس ئاوتۆ",
      "en": "car",
-     "enHint": "کار"
+     "enHint": "کار",
+     "emoji": "🚗"
     },
     {
      "id": "x4",
@@ -1459,7 +1596,8 @@
      "de": "das Flugzeug",
      "deHint": "داس فلووگتسۆیگ",
      "en": "airplane",
-     "enHint": "ئێرپلەین"
+     "enHint": "ئێرپلەین",
+     "emoji": "✈️"
     },
     {
      "id": "x5",
@@ -1468,7 +1606,8 @@
      "de": "der Bahnhof",
      "deHint": "دێر بانهۆف",
      "en": "train station",
-     "enHint": "ترەین ستەیشن"
+     "enHint": "ترەین ستەیشن",
+     "emoji": "🚉"
     },
     {
      "id": "x6",
@@ -1477,7 +1616,8 @@
      "de": "der Flughafen",
      "deHint": "دێر فلووگهافن",
      "en": "airport",
-     "enHint": "ئێرپۆرت"
+     "enHint": "ئێرپۆرت",
+     "emoji": "🛫"
     },
     {
      "id": "x7",
@@ -1486,7 +1626,8 @@
      "de": "die Fahrkarte",
      "deHint": "دی فارکارتە",
      "en": "ticket",
-     "enHint": "تیکێت"
+     "enHint": "تیکێت",
+     "emoji": "🎫"
     },
     {
      "id": "x8",
@@ -1495,7 +1636,8 @@
      "de": "Wann fährt der Bus?",
      "deHint": "ڤان فێرت دێر بوس؟",
      "en": "When does the bus leave?",
-     "enHint": "وێن دەز ذە بەس لیڤ؟"
+     "enHint": "وێن دەز ذە بەس لیڤ؟",
+     "emoji": "🚏"
     }
    ]
   },
@@ -1515,7 +1657,8 @@
      "de": "links",
      "deHint": "لینکس",
      "en": "left",
-     "enHint": "لێفت"
+     "enHint": "لێفت",
+     "emoji": "⬅️"
     },
     {
      "id": "r8",
@@ -1524,7 +1667,8 @@
      "de": "rechts",
      "deHint": "رێشتس",
      "en": "right",
-     "enHint": "رایت"
+     "enHint": "رایت",
+     "emoji": "➡️"
     },
     {
      "id": "r9",
@@ -1533,7 +1677,8 @@
      "de": "geradeaus",
      "deHint": "گەراد ئاوس",
      "en": "straight ahead",
-     "enHint": "سترەیت ئەهێد"
+     "enHint": "سترەیت ئەهێد",
+     "emoji": "⬆️"
     },
     {
      "id": "r10",
@@ -1542,7 +1687,8 @@
      "de": "hier",
      "deHint": "هیر",
      "en": "here",
-     "enHint": "هیر"
+     "enHint": "هیر",
+     "emoji": "📍"
     },
     {
      "id": "r11",
@@ -1551,7 +1697,8 @@
      "de": "dort",
      "deHint": "دۆرت",
      "en": "there",
-     "enHint": "ذێر"
+     "enHint": "ذێر",
+     "emoji": "👉"
     },
     {
      "id": "r12",
@@ -1560,7 +1707,8 @@
      "de": "nah",
      "deHint": "نا",
      "en": "near",
-     "enHint": "نیەر"
+     "enHint": "نیەر",
+     "emoji": "🤏"
     },
     {
      "id": "r13",
@@ -1569,7 +1717,8 @@
      "de": "weit",
      "deHint": "ڤایت",
      "en": "far",
-     "enHint": "فار"
+     "enHint": "فار",
+     "emoji": "🗺️"
     },
     {
      "id": "r14",
@@ -1578,7 +1727,8 @@
      "de": "Wie komme ich zum Bahnhof?",
      "deHint": "ڤی کۆمە ئیش تسوم بانهۆف؟",
      "en": "How do I get to the station?",
-     "enHint": "هاو دوو ئای گێت تو ذە ستەیشن؟"
+     "enHint": "هاو دوو ئای گێت تو ذە ستەیشن؟",
+     "emoji": "🧭"
     }
    ]
   },
@@ -1598,7 +1748,8 @@
      "de": "der Arzt",
      "deHint": "دێر ئارتست",
      "en": "doctor",
-     "enHint": "دۆکتەر"
+     "enHint": "دۆکتەر",
+     "emoji": "👨‍⚕️"
     },
     {
      "id": "j2",
@@ -1607,7 +1758,8 @@
      "de": "der Lehrer",
      "deHint": "دێر لێرەر",
      "en": "teacher",
-     "enHint": "تیچەر"
+     "enHint": "تیچەر",
+     "emoji": "👨‍🏫"
     },
     {
      "id": "j3",
@@ -1616,7 +1768,8 @@
      "de": "der Fahrer",
      "deHint": "دێر فارەر",
      "en": "driver",
-     "enHint": "درایڤەر"
+     "enHint": "درایڤەر",
+     "emoji": "🚕"
     },
     {
      "id": "j4",
@@ -1625,7 +1778,8 @@
      "de": "der Verkäufer",
      "deHint": "دێر فێرکۆیفەر",
      "en": "salesperson",
-     "enHint": "سەیلزپێرسن"
+     "enHint": "سەیلزپێرسن",
+     "emoji": "🛍️"
     },
     {
      "id": "j5",
@@ -1634,7 +1788,8 @@
      "de": "der Ingenieur",
      "deHint": "دێر ئینژەنیۆر",
      "en": "engineer",
-     "enHint": "ئێنجینیر"
+     "enHint": "ئێنجینیر",
+     "emoji": "👷‍♂️"
     },
     {
      "id": "j6",
@@ -1643,7 +1798,8 @@
      "de": "Was bist du von Beruf?",
      "deHint": "ڤاس بیست دو فۆن بەرووف؟",
      "en": "What is your job?",
-     "enHint": "وۆت ئیز یۆر جۆب؟"
+     "enHint": "وۆت ئیز یۆر جۆب؟",
+     "emoji": "💼"
     },
     {
      "id": "j7",
@@ -1652,7 +1808,8 @@
      "de": "Ich bin Student",
      "deHint": "ئیش بین شتودێنت",
      "en": "I am a student",
-     "enHint": "ئای ئێم ئە ستیودێنت"
+     "enHint": "ئای ئێم ئە ستیودێنت",
+     "emoji": "🎓"
     },
     {
      "id": "j8",
@@ -1661,7 +1818,8 @@
      "de": "Ich suche Arbeit",
      "deHint": "ئیش زوخە ئاربایت",
      "en": "I am looking for work",
-     "enHint": "ئای ئێم لووکینگ فۆر وۆرک"
+     "enHint": "ئای ئێم لووکینگ فۆر وۆرک",
+     "emoji": "🔎"
     }
    ]
   },
@@ -1681,7 +1839,8 @@
      "de": "Ich bin krank",
      "deHint": "ئیش بین کرانک",
      "en": "I am sick",
-     "enHint": "ئای ئێم سیک"
+     "enHint": "ئای ئێم سیک",
+     "emoji": "🤒"
     },
     {
      "id": "s8",
@@ -1690,7 +1849,8 @@
      "de": "Mein Kopf tut weh",
      "deHint": "ماین کۆپف توت ڤێ",
      "en": "My head hurts",
-     "enHint": "مای هێد هێرتس"
+     "enHint": "مای هێد هێرتس",
+     "emoji": "🤕"
     },
     {
      "id": "s9",
@@ -1699,7 +1859,8 @@
      "de": "die Apotheke",
      "deHint": "دی ئاپۆتێکە",
      "en": "pharmacy",
-     "enHint": "فارمەسی"
+     "enHint": "فارمەسی",
+     "emoji": "💊"
     },
     {
      "id": "s10",
@@ -1708,7 +1869,8 @@
      "de": "das Medikament",
      "deHint": "داس مێدیکامێنت",
      "en": "medicine",
-     "enHint": "مێدسن"
+     "enHint": "مێدسن",
+     "emoji": "💉"
     },
     {
      "id": "s11",
@@ -1717,7 +1879,8 @@
      "de": "der Termin",
      "deHint": "دێر تێرمین",
      "en": "appointment",
-     "enHint": "ئەپۆینتمێنت"
+     "enHint": "ئەپۆینتمێنت",
+     "emoji": "📅"
     },
     {
      "id": "s12",
@@ -1726,7 +1889,8 @@
      "de": "Ich brauche einen Arzt",
      "deHint": "ئیش براوخە ئاینەن ئارتست",
      "en": "I need a doctor",
-     "enHint": "ئای نید ئە دۆکتەر"
+     "enHint": "ئای نید ئە دۆکتەر",
+     "emoji": "🩺"
     },
     {
      "id": "s13",
@@ -1735,7 +1899,8 @@
      "de": "das Fieber",
      "deHint": "داس فیبەر",
      "en": "fever",
-     "enHint": "فیڤەر"
+     "enHint": "فیڤەر",
+     "emoji": "🌡️"
     },
     {
      "id": "s14",
@@ -1744,7 +1909,8 @@
      "de": "Gute Besserung",
      "deHint": "گوتە بێسەرونگ",
      "en": "Get well soon",
-     "enHint": "گێت وێل سوون"
+     "enHint": "گێت وێل سوون",
+     "emoji": "💐"
     }
    ]
   },
@@ -1764,7 +1930,8 @@
      "de": "glücklich",
      "deHint": "گلوکلیش",
      "en": "happy",
-     "enHint": "هاپی"
+     "enHint": "هاپی",
+     "emoji": "😄"
     },
     {
      "id": "q2",
@@ -1773,7 +1940,8 @@
      "de": "traurig",
      "deHint": "تراوریش",
      "en": "sad",
-     "enHint": "ساد"
+     "enHint": "ساد",
+     "emoji": "😢"
     },
     {
      "id": "q3",
@@ -1782,7 +1950,8 @@
      "de": "müde",
      "deHint": "موودە",
      "en": "tired",
-     "enHint": "تایەرد"
+     "enHint": "تایەرد",
+     "emoji": "🥱"
     },
     {
      "id": "q4",
@@ -1791,7 +1960,8 @@
      "de": "wütend",
      "deHint": "ڤووتەنت",
      "en": "angry",
-     "enHint": "ئانگری"
+     "enHint": "ئانگری",
+     "emoji": "😠"
     },
     {
      "id": "q5",
@@ -1800,7 +1970,8 @@
      "de": "Ich habe Angst",
      "deHint": "ئیش هابە ئانگست",
      "en": "I am afraid",
-     "enHint": "ئای ئێم ئەفرەید"
+     "enHint": "ئای ئێم ئەفرەید",
+     "emoji": "😨"
     },
     {
      "id": "q6",
@@ -1809,7 +1980,8 @@
      "de": "Ich bin nervös",
      "deHint": "ئیش بین نێرڤۆز",
      "en": "I am nervous",
-     "enHint": "ئای ئێم نێرڤەس"
+     "enHint": "ئای ئێم نێرڤەس",
+     "emoji": "😬"
     },
     {
      "id": "q7",
@@ -1818,7 +1990,8 @@
      "de": "Mir ist langweilig",
      "deHint": "میر ئیست لانگڤایلیش",
      "en": "I am bored",
-     "enHint": "ئای ئێم بۆرد"
+     "enHint": "ئای ئێم بۆرد",
+     "emoji": "😑"
     },
     {
      "id": "q8",
@@ -1827,7 +2000,8 @@
      "de": "Ich freue mich",
      "deHint": "ئیش فرۆیە میش",
      "en": "I am glad",
-     "enHint": "ئای ئێم گلاد"
+     "enHint": "ئای ئێم گلاد",
+     "emoji": "🤩"
     }
    ]
   },
@@ -1847,7 +2021,8 @@
      "de": "groß",
      "deHint": "گرۆس",
      "en": "big",
-     "enHint": "بیگ"
+     "enHint": "بیگ",
+     "emoji": "🐘"
     },
     {
      "id": "a2",
@@ -1856,7 +2031,8 @@
      "de": "klein",
      "deHint": "کلاین",
      "en": "small",
-     "enHint": "سمۆڵ"
+     "enHint": "سمۆڵ",
+     "emoji": "🐭"
     },
     {
      "id": "a3",
@@ -1865,7 +2041,8 @@
      "de": "neu",
      "deHint": "نۆی",
      "en": "new",
-     "enHint": "نیو"
+     "enHint": "نیو",
+     "emoji": "✨"
     },
     {
      "id": "a4",
@@ -1874,7 +2051,8 @@
      "de": "alt",
      "deHint": "ئالت",
      "en": "old",
-     "enHint": "ئۆڵد"
+     "enHint": "ئۆڵد",
+     "emoji": "👴"
     },
     {
      "id": "a5",
@@ -1883,7 +2061,8 @@
      "de": "schön",
      "deHint": "شۆن",
      "en": "beautiful",
-     "enHint": "بیوتیفول"
+     "enHint": "بیوتیفول",
+     "emoji": "🌹"
     },
     {
      "id": "a6",
@@ -1892,7 +2071,8 @@
      "de": "teuer",
      "deHint": "تۆیەر",
      "en": "expensive",
-     "enHint": "ئیکسپێنسیڤ"
+     "enHint": "ئیکسپێنسیڤ",
+     "emoji": "💎"
     },
     {
      "id": "a7",
@@ -1901,7 +2081,8 @@
      "de": "billig",
      "deHint": "بیلیش",
      "en": "cheap",
-     "enHint": "چیپ"
+     "enHint": "چیپ",
+     "emoji": "🪙"
     },
     {
      "id": "a8",
@@ -1910,7 +2091,8 @@
      "de": "schnell",
      "deHint": "شنێل",
      "en": "fast",
-     "enHint": "فاست"
+     "enHint": "فاست",
+     "emoji": "🏎️"
     }
    ]
   },
@@ -1930,7 +2112,8 @@
      "de": "Fußball spielen",
      "deHint": "فووسبال شپیلن",
      "en": "to play football",
-     "enHint": "تو پلەی فوتبۆل"
+     "enHint": "تو پلەی فوتبۆل",
+     "emoji": "⚽"
     },
     {
      "id": "b8",
@@ -1939,7 +2122,8 @@
      "de": "lesen",
      "deHint": "لێزن",
      "en": "to read",
-     "enHint": "تو رید"
+     "enHint": "تو رید",
+     "emoji": "📚"
     },
     {
      "id": "b9",
@@ -1948,7 +2132,8 @@
      "de": "schwimmen",
      "deHint": "شڤیمن",
      "en": "to swim",
-     "enHint": "تو سویم"
+     "enHint": "تو سویم",
+     "emoji": "🏊"
     },
     {
      "id": "b10",
@@ -1957,7 +2142,8 @@
      "de": "kochen",
      "deHint": "کۆخن",
      "en": "to cook",
-     "enHint": "تو کووک"
+     "enHint": "تو کووک",
+     "emoji": "👩‍🍳"
     },
     {
      "id": "b11",
@@ -1966,7 +2152,8 @@
      "de": "Musik hören",
      "deHint": "موزیک هۆرن",
      "en": "to listen to music",
-     "enHint": "تو لیسن تو میوزیک"
+     "enHint": "تو لیسن تو میوزیک",
+     "emoji": "🎧"
     },
     {
      "id": "b12",
@@ -1975,7 +2162,8 @@
      "de": "reisen",
      "deHint": "رایزن",
      "en": "to travel",
-     "enHint": "تو تراڤڵ"
+     "enHint": "تو تراڤڵ",
+     "emoji": "🧳"
     },
     {
      "id": "b13",
@@ -1984,7 +2172,8 @@
      "de": "Was machst du gern?",
      "deHint": "ڤاس ماخست دو گێرن؟",
      "en": "What do you like to do?",
-     "enHint": "وۆت دوو یوو لایک تو دوو؟"
+     "enHint": "وۆت دوو یوو لایک تو دوو؟",
+     "emoji": "🎨"
     },
     {
      "id": "b14",
@@ -1993,7 +2182,8 @@
      "de": "Ich spiele gern Fußball",
      "deHint": "ئیش شپیلە گێرن فووسبال",
      "en": "I like playing football",
-     "enHint": "ئای لایک پلەیینگ فوتبۆل"
+     "enHint": "ئای لایک پلەیینگ فوتبۆل",
+     "emoji": "🥅"
     }
    ]
   },
@@ -2013,7 +2203,8 @@
      "de": "Wer?",
      "deHint": "ڤێر؟",
      "en": "Who?",
-     "enHint": "هوو؟"
+     "enHint": "هوو؟",
+     "emoji": "🧑"
     },
     {
      "id": "k8",
@@ -2022,7 +2213,8 @@
      "de": "Was?",
      "deHint": "ڤاس؟",
      "en": "What?",
-     "enHint": "وۆت؟"
+     "enHint": "وۆت؟",
+     "emoji": "❓"
     },
     {
      "id": "k9",
@@ -2031,7 +2223,8 @@
      "de": "Wo?",
      "deHint": "ڤۆ؟",
      "en": "Where?",
-     "enHint": "وێر؟"
+     "enHint": "وێر؟",
+     "emoji": "📍"
     },
     {
      "id": "k10",
@@ -2040,7 +2233,8 @@
      "de": "Wann?",
      "deHint": "ڤان؟",
      "en": "When?",
-     "enHint": "وێن؟"
+     "enHint": "وێن؟",
+     "emoji": "⏱️"
     },
     {
      "id": "k11",
@@ -2049,7 +2243,8 @@
      "de": "Warum?",
      "deHint": "ڤاروم؟",
      "en": "Why?",
-     "enHint": "وای؟"
+     "enHint": "وای؟",
+     "emoji": "🤔"
     },
     {
      "id": "k12",
@@ -2058,7 +2253,8 @@
      "de": "Wie viel?",
      "deHint": "ڤی فیل؟",
      "en": "How much?",
-     "enHint": "هاو مەچ؟"
+     "enHint": "هاو مەچ؟",
+     "emoji": "💰"
     },
     {
      "id": "k13",
@@ -2067,7 +2263,8 @@
      "de": "Woher kommst du?",
      "deHint": "ڤۆهێر کۆمست دو؟",
      "en": "Where are you from?",
-     "enHint": "وێر ئار یوو فرۆم؟"
+     "enHint": "وێر ئار یوو فرۆم؟",
+     "emoji": "🌍"
     },
     {
      "id": "k14",
@@ -2076,7 +2273,8 @@
      "de": "Wie alt bist du?",
      "deHint": "ڤی ئالت بیست دو؟",
      "en": "How old are you?",
-     "enHint": "هاو ئۆڵد ئار یوو؟"
+     "enHint": "هاو ئۆڵد ئار یوو؟",
+     "emoji": "🎂"
     }
    ]
   },
@@ -2096,7 +2294,8 @@
      "de": "Ich habe einen Termin",
      "deHint": "ئیش هابە ئاینەن تێرمین",
      "en": "I have an appointment",
-     "enHint": "ئای هاڤ ئەن ئەپۆینتمێنت"
+     "enHint": "ئای هاڤ ئەن ئەپۆینتمێنت",
+     "emoji": "🗓️"
     },
     {
      "id": "z2",
@@ -2105,7 +2304,8 @@
      "de": "der Ausweis",
      "deHint": "دێر ئاوسڤایس",
      "en": "ID card",
-     "enHint": "ئای دی کارد"
+     "enHint": "ئای دی کارد",
+     "emoji": "🪪"
     },
     {
      "id": "z3",
@@ -2114,7 +2314,8 @@
      "de": "das Formular",
      "deHint": "داس فۆرمولار",
      "en": "form",
-     "enHint": "فۆرم"
+     "enHint": "فۆرم",
+     "emoji": "📝"
     },
     {
      "id": "z4",
@@ -2123,7 +2324,8 @@
      "de": "unterschreiben",
      "deHint": "ئونتەرشرایبن",
      "en": "to sign",
-     "enHint": "تو ساین"
+     "enHint": "تو ساین",
+     "emoji": "✍️"
     },
     {
      "id": "z5",
@@ -2132,7 +2334,8 @@
      "de": "die Adresse",
      "deHint": "دی ئادرێسە",
      "en": "address",
-     "enHint": "ئەدرێس"
+     "enHint": "ئەدرێس",
+     "emoji": "🏘️"
     },
     {
      "id": "z6",
@@ -2141,7 +2344,8 @@
      "de": "die Telefonnummer",
      "deHint": "دی تێلەفۆن نومەر",
      "en": "phone number",
-     "enHint": "فۆن نەمبەر"
+     "enHint": "فۆن نەمبەر",
+     "emoji": "📞"
     },
     {
      "id": "z7",
@@ -2150,7 +2354,8 @@
      "de": "Können Sie das wiederholen?",
      "deHint": "کۆنن زی داس ڤیدەرهۆلن؟",
      "en": "Can you repeat that?",
-     "enHint": "کان یوو ریپیت ذات؟"
+     "enHint": "کان یوو ریپیت ذات؟",
+     "emoji": "🔁"
     },
     {
      "id": "z8",
@@ -2159,7 +2364,8 @@
      "de": "Ich spreche ein bisschen Deutsch",
      "deHint": "ئیش شپرێشە ئاین بیسشن دۆیچ",
      "en": "I speak a little German",
-     "enHint": "ئای سپیک ئە لیتڵ جێرمەن"
+     "enHint": "ئای سپیک ئە لیتڵ جێرمەن",
+     "emoji": "🗨️"
     }
    ]
   },
@@ -2179,7 +2385,8 @@
      "de": "Ich habe gegessen",
      "deHint": "ئیش هابە گەگێسن",
      "en": "I ate",
-     "enHint": "ئای ئەیت"
+     "enHint": "ئای ئەیت",
+     "emoji": "🍽️"
     },
     {
      "id": "v8",
@@ -2188,7 +2395,8 @@
      "de": "Ich bin gegangen",
      "deHint": "ئیش بین گەگانگن",
      "en": "I went",
-     "enHint": "ئای وێنت"
+     "enHint": "ئای وێنت",
+     "emoji": "🚶‍♂️"
     },
     {
      "id": "v9",
@@ -2197,7 +2405,8 @@
      "de": "Ich habe gearbeitet",
      "deHint": "ئیش هابە گەئاربایتەت",
      "en": "I worked",
-     "enHint": "ئای وۆرکت"
+     "enHint": "ئای وۆرکت",
+     "emoji": "🛠️"
     },
     {
      "id": "v10",
@@ -2206,7 +2415,8 @@
      "de": "Ich habe geschlafen",
      "deHint": "ئیش هابە گەشلافن",
      "en": "I slept",
-     "enHint": "ئای سلێپت"
+     "enHint": "ئای سلێپت",
+     "emoji": "💤"
     },
     {
      "id": "v11",
@@ -2215,7 +2425,8 @@
      "de": "Ich habe Deutsch gelernt",
      "deHint": "ئیش هابە دۆیچ گەلێرنت",
      "en": "I learned German",
-     "enHint": "ئای لێرند جێرمەن"
+     "enHint": "ئای لێرند جێرمەن",
+     "emoji": "🎓"
     },
     {
      "id": "v12",
@@ -2224,7 +2435,8 @@
      "de": "Ich war zu Hause",
      "deHint": "ئیش ڤار تسو هاوزە",
      "en": "I was at home",
-     "enHint": "ئای ووز ئات هۆم"
+     "enHint": "ئای ووز ئات هۆم",
+     "emoji": "🏡"
     },
     {
      "id": "v13",
@@ -2233,7 +2445,8 @@
      "de": "Gestern war ich müde",
      "deHint": "گێستەرن ڤار ئیش موودە",
      "en": "Yesterday I was tired",
-     "enHint": "یێستەردەی ئای ووز تایەرد"
+     "enHint": "یێستەردەی ئای ووز تایەرد",
+     "emoji": "😪"
     },
     {
      "id": "v14",
@@ -2242,7 +2455,8 @@
      "de": "Was hast du gemacht?",
      "deHint": "ڤاس هاست دو گەماخت؟",
      "en": "What did you do?",
-     "enHint": "وۆت دید یوو دوو؟"
+     "enHint": "وۆت دید یوو دوو؟",
+     "emoji": "❔"
     }
    ]
   },
@@ -2262,7 +2476,8 @@
      "de": "Morgen gehe ich zur Arbeit",
      "deHint": "مۆرگن گێهە ئیش تسور ئاربایت",
      "en": "Tomorrow I go to work",
-     "enHint": "تومۆرۆ ئای گۆ تو وۆرک"
+     "enHint": "تومۆرۆ ئای گۆ تو وۆرک",
+     "emoji": "🏢"
     },
     {
      "id": "u2",
@@ -2271,7 +2486,8 @@
      "de": "am Wochenende",
      "deHint": "ئام ڤۆخەنئێندە",
      "en": "at the weekend",
-     "enHint": "ئات ذە ویکێند"
+     "enHint": "ئات ذە ویکێند",
+     "emoji": "🎈"
     },
     {
      "id": "u3",
@@ -2280,7 +2496,8 @@
      "de": "nächste Woche",
      "deHint": "نێکستە ڤۆخە",
      "en": "next week",
-     "enHint": "نێکست ویک"
+     "enHint": "نێکست ویک",
+     "emoji": "📅"
     },
     {
      "id": "u4",
@@ -2289,7 +2506,8 @@
      "de": "Ich muss arbeiten",
      "deHint": "ئیش موس ئاربایتن",
      "en": "I have to work",
-     "enHint": "ئای هاڤ تو وۆرک"
+     "enHint": "ئای هاڤ تو وۆرک",
+     "emoji": "💪"
     },
     {
      "id": "u5",
@@ -2298,7 +2516,8 @@
      "de": "Ich kann schwimmen",
      "deHint": "ئیش کان شڤیمن",
      "en": "I can swim",
-     "enHint": "ئای کان سویم"
+     "enHint": "ئای کان سویم",
+     "emoji": "🏊‍♂️"
     },
     {
      "id": "u6",
@@ -2307,7 +2526,8 @@
      "de": "Ich will lernen",
      "deHint": "ئیش ڤیل لێرنن",
      "en": "I want to learn",
-     "enHint": "ئای وۆنت تو لێرن"
+     "enHint": "ئای وۆنت تو لێرن",
+     "emoji": "✏️"
     },
     {
      "id": "u7",
@@ -2316,7 +2536,8 @@
      "de": "Ich möchte nach Deutschland reisen",
      "deHint": "ئیش مۆشتە ناخ دۆیچلاند رایزن",
      "en": "I would like to travel to Germany",
-     "enHint": "ئای وود لایک تو تراڤڵ تو جێرمەنی"
+     "enHint": "ئای وود لایک تو تراڤڵ تو جێرمەنی",
+     "emoji": "🛬"
     },
     {
      "id": "u8",
@@ -2325,7 +2546,8 @@
      "de": "Ich werde Deutsch lernen",
      "deHint": "ئیش ڤێردە دۆیچ لێرنن",
      "en": "I will learn German",
-     "enHint": "ئای ویل لێرن جێرمەن"
+     "enHint": "ئای ویل لێرن جێرمەن",
+     "emoji": "🚀"
     }
    ]
   }

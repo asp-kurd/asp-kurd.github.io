@@ -6,6 +6,8 @@ import '../services/progress_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
 import 'onboarding_screen.dart';
+import 'settings_screen.dart';
+import 'stats_section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -16,38 +18,24 @@ class ProfileScreen extends StatelessWidget {
     final v = VoiceService.instance;
     final n = p.nativeLang;
 
-    Widget statCard(IconData icon, Color c, String value, String label) => Expanded(
-          child: Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: AppColors.card,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.white12),
-            ),
-            child: Column(children: [
-              Icon(icon, color: c, size: 30),
-              const SizedBox(height: 6),
-              Text(value, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: c)),
-              Text(label, style: const TextStyle(color: Colors.white60, fontSize: 12)),
-            ]),
-          ),
-        );
-
     return SafeArea(
       child: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-          Text(tr(n, 'پرۆفایلێ من', 'Mein Profil', 'My profile'),
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           Row(children: [
-            statCard(Icons.bolt, AppColors.gold, '${p.xp}', 'XP'),
-            const SizedBox(width: 10),
-            statCard(Icons.local_fire_department, AppColors.orange, '${p.streak}', tr(n, 'رۆژ', 'Tage', 'days')),
-            const SizedBox(width: 10),
-            statCard(Icons.emoji_events_rounded, AppColors.green, '${p.completedUnits.length}/${appCurriculum.length}',
-                tr(n, 'پێنگاڤ', 'Einheiten', 'units')),
+            Expanded(
+              child: Text(tr(n, 'ئامار و پرۆفایل', 'Statistik & Profil', 'Statistics & profile'),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            ),
+            IconButton(
+              icon: const Icon(Icons.settings_rounded),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
+            ),
           ]),
+          Text(tr(n, 'ڤێبوونا تە یا راستەقینە', 'Deine echte Übung', 'Your real practice'),
+              style: const TextStyle(color: Colors.white60)),
+          const SizedBox(height: 14),
+          const StatsSection(),
           const SizedBox(height: 24),
           Text(tr(n, '🏅 دەستکەفت', '🏅 Erfolge', '🏅 Achievements'),
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),

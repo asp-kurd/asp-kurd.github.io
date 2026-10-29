@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:record/record.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models.dart';
 import 'audio_out_native.dart' if (dart.library.js_interop) 'audio_out_web.dart';
@@ -32,7 +33,15 @@ class VoiceService {
 
   final AudioRecorder _recorder = AudioRecorder();
   final AudioOut _out = AudioOut();
+  final AudioOut _fx = AudioOut(); // دەنگێن یاریێ (جودا ژ دەنگێ پەیڤان)
   final FlutterTts _tts = FlutterTts();
+
+  // 🔊 دەنگێ TTS یێ زەلال
+  double ttsRate = 0.42;
+  final Map<String, String> _preferredVoice = {}; // 'de' ➔ ناڤێ دەنگی کو بکارهێنەری هەلبژارتی
+  final Map<String, Map<String, String>> _chosenVoice = {};
+  final Map<String, Uint8List> _fxCache = {};
+  SharedPreferences? _prefs;
 
   late LazyBox<dynamic> _box;
   Set<String> _packAssets = {};
@@ -62,8 +71,16 @@ class VoiceService {
       if (b is Uint8List) _refCache[referencePath(l)] = b;
     }
     _out.installUnlock();
+    _fx.installUnlock();
+    _prefs = await SharedPreferences.getInstance();
+    ttsRate = _prefs!.getDouble('tts_rate') ?? 0.42;
+    for (final l in AppLanguage.values) {
+      final v = _prefs!.getString('voice_${l.code}');
+      if (v != null) _preferredVoice[l.code] = v;
+    }
     try {
-      await _tts.setSpeechRate(0.42);
+      await _tts.setSpeechRate(ttsRate);
+      await _tts.awaitSpeakCompletion(false);
     } catch (_) {}
     _ready = true;
   }
@@ -232,8 +249,8 @@ class VoiceService {
         return true;
       case VoiceSource.tts:
         try {
-          await _tts.setLanguage(lang.ttsCode!);
-          await _tts.setSpeechRate(0.42 * rate);
+          await _applyVoice(lang);
+          await _tts.setSpeechRate(ttsRate * rate);
           await _tts.speak(c.text(lang).replaceAll('...', ''));
           return true;
         } catch (_) {
@@ -245,14 +262,106 @@ class VoiceService {
   }
 
   /// خواندنا دەقەکێ ئازاد ب TTS (بۆ پەرتووکا رێزمانێ)
-  Future<void> speakText(String text, AppLanguage lang) async {
+  Future<void> speakText(String text, AppLanguage lang, {double rate = 1.0}) async {
     if (lang.ttsCode == null || text.trim().isEmpty) return;
     await init();
     await stopPlayback();
     try {
-      await _tts.setLanguage(lang.ttsCode!);
-      await _tts.setSpeechRate(0.42);
+      await _applyVoice(lang);
+      await _tts.setSpeechRate(ttsRate * rate);
       await _tts.speak(text);
+    } catch (_) {}
+  }
+
+  // ───────── 🔊 هەلبژارتنا باشترین دەنگێ TTS ─────────
+  static const _novelty = [
+    'albert', 'bad news', 'bahh', 'bells', 'boing', 'bubbles', 'cellos', 'good news', 'jester', 'organ',
+    'superstar', 'trinoids', 'whisper', 'wobble', 'zarvox', 'ralph', 'fred', 'junior', 'kathy', 'grandma',
+    'grandpa', 'eddy', 'flo', 'reed', 'rocko', 'sandy', 'shelley',
+  ];
+
+  static int _score(Map<String, String> v, String locale) {
+    final name = (v['name'] ?? '').toLowerCase();
+    final loc = (v['locale'] ?? '').replaceAll('_', '-').toLowerCase();
+    final quality = (v['quality'] ?? '').toLowerCase();
+    if (_novelty.any(name.contains)) return -100;
+    var s = 0;
+    if (loc == locale.toLowerCase()) s += 20;
+    for (final k in ['premium', 'enhanced', 'neural', 'natural', 'online']) {
+      if (name.contains(k) || quality.contains(k)) s += 30;
+    }
+    if (quality.contains('high') || quality == '500') s += 15;
+    if (name.contains('google')) s += 12;
+    for (final k in ['anna', 'helena', 'markus', 'petra', 'yannick', 'katja', 'conrad', 'samantha', 'ava', 'daniel']) {
+      if (name.contains(k)) s += 8;
+    }
+    return s;
+  }
+
+  /// هەمی دەنگێن ئێک زمانی، باشترین ل پێشیێ
+  Future<List<Map<String, String>>> voicesFor(AppLanguage lang) async {
+    if (lang.ttsCode == null) return [];
+    final prefix = lang.ttsCode!.split('-').first.toLowerCase();
+    List<dynamic> raw = const [];
+    try {
+      raw = ((await _tts.getVoices) as List?) ?? const [];
+    } catch (_) {}
+    final list = <Map<String, String>>[];
+    for (final e in raw) {
+      if (e is! Map) continue;
+      final m = e.map((k, v) => MapEntry('$k', '$v'));
+      final loc = (m['locale'] ?? '').replaceAll('_', '-').toLowerCase();
+      if (loc.startsWith(prefix)) list.add(m);
+    }
+    list.sort((a, b) => _score(b, lang.ttsCode!).compareTo(_score(a, lang.ttsCode!)));
+    return list;
+  }
+
+  String? preferredVoice(AppLanguage lang) => _preferredVoice[lang.code];
+
+  Future<void> setPreferredVoice(AppLanguage lang, String? name) async {
+    if (name == null) {
+      _preferredVoice.remove(lang.code);
+      await _prefs?.remove('voice_${lang.code}');
+    } else {
+      _preferredVoice[lang.code] = name;
+      await _prefs?.setString('voice_${lang.code}', name);
+    }
+    _chosenVoice.remove(lang.code);
+  }
+
+  Future<void> setRate(double r) async {
+    ttsRate = r;
+    await _prefs?.setDouble('tts_rate', r);
+  }
+
+  Future<void> _applyVoice(AppLanguage lang) async {
+    await _tts.setLanguage(lang.ttsCode!);
+    var v = _chosenVoice[lang.code];
+    if (v == null) {
+      final all = await voicesFor(lang);
+      if (all.isEmpty) return; // هێشتا دەنگ بار نەبووینە (وێب)
+      final want = _preferredVoice[lang.code];
+      v = all.firstWhere((x) => x['name'] == want, orElse: () => all.first);
+      _chosenVoice[lang.code] = v;
+    }
+    try {
+      await _tts.setVoice({'name': v['name'] ?? '', 'locale': v['locale'] ?? lang.ttsCode!});
+    } catch (_) {}
+  }
+
+  // ───────── 🎵 دەنگێن یاریێ ─────────
+  /// [name]: correct, wrong, done, funny, star
+  Future<void> playFx(String name) async {
+    try {
+      await init();
+      var b = _fxCache[name];
+      if (b == null) {
+        final data = await rootBundle.load('assets/sfx/$name.wav');
+        b = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+        _fxCache[name] = b;
+      }
+      await _fx.play(b);
     } catch (_) {}
   }
 

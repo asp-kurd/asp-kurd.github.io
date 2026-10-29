@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
+import '../services/sfx.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
 import 'widgets/record_button.dart';
@@ -30,6 +31,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   final progress = ProgressService.instance;
   final voice = VoiceService.instance;
   final _rng = Random();
+  final _watch = Stopwatch()..start();
 
   late final AppLanguage native = progress.nativeLang;
   late final AppLanguage target = progress.targetLang;
@@ -70,6 +72,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   @override
   void dispose() {
     voice.stopPlayback();
+    progress.addStudyTime(_watch.elapsed);
     super.dispose();
   }
 
@@ -150,14 +153,22 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       checked = true;
       isCorrect = ok;
     });
+    if (ok) {
+      Sfx.correct();
+    } else {
+      Sfx.wrong();
+    }
     // پشتی پشکنینێ دەنگێ دروست لێدە
-    if (ex.type != ExerciseType.listen && ex.type != ExerciseType.match) voice.speak(ex.concept, target);
+    if (ex.type != ExerciseType.listen && ex.type != ExerciseType.match) {
+      Future.delayed(const Duration(milliseconds: 450), () => voice.speak(ex.concept, target));
+    }
 
     if (ex.type == ExerciseType.match) {
       // جووتکرن: تنێ XP، بێ دووبارەکرن
       if (ok) correctCount++;
       return;
     }
+    if (ex.type != ExerciseType.speak) await progress.recordAnswer(ex.concept.id, ok);
     if (ok) {
       correctCount++;
       await progress.clearMistake(ex.concept.id);
@@ -203,6 +214,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final xp = 10 + correctCount * 2;
     final perfect = correctCount >= totalInitial;
     await progress.completeLesson(unitId: widget.unit?.id, earnedXp: xp, perfect: perfect);
+    Sfx.done();
     if (!mounted) return;
     await Navigator.pushReplacement(
       context,
@@ -329,9 +341,13 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             ),
             if (checked) ...[
               const SizedBox(height: 12),
-              Text(c.text(target), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              Text('${c.pic}  ${c.text(target)}', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             ],
           ] else ...[
+            if (c.emoji.isNotEmpty) ...[
+              Text(c.pic, style: const TextStyle(fontSize: 64)),
+              const SizedBox(height: 8),
+            ],
             Text(
               c.text(mainLang),
               textDirection: mainLang.direction,

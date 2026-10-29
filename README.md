@@ -1,4 +1,4 @@
-# ZimanPro 3.0 — فێربوونا زمانان ب دەنگێ تە یێ کلۆنکری 🧬
+# ZimanPro 5.0 — فێربوونا زمانان ب دەنگێ تە یێ کلۆنکری 🧬
 
 ئەپێ Flutter بۆ فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی (و بەروڤاژی).
 تو ١٠ تا ٢٠ چرکەیان ژ دەنگێ خۆ تۆمار دکەی، و AI هەمی وانەیان ب **دەنگێ تە** ب سێ زمانان دبێژیت.
@@ -19,6 +19,18 @@
 | ☀️ **ئارمانجا رۆژانە** | ٢٠ / ٣٠ / ٥٠ / ٨٠ XP. رۆژ ب XPیێن تە رۆهن دبیت |
 | 🏅 **١٠ دەستکەفت** | Streak، وانەیا بێ خەلەتی، دەنگێ کلۆنکری ... |
 | 📄 **curriculum.json** | ئێک فایل بۆ ئەپی و بۆ دروستکرنا دەنگان ژی |
+
+## 🎮 نوو ل 5.0 — یاری، دار و ئامار
+| | |
+|---|---|
+| 🎮 **٧ یاری** | وێنەیی هەلبژێرە · جووتان بدۆزە · پەیڤێ بنڤیسە · رستێ تەمام بکە · دیکتە · پەیڤا ڤەشارتی (Word Search) · Shadowing |
+| ⭐ **٣ ستێر** | هەر یاریەک رێکا خۆ یا مارێ (snake) هەیە؛ بێ خەلەتی = ٣ ستێر |
+| 🖼️ **وێنە** | هەر ٢٢٢ پەیڤ وێنەیەک (ئیمۆجی) هەیە، د وانە و یاریان دا |
+| 🔁 **Spaced Repetition** | پەیڤ پشتی ١، ٢، ٤، ٧، ١٥، ٣٠ رۆژان دزڤڕن دا ژ بیر نەکەی |
+| 🌳 **دارا تە** | ٨ قۆناغ، ژ تۆڤێ هەتا دارا بەردار — ب XP مەزن دبیت |
+| 📊 **ئامار** | دەمێ خواندنێ یێ ٧ رۆژان، رۆژێن ڤێبوونێ یێن ٢٠ حەفتیان، دروستی ٪، پەیڤێن فێربووی |
+| 🔊 **دەنگێ زەلال** | ئەپ ب خۆ باشترین دەنگێ ئەلمانی (Premium / Enhanced) هەلدبژێریت؛ لەز و دەنگ ل ڕێکخستنێ |
+| 🎵 **دەنگێن یاریێ** | دروست، خەلەت، تەمام، ستێر و دەنگێ کەنی (دشێی بگری) |
 
 ## 📖 پەرتووکا رێزمانێ — «A1.1 mit Poya» (نوو ل 4.1)
 تابەکا نوو یا **رێزمان** هاتە زێدەکرن: ٢٠ بەش، ب رێزبەندیا فێربوونێ، ژ ئەلفوبێ هەتا Perfekt، هەمی ب بادینی.
@@ -104,14 +116,17 @@ assets/curriculum.json          ← هەمی وانە (پەیڤێن نوو ل ڤ
 assets/book.json                ← پەرتووکا رێزمانێ (ژ book/A1_mit_Poya.md)
 book/A1_mit_Poya.md             ← دەقێ پەرتووکێ (Markdown)
 assets/voices/                  ← پاکێتا دەنگێ کلۆنکری ژ Colab
+assets/sfx/                     ← دەنگێن یاریێ (correct, wrong, done, funny, star)
 lib/
   main.dart · models.dart · ui.dart
   data/curriculum.dart          ← خواندنا JSON
   data/book.dart                ← خواندنا پەرتووکا رێزمانێ
   services/voice_service.dart   ← تۆمار، لێدان، رێزا ژێدەرێن دەنگی
   services/clone_service.dart   ← پەیوەندی دگەل سێرڤەرێ کلۆنکرنێ
-  services/progress_service.dart← XP، Streak، دل، ئارمانج، دەستکەفت
-  screens/  onboarding · home · lesson · book · voice_studio · voice_clone · profile
+  services/progress_service.dart← XP، Streak، دل، ئارمانج، دەستکەفت، ئامار، Spaced Repetition، ستێر
+  services/sfx.dart             ← دەنگێن یاریێ
+  screens/  onboarding · home · lesson · book · voice_studio · voice_clone · profile · settings · stats_section
+  screens/games/  game_kind · games_hub · game_session · game_items
   screens/widgets/record_button.dart
 voice_lab/
   ZimanPro_Voice_Lab.ipynb      ← Colab (بێ پارە)

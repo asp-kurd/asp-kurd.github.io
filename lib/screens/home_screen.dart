@@ -5,6 +5,8 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
 import 'book_screen.dart';
+import 'games/game_session.dart';
+import 'games/games_hub.dart';
 import 'lesson_screen.dart';
 import 'onboarding_screen.dart';
 import 'profile_screen.dart';
@@ -41,6 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 _LearnPath(),
                 // ignore: prefer_const_constructors
                 BookScreen(),
+                // ignore: prefer_const_constructors
+                GamesHubScreen(),
                 VoiceStudioScreen(key: ValueKey('studio_$n')),
                 // ignore: prefer_const_constructors
                 ProfileScreen(),
@@ -53,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               destinations: [
                 NavigationDestination(icon: const Icon(Icons.home_rounded), label: tr(n, 'فێربوون', 'Lernen', 'Learn')),
                 NavigationDestination(icon: const Icon(Icons.menu_book_rounded), label: tr(n, 'رێزمان', 'Grammatik', 'Grammar')),
+                NavigationDestination(icon: const Icon(Icons.sports_esports_rounded), label: tr(n, 'یاری', 'Spiele', 'Games')),
                 NavigationDestination(icon: const Icon(Icons.mic_rounded), label: tr(n, 'دەنگێ من', 'Meine Stimme', 'My Voice')),
                 NavigationDestination(icon: const Icon(Icons.person_rounded), label: tr(n, 'پرۆفایل', 'Profil', 'Profile')),
               ],
@@ -103,6 +108,26 @@ class _LearnPath extends StatelessWidget {
       children: [
         _dailyGoalCard(p),
         const SizedBox(height: 12),
+        if (p.dueConcepts.isNotEmpty)
+          Card(
+            color: AppColors.card,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+              side: BorderSide(color: AppColors.green.withValues(alpha: 0.6)),
+            ),
+            child: ListTile(
+              leading: const Icon(Icons.autorenew_rounded, color: AppColors.green),
+              title: Text(tr(n, 'دووبارەکرنا ب دەم', 'Wiederholung', 'Spaced repetition'),
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text(tr(n, '${p.dueConcepts.length} پەیڤ ئەڤرۆ دڤێت بهێنە دووبارەکرن',
+                  '${p.dueConcepts.length} Wörter sind heute fällig', '${p.dueConcepts.length} words are due today')),
+              trailing: const Icon(Icons.play_arrow_rounded),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => GameSessionScreen(kind: null, concepts: p.dueConcepts.take(10).toList())),
+              ),
+            ),
+          ),
         if (weak.isNotEmpty)
           Card(
             color: AppColors.card,
