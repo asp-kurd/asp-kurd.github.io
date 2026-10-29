@@ -53,6 +53,9 @@ const _icons = <String, IconData>{
   'badge': Icons.badge_rounded,
   'history': Icons.history_rounded,
   'flag': Icons.flag_rounded,
+  'people': Icons.groups_rounded,
+  'person': Icons.person_rounded,
+  'backpack': Icons.backpack_rounded,
 };
 
 Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16));
