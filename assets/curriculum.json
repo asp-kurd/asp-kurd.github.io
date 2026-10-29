@@ -2,277 +2,277 @@
  "version": 4,
  "units": [
   {
-   "id": "unit_pron",
-   "titleKu": "قۆناغا ١: جهناڤ",
-   "titleDe": "Einheit 1: Personalpronomen",
-   "titleEn": "Unit 1: Pronouns",
-   "icon": "people",
-   "color": "#FF4B4B",
-   "section": 1,
+   "id": "unit_abc1",
+   "titleKu": "قۆناغا ١: پیتێن تایبەت: Ä Ö Ü ß",
+   "titleDe": "Einheit 1: Umlaute & ß",
+   "titleEn": "Unit 1: Special letters Ä Ö Ü ß",
+   "icon": "abc",
+   "color": "#58CC02",
    "concepts": [
     {
-     "id": "pr1",
-     "ku": "ئەز",
-     "kuLat": "Ez",
-     "de": "ich",
-     "deHint": "ئیش",
-     "en": "I",
-     "enHint": "ئای",
-     "emoji": "🙋"
-    },
-    {
-     "id": "pr2",
-     "ku": "تو",
-     "kuLat": "Tu",
-     "de": "du",
-     "deHint": "دو",
-     "en": "you",
-     "enHint": "یوو",
-     "emoji": "👉"
-    },
-    {
-     "id": "pr3",
-     "ku": "ئەو (کوڕ)",
-     "kuLat": "Ew (kur)",
-     "de": "er",
-     "deHint": "ئێر (بۆ نێر)",
-     "en": "he",
-     "enHint": "هی",
-     "emoji": "👦"
-    },
-    {
-     "id": "pr4",
-     "ku": "ئەو (کچ)",
-     "kuLat": "Ew (keç)",
-     "de": "sie",
-     "deHint": "زی (بۆ مێ)",
-     "en": "she",
-     "enHint": "شی",
+     "id": "ab1",
+     "ku": "کچ",
+     "kuLat": "Keç",
+     "de": "das Mädchen",
+     "deHint": "ä = «ێ» یا ڤەکری · داس مێدشن",
+     "en": "girl",
+     "enHint": "گێرڵ",
      "emoji": "👧"
     },
     {
-     "id": "pr5",
-     "ku": "ئەو (تشت)",
-     "kuLat": "Ew (tişt)",
-     "de": "es",
-     "deHint": "ئێس (بۆ تشتان / das)",
-     "en": "it",
-     "enHint": "ئیت",
-     "emoji": "📦"
+     "id": "ab2",
+     "ku": "پەنیر",
+     "kuLat": "Penîr",
+     "de": "der Käse",
+     "deHint": "ä = «ێ» · دێر کێزە",
+     "en": "cheese",
+     "enHint": "چیز",
+     "emoji": "🧀"
     },
     {
-     "id": "pr6",
-     "ku": "ئەم",
-     "kuLat": "Em",
-     "de": "wir",
-     "deHint": "ڤیر",
-     "en": "we",
-     "enHint": "وی",
-     "emoji": "👫"
+     "id": "ab3",
+     "ku": "گوهداری کرن",
+     "kuLat": "Guhdarî kirin",
+     "de": "hören",
+     "deHint": "ö = لێڤ گرۆڤەر + «ێ» · هۆرن",
+     "en": "to hear",
+     "enHint": "تو هیر",
+     "emoji": "👂"
     },
     {
-     "id": "pr7",
-     "ku": "هوین (گەلەک)",
-     "kuLat": "Hûn (gelek)",
-     "de": "ihr",
-     "deHint": "ئیر (تو + تو)",
-     "en": "you all",
-     "enHint": "یوو ئۆڵ",
-     "emoji": "👥"
+     "id": "ab4",
+     "ku": "رۆن",
+     "kuLat": "Ron",
+     "de": "das Öl",
+     "deHint": "ö = لێڤ گرۆڤەر + «ێ» · داس ئۆل",
+     "en": "oil",
+     "enHint": "ئۆیل",
+     "emoji": "🫒"
     },
     {
-     "id": "pr8",
-     "ku": "هوین (ب رێز)",
-     "kuLat": "Hûn (bi rêz)",
-     "de": "Sie",
-     "deHint": "زی (ب S یا مەزن، ب رێز)",
-     "en": "you (polite)",
-     "enHint": "یوو (پۆلایت)",
-     "emoji": "🤝"
+     "id": "ab5",
+     "ku": "پر",
+     "kuLat": "Pir",
+     "de": "die Brücke",
+     "deHint": "ü = لێڤ گرۆڤەر + «ی» · دی بروکە",
+     "en": "bridge",
+     "enHint": "بریج",
+     "emoji": "🌉"
+    },
+    {
+     "id": "ab6",
+     "ku": "بەخت",
+     "kuLat": "Bext",
+     "de": "das Glück",
+     "deHint": "ü = لێڤ گرۆڤەر + «ی» · داس گلوک",
+     "en": "luck",
+     "enHint": "لەک",
+     "emoji": "🍀"
+    },
+    {
+     "id": "ab7",
+     "ku": "جادە",
+     "kuLat": "Cade",
+     "de": "die Straße",
+     "deHint": "ß = «س» یا تیژ · دی شتراسە",
+     "en": "street",
+     "enHint": "ستریت",
+     "emoji": "🛣️"
+    },
+    {
+     "id": "ab8",
+     "ku": "گەرم (زۆر)",
+     "kuLat": "Germ (zor)",
+     "de": "heiß",
+     "deHint": "ß = «س» · هایس",
+     "en": "hot",
+     "enHint": "هۆت",
+     "emoji": "🔥"
     }
-   ]
+   ],
+   "section": 1
   },
   {
-   "id": "unit_sein",
-   "titleKu": "قۆناغا ٢: بوون (sein)",
-   "titleDe": "Einheit 2: Das Verb sein",
-   "titleEn": "Unit 2: To be",
-   "icon": "person",
+   "id": "unit_abc2",
+   "titleKu": "قۆناغا ٢: پیتێن لێکدای ١: ei · ie · eu · ch · sch",
+   "titleDe": "Einheit 2: Laute 1",
+   "titleEn": "Unit 2: Letter sounds 1",
+   "icon": "abc",
    "color": "#1CB0F6",
-   "section": 1,
    "concepts": [
     {
-     "id": "se1",
-     "ku": "ئەز ل ڤێرێ مە",
-     "kuLat": "Ez li vêrê me",
-     "de": "Ich bin hier",
-     "deHint": "ئیش بین هیر (ich ➔ bin)",
-     "en": "I am here",
-     "enHint": "ئای ئێم هیر",
-     "emoji": "📍"
+     "id": "ab9",
+     "ku": "هێک",
+     "kuLat": "Hêk",
+     "de": "das Ei",
+     "deHint": "ei = «ئای» · داس ئای",
+     "en": "egg",
+     "enHint": "ئێگ",
+     "emoji": "🥚"
     },
     {
-     "id": "se2",
-     "ku": "تو باشی",
-     "kuLat": "Tu baş î",
-     "de": "Du bist nett",
-     "deHint": "دو بیست نێت (du ➔ bist)",
-     "en": "You are nice",
-     "enHint": "یوو ئار نایس",
-     "emoji": "😊"
+     "id": "ab10",
+     "ku": "ڤیان",
+     "kuLat": "Viyan",
+     "de": "die Liebe",
+     "deHint": "ie = «ی» یا درێژ · دی لیبە",
+     "en": "love",
+     "enHint": "لەڤ",
+     "emoji": "❤️"
     },
     {
-     "id": "se3",
-     "ku": "ئەو برایێ منە",
-     "kuLat": "Ew birayê min e",
-     "de": "Er ist mein Bruder",
-     "deHint": "ئێر ئیست ماین برودەر (er ➔ ist)",
-     "en": "He is my brother",
-     "enHint": "هی ئیز مای برەذەر",
-     "emoji": "👦"
+     "id": "ab11",
+     "ku": "ئەلمانیا",
+     "kuLat": "Almanya",
+     "de": "Deutschland",
+     "deHint": "eu = «ئۆی» · دۆیچلاند",
+     "en": "Germany",
+     "enHint": "جێرمەنی",
+     "emoji": "🇩🇪"
     },
     {
-     "id": "se4",
-     "ku": "ئەو خویشکا منە",
-     "kuLat": "Ew xweşka min e",
-     "de": "Sie ist meine Schwester",
-     "deHint": "زی ئیست ماینە شڤێستەر (sie ➔ ist)",
-     "en": "She is my sister",
-     "enHint": "شی ئیز مای سیستەر",
-     "emoji": "👧"
+     "id": "ab12",
+     "ku": "پەرتووک",
+     "kuLat": "Pertûk",
+     "de": "das Buch",
+     "deHint": "ch پشتی a/o/u = «خ» · داس بوخ",
+     "en": "book",
+     "enHint": "بووک",
+     "emoji": "📘"
     },
     {
-     "id": "se5",
-     "ku": "باشە",
-     "kuLat": "Baş e",
-     "de": "Es ist gut",
-     "deHint": "ئێس ئیست گوت (es ➔ ist)",
-     "en": "It is good",
-     "enHint": "ئیت ئیز گود",
-     "emoji": "👍"
+     "id": "ab13",
+     "ku": "نە",
+     "kuLat": "Ne",
+     "de": "nicht",
+     "deHint": "ch پشتی e/i = «ش» یا نەرم · نیشت",
+     "en": "not",
+     "enHint": "نۆت",
+     "emoji": "🚫"
     },
     {
-     "id": "se6",
-     "ku": "ئەم هەڤالین",
-     "kuLat": "Em heval in",
-     "de": "Wir sind Freunde",
-     "deHint": "ڤیر زیند فرۆیندە (wir ➔ sind)",
-     "en": "We are friends",
-     "enHint": "وی ئار فرێندز",
-     "emoji": "🤝"
+     "id": "ab14",
+     "ku": "نڤیسین",
+     "kuLat": "Nivîsîn",
+     "de": "schreiben",
+     "deHint": "sch = «ش» · شرایبن",
+     "en": "to write",
+     "enHint": "تو رایت",
+     "emoji": "✍️"
     },
     {
-     "id": "se7",
-     "ku": "هوین ل ڤێرێنە",
-     "kuLat": "Hûn li vêrê ne",
-     "de": "Ihr seid hier",
-     "deHint": "ئیر زایت هیر (ihr ➔ seid)",
-     "en": "You all are here",
-     "enHint": "یوو ئۆڵ ئار هیر",
-     "emoji": "🏠"
+     "id": "ab15",
+     "ku": "باژێڕ",
+     "kuLat": "Bajêr",
+     "de": "die Stadt",
+     "deHint": "st ل دەستپێکێ = «شت» · دی شتات",
+     "en": "city",
+     "enHint": "سیتی",
+     "emoji": "🏙️"
     },
     {
-     "id": "se8",
-     "ku": "ئەو کوردن",
-     "kuLat": "Ew Kurd in",
-     "de": "Sie sind Kurden",
-     "deHint": "زی زیند کوردن (sie ➔ sind)",
-     "en": "They are Kurds",
-     "enHint": "ذەی ئار کوردز",
-     "emoji": "🏔️"
+     "id": "ab16",
+     "ku": "وەرزش",
+     "kuLat": "Werziş",
+     "de": "der Sport",
+     "deHint": "sp ل دەستپێکێ = «شپ» · دێر شپۆرت",
+     "en": "sport",
+     "enHint": "سپۆرت",
+     "emoji": "⚽"
     }
-   ]
+   ],
+   "section": 1
   },
   {
-   "id": "unit_haben",
-   "titleKu": "قۆناغا ٣: هەبوون (haben)",
-   "titleDe": "Einheit 3: Das Verb haben",
-   "titleEn": "Unit 3: To have",
-   "icon": "backpack",
-   "color": "#FF9600",
-   "section": 1,
+   "id": "unit_abc3",
+   "titleKu": "قۆناغا ٣: پیتێن لێکدای ٢: w · v · z · j · äu",
+   "titleDe": "Einheit 3: Laute 2",
+   "titleEn": "Unit 3: Letter sounds 2",
+   "icon": "abc",
+   "color": "#CE82FF",
    "concepts": [
     {
-     "id": "hb1",
-     "ku": "من کتێبەک هەیە",
-     "kuLat": "Min kitêbek heye",
-     "de": "Ich habe ein Buch",
-     "deHint": "ئیش هابە ئاین بوخ (ich ➔ habe)",
-     "en": "I have a book",
-     "enHint": "ئای هاڤ ئە بووک",
-     "emoji": "📖"
+     "id": "ab17",
+     "ku": "جیهان",
+     "kuLat": "Cîhan",
+     "de": "die Welt",
+     "deHint": "w = «ڤ» · دی ڤێلت",
+     "en": "world",
+     "enHint": "وۆرڵد",
+     "emoji": "🌍"
     },
     {
-     "id": "hb2",
-     "ku": "تە دەم هەیە",
-     "kuLat": "Te dem heye",
-     "de": "Du hast Zeit",
-     "deHint": "دو هاست تسایت (du ➔ hast)",
-     "en": "You have time",
-     "enHint": "یوو هاڤ تایم",
-     "emoji": "⏰"
+     "id": "ab18",
+     "ku": "بالندە",
+     "kuLat": "Balinde",
+     "de": "der Vogel",
+     "deHint": "v = «ف» · دێر فۆگل",
+     "en": "bird",
+     "enHint": "بێرد",
+     "emoji": "🐦"
     },
     {
-     "id": "hb3",
-     "ku": "وی ترومبێلەک هەیە",
-     "kuLat": "Wî trombêlek heye",
-     "de": "Er hat ein Auto",
-     "deHint": "ئێر هات ئاین ئاوتۆ (er ➔ hat)",
-     "en": "He has a car",
-     "enHint": "هی هاز ئە کار",
-     "emoji": "🚗"
+     "id": "ab19",
+     "ku": "دەم",
+     "kuLat": "Dem",
+     "de": "die Zeit",
+     "deHint": "z = «تس» · دی تسایت",
+     "en": "time",
+     "enHint": "تایم",
+     "emoji": "⏳"
     },
     {
-     "id": "hb4",
-     "ku": "وێ پشیکەک هەیە",
-     "kuLat": "Wê pişîkek heye",
-     "de": "Sie hat eine Katze",
-     "deHint": "زی هات ئاینە کاتسە (sie ➔ hat)",
-     "en": "She has a cat",
-     "enHint": "شی هاز ئە کات",
-     "emoji": "🐱"
+     "id": "ab20",
+     "ku": "گەنج",
+     "kuLat": "Genc",
+     "de": "jung",
+     "deHint": "j = «ی» · یونگ",
+     "en": "young",
+     "enHint": "یەنگ",
+     "emoji": "🧒"
     },
     {
-     "id": "hb5",
-     "ku": "ئەم برسینە",
-     "kuLat": "Em birsî ne",
-     "de": "Wir haben Hunger",
-     "deHint": "ڤیر هابن هونگەر (wir ➔ haben)",
-     "en": "We are hungry",
-     "enHint": "وی ئار هەنگری",
-     "emoji": "🍽️"
+     "id": "ab21",
+     "ku": "خانی (کۆ)",
+     "kuLat": "Xanî (kom)",
+     "de": "die Häuser",
+     "deHint": "äu = «ئۆی» · دی هۆیزەر",
+     "en": "houses",
+     "enHint": "هاوزز",
+     "emoji": "🏘️"
     },
     {
-     "id": "hb6",
-     "ku": "هەوە زارۆک هەنە",
-     "kuLat": "Hewe zarok hene",
-     "de": "Ihr habt Kinder",
-     "deHint": "ئیر هابت کیندەر (ihr ➔ habt)",
-     "en": "You all have children",
-     "enHint": "یوو ئۆڵ هاڤ چیلدرەن",
-     "emoji": "👶"
+     "id": "ab22",
+     "ku": "هەسپ",
+     "kuLat": "Hesp",
+     "de": "das Pferd",
+     "deHint": "pf = «پف» · داس پفێرت",
+     "en": "horse",
+     "enHint": "هۆرس",
+     "emoji": "🐴"
     },
     {
-     "id": "hb7",
-     "ku": "وان خانیەک هەیە",
-     "kuLat": "Wan xaniyek heye",
-     "de": "Sie haben ein Haus",
-     "deHint": "زی هابن ئاین هاوس (sie ➔ haben)",
-     "en": "They have a house",
-     "enHint": "ذەی هاڤ ئە هاوس",
-     "emoji": "🏡"
+     "id": "ab23",
+     "ku": "چوون",
+     "kuLat": "Çûn",
+     "de": "gehen",
+     "deHint": "h پشتی پیتا دەنگدار بێدەنگە · گێئەن",
+     "en": "to go",
+     "enHint": "تو گۆ",
+     "emoji": "🚶"
     },
     {
-     "id": "hb8",
-     "ku": "هەوە دەم هەیە؟",
-     "kuLat": "Hewe dem heye?",
-     "de": "Haben Sie Zeit?",
-     "deHint": "هابن زی تسایت؟ (ب رێز)",
-     "en": "Do you have time?",
-     "enHint": "دوو یوو هاڤ تایم؟",
-     "emoji": "⌛"
+     "id": "ab24",
+     "ku": "گۆتن",
+     "kuLat": "Gotin",
+     "de": "sagen",
+     "deHint": "s بەری دەنگداری = «ز» · زاگن",
+     "en": "to say",
+     "enHint": "تو سەی",
+     "emoji": "💬"
     }
-   ]
+   ],
+   "section": 1
   },
   {
    "id": "unit_1",
@@ -366,10 +366,465 @@
    "section": 1
   },
   {
+   "id": "unit_polite",
+   "titleKu": "قۆناغا ٥: گۆتنێن رێزێ",
+   "titleDe": "Einheit 5: Höflichkeit",
+   "titleEn": "Unit 5: Polite words",
+   "icon": "waving_hand",
+   "color": "#FF9600",
+   "concepts": [
+    {
+     "id": "po1",
+     "ku": "رۆژ باش",
+     "kuLat": "Roj baş",
+     "de": "Guten Tag",
+     "deHint": "گوتن تاگ (ژ نیڤڕۆ هەتا ئێڤاری)",
+     "en": "Good day",
+     "enHint": "گود دەی",
+     "emoji": "☀️"
+    },
+    {
+     "id": "po2",
+     "ku": "ئێڤار باش",
+     "kuLat": "Êvar baş",
+     "de": "Guten Abend",
+     "deHint": "گوتن ئابەنت (پشتی ١٨)",
+     "en": "Good evening",
+     "enHint": "گود ئیڤنینگ",
+     "emoji": "🌆"
+    },
+    {
+     "id": "po3",
+     "ku": "شەڤ باش",
+     "kuLat": "Şev baş",
+     "de": "Gute Nacht",
+     "deHint": "گوتە ناخت (بەری نڤستنێ)",
+     "en": "Good night",
+     "enHint": "گود نایت",
+     "emoji": "🌙"
+    },
+    {
+     "id": "po4",
+     "ku": "ب خاترا هەوە",
+     "kuLat": "Bi xatra we",
+     "de": "Auf Wiedersehen",
+     "deHint": "ئاوف ڤیدەرزێن (فەرمی)",
+     "en": "Goodbye",
+     "enHint": "گودبای",
+     "emoji": "👋"
+    },
+    {
+     "id": "po5",
+     "ku": "فەرموو",
+     "kuLat": "Fermû",
+     "de": "Bitte",
+     "deHint": "بیتە",
+     "en": "Please",
+     "enHint": "پلیز",
+     "emoji": "🙏"
+    },
+    {
+     "id": "po6",
+     "ku": "ببوورە!",
+     "kuLat": "Bibûre!",
+     "de": "Entschuldigung!",
+     "deHint": "ئێنتشولدیگونگ",
+     "en": "Excuse me!",
+     "enHint": "ئیکسکیوز می",
+     "emoji": "🙇"
+    },
+    {
+     "id": "po7",
+     "ku": "ب راستی ببوورە",
+     "kuLat": "Bi rastî bibûre",
+     "de": "Es tut mir leid",
+     "deHint": "ئێس توت میر لایت",
+     "en": "I am sorry",
+     "enHint": "ئای ئێم سۆری",
+     "emoji": "😔"
+    },
+    {
+     "id": "po8",
+     "ku": "چو ئاریشە نینن",
+     "kuLat": "Çu arîşe nînin",
+     "de": "Kein Problem",
+     "deHint": "کاین پرۆبلێم",
+     "en": "No problem",
+     "enHint": "نۆ پرۆبلەم",
+     "emoji": "👌"
+    }
+   ],
+   "section": 1
+  },
+  {
+   "id": "unit_pron",
+   "titleKu": "قۆناغا ٦: جهناڤ",
+   "titleDe": "Einheit 6: Personalpronomen",
+   "titleEn": "Unit 6: Pronouns",
+   "icon": "people",
+   "color": "#FF4B4B",
+   "section": 1,
+   "concepts": [
+    {
+     "id": "pr1",
+     "ku": "ئەز",
+     "kuLat": "Ez",
+     "de": "ich",
+     "deHint": "ئیش",
+     "en": "I",
+     "enHint": "ئای",
+     "emoji": "🙋"
+    },
+    {
+     "id": "pr2",
+     "ku": "تو",
+     "kuLat": "Tu",
+     "de": "du",
+     "deHint": "دو",
+     "en": "you",
+     "enHint": "یوو",
+     "emoji": "👉"
+    },
+    {
+     "id": "pr3",
+     "ku": "ئەو (کوڕ)",
+     "kuLat": "Ew (kur)",
+     "de": "er",
+     "deHint": "ئێر (بۆ نێر)",
+     "en": "he",
+     "enHint": "هی",
+     "emoji": "👦"
+    },
+    {
+     "id": "pr4",
+     "ku": "ئەو (کچ)",
+     "kuLat": "Ew (keç)",
+     "de": "sie",
+     "deHint": "زی (بۆ مێ)",
+     "en": "she",
+     "enHint": "شی",
+     "emoji": "👧"
+    },
+    {
+     "id": "pr5",
+     "ku": "ئەو (تشت)",
+     "kuLat": "Ew (tişt)",
+     "de": "es",
+     "deHint": "ئێس (بۆ تشتان / das)",
+     "en": "it",
+     "enHint": "ئیت",
+     "emoji": "📦"
+    },
+    {
+     "id": "pr6",
+     "ku": "ئەم",
+     "kuLat": "Em",
+     "de": "wir",
+     "deHint": "ڤیر",
+     "en": "we",
+     "enHint": "وی",
+     "emoji": "👫"
+    },
+    {
+     "id": "pr7",
+     "ku": "هوین (گەلەک)",
+     "kuLat": "Hûn (gelek)",
+     "de": "ihr",
+     "deHint": "ئیر (تو + تو)",
+     "en": "you all",
+     "enHint": "یوو ئۆڵ",
+     "emoji": "👥"
+    },
+    {
+     "id": "pr8",
+     "ku": "هوین (ب رێز)",
+     "kuLat": "Hûn (bi rêz)",
+     "de": "Sie",
+     "deHint": "زی (ب S یا مەزن، ب رێز)",
+     "en": "you (polite)",
+     "enHint": "یوو (پۆلایت)",
+     "emoji": "🤝"
+    }
+   ]
+  },
+  {
+   "id": "unit_sein",
+   "titleKu": "قۆناغا ٧: بوون (sein)",
+   "titleDe": "Einheit 7: Das Verb sein",
+   "titleEn": "Unit 7: To be",
+   "icon": "person",
+   "color": "#1CB0F6",
+   "section": 1,
+   "concepts": [
+    {
+     "id": "se1",
+     "ku": "ئەز ل ڤێرێ مە",
+     "kuLat": "Ez li vêrê me",
+     "de": "Ich bin hier",
+     "deHint": "ئیش بین هیر (ich ➔ bin)",
+     "en": "I am here",
+     "enHint": "ئای ئێم هیر",
+     "emoji": "📍"
+    },
+    {
+     "id": "se2",
+     "ku": "تو باشی",
+     "kuLat": "Tu baş î",
+     "de": "Du bist nett",
+     "deHint": "دو بیست نێت (du ➔ bist)",
+     "en": "You are nice",
+     "enHint": "یوو ئار نایس",
+     "emoji": "😊"
+    },
+    {
+     "id": "se3",
+     "ku": "ئەو برایێ منە",
+     "kuLat": "Ew birayê min e",
+     "de": "Er ist mein Bruder",
+     "deHint": "ئێر ئیست ماین برودەر (er ➔ ist)",
+     "en": "He is my brother",
+     "enHint": "هی ئیز مای برەذەر",
+     "emoji": "👦"
+    },
+    {
+     "id": "se4",
+     "ku": "ئەو خویشکا منە",
+     "kuLat": "Ew xweşka min e",
+     "de": "Sie ist meine Schwester",
+     "deHint": "زی ئیست ماینە شڤێستەر (sie ➔ ist)",
+     "en": "She is my sister",
+     "enHint": "شی ئیز مای سیستەر",
+     "emoji": "👧"
+    },
+    {
+     "id": "se5",
+     "ku": "باشە",
+     "kuLat": "Baş e",
+     "de": "Es ist gut",
+     "deHint": "ئێس ئیست گوت (es ➔ ist)",
+     "en": "It is good",
+     "enHint": "ئیت ئیز گود",
+     "emoji": "👍"
+    },
+    {
+     "id": "se6",
+     "ku": "ئەم هەڤالین",
+     "kuLat": "Em heval in",
+     "de": "Wir sind Freunde",
+     "deHint": "ڤیر زیند فرۆیندە (wir ➔ sind)",
+     "en": "We are friends",
+     "enHint": "وی ئار فرێندز",
+     "emoji": "🤝"
+    },
+    {
+     "id": "se7",
+     "ku": "هوین ل ڤێرێنە",
+     "kuLat": "Hûn li vêrê ne",
+     "de": "Ihr seid hier",
+     "deHint": "ئیر زایت هیر (ihr ➔ seid)",
+     "en": "You all are here",
+     "enHint": "یوو ئۆڵ ئار هیر",
+     "emoji": "🏠"
+    },
+    {
+     "id": "se8",
+     "ku": "ئەو کوردن",
+     "kuLat": "Ew Kurd in",
+     "de": "Sie sind Kurden",
+     "deHint": "زی زیند کوردن (sie ➔ sind)",
+     "en": "They are Kurds",
+     "enHint": "ذەی ئار کوردز",
+     "emoji": "🏔️"
+    }
+   ]
+  },
+  {
+   "id": "unit_haben",
+   "titleKu": "قۆناغا ٨: هەبوون (haben)",
+   "titleDe": "Einheit 8: Das Verb haben",
+   "titleEn": "Unit 8: To have",
+   "icon": "backpack",
+   "color": "#FF9600",
+   "section": 1,
+   "concepts": [
+    {
+     "id": "hb1",
+     "ku": "من کتێبەک هەیە",
+     "kuLat": "Min kitêbek heye",
+     "de": "Ich habe ein Buch",
+     "deHint": "ئیش هابە ئاین بوخ (ich ➔ habe)",
+     "en": "I have a book",
+     "enHint": "ئای هاڤ ئە بووک",
+     "emoji": "📖"
+    },
+    {
+     "id": "hb2",
+     "ku": "تە دەم هەیە",
+     "kuLat": "Te dem heye",
+     "de": "Du hast Zeit",
+     "deHint": "دو هاست تسایت (du ➔ hast)",
+     "en": "You have time",
+     "enHint": "یوو هاڤ تایم",
+     "emoji": "⏰"
+    },
+    {
+     "id": "hb3",
+     "ku": "وی ترومبێلەک هەیە",
+     "kuLat": "Wî trombêlek heye",
+     "de": "Er hat ein Auto",
+     "deHint": "ئێر هات ئاین ئاوتۆ (er ➔ hat)",
+     "en": "He has a car",
+     "enHint": "هی هاز ئە کار",
+     "emoji": "🚗"
+    },
+    {
+     "id": "hb4",
+     "ku": "وێ پشیکەک هەیە",
+     "kuLat": "Wê pişîkek heye",
+     "de": "Sie hat eine Katze",
+     "deHint": "زی هات ئاینە کاتسە (sie ➔ hat)",
+     "en": "She has a cat",
+     "enHint": "شی هاز ئە کات",
+     "emoji": "🐱"
+    },
+    {
+     "id": "hb5",
+     "ku": "ئەم برسینە",
+     "kuLat": "Em birsî ne",
+     "de": "Wir haben Hunger",
+     "deHint": "ڤیر هابن هونگەر (wir ➔ haben)",
+     "en": "We are hungry",
+     "enHint": "وی ئار هەنگری",
+     "emoji": "🍽️"
+    },
+    {
+     "id": "hb6",
+     "ku": "هەوە زارۆک هەنە",
+     "kuLat": "Hewe zarok hene",
+     "de": "Ihr habt Kinder",
+     "deHint": "ئیر هابت کیندەر (ihr ➔ habt)",
+     "en": "You all have children",
+     "enHint": "یوو ئۆڵ هاڤ چیلدرەن",
+     "emoji": "👶"
+    },
+    {
+     "id": "hb7",
+     "ku": "وان خانیەک هەیە",
+     "kuLat": "Wan xaniyek heye",
+     "de": "Sie haben ein Haus",
+     "deHint": "زی هابن ئاین هاوس (sie ➔ haben)",
+     "en": "They have a house",
+     "enHint": "ذەی هاڤ ئە هاوس",
+     "emoji": "🏡"
+    },
+    {
+     "id": "hb8",
+     "ku": "هەوە دەم هەیە؟",
+     "kuLat": "Hewe dem heye?",
+     "de": "Haben Sie Zeit?",
+     "deHint": "هابن زی تسایت؟ (ب رێز)",
+     "en": "Do you have time?",
+     "enHint": "دوو یوو هاڤ تایم؟",
+     "emoji": "⌛"
+    }
+   ]
+  },
+  {
+   "id": "unit_intro",
+   "titleKu": "قۆناغا ٩: خۆناساندن",
+   "titleDe": "Einheit 9: Sich vorstellen",
+   "titleEn": "Unit 9: Introducing yourself",
+   "icon": "person",
+   "color": "#2B70C9",
+   "concepts": [
+    {
+     "id": "in1",
+     "ku": "ناڤێ تە چییە؟",
+     "kuLat": "Navê te çiye?",
+     "de": "Wie heißt du?",
+     "deHint": "ڤی هایست دو؟",
+     "en": "What is your name?",
+     "enHint": "وۆت ئیز یۆر نەیم؟",
+     "emoji": "❓"
+    },
+    {
+     "id": "in2",
+     "ku": "ناڤێ من سارایە",
+     "kuLat": "Navê min Sara ye",
+     "de": "Mein Name ist Sara",
+     "deHint": "ماین نامە ئیست زارا",
+     "en": "My name is Sara",
+     "enHint": "مای نەیم ئیز سارا",
+     "emoji": "🙋‍♀️"
+    },
+    {
+     "id": "in3",
+     "ku": "تو ل کیڤە دژی؟",
+     "kuLat": "Tu li kîve dijî?",
+     "de": "Wo wohnst du?",
+     "deHint": "ڤۆ ڤۆنست دو؟",
+     "en": "Where do you live?",
+     "enHint": "وێر دوو یوو لیڤ؟",
+     "emoji": "🏠"
+    },
+    {
+     "id": "in4",
+     "ku": "ئەز ل دهۆکێ دژیم",
+     "kuLat": "Ez li Duhokê dijîm",
+     "de": "Ich wohne in Duhok",
+     "deHint": "ئیش ڤۆنە ئین دهۆک",
+     "en": "I live in Duhok",
+     "enHint": "ئای لیڤ ئین دهۆک",
+     "emoji": "📍"
+    },
+    {
+     "id": "in5",
+     "ku": "ئەز ژ عیراقێمە",
+     "kuLat": "Ez ji Iraqê me",
+     "de": "Ich komme aus dem Irak",
+     "deHint": "ئیش کۆمە ئاوس دێم ئیراک (aus + Dativ)",
+     "en": "I am from Iraq",
+     "enHint": "ئای ئێم فرۆم ئیراق",
+     "emoji": "🗺️"
+    },
+    {
+     "id": "in6",
+     "ku": "ئەز ب کوردی دئاخڤم",
+     "kuLat": "Ez bi Kurdî diaxivim",
+     "de": "Ich spreche Kurdisch",
+     "deHint": "ئیش شپرێشە کوردیش",
+     "en": "I speak Kurdish",
+     "enHint": "ئای سپیک کوردیش",
+     "emoji": "🗣️"
+    },
+    {
+     "id": "in7",
+     "ku": "ب ناسینا تە کەیفخۆشم",
+     "kuLat": "Bi nasîna te keyfxweş im",
+     "de": "Freut mich!",
+     "deHint": "فرۆیت میش",
+     "en": "Nice to meet you!",
+     "enHint": "نایس تو میت یوو",
+     "emoji": "😊"
+    },
+    {
+     "id": "in8",
+     "ku": "و تو؟",
+     "kuLat": "Û tu?",
+     "de": "Und du?",
+     "deHint": "ئونت دو؟",
+     "en": "And you?",
+     "enHint": "ئەند یوو؟",
+     "emoji": "🔁"
+    }
+   ],
+   "section": 1
+  },
+  {
    "id": "unit_2",
-   "titleKu": "قۆناغا ٥: ژمارە",
-   "titleDe": "Einheit 5: Zahlen",
-   "titleEn": "Unit 5: Numbers",
+   "titleKu": "قۆناغا ١٠: ژمارە",
+   "titleDe": "Einheit 10: Zahlen",
+   "titleEn": "Unit 10: Numbers",
    "icon": "pin",
    "color": "#1CB0F6",
    "concepts": [
@@ -437,581 +892,13 @@
    "section": 1
   },
   {
-   "id": "unit_3",
-   "titleKu": "قۆناغا ٦: مالبات",
-   "titleDe": "Einheit 6: Familie",
-   "titleEn": "Unit 6: Family",
-   "icon": "family",
-   "color": "#FF9600",
-   "concepts": [
-    {
-     "id": "f1",
-     "ku": "دایک",
-     "kuLat": "Dayk",
-     "de": "die Mutter",
-     "deHint": "دی موتەر (die = مێ)",
-     "en": "mother",
-     "enHint": "مەذەر",
-     "emoji": "👩"
-    },
-    {
-     "id": "f2",
-     "ku": "باب",
-     "kuLat": "Bab",
-     "de": "der Vater",
-     "deHint": "دێر فاتەر (der = نێر)",
-     "en": "father",
-     "enHint": "فاذەر",
-     "emoji": "👨"
-    },
-    {
-     "id": "f3",
-     "ku": "برا",
-     "kuLat": "Bira",
-     "de": "der Bruder",
-     "deHint": "دێر برودەر",
-     "en": "brother",
-     "enHint": "برەذەر",
-     "emoji": "👦"
-    },
-    {
-     "id": "f4",
-     "ku": "خویشک",
-     "kuLat": "Xweşk",
-     "de": "die Schwester",
-     "deHint": "دی شڤێستەر",
-     "en": "sister",
-     "enHint": "سیستەر",
-     "emoji": "👧"
-    },
-    {
-     "id": "f5",
-     "ku": "زارۆک",
-     "kuLat": "Zarok",
-     "de": "das Kind",
-     "deHint": "داس کیند (das = بێلایەن)",
-     "en": "child",
-     "enHint": "چایلد",
-     "emoji": "🧒"
-    },
-    {
-     "id": "f6",
-     "ku": "مالبات",
-     "kuLat": "Malbat",
-     "de": "die Familie",
-     "deHint": "دی فامیلیە",
-     "en": "family",
-     "enHint": "فامیلی",
-     "emoji": "👨‍👩‍👧‍👦"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_4",
-   "titleKu": "قۆناغا ٧: خوارن و بازاڕ",
-   "titleDe": "Einheit 7: Essen & Einkaufen",
-   "titleEn": "Unit 7: Food & Shopping",
-   "icon": "shopping",
-   "color": "#CE82FF",
-   "concepts": [
-    {
-     "id": "s1",
-     "ku": "ئاڤ",
-     "kuLat": "Av",
-     "de": "das Wasser",
-     "deHint": "داس ڤاسەر",
-     "en": "water",
-     "enHint": "ووتەر",
-     "emoji": "💧"
-    },
-    {
-     "id": "s2",
-     "ku": "نان",
-     "kuLat": "Nan",
-     "de": "das Brot",
-     "deHint": "داس برۆت",
-     "en": "bread",
-     "enHint": "برێد",
-     "emoji": "🍞"
-    },
-    {
-     "id": "s3",
-     "ku": "چا",
-     "kuLat": "Ça",
-     "de": "der Tee",
-     "deHint": "دێر تێ",
-     "en": "tea",
-     "enHint": "تی",
-     "emoji": "🍵"
-    },
-    {
-     "id": "s4",
-     "ku": "ئەز حەز ژ قەهوێ دکەم",
-     "kuLat": "Ez hez ji qehwê dikem",
-     "de": "Ich mag Kaffee",
-     "deHint": "ئیش ماگ کافێ",
-     "en": "I like coffee",
-     "enHint": "ئای لایک کۆفی",
-     "emoji": "☕"
-    },
-    {
-     "id": "s5",
-     "ku": "ئەز برسیمە",
-     "kuLat": "Ez birsîme",
-     "de": "Ich habe Hunger",
-     "deHint": "ئیش هابە هونگەر",
-     "en": "I am hungry",
-     "enHint": "ئای ئێم هەنگری",
-     "emoji": "🍽️"
-    },
-    {
-     "id": "s6",
-     "ku": "ئەڤە ب چەندێ یە؟",
-     "kuLat": "Eve bi çendê ye?",
-     "de": "Was kostet das?",
-     "deHint": "ڤاس کۆستەت داس؟",
-     "en": "How much is this?",
-     "enHint": "هاو مەچ ئیز ذیس؟",
-     "emoji": "🏷️"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_5",
-   "titleKu": "قۆناغا ٨: جه و ئاراستە",
-   "titleDe": "Einheit 8: Orte",
-   "titleEn": "Unit 8: Places",
-   "icon": "city",
-   "color": "#FF4B4B",
-   "concepts": [
-    {
-     "id": "p1",
-     "ku": "مال",
-     "kuLat": "Mal",
-     "de": "das Haus",
-     "deHint": "داس هاوس",
-     "en": "house",
-     "enHint": "هاوس",
-     "emoji": "🏠"
-    },
-    {
-     "id": "p2",
-     "ku": "قوتابخانە",
-     "kuLat": "Qutabxane",
-     "de": "die Schule",
-     "deHint": "دی شولە",
-     "en": "school",
-     "enHint": "سکوول",
-     "emoji": "🏫"
-    },
-    {
-     "id": "p3",
-     "ku": "کار",
-     "kuLat": "Kar",
-     "de": "die Arbeit",
-     "deHint": "دی ئاربایت",
-     "en": "work",
-     "enHint": "وۆرک",
-     "emoji": "💼"
-    },
-    {
-     "id": "p4",
-     "ku": "نەخۆشخانە",
-     "kuLat": "Nexweşxane",
-     "de": "das Krankenhaus",
-     "deHint": "داس کرانکەنهاوس",
-     "en": "hospital",
-     "enHint": "هۆسپیتەل",
-     "emoji": "🏥"
-    },
-    {
-     "id": "p5",
-     "ku": "تەوالێت ل کیرێ یە؟",
-     "kuLat": "Tewalêt li kîrê ye?",
-     "de": "Wo ist die Toilette?",
-     "deHint": "ڤۆ ئیست دی تۆالێتە؟",
-     "en": "Where is the toilet?",
-     "enHint": "وێر ئیز ذە تۆیلێت؟",
-     "emoji": "🚻"
-    },
-    {
-     "id": "p6",
-     "ku": "ئەز هاریکاریا تە دکەم",
-     "kuLat": "Ez harîkariya te dikem",
-     "de": "Ich helfe dir",
-     "deHint": "ئیش هێلفە دیر (helfen + Dativ)",
-     "en": "I help you",
-     "enHint": "ئای هێلپ یوو",
-     "emoji": "🤝"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_6",
-   "titleKu": "قۆناغا ٩: دەم و ئاخفتن",
-   "titleDe": "Einheit 9: Zeit & Gespräch",
-   "titleEn": "Unit 9: Time & Talk",
-   "icon": "schedule",
-   "color": "#2B70C9",
-   "concepts": [
-    {
-     "id": "t1",
-     "ku": "ئەڤرۆ",
-     "kuLat": "Evro",
-     "de": "heute",
-     "deHint": "هۆیتە",
-     "en": "today",
-     "enHint": "تودەی",
-     "emoji": "📅"
-    },
-    {
-     "id": "t2",
-     "ku": "سوبەهی",
-     "kuLat": "Sibehî",
-     "de": "morgen",
-     "deHint": "مۆرگن",
-     "en": "tomorrow",
-     "enHint": "تومۆرۆ",
-     "emoji": "➡️"
-    },
-    {
-     "id": "t3",
-     "ku": "دوهی",
-     "kuLat": "Duhî",
-     "de": "gestern",
-     "deHint": "گێستەرن",
-     "en": "yesterday",
-     "enHint": "یێستەردەی",
-     "emoji": "⬅️"
-    },
-    {
-     "id": "t4",
-     "ku": "ئەز تێناگەهم",
-     "kuLat": "Ez tênagehim",
-     "de": "Ich verstehe nicht",
-     "deHint": "ئیش فێرشتێهە نیشت",
-     "en": "I do not understand",
-     "enHint": "ئای دوو نۆت ئەندەرستاند",
-     "emoji": "🤷"
-    },
-    {
-     "id": "t5",
-     "ku": "هێدی باخڤە، هیڤییە",
-     "kuLat": "Hêdî baxive, hîvîye",
-     "de": "Bitte langsam sprechen",
-     "deHint": "بیتە لانگزام شپرێشن",
-     "en": "Please speak slowly",
-     "enHint": "پلیز سپیک سلۆلی",
-     "emoji": "🐢"
-    },
-    {
-     "id": "t6",
-     "ku": "ناڤێ من ئازادە",
-     "kuLat": "Navê min Azad e",
-     "de": "Ich heiße Azad",
-     "deHint": "ئیش هایسە ئازاد",
-     "en": "My name is Azad",
-     "enHint": "مای نەیم ئیز ئازاد",
-     "emoji": "🪪"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_7",
-   "titleKu": "قۆناغا ١٠: رەنگ",
-   "titleDe": "Einheit 10: Farben",
-   "titleEn": "Unit 10: Colors",
-   "icon": "palette",
-   "color": "#FFC800",
-   "concepts": [
-    {
-     "id": "k1",
-     "ku": "سۆر",
-     "kuLat": "Sor",
-     "de": "rot",
-     "deHint": "رۆت",
-     "en": "red",
-     "enHint": "رێد",
-     "emoji": "🔴"
-    },
-    {
-     "id": "k2",
-     "ku": "شین",
-     "kuLat": "Şîn",
-     "de": "blau",
-     "deHint": "بلاو",
-     "en": "blue",
-     "enHint": "بلوو",
-     "emoji": "🔵"
-    },
-    {
-     "id": "k3",
-     "ku": "کەسک",
-     "kuLat": "Kesk",
-     "de": "grün",
-     "deHint": "گروون",
-     "en": "green",
-     "enHint": "گرین",
-     "emoji": "🟢"
-    },
-    {
-     "id": "k4",
-     "ku": "زەر",
-     "kuLat": "Zer",
-     "de": "gelb",
-     "deHint": "گێلب",
-     "en": "yellow",
-     "enHint": "یێلۆ",
-     "emoji": "🟡"
-    },
-    {
-     "id": "k5",
-     "ku": "ڕەش",
-     "kuLat": "Reş",
-     "de": "schwarz",
-     "deHint": "شڤارتس",
-     "en": "black",
-     "enHint": "بلاک",
-     "emoji": "⚫"
-    },
-    {
-     "id": "k6",
-     "ku": "سپی",
-     "kuLat": "Spî",
-     "de": "weiß",
-     "deHint": "ڤایس",
-     "en": "white",
-     "enHint": "وایت",
-     "emoji": "⚪"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_8",
-   "titleKu": "قۆناغا ١١: لەش",
-   "titleDe": "Einheit 11: Körper",
-   "titleEn": "Unit 11: Body",
-   "icon": "body",
-   "color": "#FF86D0",
-   "concepts": [
-    {
-     "id": "b1",
-     "ku": "سەر",
-     "kuLat": "Ser",
-     "de": "der Kopf",
-     "deHint": "دێر کۆپف",
-     "en": "head",
-     "enHint": "هێد",
-     "emoji": "🗣️"
-    },
-    {
-     "id": "b2",
-     "ku": "دەست",
-     "kuLat": "Dest",
-     "de": "die Hand",
-     "deHint": "دی هاند",
-     "en": "hand",
-     "enHint": "هاند",
-     "emoji": "✋"
-    },
-    {
-     "id": "b3",
-     "ku": "چاڤ",
-     "kuLat": "Çav",
-     "de": "das Auge",
-     "deHint": "داس ئاوگە",
-     "en": "eye",
-     "enHint": "ئای",
-     "emoji": "👁️"
-    },
-    {
-     "id": "b4",
-     "ku": "پێ",
-     "kuLat": "Pê",
-     "de": "der Fuß",
-     "deHint": "دێر فووس",
-     "en": "foot",
-     "enHint": "فووت",
-     "emoji": "🦶"
-    },
-    {
-     "id": "b5",
-     "ku": "دل",
-     "kuLat": "Dil",
-     "de": "das Herz",
-     "deHint": "داس هێرتس",
-     "en": "heart",
-     "enHint": "هارت",
-     "emoji": "❤️"
-    },
-    {
-     "id": "b6",
-     "ku": "دەڤ",
-     "kuLat": "Dev",
-     "de": "der Mund",
-     "deHint": "دێر موند",
-     "en": "mouth",
-     "enHint": "ماوس",
-     "emoji": "👄"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_9",
-   "titleKu": "قۆناغا ١٢: کار و کریار",
-   "titleDe": "Einheit 12: Verben",
-   "titleEn": "Unit 12: Verbs",
-   "icon": "run",
-   "color": "#00CD9C",
-   "concepts": [
-    {
-     "id": "v1",
-     "ku": "ئەز دچم",
-     "kuLat": "Ez diçim",
-     "de": "Ich gehe",
-     "deHint": "ئیش گێهە",
-     "en": "I go",
-     "enHint": "ئای گۆ",
-     "emoji": "🚶"
-    },
-    {
-     "id": "v2",
-     "ku": "ئەز دخۆم",
-     "kuLat": "Ez dixom",
-     "de": "Ich esse",
-     "deHint": "ئیش ئێسە",
-     "en": "I eat",
-     "enHint": "ئای ئیت",
-     "emoji": "🍴"
-    },
-    {
-     "id": "v3",
-     "ku": "ئەز ڤەدخۆم",
-     "kuLat": "Ez vedixom",
-     "de": "Ich trinke",
-     "deHint": "ئیش ترینکە",
-     "en": "I drink",
-     "enHint": "ئای درینک",
-     "emoji": "🥤"
-    },
-    {
-     "id": "v4",
-     "ku": "ئەز دنڤم",
-     "kuLat": "Ez dinivim",
-     "de": "Ich schlafe",
-     "deHint": "ئیش شلافە",
-     "en": "I sleep",
-     "enHint": "ئای سلیپ",
-     "emoji": "😴"
-    },
-    {
-     "id": "v5",
-     "ku": "ئەز فێر دبم",
-     "kuLat": "Ez fêr dibim",
-     "de": "Ich lerne",
-     "deHint": "ئیش لێرنە",
-     "en": "I learn",
-     "enHint": "ئای لێرن",
-     "emoji": "📖"
-    },
-    {
-     "id": "v6",
-     "ku": "ئەز کار دکەم",
-     "kuLat": "Ez kar dikem",
-     "de": "Ich arbeite",
-     "deHint": "ئیش ئاربایتە",
-     "en": "I work",
-     "enHint": "ئای وۆرک",
-     "emoji": "👷"
-    }
-   ],
-   "section": 1
-  },
-  {
-   "id": "unit_10",
-   "titleKu": "قۆناغا ١٣: رستەیێن ژیانێ",
-   "titleDe": "Einheit 13: Sätze",
-   "titleEn": "Unit 13: Real sentences",
-   "icon": "chat",
-   "color": "#A560E8",
-   "concepts": [
-    {
-     "id": "r1",
-     "ku": "ئەز ژ کوردستانێ مە",
-     "kuLat": "Ez ji Kurdistanê me",
-     "de": "Ich komme aus Kurdistan",
-     "deHint": "ئیش کۆمە ئاوس کوردستان",
-     "en": "I am from Kurdistan",
-     "enHint": "ئای ئێم فرۆم کوردستان",
-     "emoji": "☀️"
-    },
-    {
-     "id": "r2",
-     "ku": "ئەز ئەلمانی فێر دبم",
-     "kuLat": "Ez Almanî fêr dibim",
-     "de": "Ich lerne Deutsch",
-     "deHint": "ئیش لێرنە دۆیچ",
-     "en": "I am learning German",
-     "enHint": "ئای ئێم لێرنینگ جێرمەن",
-     "emoji": "🇩🇪"
-    },
-    {
-     "id": "r3",
-     "ku": "ئەڤرۆ هەوا خۆشە",
-     "kuLat": "Evro hewa xweş e",
-     "de": "Heute ist das Wetter schön",
-     "deHint": "هۆیتە ئیست داس ڤێتەر شۆن",
-     "en": "The weather is nice today",
-     "enHint": "ذە وێذەر ئیز نایس تودەی",
-     "emoji": "🌤️"
-    },
-    {
-     "id": "r4",
-     "ku": "تو دشێی هاریکاریا من بکەی؟",
-     "kuLat": "Tu dişêy harîkariya min bikey?",
-     "de": "Kannst du mir helfen?",
-     "deHint": "کانست دو میر هێلفن؟",
-     "en": "Can you help me?",
-     "enHint": "کان یوو هێلپ می؟",
-     "emoji": "🆘"
-    },
-    {
-     "id": "r5",
-     "ku": "ئەز دچمە بازاڕی",
-     "kuLat": "Ez diçime bazarî",
-     "de": "Ich gehe zum Markt",
-     "deHint": "ئیش گێهە تسوم مارکت",
-     "en": "I am going to the market",
-     "enHint": "ئای ئێم گۆینگ تو ذە مارکێت",
-     "emoji": "🛒"
-    },
-    {
-     "id": "r6",
-     "ku": "ئەڤە کتێبا منە",
-     "kuLat": "Eve kitêba min e",
-     "de": "Das ist mein Buch",
-     "deHint": "داس ئیست ماین بوخ",
-     "en": "This is my book",
-     "enHint": "ذیس ئیز مای بووک",
-     "emoji": "📘"
-    }
-   ],
-   "section": 1
-  },
-  {
    "id": "unit_11",
-   "titleKu": "قۆناغا ١٤: ژمارە ٢",
-   "titleDe": "Einheit 14: Zahlen 2",
-   "titleEn": "Unit 14: Numbers 2",
+   "titleKu": "قۆناغا ١١: ژمارە ٢",
+   "titleDe": "Einheit 11: Zahlen 2",
+   "titleEn": "Unit 11: Numbers 2",
    "icon": "pin",
    "color": "#1CB0F6",
-   "section": 2,
+   "section": 1,
    "concepts": [
     {
      "id": "n7",
@@ -1096,10 +983,627 @@
    ]
   },
   {
+   "id": "unit_praesens",
+   "titleKu": "قۆناغا ١٢: کار د دەمێ نوکە دا",
+   "titleDe": "Einheit 12: Präsens",
+   "titleEn": "Unit 12: Present tense",
+   "icon": "run",
+   "color": "#00CD9C",
+   "concepts": [
+    {
+     "id": "pv1",
+     "ku": "ئەز فێر دبم",
+     "kuLat": "Ez fêr dibim",
+     "de": "ich lerne",
+     "deHint": "ich ➔ -e · ئیش لێرنە",
+     "en": "I learn",
+     "enHint": "ئای لێرن",
+     "emoji": "📚"
+    },
+    {
+     "id": "pv2",
+     "ku": "تو فێر دبی",
+     "kuLat": "Tu fêr dibî",
+     "de": "du lernst",
+     "deHint": "du ➔ -st · دو لێرنست",
+     "en": "you learn",
+     "enHint": "یوو لێرن",
+     "emoji": "📖"
+    },
+    {
+     "id": "pv3",
+     "ku": "ئەو دژیت",
+     "kuLat": "Ew dijît",
+     "de": "er wohnt",
+     "deHint": "er/sie/es ➔ -t · ئێر ڤۆنت",
+     "en": "he lives",
+     "enHint": "هی لیڤز",
+     "emoji": "🏡"
+    },
+    {
+     "id": "pv4",
+     "ku": "ئەم دژین",
+     "kuLat": "Em dijîn",
+     "de": "wir wohnen",
+     "deHint": "wir ➔ -en · ڤیر ڤۆنن",
+     "en": "we live",
+     "enHint": "وی لیڤ",
+     "emoji": "🏘️"
+    },
+    {
+     "id": "pv5",
+     "ku": "هوین فێر دبن",
+     "kuLat": "Hûn fêr dibin",
+     "de": "ihr lernt",
+     "deHint": "ihr ➔ -t · ئیر لێرنت",
+     "en": "you all learn",
+     "enHint": "یوو ئۆڵ لێرن",
+     "emoji": "👥"
+    },
+    {
+     "id": "pv6",
+     "ku": "ئەو دژین",
+     "kuLat": "Ew dijîn",
+     "de": "sie wohnen",
+     "deHint": "sie (کۆ) ➔ -en · زی ڤۆنن",
+     "en": "they live",
+     "enHint": "ذەی لیڤ",
+     "emoji": "🏢"
+    },
+    {
+     "id": "pv7",
+     "ku": "ئەز دهێم",
+     "kuLat": "Ez têm",
+     "de": "ich komme",
+     "deHint": "ئیش کۆمە",
+     "en": "I come",
+     "enHint": "ئای کەم",
+     "emoji": "🚶‍♂️"
+    },
+    {
+     "id": "pv8",
+     "ku": "تو دهێی",
+     "kuLat": "Tu têyî",
+     "de": "du kommst",
+     "deHint": "دو کۆمست",
+     "en": "you come",
+     "enHint": "یوو کەم",
+     "emoji": "🏃"
+    }
+   ],
+   "section": 2
+  },
+  {
+   "id": "unit_strong",
+   "titleKu": "قۆناغا ١٣: کارێن ب هێز",
+   "titleDe": "Einheit 13: Starke Verben",
+   "titleEn": "Unit 13: Irregular verbs",
+   "icon": "run",
+   "color": "#FF4B4B",
+   "concepts": [
+    {
+     "id": "sv1",
+     "ku": "تو ب ئەلمانی دئاخڤی",
+     "kuLat": "Tu bi Almanî diaxivî",
+     "de": "Du sprichst Deutsch",
+     "deHint": "sprechen ➔ du sprichst",
+     "en": "You speak German",
+     "enHint": "یوو سپیک جێرمەن",
+     "emoji": "🗣️"
+    },
+    {
+     "id": "sv2",
+     "ku": "ئەو هاریکاریا من دکەت",
+     "kuLat": "Ew harîkariya min dike",
+     "de": "Er hilft mir",
+     "deHint": "helfen ➔ er hilft (+ Dativ)",
+     "en": "He helps me",
+     "enHint": "هی هێلپس می",
+     "emoji": "🤝"
+    },
+    {
+     "id": "sv3",
+     "ku": "ئەو پەرتووکەکێ دخوینیت",
+     "kuLat": "Ew pertûkekê dixwînît",
+     "de": "Sie liest ein Buch",
+     "deHint": "lesen ➔ sie liest",
+     "en": "She reads a book",
+     "enHint": "شی ریدز ئە بووک",
+     "emoji": "📖"
+    },
+    {
+     "id": "sv4",
+     "ku": "ئەو دچیتە بەرلین",
+     "kuLat": "Ew diçîte Berlînê",
+     "de": "Er fährt nach Berlin",
+     "deHint": "fahren ➔ er fährt",
+     "en": "He drives to Berlin",
+     "enHint": "هی درایڤز تو بێرلین",
+     "emoji": "🚗"
+    },
+    {
+     "id": "sv5",
+     "ku": "تو نانی دخۆی",
+     "kuLat": "Tu nanî dixwî",
+     "de": "Du isst Brot",
+     "deHint": "essen ➔ du isst",
+     "en": "You eat bread",
+     "enHint": "یوو ئیت برێد",
+     "emoji": "🍞"
+    },
+    {
+     "id": "sv6",
+     "ku": "ئەو دنڤیت",
+     "kuLat": "Ew dinivît",
+     "de": "Sie schläft",
+     "deHint": "schlafen ➔ sie schläft",
+     "en": "She sleeps",
+     "enHint": "شی سلیپس",
+     "emoji": "😴"
+    },
+    {
+     "id": "sv7",
+     "ku": "ئەو تە دبینیت",
+     "kuLat": "Ew te dibînît",
+     "de": "Er sieht dich",
+     "deHint": "sehen ➔ er sieht",
+     "en": "He sees you",
+     "enHint": "هی سیز یوو",
+     "emoji": "👀"
+    },
+    {
+     "id": "sv8",
+     "ku": "تو پاسێ دگری",
+     "kuLat": "Tu pasê digirî",
+     "de": "Du nimmst den Bus",
+     "deHint": "nehmen ➔ du nimmst",
+     "en": "You take the bus",
+     "enHint": "یوو تەیک ذە بەس",
+     "emoji": "🚌"
+    }
+   ],
+   "section": 2
+  },
+  {
+   "id": "unit_modal",
+   "titleKu": "قۆناغا ١٤: کارێن مۆدال",
+   "titleDe": "Einheit 14: Modalverben",
+   "titleEn": "Unit 14: Modal verbs",
+   "icon": "tune",
+   "color": "#A560E8",
+   "concepts": [
+    {
+     "id": "mv1",
+     "ku": "ئەز دشێم باش ب ئەلمانی باخڤم",
+     "kuLat": "Ez dişêm baş bi Almanî baxivim",
+     "de": "Ich kann gut Deutsch sprechen",
+     "deHint": "können ➔ ich kann … sprechen",
+     "en": "I can speak German well",
+     "enHint": "ئای کان سپیک جێرمەن وێل",
+     "emoji": "💪"
+    },
+    {
+     "id": "mv2",
+     "ku": "دڤێت تو ئەڤرۆ کار بکەی",
+     "kuLat": "Divêt tu evro kar bikey",
+     "de": "Du musst heute arbeiten",
+     "deHint": "müssen ➔ du musst … arbeiten",
+     "en": "You must work today",
+     "enHint": "یوو مەست وۆرک تودەی",
+     "emoji": "💼"
+    },
+    {
+     "id": "mv3",
+     "ku": "دشێم وەرمە ژوور؟",
+     "kuLat": "Dişêm werime jûr?",
+     "de": "Darf ich reinkommen?",
+     "deHint": "dürfen ➔ darf ich …?",
+     "en": "May I come in?",
+     "enHint": "مەی ئای کەم ئین؟",
+     "emoji": "🚪"
+    },
+    {
+     "id": "mv4",
+     "ku": "ئەز قەهوەیەکێ دخوازم",
+     "kuLat": "Ez qehweyekê dixwazim",
+     "de": "Ich möchte einen Kaffee",
+     "deHint": "möchten ➔ ich möchte",
+     "en": "I would like a coffee",
+     "enHint": "ئای وود لایک ئە کۆفی",
+     "emoji": "☕"
+    },
+    {
+     "id": "mv5",
+     "ku": "ئەز نزانم",
+     "kuLat": "Ez nizanim",
+     "de": "Ich weiß nicht",
+     "deHint": "wissen ➔ ich weiß",
+     "en": "I do not know",
+     "enHint": "ئای دۆنت نۆ",
+     "emoji": "🤷"
+    },
+    {
+     "id": "mv6",
+     "ku": "دڤێت ئەم بچین",
+     "kuLat": "Divêt em biçin",
+     "de": "Wir müssen gehen",
+     "deHint": "müssen ➔ wir müssen",
+     "en": "We have to go",
+     "enHint": "وی هاڤ تو گۆ",
+     "emoji": "🏃‍♂️"
+    },
+    {
+     "id": "mv7",
+     "ku": "ئەز دخوازم بنڤم",
+     "kuLat": "Ez dixwazim binivim",
+     "de": "Ich will schlafen",
+     "deHint": "wollen ➔ ich will",
+     "en": "I want to sleep",
+     "enHint": "ئای وۆنت تو سلیپ",
+     "emoji": "🛌"
+    },
+    {
+     "id": "mv8",
+     "ku": "ئەز ئەڤرۆ نەشێم بێم",
+     "kuLat": "Ez evro neşêm bêm",
+     "de": "Ich kann heute nicht kommen",
+     "deHint": "können ➔ … nicht kommen",
+     "en": "I cannot come today",
+     "enHint": "ئای کانت کەم تودەی",
+     "emoji": "🙅"
+    }
+   ],
+   "section": 2
+  },
+  {
+   "id": "unit_27",
+   "titleKu": "قۆناغا ١٥: پرسیار",
+   "titleDe": "Einheit 15: Fragen",
+   "titleEn": "Unit 15: Questions",
+   "icon": "help",
+   "color": "#2B70C9",
+   "section": 2,
+   "concepts": [
+    {
+     "id": "k7",
+     "ku": "کێ؟",
+     "kuLat": "Kê?",
+     "de": "Wer?",
+     "deHint": "ڤێر؟",
+     "en": "Who?",
+     "enHint": "هوو؟",
+     "emoji": "🧑"
+    },
+    {
+     "id": "k8",
+     "ku": "چ؟",
+     "kuLat": "Çi?",
+     "de": "Was?",
+     "deHint": "ڤاس؟",
+     "en": "What?",
+     "enHint": "وۆت؟",
+     "emoji": "❓"
+    },
+    {
+     "id": "k9",
+     "ku": "ل کیرێ؟",
+     "kuLat": "Li kîrê?",
+     "de": "Wo?",
+     "deHint": "ڤۆ؟",
+     "en": "Where?",
+     "enHint": "وێر؟",
+     "emoji": "📍"
+    },
+    {
+     "id": "k10",
+     "ku": "کەنگی؟",
+     "kuLat": "Kengî?",
+     "de": "Wann?",
+     "deHint": "ڤان؟",
+     "en": "When?",
+     "enHint": "وێن؟",
+     "emoji": "⏱️"
+    },
+    {
+     "id": "k11",
+     "ku": "بۆچی؟",
+     "kuLat": "Boçî?",
+     "de": "Warum?",
+     "deHint": "ڤاروم؟",
+     "en": "Why?",
+     "enHint": "وای؟",
+     "emoji": "🤔"
+    },
+    {
+     "id": "k12",
+     "ku": "چەند؟",
+     "kuLat": "Çend?",
+     "de": "Wie viel?",
+     "deHint": "ڤی فیل؟",
+     "en": "How much?",
+     "enHint": "هاو مەچ؟",
+     "emoji": "💰"
+    },
+    {
+     "id": "k13",
+     "ku": "تو ژ کیرێ یی؟",
+     "kuLat": "Tu ji kîrê yî?",
+     "de": "Woher kommst du?",
+     "deHint": "ڤۆهێر کۆمست دو؟",
+     "en": "Where are you from?",
+     "enHint": "وێر ئار یوو فرۆم؟",
+     "emoji": "🌍"
+    },
+    {
+     "id": "k14",
+     "ku": "تو چەند سالی؟",
+     "kuLat": "Tu çend salî?",
+     "de": "Wie alt bist du?",
+     "deHint": "ڤی ئالت بیست دو؟",
+     "en": "How old are you?",
+     "enHint": "هاو ئۆڵد ئار یوو؟",
+     "emoji": "🎂"
+    }
+   ]
+  },
+  {
+   "id": "unit_article",
+   "titleKu": "قۆناغا ١٦: ئارتیکل: der · die · das",
+   "titleDe": "Einheit 16: Artikel",
+   "titleEn": "Unit 16: Articles",
+   "icon": "abc",
+   "color": "#FFC800",
+   "concepts": [
+    {
+     "id": "ar1",
+     "ku": "زەلام",
+     "kuLat": "Zelam",
+     "de": "der Mann",
+     "deHint": "der = نێر · دێر مان",
+     "en": "man",
+     "enHint": "مان",
+     "emoji": "👨"
+    },
+    {
+     "id": "ar2",
+     "ku": "ژن",
+     "kuLat": "Jin",
+     "de": "die Frau",
+     "deHint": "die = مێ · دی فراو",
+     "en": "woman",
+     "enHint": "وومەن",
+     "emoji": "👩"
+    },
+    {
+     "id": "ar3",
+     "ku": "جانتا",
+     "kuLat": "Canta",
+     "de": "die Tasche",
+     "deHint": "die = مێ · دی تاشە",
+     "en": "bag",
+     "enHint": "باگ",
+     "emoji": "👜"
+    },
+    {
+     "id": "ar4",
+     "ku": "مۆبایل",
+     "kuLat": "Mobayl",
+     "de": "das Handy",
+     "deHint": "das = بێلایەن · داس هێندی",
+     "en": "mobile phone",
+     "enHint": "مۆبایل فۆن",
+     "emoji": "📱"
+    },
+    {
+     "id": "ar5",
+     "ku": "کورسیەک",
+     "kuLat": "Kursîyek",
+     "de": "ein Stuhl",
+     "deHint": "ein = -ەک (نێر/بێلایەن)",
+     "en": "a chair",
+     "enHint": "ئە چێر",
+     "emoji": "🪑"
+    },
+    {
+     "id": "ar6",
+     "ku": "چرایەک",
+     "kuLat": "Çirayek",
+     "de": "eine Lampe",
+     "deHint": "eine = -ەک (مێ)",
+     "en": "a lamp",
+     "enHint": "ئە لامپ",
+     "emoji": "💡"
+    },
+    {
+     "id": "ar7",
+     "ku": "ترومبێلا من نینە",
+     "kuLat": "Trombêla min nîne",
+     "de": "Ich habe kein Auto",
+     "deHint": "kein = چ … نینە",
+     "en": "I have no car",
+     "enHint": "ئای هاڤ نۆ کار",
+     "emoji": "🚳"
+    },
+    {
+     "id": "ar8",
+     "ku": "پەرتووک (کۆ)",
+     "kuLat": "Pertûk (kom)",
+     "de": "die Bücher",
+     "deHint": "کۆ هەردەم die ـە · دی بووشەر",
+     "en": "books",
+     "enHint": "بووکس",
+     "emoji": "📚"
+    }
+   ],
+   "section": 2
+  },
+  {
+   "id": "unit_poss",
+   "titleKu": "قۆناغا ١٧: یێ من، یێ تە (mein, dein)",
+   "titleDe": "Einheit 17: Possessivartikel",
+   "titleEn": "Unit 17: My, your, his",
+   "icon": "family",
+   "color": "#FF86D0",
+   "concepts": [
+    {
+     "id": "ps1",
+     "ku": "بابێ من",
+     "kuLat": "Babê min",
+     "de": "mein Vater",
+     "deHint": "mein (نێر) · ماین فاتەر",
+     "en": "my father",
+     "enHint": "مای فاذەر",
+     "emoji": "👨"
+    },
+    {
+     "id": "ps2",
+     "ku": "دایکا من",
+     "kuLat": "Dayka min",
+     "de": "meine Mutter",
+     "deHint": "meine (مێ) · ماینە موتەر",
+     "en": "my mother",
+     "enHint": "مای مەذەر",
+     "emoji": "👩"
+    },
+    {
+     "id": "ps3",
+     "ku": "برایێ تە",
+     "kuLat": "Birayê te",
+     "de": "dein Bruder",
+     "deHint": "dein · داین برودەر",
+     "en": "your brother",
+     "enHint": "یۆر برەذەر",
+     "emoji": "👦"
+    },
+    {
+     "id": "ps4",
+     "ku": "خویشکا تە",
+     "kuLat": "Xweşka te",
+     "de": "deine Schwester",
+     "deHint": "deine · داینە شڤێستەر",
+     "en": "your sister",
+     "enHint": "یۆر سیستەر",
+     "emoji": "👧"
+    },
+    {
+     "id": "ps5",
+     "ku": "کوڕێ وی",
+     "kuLat": "Kurê wî",
+     "de": "sein Sohn",
+     "deHint": "sein = یێ وی · زاین زۆن",
+     "en": "his son",
+     "enHint": "هیز سەن",
+     "emoji": "🧒"
+    },
+    {
+     "id": "ps6",
+     "ku": "کچا وێ",
+     "kuLat": "Keça wê",
+     "de": "ihre Tochter",
+     "deHint": "ihre = یا وێ · ئیرە تۆختەر",
+     "en": "her daughter",
+     "enHint": "هێر دۆتەر",
+     "emoji": "👧"
+    },
+    {
+     "id": "ps7",
+     "ku": "خانیێ مە",
+     "kuLat": "Xaniyê me",
+     "de": "unser Haus",
+     "deHint": "unser = یێ مە · ئونزەر هاوس",
+     "en": "our house",
+     "enHint": "ئاوەر هاوس",
+     "emoji": "🏡"
+    },
+    {
+     "id": "ps8",
+     "ku": "ناڤێ دایکا تە چییە؟",
+     "kuLat": "Navê dayka te çiye?",
+     "de": "Wie heißt deine Mutter?",
+     "deHint": "ڤی هایست داینە موتەر؟",
+     "en": "What is your mother's name?",
+     "enHint": "وۆت ئیز یۆر مەذەرز نەیم؟",
+     "emoji": "❓"
+    }
+   ],
+   "section": 2
+  },
+  {
+   "id": "unit_3",
+   "titleKu": "قۆناغا ١٨: مالبات",
+   "titleDe": "Einheit 18: Familie",
+   "titleEn": "Unit 18: Family",
+   "icon": "family",
+   "color": "#FF9600",
+   "concepts": [
+    {
+     "id": "f1",
+     "ku": "دایک",
+     "kuLat": "Dayk",
+     "de": "die Mutter",
+     "deHint": "دی موتەر (die = مێ)",
+     "en": "mother",
+     "enHint": "مەذەر",
+     "emoji": "👩"
+    },
+    {
+     "id": "f2",
+     "ku": "باب",
+     "kuLat": "Bab",
+     "de": "der Vater",
+     "deHint": "دێر فاتەر (der = نێر)",
+     "en": "father",
+     "enHint": "فاذەر",
+     "emoji": "👨"
+    },
+    {
+     "id": "f3",
+     "ku": "برا",
+     "kuLat": "Bira",
+     "de": "der Bruder",
+     "deHint": "دێر برودەر",
+     "en": "brother",
+     "enHint": "برەذەر",
+     "emoji": "👦"
+    },
+    {
+     "id": "f4",
+     "ku": "خویشک",
+     "kuLat": "Xweşk",
+     "de": "die Schwester",
+     "deHint": "دی شڤێستەر",
+     "en": "sister",
+     "enHint": "سیستەر",
+     "emoji": "👧"
+    },
+    {
+     "id": "f5",
+     "ku": "زارۆک",
+     "kuLat": "Zarok",
+     "de": "das Kind",
+     "deHint": "داس کیند (das = بێلایەن)",
+     "en": "child",
+     "enHint": "چایلد",
+     "emoji": "🧒"
+    },
+    {
+     "id": "f6",
+     "ku": "مالبات",
+     "kuLat": "Malbat",
+     "de": "die Familie",
+     "deHint": "دی فامیلیە",
+     "en": "family",
+     "enHint": "فامیلی",
+     "emoji": "👨‍👩‍👧‍👦"
+    }
+   ],
+   "section": 2
+  },
+  {
    "id": "unit_12",
-   "titleKu": "قۆناغا ١٥: رۆژێن حەفتیێ",
-   "titleDe": "Einheit 15: Wochentage",
-   "titleEn": "Unit 15: Days of the week",
+   "titleKu": "قۆناغا ١٩: رۆژێن حەفتیێ",
+   "titleDe": "Einheit 19: Wochentage",
+   "titleEn": "Unit 19: Days of the week",
    "icon": "calendar",
    "color": "#58CC02",
    "section": 2,
@@ -1188,9 +1692,9 @@
   },
   {
    "id": "unit_13",
-   "titleKu": "قۆناغا ١٦: وەرز و دەم",
-   "titleDe": "Einheit 16: Jahreszeiten",
-   "titleEn": "Unit 16: Seasons & time",
+   "titleKu": "قۆناغا ٢٠: وەرز و دەم",
+   "titleDe": "Einheit 20: Jahreszeiten",
+   "titleEn": "Unit 20: Seasons & time",
    "icon": "sun",
    "color": "#FF9600",
    "section": 2,
@@ -1279,9 +1783,9 @@
   },
   {
    "id": "unit_14",
-   "titleKu": "قۆناغا ١٧: دەمژمێر",
-   "titleDe": "Einheit 17: Uhrzeit",
-   "titleEn": "Unit 17: Telling time",
+   "titleKu": "قۆناغا ٢١: دەمژمێر",
+   "titleDe": "Einheit 21: Uhrzeit",
+   "titleEn": "Unit 21: Telling time",
    "icon": "schedule",
    "color": "#2B70C9",
    "section": 2,
@@ -1369,104 +1873,439 @@
    ]
   },
   {
-   "id": "unit_15",
-   "titleKu": "قۆناغا ١٨: کەش و هەوا",
-   "titleDe": "Einheit 18: Wetter",
-   "titleEn": "Unit 18: Weather",
-   "icon": "weather",
-   "color": "#00CD9C",
-   "section": 2,
+   "id": "unit_4",
+   "titleKu": "قۆناغا ٢٢: خوارن و بازاڕ",
+   "titleDe": "Einheit 22: Essen & Einkaufen",
+   "titleEn": "Unit 22: Food & Shopping",
+   "icon": "shopping",
+   "color": "#CE82FF",
    "concepts": [
     {
-     "id": "w1",
-     "ku": "هەوا چاوایە؟",
-     "kuLat": "Hewa çawa ye?",
-     "de": "Wie ist das Wetter?",
-     "deHint": "ڤی ئیست داس ڤێتەر؟",
-     "en": "How is the weather?",
-     "enHint": "هاو ئیز ذە وێذەر؟",
-     "emoji": "🌦️"
+     "id": "s1",
+     "ku": "ئاڤ",
+     "kuLat": "Av",
+     "de": "das Wasser",
+     "deHint": "داس ڤاسەر",
+     "en": "water",
+     "enHint": "ووتەر",
+     "emoji": "💧"
     },
     {
-     "id": "w2",
-     "ku": "هەوا سارە",
-     "kuLat": "Hewa sar e",
-     "de": "Es ist kalt",
-     "deHint": "ئێس ئیست کالت",
-     "en": "It is cold",
-     "enHint": "ئیت ئیز کۆڵد",
-     "emoji": "🥶"
+     "id": "s2",
+     "ku": "نان",
+     "kuLat": "Nan",
+     "de": "das Brot",
+     "deHint": "داس برۆت",
+     "en": "bread",
+     "enHint": "برێد",
+     "emoji": "🍞"
     },
     {
-     "id": "w3",
-     "ku": "هەوا گەرمە",
-     "kuLat": "Hewa germ e",
-     "de": "Es ist warm",
-     "deHint": "ئێس ئیست ڤارم",
-     "en": "It is warm",
-     "enHint": "ئیت ئیز وۆرم",
-     "emoji": "🥵"
+     "id": "s3",
+     "ku": "چا",
+     "kuLat": "Ça",
+     "de": "der Tee",
+     "deHint": "دێر تێ",
+     "en": "tea",
+     "enHint": "تی",
+     "emoji": "🍵"
     },
     {
-     "id": "w4",
-     "ku": "باران دباریت",
-     "kuLat": "Baran dibarît",
-     "de": "Es regnet",
-     "deHint": "ئێس رێگنەت",
-     "en": "It is raining",
-     "enHint": "ئیت ئیز رەینینگ",
-     "emoji": "🌧️"
+     "id": "s4",
+     "ku": "ئەز حەز ژ قەهوێ دکەم",
+     "kuLat": "Ez hez ji qehwê dikem",
+     "de": "Ich mag Kaffee",
+     "deHint": "ئیش ماگ کافێ",
+     "en": "I like coffee",
+     "enHint": "ئای لایک کۆفی",
+     "emoji": "☕"
     },
     {
-     "id": "w5",
-     "ku": "بەفر دباریت",
-     "kuLat": "Befr dibarît",
-     "de": "Es schneit",
-     "deHint": "ئێس شنایت",
-     "en": "It is snowing",
-     "enHint": "ئیت ئیز سنۆوینگ",
-     "emoji": "🌨️"
+     "id": "s5",
+     "ku": "ئەز برسیمە",
+     "kuLat": "Ez birsîme",
+     "de": "Ich habe Hunger",
+     "deHint": "ئیش هابە هونگەر",
+     "en": "I am hungry",
+     "enHint": "ئای ئێم هەنگری",
+     "emoji": "🍽️"
     },
     {
-     "id": "w6",
-     "ku": "رۆژ",
-     "kuLat": "Roj",
-     "de": "die Sonne",
-     "deHint": "دی زۆنە",
-     "en": "the sun",
-     "enHint": "ذە سەن",
-     "emoji": "☀️"
-    },
-    {
-     "id": "w7",
-     "ku": "با",
-     "kuLat": "Ba",
-     "de": "der Wind",
-     "deHint": "دێر ڤیند",
-     "en": "wind",
-     "enHint": "ویند",
-     "emoji": "🌬️"
-    },
-    {
-     "id": "w8",
-     "ku": "هەوا عەوراوییە",
-     "kuLat": "Hewa ewrawî ye",
-     "de": "Es ist bewölkt",
-     "deHint": "ئێس ئیست بەڤۆلکت",
-     "en": "It is cloudy",
-     "enHint": "ئیت ئیز کلاودی",
-     "emoji": "☁️"
+     "id": "s6",
+     "ku": "ئەڤە ب چەندێ یە؟",
+     "kuLat": "Eve bi çendê ye?",
+     "de": "Was kostet das?",
+     "deHint": "ڤاس کۆستەت داس؟",
+     "en": "How much is this?",
+     "enHint": "هاو مەچ ئیز ذیس؟",
+     "emoji": "🏷️"
     }
-   ]
+   ],
+   "section": 3
+  },
+  {
+   "id": "unit_5",
+   "titleKu": "قۆناغا ٢٣: جه و ئاراستە",
+   "titleDe": "Einheit 23: Orte",
+   "titleEn": "Unit 23: Places",
+   "icon": "city",
+   "color": "#FF4B4B",
+   "concepts": [
+    {
+     "id": "p1",
+     "ku": "مال",
+     "kuLat": "Mal",
+     "de": "das Haus",
+     "deHint": "داس هاوس",
+     "en": "house",
+     "enHint": "هاوس",
+     "emoji": "🏠"
+    },
+    {
+     "id": "p2",
+     "ku": "قوتابخانە",
+     "kuLat": "Qutabxane",
+     "de": "die Schule",
+     "deHint": "دی شولە",
+     "en": "school",
+     "enHint": "سکوول",
+     "emoji": "🏫"
+    },
+    {
+     "id": "p3",
+     "ku": "کار",
+     "kuLat": "Kar",
+     "de": "die Arbeit",
+     "deHint": "دی ئاربایت",
+     "en": "work",
+     "enHint": "وۆرک",
+     "emoji": "💼"
+    },
+    {
+     "id": "p4",
+     "ku": "نەخۆشخانە",
+     "kuLat": "Nexweşxane",
+     "de": "das Krankenhaus",
+     "deHint": "داس کرانکەنهاوس",
+     "en": "hospital",
+     "enHint": "هۆسپیتەل",
+     "emoji": "🏥"
+    },
+    {
+     "id": "p5",
+     "ku": "تەوالێت ل کیرێ یە؟",
+     "kuLat": "Tewalêt li kîrê ye?",
+     "de": "Wo ist die Toilette?",
+     "deHint": "ڤۆ ئیست دی تۆالێتە؟",
+     "en": "Where is the toilet?",
+     "enHint": "وێر ئیز ذە تۆیلێت؟",
+     "emoji": "🚻"
+    },
+    {
+     "id": "p6",
+     "ku": "ئەز هاریکاریا تە دکەم",
+     "kuLat": "Ez harîkariya te dikem",
+     "de": "Ich helfe dir",
+     "deHint": "ئیش هێلفە دیر (helfen + Dativ)",
+     "en": "I help you",
+     "enHint": "ئای هێلپ یوو",
+     "emoji": "🤝"
+    }
+   ],
+   "section": 3
+  },
+  {
+   "id": "unit_6",
+   "titleKu": "قۆناغا ٢٤: دەم و ئاخفتن",
+   "titleDe": "Einheit 24: Zeit & Gespräch",
+   "titleEn": "Unit 24: Time & Talk",
+   "icon": "schedule",
+   "color": "#2B70C9",
+   "concepts": [
+    {
+     "id": "t1",
+     "ku": "ئەڤرۆ",
+     "kuLat": "Evro",
+     "de": "heute",
+     "deHint": "هۆیتە",
+     "en": "today",
+     "enHint": "تودەی",
+     "emoji": "📅"
+    },
+    {
+     "id": "t2",
+     "ku": "سوبەهی",
+     "kuLat": "Sibehî",
+     "de": "morgen",
+     "deHint": "مۆرگن",
+     "en": "tomorrow",
+     "enHint": "تومۆرۆ",
+     "emoji": "➡️"
+    },
+    {
+     "id": "t3",
+     "ku": "دوهی",
+     "kuLat": "Duhî",
+     "de": "gestern",
+     "deHint": "گێستەرن",
+     "en": "yesterday",
+     "enHint": "یێستەردەی",
+     "emoji": "⬅️"
+    },
+    {
+     "id": "t4",
+     "ku": "ئەز تێناگەهم",
+     "kuLat": "Ez tênagehim",
+     "de": "Ich verstehe nicht",
+     "deHint": "ئیش فێرشتێهە نیشت",
+     "en": "I do not understand",
+     "enHint": "ئای دوو نۆت ئەندەرستاند",
+     "emoji": "🤷"
+    },
+    {
+     "id": "t5",
+     "ku": "هێدی باخڤە، هیڤییە",
+     "kuLat": "Hêdî baxive, hîvîye",
+     "de": "Bitte langsam sprechen",
+     "deHint": "بیتە لانگزام شپرێشن",
+     "en": "Please speak slowly",
+     "enHint": "پلیز سپیک سلۆلی",
+     "emoji": "🐢"
+    },
+    {
+     "id": "t6",
+     "ku": "ناڤێ من ئازادە",
+     "kuLat": "Navê min Azad e",
+     "de": "Ich heiße Azad",
+     "deHint": "ئیش هایسە ئازاد",
+     "en": "My name is Azad",
+     "enHint": "مای نەیم ئیز ئازاد",
+     "emoji": "🪪"
+    }
+   ],
+   "section": 3
+  },
+  {
+   "id": "unit_7",
+   "titleKu": "قۆناغا ٢٥: رەنگ",
+   "titleDe": "Einheit 25: Farben",
+   "titleEn": "Unit 25: Colors",
+   "icon": "palette",
+   "color": "#FFC800",
+   "concepts": [
+    {
+     "id": "k1",
+     "ku": "سۆر",
+     "kuLat": "Sor",
+     "de": "rot",
+     "deHint": "رۆت",
+     "en": "red",
+     "enHint": "رێد",
+     "emoji": "🔴"
+    },
+    {
+     "id": "k2",
+     "ku": "شین",
+     "kuLat": "Şîn",
+     "de": "blau",
+     "deHint": "بلاو",
+     "en": "blue",
+     "enHint": "بلوو",
+     "emoji": "🔵"
+    },
+    {
+     "id": "k3",
+     "ku": "کەسک",
+     "kuLat": "Kesk",
+     "de": "grün",
+     "deHint": "گروون",
+     "en": "green",
+     "enHint": "گرین",
+     "emoji": "🟢"
+    },
+    {
+     "id": "k4",
+     "ku": "زەر",
+     "kuLat": "Zer",
+     "de": "gelb",
+     "deHint": "گێلب",
+     "en": "yellow",
+     "enHint": "یێلۆ",
+     "emoji": "🟡"
+    },
+    {
+     "id": "k5",
+     "ku": "ڕەش",
+     "kuLat": "Reş",
+     "de": "schwarz",
+     "deHint": "شڤارتس",
+     "en": "black",
+     "enHint": "بلاک",
+     "emoji": "⚫"
+    },
+    {
+     "id": "k6",
+     "ku": "سپی",
+     "kuLat": "Spî",
+     "de": "weiß",
+     "deHint": "ڤایس",
+     "en": "white",
+     "enHint": "وایت",
+     "emoji": "⚪"
+    }
+   ],
+   "section": 3
+  },
+  {
+   "id": "unit_8",
+   "titleKu": "قۆناغا ٢٦: لەش",
+   "titleDe": "Einheit 26: Körper",
+   "titleEn": "Unit 26: Body",
+   "icon": "body",
+   "color": "#FF86D0",
+   "concepts": [
+    {
+     "id": "b1",
+     "ku": "سەر",
+     "kuLat": "Ser",
+     "de": "der Kopf",
+     "deHint": "دێر کۆپف",
+     "en": "head",
+     "enHint": "هێد",
+     "emoji": "🗣️"
+    },
+    {
+     "id": "b2",
+     "ku": "دەست",
+     "kuLat": "Dest",
+     "de": "die Hand",
+     "deHint": "دی هاند",
+     "en": "hand",
+     "enHint": "هاند",
+     "emoji": "✋"
+    },
+    {
+     "id": "b3",
+     "ku": "چاڤ",
+     "kuLat": "Çav",
+     "de": "das Auge",
+     "deHint": "داس ئاوگە",
+     "en": "eye",
+     "enHint": "ئای",
+     "emoji": "👁️"
+    },
+    {
+     "id": "b4",
+     "ku": "پێ",
+     "kuLat": "Pê",
+     "de": "der Fuß",
+     "deHint": "دێر فووس",
+     "en": "foot",
+     "enHint": "فووت",
+     "emoji": "🦶"
+    },
+    {
+     "id": "b5",
+     "ku": "دل",
+     "kuLat": "Dil",
+     "de": "das Herz",
+     "deHint": "داس هێرتس",
+     "en": "heart",
+     "enHint": "هارت",
+     "emoji": "❤️"
+    },
+    {
+     "id": "b6",
+     "ku": "دەڤ",
+     "kuLat": "Dev",
+     "de": "der Mund",
+     "deHint": "دێر موند",
+     "en": "mouth",
+     "enHint": "ماوس",
+     "emoji": "👄"
+    }
+   ],
+   "section": 3
+  },
+  {
+   "id": "unit_9",
+   "titleKu": "قۆناغا ٢٧: کار و کریار",
+   "titleDe": "Einheit 27: Verben",
+   "titleEn": "Unit 27: Verbs",
+   "icon": "run",
+   "color": "#00CD9C",
+   "concepts": [
+    {
+     "id": "v1",
+     "ku": "ئەز دچم",
+     "kuLat": "Ez diçim",
+     "de": "Ich gehe",
+     "deHint": "ئیش گێهە",
+     "en": "I go",
+     "enHint": "ئای گۆ",
+     "emoji": "🚶"
+    },
+    {
+     "id": "v2",
+     "ku": "ئەز دخۆم",
+     "kuLat": "Ez dixom",
+     "de": "Ich esse",
+     "deHint": "ئیش ئێسە",
+     "en": "I eat",
+     "enHint": "ئای ئیت",
+     "emoji": "🍴"
+    },
+    {
+     "id": "v3",
+     "ku": "ئەز ڤەدخۆم",
+     "kuLat": "Ez vedixom",
+     "de": "Ich trinke",
+     "deHint": "ئیش ترینکە",
+     "en": "I drink",
+     "enHint": "ئای درینک",
+     "emoji": "🥤"
+    },
+    {
+     "id": "v4",
+     "ku": "ئەز دنڤم",
+     "kuLat": "Ez dinivim",
+     "de": "Ich schlafe",
+     "deHint": "ئیش شلافە",
+     "en": "I sleep",
+     "enHint": "ئای سلیپ",
+     "emoji": "😴"
+    },
+    {
+     "id": "v5",
+     "ku": "ئەز فێر دبم",
+     "kuLat": "Ez fêr dibim",
+     "de": "Ich lerne",
+     "deHint": "ئیش لێرنە",
+     "en": "I learn",
+     "enHint": "ئای لێرن",
+     "emoji": "📖"
+    },
+    {
+     "id": "v6",
+     "ku": "ئەز کار دکەم",
+     "kuLat": "Ez kar dikem",
+     "de": "Ich arbeite",
+     "deHint": "ئیش ئاربایتە",
+     "en": "I work",
+     "enHint": "ئای وۆرک",
+     "emoji": "👷"
+    }
+   ],
+   "section": 3
   },
   {
    "id": "unit_16",
-   "titleKu": "قۆناغا ١٩: مال",
-   "titleDe": "Einheit 19: Wohnung",
-   "titleEn": "Unit 19: At home",
+   "titleKu": "قۆناغا ٢٨: مال",
+   "titleDe": "Einheit 28: Wohnung",
+   "titleEn": "Unit 28: At home",
    "icon": "home",
    "color": "#CE82FF",
-   "section": 2,
+   "section": 3,
    "concepts": [
     {
      "id": "m1",
@@ -1552,12 +2391,12 @@
   },
   {
    "id": "unit_17",
-   "titleKu": "قۆناغا ٢٠: جل و بەرگ",
-   "titleDe": "Einheit 20: Kleidung",
-   "titleEn": "Unit 20: Clothes",
+   "titleKu": "قۆناغا ٢٩: جل و بەرگ",
+   "titleDe": "Einheit 29: Kleidung",
+   "titleEn": "Unit 29: Clothes",
    "icon": "clothes",
    "color": "#FF86D0",
-   "section": 2,
+   "section": 3,
    "concepts": [
     {
      "id": "c1",
@@ -1643,12 +2482,12 @@
   },
   {
    "id": "unit_18",
-   "titleKu": "قۆناغا ٢١: خوارن ٢",
-   "titleDe": "Einheit 21: Lebensmittel",
-   "titleEn": "Unit 21: Food 2",
+   "titleKu": "قۆناغا ٣٠: خوارن ٢",
+   "titleDe": "Einheit 30: Lebensmittel",
+   "titleEn": "Unit 30: Food 2",
    "icon": "food",
    "color": "#FF4B4B",
-   "section": 2,
+   "section": 3,
    "concepts": [
     {
      "id": "e1",
@@ -1734,12 +2573,12 @@
   },
   {
    "id": "unit_19",
-   "titleKu": "قۆناغا ٢٢: ل خوارنگەهێ",
-   "titleDe": "Einheit 22: Im Restaurant",
-   "titleEn": "Unit 22: At the restaurant",
+   "titleKu": "قۆناغا ٣١: ل خوارنگەهێ",
+   "titleDe": "Einheit 31: Im Restaurant",
+   "titleEn": "Unit 31: At the restaurant",
    "icon": "restaurant",
    "color": "#FFC800",
-   "section": 2,
+   "section": 3,
    "concepts": [
     {
      "id": "o1",
@@ -1825,12 +2664,12 @@
   },
   {
    "id": "unit_20",
-   "titleKu": "قۆناغا ٢٣: هاتن و چوون",
-   "titleDe": "Einheit 23: Verkehr",
-   "titleEn": "Unit 23: Transport",
+   "titleKu": "قۆناغا ٣٢: هاتن و چوون",
+   "titleDe": "Einheit 32: Verkehr",
+   "titleEn": "Unit 32: Transport",
    "icon": "transport",
    "color": "#1CB0F6",
-   "section": 2,
+   "section": 3,
    "concepts": [
     {
      "id": "x1",
@@ -1915,13 +2754,104 @@
    ]
   },
   {
+   "id": "unit_15",
+   "titleKu": "قۆناغا ٣٣: کەش و هەوا",
+   "titleDe": "Einheit 33: Wetter",
+   "titleEn": "Unit 33: Weather",
+   "icon": "weather",
+   "color": "#00CD9C",
+   "section": 3,
+   "concepts": [
+    {
+     "id": "w1",
+     "ku": "هەوا چاوایە؟",
+     "kuLat": "Hewa çawa ye?",
+     "de": "Wie ist das Wetter?",
+     "deHint": "ڤی ئیست داس ڤێتەر؟",
+     "en": "How is the weather?",
+     "enHint": "هاو ئیز ذە وێذەر؟",
+     "emoji": "🌦️"
+    },
+    {
+     "id": "w2",
+     "ku": "هەوا سارە",
+     "kuLat": "Hewa sar e",
+     "de": "Es ist kalt",
+     "deHint": "ئێس ئیست کالت",
+     "en": "It is cold",
+     "enHint": "ئیت ئیز کۆڵد",
+     "emoji": "🥶"
+    },
+    {
+     "id": "w3",
+     "ku": "هەوا گەرمە",
+     "kuLat": "Hewa germ e",
+     "de": "Es ist warm",
+     "deHint": "ئێس ئیست ڤارم",
+     "en": "It is warm",
+     "enHint": "ئیت ئیز وۆرم",
+     "emoji": "🥵"
+    },
+    {
+     "id": "w4",
+     "ku": "باران دباریت",
+     "kuLat": "Baran dibarît",
+     "de": "Es regnet",
+     "deHint": "ئێس رێگنەت",
+     "en": "It is raining",
+     "enHint": "ئیت ئیز رەینینگ",
+     "emoji": "🌧️"
+    },
+    {
+     "id": "w5",
+     "ku": "بەفر دباریت",
+     "kuLat": "Befr dibarît",
+     "de": "Es schneit",
+     "deHint": "ئێس شنایت",
+     "en": "It is snowing",
+     "enHint": "ئیت ئیز سنۆوینگ",
+     "emoji": "🌨️"
+    },
+    {
+     "id": "w6",
+     "ku": "رۆژ",
+     "kuLat": "Roj",
+     "de": "die Sonne",
+     "deHint": "دی زۆنە",
+     "en": "the sun",
+     "enHint": "ذە سەن",
+     "emoji": "☀️"
+    },
+    {
+     "id": "w7",
+     "ku": "با",
+     "kuLat": "Ba",
+     "de": "der Wind",
+     "deHint": "دێر ڤیند",
+     "en": "wind",
+     "enHint": "ویند",
+     "emoji": "🌬️"
+    },
+    {
+     "id": "w8",
+     "ku": "هەوا عەوراوییە",
+     "kuLat": "Hewa ewrawî ye",
+     "de": "Es ist bewölkt",
+     "deHint": "ئێس ئیست بەڤۆلکت",
+     "en": "It is cloudy",
+     "enHint": "ئیت ئیز کلاودی",
+     "emoji": "☁️"
+    }
+   ]
+  },
+  {
    "id": "unit_21",
-   "titleKu": "قۆناغا ٢٤: ئاراستە",
-   "titleDe": "Einheit 24: Wegbeschreibung",
-   "titleEn": "Unit 24: Directions",
+   "titleKu": "قۆناغا ٣٤: ئاراستە",
+   "titleDe": "Einheit 34: Wegbeschreibung",
+   "titleEn": "Unit 34: Directions",
    "icon": "directions",
    "color": "#58CC02",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "r7",
@@ -2007,12 +2937,12 @@
   },
   {
    "id": "unit_22",
-   "titleKu": "قۆناغا ٢٥: کار و پیشە",
-   "titleDe": "Einheit 25: Beruf",
-   "titleEn": "Unit 25: Jobs",
+   "titleKu": "قۆناغا ٣٥: کار و پیشە",
+   "titleDe": "Einheit 35: Beruf",
+   "titleEn": "Unit 35: Jobs",
    "icon": "work",
    "color": "#FF9600",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "j1",
@@ -2098,12 +3028,12 @@
   },
   {
    "id": "unit_23",
-   "titleKu": "قۆناغا ٢٦: ساخلەمی",
-   "titleDe": "Einheit 26: Gesundheit",
-   "titleEn": "Unit 26: Health",
+   "titleKu": "قۆناغا ٣٦: ساخلەمی",
+   "titleDe": "Einheit 36: Gesundheit",
+   "titleEn": "Unit 36: Health",
    "icon": "health",
    "color": "#FF4B4B",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "s7",
@@ -2189,12 +3119,12 @@
   },
   {
    "id": "unit_24",
-   "titleKu": "قۆناغا ٢٧: هەست",
-   "titleDe": "Einheit 27: Gefühle",
-   "titleEn": "Unit 27: Feelings",
+   "titleKu": "قۆناغا ٣٧: هەست",
+   "titleDe": "Einheit 37: Gefühle",
+   "titleEn": "Unit 37: Feelings",
    "icon": "mood",
    "color": "#CE82FF",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "q1",
@@ -2280,12 +3210,12 @@
   },
   {
    "id": "unit_25",
-   "titleKu": "قۆناغا ٢٨: سالۆخەت",
-   "titleDe": "Einheit 28: Adjektive",
-   "titleEn": "Unit 28: Describing things",
+   "titleKu": "قۆناغا ٣٨: سالۆخەت",
+   "titleDe": "Einheit 38: Adjektive",
+   "titleEn": "Unit 38: Describing things",
    "icon": "tune",
    "color": "#FFC800",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "a1",
@@ -2371,12 +3301,12 @@
   },
   {
    "id": "unit_26",
-   "titleKu": "قۆناغا ٢٩: حەزژێکرن",
-   "titleDe": "Einheit 29: Hobbys",
-   "titleEn": "Unit 29: Hobbies",
+   "titleKu": "قۆناغا ٣٩: حەزژێکرن",
+   "titleDe": "Einheit 39: Hobbys",
+   "titleEn": "Unit 39: Hobbies",
    "icon": "sports",
    "color": "#00CD9C",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "b7",
@@ -2461,104 +3391,13 @@
    ]
   },
   {
-   "id": "unit_27",
-   "titleKu": "قۆناغا ٣٠: پرسیار",
-   "titleDe": "Einheit 30: Fragen",
-   "titleEn": "Unit 30: Questions",
-   "icon": "help",
-   "color": "#2B70C9",
-   "section": 3,
-   "concepts": [
-    {
-     "id": "k7",
-     "ku": "کێ؟",
-     "kuLat": "Kê?",
-     "de": "Wer?",
-     "deHint": "ڤێر؟",
-     "en": "Who?",
-     "enHint": "هوو؟",
-     "emoji": "🧑"
-    },
-    {
-     "id": "k8",
-     "ku": "چ؟",
-     "kuLat": "Çi?",
-     "de": "Was?",
-     "deHint": "ڤاس؟",
-     "en": "What?",
-     "enHint": "وۆت؟",
-     "emoji": "❓"
-    },
-    {
-     "id": "k9",
-     "ku": "ل کیرێ؟",
-     "kuLat": "Li kîrê?",
-     "de": "Wo?",
-     "deHint": "ڤۆ؟",
-     "en": "Where?",
-     "enHint": "وێر؟",
-     "emoji": "📍"
-    },
-    {
-     "id": "k10",
-     "ku": "کەنگی؟",
-     "kuLat": "Kengî?",
-     "de": "Wann?",
-     "deHint": "ڤان؟",
-     "en": "When?",
-     "enHint": "وێن؟",
-     "emoji": "⏱️"
-    },
-    {
-     "id": "k11",
-     "ku": "بۆچی؟",
-     "kuLat": "Boçî?",
-     "de": "Warum?",
-     "deHint": "ڤاروم؟",
-     "en": "Why?",
-     "enHint": "وای؟",
-     "emoji": "🤔"
-    },
-    {
-     "id": "k12",
-     "ku": "چەند؟",
-     "kuLat": "Çend?",
-     "de": "Wie viel?",
-     "deHint": "ڤی فیل؟",
-     "en": "How much?",
-     "enHint": "هاو مەچ؟",
-     "emoji": "💰"
-    },
-    {
-     "id": "k13",
-     "ku": "تو ژ کیرێ یی؟",
-     "kuLat": "Tu ji kîrê yî?",
-     "de": "Woher kommst du?",
-     "deHint": "ڤۆهێر کۆمست دو؟",
-     "en": "Where are you from?",
-     "enHint": "وێر ئار یوو فرۆم؟",
-     "emoji": "🌍"
-    },
-    {
-     "id": "k14",
-     "ku": "تو چەند سالی؟",
-     "kuLat": "Tu çend salî?",
-     "de": "Wie alt bist du?",
-     "deHint": "ڤی ئالت بیست دو؟",
-     "en": "How old are you?",
-     "enHint": "هاو ئۆڵد ئار یوو؟",
-     "emoji": "🎂"
-    }
-   ]
-  },
-  {
    "id": "unit_28",
-   "titleKu": "قۆناغا ٣١: ل فەرمانگەهێ",
-   "titleDe": "Einheit 31: Auf dem Amt",
-   "titleEn": "Unit 31: At the office",
+   "titleKu": "قۆناغا ٤٠: ل فەرمانگەهێ",
+   "titleDe": "Einheit 40: Auf dem Amt",
+   "titleEn": "Unit 40: At the office",
    "icon": "badge",
    "color": "#FF9600",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "z1",
@@ -2644,12 +3483,12 @@
   },
   {
    "id": "unit_29",
-   "titleKu": "قۆناغا ٣٢: دەمێ بۆری",
-   "titleDe": "Einheit 32: Vergangenheit",
-   "titleEn": "Unit 32: Past tense",
+   "titleKu": "قۆناغا ٤١: دەمێ بۆری",
+   "titleDe": "Einheit 41: Vergangenheit",
+   "titleEn": "Unit 41: Past tense",
    "icon": "history",
    "color": "#A560E8",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "v7",
@@ -2735,12 +3574,12 @@
   },
   {
    "id": "unit_30",
-   "titleKu": "قۆناغا ٣٣: پلان و داهاتی",
-   "titleDe": "Einheit 33: Pläne & Zukunft",
-   "titleEn": "Unit 33: Plans & future",
+   "titleKu": "قۆناغا ٤٢: پلان و داهاتی",
+   "titleDe": "Einheit 42: Pläne & Zukunft",
+   "titleEn": "Unit 42: Plans & future",
    "icon": "flag",
    "color": "#58CC02",
-   "section": 3,
+   "section": 4,
    "concepts": [
     {
      "id": "u1",
@@ -2823,23 +3662,99 @@
      "emoji": "🚀"
     }
    ]
+  },
+  {
+   "id": "unit_10",
+   "titleKu": "قۆناغا ٤٣: رستەیێن ژیانێ",
+   "titleDe": "Einheit 43: Sätze",
+   "titleEn": "Unit 43: Real sentences",
+   "icon": "chat",
+   "color": "#A560E8",
+   "concepts": [
+    {
+     "id": "r1",
+     "ku": "ئەز ژ کوردستانێ مە",
+     "kuLat": "Ez ji Kurdistanê me",
+     "de": "Ich komme aus Kurdistan",
+     "deHint": "ئیش کۆمە ئاوس کوردستان",
+     "en": "I am from Kurdistan",
+     "enHint": "ئای ئێم فرۆم کوردستان",
+     "emoji": "☀️"
+    },
+    {
+     "id": "r2",
+     "ku": "ئەز ئەلمانی فێر دبم",
+     "kuLat": "Ez Almanî fêr dibim",
+     "de": "Ich lerne Deutsch",
+     "deHint": "ئیش لێرنە دۆیچ",
+     "en": "I am learning German",
+     "enHint": "ئای ئێم لێرنینگ جێرمەن",
+     "emoji": "🇩🇪"
+    },
+    {
+     "id": "r3",
+     "ku": "ئەڤرۆ هەوا خۆشە",
+     "kuLat": "Evro hewa xweş e",
+     "de": "Heute ist das Wetter schön",
+     "deHint": "هۆیتە ئیست داس ڤێتەر شۆن",
+     "en": "The weather is nice today",
+     "enHint": "ذە وێذەر ئیز نایس تودەی",
+     "emoji": "🌤️"
+    },
+    {
+     "id": "r4",
+     "ku": "تو دشێی هاریکاریا من بکەی؟",
+     "kuLat": "Tu dişêy harîkariya min bikey?",
+     "de": "Kannst du mir helfen?",
+     "deHint": "کانست دو میر هێلفن؟",
+     "en": "Can you help me?",
+     "enHint": "کان یوو هێلپ می؟",
+     "emoji": "🆘"
+    },
+    {
+     "id": "r5",
+     "ku": "ئەز دچمە بازاڕی",
+     "kuLat": "Ez diçime bazarî",
+     "de": "Ich gehe zum Markt",
+     "deHint": "ئیش گێهە تسوم مارکت",
+     "en": "I am going to the market",
+     "enHint": "ئای ئێم گۆینگ تو ذە مارکێت",
+     "emoji": "🛒"
+    },
+    {
+     "id": "r6",
+     "ku": "ئەڤە کتێبا منە",
+     "kuLat": "Eve kitêba min e",
+     "de": "Das ist mein Buch",
+     "deHint": "داس ئیست ماین بوخ",
+     "en": "This is my book",
+     "enHint": "ذیس ئیز مای بووک",
+     "emoji": "📘"
+    }
+   ],
+   "section": 4
   }
  ],
  "sections": [
   {
-   "ku": "بەشێ ١ · بنەڕەت (A1)",
-   "de": "Teil 1 · Grundlagen (A1)",
-   "en": "Part 1 · Basics (A1)"
+   "ku": "بەشێ ١ · دەستپێک: پیت، سلاڤ و جهناڤ",
+   "de": "Teil 1 · Start: Buchstaben, Begrüßung, Pronomen",
+   "en": "Part 1 · Start: letters, greetings, pronouns"
   },
   {
-   "ku": "بەشێ ٢ · ژیانا رۆژانە (A1)",
-   "de": "Teil 2 · Alltag (A1)",
-   "en": "Part 2 · Daily life (A1)"
+   "ku": "بەشێ ٢ · رێزمانا بنەڕەتی (A1)",
+   "de": "Teil 2 · Grundgrammatik (A1)",
+   "en": "Part 2 · Basic grammar (A1)"
   },
   {
-   "ku": "بەشێ ٣ · ل ئەلمانیا (A2)",
-   "de": "Teil 3 · In Deutschland (A2)",
-   "en": "Part 3 · Out in the world (A2)"
+   "ku": "بەشێ ٣ · ژیانا رۆژانە (A1)",
+   "de": "Teil 3 · Alltag (A1)",
+   "en": "Part 3 · Daily life (A1)"
+  },
+  {
+   "ku": "بەشێ ٤ · ل ئەلمانیا (A2)",
+   "de": "Teil 4 · In Deutschland (A2)",
+   "en": "Part 4 · Out in the world (A2)"
   }
  ]
 }
