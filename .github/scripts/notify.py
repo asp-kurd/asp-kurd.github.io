@@ -11,7 +11,11 @@ import requests
 from pywebpush import WebPushException, webpush
 
 URL = (os.environ.get("SUPABASE_URL") or "https://pecnuohpxraoxvfjsngm.supabase.co").rstrip("/")
-KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
+KEY = os.environ.get("SUPABASE_SERVICE_KEY", "").strip().strip('"').strip("'")
+# iPhone هندەک جاران پیتا ئێکێ مەزن دکەت (Sb_secret_…)
+for pre in ("sb_secret_", "sb_publishable_"):
+    if KEY.lower().startswith(pre):
+        KEY = pre + KEY[len(pre):]
 if not URL or not KEY:
     print("::warning title=notify::SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipping"); sys.exit(0)
 H = {"apikey": KEY, "Content-Type": "application/json"}
@@ -35,7 +39,7 @@ def post(path, body):
     r.raise_for_status(); return r.json()
 
 
-kind = "secret" if KEY.startswith("sb_secret_") else "publishable(WRONG)" if KEY.startswith("sb_publishable_") else "legacy-jwt" if KEY.startswith("eyJ") else f"unknown(len={len(KEY)})"
+kind = "secret" if KEY.startswith("sb_secret_") else "publishable(WRONG)" if KEY.startswith("sb_publishable_") else "legacy-jwt" if KEY.startswith("eyJ") else f"unknown(len={len(KEY)}, starts={KEY[:3]!r})"
 print(f"::notice title=notify::key_type={kind}")
 secret = get("app_secrets?key=eq.vapid_private&select=value")
 VAPID = secret[0]["value"] if secret else None
