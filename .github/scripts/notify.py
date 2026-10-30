@@ -35,6 +35,8 @@ def post(path, body):
     r.raise_for_status(); return r.json()
 
 
+kind = "secret" if KEY.startswith("sb_secret_") else "publishable(WRONG)" if KEY.startswith("sb_publishable_") else "legacy-jwt" if KEY.startswith("eyJ") else f"unknown(len={len(KEY)})"
+print(f"::notice title=notify::key_type={kind}")
 secret = get("app_secrets?key=eq.vapid_private&select=value")
 VAPID = secret[0]["value"] if secret else None
 learners = {l["id"]: l for l in get("learners?select=id,name,push_sub,streak,last_study_date,streak_reminded_on")}
