@@ -13,7 +13,7 @@ from pywebpush import WebPushException, webpush
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 if not URL or not KEY:
-    print("SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipping"); sys.exit(0)
+    print("::warning title=notify::SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipping"); sys.exit(0)
 H = {"apikey": KEY, "Content-Type": "application/json"}
 if KEY.startswith("eyJ"):  # کلیلا کەڤن (JWT)
     H["Authorization"] = f"Bearer {KEY}"
@@ -63,7 +63,7 @@ for m in get("messages?pushed_at=is.null&select=*&order=created_at.asc&limit=100
     for l in targets:
         sent += push(l, m["title"], m["body"])
     patch(f"messages?id=eq.{m['id']}", {"pushed_at": datetime.now(timezone.utc).isoformat()})
-print("messages pushed:", sent)
+print(f"::notice title=notify::learners={len(learners)} with_push={sum(1 for l in learners.values() if l.get('push_sub'))} vapid={'yes' if VAPID else 'no'} messages_pushed={sent}")
 
 # ٢. بیرئینانا Streak
 reminded = 0
@@ -79,4 +79,4 @@ if now.hour >= 18:
         push(l, title, body)
         patch(f"learners?id=eq.{l['id']}", {"streak_reminded_on": today})
         reminded += 1
-print("streak reminders:", reminded)
+print(f"::notice title=notify::streak_reminders={reminded} hour={now.hour}")
