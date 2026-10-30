@@ -56,7 +56,7 @@ jobs:
           path: build/app/outputs/flutter-apk/app-release.apk
           retention-days: 30
 
-  # 🍏 iPhone: ئەپا وێبێ ل سەر GitHub Pages ➔ https://groupkurdish-spec.github.io/Zimanpro/
+  # 🍏 iPhone: ئەپا وێبێ ل سەر GitHub Pages ➔ https://asp-kurd.github.io
   web:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -94,7 +94,13 @@ jobs:
         run: flutter analyze --no-fatal-infos --no-fatal-warnings 2>&1 | tee -a build.log; exit ${PIPESTATUS[0]}
 
       - name: Build web
-        run: flutter build web --release --base-href /Zimanpro/ 2>&1 | tee -a build.log; exit ${PIPESTATUS[0]}
+        # asp-kurd.github.io ➔ "/" · ناڤەکێ دی ➔ "/<repo>/"
+        env:
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          if [[ "$REPO" == *.github.io ]]; then BASE=/; else BASE="/$REPO/"; fi
+          echo "base-href: $BASE"
+          flutter build web --release --base-href "$BASE" 2>&1 | tee -a build.log; exit ${PIPESTATUS[0]}
 
       - name: Report errors
         if: failure()
