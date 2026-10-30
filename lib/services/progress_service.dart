@@ -170,6 +170,33 @@ class ProgressService extends ChangeNotifier {
     await earn(earnedXp);
   }
 
+  // ───────── 📝 ئەزموون ─────────
+  /// باشترین ئەنجام بۆ ئەزموونەکێ (٠–١٠٠)، یان null
+  int? examBest(String id) => _p.getInt('exam_${_pairKey}_$id');
+
+  Future<void> saveExam(String id, int percent) async {
+    final best = examBest(id) ?? -1;
+    if (percent > best) await _p.setInt('exam_${_pairKey}_$id', percent);
+    notifyListeners();
+  }
+
+  /// پشتی تاقیکرنا ئاستی: قۆناغێن بەری وێ وەکی تەمامکری نیشان بدە
+  Future<void> markUnitsDone(Iterable<String> ids) async {
+    completedUnits.addAll(ids);
+    await _p.setStringList('done_$_pairKey', completedUnits.toList());
+    notifyListeners();
+  }
+
+  bool get placementDone => _p.getBool('placement_$_pairKey') ?? false;
+  Future<void> setPlacementDone() async {
+    await _p.setBool('placement_$_pairKey', true);
+    notifyListeners();
+  }
+
+  /// کارتا رێزمانێ هاتییە دیتن؟
+  bool grammarSeen(String unitId) => _p.getBool('gseen_$unitId') ?? false;
+  Future<void> setGrammarSeen(String unitId) => _p.setBool('gseen_$unitId', true);
+
   /// XP بۆ هەر چالاکیەکێ (وانە، یاری، دووبارەکرن) — Streak و ئامارێن رۆژانە ژی نوی دکەت
   Future<void> earn(int earnedXp) async {
     _refreshDaily(); // ئەگەر ئەپ ژ دوهی ڤەکری مابیت

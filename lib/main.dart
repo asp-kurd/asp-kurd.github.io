@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'data/book.dart';
 import 'data/curriculum.dart';
+import 'data/exams.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
@@ -13,6 +14,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadCurriculum();
   await loadBook();
+  await Exams.load();
   await ProgressService.instance.init();
   await VoiceService.instance.init();
   await CloneService.instance.load();
@@ -25,10 +27,11 @@ class ZimanProApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ZimanPro',
+      title: 'ASP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: 'Shasenem',
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.blue, brightness: Brightness.dark),
         scaffoldBackgroundColor: AppColors.bg,
         appBarTheme: const AppBarTheme(backgroundColor: AppColors.bg, elevation: 0),

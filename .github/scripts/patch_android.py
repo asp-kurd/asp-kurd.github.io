@@ -12,7 +12,7 @@ add = "".join(f'    <uses-permission android:name="{p}" />\n' for p in perms if 
 if add:
     m = m.replace("<application", add + "    <application", 1)
 # ناڤێ ئەپی ل سەر مۆبایلێ
-m = re.sub(r'android:label="[^"]*"', 'android:label="ZimanPro"', m, count=1)
+m = re.sub(r'android:label="[^"]*"', 'android:label="ASP"', m, count=1)
 manifest.write_text(m, encoding="utf-8")
 print("Manifest patched")
 
@@ -70,3 +70,16 @@ for name, block in (("android/build.gradle.kts", FORCE_SDK_KTS), ("android/build
     s = (s[:i] + block.lstrip("\n") + "\n" + s[i:]) if i >= 0 else (s + block)
     g.write_text(s, encoding="utf-8")
     print(f"{name}: plugins compileSdk 36")
+
+# ───────── ASP branding ─────────
+import shutil
+B = Path("branding/android")
+if B.exists():
+    for d in ("mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"):
+        dst = Path(f"android/app/src/main/res/mipmap-{d}")
+        if dst.exists():
+            shutil.copy(B / f"{d}.png", dst / "ic_launcher.png")
+    m = manifest.read_text(encoding="utf-8")
+    m = re.sub(r'android:label="[^"]*"', 'android:label="ASP"', m, count=1)
+    manifest.write_text(m, encoding="utf-8")
+    print("ASP icons applied")

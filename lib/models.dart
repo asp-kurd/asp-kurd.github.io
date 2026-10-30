@@ -63,9 +63,11 @@ class LessonUnit {
   final Color color;
   final List<WordConcept> concepts;
   final int section; // 1, 2, 3 ...
+  final GrammarCard? grammar; // کارتا رێزمانێ بەری وانێ
 
   const LessonUnit({
     this.section = 1,
+    this.grammar,
     required this.id,
     required this.titleKu,
     required this.titleDe,
@@ -82,6 +84,41 @@ class LessonUnit {
       };
 }
 
+/// کارتا رێزمانێ
+class GrammarCard {
+  final String titleKu, titleDe;
+  final List<String> lines;
+  final List<List<String>>? table;
+  const GrammarCard({required this.titleKu, required this.titleDe, required this.lines, this.table});
+}
+
+/// دیالۆگ
+class DialogLine {
+  final String id, who, de, ku;
+  const DialogLine(this.id, this.who, this.de, this.ku);
+}
+
+/// زانیاریێن وانەیەکا پەرتووکێ (Lektion)
+class LektionInfo {
+  final int n;
+  final String titleKu, titleDe, titleEn;
+  final Color color;
+  final String dialogTitleKu;
+  final List<DialogLine> dialog;
+  const LektionInfo({
+    required this.n,
+    required this.titleKu,
+    required this.titleDe,
+    required this.titleEn,
+    required this.color,
+    required this.dialogTitleKu,
+    required this.dialog,
+  });
+
+  /// section د curriculum.json دا: Lektion n = section n + 1
+  int get section => n + 1;
+}
+
 /// ٤. جۆرێن ڕاهێنانان
 enum ExerciseType {
   translate, // زمانێ دایکێ ➔ زمانێ فێربوونێ
@@ -90,6 +127,8 @@ enum ExerciseType {
   speak, // ب دەنگێ خۆ بێژە و بەراورد بکە
   match, // جووتکرنا پەیڤان (٤ جووت)
   wordBank, // ئاڤاکرنا رستێ ژ پارچەیان
+  pickPicture, // وێنەیێ دروست هەلبژێرە (٢–٦ وێنە)
+  trueFalse, // ئەڤە دروستە یان نە؟
 }
 
 class Exercise {

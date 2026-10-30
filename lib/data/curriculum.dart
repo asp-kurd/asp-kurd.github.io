@@ -24,6 +24,16 @@ class CurriculumSection {
 
 late List<CurriculumSection> appSections;
 
+/// وانەیێن پەرتووکێ (Lektion 1–14): دیالۆگ و ناڤ
+List<LektionInfo> appLektionen = [];
+
+LektionInfo? lektionForSection(int section) {
+  for (final l in appLektionen) {
+    if (l.section == section) return l;
+  }
+  return null;
+}
+
 const _icons = <String, IconData>{
   'waving_hand': Icons.waving_hand_rounded,
   'pin': Icons.pin_rounded,
@@ -77,6 +87,7 @@ Future<void> loadCurriculum() async {
       icon: _icons[m['icon']] ?? Icons.star_rounded,
       color: _hex(m['color'] as String),
       section: (m['section'] as num?)?.toInt() ?? 1,
+      grammar: _grammar(m['grammar']),
       concepts: (m['concepts'] as List).map((c) {
         final x = c as Map<String, dynamic>;
         return WordConcept(
@@ -93,4 +104,30 @@ Future<void> loadCurriculum() async {
     );
   }).toList();
   allConcepts = appCurriculum.expand((u) => u.concepts).toList();
+  appLektionen = ((data['lektionen'] as List?) ?? []).map((l) {
+    final m = l as Map<String, dynamic>;
+    final d = m['dialog'] as Map<String, dynamic>;
+    return LektionInfo(
+      n: (m['n'] as num).toInt(),
+      titleKu: m['titleKu'] as String,
+      titleDe: m['titleDe'] as String,
+      titleEn: m['titleEn'] as String,
+      color: _hex(m['color'] as String),
+      dialogTitleKu: d['titleKu'] as String,
+      dialog: (d['lines'] as List)
+          .map((x) => DialogLine(x['id'] as String, x['who'] as String, x['de'] as String, x['ku'] as String))
+          .toList(),
+    );
+  }).toList();
+}
+
+GrammarCard? _grammar(dynamic g) {
+  if (g is! Map<String, dynamic>) return null;
+  final t = g['table'];
+  return GrammarCard(
+    titleKu: g['titleKu'] as String,
+    titleDe: (g['titleDe'] as String?) ?? '',
+    lines: (g['lines'] as List).map((e) => e as String).toList(),
+    table: t is List ? t.map((r) => (r as List).map((c) => c.toString()).toList()).toList() : null,
+  );
 }

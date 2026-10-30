@@ -1,7 +1,7 @@
 name: zimanpro
-description: ZimanPro - فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی، دگەل سیستەمێ دەنگی ب دەنگێ تە.
+description: ASP - فێربوونا ئەلمانی و ئینگلیزی ب کوردی بادینی.
 publish_to: 'none'
-version: 5.0.0+7
+version: 6.0.0+8
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -40,9 +40,26 @@ flutter:
   uses-material-design: true
   assets:
     - assets/curriculum.json
+    # ئەزموون: وانە، A1، تاقیکرنا ئاستی
+    - assets/exams.json
+    # لۆگۆیا ASP
+    - assets/brand/
+    # دەنگێ AI (Piper / MMS) — ب GitHub Actions دهێتە دروستکرن
+    - assets/tts/de/
+    - assets/tts/en/
+    - assets/tts/ku/
     # پەرتووکا رێزمانێ «A1.1 mit Poya» (ژ book/A1_mit_Poya.md)
     - assets/book.json
     # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)
     - assets/sfx/
     # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)
     - assets/voices/
+
+  # فۆنتێن بادینی
+  fonts:
+    - family: Shasenem
+      fonts:
+        - asset: assets/fonts/Shasenem.ttf
+    - family: Sarchia
+      fonts:
+        - asset: assets/fonts/Sarchia.ttf

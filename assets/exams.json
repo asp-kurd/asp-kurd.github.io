@@ -1,0 +1,2834 @@
+{
+ "version": 1,
+ "lektion": {
+  "1": [
+   {
+    "type": "choice",
+    "q": "Wie ___ du?",
+    "options": [
+     "heißen",
+     "heißt",
+     "heiße"
+    ],
+    "answer": 1,
+    "explain": "du ➔ -st (heiß+t)"
+   },
+   {
+    "type": "picture",
+    "q": "der Familienname",
+    "options": [
+     "💬",
+     "🏔️",
+     "🇦🇹",
+     "👪"
+    ],
+    "answer": 3,
+    "explain": "ناڤێ بنەمالێ",
+    "audio": "der Familienname"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "تنێ هندەکێ ئەلمانی.",
+     "گۆرە",
+     "هوین دشێن هاریکاریا من بکەن؟",
+     "خویشک و برا"
+    ],
+    "answer": 0,
+    "explain": "Nur ein bisschen Deutsch.",
+    "audio": "Nur ein bisschen Deutsch."
+   },
+   {
+    "type": "imgchoice",
+    "q": "☎️",
+    "options": [
+     "Woher kommen Sie?",
+     "Tschüs! Bis später!",
+     "Tut mir leid, sie ist nicht da."
+    ],
+    "answer": 2,
+    "explain": "ببوورە، ئەو ل ڤێرێ نینە."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەڤە کێیە؟",
+     "حسێب / فاتورە",
+     "ئەز دشێم ڤێ ل بەر خۆ تاقی بکەم؟",
+     "ناڤنیشان"
+    ],
+    "answer": 3,
+    "explain": "die Adresse",
+    "audio": "die Adresse"
+   },
+   {
+    "type": "type",
+    "q": "ب خاترا هەوە!",
+    "options": null,
+    "answer": "Auf Wiedersehen!",
+    "explain": "ئاوف ڤیدەرزێن (فەرمی)",
+    "pic": "🚪"
+   },
+   {
+    "type": "order",
+    "q": "Name | Mein | ist | Lara",
+    "options": null,
+    "answer": "Mein Name ist Lara",
+    "explain": "کار ل جهێ ٢"
+   },
+   {
+    "type": "choice",
+    "q": "Woher ___ Sie?",
+    "options": [
+     "kommen",
+     "kommst",
+     "komme"
+    ],
+    "answer": 0,
+    "explain": "Sie ➔ -en"
+   },
+   {
+    "type": "choice",
+    "q": "Ich ___ Azad.",
+    "options": [
+     "heiße",
+     "heißt",
+     "heißen"
+    ],
+    "answer": 0,
+    "explain": "ich ➔ -e"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Guten Abend» = سپێدە باش",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "Guten Abend = ئێڤار باش"
+   },
+   {
+    "type": "picture",
+    "q": "Wie heißen Sie?",
+    "options": [
+     "🚪",
+     "🌅",
+     "👋",
+     "❓",
+     "👉",
+     "☀️"
+    ],
+    "answer": 3,
+    "explain": "ناڤێ هەوە چییە؟",
+    "audio": "Wie heißen Sie?"
+   },
+   {
+    "type": "imgchoice",
+    "q": "👋",
+    "options": [
+     "der Familienname",
+     "Hallo!",
+     "das Alphabet"
+    ],
+    "answer": 1,
+    "explain": "سلاڤ!"
+   },
+   {
+    "type": "choice",
+    "q": "Du ___ gut Deutsch.",
+    "options": [
+     "sprechst",
+     "spricht",
+     "sprichst"
+    ],
+    "answer": 2,
+    "explain": "sprechen: du sprichst"
+   },
+   {
+    "type": "picture",
+    "q": "Tschüs! Bis später!",
+    "options": [
+     "✌️",
+     "💬"
+    ],
+    "answer": 0,
+    "explain": "خاترا تە! هەتا پاشی!",
+    "audio": "Tschüs! Bis später!"
+   }
+  ],
+  "2": [
+   {
+    "type": "choice",
+    "q": "Das ist ___ Mutter.",
+    "options": [
+     "meinen",
+     "mein",
+     "meine"
+    ],
+    "answer": 2,
+    "explain": "die Mutter ➔ meine"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "دەمژمێر هەشتە.",
+     "ئەز هەر رۆژ فێر دبم.",
+     "مە دوو زارۆک هەنە.",
+     "کۆمپیوتەری بگرە!"
+    ],
+    "answer": 2,
+    "explain": "Wir haben zwei Kinder.",
+    "audio": "Wir haben zwei Kinder."
+   },
+   {
+    "type": "choice",
+    "q": "Wir ___ zwei Kinder.",
+    "options": [
+     "haben",
+     "hat",
+     "habt"
+    ],
+    "answer": 0,
+    "explain": "wir haben"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🤩",
+    "options": [
+     "Super!",
+     "die Mutter",
+     "Wir haben zwei Kinder."
+    ],
+    "answer": 0,
+    "explain": "گەلەک باشە!"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "باش – باشتر – باشترین",
+     "مەزن",
+     "ئەز یێ سەڵتمە.",
+     "ئەڤرۆ ئێکێ ئادارێ یە."
+    ],
+    "answer": 2,
+    "explain": "Ich bin ledig.",
+    "audio": "Ich bin ledig."
+   },
+   {
+    "type": "imgchoice",
+    "q": "👴",
+    "options": [
+     "der Großvater / der Opa",
+     "Wir haben zwei Kinder.",
+     "Danke, sehr gut!"
+    ],
+    "answer": 0,
+    "explain": "باپیر"
+   },
+   {
+    "type": "picture",
+    "q": "der Sohn",
+    "options": [
+     "🏘️",
+     "👌",
+     "🤩",
+     "👵",
+     "🧑‍🤝‍🧑",
+     "👦"
+    ],
+    "answer": 5,
+    "explain": "کوڕ",
+    "audio": "der Sohn"
+   },
+   {
+    "type": "picture",
+    "q": "Und dir?",
+    "options": [
+     "🔁",
+     "🤵"
+    ],
+    "answer": 0,
+    "explain": "و تو؟",
+    "audio": "Und dir?"
+   },
+   {
+    "type": "choice",
+    "q": "Ihr ___ aus Syrien.",
+    "options": [
+     "sind",
+     "seid",
+     "ist"
+    ],
+    "answer": 1,
+    "explain": "ihr seid"
+   },
+   {
+    "type": "choice",
+    "q": "Er ___ in Berlin.",
+    "options": [
+     "lebt",
+     "leben",
+     "lebst"
+    ],
+    "answer": 0,
+    "explain": "er ➔ -t"
+   },
+   {
+    "type": "truefalse",
+    "q": "17 = siebzehn",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "picture",
+    "q": "der Vater",
+    "options": [
+     "👨",
+     "👩",
+     "🔢",
+     "🎂"
+    ],
+    "answer": 0,
+    "explain": "باب",
+    "audio": "der Vater"
+   },
+   {
+    "type": "order",
+    "q": "in | wohne | Ich | Duhok",
+    "options": null,
+    "answer": "Ich wohne in Duhok",
+    "explain": ""
+   },
+   {
+    "type": "type",
+    "q": "چاوانی؟",
+    "options": null,
+    "answer": "Wie geht's?",
+    "explain": "ڤی گێتس؟",
+    "pic": "🙂"
+   }
+  ],
+  "3": [
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "٢٥ پلەیە.",
+     "نوو",
+     "شەمەندەفەر",
+     "تو حەز ژ چ خوارنێ دکەی؟"
+    ],
+    "answer": 3,
+    "explain": "Was isst du gern?",
+    "audio": "Was isst du gern?"
+   },
+   {
+    "type": "picture",
+    "q": "Haben wir Zucker?",
+    "options": [
+     "🍅",
+     "⚖️",
+     "🍬"
+    ],
+    "answer": 2,
+    "explain": "ما شەکرێ مە هەیە؟",
+    "audio": "Haben wir Zucker?"
+   },
+   {
+    "type": "choice",
+    "q": "Plural: der Apfel ➔ die ___",
+    "options": [
+     "Apfels",
+     "Äpfel",
+     "Apfeln"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "imgchoice",
+    "q": "🥗",
+    "options": [
+     "Was ist das? – Das ist Salat.",
+     "die Banane",
+     "die Kartoffel"
+    ],
+    "answer": 0,
+    "explain": "ئەڤە چییە؟ ئەڤە زەڵاتەیە."
+   },
+   {
+    "type": "picture",
+    "q": "Ich esse gern Reis.",
+    "options": [
+     "☕",
+     "😋",
+     "💰",
+     "🍞"
+    ],
+    "answer": 1,
+    "explain": "ئەز حەز ژ برنجی دکەم.",
+    "audio": "Ich esse gern Reis."
+   },
+   {
+    "type": "picture",
+    "q": "der Apfel",
+    "options": [
+     "🍎",
+     "🍬",
+     "☕",
+     "🍽️",
+     "🍌",
+     "😋"
+    ],
+    "answer": 0,
+    "explain": "سێڤ",
+    "audio": "der Apfel"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئاڤ",
+     "ئەز مامۆستا بووم.",
+     "ژوورا نڤستنێ",
+     "ترومبێل کەنگی ئامادە دبیت؟"
+    ],
+    "answer": 0,
+    "explain": "das Wasser",
+    "audio": "das Wasser"
+   },
+   {
+    "type": "type",
+    "q": "شەربەت",
+    "options": null,
+    "answer": "der Saft",
+    "explain": "دێر زافت",
+    "pic": "🧃"
+   },
+   {
+    "type": "choice",
+    "q": "Du ___ gern Fisch.",
+    "options": [
+     "esst",
+     "essen",
+     "isst"
+    ],
+    "answer": 2,
+    "explain": "essen ➔ du isst"
+   },
+   {
+    "type": "picture",
+    "q": "der Käse",
+    "options": [
+     "🥚",
+     "🍎",
+     "🧀",
+     "🍞"
+    ],
+    "answer": 2,
+    "explain": ""
+   },
+   {
+    "type": "order",
+    "q": "Sie | Eier | Haben",
+    "options": null,
+    "answer": "Haben Sie Eier",
+    "explain": "پرسیارا بەلێ/نەخێر: کار ل پێشیێ"
+   },
+   {
+    "type": "choice",
+    "q": "Das ist doch ___ Ei!",
+    "options": [
+     "keine",
+     "nicht",
+     "kein"
+    ],
+    "answer": 2,
+    "explain": "das Ei ➔ kein"
+   },
+   {
+    "type": "choice",
+    "q": "Das ist ___ Banane.",
+    "options": [
+     "ein",
+     "eine",
+     "einen"
+    ],
+    "answer": 1,
+    "explain": "die Banane ➔ eine"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🍞",
+    "options": [
+     "Was kostet das?",
+     "der Käse",
+     "das Brot"
+    ],
+    "answer": 2,
+    "explain": "نان"
+   }
+  ],
+  "4": [
+   {
+    "type": "choice",
+    "q": "Der Tisch? ___ ist teuer.",
+    "options": [
+     "Es",
+     "Sie",
+     "Er"
+    ],
+    "answer": 2,
+    "explain": "der → er"
+   },
+   {
+    "type": "picture",
+    "q": "der Stuhl",
+    "options": [
+     "🛏",
+     "💡",
+     "🪑",
+     "🗄️"
+    ],
+    "answer": 2,
+    "explain": ""
+   },
+   {
+    "type": "type",
+    "q": "رۆهن",
+    "options": null,
+    "answer": "hell",
+    "explain": "هێل",
+    "pic": "🌞"
+   },
+   {
+    "type": "choice",
+    "q": "Das Zimmer ist ___ groß.",
+    "options": [
+     "keine",
+     "nicht",
+     "kein"
+    ],
+    "answer": 1,
+    "explain": "ئاوەلناڤ ➔ nicht"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ترومبێل کەنگی ئامادە دبیت؟",
+     "ئەڤە خەلەتیەکە.",
+     "چا",
+     "مەتبەخ"
+    ],
+    "answer": 3,
+    "explain": "die Küche",
+    "audio": "die Küche"
+   },
+   {
+    "type": "picture",
+    "q": "Das Bad ist hier, die Küche ist dort.",
+    "options": [
+     "🌿",
+     "🪑",
+     "🔺",
+     "🌞",
+     "🧊",
+     "👉"
+    ],
+    "answer": 5,
+    "explain": "حەمام ل ڤێرێیە، مەتبەخ ل وێرێیە.",
+    "audio": "Das Bad ist hier, die Küche ist dort."
+   },
+   {
+    "type": "imgchoice",
+    "q": "💡",
+    "options": [
+     "der Balkon",
+     "die Lampe",
+     "dunkel"
+    ],
+    "answer": 1,
+    "explain": "چرا"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "من ژوورەک گرتییە.",
+     "پەرستار",
+     "سۆر",
+     "پێشوازی"
+    ],
+    "answer": 2,
+    "explain": "rot",
+    "audio": "rot"
+   },
+   {
+    "type": "truefalse",
+    "q": "groß ≠ klein",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "مەزن ≠ بچووک"
+   },
+   {
+    "type": "picture",
+    "q": "blau",
+    "options": [
+     "🔺",
+     "👉",
+     "🔵",
+     "🔴"
+    ],
+    "answer": 2,
+    "explain": "شین",
+    "audio": "blau"
+   },
+   {
+    "type": "choice",
+    "q": "___ Küche ist groß.",
+    "options": [
+     "Die",
+     "Das",
+     "Der"
+    ],
+    "answer": 0,
+    "explain": "die Küche"
+   },
+   {
+    "type": "choice",
+    "q": "___ Bett ist neu.",
+    "options": [
+     "Das",
+     "Die",
+     "Der"
+    ],
+    "answer": 0,
+    "explain": "das Bett"
+   },
+   {
+    "type": "picture",
+    "q": "der Kühlschrank",
+    "options": [
+     "🧊",
+     "🍳",
+     "🔵"
+    ],
+    "answer": 0,
+    "explain": "سەلاجە",
+    "audio": "der Kühlschrank"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🛁",
+    "options": [
+     "das Wohnzimmer",
+     "blau",
+     "das Bad"
+    ],
+    "answer": 2,
+    "explain": "حەمام"
+   }
+  ],
+  "5": [
+   {
+    "type": "choice",
+    "q": "Ich stehe um 7 Uhr ___.",
+    "options": [
+     "auf",
+     "ein",
+     "an"
+    ],
+    "answer": 0,
+    "explain": "aufstehen"
+   },
+   {
+    "type": "type",
+    "q": "تێشت خوارن",
+    "options": null,
+    "answer": "frühstücken",
+    "explain": "فرووشتوکن",
+    "pic": "🥐"
+   },
+   {
+    "type": "imgchoice",
+    "q": "📞",
+    "options": [
+     "der Montag",
+     "der Dienstag",
+     "anrufen"
+    ],
+    "answer": 2,
+    "explain": "تەلەفۆن کرن"
+   },
+   {
+    "type": "picture",
+    "q": "Es ist acht Uhr.",
+    "options": [
+     "🕗",
+     "4️⃣"
+    ],
+    "answer": 0,
+    "explain": "دەمژمێر هەشتە.",
+    "audio": "Es ist acht Uhr."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "تەماتە",
+     "ئەز دخوازم تشتەکی داخواز بکەم.",
+     "خول کەنگی دەستپێدکەت؟",
+     "شەمبی"
+    ],
+    "answer": 3,
+    "explain": "der Samstag",
+    "audio": "der Samstag"
+   },
+   {
+    "type": "choice",
+    "q": "___ Montag habe ich Zeit.",
+    "options": [
+     "Am",
+     "Um",
+     "Im"
+    ],
+    "answer": 0,
+    "explain": "am + رۆژ"
+   },
+   {
+    "type": "choice",
+    "q": "Der Kurs fängt ___ 9 Uhr an.",
+    "options": [
+     "im",
+     "am",
+     "um"
+    ],
+    "answer": 2,
+    "explain": "um + دەمژمێر"
+   },
+   {
+    "type": "imgchoice",
+    "q": "2️⃣",
+    "options": [
+     "schlafen",
+     "Es ist Viertel vor zwölf.",
+     "der Dienstag"
+    ],
+    "answer": 2,
+    "explain": "سێشەمب"
+   },
+   {
+    "type": "choice",
+    "q": "halb neun = ?",
+    "options": [
+     "8:30",
+     "9:00",
+     "9:30"
+    ],
+    "answer": 0,
+    "explain": "halb neun = نیڤ دەمژمێر بەری نەهێ"
+   },
+   {
+    "type": "choice",
+    "q": "Du ___ lange.",
+    "options": [
+     "schläft",
+     "schlafst",
+     "schläfst"
+    ],
+    "answer": 2,
+    "explain": "schlafen ➔ du schläfst"
+   },
+   {
+    "type": "order",
+    "q": "Am | macht | Sport | Robert | Abend",
+    "options": null,
+    "answer": "Am Abend macht Robert Sport",
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "پشتی دەمژمێرەکێ",
+     "تێشت خوارن",
+     "ناڤێ بنەمالێ",
+     "خانی / شوقە"
+    ],
+    "answer": 1,
+    "explain": "frühstücken",
+    "audio": "frühstücken"
+   },
+   {
+    "type": "picture",
+    "q": "der Freitag",
+    "options": [
+     "🧹",
+     "5️⃣",
+     "7️⃣",
+     "🕑"
+    ],
+    "answer": 1,
+    "explain": "ئەینی",
+    "audio": "der Freitag"
+   },
+   {
+    "type": "picture",
+    "q": "der Mittwoch",
+    "options": [
+     "7️⃣",
+     "5️⃣",
+     "📺",
+     "3️⃣",
+     "🧹",
+     "1️⃣"
+    ],
+    "answer": 3,
+    "explain": "چارشەمب",
+    "audio": "der Mittwoch"
+   }
+  ],
+  "6": [
+   {
+    "type": "picture",
+    "q": "Ich nehme einen Burger.",
+    "options": [
+     "🌧️",
+     "🍔",
+     "🍟"
+    ],
+    "answer": 1,
+    "explain": "ئەز بەرگەرەکێ دبەم.",
+    "audio": "Ich nehme einen Burger."
+   },
+   {
+    "type": "choice",
+    "q": "Ich habe ___ Auto.",
+    "options": [
+     "keinen",
+     "kein",
+     "keine"
+    ],
+    "answer": 1,
+    "explain": "das Auto ➔ kein (ناگوهۆڕیت)"
+   },
+   {
+    "type": "picture",
+    "q": "Es ist heiß.",
+    "options": [
+     "🥾",
+     "☀️",
+     "🌬️",
+     "🥤",
+     "🥵",
+     "🍟"
+    ],
+    "answer": 4,
+    "explain": "گەلەک گەرمە.",
+    "audio": "Es ist heiß."
+   },
+   {
+    "type": "imgchoice",
+    "q": "🍟",
+    "options": [
+     "Es schneit.",
+     "Pommes mit Ketchup, bitte.",
+     "wandern"
+    ],
+    "answer": 1,
+    "explain": "پەتاتە سوور دگەل کەچەپ، هیڤییە."
+   },
+   {
+    "type": "imgchoice",
+    "q": "🌭",
+    "options": [
+     "Es ist kalt.",
+     "Guten Appetit!",
+     "die Bratwurst"
+    ],
+    "answer": 2,
+    "explain": "سۆسیس"
+   },
+   {
+    "type": "choice",
+    "q": "Ich möchte ___ Tee.",
+    "options": [
+     "eine",
+     "ein",
+     "einen"
+    ],
+    "answer": 2,
+    "explain": "der Tee ➔ einen"
+   },
+   {
+    "type": "picture",
+    "q": "Es regnet.",
+    "options": [
+     "❄️",
+     "☀️",
+     "🌬️",
+     "🌧️"
+    ],
+    "answer": 3,
+    "explain": ""
+   },
+   {
+    "type": "type",
+    "q": "باران دباریت.",
+    "options": null,
+    "answer": "Es regnet.",
+    "explain": "ئێس رێگنەت",
+    "pic": "🌧️"
+   },
+   {
+    "type": "picture",
+    "q": "Ich tanze gern.",
+    "options": [
+     "💃",
+     "❄️"
+    ],
+    "answer": 0,
+    "explain": "ئەز حەز ژ سەمایێ دکەم.",
+    "audio": "Ich tanze gern."
+   },
+   {
+    "type": "truefalse",
+    "q": "Es ist kalt. = گەلەک گەرمە",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "kalt = سار"
+   },
+   {
+    "type": "choice",
+    "q": "Ich nehme ___ Salat.",
+    "options": [
+     "der",
+     "den",
+     "dem"
+    ],
+    "answer": 1,
+    "explain": "der Salat ➔ Akkusativ: den"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "پێشوازی",
+     "ئەز ب کوردی و عەرەبی دئاخڤم.",
+     "وێنە گرتن",
+     "تو نە برسی؟ – بەلێ، ئەز برسیمە!"
+    ],
+    "answer": 2,
+    "explain": "fotografieren",
+    "audio": "fotografieren"
+   },
+   {
+    "type": "choice",
+    "q": "Hast du keinen Hunger? – ___, ich habe Hunger!",
+    "options": [
+     "Nein",
+     "Doch",
+     "Ja"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "چاککرن",
+     "کلیل",
+     "مۆسیقا ژەنین",
+     "حسێب / فاتورە"
+    ],
+    "answer": 2,
+    "explain": "Musik machen",
+    "audio": "Musik machen"
+   }
+  ],
+  "7": [
+   {
+    "type": "imgchoice",
+    "q": "🚌",
+    "options": [
+     "Sie ist mit dem Bus gefahren.",
+     "Schach spielen",
+     "Ich will Deutsch lernen."
+    ],
+    "answer": 0,
+    "explain": "ئەو ب پاسێ چوو."
+   },
+   {
+    "type": "imgchoice",
+    "q": "📝",
+    "options": [
+     "wiederholen",
+     "Ich will Deutsch lernen.",
+     "die Prüfung"
+    ],
+    "answer": 2,
+    "explain": "ئەزموون"
+   },
+   {
+    "type": "choice",
+    "q": "Ich ___ nach Hause gegangen.",
+    "options": [
+     "bin",
+     "habe",
+     "ist"
+    ],
+    "answer": 0,
+    "explain": "gehen ➔ sein"
+   },
+   {
+    "type": "type",
+    "q": "کێک چێکرن",
+    "options": null,
+    "answer": "Kuchen backen",
+    "explain": "کوخن باکن",
+    "pic": "🎂"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەلمانیا",
+     "فستان",
+     "٢٥ پلەیە.",
+     "ئەز دشێم باش ب ئەلمانی باخڤم."
+    ],
+    "answer": 3,
+    "explain": "Ich kann gut Deutsch sprechen.",
+    "audio": "Ich kann gut Deutsch sprechen."
+   },
+   {
+    "type": "choice",
+    "q": "Hast du gestern Musik ___?",
+    "options": [
+     "gehört",
+     "hört",
+     "gehören"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Ich ___ gut schwimmen.",
+    "options": [
+     "kann",
+     "kannst",
+     "können"
+    ],
+    "answer": 0,
+    "explain": "ich kann"
+   },
+   {
+    "type": "order",
+    "q": "schwimmen | Ich | gut | kann",
+    "options": null,
+    "answer": "Ich kann gut schwimmen",
+    "explain": "مۆدال جهێ ٢، کار ل دویماهیێ"
+   },
+   {
+    "type": "choice",
+    "q": "Wir haben Pizza ___.",
+    "options": [
+     "gegessen",
+     "gegesst",
+     "geessen"
+    ],
+    "answer": 0,
+    "explain": "essen ➔ gegessen"
+   },
+   {
+    "type": "picture",
+    "q": "wiederholen",
+    "options": [
+     "❗",
+     "🔁",
+     "📚",
+     "📝"
+    ],
+    "answer": 1,
+    "explain": "دووبارەکرن",
+    "audio": "wiederholen"
+   },
+   {
+    "type": "choice",
+    "q": "Er ___ Deutsch lernen.",
+    "options": [
+     "wollen",
+     "willst",
+     "will"
+    ],
+    "answer": 2,
+    "explain": "er will"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ژدایکبوونا تە پیرۆز بیت!",
+     "ئەم دخوازین بچینە بەرلین.",
+     "فرۆکە",
+     "ژمارەیەکێ وەرگرن."
+    ],
+    "answer": 1,
+    "explain": "Wir wollen nach Berlin fahren.",
+    "audio": "Wir wollen nach Berlin fahren."
+   },
+   {
+    "type": "picture",
+    "q": "am Computer arbeiten",
+    "options": [
+     "📝",
+     "💻",
+     "😄",
+     "🎶",
+     "🎨",
+     "🗣️"
+    ],
+    "answer": 1,
+    "explain": "ل سەر کۆمپیوتەری کار کرن",
+    "audio": "am Computer arbeiten"
+   },
+   {
+    "type": "picture",
+    "q": "Das finde ich wichtig.",
+    "options": [
+     "❗",
+     "🚗",
+     "🎯"
+    ],
+    "answer": 0,
+    "explain": "ئەز ڤێ گرنگ دبینم.",
+    "audio": "Das finde ich wichtig."
+   }
+  ],
+  "8": [
+   {
+    "type": "choice",
+    "q": "Gestern ___ ich krank.",
+    "options": [
+     "bin",
+     "hatte",
+     "war"
+    ],
+    "answer": 2,
+    "explain": "sein ➔ war"
+   },
+   {
+    "type": "choice",
+    "q": "der Lehrer ➔ die ___",
+    "options": [
+     "Lehrerinn",
+     "Lehrerine",
+     "Lehrerin"
+    ],
+    "answer": 2,
+    "explain": ""
+   },
+   {
+    "type": "imgchoice",
+    "q": "🗓️",
+    "options": [
+     "der Schüler / die Schülerin",
+     "Ist die Stelle noch frei?",
+     "Ich arbeite seit zwei Jahren hier."
+    ],
+    "answer": 2,
+    "explain": "دوو سالە ئەز ل ڤێرێ کار دکەم."
+   },
+   {
+    "type": "picture",
+    "q": "der Koch",
+    "options": [
+     "👮",
+     "👩‍🏫",
+     "🧑‍🍳",
+     "👨‍⚕️"
+    ],
+    "answer": 2,
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "نەه و چارەکە.",
+     "سۆر",
+     "سترانبێژی",
+     "داخوازیا کاری"
+    ],
+    "answer": 3,
+    "explain": "die Bewerbung",
+    "audio": "die Bewerbung"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "دەمێ من نەبوو.",
+     "کوڕ",
+     "مەلەڤانی",
+     "بانک"
+    ],
+    "answer": 0,
+    "explain": "Ich hatte keine Zeit.",
+    "audio": "Ich hatte keine Zeit."
+   },
+   {
+    "type": "choice",
+    "q": "Ich arbeite ___ Kellner.",
+    "options": [
+     "als",
+     "für",
+     "bei"
+    ],
+    "answer": 0,
+    "explain": "als = وەکی"
+   },
+   {
+    "type": "picture",
+    "q": "Er war krank.",
+    "options": [
+     "🤒",
+     "👩‍🏫"
+    ],
+    "answer": 0,
+    "explain": "ئەو نەساخ بوو.",
+    "audio": "Er war krank."
+   },
+   {
+    "type": "picture",
+    "q": "die Krankenschwester",
+    "options": [
+     "👩‍⚕️",
+     "🕰️",
+     "🤒",
+     "🎒"
+    ],
+    "answer": 0,
+    "explain": "پەرستار",
+    "audio": "die Krankenschwester"
+   },
+   {
+    "type": "type",
+    "q": "پەرستار",
+    "options": null,
+    "answer": "die Krankenschwester",
+    "explain": "دی کرانکن شڤێستەر",
+    "pic": "👩‍⚕️"
+   },
+   {
+    "type": "choice",
+    "q": "Ich arbeite ___ zwei Jahren hier.",
+    "options": [
+     "seit",
+     "für",
+     "vor"
+    ],
+    "answer": 0,
+    "explain": "seit = ژ … ڤە"
+   },
+   {
+    "type": "picture",
+    "q": "Wo warst du gestern?",
+    "options": [
+     "👮",
+     "🏙️",
+     "🗓️",
+     "🙋",
+     "📈",
+     "📞"
+    ],
+    "answer": 1,
+    "explain": "تو دوهی ل کیڤە بووی؟",
+    "audio": "Wo warst du gestern?"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🔍",
+    "options": [
+     "Ich bin arbeitslos.",
+     "Ist die Stelle noch frei?",
+     "der Kellner / die Kellnerin"
+    ],
+    "answer": 0,
+    "explain": "ئەز بێکارم."
+   },
+   {
+    "type": "choice",
+    "q": "Wir ___ keine Zeit.",
+    "options": [
+     "hatte",
+     "hattet",
+     "hatten"
+    ],
+    "answer": 2,
+    "explain": "wir hatten"
+   }
+  ],
+  "9": [
+   {
+    "type": "type",
+    "q": "هۆتێل",
+    "options": null,
+    "answer": "das Hotel",
+    "explain": "داس هۆتێل",
+    "pic": "🏨"
+   },
+   {
+    "type": "choice",
+    "q": "Hier ___ man nicht rauchen.",
+    "options": [
+     "darf",
+     "kann",
+     "muss"
+    ],
+    "answer": 0,
+    "explain": "dürfen = دەستووری"
+   },
+   {
+    "type": "picture",
+    "q": "der Schlüssel",
+    "options": [
+     "🗝️",
+     "🚭",
+     "🏛️"
+    ],
+    "answer": 0,
+    "explain": "کلیل",
+    "audio": "der Schlüssel"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🛎️",
+    "options": [
+     "Warten Sie, bitte!",
+     "die Rezeption",
+     "Hilf mir, bitte!"
+    ],
+    "answer": 1,
+    "explain": "پێشوازی"
+   },
+   {
+    "type": "choice",
+    "q": "Imperativ (du) von kommen:",
+    "options": [
+     "Kommen!",
+     "Komm!",
+     "Kommst!"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Du ___ den Antrag ausfüllen.",
+    "options": [
+     "muss",
+     "musst",
+     "müsst"
+    ],
+    "answer": 1,
+    "explain": "du musst"
+   },
+   {
+    "type": "imgchoice",
+    "q": "👂",
+    "options": [
+     "Sie müssen den Antrag ausfüllen.",
+     "Hör zu!",
+     "Wann muss ich abreisen?"
+    ],
+    "answer": 1,
+    "explain": "گوهـ بدە!"
+   },
+   {
+    "type": "choice",
+    "q": "Imperativ (du) von helfen:",
+    "options": [
+     "Hilfst!",
+     "Helf!",
+     "Hilf!"
+    ],
+    "answer": 2,
+    "explain": "helfen ➔ hilf"
+   },
+   {
+    "type": "picture",
+    "q": "Ich habe ein Zimmer reserviert.",
+    "options": [
+     "👀",
+     "🛑",
+     "📅",
+     "📄",
+     "🛎️",
+     "🙏"
+    ],
+    "answer": 2,
+    "explain": "من ژوورەک گرتییە.",
+    "audio": "Ich habe ein Zimmer reserviert."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "چاوانی؟",
+     "بەرێخۆ بدە!",
+     "تەماشەی تەلەفزیۆنێ کرن",
+     "هیڤییە هاریکاریا من بکە!"
+    ],
+    "answer": 1,
+    "explain": "Sieh mal!",
+    "audio": "Sieh mal!"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "پاسپۆرت",
+     "کراس",
+     "مووچە چەندە؟",
+     "ناڤێ من ئازادە."
+    ],
+    "answer": 0,
+    "explain": "der Pass",
+    "audio": "der Pass"
+   },
+   {
+    "type": "picture",
+    "q": "Kann man hier mit Karte zahlen?",
+    "options": [
+     "💳",
+     "🙏"
+    ],
+    "answer": 0,
+    "explain": "ما دشێین ل ڤێرێ ب کارتێ بدەین؟",
+    "audio": "Kann man hier mit Karte zahlen?"
+   },
+   {
+    "type": "picture",
+    "q": "der Schlüssel",
+    "options": [
+     "🗝️",
+     "🧳",
+     "🛂",
+     "🛎️"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "order",
+    "q": "ausfüllen | müssen | den Antrag | Sie",
+    "options": null,
+    "answer": "Sie müssen den Antrag ausfüllen",
+    "explain": "Satzklammer"
+   }
+  ],
+  "10": [
+   {
+    "type": "choice",
+    "q": "Der Arzt sagt, ich ___ im Bett bleiben.",
+    "options": [
+     "sollst",
+     "soll",
+     "sollen"
+    ],
+    "answer": 1,
+    "explain": "ich soll"
+   },
+   {
+    "type": "choice",
+    "q": "Plural: der Zahn ➔ die ___",
+    "options": [
+     "Zahnen",
+     "Zähne",
+     "Zahns"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "کۆخک",
+     "هەوا عەورە.",
+     "ژوورا زارۆکان",
+     "سەرۆک / بەرپرس"
+    ],
+    "answer": 0,
+    "explain": "der Husten",
+    "audio": "der Husten"
+   },
+   {
+    "type": "imgchoice",
+    "q": "💐",
+    "options": [
+     "Gute Besserung!",
+     "das Bein",
+     "der Kopf"
+    ],
+    "answer": 0,
+    "explain": "خودێ ساخیێ بدەتە تە!"
+   },
+   {
+    "type": "imgchoice",
+    "q": "👁️",
+    "options": [
+     "Gute Besserung!",
+     "der Bauch",
+     "das Auge"
+    ],
+    "answer": 2,
+    "explain": "چاڤ"
+   },
+   {
+    "type": "type",
+    "q": "خودێ ساخیێ بدەتە تە!",
+    "options": null,
+    "answer": "Gute Besserung!",
+    "explain": "گوتە بێسەرونگ",
+    "pic": "💐"
+   },
+   {
+    "type": "choice",
+    "q": "Ich habe ___ Termin um 10 Uhr.",
+    "options": [
+     "eine",
+     "ein",
+     "einen"
+    ],
+    "answer": 2,
+    "explain": "der Termin ➔ einen"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "خوارنا من یا دلخواز دۆلمەیە.",
+     "ل قاتا ئێکێ پێلاڤ هەنە.",
+     "سەر",
+     "چارشەمب"
+    ],
+    "answer": 2,
+    "explain": "der Kopf",
+    "audio": "der Kopf"
+   },
+   {
+    "type": "picture",
+    "q": "das Ohr",
+    "options": [
+     "👂",
+     "👁️",
+     "🤕",
+     "🧠"
+    ],
+    "answer": 0,
+    "explain": "گوهـ",
+    "audio": "das Ohr"
+   },
+   {
+    "type": "picture",
+    "q": "Rufen Sie einen Krankenwagen!",
+    "options": [
+     "👃",
+     "🚑",
+     "✋",
+     "🏥"
+    ],
+    "answer": 1,
+    "explain": "ئەمبولانسێ بانگ بکەن!",
+    "audio": "Rufen Sie einen Krankenwagen!"
+   },
+   {
+    "type": "picture",
+    "q": "das Auge",
+    "options": [
+     "👁️",
+     "👂",
+     "✋",
+     "👃"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "picture",
+    "q": "Geht es morgen um 10 Uhr?",
+    "options": [
+     "👃",
+     "⏱️",
+     "🦷",
+     "💐",
+     "❌",
+     "🏥"
+    ],
+    "answer": 1,
+    "explain": "سوبەهی ل دەمژمێر ١٠ دبیت؟",
+    "audio": "Geht es morgen um 10 Uhr?"
+   },
+   {
+    "type": "choice",
+    "q": "Sein Kopf tut weh. ➔ سەرێ ___ دئێشیت.",
+    "options": [
+     "من",
+     "وێ",
+     "وی"
+    ],
+    "answer": 2,
+    "explain": "sein = یێ وی"
+   },
+   {
+    "type": "truefalse",
+    "q": "Gute Besserung! = خودێ ساخیێ بدەتە تە",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": ""
+   }
+  ],
+  "11": [
+   {
+    "type": "picture",
+    "q": "die Post",
+    "options": [
+     "📮",
+     "⬅️",
+     "🚌",
+     "🏪",
+     "💊",
+     "🐈"
+    ],
+    "answer": 0,
+    "explain": "پۆستە",
+    "audio": "die Post"
+   },
+   {
+    "type": "picture",
+    "q": "links",
+    "options": [
+     "⬅️",
+     "🚌",
+     "🏦",
+     "🐈"
+    ],
+    "answer": 0,
+    "explain": "چەپ",
+    "audio": "links"
+   },
+   {
+    "type": "picture",
+    "q": "links",
+    "options": [
+     "⬅️",
+     "🔄",
+     "➡️",
+     "⬆️"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Wie komme ich ___ Bahnhof?",
+    "options": [
+     "zur",
+     "in",
+     "zum"
+    ],
+    "answer": 2,
+    "explain": "zu + dem = zum"
+   },
+   {
+    "type": "picture",
+    "q": "Ich fahre mit dem Fahrrad.",
+    "options": [
+     "🚊",
+     "🚲",
+     "🌉"
+    ],
+    "answer": 1,
+    "explain": "ئەز ب پاسکیلێ دچم.",
+    "audio": "Ich fahre mit dem Fahrrad."
+   },
+   {
+    "type": "choice",
+    "q": "Die Katze ist ___ dem Tisch. (🐈⬇️)",
+    "options": [
+     "neben",
+     "unter",
+     "über"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "گەلەک خۆش بوو!",
+     "با هەیە.",
+     "پشیک ل بن مێزێیە.",
+     "گارسۆن"
+    ],
+    "answer": 2,
+    "explain": "Die Katze ist unter dem Tisch.",
+    "audio": "Die Katze ist unter dem Tisch."
+   },
+   {
+    "type": "picture",
+    "q": "die Apotheke",
+    "options": [
+     "💊",
+     "📮",
+     "🏦",
+     "🥖"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Ich fahre mit ___ U-Bahn.",
+    "options": [
+     "die",
+     "dem",
+     "der"
+    ],
+    "answer": 2,
+    "explain": "die ➔ der"
+   },
+   {
+    "type": "choice",
+    "q": "Ich fahre mit ___ Bus.",
+    "options": [
+     "der",
+     "dem",
+     "den"
+    ],
+    "answer": 1,
+    "explain": "mit + Dativ: der ➔ dem"
+   },
+   {
+    "type": "type",
+    "q": "تاکسی",
+    "options": null,
+    "answer": "das Taxi",
+    "explain": "داس تاکسی",
+    "pic": "🚕"
+   },
+   {
+    "type": "imgchoice",
+    "q": "📍",
+    "options": [
+     "Dann die erste Straße links.",
+     "Das ist nicht weit.",
+     "die Bank"
+    ],
+    "answer": 1,
+    "explain": "ئەڤە نە دوورە."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "کوڕ",
+     "گوهـ بدە!",
+     "تاکسی",
+     "پێنجشەمب"
+    ],
+    "answer": 2,
+    "explain": "das Taxi",
+    "audio": "das Taxi"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🥖",
+    "options": [
+     "Dann die erste Straße links.",
+     "die Bäckerei",
+     "die Bank"
+    ],
+    "answer": 1,
+    "explain": "نانەواخانە"
+   }
+  ],
+  "12": [
+   {
+    "type": "truefalse",
+    "q": "«vor einer Woche» = پشتی حەفتیەکێ",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "vor = بەری"
+   },
+   {
+    "type": "choice",
+    "q": "___ Sie mir helfen?",
+    "options": [
+     "Konnten",
+     "Könnten",
+     "Kannst"
+    ],
+    "answer": 1,
+    "explain": "ب رێز: Könnten Sie …?"
+   },
+   {
+    "type": "picture",
+    "q": "Das ist ein Fehler.",
+    "options": [
+     "🍽️",
+     "🧺",
+     "🙁"
+    ],
+    "answer": 2,
+    "explain": "ئەڤە خەلەتیەکە.",
+    "audio": "Das ist ein Fehler."
+   },
+   {
+    "type": "picture",
+    "q": "die Rechnung",
+    "options": [
+     "📦",
+     "🧾",
+     "🛠️",
+     "🧼"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "___ dem Kurs gehe ich nach Hause.",
+    "options": [
+     "Vor",
+     "Ab",
+     "Nach"
+    ],
+    "answer": 2,
+    "explain": "nach = پشتی"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🔁",
+    "options": [
+     "Mein Handy ist kaputt.",
+     "Wann ist das Auto fertig?",
+     "umtauschen"
+    ],
+    "answer": 2,
+    "explain": "گوهۆڕین"
+   },
+   {
+    "type": "type",
+    "q": "گوهۆڕین",
+    "options": null,
+    "answer": "umtauschen",
+    "explain": "ئوم تاوشن",
+    "pic": "🔁"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "تو حەز ژ چ خوارنێ دکەی؟",
+     "ئەز حەز ژ برنجی دکەم.",
+     "ژ سوبەهی ڤە",
+     "ناڤنیشان"
+    ],
+    "answer": 2,
+    "explain": "ab morgen",
+    "audio": "ab morgen"
+   },
+   {
+    "type": "choice",
+    "q": "Machen Sie bitte das Licht ___. (💡)",
+    "options": [
+     "an",
+     "zu",
+     "aus"
+    ],
+    "answer": 0,
+    "explain": "anmachen = هەلکرن"
+   },
+   {
+    "type": "imgchoice",
+    "q": "📨",
+    "options": [
+     "Können Sie die Wohnung putzen?",
+     "Ich habe eine Nachricht auf der Mailbox.",
+     "Das ist ein Fehler."
+    ],
+    "answer": 1,
+    "explain": "نامەیەک ل سەر مەیلبۆکسێ من هەیە."
+   },
+   {
+    "type": "picture",
+    "q": "bis Freitag",
+    "options": [
+     "🗓️",
+     "🚚",
+     "💡",
+     "🧾",
+     "🍽️",
+     "🌅"
+    ],
+    "answer": 0,
+    "explain": "هەتا ئەینیێ",
+    "audio": "bis Freitag"
+   },
+   {
+    "type": "picture",
+    "q": "vor einer Woche",
+    "options": [
+     "🧾",
+     "📨",
+     "⏪"
+    ],
+    "answer": 2,
+    "explain": "بەری حەفتیەکێ",
+    "audio": "vor einer Woche"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "چ؟ جارەکا دی؟",
+     "هیڤییە دشێن ڤێ کۆپی بکەن؟",
+     "ئەز دشێم ژڤانی پاشڤە ببەم؟",
+     "باران دباریت."
+    ],
+    "answer": 1,
+    "explain": "Würden Sie das bitte kopieren?",
+    "audio": "Würden Sie das bitte kopieren?"
+   },
+   {
+    "type": "choice",
+    "q": "Ich komme ___ einer Stunde.",
+    "options": [
+     "seit",
+     "in",
+     "vor"
+    ],
+    "answer": 1,
+    "explain": "in = پشتی"
+   }
+  ],
+  "13": [
+   {
+    "type": "imgchoice",
+    "q": "🧦",
+    "options": [
+     "der Berg",
+     "die Socken",
+     "Am liebsten fahre ich ans Meer."
+    ],
+    "answer": 1,
+    "explain": "گۆرە"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "چیا",
+     "سەر",
+     "ماسی",
+     "وێنە گرتن"
+    ],
+    "answer": 0,
+    "explain": "der Berg",
+    "audio": "der Berg"
+   },
+   {
+    "type": "choice",
+    "q": "gut – ___ – am besten",
+    "options": [
+     "mehr",
+     "besser",
+     "guter"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "picture",
+    "q": "die Hose",
+    "options": [
+     "👖",
+     "👍"
+    ],
+    "answer": 0,
+    "explain": "پانتۆل",
+    "audio": "die Hose"
+   },
+   {
+    "type": "picture",
+    "q": "gern – lieber – am liebsten",
+    "options": [
+     "❤️",
+     "👌"
+    ],
+    "answer": 0,
+    "explain": "حەز – پتر حەز – ژ هەمیان پتر",
+    "audio": "gern – lieber – am liebsten"
+   },
+   {
+    "type": "imgchoice",
+    "q": "😍",
+    "options": [
+     "viel – mehr – am meisten",
+     "gern – lieber – am liebsten",
+     "Die Jacke gefällt mir."
+    ],
+    "answer": 2,
+    "explain": "جاکێت ب دلێ منە."
+   },
+   {
+    "type": "type",
+    "q": "گوند",
+    "options": null,
+    "answer": "das Dorf",
+    "explain": "داس دۆرف",
+    "pic": "🏘️"
+   },
+   {
+    "type": "choice",
+    "q": "___ Hose meinst du? – Diese hier.",
+    "options": [
+     "Welche",
+     "Welches",
+     "Welcher"
+    ],
+    "answer": 0,
+    "explain": "die Hose ➔ welche"
+   },
+   {
+    "type": "choice",
+    "q": "Das Hemd gehört ___. (ئەو، نێر)",
+    "options": [
+     "ihm",
+     "er",
+     "ihn"
+    ],
+    "answer": 0,
+    "explain": "er ➔ ihm"
+   },
+   {
+    "type": "choice",
+    "q": "Die Jacke gefällt ___. (ئەز)",
+    "options": [
+     "mich",
+     "mir",
+     "ich"
+    ],
+    "answer": 1,
+    "explain": "gefallen + Dativ"
+   },
+   {
+    "type": "picture",
+    "q": "das Kleid",
+    "options": [
+     "👗",
+     "🧥",
+     "👔",
+     "👖"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "picture",
+    "q": "das Hemd",
+    "options": [
+     "👔",
+     "🛍️",
+     "🪞",
+     "🏬",
+     "🌟",
+     "👌"
+    ],
+    "answer": 0,
+    "explain": "کراس",
+    "audio": "das Hemd"
+   },
+   {
+    "type": "choice",
+    "q": "Ich trinke ___ Tee. (پتر حەز دکەم)",
+    "options": [
+     "gern",
+     "lieber",
+     "am liebsten"
+    ],
+    "answer": 1,
+    "explain": ""
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "سەر",
+     "هەتا گلۆپا هاتوچۆیێ بچن.",
+     "گوند",
+     "دایک"
+    ],
+    "answer": 2,
+    "explain": "das Dorf",
+    "audio": "das Dorf"
+   }
+  ],
+  "14": [
+   {
+    "type": "picture",
+    "q": "Frohes neues Jahr!",
+    "options": [
+     "🎆",
+     "😔",
+     "🌙",
+     "🎉",
+     "🌸",
+     "1️⃣"
+    ],
+    "answer": 0,
+    "explain": "سالا نوو پیرۆز بیت!",
+    "audio": "Frohes neues Jahr!"
+   },
+   {
+    "type": "type",
+    "q": "کانوونا دووێ",
+    "options": null,
+    "answer": "der Januar",
+    "explain": "دێر یانوار",
+    "pic": "❄️"
+   },
+   {
+    "type": "picture",
+    "q": "die Einladung",
+    "options": [
+     "🎂",
+     "🕖",
+     "✉️",
+     "🙏"
+    ],
+    "answer": 2,
+    "explain": "داخوازنامە / بانگهێشتن",
+    "audio": "die Einladung"
+   },
+   {
+    "type": "truefalse",
+    "q": "Newroz ist am 21. März.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Er ___ 30 Jahre alt.",
+    "options": [
+     "werdet",
+     "wird",
+     "werde"
+    ],
+    "answer": 1,
+    "explain": "werden ➔ er wird"
+   },
+   {
+    "type": "imgchoice",
+    "q": "🥳",
+    "options": [
+     "Alles Gute zum Geburtstag!",
+     "Ich lade dich zu meiner Party ein.",
+     "der Dezember"
+    ],
+    "answer": 1,
+    "explain": "ئەز تە بۆ ئاهەنگا خۆ بانگهێشت دکەم."
+   },
+   {
+    "type": "imgchoice",
+    "q": "🎁",
+    "options": [
+     "Ich komme gern!",
+     "das Geschenk",
+     "Frohes neues Jahr!"
+    ],
+    "answer": 1,
+    "explain": "دیاری"
+   },
+   {
+    "type": "choice",
+    "q": "Am ___ Mai (3.)",
+    "options": [
+     "dritte",
+     "dreiten",
+     "dritten"
+    ],
+    "answer": 2,
+    "explain": "am + -ten"
+   },
+   {
+    "type": "picture",
+    "q": "Herzlichen Glückwunsch!",
+    "options": [
+     "🎉",
+     "1️⃣",
+     "🌸"
+    ],
+    "answer": 0,
+    "explain": "پیرۆز بیت!",
+    "audio": "Herzlichen Glückwunsch!"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "پەتاتە",
+     "سەر",
+     "کانوونا دووێ",
+     "چەپ"
+    ],
+    "answer": 2,
+    "explain": "der Januar",
+    "audio": "der Januar"
+   },
+   {
+    "type": "choice",
+    "q": "Ich habe ___ lieb. (تو)",
+    "options": [
+     "dich",
+     "dir",
+     "du"
+    ],
+    "answer": 0,
+    "explain": "Akkusativ: du ➔ dich"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەڤە نە دوورە.",
+     "دەریا",
+     "چریا ئێکێ",
+     "کانوونا دووێ"
+    ],
+    "answer": 2,
+    "explain": "der Oktober",
+    "audio": "der Oktober"
+   },
+   {
+    "type": "picture",
+    "q": "das Geschenk",
+    "options": [
+     "🎁",
+     "✉️",
+     "🎂",
+     "💒"
+    ],
+    "answer": 0,
+    "explain": ""
+   },
+   {
+    "type": "choice",
+    "q": "Ich komme nicht, ___ ich bin krank.",
+    "options": [
+     "denn",
+     "weil",
+     "aber"
+    ],
+    "answer": 0,
+    "explain": "denn + کار ل جهێ ٢"
+   }
+  ]
+ },
+ "final": {
+  "titleKu": "ئەزموونا A1 (وەکی Goethe Start Deutsch 1)",
+  "parts": [
+   {
+    "id": "hoeren",
+    "titleKu": "🎧 گوهداری (Hören)",
+    "items": [
+     {
+      "type": "listen",
+      "q": "🎧",
+      "options": [
+       "١٠:٣٠",
+       "١٠:١٥",
+       "٩:٣٠"
+      ],
+      "answer": 0,
+      "explain": "halb elf = 10:30",
+      "audio": "Der Kurs beginnt um halb elf."
+     },
+     {
+      "type": "picture",
+      "q": "🎧",
+      "options": [
+       "🚕",
+       "🚆",
+       "🚲",
+       "🚌"
+      ],
+      "answer": 1,
+      "explain": "",
+      "audio": "Ich fahre morgen mit dem Zug nach Hamburg."
+     },
+     {
+      "type": "listen",
+      "q": "🎧",
+      "options": [
+       "ل بەر سووپەرمارکێتێ",
+       "ل پشت بانکێ",
+       "ل تەنشتا پۆستێ"
+      ],
+      "answer": 0,
+      "explain": "vor dem Supermarkt",
+      "audio": "Die Haltestelle ist vor dem Supermarkt."
+     },
+     {
+      "type": "picture",
+      "q": "🎧",
+      "options": [
+       "❄️",
+       "☀️",
+       "🌧️"
+      ],
+      "answer": 2,
+      "explain": "",
+      "audio": "Heute regnet es den ganzen Tag."
+     },
+     {
+      "type": "listen",
+      "q": "🎧",
+      "options": [
+       "١٥ یۆرۆ",
+       "٥٤ یۆرۆ",
+       "٤٥ یۆرۆ"
+      ],
+      "answer": 2,
+      "explain": "fünfundvierzig = 45",
+      "audio": "Die Jacke kostet fünfundvierzig Euro."
+     },
+     {
+      "type": "listen",
+      "q": "🎧",
+      "options": [
+       "دووشەمبێ",
+       "ئەینیێ",
+       "شەمبیێ"
+      ],
+      "answer": 0,
+      "explain": "Montag",
+      "audio": "Der Arzt hat am Montag einen Termin frei."
+     }
+    ]
+   },
+   {
+    "id": "lesen",
+    "titleKu": "📖 خواندن (Lesen)",
+    "items": [
+     {
+      "type": "truefalse",
+      "q": "📌 Praxis Dr. Weber — Mo–Fr 8–12 Uhr, Mi auch 15–18 Uhr.\n\nAm Mittwochnachmittag ist die Praxis geöffnet.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 0,
+      "explain": "Mi 15–18 Uhr"
+     },
+     {
+      "type": "truefalse",
+      "q": "📌 Bäckerei Sonne: Sonntag geschlossen.\n\nMan kann am Sonntag Brot kaufen.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 1,
+      "explain": "geschlossen = گرتی"
+     },
+     {
+      "type": "truefalse",
+      "q": "✉️ Liebe Sara, ich habe am Samstag Geburtstag. Kommst du um 19 Uhr? Viele Grüße, Dilan\n\nDie Party ist am Samstagabend.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 0,
+      "explain": ""
+     },
+     {
+      "type": "truefalse",
+      "q": "✉️ Hallo Tim, ich bin krank und kann heute nicht zum Kurs kommen. Lara\n\nLara kommt heute zum Kurs.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 1,
+      "explain": "nicht kommen"
+     },
+     {
+      "type": "truefalse",
+      "q": "🏠 Wohnung, 2 Zimmer, Küche, Bad, Balkon. 650 € warm.\n\nDie Wohnung hat keinen Balkon.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 1,
+      "explain": ""
+     },
+     {
+      "type": "truefalse",
+      "q": "🚆 Achtung: Der Zug nach Berlin fährt heute von Gleis 5.\n\nDer Zug fährt von Gleis 5.",
+      "options": [
+       "Richtig",
+       "Falsch"
+      ],
+      "answer": 0,
+      "explain": ""
+     }
+    ]
+   },
+   {
+    "id": "schreiben",
+    "titleKu": "✍️ نڤیسین (Schreiben)",
+    "items": [
+     {
+      "type": "type",
+      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nWohnort: ___",
+      "options": null,
+      "answer": "Köln",
+      "explain": "Wohnort = جهێ ئاکنجیبوونێ"
+     },
+     {
+      "type": "type",
+      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nVorname: ___",
+      "options": null,
+      "answer": "Azad",
+      "explain": "Vorname = ناڤێ ئێکێ"
+     },
+     {
+      "type": "type",
+      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nFamilienname: ___",
+      "options": null,
+      "answer": "Barwari",
+      "explain": ""
+     },
+     {
+      "type": "type",
+      "q": "Ich ___ aus Kurdistan. (kommen)",
+      "options": null,
+      "answer": "komme",
+      "explain": "ich ➔ -e"
+     },
+     {
+      "type": "type",
+      "q": "Wir ___ zwei Kinder. (haben)",
+      "options": null,
+      "answer": "haben",
+      "explain": ""
+     }
+    ]
+   },
+   {
+    "id": "sprechen",
+    "titleKu": "🗣️ ئاخفتن (Sprechen) — رستێ ئاڤا بکە",
+    "items": [
+     {
+      "type": "order",
+      "q": "heißen | Wie | Sie",
+      "options": null,
+      "answer": "Wie heißen Sie",
+      "explain": "پرسیارا W"
+     },
+     {
+      "type": "order",
+      "q": "Sie | aus | Woher | kommen",
+      "options": null,
+      "answer": "Woher kommen Sie",
+      "explain": ""
+     },
+     {
+      "type": "order",
+      "q": "seit | Deutsch | Ich | Monaten | lerne | drei",
+      "options": null,
+      "answer": "Ich lerne seit drei Monaten Deutsch",
+      "explain": ""
+     },
+     {
+      "type": "order",
+      "q": "mir | Sie | helfen | Könnten",
+      "options": null,
+      "answer": "Könnten Sie mir helfen",
+      "explain": ""
+     }
+    ]
+   }
+  ]
+ },
+ "placement": [
+  {
+   "type": "choice",
+   "q": "Ich ___ Azad.",
+   "options": [
+    "heiße",
+    "heißt",
+    "heißen"
+   ],
+   "answer": 0,
+   "explain": "ich ➔ -e",
+   "level": 1
+  },
+  {
+   "type": "choice",
+   "q": "Wie ___ du?",
+   "options": [
+    "heißen",
+    "heißt",
+    "heiße"
+   ],
+   "answer": 1,
+   "explain": "du ➔ -st (heiß+t)",
+   "level": 1
+  },
+  {
+   "type": "choice",
+   "q": "Das ist ___ Mutter.",
+   "options": [
+    "meinen",
+    "meine",
+    "mein"
+   ],
+   "answer": 1,
+   "explain": "die Mutter ➔ meine",
+   "level": 2
+  },
+  {
+   "type": "choice",
+   "q": "Er ___ in Berlin.",
+   "options": [
+    "leben",
+    "lebst",
+    "lebt"
+   ],
+   "answer": 2,
+   "explain": "er ➔ -t",
+   "level": 2
+  },
+  {
+   "type": "choice",
+   "q": "Das ist ___ Banane.",
+   "options": [
+    "einen",
+    "ein",
+    "eine"
+   ],
+   "answer": 2,
+   "explain": "die Banane ➔ eine",
+   "level": 3
+  },
+  {
+   "type": "choice",
+   "q": "Das ist doch ___ Ei!",
+   "options": [
+    "nicht",
+    "keine",
+    "kein"
+   ],
+   "answer": 2,
+   "explain": "das Ei ➔ kein",
+   "level": 3
+  },
+  {
+   "type": "choice",
+   "q": "___ Küche ist groß.",
+   "options": [
+    "Der",
+    "Das",
+    "Die"
+   ],
+   "answer": 2,
+   "explain": "die Küche",
+   "level": 4
+  },
+  {
+   "type": "choice",
+   "q": "___ Bett ist neu.",
+   "options": [
+    "Die",
+    "Das",
+    "Der"
+   ],
+   "answer": 1,
+   "explain": "das Bett",
+   "level": 4
+  },
+  {
+   "type": "choice",
+   "q": "Ich stehe um 7 Uhr ___.",
+   "options": [
+    "ein",
+    "an",
+    "auf"
+   ],
+   "answer": 2,
+   "explain": "aufstehen",
+   "level": 5
+  },
+  {
+   "type": "choice",
+   "q": "Der Kurs fängt ___ 9 Uhr an.",
+   "options": [
+    "um",
+    "im",
+    "am"
+   ],
+   "answer": 0,
+   "explain": "um + دەمژمێر",
+   "level": 5
+  },
+  {
+   "type": "choice",
+   "q": "Ich nehme ___ Salat.",
+   "options": [
+    "den",
+    "der",
+    "dem"
+   ],
+   "answer": 0,
+   "explain": "der Salat ➔ Akkusativ: den",
+   "level": 6
+  },
+  {
+   "type": "choice",
+   "q": "Ich möchte ___ Tee.",
+   "options": [
+    "ein",
+    "einen",
+    "eine"
+   ],
+   "answer": 1,
+   "explain": "der Tee ➔ einen",
+   "level": 6
+  },
+  {
+   "type": "choice",
+   "q": "Ich ___ gut schwimmen.",
+   "options": [
+    "kann",
+    "können",
+    "kannst"
+   ],
+   "answer": 0,
+   "explain": "ich kann",
+   "level": 7
+  },
+  {
+   "type": "choice",
+   "q": "Er ___ Deutsch lernen.",
+   "options": [
+    "will",
+    "wollen",
+    "willst"
+   ],
+   "answer": 0,
+   "explain": "er will",
+   "level": 7
+  },
+  {
+   "type": "choice",
+   "q": "der Lehrer ➔ die ___",
+   "options": [
+    "Lehrerine",
+    "Lehrerin",
+    "Lehrerinn"
+   ],
+   "answer": 1,
+   "explain": "",
+   "level": 8
+  },
+  {
+   "type": "choice",
+   "q": "Ich arbeite ___ zwei Jahren hier.",
+   "options": [
+    "vor",
+    "seit",
+    "für"
+   ],
+   "answer": 1,
+   "explain": "seit = ژ … ڤە",
+   "level": 8
+  },
+  {
+   "type": "choice",
+   "q": "Hier ___ man nicht rauchen.",
+   "options": [
+    "kann",
+    "muss",
+    "darf"
+   ],
+   "answer": 2,
+   "explain": "dürfen = دەستووری",
+   "level": 9
+  },
+  {
+   "type": "choice",
+   "q": "Du ___ den Antrag ausfüllen.",
+   "options": [
+    "muss",
+    "müsst",
+    "musst"
+   ],
+   "answer": 2,
+   "explain": "du musst",
+   "level": 9
+  },
+  {
+   "type": "picture",
+   "q": "das Auge",
+   "options": [
+    "👂",
+    "👃",
+    "👁️",
+    "✋"
+   ],
+   "answer": 2,
+   "explain": "",
+   "level": 10
+  },
+  {
+   "type": "choice",
+   "q": "Sein Kopf tut weh. ➔ سەرێ ___ دئێشیت.",
+   "options": [
+    "من",
+    "وی",
+    "وێ"
+   ],
+   "answer": 1,
+   "explain": "sein = یێ وی",
+   "level": 10
+  },
+  {
+   "type": "choice",
+   "q": "Ich fahre mit ___ Bus.",
+   "options": [
+    "dem",
+    "den",
+    "der"
+   ],
+   "answer": 0,
+   "explain": "mit + Dativ: der ➔ dem",
+   "level": 11
+  },
+  {
+   "type": "choice",
+   "q": "Ich fahre mit ___ U-Bahn.",
+   "options": [
+    "die",
+    "dem",
+    "der"
+   ],
+   "answer": 2,
+   "explain": "die ➔ der",
+   "level": 11
+  },
+  {
+   "type": "choice",
+   "q": "___ Sie mir helfen?",
+   "options": [
+    "Kannst",
+    "Könnten",
+    "Konnten"
+   ],
+   "answer": 1,
+   "explain": "ب رێز: Könnten Sie …?",
+   "level": 12
+  },
+  {
+   "type": "choice",
+   "q": "Ich komme ___ einer Stunde.",
+   "options": [
+    "in",
+    "seit",
+    "vor"
+   ],
+   "answer": 0,
+   "explain": "in = پشتی",
+   "level": 12
+  },
+  {
+   "type": "choice",
+   "q": "Die Jacke gefällt ___. (ئەز)",
+   "options": [
+    "mir",
+    "ich",
+    "mich"
+   ],
+   "answer": 0,
+   "explain": "gefallen + Dativ",
+   "level": 13
+  },
+  {
+   "type": "choice",
+   "q": "Das Hemd gehört ___. (ئەو، نێر)",
+   "options": [
+    "ihn",
+    "er",
+    "ihm"
+   ],
+   "answer": 2,
+   "explain": "er ➔ ihm",
+   "level": 13
+  },
+  {
+   "type": "choice",
+   "q": "Ich habe ___ lieb. (تو)",
+   "options": [
+    "dich",
+    "dir",
+    "du"
+   ],
+   "answer": 0,
+   "explain": "Akkusativ: du ➔ dich",
+   "level": 14
+  },
+  {
+   "type": "choice",
+   "q": "Am ___ Mai (3.)",
+   "options": [
+    "dreiten",
+    "dritten",
+    "dritte"
+   ],
+   "answer": 1,
+   "explain": "am + -ten",
+   "level": 14
+  }
+ ]
+}

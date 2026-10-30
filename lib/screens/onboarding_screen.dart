@@ -28,10 +28,15 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
             padding: const EdgeInsets.all(24),
             children: [
               const SizedBox(height: 12),
-              const Icon(Icons.auto_stories_rounded, size: 72, color: AppColors.green),
+              Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(28),
+                  child: Image.asset('assets/brand/logo.png', width: 132, height: 132),
+                ),
+              ),
               const SizedBox(height: 16),
               Text(
-                tr(n, 'بخێرهاتی بۆ ZimanPro', 'Willkommen bei ZimanPro', 'Welcome to ZimanPro'),
+                tr(n, 'ب خێر بێی بۆ ASP', 'Willkommen bei ASP', 'Welcome to ASP'),
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.white),
               ),

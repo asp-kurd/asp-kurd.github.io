@@ -8,3 +8,4 @@ build/
 __pycache__/
 voice_lab/voice_pack/
 voice_lab/ziman_data/
+backend/schema.sql

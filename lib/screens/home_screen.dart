@@ -5,6 +5,7 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
 import 'book_screen.dart';
+import 'course_screens.dart';
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
 import 'lesson_screen.dart';
@@ -142,6 +143,8 @@ class _LearnPath extends StatelessWidget {
             ),
           ),
         _practiceCard(context, p),
+        const SizedBox(height: 8),
+        _examCards(context, p),
         const SizedBox(height: 12),
         for (var i = 0; i < appCurriculum.length; i++) ...[
           if (i == 0 || appCurriculum[i].section != appCurriculum[i - 1].section) _sectionHeader(appCurriculum[i].section, n),
@@ -163,8 +166,41 @@ class _LearnPath extends StatelessWidget {
     );
   }
 
+  /// 🎯 تاقیکرنا ئاستی + 🏆 ئەزموونا A1
+  Widget _examCards(BuildContext context, ProgressService p) {
+    final n = p.nativeLang;
+    final best = p.examBest('final');
+    Widget card(String emoji, String title, String sub, List<Color> colors, VoidCallback onTap) => Expanded(
+          child: InkWell(
+            borderRadius: BorderRadius.circular(18),
+            onTap: onTap,
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(gradient: LinearGradient(colors: colors), borderRadius: BorderRadius.circular(18)),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(emoji, style: const TextStyle(fontSize: 30)),
+                const SizedBox(height: 6),
+                Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white)),
+                Text(sub, style: const TextStyle(fontSize: 12, color: Colors.white70)),
+              ]),
+            ),
+          ),
+        );
+    return Row(children: [
+      card('🎯', tr(n, 'تاقیکرنا ئاستی', 'Einstufungstest', 'Placement test'),
+          p.placementDone ? tr(n, 'جارەکا دی تاقی بکە', 'Nochmal', 'Try again') : tr(n, 'تو چەند دزانی؟', 'Was kannst du?', 'What do you know?'),
+          const [Color(0xFF1CB0F6), Color(0xFF2B70C9)], () => openPlacement(context)),
+      const SizedBox(width: 10),
+      card('🏆', tr(n, 'ئەزموونا A1', 'Prüfung A1', 'A1 exam'),
+          best == null ? tr(n, 'وەکی Goethe', 'wie Goethe', 'Goethe style') : '${tr(n, 'باشترین', 'Beste', 'Best')}: $best%',
+          const [Color(0xFFFFC800), Color(0xFFFF9600)], () => openFinalExam(context)),
+    ]);
+  }
+
   Widget _sectionHeader(int section, AppLanguage n) {
     final title = section - 1 < appSections.length ? appSections[section - 1].title(n) : '';
+    final lek = lektionForSection(section);
+    if (lek != null) return _lektionHeader(lek, title, n);
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 16),
       child: Row(children: [
@@ -176,6 +212,48 @@ class _LearnPath extends StatelessWidget {
         const Expanded(child: Divider(color: Colors.white24)),
       ]),
     );
+  }
+
+  /// سەرێ وانەیەکا پەرتووکێ: ناڤ + 💬 دیالۆگ + 📝 ئەزموون
+  Widget _lektionHeader(LektionInfo lek, String title, AppLanguage n) {
+    return Builder(builder: (context) {
+      final best = ProgressService.instance.examBest('lek_${lek.n}');
+      return Container(
+        margin: const EdgeInsets.only(top: 12, bottom: 18),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: lek.color.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: lek.color.withValues(alpha: 0.6), width: 1.5),
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Text(title, style: TextStyle(fontFamily: 'Sarchia', fontSize: 19, color: lek.color, fontWeight: FontWeight.bold)),
+          Text(lek.titleDe, textDirection: TextDirection.ltr, textAlign: TextAlign.end,
+              style: const TextStyle(color: Colors.white60, fontSize: 13)),
+          const SizedBox(height: 10),
+          Row(children: [
+            Expanded(
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: const BorderSide(color: Colors.white30)),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
+                icon: const Text('💬'),
+                label: Text(tr(n, 'دیالۆگ', 'Dialog', 'Dialogue')),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white, side: BorderSide(color: best != null && best >= 60 ? AppColors.green : Colors.white30)),
+                onPressed: () => openLektionTest(context, lek),
+                icon: Text(best != null && best >= 60 ? '✅' : '📝'),
+                label: Text(best == null ? tr(n, 'ئەزموون', 'Test', 'Test') : '$best%'),
+              ),
+            ),
+          ]),
+        ]),
+      );
+    });
   }
 
   /// 🔁 ڕاهێنانا ئازاد — ٨ پەیڤێن هەڕەمەکی ژ قۆناغێن تە دیتین (هەرگیز ب دویماهی نائێت)
@@ -264,8 +342,23 @@ class _LearnPath extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(unit.title(p.nativeLang),
-                  style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: Colors.white)),
+              Row(children: [
+                Expanded(
+                  child: Text(unit.title(p.nativeLang),
+                      style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: Colors.white)),
+                ),
+                if (unit.grammar != null && unlocked)
+                  InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => showGrammarCard(context, unit),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(color: Colors.black26, borderRadius: BorderRadius.circular(12)),
+                      child: Text('📘 ${tr(p.nativeLang, 'رێزمان', 'Grammatik', 'Grammar')}',
+                          style: const TextStyle(color: Colors.white, fontSize: 13)),
+                    ),
+                  ),
+              ]),
               const SizedBox(height: 4),
               Text(unit.title(p.targetLang), style: const TextStyle(color: Colors.white70)),
             ],
@@ -276,7 +369,13 @@ class _LearnPath extends StatelessWidget {
           offset: Offset(dx, 0),
           child: GestureDetector(
             onTap: unlocked
-                ? () => _open(context, unit, unit.concepts)
+                ? () {
+                    if (unit.grammar != null && !p.grammarSeen(unit.id)) {
+                      showGrammarCard(context, unit, onStart: () => _open(context, unit, unit.concepts));
+                    } else {
+                      _open(context, unit, unit.concepts);
+                    }
+                  }
                 : () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     content: Text(tr(p.nativeLang, 'پێنگاڤا بەری ڤێ تەمام بکە 🔒', 'Schließe zuerst die vorherige Einheit ab 🔒',
                         'Finish the previous unit first 🔒')))),

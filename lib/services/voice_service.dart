@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:async';
 import 'dart:math' as math;
 import 'dart:typed_data';
@@ -13,7 +14,7 @@ import '../models.dart';
 import 'audio_out_native.dart' if (dart.library.js_interop) 'audio_out_web.dart';
 
 /// ژێدەرێ دەنگێ پەیڤەکێ
-enum VoiceSource { mine, cloned, pack, tts, none }
+enum VoiceSource { mine, cloned, pack, ai, tts, none }
 
 /// سیستەمێ دەنگی — ل سەر iPhone (Safari/وێب) و Android ژی کار دکەت.
 ///
@@ -45,6 +46,7 @@ class VoiceService {
 
   late LazyBox<dynamic> _box;
   Set<String> _packAssets = {};
+  Set<String> _aiAssets = {}; // assets/tts/<lang>/<hash>.mp3 — دەنگێ AI (Piper / MMS)
   final Map<String, Uint8List> _refCache = {}; // بۆ Share ا ب لەز (iOS)
   bool _ready = false;
 
@@ -62,9 +64,12 @@ class VoiceService {
     _box = await Hive.openLazyBox<dynamic>('audio');
     try {
       final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
-      _packAssets = manifest.listAssets().where((a) => a.startsWith('assets/voices/')).toSet();
+      final all = manifest.listAssets();
+      _packAssets = all.where((a) => a.startsWith('assets/voices/')).toSet();
+      _aiAssets = all.where((a) => a.startsWith('assets/tts/')).toSet();
     } catch (_) {
       _packAssets = {};
+      _aiAssets = {};
     }
     for (final l in AppLanguage.values) {
       final b = await _box.get(referencePath(l));
@@ -98,10 +103,25 @@ class VoiceService {
   bool hasReference(AppLanguage lang) => _refCache.containsKey(referencePath(lang));
   Uint8List? referenceBytes(AppLanguage lang) => _refCache[referencePath(lang)];
 
+  /// FNV-1a 32-bit ل سەر UTF-8 — هەمان یێ voice_lab/make_ai_voices.py
+  static String textKey(String text) {
+    var h = 0x811c9dc5;
+    for (final b in utf8.encode(text)) {
+      h = (h ^ b) & 0xFFFFFFFF;
+      // h * 0x01000193 بێ تێپەڕینا 2^53 (بۆ وێبێ)
+      h = (((h << 24) & 0xFFFFFFFF) + ((h << 8) & 0xFFFFFFFF) + h * 0x93) & 0xFFFFFFFF;
+    }
+    return h.toRadixString(16).padLeft(8, '0');
+  }
+
+  String aiAsset(String text, AppLanguage lang) => 'assets/tts/${lang.code}/${textKey(text)}.mp3';
+  bool hasAi(String text, AppLanguage lang) => _aiAssets.contains(aiAsset(text, lang));
+
   VoiceSource sourceFor(WordConcept c, AppLanguage lang) {
     if (hasRecording(lang, c.id)) return VoiceSource.mine;
     if (hasCloned(lang, c.id)) return VoiceSource.cloned;
     if (_packAssets.contains(_packAsset(lang, c.id))) return VoiceSource.pack;
+    if (hasAi(c.text(lang), lang)) return VoiceSource.ai;
     if (lang.ttsCode != null) return VoiceSource.tts;
     return VoiceSource.none;
   }
@@ -247,6 +267,8 @@ class VoiceService {
         final data = await rootBundle.load(_packAsset(lang, c.id));
         await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
         return true;
+      case VoiceSource.ai:
+        return _playAsset(aiAsset(c.text(lang), lang), rate);
       case VoiceSource.tts:
         try {
           await _applyVoice(lang);
@@ -263,9 +285,14 @@ class VoiceService {
 
   /// خواندنا دەقەکێ ئازاد ب TTS (بۆ پەرتووکا رێزمانێ)
   Future<void> speakText(String text, AppLanguage lang, {double rate = 1.0}) async {
-    if (lang.ttsCode == null || text.trim().isEmpty) return;
+    if (text.trim().isEmpty) return;
     await init();
     await stopPlayback();
+    if (hasAi(text, lang)) {
+      await _playAsset(aiAsset(text, lang), rate);
+      return;
+    }
+    if (lang.ttsCode == null) return;
     try {
       await _applyVoice(lang);
       await _tts.setSpeechRate(ttsRate * rate);
@@ -363,6 +390,16 @@ class VoiceService {
       }
       await _fx.play(b);
     } catch (_) {}
+  }
+
+  Future<bool> _playAsset(String asset, double rate) async {
+    try {
+      final data = await rootBundle.load(asset);
+      await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<bool> _playKey(String key, double rate, {String mime = 'audio/wav'}) async {

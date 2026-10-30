@@ -59,6 +59,9 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   String? matchWrong;
   bool matchHadMistake = false;
 
+  // trueFalse
+  WordConcept? tfCandidate;
+
   Exercise get current => queue[index];
 
   @override
@@ -79,7 +82,16 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   static List<String> _words(String s) => s.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
 
   List<Exercise> _buildQueue() {
-    const cycle = [ExerciseType.translate, ExerciseType.listen, ExerciseType.reverse, ExerciseType.speak];
+    // جۆرێن جودا دا هەمی پرسیار وەکی ئێک نەبن
+    const cycle = [
+      ExerciseType.pickPicture,
+      ExerciseType.translate,
+      ExerciseType.listen,
+      ExerciseType.trueFalse,
+      ExerciseType.reverse,
+      ExerciseType.pickPicture,
+      ExerciseType.speak,
+    ];
     final list = <Exercise>[];
     final concepts = [...widget.concepts]..shuffle(_rng);
     // دەستپێک ب یاریا جووتکرنێ
@@ -90,6 +102,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       final c = concepts[i];
       var type = cycle[i % cycle.length];
       if (type == ExerciseType.listen && !voice.canSpeak(c, target)) type = ExerciseType.translate;
+      if (type == ExerciseType.pickPicture && c.emoji.isEmpty) type = ExerciseType.reverse;
       // رستەیێن ٣+ پەیڤی ➔ ئاڤاکرنا رستێ
       if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
       list.add(Exercise(c, type));
@@ -126,20 +139,49 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       options = [];
       return;
     }
+    if (ex.type == ExerciseType.pickPicture) {
+      // ٢، ٣، ٤ یان ٦ وێنە — نە هەردەم ٤
+      const counts = [2, 3, 4, 4, 6];
+      final n = counts[_rng.nextInt(counts.length)];
+      final pics = <String>{ex.concept.pic};
+      final others = [...allConcepts]..shuffle(_rng);
+      // پێشی ژ هەمان قۆناغێ (زەحمەتتر)، پاشان ژ هەمییان
+      final same = widget.concepts.where((c) => c.id != ex.concept.id).toList()..shuffle(_rng);
+      for (final d in [...same, ...others]) {
+        if (pics.length >= n) break;
+        if (d.emoji.isNotEmpty) pics.add(d.pic);
+      }
+      options = pics.toList()..shuffle(_rng);
+      return;
+    }
+    if (ex.type == ExerciseType.trueFalse) {
+      // نیڤا جاران دروستە، نیڤا جاران پەیڤەکا دی
+      final others = widget.concepts.length > 1 ? widget.concepts : allConcepts;
+      final wrong = (others.where((c) => c.id != ex.concept.id).toList()..shuffle(_rng)).firstOrNull;
+      tfCandidate = (_rng.nextBool() || wrong == null) ? ex.concept : wrong;
+      options = ['yes', 'no'];
+      return;
+    }
     // زمانێ بەرسڤان
     final answerLang = ex.type == ExerciseType.translate ? target : native;
     final correct = ex.concept.text(answerLang);
     final pool = allConcepts.where((c) => c.id != ex.concept.id).map((c) => c.text(answerLang)).toSet().toList()
       ..shuffle(_rng);
-    options = [correct, ...pool.take(3)]..shuffle(_rng);
+    // ژمارا هەلبژارتنان دگوهۆڕیت: ٢–٤
+    final n = 2 + _rng.nextInt(3);
+    options = [correct, ...pool.take(n - 1)]..shuffle(_rng);
 
     if (ex.type == ExerciseType.listen) {
       WidgetsBinding.instance.addPostFrameCallback((_) => voice.speak(ex.concept, target));
     }
   }
 
-  String get _correctAnswer => current.concept
-      .text(current.type == ExerciseType.translate || current.type == ExerciseType.wordBank ? target : native);
+  String get _correctAnswer => switch (current.type) {
+        ExerciseType.pickPicture => current.concept.pic,
+        ExerciseType.trueFalse => tfCandidate?.id == current.concept.id ? 'yes' : 'no',
+        _ => current.concept
+            .text(current.type == ExerciseType.translate || current.type == ExerciseType.wordBank ? target : native),
+      };
 
   Future<void> _check() async {
     final ex = current;
@@ -281,6 +323,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                           const SizedBox(height: 24),
                           if (ex.type == ExerciseType.speak)
                             _speakArea(ex)
+                          else if (ex.type == ExerciseType.pickPicture)
+                            _pictureGrid()
+                          else if (ex.type == ExerciseType.trueFalse)
+                            _trueFalseButtons()
                           else if (ex.type == ExerciseType.wordBank)
                             _wordBankArea(ex)
                           else
@@ -313,10 +359,49 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         ExerciseType.speak => tr(native, 'ب دەنگێ خۆ بێژە 🎤', 'Sprich es laut aus 🎤', 'Say it out loud 🎤'),
         ExerciseType.match => tr(native, 'جووتان پێکڤە گرێبدە 🔗', 'Finde die Paare 🔗', 'Match the pairs 🔗'),
         ExerciseType.wordBank => tr(native, 'رستێ ئاڤا بکە 🧩', 'Bilde den Satz 🧩', 'Build the sentence 🧩'),
+        ExerciseType.pickPicture => tr(native, 'وێنەیێ دروست هەلبژێرە 🖼️', 'Wähle das richtige Bild 🖼️', 'Pick the right picture 🖼️'),
+        ExerciseType.trueFalse => tr(native, 'ئەڤە دروستە یان خەلەتە؟', 'Richtig oder falsch?', 'True or false?'),
       };
 
   Widget _promptCard(Exercise ex) {
     final c = ex.concept;
+    if (ex.type == ExerciseType.pickPicture || ex.type == ExerciseType.trueFalse) {
+      final shown = ex.type == ExerciseType.trueFalse ? (tfCandidate ?? c) : c;
+      return Container(
+        padding: const EdgeInsets.all(22),
+        decoration: BoxDecoration(
+          color: AppColors.card,
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: Colors.white12, width: 2),
+        ),
+        child: Column(children: [
+          if (ex.type == ExerciseType.trueFalse) ...[
+            Text(c.text(native), textDirection: native.direction, textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 20, color: Colors.white70)),
+            const SizedBox(height: 6),
+            const Text('=', style: TextStyle(fontSize: 26, color: AppColors.gold, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 6),
+          ],
+          Text(shown.text(target), textDirection: target.direction, textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 27, fontWeight: FontWeight.bold)),
+          if (checked && ex.type == ExerciseType.pickPicture) ...[
+            const SizedBox(height: 6),
+            Text(c.text(native), textDirection: native.direction, style: const TextStyle(color: Colors.white60)),
+          ],
+          const SizedBox(height: 10),
+          InkWell(
+            customBorder: const CircleBorder(),
+            onTap: () => voice.speak(shown, target),
+            child: Container(
+              width: 46,
+              height: 46,
+              decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+              child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 26),
+            ),
+          ),
+        ]),
+      );
+    }
     final showNative = ex.type == ExerciseType.translate || ex.type == ExerciseType.wordBank;
     final isListen = ex.type == ExerciseType.listen;
     final mainLang = showNative ? native : target;
@@ -398,6 +483,69 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         onTap: checked ? null : () => setState(() => selected = o),
       );
     }).toList();
+  }
+
+  /// 🖼️ تۆڕا وێنەیان (٢ / ٣ / ٤ / ٦)
+  Widget _pictureGrid() {
+    final n = options.length;
+    final cols = n == 3 || n == 6 ? 3 : 2;
+    return GridView.count(
+      crossAxisCount: cols,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      mainAxisSpacing: 12,
+      crossAxisSpacing: 12,
+      childAspectRatio: n == 2 ? 1.0 : 1.0,
+      children: [
+        for (final o in options)
+          GestureDetector(
+            onTap: checked ? null : () => setState(() => selected = o),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 160),
+              decoration: BoxDecoration(
+                color: _pickColor(o).withValues(alpha: selected == o || (checked && o == _correctAnswer) ? 0.2 : 0.06),
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(color: _pickColor(o), width: 3),
+              ),
+              child: Center(child: Text(o, style: TextStyle(fontSize: cols == 3 ? 48 : 64))),
+            ),
+          ),
+      ],
+    );
+  }
+
+  Color _pickColor(String o) {
+    if (checked && o == _correctAnswer) return AppColors.green;
+    if (checked && o == selected) return AppColors.red;
+    return selected == o ? AppColors.blue : Colors.white24;
+  }
+
+  /// ✅ / ❌
+  Widget _trueFalseButtons() {
+    Widget btn(String v, String emoji, String label) => Expanded(
+          child: GestureDetector(
+            onTap: checked ? null : () => setState(() => selected = v),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 160),
+              padding: const EdgeInsets.symmetric(vertical: 22),
+              decoration: BoxDecoration(
+                color: _pickColor(v).withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(color: _pickColor(v), width: 3),
+              ),
+              child: Column(children: [
+                Text(emoji, style: const TextStyle(fontSize: 36)),
+                const SizedBox(height: 6),
+                Text(label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              ]),
+            ),
+          ),
+        );
+    return Row(children: [
+      btn('yes', '✅', tr(native, 'دروستە', 'Richtig', 'True')),
+      const SizedBox(width: 14),
+      btn('no', '❌', tr(native, 'خەلەتە', 'Falsch', 'False')),
+    ]);
   }
 
   Widget _speakArea(Exercise ex) {
@@ -567,7 +715,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         ? (ex.type == ExerciseType.speak
             ? tr(native, 'دەستخۆش! دەنگێ خۆ دگەل نموونەیێ بەراورد بکە.', 'Super! Vergleiche mit der Vorlage.', 'Nice! Compare with the model.')
             : tr(native, 'دەستخۆش! بەرسڤا تە دروستە.', 'Richtig!', 'Great job! Correct.'))
-        : '${tr(native, 'بەرسڤا دروست:', 'Richtige Antwort:', 'Correct answer:')} $_correctAnswer';
+        : '${tr(native, 'بەرسڤا دروست:', 'Richtige Antwort:', 'Correct answer:')} ${switch (ex.type) {
+            ExerciseType.trueFalse => '${ex.concept.text(target)} = ${ex.concept.text(native)}',
+            ExerciseType.pickPicture => '${ex.concept.pic}  ${ex.concept.text(target)}',
+            _ => _correctAnswer,
+          }}';
     return Container(
       padding: const EdgeInsets.all(14),
       margin: const EdgeInsets.only(bottom: 14),
