@@ -29,9 +29,10 @@ class Backend extends ChangeNotifier {
   int get unread => messages.where((m) => !m.read).length;
 
   String get _base => AppConfig.supabaseUrl;
+  // کلیلێن نوو (sb_publishable_...) تنێ د apikey دا دهێن؛ Authorization تنێ دگەل تۆکنا بکارهێنەری
   Map<String, String> get _h => {
         'apikey': AppConfig.supabaseAnonKey,
-        'Authorization': 'Bearer ${_access ?? AppConfig.supabaseAnonKey}',
+        if (_access != null && _access!.isNotEmpty) 'Authorization': 'Bearer $_access',
         'Content-Type': 'application/json',
       };
 
@@ -286,7 +287,7 @@ class Backend extends ChangeNotifier {
     try {
       final r = await http
           .get(Uri.parse('$_base/rest/v1/content?key=eq.$key&select=value,updated_at'),
-              headers: {'apikey': AppConfig.supabaseAnonKey, 'Authorization': 'Bearer ${AppConfig.supabaseAnonKey}'})
+              headers: {'apikey': AppConfig.supabaseAnonKey})
           .timeout(const Duration(seconds: 4));
       if (r.statusCode == 200) {
         final list = jsonDecode(r.body) as List;

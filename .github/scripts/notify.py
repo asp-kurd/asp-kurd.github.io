@@ -14,7 +14,9 @@ URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 if not URL or not KEY:
     print("SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipping"); sys.exit(0)
-H = {"apikey": KEY, "Authorization": f"Bearer {KEY}", "Content-Type": "application/json"}
+H = {"apikey": KEY, "Content-Type": "application/json"}
+if KEY.startswith("eyJ"):  # کلیلا کەڤن (JWT)
+    H["Authorization"] = f"Bearer {KEY}"
 TZ = timezone(timedelta(hours=3))  # Asia/Baghdad
 now = datetime.now(TZ)
 today = now.date().isoformat()

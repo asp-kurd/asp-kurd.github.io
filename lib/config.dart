@@ -1,7 +1,7 @@
 /// ڕێکخستنێن سێرڤەری (Supabase). ئەگەر ڤالا بن، ئەپ بێ هەژمار و بێ ئەدمین کار دکەت.
 /// anon key ئاشکەرایە (public) — پاراستن ب RLS د داتابەیسێ دا دهێتە کرن.
 class AppConfig {
-  static const supabaseUrl = '';
+  static const supabaseUrl = 'https://pecnuohpxraoxvfjsngm.supabase.co';
   static const supabaseAnonKey = '';
 
   /// کلیلا گشتی یا Web Push (VAPID). کلیلا تایبەت د داتابەیسێ دایە (app_secrets).
