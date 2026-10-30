@@ -52,3 +52,9 @@ if "__aspInstall" not in s:
     s = s.replace("</head>", "  <script>window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__aspInstall=e;});</script>\n</head>", 1)
     i.write_text(s, encoding="utf-8")
     print("install prompt hook added")
+
+# وەسفا ئەپی (بۆ لینکێن هاتینە پارڤەکرن)
+s = i.read_text(encoding="utf-8")
+s = re.sub(r'<meta name="description" content="[^"]*">',
+           '<meta name="description" content="ASP — فێربوونا ئەلمانی ب کوردی بادینی · Deutsch lernen auf Kurdisch">', s)
+i.write_text(s, encoding="utf-8")
