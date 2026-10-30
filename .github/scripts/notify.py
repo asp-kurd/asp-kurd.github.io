@@ -10,7 +10,14 @@ from datetime import datetime, timedelta, timezone
 import requests
 from pywebpush import WebPushException, webpush
 
-URL = (os.environ.get("SUPABASE_URL") or "https://pecnuohpxraoxvfjsngm.supabase.co").rstrip("/")
+_u = os.environ.get("SUPABASE_URL", "").strip()
+_k = os.environ.get("SUPABASE_SERVICE_KEY", "").strip()
+if _k.startswith("http") and not _u.startswith("http"):  # ئەگەر هەردوو تێکەلی ئێک بووبن
+    os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_KEY"] = _k, _u
+    print("::notice title=notify::URL and key were swapped — fixed automatically")
+URL = (os.environ.get("SUPABASE_URL") or "https://pecnuohpxraoxvfjsngm.supabase.co").strip().rstrip("/")
+if not URL.startswith("http"):
+    URL = "https://pecnuohpxraoxvfjsngm.supabase.co"
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "").strip().strip('"').strip("'")
 # iPhone هندەک جاران پیتا ئێکێ مەزن دکەت (Sb_secret_…)
 for pre in ("sb_secret_", "sb_publishable_"):
