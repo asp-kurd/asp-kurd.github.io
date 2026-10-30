@@ -31,6 +31,9 @@ if B.exists():
         shutil.copy(B / n, Path("web/icons") / n)
     shutil.copy(B / "favicon.png", "web/favicon.png")
     shutil.copy(B / "apple-touch-icon.png", "web/apple-touch-icon.png")
+    if (B / "push-sw.js").exists():
+        Path("web/push").mkdir(parents=True, exist_ok=True)
+        shutil.copy(B / "push-sw.js", "web/push-sw.js")
     s = i.read_text(encoding="utf-8")
     if "apple-touch-icon.png" not in s:
         s = re.sub(r'<link rel="apple-touch-icon"[^>]*>', "", s)

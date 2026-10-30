@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
+import '../services/backend.dart';
+import 'account_screens.dart';
 import 'home_screen.dart';
 
 /// شاشەیا هەلبژارتنا زمانێ دایکێ و زمانێ فێربوونێ
@@ -67,7 +69,13 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
                 onPressed: () async {
                   await ProgressService.instance.setLanguages(nativeLang, targetLang);
                   if (!context.mounted) return;
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+                  final b = Backend.instance;
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => b.enabled && !b.registered && !b.isAdmin
+                              ? const RegisterScreen(next: HomeScreen())
+                              : const HomeScreen()));
                 },
               ),
             ],

@@ -71,8 +71,20 @@ const _icons = <String, IconData>{
 
 Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16));
 
-Future<void> loadCurriculum() async {
-  final raw = await rootBundle.loadString('assets/curriculum.json');
+/// [override] = ناڤەرۆکا گوهۆڕی ژ لایێ ئەدمینی (ژ سێرڤەری)
+Future<void> loadCurriculum([String? override]) async {
+  if (override != null) {
+    try {
+      _parse(override);
+      return;
+    } catch (_) {
+      // ئەگەر ناڤەرۆکا سێرڤەری خراب بیت، یا ئەسلی ب کار بینە
+    }
+  }
+  _parse(await rootBundle.loadString('assets/curriculum.json'));
+}
+
+void _parse(String raw) {
   final data = jsonDecode(raw) as Map<String, dynamic>;
   appSections = ((data['sections'] as List?) ?? [])
       .map((s) => CurriculumSection(s['ku'] as String, s['de'] as String, s['en'] as String))

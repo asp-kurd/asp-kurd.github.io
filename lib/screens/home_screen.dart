@@ -4,6 +4,8 @@ import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
+import '../services/backend.dart';
+import 'account_screens.dart';
 import 'book_screen.dart';
 import 'course_screens.dart';
 import 'games/game_session.dart';
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: progress,
+      listenable: Listenable.merge([progress, Backend.instance]),
       builder: (context, _) {
         final n = progress.nativeLang;
         return Directionality(
@@ -88,6 +90,18 @@ class _HomeScreenState extends State<HomeScreen> {
           stat(Icons.local_fire_department, '${progress.streak}', AppColors.orange),
           stat(Icons.bolt, '${progress.xp}', AppColors.gold),
           stat(Icons.favorite, '${progress.hearts}', AppColors.red),
+          if (Backend.instance.registered)
+            ListenableBuilder(
+              listenable: Backend.instance,
+              builder: (_, __) => IconButton(
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const InboxScreen())),
+                icon: Badge(
+                  isLabelVisible: Backend.instance.unread > 0,
+                  label: Text('${Backend.instance.unread}'),
+                  child: const Icon(Icons.mail_rounded),
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -107,6 +121,45 @@ class _LearnPath extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 40),
       children: [
+        if (Backend.instance.registered)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Text('${tr(n, 'سلاڤ', 'Hallo', 'Hi')} ${Backend.instance.name} 👋',
+                style: const TextStyle(fontFamily: 'Sarchia', fontSize: 22, fontWeight: FontWeight.bold)),
+          ),
+        if (p.streakAtRisk)
+          Container(
+            margin: const EdgeInsets.only(bottom: 12),
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(colors: [Color(0xFFFF4B4B), Color(0xFFFF9600)]),
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Row(children: [
+              const Text('⏳', style: TextStyle(fontSize: 30)),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  tr(n, 'دەمەکێ کێم ماوە! وانەیەکا کورت بکە دا Streak ـا تە (${p.streak} 🔥) نەچیت.',
+                      'Nicht mehr viel Zeit! Mach eine kurze Lektion für deine Serie (${p.streak} 🔥).',
+                      'Not much time left! Do a short lesson to keep your ${p.streak} 🔥 streak.'),
+                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+              ),
+            ]),
+          ),
+        if (Backend.instance.unread > 0)
+          Card(
+            color: const Color(0xFF1B3A4B),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: const BorderSide(color: AppColors.gold)),
+            child: ListTile(
+              leading: const Text('📬', style: TextStyle(fontSize: 26)),
+              title: Text(Backend.instance.messages.firstWhere((m) => !m.read).title,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text(tr(n, 'نامەیەکا نوو ژ ASP', 'Neue Nachricht', 'New message')),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const InboxScreen())),
+            ),
+          ),
         _dailyGoalCard(p),
         const SizedBox(height: 12),
         if (p.dueConcepts.isNotEmpty)

@@ -4,7 +4,10 @@ import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
+import '../services/backend.dart';
 import '../ui.dart';
+import 'account_screens.dart';
+import 'admin_screens.dart';
 import 'onboarding_screen.dart';
 import 'settings_screen.dart';
 import 'stats_section.dart';
@@ -22,6 +25,18 @@ class ProfileScreen extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.all(20),
         children: [
+          if (Backend.instance.registered) ...[
+            Row(children: [
+              const Text('👋', style: TextStyle(fontSize: 28)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(Backend.instance.name,
+                    style: const TextStyle(fontFamily: 'Sarchia', fontSize: 24, fontWeight: FontWeight.bold)),
+              ),
+            ]),
+            const SizedBox(height: 12),
+            const NotifyCard(),
+          ],
           Row(children: [
             Expanded(
               child: Text(tr(n, 'ئامار و پرۆفایل', 'Statistik & Profil', 'Statistics & profile'),
@@ -126,6 +141,16 @@ class ProfileScreen extends StatelessWidget {
               if (ok == true) await p.resetAll();
             },
           ),
+          const SizedBox(height: 18),
+          if (Backend.instance.enabled)
+            ListTile(
+              tileColor: AppColors.card,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              leading: const Text('🛡️', style: TextStyle(fontSize: 22)),
+              title: const Text('رێڤەبەری (ئەدمین)'),
+              trailing: const Icon(Icons.chevron_left_rounded),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminEntry())),
+            ),
         ],
       ),
     );

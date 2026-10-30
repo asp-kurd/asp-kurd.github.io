@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'data/book.dart';
 import 'data/curriculum.dart';
 import 'data/exams.dart';
+import 'screens/account_screens.dart';
+import 'services/backend.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
@@ -12,7 +14,8 @@ import 'ui.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await loadCurriculum();
+  await Backend.instance.init();
+  await loadCurriculum(await Backend.instance.contentOverride('curriculum'));
   await loadBook();
   await Exams.load();
   await ProgressService.instance.init();
@@ -36,7 +39,11 @@ class ZimanProApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.bg,
         appBarTheme: const AppBarTheme(backgroundColor: AppColors.bg, elevation: 0),
       ),
-      home: ProgressService.instance.onboarded ? const HomeScreen() : const LanguageOnboardingScreen(),
+      home: !ProgressService.instance.onboarded
+          ? const LanguageOnboardingScreen()
+          : (Backend.instance.enabled && !Backend.instance.registered && !Backend.instance.isAdmin)
+              ? const RegisterScreen(next: HomeScreen())
+              : const HomeScreen(),
     );
   }
 }

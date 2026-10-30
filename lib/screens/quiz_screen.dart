@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../data/exams.dart';
 import '../models.dart';
+import '../services/backend.dart';
 import '../services/progress_service.dart';
 import '../services/sfx.dart';
 import '../services/voice_service.dart';
@@ -118,6 +119,7 @@ class _QuizScreenState extends State<QuizScreen> {
     final score = results.where((r) => r).length;
     final pct = (score * 100 / results.length).round();
     await progress.saveExam(widget.examId, pct);
+    Backend.instance.examResult(widget.examId, score, results.length);
     await progress.earn(5 + score);
     Sfx.done();
     if (!mounted) return;

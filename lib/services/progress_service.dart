@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/curriculum.dart';
 import '../models.dart';
+import 'backend.dart';
 import 'voice_service.dart';
 
 /// پاشەکەفتکرنا پێشکەفتنێ: XP، Streak، دل، پێنگاڤێن تەمامکری، و زمان.
@@ -165,6 +166,7 @@ class ProgressService extends ChangeNotifier {
 
   Future<void> completeLesson({required String? unitId, required int earnedXp, bool perfect = false}) async {
     lessonsDone++;
+    Backend.instance.track(lessons: 1);
     if (perfect) perfectLessons++;
     if (unitId != null) completedUnits.add(unitId);
     await earn(earnedXp);
@@ -219,7 +221,28 @@ class ProgressService extends ChangeNotifier {
     await _p.setInt('lessons_done', lessonsDone);
     await _p.setInt('perfect_lessons', perfectLessons);
     await _p.setStringList('done_$_pairKey', completedUnits.toList());
+    Backend.instance.track(xp: earnedXp);
+    Backend.instance.syncStats(
+      xp: xp,
+      streak: streak,
+      completedUnits: completedUnits.length,
+      currentUnit: _currentUnit(),
+      lastStudy: today,
+    );
     notifyListeners();
+  }
+
+  String? _currentUnit() {
+    for (var i = 0; i < appCurriculum.length; i++) {
+      if (!completedUnits.contains(appCurriculum[i].id)) return appCurriculum[i].titleKu;
+    }
+    return null;
+  }
+
+  /// ئێڤار و Streak د مەترسیێ دایە (ئەڤرۆ هێشتا نەخواندییە)
+  bool get streakAtRisk {
+    final last = _p.getString('last_study');
+    return streak > 0 && last != _day(DateTime.now()) && DateTime.now().hour >= 17;
   }
 
   // ───────── 📊 ئامار ─────────
@@ -269,6 +292,7 @@ class ProgressService extends ChangeNotifier {
     final today = _day(DateTime.now());
     daySeconds[today] = (daySeconds[today] ?? 0) + sec;
     await _p.setString('day_sec', jsonEncode(daySeconds));
+    Backend.instance.track(seconds: sec);
     notifyListeners();
   }
 
