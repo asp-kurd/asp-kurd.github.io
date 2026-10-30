@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -14,6 +15,10 @@ class ProgressService extends ChangeNotifier {
   static final ProgressService instance = ProgressService._();
 
   static const maxHearts = 5;
+
+  /// هەر ٣ خولەکان دلەک ب ئۆتۆماتیکی زێدە دبیت
+  static const heartRegen = Duration(minutes: 3);
+  Timer? _heartTimer;
   late SharedPreferences _p;
 
   AppLanguage nativeLang = AppLanguage.badini;
@@ -114,6 +119,8 @@ class ProgressService extends ChangeNotifier {
       hearts = _p.getInt('hearts') ?? maxHearts;
       todayXp = _p.getInt('today_xp') ?? 0;
     }
+    _regenHearts();
+    if (hearts < maxHearts) _startHeartTimer();
     final lastStudy = _p.getString('last_study');
     if (lastStudy != null) {
       final diff = DateTime.parse(today).difference(DateTime.parse(lastStudy)).inDays;
@@ -138,9 +145,49 @@ class ProgressService extends ChangeNotifier {
       unitIndex == 0 || completedUnits.contains(appCurriculum[unitIndex - 1].id);
 
   Future<void> loseHeart() async {
+    _regenHearts();
+    if (hearts >= maxHearts) {
+      // دەمژمێر ژ دەمێ ژ دەستدانا ئێکەمین دلی دەستپێدکەت
+      await _p.setInt('heart_clock', DateTime.now().millisecondsSinceEpoch);
+    }
     if (hearts > 0) hearts--;
     await _p.setInt('hearts', hearts);
+    _startHeartTimer();
     notifyListeners();
+  }
+
+  /// دلێن بەرزەبووی ل دویف دەمی ڤەدگەڕینە
+  bool _regenHearts() {
+    if (hearts >= maxHearts) return false;
+    final clock = _p.getInt('heart_clock') ?? DateTime.now().millisecondsSinceEpoch;
+    final elapsed = DateTime.now().millisecondsSinceEpoch - clock;
+    final gained = elapsed ~/ heartRegen.inMilliseconds;
+    if (gained <= 0) return false;
+    hearts = (hearts + gained).clamp(0, maxHearts);
+    _p.setInt('hearts', hearts);
+    _p.setInt('heart_clock', clock + gained * heartRegen.inMilliseconds);
+    return true;
+  }
+
+  /// دەمێ مای هەتا دلێ بهێت (null ئەگەر هەمی دل تژی بن)
+  Duration? get nextHeartIn {
+    if (hearts >= maxHearts) return null;
+    final clock = _p.getInt('heart_clock') ?? DateTime.now().millisecondsSinceEpoch;
+    final left = clock + heartRegen.inMilliseconds - DateTime.now().millisecondsSinceEpoch;
+    return Duration(milliseconds: left < 0 ? 0 : left);
+  }
+
+  void _startHeartTimer() {
+    if (_heartTimer != null) return;
+    _heartTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+      final changed = _regenHearts();
+      if (hearts >= maxHearts) {
+        _heartTimer?.cancel();
+        _heartTimer = null;
+      }
+      // هەر چرکەیەکێ بۆ دەمژمێرا نیشاندانێ
+      if (changed || hearts < maxHearts) notifyListeners();
+    });
   }
 
   Future<void> recordMistake(String conceptId) async {

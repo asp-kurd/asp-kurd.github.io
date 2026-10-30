@@ -36,6 +36,10 @@ class Backend extends ChangeNotifier {
         'Content-Type': 'application/json',
       };
 
+  /// ئالایێن بچووک (بۆ نموونە: ئایا پرسیارا ئاگەهداریان هاتییە کرن)
+  bool flag(String k) => _p.getBool('flag_$k') ?? false;
+  Future<void> setFlag(String k) => _p.setBool('flag_$k', true);
+
   // ───────────────────────── Auth ─────────────────────────
 
   Future<void> init() async {

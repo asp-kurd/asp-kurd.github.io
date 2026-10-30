@@ -43,7 +43,9 @@ class ZimanProApp extends StatelessWidget {
           ? const LanguageOnboardingScreen()
           : (Backend.instance.enabled && !Backend.instance.registered && !Backend.instance.isAdmin)
               ? const RegisterScreen(next: HomeScreen())
-              : const HomeScreen(),
+              : SetupScreen.needed()
+                  ? const SetupScreen(next: HomeScreen())
+                  : const HomeScreen(),
     );
   }
 }

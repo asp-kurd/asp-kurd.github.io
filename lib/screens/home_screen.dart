@@ -89,7 +89,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           stat(Icons.local_fire_department, '${progress.streak}', AppColors.orange),
           stat(Icons.bolt, '${progress.xp}', AppColors.gold),
-          stat(Icons.favorite, '${progress.hearts}', AppColors.red),
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            stat(Icons.favorite, '${progress.hearts}', AppColors.red),
+            if (progress.nextHeartIn != null)
+              Text(_mmss(progress.nextHeartIn!), style: const TextStyle(fontSize: 10, color: AppColors.red)),
+          ]),
           if (Backend.instance.registered)
             ListenableBuilder(
               listenable: Backend.instance,
@@ -461,9 +465,9 @@ class _LearnPath extends StatelessWidget {
         context: context,
         builder: (_) => AlertDialog(
           title: Text(tr(p.nativeLang, 'دلێن تە نەمان 💔', 'Keine Herzen mehr 💔', 'Out of hearts 💔')),
-          content: Text(tr(p.nativeLang, 'سوبەهی دێ دبنە ٥. یان ل «دەنگێ من» پەیڤان تۆمار بکە دا دلان وەرگری.',
-              'Morgen wieder 5. Oder nimm im Studio Wörter auf, um Herzen zu bekommen.',
-              'They refill tomorrow. Or record words in My Voice to earn hearts.')),
+          content: Text(tr(p.nativeLang, 'هەر ٣ خولەکان دلەک ب خۆ دزڤڕیت ❤️ دلێ بهێت پشتی: ${_mmss(p.nextHeartIn ?? Duration.zero)}',
+              'Alle 3 Minuten kommt ein Herz zurück ❤️ Nächstes in ${_mmss(p.nextHeartIn ?? Duration.zero)}',
+              'A heart comes back every 3 minutes ❤️ Next in ${_mmss(p.nextHeartIn ?? Duration.zero)}')),
           actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
         ),
       );
@@ -475,3 +479,5 @@ class _LearnPath extends StatelessWidget {
     );
   }
 }
+
+String _mmss(Duration d) => '${d.inMinutes}:${(d.inSeconds % 60).toString().padLeft(2, '0')}';

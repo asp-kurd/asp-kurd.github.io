@@ -38,3 +38,44 @@ Future<Map<String, dynamic>?> subscribePush(String vapidPublicKey) async {
       .toDart;
   return jsonDecode(_stringify(sub).toDart) as Map<String, dynamic>;
 }
+
+
+// ───────── 📲 دامەزراندن ل سەر مۆبایلێ (PWA) ─────────
+
+/// 'ios' · 'android' · 'other'
+String get platformKind {
+  final ua = web.window.navigator.userAgent.toLowerCase();
+  if (ua.contains('iphone') || ua.contains('ipad') || ua.contains('ipod')) return 'ios';
+  if (ua.contains('macintosh') && web.window.navigator.maxTouchPoints > 1) return 'ios'; // iPad
+  if (ua.contains('android')) return 'android';
+  return 'other';
+}
+
+/// ئەپ ژ Home Screen هاتییە ڤەکرن؟
+bool get isStandalone {
+  if (web.window.matchMedia('(display-mode: standalone)').matches) return true;
+  final s = (web.window.navigator as JSObject)['standalone'];
+  return s != null && s.dartify() == true;
+}
+
+/// Android/Chrome: دەمێ دوگمەیا دامەزراندنێ ئامادە بیت
+bool get canPromptInstall {
+  final e = globalContext['__aspInstall'];
+  return e != null && !e.isUndefinedOrNull;
+}
+
+/// پەنجەرەیا دامەزراندنێ یا Android نیشان ددەت. true = هاتە دامەزراندن
+Future<bool> promptInstall() async {
+  final e = globalContext['__aspInstall'];
+  if (e == null || e.isUndefinedOrNull) return false;
+  final ev = e as JSObject;
+  ev.callMethod('prompt'.toJS);
+  try {
+    final choice = await (ev['userChoice'] as JSPromise<JSObject>).toDart;
+    final outcome = choice['outcome']?.dartify();
+    globalContext['__aspInstall'] = null;
+    return outcome == 'accepted';
+  } catch (_) {
+    return false;
+  }
+}

@@ -45,3 +45,10 @@ if B.exists():
     d.update(name="ASP", short_name="ASP")
     m.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
     print("ASP branding applied")
+
+# Android/Chrome: پاشەکەفتکرنا رووداوێ دامەزراندنێ دا ئەپ بشێت دوگمەیا «دامەزراندن» نیشان بدەت
+s = i.read_text(encoding="utf-8")
+if "__aspInstall" not in s:
+    s = s.replace("</head>", "  <script>window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__aspInstall=e;});</script>\n</head>", 1)
+    i.write_text(s, encoding="utf-8")
+    print("install prompt hook added")
