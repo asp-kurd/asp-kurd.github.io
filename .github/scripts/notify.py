@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 from pywebpush import WebPushException, webpush
 
-URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
+URL = (os.environ.get("SUPABASE_URL") or "https://pecnuohpxraoxvfjsngm.supabase.co").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_KEY", "")
 if not URL or not KEY:
     print("::warning title=notify::SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipping"); sys.exit(0)
