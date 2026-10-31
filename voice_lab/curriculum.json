@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "sections": [
   {
    "ku": "دەستپێک · ئەلفوبێ (ABC) و دەنگ",
@@ -81,111 +81,184 @@
   {
    "id": "unit_alpha1",
    "section": 1,
+   "only": "de",
    "icon": "abc",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ١: ئەلفوبێ ١: A – I",
-   "titleDe": "Einheit 1: Alphabet 1: A – I",
-   "titleEn": "Unit 1: Alphabet 1: A – I",
+   "titleKu": "ئەلفوبێیا ئەلمانی ١: A – I",
+   "titleDe": "Alphabet 1: A – I",
+   "titleEn": "German alphabet 1",
    "concepts": [
     {
      "id": "abc_a",
-     "ku": "A · سێڤ",
-     "kuLat": "A · sêv",
-     "de": "A a · Apfel",
-     "deHint": "ئا — Apfel (نڤیسین: A a)",
-     "en": "A a · apple",
-     "enHint": "ئەی — apple",
-     "emoji": "🍎"
+     "ku": "پیتا A · سێڤ",
+     "kuLat": "pîta A",
+     "de": "A wie Apfel",
+     "deHint": "ناڤێ پیتێ: «ئا» · دەنگ: «ئا» · Apfel ➔ ئاپفێل",
+     "en": "A · apple",
+     "enHint": "",
+     "emoji": "🍎",
+     "letter": {
+      "L": "A",
+      "lower": "a",
+      "name": "ئا",
+      "sound": "«ئا»",
+      "word": "Apfel",
+      "read": "ئاپفێل"
+     }
     },
     {
      "id": "abc_b",
-     "ku": "B · تەپ",
-     "kuLat": "B · tep",
-     "de": "B b · Ball",
-     "deHint": "بێ — Ball (نڤیسین: B b)",
-     "en": "B b · ball",
-     "enHint": "بی — ball",
-     "emoji": "⚽"
+     "ku": "پیتا B · تەپ",
+     "kuLat": "pîta B",
+     "de": "B wie Ball",
+     "deHint": "ناڤێ پیتێ: «بێ» · دەنگ: «ب» · Ball ➔ بال",
+     "en": "B · ball",
+     "enHint": "",
+     "emoji": "⚽",
+     "letter": {
+      "L": "B",
+      "lower": "b",
+      "name": "بێ",
+      "sound": "«ب»",
+      "word": "Ball",
+      "read": "بال"
+     }
     },
     {
      "id": "abc_c",
-     "ku": "C · کۆمپیوتەر",
-     "kuLat": "C · kompîter",
-     "de": "C c · Computer",
-     "deHint": "تسێ — Computer (نڤیسین: C c)",
-     "en": "C c · computer",
-     "enHint": "سی — computer",
-     "emoji": "💻"
+     "ku": "پیتا C · کۆمپیوتەر",
+     "kuLat": "pîta C",
+     "de": "C wie Computer",
+     "deHint": "ناڤێ پیتێ: «تسێ» · دەنگ: «ک» (هندەک جاران «تس») · Computer ➔ کۆمپیووتەر",
+     "en": "C · computer",
+     "enHint": "",
+     "emoji": "💻",
+     "letter": {
+      "L": "C",
+      "lower": "c",
+      "name": "تسێ",
+      "sound": "«ک» (هندەک جاران «تس»)",
+      "word": "Computer",
+      "read": "کۆمپیووتەر"
+     }
     },
     {
      "id": "abc_d",
-     "ku": "D · دۆلفین",
-     "kuLat": "D · dolfîn",
-     "de": "D d · Delfin",
-     "deHint": "دێ — Delfin (نڤیسین: D d)",
-     "en": "D d · dolphin",
-     "enHint": "دی — dolphin",
-     "emoji": "🐬"
+     "ku": "پیتا D · دۆلفین",
+     "kuLat": "pîta D",
+     "de": "D wie Delfin",
+     "deHint": "ناڤێ پیتێ: «دێ» · دەنگ: «د» · Delfin ➔ دێلفین",
+     "en": "D · dolphin",
+     "enHint": "",
+     "emoji": "🐬",
+     "letter": {
+      "L": "D",
+      "lower": "d",
+      "name": "دێ",
+      "sound": "«د»",
+      "word": "Delfin",
+      "read": "دێلفین"
+     }
     },
     {
      "id": "abc_e",
-     "ku": "E · فیل",
-     "kuLat": "E · fîl",
-     "de": "E e · Elefant",
-     "deHint": "ئێ — Elefant (نڤیسین: E e)",
-     "en": "E e · elephant",
-     "enHint": "ئی — elephant",
-     "emoji": "🐘"
+     "ku": "پیتا E · فیل",
+     "kuLat": "pîta E",
+     "de": "E wie Elefant",
+     "deHint": "ناڤێ پیتێ: «ئێ» · دەنگ: «ئێ» · Elefant ➔ ئێلێفانت",
+     "en": "E · elephant",
+     "enHint": "",
+     "emoji": "🐘",
+     "letter": {
+      "L": "E",
+      "lower": "e",
+      "name": "ئێ",
+      "sound": "«ئێ»",
+      "word": "Elefant",
+      "read": "ئێلێفانت"
+     }
     },
     {
      "id": "abc_f",
-     "ku": "F · ماسی",
-     "kuLat": "F · masî",
-     "de": "F f · Fisch",
-     "deHint": "ئێف — Fisch (نڤیسین: F f)",
-     "en": "F f · fish",
-     "enHint": "ئێف — fish",
-     "emoji": "🐟"
+     "ku": "پیتا F · ماسی",
+     "kuLat": "pîta F",
+     "de": "F wie Fisch",
+     "deHint": "ناڤێ پیتێ: «ئێف» · دەنگ: «ف» · Fisch ➔ فیش",
+     "en": "F · fish",
+     "enHint": "",
+     "emoji": "🐟",
+     "letter": {
+      "L": "F",
+      "lower": "f",
+      "name": "ئێف",
+      "sound": "«ف»",
+      "word": "Fisch",
+      "read": "فیش"
+     }
     },
     {
      "id": "abc_g",
-     "ku": "G · گیتار",
-     "kuLat": "G · gîtar",
-     "de": "G g · Gitarre",
-     "deHint": "گێ — Gitarre (نڤیسین: G g)",
-     "en": "G g · guitar",
-     "enHint": "جی — guitar",
-     "emoji": "🎸"
+     "ku": "پیتا G · گیتار",
+     "kuLat": "pîta G",
+     "de": "G wie Gitarre",
+     "deHint": "ناڤێ پیتێ: «گێ» · دەنگ: «گ» · Gitarre ➔ گیتارە",
+     "en": "G · guitar",
+     "enHint": "",
+     "emoji": "🎸",
+     "letter": {
+      "L": "G",
+      "lower": "g",
+      "name": "گێ",
+      "sound": "«گ»",
+      "word": "Gitarre",
+      "read": "گیتارە"
+     }
     },
     {
      "id": "abc_h",
-     "ku": "H · خانی",
-     "kuLat": "H · xanî",
-     "de": "H h · Haus",
-     "deHint": "ها — Haus (نڤیسین: H h)",
-     "en": "H h · house",
-     "enHint": "ئەیچ — house",
-     "emoji": "🏠"
+     "ku": "پیتا H · خانی",
+     "kuLat": "pîta H",
+     "de": "H wie Haus",
+     "deHint": "ناڤێ پیتێ: «ها» · دەنگ: «ه» · Haus ➔ هاوس",
+     "en": "H · house",
+     "enHint": "",
+     "emoji": "🏠",
+     "letter": {
+      "L": "H",
+      "lower": "h",
+      "name": "ها",
+      "sound": "«ه»",
+      "word": "Haus",
+      "read": "هاوس"
+     }
     },
     {
      "id": "abc_i",
-     "ku": "I · گراڤ",
-     "kuLat": "I · girav",
-     "de": "I i · Insel",
-     "deHint": "ئی — Insel (نڤیسین: I i)",
-     "en": "I i · island",
-     "enHint": "ئای — island",
-     "emoji": "🏝️"
+     "ku": "پیتا I · گراڤ",
+     "kuLat": "pîta I",
+     "de": "I wie Insel",
+     "deHint": "ناڤێ پیتێ: «ئی» · دەنگ: «ئی» · Insel ➔ ئینزێل",
+     "en": "I · island",
+     "enHint": "",
+     "emoji": "🏝️",
+     "letter": {
+      "L": "I",
+      "lower": "i",
+      "name": "ئی",
+      "sound": "«ئی»",
+      "word": "Insel",
+      "read": "ئینزێل"
+     }
     }
    ],
    "grammar": {
-    "titleKu": "ئەلفوبێیا لاتینی (ئەلمانی و ئینگلیزی)",
-    "titleDe": "Das Alphabet",
+    "titleKu": "ئەلفوبێیا ئەلمانی",
+    "titleDe": "Das deutsche Alphabet",
     "lines": [
-     "ئەلمانی و ئینگلیزی هەمان ٢٦ پیتان ب کار دئینن، بەلێ ناڤێن پیتان جودانە:",
-     "A = ئا (ئەلمانی) · ئەی (ئینگلیزی) — E = ئێ · ئی — I = ئی · ئای",
-     "هەر پیتەک دوو شێوە هەنە: مەزن (A) و بچووک (a).",
-     "گوهـ بدە و دووبارە بکە: A, B, C … 🔊"
+     "ئەلمانی ٢٦ پیتان ب کار دئینیت + Ä Ö Ü ß.",
+     "هەر پیتەکێ ناڤەک هەیە (C = «تسێ») و دەنگەک د پەیڤێ دا (C د Computer دا = «ک»).",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و ب دەنگێ بلند دووبارە بکە: «A wie Apfel, B wie Ball …»"
     ],
     "table": null
    }
@@ -193,111 +266,184 @@
   {
    "id": "unit_alpha2",
    "section": 1,
+   "only": "de",
    "icon": "abc",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ٢: ئەلفوبێ ٢: J – R",
-   "titleDe": "Einheit 2: Alphabet 2: J – R",
-   "titleEn": "Unit 2: Alphabet 2: J – R",
+   "titleKu": "ئەلفوبێیا ئەلمانی ٢: J – R",
+   "titleDe": "Alphabet 2: J – R",
+   "titleEn": "German alphabet 2",
    "concepts": [
     {
      "id": "abc_j",
-     "ku": "J · جاکێت",
-     "kuLat": "J · caket",
-     "de": "J j · Jacke",
-     "deHint": "یۆت — Jacke (نڤیسین: J j)",
-     "en": "J j · jacket",
-     "enHint": "جەی — jacket",
-     "emoji": "🧥"
+     "ku": "پیتا J · جاکێت",
+     "kuLat": "pîta J",
+     "de": "J wie Jacke",
+     "deHint": "ناڤێ پیتێ: «یۆت» · دەنگ: «ی» · Jacke ➔ یاکە",
+     "en": "J · jacket",
+     "enHint": "",
+     "emoji": "🧥",
+     "letter": {
+      "L": "J",
+      "lower": "j",
+      "name": "یۆت",
+      "sound": "«ی»",
+      "word": "Jacke",
+      "read": "یاکە"
+     }
     },
     {
      "id": "abc_k",
-     "ku": "K · کانگارۆ",
-     "kuLat": "K · kangaro",
-     "de": "K k · Känguru",
-     "deHint": "کا — Känguru (نڤیسین: K k)",
-     "en": "K k · kangaroo",
-     "enHint": "کەی — kangaroo",
-     "emoji": "🦘"
+     "ku": "پیتا K · کانگارۆ",
+     "kuLat": "pîta K",
+     "de": "K wie Känguru",
+     "deHint": "ناڤێ پیتێ: «کا» · دەنگ: «ک» · Känguru ➔ کێنگوروو",
+     "en": "K · kangaroo",
+     "enHint": "",
+     "emoji": "🦘",
+     "letter": {
+      "L": "K",
+      "lower": "k",
+      "name": "کا",
+      "sound": "«ک»",
+      "word": "Känguru",
+      "read": "کێنگوروو"
+     }
     },
     {
      "id": "abc_l",
-     "ku": "L · شێر",
-     "kuLat": "L · şêr",
-     "de": "L l · Löwe",
-     "deHint": "ئێل — Löwe (نڤیسین: L l)",
-     "en": "L l · lion",
-     "enHint": "ئێل — lion",
-     "emoji": "🦁"
+     "ku": "پیتا L · شێر",
+     "kuLat": "pîta L",
+     "de": "L wie Löwe",
+     "deHint": "ناڤێ پیتێ: «ئێل» · دەنگ: «ل» · Löwe ➔ لۆڤە (ö)",
+     "en": "L · lion",
+     "enHint": "",
+     "emoji": "🦁",
+     "letter": {
+      "L": "L",
+      "lower": "l",
+      "name": "ئێل",
+      "sound": "«ل»",
+      "word": "Löwe",
+      "read": "لۆڤە (ö)"
+     }
     },
     {
      "id": "abc_m",
-     "ku": "M · مشک",
-     "kuLat": "M · mişk",
-     "de": "M m · Maus",
-     "deHint": "ئێم — Maus (نڤیسین: M m)",
-     "en": "M m · mouse",
-     "enHint": "ئێم — mouse",
-     "emoji": "🐭"
+     "ku": "پیتا M · مشک",
+     "kuLat": "pîta M",
+     "de": "M wie Maus",
+     "deHint": "ناڤێ پیتێ: «ئێم» · دەنگ: «م» · Maus ➔ ماوس",
+     "en": "M · mouse",
+     "enHint": "",
+     "emoji": "🐭",
+     "letter": {
+      "L": "M",
+      "lower": "m",
+      "name": "ئێم",
+      "sound": "«م»",
+      "word": "Maus",
+      "read": "ماوس"
+     }
     },
     {
      "id": "abc_n",
-     "ku": "N · دفن",
-     "kuLat": "N · difin",
-     "de": "N n · Nase",
-     "deHint": "ئێن — Nase (نڤیسین: N n)",
-     "en": "N n · nose",
-     "enHint": "ئێن — nose",
-     "emoji": "👃"
+     "ku": "پیتا N · دفن",
+     "kuLat": "pîta N",
+     "de": "N wie Nase",
+     "deHint": "ناڤێ پیتێ: «ئێن» · دەنگ: «ن» · Nase ➔ نازە",
+     "en": "N · nose",
+     "enHint": "",
+     "emoji": "👃",
+     "letter": {
+      "L": "N",
+      "lower": "n",
+      "name": "ئێن",
+      "sound": "«ن»",
+      "word": "Nase",
+      "read": "نازە"
+     }
     },
     {
      "id": "abc_o",
-     "ku": "O · پرتەقال",
-     "kuLat": "O · porteqal",
-     "de": "O o · Orange",
-     "deHint": "ئۆ — Orange (نڤیسین: O o)",
-     "en": "O o · orange",
-     "enHint": "ئۆ — orange",
-     "emoji": "🍊"
+     "ku": "پیتا O · پرتەقال",
+     "kuLat": "pîta O",
+     "de": "O wie Orange",
+     "deHint": "ناڤێ پیتێ: «ئۆ» · دەنگ: «ئۆ» · Orange ➔ ئۆرانژە",
+     "en": "O · orange",
+     "enHint": "",
+     "emoji": "🍊",
+     "letter": {
+      "L": "O",
+      "lower": "o",
+      "name": "ئۆ",
+      "sound": "«ئۆ»",
+      "word": "Orange",
+      "read": "ئۆرانژە"
+     }
     },
     {
      "id": "abc_p",
-     "ku": "P · پیتزا",
-     "kuLat": "P · pîtza",
-     "de": "P p · Pizza",
-     "deHint": "پێ — Pizza (نڤیسین: P p)",
-     "en": "P p · pizza",
-     "enHint": "پی — pizza",
-     "emoji": "🍕"
+     "ku": "پیتا P · پیتزا",
+     "kuLat": "pîta P",
+     "de": "P wie Pizza",
+     "deHint": "ناڤێ پیتێ: «پێ» · دەنگ: «پ» · Pizza ➔ پیتسا",
+     "en": "P · pizza",
+     "enHint": "",
+     "emoji": "🍕",
+     "letter": {
+      "L": "P",
+      "lower": "p",
+      "name": "پێ",
+      "sound": "«پ»",
+      "word": "Pizza",
+      "read": "پیتسا"
+     }
     },
     {
      "id": "abc_q",
-     "ku": "Q · پرسیار",
-     "kuLat": "Q · pirsiyar",
-     "de": "Q q · Quiz",
-     "deHint": "کوو — Quiz (نڤیسین: Q q)",
-     "en": "Q q · quiz",
-     "enHint": "کیو — quiz",
-     "emoji": "❓"
+     "ku": "پیتا Q · پێشبڕکێیا پرسیاران",
+     "kuLat": "pîta Q",
+     "de": "Q wie Quiz",
+     "deHint": "ناڤێ پیتێ: «کوو» · دەنگ: «کڤ» (هەردەم Qu) · Quiz ➔ کڤیس",
+     "en": "Q · quiz",
+     "enHint": "",
+     "emoji": "❓",
+     "letter": {
+      "L": "Q",
+      "lower": "q",
+      "name": "کوو",
+      "sound": "«کڤ» (هەردەم Qu)",
+      "word": "Quiz",
+      "read": "کڤیس"
+     }
     },
     {
      "id": "abc_r",
-     "ku": "R · مووشەک",
-     "kuLat": "R · mûşek",
-     "de": "R r · Rakete",
-     "deHint": "ئێر — Rakete (نڤیسین: R r)",
-     "en": "R r · rocket",
-     "enHint": "ئار — rocket",
-     "emoji": "🚀"
+     "ku": "پیتا R · مووشەک",
+     "kuLat": "pîta R",
+     "de": "R wie Rakete",
+     "deHint": "ناڤێ پیتێ: «ئێر» · دەنگ: «ر» (ژ قوڕگی) · Rakete ➔ راکێتە",
+     "en": "R · rocket",
+     "enHint": "",
+     "emoji": "🚀",
+     "letter": {
+      "L": "R",
+      "lower": "r",
+      "name": "ئێر",
+      "sound": "«ر» (ژ قوڕگی)",
+      "word": "Rakete",
+      "read": "راکێتە"
+     }
     }
    ],
    "grammar": {
-    "titleKu": "ئەلفوبێیا لاتینی (ئەلمانی و ئینگلیزی)",
-    "titleDe": "Das Alphabet",
+    "titleKu": "ئەلفوبێیا ئەلمانی",
+    "titleDe": "Das deutsche Alphabet",
     "lines": [
-     "ئەلمانی و ئینگلیزی هەمان ٢٦ پیتان ب کار دئینن، بەلێ ناڤێن پیتان جودانە:",
-     "A = ئا (ئەلمانی) · ئەی (ئینگلیزی) — E = ئێ · ئی — I = ئی · ئای",
-     "هەر پیتەک دوو شێوە هەنە: مەزن (A) و بچووک (a).",
-     "گوهـ بدە و دووبارە بکە: A, B, C … 🔊"
+     "ئەلمانی ٢٦ پیتان ب کار دئینیت + Ä Ö Ü ß.",
+     "هەر پیتەکێ ناڤەک هەیە (C = «تسێ») و دەنگەک د پەیڤێ دا (C د Computer دا = «ک»).",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و ب دەنگێ بلند دووبارە بکە: «A wie Apfel, B wie Ball …»"
     ],
     "table": null
    }
@@ -305,101 +451,703 @@
   {
    "id": "unit_alpha3",
    "section": 1,
+   "only": "de",
    "icon": "abc",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٣: ئەلفوبێ ٣: S – Z",
-   "titleDe": "Einheit 3: Alphabet 3: S – Z",
-   "titleEn": "Unit 3: Alphabet 3: S – Z",
+   "titleKu": "ئەلفوبێیا ئەلمانی ٣: S – Z",
+   "titleDe": "Alphabet 3: S – Z",
+   "titleEn": "German alphabet 3",
    "concepts": [
     {
      "id": "abc_s",
-     "ku": "S · رۆژ",
-     "kuLat": "S · roj",
-     "de": "S s · Sonne",
-     "deHint": "ئێس — Sonne (نڤیسین: S s)",
-     "en": "S s · sun",
-     "enHint": "ئێس — sun",
-     "emoji": "☀️"
+     "ku": "پیتا S · رۆژ",
+     "kuLat": "pîta S",
+     "de": "S wie Sonne",
+     "deHint": "ناڤێ پیتێ: «ئێس» · دەنگ: «ز» بەری دەنگداران · «س» ل دویماهیێ · Sonne ➔ زۆنە",
+     "en": "S · sun",
+     "enHint": "",
+     "emoji": "☀️",
+     "letter": {
+      "L": "S",
+      "lower": "s",
+      "name": "ئێس",
+      "sound": "«ز» بەری دەنگداران · «س» ل دویماهیێ",
+      "word": "Sonne",
+      "read": "زۆنە"
+     }
     },
     {
      "id": "abc_t",
-     "ku": "T · تەماتە",
-     "kuLat": "T · temate",
-     "de": "T t · Tomate",
-     "deHint": "تێ — Tomate (نڤیسین: T t)",
-     "en": "T t · tomato",
-     "enHint": "تی — tomato",
-     "emoji": "🍅"
+     "ku": "پیتا T · تەماتە",
+     "kuLat": "pîta T",
+     "de": "T wie Tomate",
+     "deHint": "ناڤێ پیتێ: «تێ» · دەنگ: «ت» · Tomate ➔ تۆماتە",
+     "en": "T · tomato",
+     "enHint": "",
+     "emoji": "🍅",
+     "letter": {
+      "L": "T",
+      "lower": "t",
+      "name": "تێ",
+      "sound": "«ت»",
+      "word": "Tomate",
+      "read": "تۆماتە"
+     }
     },
     {
      "id": "abc_u",
-     "ku": "U · فرۆکا نەناس",
-     "kuLat": "U · firoka nenas",
-     "de": "U u · Ufo",
-     "deHint": "ئوو — Ufo (نڤیسین: U u)",
-     "en": "U u · UFO",
-     "enHint": "یوو — UFO",
-     "emoji": "🛸"
+     "ku": "پیتا U · فرۆکا نەناس",
+     "kuLat": "pîta U",
+     "de": "U wie Ufo",
+     "deHint": "ناڤێ پیتێ: «ئوو» · دەنگ: «ئوو» · Ufo ➔ ئووفۆ",
+     "en": "U · UFO",
+     "enHint": "",
+     "emoji": "🛸",
+     "letter": {
+      "L": "U",
+      "lower": "u",
+      "name": "ئوو",
+      "sound": "«ئوو»",
+      "word": "Ufo",
+      "read": "ئووفۆ"
+     }
     },
     {
      "id": "abc_v",
-     "ku": "V · ئاگرپێژ",
-     "kuLat": "V · agirpêj",
-     "de": "V v · Vulkan",
-     "deHint": "فاو — Vulkan (نڤیسین: V v)",
-     "en": "V v · volcano",
-     "enHint": "ڤی — volcano",
-     "emoji": "🌋"
+     "ku": "پیتا V · تەیر",
+     "kuLat": "pîta V",
+     "de": "V wie Vogel",
+     "deHint": "ناڤێ پیتێ: «فاو» · دەنگ: «ف» (گەلەک جاران) · Vogel ➔ فۆگێل",
+     "en": "V · bird",
+     "enHint": "",
+     "emoji": "🐦",
+     "letter": {
+      "L": "V",
+      "lower": "v",
+      "name": "فاو",
+      "sound": "«ف» (گەلەک جاران)",
+      "word": "Vogel",
+      "read": "فۆگێل"
+     }
     },
     {
      "id": "abc_w",
-     "ku": "W · ئاڤ",
-     "kuLat": "W · av",
-     "de": "W w · Wasser",
-     "deHint": "ڤێ — Wasser (نڤیسین: W w)",
-     "en": "W w · water",
-     "enHint": "دەبڵیو — water",
-     "emoji": "💧"
+     "ku": "پیتا W · ئاڤ",
+     "kuLat": "pîta W",
+     "de": "W wie Wasser",
+     "deHint": "ناڤێ پیتێ: «ڤێ» · دەنگ: «ڤ» · Wasser ➔ ڤاسەر",
+     "en": "W · water",
+     "enHint": "",
+     "emoji": "💧",
+     "letter": {
+      "L": "W",
+      "lower": "w",
+      "name": "ڤێ",
+      "sound": "«ڤ»",
+      "word": "Wasser",
+      "read": "ڤاسەر"
+     }
     },
     {
      "id": "abc_x",
-     "ku": "X · ئامێرێ مۆسیقایێ",
-     "kuLat": "X · amêrê mosîqayê",
-     "de": "X x · Xylofon",
-     "deHint": "ئیکس — Xylofon (نڤیسین: X x)",
-     "en": "X x · xylophone",
-     "enHint": "ئێکس — xylophone",
-     "emoji": "🎼"
+     "ku": "پیتا X · ئامێرێ مۆسیقایێ",
+     "kuLat": "pîta X",
+     "de": "X wie Xylofon",
+     "deHint": "ناڤێ پیتێ: «ئیکس» · دەنگ: «کس» · Xylofon ➔ کسیلۆفۆن",
+     "en": "X · xylophone",
+     "enHint": "",
+     "emoji": "🎼",
+     "letter": {
+      "L": "X",
+      "lower": "x",
+      "name": "ئیکس",
+      "sound": "«کس»",
+      "word": "Xylofon",
+      "read": "کسیلۆفۆن"
+     }
     },
     {
      "id": "abc_y",
-     "ku": "Y · یۆگا",
-     "kuLat": "Y · yoga",
-     "de": "Y y · Yoga",
-     "deHint": "یوپسیلۆن — Yoga (نڤیسین: Y y)",
-     "en": "Y y · yoga",
-     "enHint": "وای — yoga",
-     "emoji": "🧘"
+     "ku": "پیتا Y · یۆگا",
+     "kuLat": "pîta Y",
+     "de": "Y wie Yoga",
+     "deHint": "ناڤێ پیتێ: «ئوپسیلۆن» · دەنگ: «ی» (د Yoga دا) · Yoga ➔ یۆگا",
+     "en": "Y · yoga",
+     "enHint": "",
+     "emoji": "🧘",
+     "letter": {
+      "L": "Y",
+      "lower": "y",
+      "name": "ئوپسیلۆن",
+      "sound": "«ی» (د Yoga دا)",
+      "word": "Yoga",
+      "read": "یۆگا"
+     }
     },
     {
      "id": "abc_z",
-     "ku": "Z · زێبرا",
-     "kuLat": "Z · zêbra",
-     "de": "Z z · Zebra",
-     "deHint": "تسێت — Zebra (نڤیسین: Z z)",
-     "en": "Z z · zebra",
-     "enHint": "زێد — zebra",
-     "emoji": "🦓"
+     "ku": "پیتا Z · زێبرا",
+     "kuLat": "pîta Z",
+     "de": "Z wie Zebra",
+     "deHint": "ناڤێ پیتێ: «تسێت» · دەنگ: «تس» · Zebra ➔ تسێبرا",
+     "en": "Z · zebra",
+     "enHint": "",
+     "emoji": "🦓",
+     "letter": {
+      "L": "Z",
+      "lower": "z",
+      "name": "تسێت",
+      "sound": "«تس»",
+      "word": "Zebra",
+      "read": "تسێبرا"
+     }
     }
    ],
    "grammar": {
-    "titleKu": "ئەلفوبێیا لاتینی (ئەلمانی و ئینگلیزی)",
-    "titleDe": "Das Alphabet",
+    "titleKu": "ئەلفوبێیا ئەلمانی",
+    "titleDe": "Das deutsche Alphabet",
     "lines": [
-     "ئەلمانی و ئینگلیزی هەمان ٢٦ پیتان ب کار دئینن، بەلێ ناڤێن پیتان جودانە:",
-     "A = ئا (ئەلمانی) · ئەی (ئینگلیزی) — E = ئێ · ئی — I = ئی · ئای",
-     "هەر پیتەک دوو شێوە هەنە: مەزن (A) و بچووک (a).",
-     "گوهـ بدە و دووبارە بکە: A, B, C … 🔊"
+     "ئەلمانی ٢٦ پیتان ب کار دئینیت + Ä Ö Ü ß.",
+     "هەر پیتەکێ ناڤەک هەیە (C = «تسێ») و دەنگەک د پەیڤێ دا (C د Computer دا = «ک»).",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و ب دەنگێ بلند دووبارە بکە: «A wie Apfel, B wie Ball …»"
+    ],
+    "table": null
+   }
+  },
+  {
+   "id": "unit_enalpha1",
+   "section": 1,
+   "only": "en",
+   "icon": "abc",
+   "color": "#58CC02",
+   "titleKu": "ئەلفوبێیا ئینگلیزی ١: A – I",
+   "titleDe": "Englisches Alphabet 1",
+   "titleEn": "Alphabet 1: A – I",
+   "concepts": [
+    {
+     "id": "abcen_a",
+     "ku": "پیتا A · سێڤ",
+     "kuLat": "pîta A",
+     "de": "A · Apfel",
+     "deHint": "",
+     "en": "A is for apple",
+     "enHint": "ناڤێ پیتێ: «ئەی» · دەنگ: «ئە» · apple ➔ ئەپڵ",
+     "emoji": "🍎",
+     "letter": {
+      "L": "A",
+      "lower": "a",
+      "name": "ئەی",
+      "sound": "«ئە»",
+      "word": "apple",
+      "read": "ئەپڵ"
+     }
+    },
+    {
+     "id": "abcen_b",
+     "ku": "پیتا B · تەپ",
+     "kuLat": "pîta B",
+     "de": "B · Ball",
+     "deHint": "",
+     "en": "B is for ball",
+     "enHint": "ناڤێ پیتێ: «بی» · دەنگ: «ب» · ball ➔ بۆڵ",
+     "emoji": "⚽",
+     "letter": {
+      "L": "B",
+      "lower": "b",
+      "name": "بی",
+      "sound": "«ب»",
+      "word": "ball",
+      "read": "بۆڵ"
+     }
+    },
+    {
+     "id": "abcen_c",
+     "ku": "پیتا C · پشیک",
+     "kuLat": "pîta C",
+     "de": "C · Katze",
+     "deHint": "",
+     "en": "C is for cat",
+     "enHint": "ناڤێ پیتێ: «سی» · دەنگ: «ک» (هندەک جاران «س») · cat ➔ کەت",
+     "emoji": "🐱",
+     "letter": {
+      "L": "C",
+      "lower": "c",
+      "name": "سی",
+      "sound": "«ک» (هندەک جاران «س»)",
+      "word": "cat",
+      "read": "کەت"
+     }
+    },
+    {
+     "id": "abcen_d",
+     "ku": "پیتا D · سە",
+     "kuLat": "pîta D",
+     "de": "D · Hund",
+     "deHint": "",
+     "en": "D is for dog",
+     "enHint": "ناڤێ پیتێ: «دی» · دەنگ: «د» · dog ➔ دۆگ",
+     "emoji": "🐶",
+     "letter": {
+      "L": "D",
+      "lower": "d",
+      "name": "دی",
+      "sound": "«د»",
+      "word": "dog",
+      "read": "دۆگ"
+     }
+    },
+    {
+     "id": "abcen_e",
+     "ku": "پیتا E · هێک",
+     "kuLat": "pîta E",
+     "de": "E · Ei",
+     "deHint": "",
+     "en": "E is for egg",
+     "enHint": "ناڤێ پیتێ: «ئی» · دەنگ: «ئێ» · egg ➔ ئێگ",
+     "emoji": "🥚",
+     "letter": {
+      "L": "E",
+      "lower": "e",
+      "name": "ئی",
+      "sound": "«ئێ»",
+      "word": "egg",
+      "read": "ئێگ"
+     }
+    },
+    {
+     "id": "abcen_f",
+     "ku": "پیتا F · ماسی",
+     "kuLat": "pîta F",
+     "de": "F · Fisch",
+     "deHint": "",
+     "en": "F is for fish",
+     "enHint": "ناڤێ پیتێ: «ئێف» · دەنگ: «ف» · fish ➔ فیش",
+     "emoji": "🐟",
+     "letter": {
+      "L": "F",
+      "lower": "f",
+      "name": "ئێف",
+      "sound": "«ف»",
+      "word": "fish",
+      "read": "فیش"
+     }
+    },
+    {
+     "id": "abcen_g",
+     "ku": "پیتا G · گیتار",
+     "kuLat": "pîta G",
+     "de": "G · Gitarre",
+     "deHint": "",
+     "en": "G is for guitar",
+     "enHint": "ناڤێ پیتێ: «جی» · دەنگ: «گ» · guitar ➔ گیتار",
+     "emoji": "🎸",
+     "letter": {
+      "L": "G",
+      "lower": "g",
+      "name": "جی",
+      "sound": "«گ»",
+      "word": "guitar",
+      "read": "گیتار"
+     }
+    },
+    {
+     "id": "abcen_h",
+     "ku": "پیتا H · خانی",
+     "kuLat": "pîta H",
+     "de": "H · Haus",
+     "deHint": "",
+     "en": "H is for house",
+     "enHint": "ناڤێ پیتێ: «ئەیچ» · دەنگ: «ه» · house ➔ هاوس",
+     "emoji": "🏠",
+     "letter": {
+      "L": "H",
+      "lower": "h",
+      "name": "ئەیچ",
+      "sound": "«ه»",
+      "word": "house",
+      "read": "هاوس"
+     }
+    },
+    {
+     "id": "abcen_i",
+     "ku": "پیتا I · بەستەنی",
+     "kuLat": "pîta I",
+     "de": "I · Eis",
+     "deHint": "",
+     "en": "I is for ice cream",
+     "enHint": "ناڤێ پیتێ: «ئای» · دەنگ: «ئای» یان «ئی» · ice cream ➔ ئایس کریم",
+     "emoji": "🍦",
+     "letter": {
+      "L": "I",
+      "lower": "i",
+      "name": "ئای",
+      "sound": "«ئای» یان «ئی»",
+      "word": "ice cream",
+      "read": "ئایس کریم"
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "ئەلفوبێیا ئینگلیزی",
+    "titleDe": "The English alphabet",
+    "lines": [
+     "ئینگلیزی ٢٦ پیتان ب کار دئینیت.",
+     "ناڤێ پیتێ و دەنگێ وێ گەلەک جاران جودانە: A = «ئەی» بەلێ د apple دا «ئە».",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و دووبارە بکە: «A is for apple, B is for ball …»"
+    ],
+    "table": null
+   }
+  },
+  {
+   "id": "unit_enalpha2",
+   "section": 1,
+   "only": "en",
+   "icon": "abc",
+   "color": "#1CB0F6",
+   "titleKu": "ئەلفوبێیا ئینگلیزی ٢: J – R",
+   "titleDe": "Englisches Alphabet 2",
+   "titleEn": "Alphabet 2: J – R",
+   "concepts": [
+    {
+     "id": "abcen_j",
+     "ku": "پیتا J · شەربەت",
+     "kuLat": "pîta J",
+     "de": "J · Saft",
+     "deHint": "",
+     "en": "J is for juice",
+     "enHint": "ناڤێ پیتێ: «جەی» · دەنگ: «ج» · juice ➔ جووس",
+     "emoji": "🧃",
+     "letter": {
+      "L": "J",
+      "lower": "j",
+      "name": "جەی",
+      "sound": "«ج»",
+      "word": "juice",
+      "read": "جووس"
+     }
+    },
+    {
+     "id": "abcen_k",
+     "ku": "پیتا K · کلیل",
+     "kuLat": "pîta K",
+     "de": "K · Schlüssel",
+     "deHint": "",
+     "en": "K is for key",
+     "enHint": "ناڤێ پیتێ: «کەی» · دەنگ: «ک» · key ➔ کی",
+     "emoji": "🔑",
+     "letter": {
+      "L": "K",
+      "lower": "k",
+      "name": "کەی",
+      "sound": "«ک»",
+      "word": "key",
+      "read": "کی"
+     }
+    },
+    {
+     "id": "abcen_l",
+     "ku": "پیتا L · شێر",
+     "kuLat": "pîta L",
+     "de": "L · Löwe",
+     "deHint": "",
+     "en": "L is for lion",
+     "enHint": "ناڤێ پیتێ: «ئێل» · دەنگ: «ل» · lion ➔ لایەن",
+     "emoji": "🦁",
+     "letter": {
+      "L": "L",
+      "lower": "l",
+      "name": "ئێل",
+      "sound": "«ل»",
+      "word": "lion",
+      "read": "لایەن"
+     }
+    },
+    {
+     "id": "abcen_m",
+     "ku": "پیتا M · هەیڤ",
+     "kuLat": "pîta M",
+     "de": "M · Mond",
+     "deHint": "",
+     "en": "M is for moon",
+     "enHint": "ناڤێ پیتێ: «ئێم» · دەنگ: «م» · moon ➔ موون",
+     "emoji": "🌙",
+     "letter": {
+      "L": "M",
+      "lower": "m",
+      "name": "ئێم",
+      "sound": "«م»",
+      "word": "moon",
+      "read": "موون"
+     }
+    },
+    {
+     "id": "abcen_n",
+     "ku": "پیتا N · دفن",
+     "kuLat": "pîta N",
+     "de": "N · Nase",
+     "deHint": "",
+     "en": "N is for nose",
+     "enHint": "ناڤێ پیتێ: «ئێن» · دەنگ: «ن» · nose ➔ نۆوز",
+     "emoji": "👃",
+     "letter": {
+      "L": "N",
+      "lower": "n",
+      "name": "ئێن",
+      "sound": "«ن»",
+      "word": "nose",
+      "read": "نۆوز"
+     }
+    },
+    {
+     "id": "abcen_o",
+     "ku": "پیتا O · پرتەقال",
+     "kuLat": "pîta O",
+     "de": "O · Orange",
+     "deHint": "",
+     "en": "O is for orange",
+     "enHint": "ناڤێ پیتێ: «ئۆ» · دەنگ: «ئۆ» · orange ➔ ئۆرنج",
+     "emoji": "🍊",
+     "letter": {
+      "L": "O",
+      "lower": "o",
+      "name": "ئۆ",
+      "sound": "«ئۆ»",
+      "word": "orange",
+      "read": "ئۆرنج"
+     }
+    },
+    {
+     "id": "abcen_p",
+     "ku": "پیتا P · پیتزا",
+     "kuLat": "pîta P",
+     "de": "P · Pizza",
+     "deHint": "",
+     "en": "P is for pizza",
+     "enHint": "ناڤێ پیتێ: «پی» · دەنگ: «پ» · pizza ➔ پیتزا",
+     "emoji": "🍕",
+     "letter": {
+      "L": "P",
+      "lower": "p",
+      "name": "پی",
+      "sound": "«پ»",
+      "word": "pizza",
+      "read": "پیتزا"
+     }
+    },
+    {
+     "id": "abcen_q",
+     "ku": "پیتا Q · شاژن",
+     "kuLat": "pîta Q",
+     "de": "Q · Königin",
+     "deHint": "",
+     "en": "Q is for queen",
+     "enHint": "ناڤێ پیتێ: «کیو» · دەنگ: «کو» (هەردەم qu) · queen ➔ کوین",
+     "emoji": "👸",
+     "letter": {
+      "L": "Q",
+      "lower": "q",
+      "name": "کیو",
+      "sound": "«کو» (هەردەم qu)",
+      "word": "queen",
+      "read": "کوین"
+     }
+    },
+    {
+     "id": "abcen_r",
+     "ku": "پیتا R · مووشەک",
+     "kuLat": "pîta R",
+     "de": "R · Rakete",
+     "deHint": "",
+     "en": "R is for rocket",
+     "enHint": "ناڤێ پیتێ: «ئار» · دەنگ: «ر» · rocket ➔ رۆکێت",
+     "emoji": "🚀",
+     "letter": {
+      "L": "R",
+      "lower": "r",
+      "name": "ئار",
+      "sound": "«ر»",
+      "word": "rocket",
+      "read": "رۆکێت"
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "ئەلفوبێیا ئینگلیزی",
+    "titleDe": "The English alphabet",
+    "lines": [
+     "ئینگلیزی ٢٦ پیتان ب کار دئینیت.",
+     "ناڤێ پیتێ و دەنگێ وێ گەلەک جاران جودانە: A = «ئەی» بەلێ د apple دا «ئە».",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و دووبارە بکە: «A is for apple, B is for ball …»"
+    ],
+    "table": null
+   }
+  },
+  {
+   "id": "unit_enalpha3",
+   "section": 1,
+   "only": "en",
+   "icon": "abc",
+   "color": "#CE82FF",
+   "titleKu": "ئەلفوبێیا ئینگلیزی ٣: S – Z",
+   "titleDe": "Englisches Alphabet 3",
+   "titleEn": "Alphabet 3: S – Z",
+   "concepts": [
+    {
+     "id": "abcen_s",
+     "ku": "پیتا S · رۆژ",
+     "kuLat": "pîta S",
+     "de": "S · Sonne",
+     "deHint": "",
+     "en": "S is for sun",
+     "enHint": "ناڤێ پیتێ: «ئێس» · دەنگ: «س» · sun ➔ سەن",
+     "emoji": "☀️",
+     "letter": {
+      "L": "S",
+      "lower": "s",
+      "name": "ئێس",
+      "sound": "«س»",
+      "word": "sun",
+      "read": "سەن"
+     }
+    },
+    {
+     "id": "abcen_t",
+     "ku": "پیتا T · تەماتە",
+     "kuLat": "pîta T",
+     "de": "T · Tomate",
+     "deHint": "",
+     "en": "T is for tomato",
+     "enHint": "ناڤێ پیتێ: «تی» · دەنگ: «ت» · tomato ➔ تەمەیتۆ",
+     "emoji": "🍅",
+     "letter": {
+      "L": "T",
+      "lower": "t",
+      "name": "تی",
+      "sound": "«ت»",
+      "word": "tomato",
+      "read": "تەمەیتۆ"
+     }
+    },
+    {
+     "id": "abcen_u",
+     "ku": "پیتا U · سیوان",
+     "kuLat": "pîta U",
+     "de": "U · Regenschirm",
+     "deHint": "",
+     "en": "U is for umbrella",
+     "enHint": "ناڤێ پیتێ: «یوو» · دەنگ: «ئە» یان «یوو» · umbrella ➔ ئەمبرێلا",
+     "emoji": "☂️",
+     "letter": {
+      "L": "U",
+      "lower": "u",
+      "name": "یوو",
+      "sound": "«ئە» یان «یوو»",
+      "word": "umbrella",
+      "read": "ئەمبرێلا"
+     }
+    },
+    {
+     "id": "abcen_v",
+     "ku": "پیتا V · کەمانچە",
+     "kuLat": "pîta V",
+     "de": "V · Geige",
+     "deHint": "",
+     "en": "V is for violin",
+     "enHint": "ناڤێ پیتێ: «ڤی» · دەنگ: «ڤ» · violin ➔ ڤایۆلین",
+     "emoji": "🎻",
+     "letter": {
+      "L": "V",
+      "lower": "v",
+      "name": "ڤی",
+      "sound": "«ڤ»",
+      "word": "violin",
+      "read": "ڤایۆلین"
+     }
+    },
+    {
+     "id": "abcen_w",
+     "ku": "پیتا W · ئاڤ",
+     "kuLat": "pîta W",
+     "de": "W · Wasser",
+     "deHint": "",
+     "en": "W is for water",
+     "enHint": "ناڤێ پیتێ: «دەبڵیو» · دەنگ: «و» · water ➔ ووتەر",
+     "emoji": "💧",
+     "letter": {
+      "L": "W",
+      "lower": "w",
+      "name": "دەبڵیو",
+      "sound": "«و»",
+      "word": "water",
+      "read": "ووتەر"
+     }
+    },
+    {
+     "id": "abcen_x",
+     "ku": "پیتا X · سندووق",
+     "kuLat": "pîta X",
+     "de": "X · Box",
+     "deHint": "",
+     "en": "X is for box",
+     "enHint": "ناڤێ پیتێ: «ئێکس» · دەنگ: «کس» · box ➔ بۆکس",
+     "emoji": "📦",
+     "letter": {
+      "L": "X",
+      "lower": "x",
+      "name": "ئێکس",
+      "sound": "«کس»",
+      "word": "box",
+      "read": "بۆکس"
+     }
+    },
+    {
+     "id": "abcen_y",
+     "ku": "پیتا Y · یۆیۆ",
+     "kuLat": "pîta Y",
+     "de": "Y · Jo-Jo",
+     "deHint": "",
+     "en": "Y is for yo-yo",
+     "enHint": "ناڤێ پیتێ: «وای» · دەنگ: «ی» · yo-yo ➔ یۆیۆ",
+     "emoji": "🪀",
+     "letter": {
+      "L": "Y",
+      "lower": "y",
+      "name": "وای",
+      "sound": "«ی»",
+      "word": "yo-yo",
+      "read": "یۆیۆ"
+     }
+    },
+    {
+     "id": "abcen_z",
+     "ku": "پیتا Z · زێبرا",
+     "kuLat": "pîta Z",
+     "de": "Z · Zebra",
+     "deHint": "",
+     "en": "Z is for zebra",
+     "enHint": "ناڤێ پیتێ: «زێد» · دەنگ: «ز» · zebra ➔ زیبرا",
+     "emoji": "🦓",
+     "letter": {
+      "L": "Z",
+      "lower": "z",
+      "name": "زێد",
+      "sound": "«ز»",
+      "word": "zebra",
+      "read": "زیبرا"
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "ئەلفوبێیا ئینگلیزی",
+    "titleDe": "The English alphabet",
+    "lines": [
+     "ئینگلیزی ٢٦ پیتان ب کار دئینیت.",
+     "ناڤێ پیتێ و دەنگێ وێ گەلەک جاران جودانە: A = «ئەی» بەلێ د apple دا «ئە».",
+     "ل سەر هەر کارتەکێ: ١) ناڤێ پیتێ ٢) دەنگێ وێ ٣) پەیڤەک کو پیت تێدا یە.",
+     "گوهـ بدە 🔊 و دووبارە بکە: «A is for apple, B is for ball …»"
     ],
     "table": null
    }
@@ -407,11 +1155,12 @@
   {
    "id": "unit_kualpha1",
    "section": 1,
+   "only": "ku",
    "icon": "abc",
    "color": "#ED2024",
-   "titleKu": "قۆناغا ٤: ئەلفوبێیا کوردی ١: ئا – ر",
-   "titleDe": "Einheit 4: Kurdisches Alphabet 1",
-   "titleEn": "Unit 4: Kurdish alphabet 1",
+   "titleKu": "ئەلفوبێیا کوردی ١: ئا – ر",
+   "titleDe": "Kurdisches Alphabet 1",
+   "titleEn": "Kurdish alphabet 1",
    "concepts": [
     {
      "id": "abc_ka",
@@ -528,11 +1277,12 @@
   {
    "id": "unit_kualpha2",
    "section": 1,
+   "only": "ku",
    "icon": "abc",
    "color": "#FFC800",
-   "titleKu": "قۆناغا ٥: ئەلفوبێیا کوردی ٢: ڕ – ق",
-   "titleDe": "Einheit 5: Kurdisches Alphabet 2",
-   "titleEn": "Unit 5: Kurdish alphabet 2",
+   "titleKu": "ئەلفوبێیا کوردی ٢: ڕ – ق",
+   "titleDe": "Kurdisches Alphabet 2",
+   "titleEn": "Kurdish alphabet 2",
    "concepts": [
     {
      "id": "abc_krr",
@@ -649,11 +1399,12 @@
   {
    "id": "unit_kualpha3",
    "section": 1,
+   "only": "ku",
    "icon": "abc",
    "color": "#278E43",
-   "titleKu": "قۆناغا ٦: ئەلفوبێیا کوردی ٣: ک – ێ",
-   "titleDe": "Einheit 6: Kurdisches Alphabet 3",
-   "titleEn": "Unit 6: Kurdish alphabet 3",
+   "titleKu": "ئەلفوبێیا کوردی ٣: ک – ێ",
+   "titleDe": "Kurdisches Alphabet 3",
+   "titleEn": "Kurdish alphabet 3",
    "concepts": [
     {
      "id": "abc_kk",
@@ -789,9 +1540,9 @@
   },
   {
    "id": "unit_abc1",
-   "titleKu": "قۆناغا ٧: پیتێن تایبەت: Ä Ö Ü ß",
-   "titleDe": "Einheit 7: Umlaute & ß",
-   "titleEn": "Unit 7: Special letters Ä Ö Ü ß",
+   "titleKu": "پیتێن تایبەت: Ä Ö Ü ß",
+   "titleDe": "Umlaute & ß",
+   "titleEn": "Special letters Ä Ö Ü ß",
    "icon": "abc",
    "color": "#58CC02",
    "concepts": [
@@ -876,13 +1627,14 @@
      "emoji": "🔥"
     }
    ],
-   "section": 1
+   "section": 1,
+   "only": "de"
   },
   {
    "id": "unit_abc2",
-   "titleKu": "قۆناغا ٨: پیتێن لێکدای ١: ei · ie · eu · ch · sch",
-   "titleDe": "Einheit 8: Laute 1",
-   "titleEn": "Unit 8: Letter sounds 1",
+   "titleKu": "پیتێن لێکدای ١: ei · ie · eu · ch · sch",
+   "titleDe": "Laute 1",
+   "titleEn": "Letter sounds 1",
    "icon": "abc",
    "color": "#1CB0F6",
    "concepts": [
@@ -967,13 +1719,14 @@
      "emoji": "⚽"
     }
    ],
-   "section": 1
+   "section": 1,
+   "only": "de"
   },
   {
    "id": "unit_abc3",
-   "titleKu": "قۆناغا ٩: پیتێن لێکدای ٢: w · v · z · j · äu",
-   "titleDe": "Einheit 9: Laute 2",
-   "titleEn": "Unit 9: Letter sounds 2",
+   "titleKu": "پیتێن لێکدای ٢: w · v · z · j · äu",
+   "titleDe": "Laute 2",
+   "titleEn": "Letter sounds 2",
    "icon": "abc",
    "color": "#CE82FF",
    "concepts": [
@@ -1058,16 +1811,17 @@
      "emoji": "💬"
     }
    ],
-   "section": 1
+   "section": 1,
+   "only": "de"
   },
   {
    "id": "unit_s1a",
    "section": 2,
    "icon": "waving_hand",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ١٠: سلاڤ و خاترخواستن",
-   "titleDe": "Einheit 10: Begrüßung",
-   "titleEn": "Unit 10: Greetings",
+   "titleKu": "سلاڤ و خاترخواستن",
+   "titleDe": "Begrüßung",
+   "titleEn": "Greetings",
    "concepts": [
     {
      "id": "a1_01",
@@ -1166,9 +1920,9 @@
    "section": 2,
    "icon": "waving_hand",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ١١: ناڤ و خۆناساندن",
-   "titleDe": "Einheit 11: Ich heiße …",
-   "titleEn": "Unit 11: Names",
+   "titleKu": "ناڤ و خۆناساندن",
+   "titleDe": "Ich heiße …",
+   "titleEn": "Names",
    "concepts": [
     {
      "id": "a1_09",
@@ -1288,9 +2042,9 @@
    "section": 2,
    "icon": "waving_hand",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ١٢: وەلات و زمان",
-   "titleDe": "Einheit 12: Woher kommen Sie?",
-   "titleEn": "Unit 12: Countries & languages",
+   "titleKu": "وەلات و زمان",
+   "titleDe": "Woher kommen Sie?",
+   "titleEn": "Countries & languages",
    "concepts": [
     {
      "id": "a1_17",
@@ -1389,9 +2143,9 @@
    "section": 2,
    "icon": "waving_hand",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ١٣: ئەلفوبێ و ناڤنیشان",
-   "titleDe": "Einheit 13: Alphabet & Adresse",
-   "titleEn": "Unit 13: Alphabet & address",
+   "titleKu": "ئەلفوبێ و ناڤنیشان",
+   "titleDe": "Alphabet & Adresse",
+   "titleEn": "Alphabet & address",
    "concepts": [
     {
      "id": "a1_25",
@@ -1490,9 +2244,9 @@
    "section": 3,
    "icon": "family",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ١٤: تو چاوانی؟",
-   "titleDe": "Einheit 14: Wie geht's?",
-   "titleEn": "Unit 14: How are you?",
+   "titleKu": "تو چاوانی؟",
+   "titleDe": "Wie geht's?",
+   "titleEn": "How are you?",
    "concepts": [
     {
      "id": "a2_01",
@@ -1633,9 +2387,9 @@
    "section": 3,
    "icon": "family",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ١٥: مالبات",
-   "titleDe": "Einheit 15: Die Familie",
-   "titleEn": "Unit 15: Family",
+   "titleKu": "مالبات",
+   "titleDe": "Die Familie",
+   "titleEn": "Family",
    "concepts": [
     {
      "id": "a2_09",
@@ -1734,9 +2488,9 @@
    "section": 3,
    "icon": "family",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ١٦: ئەز ل … دژیم",
-   "titleDe": "Einheit 16: Er lebt in Duhok.",
-   "titleEn": "Unit 16: Where people live",
+   "titleKu": "ئەز ل … دژیم",
+   "titleDe": "Er lebt in Duhok.",
+   "titleEn": "Where people live",
    "concepts": [
     {
      "id": "a2_17",
@@ -1835,9 +2589,9 @@
    "section": 4,
    "icon": "food",
    "color": "#FF9600",
-   "titleKu": "قۆناغا ١٧: خوارن",
-   "titleDe": "Einheit 17: Lebensmittel",
-   "titleEn": "Unit 17: Food",
+   "titleKu": "خوارن",
+   "titleDe": "Lebensmittel",
+   "titleEn": "Food",
    "concepts": [
     {
      "id": "a3_01",
@@ -1936,9 +2690,9 @@
    "section": 4,
    "icon": "food",
    "color": "#FF9600",
-   "titleKu": "قۆناغا ١٨: ڤەخوارن و چەندایەتی",
-   "titleDe": "Einheit 18: Getränke & Mengen",
-   "titleEn": "Unit 18: Drinks & amounts",
+   "titleKu": "ڤەخوارن و چەندایەتی",
+   "titleDe": "Getränke & Mengen",
+   "titleEn": "Drinks & amounts",
    "concepts": [
     {
      "id": "a3_09",
@@ -2037,9 +2791,9 @@
    "section": 4,
    "icon": "food",
    "color": "#FF9600",
-   "titleKu": "قۆناغا ١٩: ل بازاڕی و خوارنا من",
-   "titleDe": "Einheit 19: Einkaufen",
-   "titleEn": "Unit 19: Shopping",
+   "titleKu": "ل بازاڕی و خوارنا من",
+   "titleDe": "Einkaufen",
+   "titleEn": "Shopping",
    "concepts": [
     {
      "id": "a3_17",
@@ -2138,9 +2892,9 @@
    "section": 5,
    "icon": "home",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٢٠: ژوورێن خانی",
-   "titleDe": "Einheit 20: Zimmer",
-   "titleEn": "Unit 20: Rooms",
+   "titleKu": "ژوورێن خانی",
+   "titleDe": "Zimmer",
+   "titleEn": "Rooms",
    "concepts": [
     {
      "id": "a4_01",
@@ -2239,9 +2993,9 @@
    "section": 5,
    "icon": "home",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٢١: سالۆخدان: مەزن، بچووک…",
-   "titleDe": "Einheit 21: Das Zimmer ist schön.",
-   "titleEn": "Unit 21: Describing",
+   "titleKu": "سالۆخدان: مەزن، بچووک…",
+   "titleDe": "Das Zimmer ist schön.",
+   "titleEn": "Describing",
    "concepts": [
     {
      "id": "a4_09",
@@ -2340,9 +3094,9 @@
    "section": 5,
    "icon": "home",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٢٢: کەلوپەل و رەنگ",
-   "titleDe": "Einheit 22: Möbel & Farben",
-   "titleEn": "Unit 22: Furniture & colours",
+   "titleKu": "کەلوپەل و رەنگ",
+   "titleDe": "Möbel & Farben",
+   "titleEn": "Furniture & colours",
    "concepts": [
     {
      "id": "a4_17",
@@ -2441,9 +3195,9 @@
    "section": 6,
    "icon": "schedule",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٢٣: کارێن رۆژانە",
-   "titleDe": "Einheit 23: Aktivitäten",
-   "titleEn": "Unit 23: Daily activities",
+   "titleKu": "کارێن رۆژانە",
+   "titleDe": "Aktivitäten",
+   "titleEn": "Daily activities",
    "concepts": [
     {
      "id": "a5_01",
@@ -2542,9 +3296,9 @@
    "section": 6,
    "icon": "schedule",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٢٤: دەمژمێر",
-   "titleDe": "Einheit 24: Die Uhrzeit",
-   "titleEn": "Unit 24: Time",
+   "titleKu": "دەمژمێر",
+   "titleDe": "Die Uhrzeit",
+   "titleEn": "Time",
    "concepts": [
     {
      "id": "a5_09",
@@ -2643,9 +3397,9 @@
    "section": 6,
    "icon": "schedule",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٢٥: رۆژێن حەفتیێ",
-   "titleDe": "Einheit 25: Wochentage",
-   "titleEn": "Unit 25: Days",
+   "titleKu": "رۆژێن حەفتیێ",
+   "titleDe": "Wochentage",
+   "titleEn": "Days",
    "concepts": [
     {
      "id": "a5_17",
@@ -2744,9 +3498,9 @@
    "section": 7,
    "icon": "sports",
    "color": "#00CD9C",
-   "titleKu": "قۆناغا ٢٦: کەش و هەوا",
-   "titleDe": "Einheit 26: Das Wetter",
-   "titleEn": "Unit 26: Weather",
+   "titleKu": "کەش و هەوا",
+   "titleDe": "Das Wetter",
+   "titleEn": "Weather",
    "concepts": [
     {
      "id": "a6_01",
@@ -2845,9 +3599,9 @@
    "section": 7,
    "icon": "sports",
    "color": "#00CD9C",
-   "titleKu": "قۆناغا ٢٧: ل خوارنگەها بچووک (Imbiss)",
-   "titleDe": "Einheit 27: Am Imbiss",
-   "titleEn": "Unit 27: At the snack bar",
+   "titleKu": "ل خوارنگەها بچووک (Imbiss)",
+   "titleDe": "Am Imbiss",
+   "titleEn": "At the snack bar",
    "concepts": [
     {
      "id": "a6_09",
@@ -2965,9 +3719,9 @@
    "section": 7,
    "icon": "sports",
    "color": "#00CD9C",
-   "titleKu": "قۆناغا ٢٨: حەزژێکرن",
-   "titleDe": "Einheit 28: Hobbys",
-   "titleEn": "Unit 28: Hobbies",
+   "titleKu": "حەزژێکرن",
+   "titleDe": "Hobbys",
+   "titleEn": "Hobbies",
    "concepts": [
     {
      "id": "a6_17",
@@ -3066,9 +3820,9 @@
    "section": 8,
    "icon": "tune",
    "color": "#A560E8",
-   "titleKu": "قۆناغا ٢٩: شیان: können",
-   "titleDe": "Einheit 29: können",
-   "titleEn": "Unit 29: can",
+   "titleKu": "شیان: können",
+   "titleDe": "können",
+   "titleEn": "can",
    "concepts": [
     {
      "id": "a7_01",
@@ -3203,9 +3957,9 @@
    "section": 8,
    "icon": "tune",
    "color": "#A560E8",
-   "titleKu": "قۆناغا ٣٠: ڤیان: wollen",
-   "titleDe": "Einheit 30: wollen",
-   "titleEn": "Unit 30: want",
+   "titleKu": "ڤیان: wollen",
+   "titleDe": "wollen",
+   "titleEn": "want",
    "concepts": [
     {
      "id": "a7_09",
@@ -3303,9 +4057,9 @@
    "section": 8,
    "icon": "tune",
    "color": "#A560E8",
-   "titleKu": "قۆناغا ٣١: دەمێ بۆری: Perfekt",
-   "titleDe": "Einheit 31: Perfekt",
-   "titleEn": "Unit 31: Past tense",
+   "titleKu": "دەمێ بۆری: Perfekt",
+   "titleDe": "Perfekt",
+   "titleEn": "Past tense",
    "concepts": [
     {
      "id": "a7_17",
@@ -3404,9 +4158,9 @@
    "section": 9,
    "icon": "work",
    "color": "#FF4B4B",
-   "titleKu": "قۆناغا ٣٢: پیشە",
-   "titleDe": "Einheit 32: Berufe",
-   "titleEn": "Unit 32: Jobs",
+   "titleKu": "پیشە",
+   "titleDe": "Berufe",
+   "titleEn": "Jobs",
    "concepts": [
     {
      "id": "a8_01",
@@ -3505,9 +4259,9 @@
    "section": 9,
    "icon": "work",
    "color": "#FF4B4B",
-   "titleKu": "قۆناغا ٣٣: ل سەر کاری",
-   "titleDe": "Einheit 33: Bei der Arbeit",
-   "titleEn": "Unit 33: At work",
+   "titleKu": "ل سەر کاری",
+   "titleDe": "Bei der Arbeit",
+   "titleEn": "At work",
    "concepts": [
     {
      "id": "a8_09",
@@ -3606,9 +4360,9 @@
    "section": 9,
    "icon": "work",
    "color": "#FF4B4B",
-   "titleKu": "قۆناغا ٣٤: ل بەری: war / hatte",
-   "titleDe": "Einheit 34: Präteritum: war, hatte",
-   "titleEn": "Unit 34: was / had",
+   "titleKu": "ل بەری: war / hatte",
+   "titleDe": "Präteritum: war, hatte",
+   "titleEn": "was / had",
    "concepts": [
     {
      "id": "a8_17",
@@ -3707,9 +4461,9 @@
    "section": 10,
    "icon": "badge",
    "color": "#FFC800",
-   "titleKu": "قۆناغا ٣٥: ل فەرمانگەهێ",
-   "titleDe": "Einheit 35: Auf dem Amt",
-   "titleEn": "Unit 35: At the office",
+   "titleKu": "ل فەرمانگەهێ",
+   "titleDe": "Auf dem Amt",
+   "titleEn": "At the office",
    "concepts": [
     {
      "id": "a9_01",
@@ -3844,9 +4598,9 @@
    "section": 10,
    "icon": "badge",
    "color": "#FFC800",
-   "titleKu": "قۆناغا ٣٦: فەرمان و داخواز",
-   "titleDe": "Einheit 36: Imperativ",
-   "titleEn": "Unit 36: Instructions",
+   "titleKu": "فەرمان و داخواز",
+   "titleDe": "Imperativ",
+   "titleEn": "Instructions",
    "concepts": [
     {
      "id": "a9_09",
@@ -3945,9 +4699,9 @@
    "section": 10,
    "icon": "badge",
    "color": "#FFC800",
-   "titleKu": "قۆناغا ٣٧: ل هۆتێلێ",
-   "titleDe": "Einheit 37: Im Hotel",
-   "titleEn": "Unit 37: At the hotel",
+   "titleKu": "ل هۆتێلێ",
+   "titleDe": "Im Hotel",
+   "titleEn": "At the hotel",
    "concepts": [
     {
      "id": "a9_17",
@@ -4046,9 +4800,9 @@
    "section": 11,
    "icon": "health",
    "color": "#FF86D0",
-   "titleKu": "قۆناغا ٣٨: لەش",
-   "titleDe": "Einheit 38: Der Körper",
-   "titleEn": "Unit 38: Body",
+   "titleKu": "لەش",
+   "titleDe": "Der Körper",
+   "titleEn": "Body",
    "concepts": [
     {
      "id": "a10_01",
@@ -4147,9 +4901,9 @@
    "section": 11,
    "icon": "health",
    "color": "#FF86D0",
-   "titleKu": "قۆناغا ٣٩: ل نک نوژداری",
-   "titleDe": "Einheit 39: Beim Arzt",
-   "titleEn": "Unit 39: At the doctor's",
+   "titleKu": "ل نک نوژداری",
+   "titleDe": "Beim Arzt",
+   "titleEn": "At the doctor's",
    "concepts": [
     {
      "id": "a10_09",
@@ -4247,9 +5001,9 @@
    "section": 11,
    "icon": "health",
    "color": "#FF86D0",
-   "titleKu": "قۆناغا ٤٠: ژڤان",
-   "titleDe": "Einheit 40: Termine",
-   "titleEn": "Unit 40: Appointments",
+   "titleKu": "ژڤان",
+   "titleDe": "Termine",
+   "titleEn": "Appointments",
    "concepts": [
     {
      "id": "a10_17",
@@ -4347,9 +5101,9 @@
    "section": 12,
    "icon": "directions",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ٤١: رێک نیشاندان",
-   "titleDe": "Einheit 41: Der Weg",
-   "titleEn": "Unit 41: Directions",
+   "titleKu": "رێک نیشاندان",
+   "titleDe": "Der Weg",
+   "titleEn": "Directions",
    "concepts": [
     {
      "id": "a11_01",
@@ -4448,9 +5202,9 @@
    "section": 12,
    "icon": "directions",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ٤٢: ئامرازێن هاتن و چوونێ",
-   "titleDe": "Einheit 42: Verkehrsmittel",
-   "titleEn": "Unit 42: Transport",
+   "titleKu": "ئامرازێن هاتن و چوونێ",
+   "titleDe": "Verkehrsmittel",
+   "titleEn": "Transport",
    "concepts": [
     {
      "id": "a11_09",
@@ -4570,9 +5324,9 @@
    "section": 12,
    "icon": "directions",
    "color": "#1CB0F6",
-   "titleKu": "قۆناغا ٤٣: جه ل باژێڕی",
-   "titleDe": "Einheit 43: Orte",
-   "titleEn": "Unit 43: Places",
+   "titleKu": "جه ل باژێڕی",
+   "titleDe": "Orte",
+   "titleEn": "Places",
    "concepts": [
     {
      "id": "a11_17",
@@ -4671,9 +5425,9 @@
    "section": 13,
    "icon": "help",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٤٤: کەنگی؟ دەربڕینێن دەمی",
-   "titleDe": "Einheit 44: Zeitangaben",
-   "titleEn": "Unit 44: Time expressions",
+   "titleKu": "کەنگی؟ دەربڕینێن دەمی",
+   "titleDe": "Zeitangaben",
+   "titleEn": "Time expressions",
    "concepts": [
     {
      "id": "a12_01",
@@ -4772,9 +5526,9 @@
    "section": 13,
    "icon": "help",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٤٥: داخوازا ب رێز",
-   "titleDe": "Einheit 45: Höfliche Bitten",
-   "titleEn": "Unit 45: Polite requests",
+   "titleKu": "داخوازا ب رێز",
+   "titleDe": "Höfliche Bitten",
+   "titleEn": "Polite requests",
    "concepts": [
     {
      "id": "a12_09",
@@ -4873,9 +5627,9 @@
    "section": 13,
    "icon": "help",
    "color": "#2B70C9",
-   "titleKu": "قۆناغا ٤٦: خزمەتگوزاریێن رۆژانە",
-   "titleDe": "Einheit 46: Dienstleistungen",
-   "titleEn": "Unit 46: Services",
+   "titleKu": "خزمەتگوزاریێن رۆژانە",
+   "titleDe": "Dienstleistungen",
+   "titleEn": "Services",
    "concepts": [
     {
      "id": "a12_17",
@@ -4973,9 +5727,9 @@
    "section": 14,
    "icon": "clothes",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٤٧: جل و بەرگ",
-   "titleDe": "Einheit 47: Kleidung",
-   "titleEn": "Unit 47: Clothes",
+   "titleKu": "جل و بەرگ",
+   "titleDe": "Kleidung",
+   "titleEn": "Clothes",
    "concepts": [
     {
      "id": "a13_01",
@@ -5074,9 +5828,9 @@
    "section": 14,
    "icon": "clothes",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٤٨: ب دلێ من / ل من دهێت",
-   "titleDe": "Einheit 48: gefallen · passen · stehen",
-   "titleEn": "Unit 48: Likes & fit",
+   "titleKu": "ب دلێ من / ل من دهێت",
+   "titleDe": "gefallen · passen · stehen",
+   "titleEn": "Likes & fit",
    "concepts": [
     {
      "id": "a13_09",
@@ -5175,9 +5929,9 @@
    "section": 14,
    "icon": "clothes",
    "color": "#CE82FF",
-   "titleKu": "قۆناغا ٤٩: باش، باشتر، باشترین",
-   "titleDe": "Einheit 49: gut – besser – am besten",
-   "titleEn": "Unit 49: Comparisons",
+   "titleKu": "باش، باشتر، باشترین",
+   "titleDe": "gut – besser – am besten",
+   "titleEn": "Comparisons",
    "concepts": [
     {
      "id": "a13_17",
@@ -5275,9 +6029,9 @@
    "section": 15,
    "icon": "flag",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ٥٠: هەیڤ و رێکەفت",
-   "titleDe": "Einheit 50: Monate & Datum",
-   "titleEn": "Unit 50: Months & dates",
+   "titleKu": "هەیڤ و رێکەفت",
+   "titleDe": "Monate & Datum",
+   "titleEn": "Months & dates",
    "concepts": [
     {
      "id": "a14_01",
@@ -5376,9 +6130,9 @@
    "section": 15,
    "icon": "flag",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ٥١: جەژن و پیرۆزبایی",
-   "titleDe": "Einheit 51: Feste & Glückwünsche",
-   "titleEn": "Unit 51: Celebrations",
+   "titleKu": "جەژن و پیرۆزبایی",
+   "titleDe": "Feste & Glückwünsche",
+   "titleEn": "Celebrations",
    "concepts": [
     {
      "id": "a14_09",
@@ -5477,9 +6231,9 @@
    "section": 15,
    "icon": "flag",
    "color": "#58CC02",
-   "titleKu": "قۆناغا ٥٢: بانگهێشتن و ئەگەر (denn)",
-   "titleDe": "Einheit 52: Einladungen",
-   "titleEn": "Unit 52: Invitations",
+   "titleKu": "بانگهێشتن و ئەگەر (denn)",
+   "titleDe": "Einladungen",
+   "titleEn": "Invitations",
    "concepts": [
     {
      "id": "a14_17",

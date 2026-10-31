@@ -7,6 +7,7 @@ import '../services/progress_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
 import 'quiz_screen.dart';
+import 'widgets/mascot.dart';
 
 AppLanguage get _ui => ProgressService.instance.nativeLang;
 
@@ -194,7 +195,7 @@ class _DialogScreenState extends State<DialogScreen> {
         body: ListView(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 100),
           children: [
-            for (var k = 0; k < l.dialog.length; k++) _bubble(l.dialog[k], k, speakers.indexOf(l.dialog[k].who).isEven),
+            for (var k = 0; k < l.dialog.length; k++) _bubble(l.dialog[k], k, speakers.indexOf(l.dialog[k].who)),
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
@@ -209,8 +210,33 @@ class _DialogScreenState extends State<DialogScreen> {
     );
   }
 
-  Widget _bubble(DialogLine d, int k, bool left) {
+  Widget _bubble(DialogLine d, int k, int who) {
     final active = playing == k;
+    final left = who.isEven;
+    final avatar = Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: AnimatedScale(
+        scale: active ? 1.12 : 1,
+        duration: const Duration(milliseconds: 200),
+        child: MascotAvatar(
+          char: MascotChar.cast[who % MascotChar.cast.length],
+          size: 48,
+          ring: active ? AppColors.gold : (left ? AppColors.blue : AppColors.green),
+        ),
+      ),
+    );
+    return Row(
+      mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        if (left) ...[avatar, const SizedBox(width: 8)],
+        Flexible(child: _bubbleBody(d, k, left, active)),
+        if (!left) ...[const SizedBox(width: 8), avatar],
+      ],
+    );
+  }
+
+  Widget _bubbleBody(DialogLine d, int k, bool left, bool active) {
     return Align(
       alignment: left ? AlignmentDirectional.centerStart : AlignmentDirectional.centerEnd,
       child: GestureDetector(
@@ -220,7 +246,7 @@ class _DialogScreenState extends State<DialogScreen> {
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          constraints: const BoxConstraints(maxWidth: 320),
+          constraints: const BoxConstraints(maxWidth: 290),
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
@@ -329,4 +355,200 @@ void openPlacement(BuildContext context) {
       ),
     ),
   );
+}
+
+// ───────────────────────── 🔤 کارتێن پیتان ─────────────────────────
+
+/// هەر پیتەک: ناڤێ وێ (C = تسێ)، دەنگێ وێ، و پەیڤەکا نموونە کو پیت تێدا یە.
+class LetterCardsScreen extends StatefulWidget {
+  final LessonUnit unit;
+  final VoidCallback? onStart;
+  const LetterCardsScreen({super.key, required this.unit, this.onStart});
+
+  static Future<void> open(BuildContext context, LessonUnit unit, {VoidCallback? onStart}) {
+    ProgressService.instance.setGrammarSeen('${unit.id}_letters');
+    return Navigator.push(context, MaterialPageRoute(builder: (_) => LetterCardsScreen(unit: unit, onStart: onStart)));
+  }
+
+  @override
+  State<LetterCardsScreen> createState() => _LetterCardsScreenState();
+}
+
+class _LetterCardsScreenState extends State<LetterCardsScreen> {
+  late final cards = widget.unit.concepts.where((c) => c.letter != null).toList();
+  final _page = PageController();
+  int i = 0;
+  AppLanguage get target => ProgressService.instance.targetLang;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _say());
+  }
+
+  @override
+  void dispose() {
+    _page.dispose();
+    VoiceService.instance.stopPlayback();
+    super.dispose();
+  }
+
+  void _say([double rate = 1.0]) {
+    if (cards.isEmpty) return;
+    VoiceService.instance.speak(cards[i], target, rate: rate);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final last = i == cards.length - 1;
+    return Directionality(
+      textDirection: _ui.direction,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('🔤 ${widget.unit.title(_ui)}', style: const TextStyle(fontSize: 17)),
+        ),
+        body: SafeArea(
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
+              child: MascotSays(
+                mood: MascotMood.speak,
+                height: 92,
+                text: tr(_ui, 'گوهـ بدە 🔊 و ب دەنگێ بلند دووبارە بکە!', 'Hör zu und sprich nach!', 'Listen and repeat!'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: LinearProgressIndicator(
+                  value: cards.isEmpty ? 1 : (i + 1) / cards.length,
+                  minHeight: 8,
+                  backgroundColor: AppColors.card,
+                  valueColor: AlwaysStoppedAnimation(widget.unit.color),
+                ),
+              ),
+            ),
+            Expanded(
+              child: PageView.builder(
+                controller: _page,
+                itemCount: cards.length,
+                onPageChanged: (k) {
+                  setState(() => i = k);
+                  _say();
+                },
+                itemBuilder: (_, k) => _card(cards[k]),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+              child: Row(children: [
+                if (i > 0)
+                  IconButton.filledTonal(
+                    onPressed: () => _page.previousPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut),
+                    icon: Icon(_ui.direction == TextDirection.rtl ? Icons.arrow_forward_rounded : Icons.arrow_back_rounded),
+                  ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: BigButton(
+                    label: last
+                        ? (widget.onStart != null
+                            ? tr(_ui, 'تێگەهشتم — دەستپێبکە', 'Los geht’s', 'Start')
+                            : tr(_ui, 'تەمام', 'Fertig', 'Done'))
+                        : tr(_ui, 'پیتا دی', 'Nächster Buchstabe', 'Next letter'),
+                    color: widget.unit.color,
+                    onPressed: () {
+                      if (!last) {
+                        _page.nextPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut);
+                      } else {
+                        Navigator.pop(context);
+                        widget.onStart?.call();
+                      }
+                    },
+                  ),
+                ),
+              ]),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  Widget _card(WordConcept c) {
+    final l = c.letter!;
+    final color = widget.unit.color;
+    Widget chip(String title, String value) => Expanded(
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+            decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(14)),
+            child: Column(children: [
+              Text(title, style: const TextStyle(color: Colors.white54, fontSize: 13)),
+              const SizedBox(height: 4),
+              Text(value, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.gold)),
+            ]),
+          ),
+        );
+    // پیت د ناڤ پەیڤێ دا ب رەنگێ زێڕی
+    final spans = <TextSpan>[];
+    for (final ch in l.word.split('')) {
+      final hit = ch.toLowerCase() == l.upper.toLowerCase();
+      spans.add(TextSpan(text: ch, style: TextStyle(color: hit ? AppColors.gold : Colors.white, decoration: hit ? TextDecoration.underline : null)));
+    }
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 8),
+      child: Column(children: [
+        GestureDetector(
+          onTap: _say,
+          child: Container(
+            width: 150,
+            height: 150,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: color.withValues(alpha: 0.2),
+              border: Border.all(color: color, width: 4),
+            ),
+            child: Text('${l.upper} ${l.lower}',
+                textDirection: TextDirection.ltr, style: const TextStyle(fontFamily: 'LeagueGothic', fontSize: 78, height: 1)),
+          ),
+        ),
+        const SizedBox(height: 14),
+        Row(children: [
+          chip(tr(_ui, 'ناڤێ پیتێ', 'Name', 'Name'), l.name),
+          const SizedBox(width: 10),
+          chip(tr(_ui, 'دەنگ د پەیڤێ دا', 'Laut', 'Sound'), l.sound),
+        ]),
+        const SizedBox(height: 14),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(18)),
+          child: Column(children: [
+            Text(c.pic, style: const TextStyle(fontSize: 56)),
+            const SizedBox(height: 6),
+            RichText(
+              textDirection: TextDirection.ltr,
+              text: TextSpan(style: const TextStyle(fontFamily: 'LeagueGothic', fontSize: 40, letterSpacing: 1), children: spans),
+            ),
+            const SizedBox(height: 6),
+            Text('${tr(_ui, 'خواندن', 'Aussprache', 'Say')}: ${l.read}', style: const TextStyle(fontSize: 17, color: Colors.white70)),
+            Text('${tr(_ui, 'رامان', 'Bedeutung', 'Meaning')}: ${c.text(_ui).split('·').last.trim()}',
+                style: const TextStyle(fontSize: 16, color: Colors.white60)),
+          ]),
+        ),
+        const SizedBox(height: 14),
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          FilledButton.icon(
+            style: FilledButton.styleFrom(backgroundColor: AppColors.blue, padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14)),
+            onPressed: _say,
+            icon: const Icon(Icons.volume_up_rounded),
+            label: Text(c.text(target), textDirection: TextDirection.ltr),
+          ),
+          const SizedBox(width: 10),
+          IconButton.filledTonal(onPressed: () => _say(0.7), icon: const Text('🐢', style: TextStyle(fontSize: 20))),
+        ]),
+      ]),
+    );
+  }
 }

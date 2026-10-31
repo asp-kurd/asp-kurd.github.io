@@ -93,6 +93,12 @@ class ProgressService extends ChangeNotifier {
 
   void _loadPair() {
     completedUnits = (_p.getStringList('done_$_pairKey') ?? []).toSet();
+    // ئینگلیزی: ئەلفوبێیا نوو ب ناڤێن جودا — یێن بەری نوکە تەمامکرین ب جهـ بینە
+    if (targetLang == AppLanguage.english) {
+      for (var k = 1; k <= 3; k++) {
+        if (completedUnits.contains('unit_alpha$k')) completedUnits.add('unit_enalpha$k');
+      }
+    }
     srs = {};
     for (final e in _p.getStringList('srs_$_pairKey') ?? <String>[]) {
       final parts = e.split(':');
@@ -138,6 +144,21 @@ class ProgressService extends ChangeNotifier {
     await _p.setString('target', target.code);
     await _p.setBool('onboarded', true);
     _loadPair();
+    notifyListeners();
+  }
+
+  // 🙊 «نوکە نەشێم باخڤم / گوهداریێ بکەم» — بۆ ٥ خولەکان ئەو پرسیار نائێن
+  static const voicePause = Duration(minutes: 5);
+  DateTime? _noSpeakUntil, _noListenUntil;
+  bool get speakPaused => _noSpeakUntil != null && DateTime.now().isBefore(_noSpeakUntil!);
+  bool get listenPaused => _noListenUntil != null && DateTime.now().isBefore(_noListenUntil!);
+  void pauseSpeak() {
+    _noSpeakUntil = DateTime.now().add(voicePause);
+    notifyListeners();
+  }
+
+  void pauseListen() {
+    _noListenUntil = DateTime.now().add(voicePause);
     notifyListeners();
   }
 

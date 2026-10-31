@@ -4,12 +4,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../models.dart';
+import '../services/progress_service.dart';
 
 /// هەمی وانە ژ assets/curriculum.json دهێنە خواندن.
 /// هەمان فایل د voice_lab/ دا ژی بۆ دروستکرنا دەنگێ کلۆنکری ب کار دهێت.
 /// بۆ زێدەکرنا پەیڤان: تنێ JSON بگوهۆڕە (id دڤێت یێ تایبەت بیت).
-late List<LessonUnit> appCurriculum;
-late List<WordConcept> allConcepts;
+List<LessonUnit> _allUnits = [];
+int _bundledVersion = 0;
+
+/// قۆناغێن زمانێ هەلبژارتی (ئەلفوبێیا کوردی بۆ فێربوونا ئەلمانی نائێت، و هوسا)
+List<LessonUnit> get appCurriculum => _visible();
+List<WordConcept> get allConcepts => _visibleConcepts;
+
+String? _cacheKey;
+List<LessonUnit> _cacheUnits = [];
+List<WordConcept> _visibleConcepts = [];
+List<LessonUnit> _visible() {
+  final t = ProgressService.instance.targetLang.code;
+  final key = '$t#${identityHashCode(_allUnits)}';
+  if (key != _cacheKey) {
+    final units = _allUnits.where((u) => u.only == null || u.only == t).toList();
+    _cacheUnits = [for (var i = 0; i < units.length; i++) units[i].numbered(i + 1)];
+    _visibleConcepts = _cacheUnits.expand((u) => u.concepts).toList();
+    _cacheKey = key;
+  }
+  return _cacheUnits;
+}
 
 /// ناڤێن بەشان (A1 / A2 ...)
 class CurriculumSection {
@@ -73,29 +93,35 @@ Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16)
 
 /// [override] = ناڤەرۆکا گوهۆڕی ژ لایێ ئەدمینی (ژ سێرڤەری)
 Future<void> loadCurriculum([String? override]) async {
+  final bundled = await rootBundle.loadString('assets/curriculum.json');
+  _bundledVersion = ((jsonDecode(bundled) as Map)['version'] as num?)?.toInt() ?? 0;
   if (override != null) {
     try {
-      _parse(override);
+      // ناڤەرۆکا ئەدمینی یا کەڤن (بەری نوویکرنا ئەپێ) نابیت یا نوو بشێلیت
+      _parse(override, minVersion: _bundledVersion);
       return;
     } catch (_) {
-      // ئەگەر ناڤەرۆکا سێرڤەری خراب بیت، یا ئەسلی ب کار بینە
+      // ئەگەر ناڤەرۆکا سێرڤەری خراب یان کەڤن بیت، یا ئەسلی ب کار بینە
     }
   }
-  _parse(await rootBundle.loadString('assets/curriculum.json'));
+  _parse(bundled);
 }
 
-void _parse(String raw) {
+void _parse(String raw, {int minVersion = 0}) {
   final data = jsonDecode(raw) as Map<String, dynamic>;
+  if (((data['version'] as num?)?.toInt() ?? 0) < minVersion) throw StateError('old content');
   appSections = ((data['sections'] as List?) ?? [])
       .map((s) => CurriculumSection(s['ku'] as String, s['de'] as String, s['en'] as String))
       .toList();
-  appCurriculum = (data['units'] as List).map((u) {
+  final strip = RegExp(r'^(قۆناغا [٠-٩]+: |Einheit \d+: |Unit \d+: )');
+  _allUnits = (data['units'] as List).map((u) {
     final m = u as Map<String, dynamic>;
     return LessonUnit(
       id: m['id'] as String,
-      titleKu: m['titleKu'] as String,
-      titleDe: m['titleDe'] as String,
-      titleEn: m['titleEn'] as String,
+      only: m['only'] as String?,
+      titleKu: (m['titleKu'] as String).replaceFirst(strip, ''),
+      titleDe: (m['titleDe'] as String).replaceFirst(strip, ''),
+      titleEn: (m['titleEn'] as String).replaceFirst(strip, ''),
       icon: _icons[m['icon']] ?? Icons.star_rounded,
       color: _hex(m['color'] as String),
       section: (m['section'] as num?)?.toInt() ?? 1,
@@ -111,11 +137,12 @@ void _parse(String raw) {
           en: x['en'] as String,
           enHint: x['enHint'] as String,
           emoji: (x['emoji'] as String?) ?? '',
+          letter: _letter(x['letter']),
         );
       }).toList(),
     );
   }).toList();
-  allConcepts = appCurriculum.expand((u) => u.concepts).toList();
+  _cacheKey = null;
   appLektionen = ((data['lektionen'] as List?) ?? []).map((l) {
     final m = l as Map<String, dynamic>;
     final d = m['dialog'] as Map<String, dynamic>;
@@ -131,6 +158,18 @@ void _parse(String raw) {
           .toList(),
     );
   }).toList();
+}
+
+LetterInfo? _letter(dynamic l) {
+  if (l is! Map) return null;
+  return LetterInfo(
+    upper: l['L'] as String,
+    lower: (l['lower'] as String?) ?? '',
+    name: (l['name'] as String?) ?? '',
+    sound: (l['sound'] as String?) ?? '',
+    word: (l['word'] as String?) ?? '',
+    read: (l['read'] as String?) ?? '',
+  );
 }
 
 GrammarCard? _grammar(dynamic g) {

@@ -404,7 +404,18 @@ class _LearnPath extends StatelessWidget {
                   child: Text(unit.title(p.nativeLang),
                       style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: Colors.white)),
                 ),
-                if (unit.grammar != null && unlocked)
+                if (unit.isAlphabet && unlocked)
+                  InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => LetterCardsScreen.open(context, unit),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(color: Colors.black26, borderRadius: BorderRadius.circular(12)),
+                      child: Text('🔤 ${tr(p.nativeLang, 'پیت', 'Buchstaben', 'Letters')}',
+                          style: const TextStyle(color: Colors.white, fontSize: 13)),
+                    ),
+                  )
+                else if (unit.grammar != null && unlocked)
                   InkWell(
                     borderRadius: BorderRadius.circular(12),
                     onTap: () => showGrammarCard(context, unit),
@@ -427,7 +438,9 @@ class _LearnPath extends StatelessWidget {
           child: GestureDetector(
             onTap: unlocked
                 ? () {
-                    if (unit.grammar != null && !p.grammarSeen(unit.id)) {
+                    if (unit.isAlphabet && !p.grammarSeen('${unit.id}_letters')) {
+                      LetterCardsScreen.open(context, unit, onStart: () => _open(context, unit, unit.concepts));
+                    } else if (unit.grammar != null && !p.grammarSeen(unit.id)) {
                       showGrammarCard(context, unit, onStart: () => _open(context, unit, unit.concepts));
                     } else {
                       _open(context, unit, unit.concepts);

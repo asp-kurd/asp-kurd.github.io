@@ -218,7 +218,8 @@ class _AdminDashboardState extends State<AdminDashboard> {
               child: Container(width: 12, height: 12, decoration: BoxDecoration(color: AppColors.green, shape: BoxShape.circle, border: Border.all(color: AppColors.card, width: 2))),
             ),
         ]),
-        title: Text('${l['name']}', style: const TextStyle(fontWeight: FontWeight.bold)),
+        title: Text('${l['name']}${switch (l['gender']) { 'm' => ' 👨', 'f' => ' 👩', _ => '' }}',
+            style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(
           '${l['age'] ?? '–'} سال · ${l['city'] ?? ''}\n'
           '${seen == null ? '' : agoKu(seen)} · ⚡${l['xp'] ?? 0} · 🔥${l['streak'] ?? 0}${min > 0 ? ' · ئەڤرۆ $min خ' : ''}',
@@ -320,6 +321,7 @@ class _LearnerDetailState extends State<LearnerDetail> {
           : ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 90), children: [
               _info('👤', 'ناڤ', '${l['name']}'),
               _info('🎂', 'تەمەن', '${l['age'] ?? '–'}'),
+              _info('⚧', 'ڕەگەز', switch (l['gender']) { 'm' => '👨 نێر', 'f' => '👩 مێ', _ => '–' }),
               _info('📍', 'جه', '${l['city'] ?? '–'}'),
               _info('🗓️', 'دەستپێک', created == null ? '–' : '${created.year}/${created.month}/${created.day}'),
               _info('👀', 'دویماهیک جار', DateTime.tryParse(l['last_seen'] ?? '') == null ? '–' : agoKu(DateTime.parse(l['last_seen']).toLocal())),

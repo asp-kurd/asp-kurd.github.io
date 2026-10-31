@@ -14,10 +14,14 @@ from pathlib import Path
 ROOT = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 OUT = ROOT / "assets" / "tts"
 MODELS = Path(os.environ.get("PIPER_DIR", "/tmp/piper"))
+# (مۆدێل، length_scale) — length_scale > 1 = هێدیتر و ئاشکەراتر بۆ فێرخوازان
 PIPER = {
-    "de": ("de/de_DE/thorsten/high/de_DE-thorsten-high", 1.0),
-    "en": ("en/en_US/lessac/high/en_US-lessac-high", 1.0),
+    "de": ("de/de_DE/thorsten/high/de_DE-thorsten-high", 1.22),
+    "en": ("en/en_US/lessac/high/en_US-lessac-high", 1.15),
 }
+MMS_RATE = 0.85  # بادینی: هێدیتر
+# دەمێ شێوازێ دەنگی دگوهۆڕیت، ڤێ ژمارێ زێدە بکە دا هەمی دەنگ ژ نوو بهێنە دروستکرن
+VOICE_VERSION = "2-slow-clear"
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 
 
@@ -33,10 +37,14 @@ def collect():
     cur = json.loads((ROOT / "assets/curriculum.json").read_text(encoding="utf-8"))
     jobs = {"de": {}, "en": {}, "ku": {}}
     for u in cur["units"]:
+        only = u.get("only")  # قۆناغێن تایبەت ب زمانەکی (ئەلفوبێ)
         for c in u["concepts"]:
-            jobs["de"][c["de"]] = c["de"]
-            jobs["en"][c["en"]] = c["en"]
-            jobs["ku"][c["ku"]] = c["kuLat"]  # کلیل: نڤیسینا کوردی؛ دەنگ: لاتینی
+            if only in (None, "de"):
+                jobs["de"][c["de"]] = c["de"]
+            if only in (None, "en"):
+                jobs["en"][c["en"]] = c["en"]
+            if only in (None, "ku"):
+                jobs["ku"][c["ku"]] = c["kuLat"]  # کلیل: نڤیسینا کوردی؛ دەنگ: لاتینی
     for l in cur.get("lektionen", []):
         for line in l["dialog"]["lines"]:
             jobs["de"][line["de"]] = line["de"]
@@ -70,8 +78,10 @@ def clean(t: str) -> str:
 def to_mp3(wav_path: str, dst: Path):
     dst.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav_path,
-                    "-af", "silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse,loudnorm=I=-16",
-                    "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "48k", str(dst)], check=True)
+                    "-af", "silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
+                    # بێدەنگیەکا کورت ل دەستپێکێ دا ئێکەم پیت نەهێتە بڕین (iPhone)
+                    "loudnorm=I=-16:TP=-1.5,adelay=150:all=1,apad=pad_dur=0.25",
+                    "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "64k", str(dst)], check=True)
 
 
 def piper_voice(lang):
@@ -86,22 +96,30 @@ def piper_voice(lang):
     return PiperVoice.load(str(onnx))
 
 
-def piper_say(voice, text, wav_path):
+def piper_say(voice, text, wav_path, length_scale=1.0):
     with wave.open(wav_path, "wb") as wf:
         if hasattr(voice, "synthesize_wav"):  # piper-tts >= 1.3
-            voice.synthesize_wav(text, wf)
+            try:
+                from piper import SynthesisConfig
+                cfg = SynthesisConfig(length_scale=length_scale, noise_scale=0.55, noise_w_scale=0.7)
+                voice.synthesize_wav(text, wf, syn_config=cfg)
+            except ImportError:
+                voice.synthesize_wav(text, wf)
         else:
-            voice.synthesize(text, wf)
+            voice.synthesize(text, wf, length_scale=length_scale, noise_scale=0.55, noise_w=0.7, sentence_silence=0.35)
 
 
 def mms_model():
     import torch  # noqa
     from transformers import AutoTokenizer, VitsModel
     name = "facebook/mms-tts-kmr-script_latin"
-    return AutoTokenizer.from_pretrained(name), VitsModel.from_pretrained(name)
+    m = VitsModel.from_pretrained(name)
+    m.speaking_rate = MMS_RATE
+    m.noise_scale = 0.55
+    return AutoTokenizer.from_pretrained(name), m
 
 
-def mms_say(model, text, wav_path):
+def mms_say(model, text, wav_path, _scale=1.0):
     import numpy as np, torch, soundfile as sf
     tok, m = model
     inputs = tok(text.lower(), return_tensors="pt")
@@ -115,17 +133,25 @@ def main():
     only = os.environ.get("LANGS", "de,en,ku").split(",")
     total_new = 0
     for lang in only:
+        vfile = OUT / lang / ".version"
+        if not vfile.exists() or vfile.read_text().strip() != VOICE_VERSION:
+            # شێوازێ دەنگی هاتە گوهۆڕین ➔ هەمی فایلێن کەڤن ژێببە
+            removed = 0
+            for f in (OUT / lang).glob("*.mp3"):
+                f.unlink(); removed += 1
+            print(f"[{lang}] voice style changed → regenerating all ({removed} old files removed)", flush=True)
         todo = {k: v for k, v in jobs[lang].items() if not (OUT / lang / f"{fnv(k)}.mp3").exists() and clean(v)}
         print(f"[{lang}] {len(jobs[lang])} texts, {len(todo)} missing", flush=True)
         if not todo:
             continue
         engine = piper_voice(lang) if lang in PIPER else mms_model()
         say = piper_say if lang in PIPER else mms_say
+        scale = PIPER[lang][1] if lang in PIPER else 1.0
         for i, (key, text) in enumerate(todo.items(), 1):
             with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as t:
                 tmp = t.name
             try:
-                say(engine, clean(text), tmp)
+                say(engine, clean(text), tmp, scale)
                 to_mp3(tmp, OUT / lang / f"{fnv(key)}.mp3")
                 total_new += 1
             except Exception as e:  # ئێک دەنگ سەرنەکەفت: بەردەوام بە
@@ -134,6 +160,8 @@ def main():
                 os.unlink(tmp)
             if i % 50 == 0:
                 print(f"  {lang} {i}/{len(todo)}", flush=True)
+        (OUT / lang).mkdir(parents=True, exist_ok=True)
+        vfile.write_text(VOICE_VERSION)
     print(f"done: {total_new} new files")
 
 

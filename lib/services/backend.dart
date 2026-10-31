@@ -26,6 +26,9 @@ class Backend extends ChangeNotifier {
   bool get enabled => AppConfig.backendEnabled;
   bool get registered => profile != null;
   String get name => (profile?['name'] as String?) ?? '';
+
+  /// 'm' = نێر · 'f' = مێ · null = نەهاتییە دیارکرن (هەژمارێن کەڤن)
+  String? get gender => (profile?['gender'] as String?) ?? (enabled ? _p.getString('gender') : null);
   int get unread => messages.where((m) => !m.read).length;
 
   String get _base => AppConfig.supabaseUrl;
@@ -89,7 +92,9 @@ class Backend extends ChangeNotifier {
   }
 
   /// تۆمارکرنا فێرخوازەکێ نوو: ناڤ + تەمەن + جهێ ئاکنجیبوونێ
-  Future<String?> register({required String name, required int? age, required String city, String native = 'ku', String target = 'de'}) async {
+  Future<String?> register(
+      {required String name, required int? age, required String city, String? gender, String native = 'ku', String target = 'de'}) async {
+    if (gender != null) await _p.setString('gender', gender);
     if (!enabled) return 'offline';
     try {
       if (userId == null || isAdmin) {
@@ -108,9 +113,16 @@ class Backend extends ChangeNotifier {
         'native_lang': native,
         'target_lang': target,
         'last_seen': DateTime.now().toUtc().toIso8601String(),
+        if (gender != null) 'gender': gender,
       };
-      final r = await http.post(Uri.parse('$_base/rest/v1/learners'),
+      Future<http.Response> send() => http.post(Uri.parse('$_base/rest/v1/learners'),
           headers: {..._h, 'Prefer': 'resolution=merge-duplicates,return=representation'}, body: jsonEncode(row));
+      var r = await send();
+      // ئەگەر ستوونا gender هێشتا د داتابەیسێ دا نەبیت، بێ وێ تۆمار بکە
+      if (r.statusCode >= 300 && r.body.contains('gender')) {
+        row.remove('gender');
+        r = await send();
+      }
       if (r.statusCode >= 300) return 'db ${r.statusCode}: ${r.body}';
       final list = jsonDecode(r.body) as List;
       _setProfile(list.first as Map<String, dynamic>);

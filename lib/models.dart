@@ -27,10 +27,12 @@ class WordConcept {
   final String de, deHint; // ئەلمانی + خوێندن ب کوردی / تێبینیا رێزمانێ
   final String en, enHint; // ئینگلیزی + خوێندن ب کوردی
   final String emoji; // وێنەیێ پەیڤێ (ئیمۆجی)
+  final LetterInfo? letter; // تنێ بۆ قۆناغێن ئەلفوبێ
 
   const WordConcept(
     this.id, {
     this.emoji = '',
+    this.letter,
     required this.ku,
     required this.kuLat,
     required this.de,
@@ -55,6 +57,12 @@ class WordConcept {
       };
 }
 
+/// 🔤 زانیاریێن پیتەکێ: ناڤ، دەنگ، پەیڤا نموونە
+class LetterInfo {
+  final String upper, lower, name, sound, word, read;
+  const LetterInfo({required this.upper, required this.lower, required this.name, required this.sound, required this.word, required this.read});
+}
+
 /// ٣. پێنگاڤ (Unit)
 class LessonUnit {
   final String id;
@@ -64,10 +72,12 @@ class LessonUnit {
   final List<WordConcept> concepts;
   final int section; // 1, 2, 3 ...
   final GrammarCard? grammar; // کارتا رێزمانێ بەری وانێ
+  final String? only; // تنێ بۆ ئەڤی زمانی (de / en / ku)؛ null = بۆ هەمییان
 
   const LessonUnit({
     this.section = 1,
     this.grammar,
+    this.only,
     required this.id,
     required this.titleKu,
     required this.titleDe,
@@ -82,6 +92,26 @@ class LessonUnit {
         AppLanguage.german => titleDe,
         AppLanguage.english => titleEn,
       };
+
+  bool get isAlphabet => concepts.any((c) => c.letter != null);
+
+  /// کۆپیەک ب ژمارا قۆناغێ ل پێشیێ
+  LessonUnit numbered(int n) {
+    const ku = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    final kn = n.toString().split('').map((d) => ku[int.parse(d)]).join();
+    return LessonUnit(
+      id: id,
+      section: section,
+      grammar: grammar,
+      only: only,
+      icon: icon,
+      color: color,
+      concepts: concepts,
+      titleKu: 'قۆناغا $kn: $titleKu',
+      titleDe: 'Einheit $n: $titleDe',
+      titleEn: 'Unit $n: $titleEn',
+    );
+  }
 }
 
 /// کارتا رێزمانێ

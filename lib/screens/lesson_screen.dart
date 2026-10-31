@@ -8,6 +8,7 @@ import '../services/progress_service.dart';
 import '../services/sfx.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 
 /// شاشەیا وانەیێ: ٤ جۆرێن ڕاهێنانان
@@ -101,7 +102,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     for (var i = 0; i < concepts.length; i++) {
       final c = concepts[i];
       var type = cycle[i % cycle.length];
-      if (type == ExerciseType.listen && !voice.canSpeak(c, target)) type = ExerciseType.translate;
+      if (type == ExerciseType.listen && (!voice.canSpeak(c, target) || progress.listenPaused)) type = ExerciseType.translate;
+      if (type == ExerciseType.speak && progress.speakPaused) type = ExerciseType.reverse;
       if (type == ExerciseType.pickPicture && c.emoji.isEmpty) type = ExerciseType.reverse;
       // رستەیێن ٣+ پەیڤی ➔ ئاڤاکرنا رستێ
       if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
@@ -176,6 +178,43 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     }
   }
 
+  /// 🙊 / 🔇 — ئەڤ پرسیارە و یێن وەکی وێ بۆ ٥ خولەکان ب جۆرەکێ دی دهێنە گوهۆڕین
+  void _skipVoice(ExerciseType kind) {
+    if (kind == ExerciseType.speak) {
+      progress.pauseSpeak();
+    } else {
+      progress.pauseListen();
+    }
+    voice.stopPlayback();
+    final replacement = kind == ExerciseType.speak ? ExerciseType.reverse : ExerciseType.translate;
+    for (var k = index; k < queue.length; k++) {
+      if (queue[k].type == kind) queue[k] = Exercise(queue[k].concept, replacement);
+    }
+    setState(_prepare);
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(tr(
+          native,
+          kind == ExerciseType.speak ? 'باشە 👍 بۆ ٥ خولەکان پرسیارێن ئاخفتنێ نائێن.' : 'باشە 👍 بۆ ٥ خولەکان پرسیارێن گوهداریێ نائێن.',
+          'Okay 👍 5 Minuten lang keine ${kind == ExerciseType.speak ? 'Sprech' : 'Hör'}übungen.',
+          'Okay 👍 no ${kind == ExerciseType.speak ? 'speaking' : 'listening'} exercises for 5 minutes.')),
+    ));
+  }
+
+  Widget _skipButton(ExerciseType kind) => Padding(
+        padding: const EdgeInsets.only(top: 18),
+        child: Center(
+          child: TextButton.icon(
+            style: TextButton.styleFrom(foregroundColor: Colors.white70, side: const BorderSide(color: Colors.white24),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10)),
+            onPressed: checked ? null : () => _skipVoice(kind),
+            icon: Text(kind == ExerciseType.speak ? '🙊' : '🔇', style: const TextStyle(fontSize: 18)),
+            label: Text(kind == ExerciseType.speak
+                ? tr(native, 'نوکە نەشێم باخڤم', 'Kann gerade nicht sprechen', "Can't speak now")
+                : tr(native, 'نوکە نەشێم گوهداریێ بکەم', 'Kann gerade nicht hören', "Can't listen now")),
+          ),
+        ),
+      );
+
   String get _correctAnswer => switch (current.type) {
         ExerciseType.pickPicture => current.concept.pic,
         ExerciseType.trueFalse => tfCandidate?.id == current.concept.id ? 'yes' : 'no',
@@ -183,8 +222,12 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             .text(current.type == ExerciseType.translate || current.type == ExerciseType.wordBank ? target : native),
       };
 
+  String _praiseText = '', _comfortText = '';
+
   Future<void> _check() async {
     final ex = current;
+    _praiseText = native == AppLanguage.badini ? randomPraise() : tr(native, '', 'Super! 🎉', 'Great! 🎉');
+    _comfortText = native == AppLanguage.badini ? randomComfort() : tr(native, '', 'Fast! 💪', 'Almost! 💪');
     final ok = switch (ex.type) {
       ExerciseType.speak => true,
       ExerciseType.match => !matchHadMistake,
@@ -308,9 +351,19 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(_instruction(ex.type),
-                    style: const TextStyle(fontSize: 18, color: Colors.white70, fontWeight: FontWeight.w600)),
-                const SizedBox(height: 18),
+                MascotSays(
+                  mood: !checked
+                      ? switch (ex.type) {
+                          ExerciseType.listen => MascotMood.listen,
+                          ExerciseType.speak => MascotMood.speak,
+                          _ => MascotMood.ask,
+                        }
+                      : (isCorrect ? MascotMood.happy : MascotMood.sad),
+                  text: !checked ? _instruction(ex.type) : (isCorrect ? _praiseText : _comfortText),
+                  height: 104,
+                  textDirection: native.direction,
+                ),
+                const SizedBox(height: 12),
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
@@ -321,8 +374,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                         else ...[
                           _promptCard(ex),
                           const SizedBox(height: 24),
-                          if (ex.type == ExerciseType.speak)
-                            _speakArea(ex)
+                          if (ex.type == ExerciseType.speak) ...[
+                            _speakArea(ex),
+                            _skipButton(ExerciseType.speak),
+                          ]
                           else if (ex.type == ExerciseType.pickPicture)
                             _pictureGrid()
                           else if (ex.type == ExerciseType.trueFalse)
@@ -331,6 +386,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                             _wordBankArea(ex)
                           else
                             ..._optionTiles(),
+                          if (ex.type == ExerciseType.listen) _skipButton(ExerciseType.listen),
                         ],
                       ],
                     ),
@@ -739,49 +795,122 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   }
 }
 
-/// شاشەیا ئەنجامێ
-class _ResultScreen extends StatelessWidget {
+/// شاشەیا ئەنجامێ — ئەگەر بێ خەلەتی بیت: وێنەیێ مامۆستای + کۆنفێتی 🎉
+class _ResultScreen extends StatefulWidget {
   final int xp;
   final bool perfect;
   final AppLanguage lang;
   const _ResultScreen({required this.xp, required this.perfect, required this.lang});
 
   @override
+  State<_ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(seconds: 4))..forward();
+  final _rng = Random();
+  late final _bits = List.generate(28, (_) => (_rng.nextDouble(), _rng.nextDouble() * 0.6, ['🎉', '⭐', '✨', '🎊', '💯', '❤️'][_rng.nextInt(6)]));
+
+  static const _perfectKu = [
+    'تە هەمی بەرسڤ بێ خەلەتی دان! 🏆',
+    'نایاب! ئێک خەلەتی ژی نەبوو 🌟',
+    'تو قارەمانی! ١٠٠٪ دروست 💯',
+    'دەستخۆش! مامۆستا شانازیێ ب تە دبەت 🎓',
+    'سەد ژ سەدی! تو دبیە پرۆفیشناڵ 🚀',
+  ];
+  static const _doneKu = [
+    'وانە تەمام بوو! 🎉 هەر وەسا بەردەوام بە',
+    'دەستخۆش! هندەک خەلەتی هەبوون — جارا بێت بێ خەلەتی 💪',
+    'باشە! ب دووبارەکرنێ دێ بێ خەلەتی بی 🌱',
+  ];
+  late final String _msg = widget.perfect
+      ? (widget.lang == AppLanguage.badini ? _perfectKu[_rng.nextInt(_perfectKu.length)] : tr(widget.lang, '', 'Fehlerfrei! 🏆', 'Perfect — no mistakes! 🏆'))
+      : (widget.lang == AppLanguage.badini ? _doneKu[_rng.nextInt(_doneKu.length)] : tr(widget.lang, '', 'Lektion geschafft! 🎉', 'Lesson complete! 🎉'));
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final lang = widget.lang;
     return Directionality(
       textDirection: lang.direction,
       child: Scaffold(
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              children: [
-                const Spacer(),
-                Text(perfect ? '🏆' : '🎉', style: const TextStyle(fontSize: 90)),
-                const SizedBox(height: 16),
-                Text(
-                  perfect
-                      ? tr(lang, 'بێ خەلەتی! تو قارەمانی', 'Fehlerfrei!', 'Perfect lesson!')
-                      : tr(lang, 'وانە تەمام بوو!', 'Lektion geschafft!', 'Lesson complete!'),
-                  style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.bolt, color: AppColors.gold, size: 36),
-                    Text('+$xp XP', style: const TextStyle(fontSize: 28, color: AppColors.gold, fontWeight: FontWeight.bold)),
-                  ],
-                ),
-                const Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  child: BigButton(label: tr(lang, 'بەردەوام بە', 'Weiter', 'CONTINUE'), onPressed: () => Navigator.pop(context)),
-                ),
-              ],
+        body: Stack(children: [
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                children: [
+                  const Spacer(),
+                  ScaleTransition(
+                    scale: CurvedAnimation(parent: _c, curve: const Interval(0, 0.25, curve: Curves.elasticOut)),
+                    child: widget.perfect
+                        ? Container(
+                            width: 230,
+                            height: 230,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: AppColors.gold, width: 6),
+                              boxShadow: [BoxShadow(color: AppColors.gold.withValues(alpha: 0.5), blurRadius: 30)],
+                              image: const DecorationImage(
+                                  image: AssetImage(MascotChar.happyPhoto), fit: BoxFit.cover, alignment: Alignment(0, -0.6)),
+                            ),
+                          )
+                        : Image.asset(MascotChar.forUser().front, height: 230),
+                  ),
+                  const SizedBox(height: 22),
+                  if (widget.perfect)
+                    const Text('🏆 ١٠٠٪', style: TextStyle(fontSize: 26, color: AppColors.gold, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  Text(
+                    _msg,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold, fontFamily: 'Sarchia', height: 1.4),
+                  ),
+                  const SizedBox(height: 22),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.bolt, color: AppColors.gold, size: 36),
+                      Text('+${widget.xp} XP',
+                          style: const TextStyle(fontSize: 28, color: AppColors.gold, fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  const Spacer(),
+                  SizedBox(
+                    width: double.infinity,
+                    child: BigButton(label: tr(lang, 'بەردەوام بە', 'Weiter', 'CONTINUE'), onPressed: () => Navigator.pop(context)),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
+          if (widget.perfect)
+            IgnorePointer(
+              child: AnimatedBuilder(
+                animation: _c,
+                builder: (context, _) {
+                  final size = MediaQuery.sizeOf(context);
+                  return Stack(children: [
+                    for (final (x, delay, e) in _bits)
+                      if (_c.value > delay)
+                        Positioned(
+                          left: x * size.width,
+                          top: -40 + (size.height + 80) * ((_c.value - delay) / (1 - delay)),
+                          child: Opacity(
+                            opacity: (1 - _c.value).clamp(0.0, 1.0) * 0.9 + 0.1,
+                            child: Text(e, style: const TextStyle(fontSize: 26)),
+                          ),
+                        ),
+                  ]);
+                },
+              ),
+            ),
+        ]),
       ),
     );
   }

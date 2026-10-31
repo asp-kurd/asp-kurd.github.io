@@ -44,6 +44,7 @@ flutter:
     - assets/exams.json
     # لۆگۆیا ASP
     - assets/brand/
+    - assets/mascot/
     # دەنگێ AI (Piper / MMS) — ب GitHub Actions دهێتە دروستکرن
     - assets/tts/de/
     - assets/tts/en/

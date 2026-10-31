@@ -23,6 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final city = TextEditingController();
   bool busy = false;
   String? error;
+  String? gender; // 'm' / 'f'
 
   @override
   void dispose() {
@@ -37,6 +38,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       setState(() => error = 'تکایە ناڤێ خۆ بنڤیسە');
       return;
     }
+    if (gender == null) {
+      setState(() => error = 'تکایە ڕەگەزێ خۆ هەلبژێرە: نێر یان مێ');
+      return;
+    }
     setState(() {
       busy = true;
       error = null;
@@ -46,6 +51,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       name: name.text,
       age: int.tryParse(age.text.trim()),
       city: city.text,
+      gender: gender,
       native: p.nativeLang.code,
       target: p.targetLang.code,
     );
@@ -58,6 +64,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
       return;
     }
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => SetupScreen(next: widget.next)));
+  }
+
+  Widget _genderBtn(String v, String emoji, String label) {
+    final sel = gender == v;
+    return Expanded(
+      child: GestureDetector(
+        onTap: () => setState(() {
+          gender = v;
+          if (error != null && error!.contains('ڕەگەز')) error = null;
+        }),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 160),
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          decoration: BoxDecoration(
+            color: sel ? AppColors.blue.withValues(alpha: 0.2) : AppColors.card,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: sel ? AppColors.blue : Colors.white24, width: sel ? 3 : 1.5),
+          ),
+          child: Column(children: [
+            Text(emoji, style: const TextStyle(fontSize: 32)),
+            const SizedBox(height: 4),
+            Text(label, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: sel ? Colors.white : Colors.white70)),
+          ]),
+        ),
+      ),
+    );
   }
 
   InputDecoration _dec(String label, IconData icon) => InputDecoration(
@@ -91,6 +123,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const Text('بەری دەستپێکرنێ، خۆ بدە ناسین', textAlign: TextAlign.center, style: TextStyle(color: Colors.white60)),
               const SizedBox(height: 26),
               TextField(controller: name, textInputAction: TextInputAction.next, decoration: _dec('ناڤێ تە', Icons.person_rounded)),
+              const SizedBox(height: 14),
+              Row(children: [
+                _genderBtn('m', '👨', 'نێر'),
+                const SizedBox(width: 12),
+                _genderBtn('f', '👩', 'مێ'),
+              ]),
               const SizedBox(height: 14),
               TextField(
                 controller: age,
