@@ -52,21 +52,6 @@ jobs:
 
       # خەلەتیان وەکی annotation نیشان ددەت دا Claude بشێت بخوینیت
       # 📸 وێنەیێن کاریکاتێران بۆ پشکنینێ (branch: ci-shots)
-      - name: Mascot screenshots
-        continue-on-error: true
-        timeout-minutes: 8
-        run: |
-          pip install -q playwright || echo "::error::shots: pip"
-          python3 -m playwright install --with-deps chromium > /tmp/pw.log 2>&1 || { echo "::error::shots: install $(tail -c 300 /tmp/pw.log | tr '\n' ' ')"; }
-          nohup python3 -m http.server 8080 --bind 127.0.0.1 --directory build/web > /tmp/http.log 2>&1 &
-          for k in $(seq 1 20); do curl -sf http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
-          curl -sf http://127.0.0.1:8080/ >/dev/null || echo "::error::shots: http $(tail -c 200 /tmp/http.log)"
-          python3 .github/scripts/shots.py > /tmp/sh.log 2>&1 || echo "::error::shots: run $(tail -c 400 /tmp/sh.log | tr '\n' ' ')"
-          cd /tmp/shots && git init -q && git checkout -q -b ci-shots && git add . \
-            && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "shots ${GITHUB_SHA::7}" \
-            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-shots > /tmp/push.log 2>&1 \
-            || echo "::error::shots: push $(tail -c 300 /tmp/push.log | tr '\n' ' ')"
-
       - name: Report errors
         if: failure()
         run: python3 .github/scripts/report_errors.py build.log
@@ -125,6 +110,21 @@ jobs:
           flutter build web --release --base-href "$BASE" --dart-define=BUILD_ID=$ID 2>&1 | tee -a build.log
           [ ${PIPESTATUS[0]} -eq 0 ] || exit 1
           python3 .github/scripts/post_build_web.py "$ID"
+
+      - name: Mascot screenshots
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          pip install -q playwright || echo "::error::shots: pip"
+          python3 -m playwright install --with-deps chromium > /tmp/pw.log 2>&1 || { echo "::error::shots: install $(tail -c 300 /tmp/pw.log | tr '\n' ' ')"; }
+          nohup python3 -m http.server 8080 --bind 127.0.0.1 --directory build/web > /tmp/http.log 2>&1 &
+          for k in $(seq 1 20); do curl -sf http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8080/ >/dev/null || echo "::error::shots: http $(tail -c 200 /tmp/http.log)"
+          python3 .github/scripts/shots.py > /tmp/sh.log 2>&1 || echo "::error::shots: run $(tail -c 400 /tmp/sh.log | tr '\n' ' ')"
+          cd /tmp/shots && git init -q && git checkout -q -b ci-shots && git add . \
+            && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "shots ${GITHUB_SHA::7}" \
+            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-shots > /tmp/push.log 2>&1 \
+            || echo "::error::shots: push $(tail -c 300 /tmp/push.log | tr '\n' ' ')"
 
       - name: Report errors
         if: failure()
