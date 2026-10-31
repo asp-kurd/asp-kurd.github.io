@@ -219,8 +219,9 @@ class _DialogScreenState extends State<DialogScreen> {
         scale: active ? 1.12 : 1,
         duration: const Duration(milliseconds: 200),
         child: MascotAvatar(
-          char: MascotChar.cast[who % MascotChar.cast.length],
-          size: 48,
+          char: MascotChar.forSpeaker(d.who),
+          talking: active,
+          size: 52,
           ring: active ? AppColors.gold : (left ? AppColors.blue : AppColors.green),
         ),
       ),
@@ -413,7 +414,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
               padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
               child: MascotSays(
                 mood: MascotMood.speak,
-                height: 92,
+                height: 120,
                 text: tr(_ui, 'گوهـ بدە 🔊 و ب دەنگێ بلند دووبارە بکە!', 'Hör zu und sprich nach!', 'Listen and repeat!'),
               ),
             ),

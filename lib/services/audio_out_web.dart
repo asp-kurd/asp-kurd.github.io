@@ -37,7 +37,8 @@ class AudioOut {
     }
   }
 
-  Future<void> play(Uint8List bytes, {double rate = 1.0, String mime = 'audio/wav'}) async {
+  /// درێژیا دەنگی ب چرکان ددەتە دەر (بۆ لڤینا دەڤێ کاریکاتێری)
+  Future<double> play(Uint8List bytes, {double rate = 1.0, String mime = 'audio/wav'}) async {
     stopSync();
     final c = _context;
     if (c.state == 'suspended') {
@@ -54,6 +55,7 @@ class AudioOut {
     src.connect(c.destination);
     src.start();
     _src = src;
+    return buffer.duration / rate;
   }
 
   void stopSync() {

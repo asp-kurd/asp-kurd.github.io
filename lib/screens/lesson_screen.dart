@@ -69,6 +69,9 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   void initState() {
     super.initState();
     queue = _buildQueue();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) MascotChar.precache(context);
+    });
     totalInitial = queue.length;
     _prepare();
   }
@@ -360,7 +363,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                         }
                       : (isCorrect ? MascotMood.happy : MascotMood.sad),
                   text: !checked ? _instruction(ex.type) : (isCorrect ? _praiseText : _comfortText),
-                  height: 104,
+                  height: 140,
                   textDirection: native.direction,
                 ),
                 const SizedBox(height: 12),
@@ -848,7 +851,7 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                   const Spacer(),
                   ScaleTransition(
                     scale: CurvedAnimation(parent: _c, curve: const Interval(0, 0.25, curve: Curves.elasticOut)),
-                    child: widget.perfect
+                    child: widget.perfect && MascotChar.forUser() == MascotChar.teacher
                         ? Container(
                             width: 230,
                             height: 230,
@@ -860,7 +863,7 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                                   image: AssetImage(MascotChar.happyPhoto), fit: BoxFit.cover, alignment: Alignment(0, -0.6)),
                             ),
                           )
-                        : Image.asset(MascotChar.forUser().front, height: 230),
+                        : MascotView(char: MascotChar.forUser(), mood: MascotMood.happy, height: 240),
                   ),
                   const SizedBox(height: 22),
                   if (widget.perfect)

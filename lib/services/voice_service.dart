@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -36,6 +37,18 @@ class VoiceService {
   final AudioOut _out = AudioOut();
   final AudioOut _fx = AudioOut(); // دەنگێن یاریێ (جودا ژ دەنگێ پەیڤان)
   final FlutterTts _tts = FlutterTts();
+
+  /// 🗣️ ئایا نوکە دەنگ دهێتە لێدان؟ (کاریکاتێر دەڤێ خۆ دلڤینیت)
+  final ValueNotifier<bool> speaking = ValueNotifier(false);
+  Timer? _talkTimer;
+  void _talkFor(double seconds) {
+    _talkTimer?.cancel();
+    if (seconds <= 0) return;
+    speaking.value = true;
+    _talkTimer = Timer(Duration(milliseconds: (seconds * 1000).round()), () => speaking.value = false);
+  }
+
+  double _estimate(String text, double rate) => (0.5 + text.length * 0.075) / rate;
 
   // 🔊 دەنگێ TTS یێ زەلال
   double ttsRate = 0.42;
@@ -258,6 +271,7 @@ class VoiceService {
   Future<bool> speak(WordConcept c, AppLanguage lang, {double rate = 1.0}) async {
     await init();
     await stopPlayback();
+    _talkFor(_estimate(c.text(lang), rate));
     switch (sourceFor(c, lang)) {
       case VoiceSource.mine:
         return _playKey(pathFor(lang, c.id), rate);
@@ -265,7 +279,7 @@ class VoiceService {
         return _playKey(clonedPathFor(lang, c.id), rate, mime: 'audio/mpeg');
       case VoiceSource.pack:
         final data = await rootBundle.load(_packAsset(lang, c.id));
-        await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
+        _talkFor(await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg'));
         return true;
       case VoiceSource.ai:
         return _playAsset(aiAsset(c.text(lang), lang), rate);
@@ -288,6 +302,7 @@ class VoiceService {
     if (text.trim().isEmpty) return;
     await init();
     await stopPlayback();
+    _talkFor(_estimate(text, rate));
     if (hasAi(text, lang)) {
       await _playAsset(aiAsset(text, lang), rate);
       return;
@@ -395,7 +410,8 @@ class VoiceService {
   Future<bool> _playAsset(String asset, double rate) async {
     try {
       final data = await rootBundle.load(asset);
-      await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
+      final secs = await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
+      if (secs > 0) _talkFor(secs);
       return true;
     } catch (_) {
       return false;
@@ -405,7 +421,8 @@ class VoiceService {
   Future<bool> _playKey(String key, double rate, {String mime = 'audio/wav'}) async {
     final b = await _box.get(key);
     if (b is! Uint8List) return false;
-    await _out.play(b, rate: rate, mime: mime);
+    final secs = await _out.play(b, rate: rate, mime: mime);
+    if (secs > 0) _talkFor(secs);
     return true;
   }
 
@@ -416,6 +433,8 @@ class VoiceService {
   }
 
   Future<void> stopPlayback() async {
+    _talkTimer?.cancel();
+    speaking.value = false;
     await _out.stop();
     try {
       await _tts.stop();

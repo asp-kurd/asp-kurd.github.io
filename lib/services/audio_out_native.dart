@@ -9,10 +9,15 @@ class AudioOut {
   /// تنێ بۆ وێبێ پێدڤییە
   void installUnlock() {}
 
-  Future<void> play(Uint8List bytes, {double rate = 1.0, String mime = 'audio/wav'}) async {
+  Future<double> play(Uint8List bytes, {double rate = 1.0, String mime = 'audio/wav'}) async {
     await _player.stop();
     await _player.setPlaybackRate(rate);
     await _player.play(BytesSource(bytes));
+    try {
+      final d = await _player.getDuration();
+      if (d != null) return d.inMilliseconds / 1000 / rate;
+    } catch (_) {}
+    return -1;
   }
 
   Future<void> stop() => _player.stop();
