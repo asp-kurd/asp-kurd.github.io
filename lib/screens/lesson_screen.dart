@@ -244,8 +244,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       context: context,
       builder: (_) => AlertDialog(
         title: Text(tr(native, 'دلێن تە نەمان 💔', 'Keine Herzen mehr 💔', 'Out of hearts 💔')),
-        content: Text(tr(native, 'هەر ٣ خولەکان دلەک ب خۆ دزڤڕیت ❤️ هندەکێ بێهنا خۆ ڤەدە و بزڤڕە!',
-            'Alle 3 Minuten kommt ein Herz zurück ❤️', 'A heart comes back every 3 minutes ❤️')),
+        content: Text(tr(native, 'هەر خولەکەکێ دلەک ب خۆ دزڤڕیت ❤️ هندەکێ بێهنا خۆ ڤەدە و بزڤڕە!',
+            'Jede Minute kommt ein Herz zurück ❤️', 'A heart comes back every minute ❤️')),
         actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
       ),
     );

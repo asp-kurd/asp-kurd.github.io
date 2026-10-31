@@ -14,10 +14,10 @@ class ProgressService extends ChangeNotifier {
   ProgressService._();
   static final ProgressService instance = ProgressService._();
 
-  static const maxHearts = 5;
+  static const maxHearts = 15;
 
-  /// هەر ٣ خولەکان دلەک ب ئۆتۆماتیکی زێدە دبیت
-  static const heartRegen = Duration(minutes: 3);
+  /// هەر خولەکەکێ دلەک ب ئۆتۆماتیکی زێدە دبیت
+  static const heartRegen = Duration(minutes: 1);
   Timer? _heartTimer;
   late SharedPreferences _p;
 

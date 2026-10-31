@@ -100,7 +100,10 @@ jobs:
         run: |
           if [[ "$REPO" == *.github.io ]]; then BASE=/; else BASE="/$REPO/"; fi
           echo "base-href: $BASE"
-          flutter build web --release --base-href "$BASE" 2>&1 | tee -a build.log; exit ${PIPESTATUS[0]}
+          ID=${GITHUB_SHA::12}
+          flutter build web --release --base-href "$BASE" --dart-define=BUILD_ID=$ID 2>&1 | tee -a build.log
+          [ ${PIPESTATUS[0]} -eq 0 ] || exit 1
+          python3 .github/scripts/post_build_web.py "$ID"
 
       - name: Report errors
         if: failure()

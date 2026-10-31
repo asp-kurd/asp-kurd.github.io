@@ -57,6 +57,10 @@ flutter:
 
   # فۆنتێن بادینی
   fonts:
+    # فۆنتێ ئەلمانی (ä ö ü ß) — پیتێن کوردی ژ Shasenem دهێن
+    - family: LeagueGothic
+      fonts:
+        - asset: assets/fonts/LeagueGothic.otf
     - family: Shasenem
       fonts:
         - asset: assets/fonts/Shasenem.ttf

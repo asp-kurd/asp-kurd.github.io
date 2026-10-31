@@ -465,9 +465,9 @@ class _LearnPath extends StatelessWidget {
         context: context,
         builder: (_) => AlertDialog(
           title: Text(tr(p.nativeLang, 'دلێن تە نەمان 💔', 'Keine Herzen mehr 💔', 'Out of hearts 💔')),
-          content: Text(tr(p.nativeLang, 'هەر ٣ خولەکان دلەک ب خۆ دزڤڕیت ❤️ دلێ بهێت پشتی: ${_mmss(p.nextHeartIn ?? Duration.zero)}',
-              'Alle 3 Minuten kommt ein Herz zurück ❤️ Nächstes in ${_mmss(p.nextHeartIn ?? Duration.zero)}',
-              'A heart comes back every 3 minutes ❤️ Next in ${_mmss(p.nextHeartIn ?? Duration.zero)}')),
+          content: Text(tr(p.nativeLang, 'هەر خولەکەکێ دلەک ب خۆ دزڤڕیت ❤️ دلێ بهێت پشتی: ${_mmss(p.nextHeartIn ?? Duration.zero)}',
+              'Jede Minute kommt ein Herz zurück ❤️ Nächstes in ${_mmss(p.nextHeartIn ?? Duration.zero)}',
+              'A heart comes back every minute ❤️ Next in ${_mmss(p.nextHeartIn ?? Duration.zero)}')),
           actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
         ),
       );

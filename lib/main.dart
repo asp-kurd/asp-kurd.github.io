@@ -5,6 +5,7 @@ import 'data/curriculum.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
 import 'services/backend.dart';
+import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
@@ -14,6 +15,7 @@ import 'ui.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
   await Backend.instance.init();
   await loadCurriculum(await Backend.instance.contentOverride('curriculum'));
   await loadBook();
@@ -34,7 +36,9 @@ class ZimanProApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: 'Shasenem',
+        // لاتینی/ئەلمانی ب League Gothic؛ هەر پیتەکا کوردی/عەرەبی ب Shasenem
+        fontFamily: 'LeagueGothic',
+        fontFamilyFallback: const ['Shasenem', 'Sarchia'],
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.blue, brightness: Brightness.dark),
         scaffoldBackgroundColor: AppColors.bg,
         appBarTheme: const AppBarTheme(backgroundColor: AppColors.bg, elevation: 0),
