@@ -7,7 +7,7 @@ os.makedirs(out, exist_ok=True)
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
     pg = b.new_page(viewport={"width": 428, "height": 926}, device_scale_factor=2)
-    pg.goto("http://localhost:8080/?demo=mascot", wait_until="networkidle")
+    pg.goto("http://127.0.0.1:8080/?demo=mascot", wait_until="networkidle")
     time.sleep(12)
     for i in range(14):
         pg.screenshot(path=f"{out}/s{i:02d}.png")

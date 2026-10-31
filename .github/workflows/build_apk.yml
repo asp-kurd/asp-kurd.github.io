@@ -53,8 +53,9 @@ jobs:
         run: |
           pip install -q playwright || echo "::error::shots: pip"
           python3 -m playwright install --with-deps chromium > /tmp/pw.log 2>&1 || { echo "::error::shots: install $(tail -c 300 /tmp/pw.log | tr '\n' ' ')"; }
-          (cd build/web && python3 -m http.server 8080 >/dev/null 2>&1 &)
-          sleep 2
+          nohup python3 -m http.server 8080 --bind 127.0.0.1 --directory build/web > /tmp/http.log 2>&1 &
+          for k in $(seq 1 20); do curl -sf http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8080/ >/dev/null || echo "::error::shots: http $(tail -c 200 /tmp/http.log)"
           python3 .github/scripts/shots.py > /tmp/sh.log 2>&1 || echo "::error::shots: run $(tail -c 400 /tmp/sh.log | tr '\n' ' ')"
           cd /tmp/shots && git init -q && git checkout -q -b ci-shots && git add . \
             && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "shots ${GITHUB_SHA::7}" \
