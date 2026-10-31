@@ -7,6 +7,7 @@ import 'screens/account_screens.dart';
 import 'services/backend.dart';
 import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
 import 'screens/home_screen.dart';
+import 'screens/mascot_demo.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
@@ -43,7 +44,9 @@ class ZimanProApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.bg,
         appBarTheme: const AppBarTheme(backgroundColor: AppColors.bg, elevation: 0),
       ),
-      home: !ProgressService.instance.onboarded
+      home: Uri.base.queryParameters['demo'] == 'mascot'
+          ? const MascotDemo()
+          : !ProgressService.instance.onboarded
           ? const LanguageOnboardingScreen()
           : (Backend.instance.enabled && !Backend.instance.registered && !Backend.instance.isAdmin)
               ? const RegisterScreen(next: HomeScreen())

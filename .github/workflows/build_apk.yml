@@ -46,6 +46,19 @@ jobs:
         run: flutter build apk --release 2>&1 | tee -a build.log; exit ${PIPESTATUS[0]}
 
       # خەلەتیان وەکی annotation نیشان ددەت دا Claude بشێت بخوینیت
+      # 📸 وێنەیێن کاریکاتێران بۆ پشکنینێ (branch: ci-shots)
+      - name: Mascot screenshots
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          pip install -q playwright && python3 -m playwright install --with-deps chromium >/dev/null 2>&1
+          (cd build/web && python3 -m http.server 8080 >/dev/null 2>&1 &)
+          sleep 2
+          python3 .github/scripts/shots.py
+          cd /tmp/shots && git init -q && git checkout -q -b ci-shots && git add . \
+            && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "shots ${GITHUB_SHA::7}" \
+            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-shots
+
       - name: Report errors
         if: failure()
         run: python3 .github/scripts/report_errors.py build.log
