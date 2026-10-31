@@ -51,13 +51,15 @@ jobs:
         continue-on-error: true
         timeout-minutes: 8
         run: |
-          pip install -q playwright && python3 -m playwright install --with-deps chromium >/dev/null 2>&1
+          pip install -q playwright || echo "::error::shots: pip"
+          python3 -m playwright install --with-deps chromium > /tmp/pw.log 2>&1 || { echo "::error::shots: install $(tail -c 300 /tmp/pw.log | tr '\n' ' ')"; }
           (cd build/web && python3 -m http.server 8080 >/dev/null 2>&1 &)
           sleep 2
-          python3 .github/scripts/shots.py
+          python3 .github/scripts/shots.py > /tmp/sh.log 2>&1 || echo "::error::shots: run $(tail -c 400 /tmp/sh.log | tr '\n' ' ')"
           cd /tmp/shots && git init -q && git checkout -q -b ci-shots && git add . \
             && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "shots ${GITHUB_SHA::7}" \
-            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-shots
+            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-shots > /tmp/push.log 2>&1 \
+            || echo "::error::shots: push $(tail -c 300 /tmp/push.log | tr '\n' ' ')"
 
       - name: Report errors
         if: failure()
