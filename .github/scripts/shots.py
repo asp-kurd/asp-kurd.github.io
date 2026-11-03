@@ -14,6 +14,9 @@ with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
     for name, q in pages:
         pg = b.new_page(viewport={"width": 428, "height": 926}, device_scale_factor=2)
+        logs = []
+        pg.on("console", lambda m: logs.append(f"[{m.type}] {m.text}"))
+        pg.on("pageerror", lambda e: logs.append(f"[pageerror] {e}"))
         try:
             pg.goto(f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
             time.sleep(9)
@@ -26,6 +29,7 @@ with sync_playwright() as p:
                 pg.screenshot(path=f"{out}/{name}_2.png")
         except Exception as e:
             print("fail", name, e)
+        open(f"{out}/{name}.log", "w").write("\n".join(logs))
         pg.close()
     b.close()
 print("shots ok")
