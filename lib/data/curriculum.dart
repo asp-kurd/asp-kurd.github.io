@@ -14,7 +14,10 @@ int _bundledVersion = 0;
 
 /// قۆناغێن زمانێ هەلبژارتی (ئەلفوبێیا کوردی بۆ فێربوونا ئەلمانی نائێت، و هوسا)
 List<LessonUnit> get appCurriculum => _visible();
-List<WordConcept> get allConcepts => _visibleConcepts;
+List<WordConcept> get allConcepts {
+  _visible(); // دڤێت لیست یا نوو بیت (نە بەری هەلبژارتنا زمانی)
+  return _visibleConcepts;
+}
 
 String? _cacheKey;
 List<LessonUnit> _cacheUnits = [];
