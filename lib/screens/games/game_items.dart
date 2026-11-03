@@ -47,7 +47,7 @@ Widget bigPic(String pic, {double size = 92}) => Container(
       width: size * 1.5,
       height: size * 1.5,
       alignment: Alignment.center,
-      decoration: BoxDecoration(color: const Color(0xFF253740), borderRadius: BorderRadius.circular(size * 0.35)),
+      decoration: BoxDecoration(color: AppColors.chip, borderRadius: BorderRadius.circular(size * 0.35)),
       child: Text(pic, style: TextStyle(fontSize: size)),
     );
 
@@ -128,15 +128,15 @@ class _PickPictureState extends State<_PickPicture> {
   }
 
   Color _border(WordConcept o, WordConcept c) {
-    if (picked == null) return Colors.white12;
+    if (picked == null) return AppColors.fg12;
     if (o.id == c.id) return AppColors.green;
     if (o.id == picked) return AppColors.red;
-    return Colors.white12;
+    return AppColors.fg12;
   }
 
   Color _bg(WordConcept o, WordConcept c) {
     final b = _border(o, c);
-    return b == Colors.white12 ? AppColors.card : b.withValues(alpha: 0.18);
+    return b == AppColors.fg12 ? AppColors.card : b.withValues(alpha: 0.18);
   }
 }
 
@@ -190,7 +190,7 @@ class _MatchPairsState extends State<_MatchPairs> {
     final done = matched.contains(c.id);
     final sel = isLeft ? selL?.id == c.id : selR?.id == c.id;
     final bad = wrong != null && wrong!.split('|')[isLeft ? 0 : 1] == c.id;
-    final color = done ? AppColors.green : (bad ? AppColors.red : (sel ? g.item.kind.color : Colors.white12));
+    final color = done ? AppColors.green : (bad ? AppColors.red : (sel ? g.item.kind.color : AppColors.fg12));
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: GestureDetector(
@@ -215,7 +215,7 @@ class _MatchPairsState extends State<_MatchPairs> {
             alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(horizontal: 6),
             decoration: BoxDecoration(
-              color: color == Colors.white12 ? AppColors.card : color.withValues(alpha: 0.18),
+              color: color == AppColors.fg12 ? AppColors.card : color.withValues(alpha: 0.18),
               borderRadius: BorderRadius.circular(18),
               border: Border.all(color: color, width: 2.5),
             ),
@@ -338,7 +338,7 @@ class _TypeWordState extends State<_TypeWord> {
           ]),
           const SizedBox(height: 14),
           Text(tr(g.native, 'تشتێ تو دبهیسی بنڤیسە', 'Schreib, was du hörst', 'Type what you hear'),
-              style: const TextStyle(color: Colors.white60)),
+              style: TextStyle(color: AppColors.fg60)),
         ] else ...[
           bigPic(c.pic, size: 72),
           const SizedBox(height: 12),
@@ -356,10 +356,10 @@ class _TypeWordState extends State<_TypeWord> {
           autocorrect: false,
           enableSuggestions: false,
           onSubmitted: (_) => _check(),
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: result == null ? Colors.white : color),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: result == null ? AppColors.fg : color),
           decoration: InputDecoration(
             hintText: pale ? answer : '…',
-            hintStyle: TextStyle(color: Colors.white.withValues(alpha: pale ? 0.16 : 0.3), fontSize: 24),
+            hintStyle: TextStyle(color: AppColors.fg.withValues(alpha: pale ? 0.16 : 0.3), fontSize: 24),
             filled: true,
             fillColor: AppColors.card,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: color, width: 2)),
@@ -419,7 +419,7 @@ class _FinishSentenceState extends State<_FinishSentence> {
       child: Column(children: [
         bigPic(c.pic, size: 64),
         const SizedBox(height: 10),
-        Text(c.text(g.native), textDirection: g.native.direction, style: const TextStyle(fontSize: 18, color: Colors.white70)),
+        Text(c.text(g.native), textDirection: g.native.direction, style: TextStyle(fontSize: 18, color: AppColors.fg70)),
         const SizedBox(height: 22),
         Directionality(
           textDirection: g.target.direction,
@@ -432,7 +432,7 @@ class _FinishSentenceState extends State<_FinishSentence> {
                     border: Border(bottom: BorderSide(color: picked == null ? g.item.kind.color : _col(picked!), width: 3)),
                   ),
                   child: Text(picked == null ? '      ' : right,
-                      style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: picked == null ? Colors.white : AppColors.green)),
+                      style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: picked == null ? AppColors.fg : AppColors.green)),
                 )
               else
                 Text(ws[i], style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
@@ -603,7 +603,7 @@ class _WordSearchState extends State<_WordSearch> {
     for (final p in placed) {
       if (found.contains(p.c.id)) continue;
       for (final cell in p.cells) {
-        cellColor[cell] = Colors.white38;
+        cellColor[cell] = AppColors.fg38;
       }
       await widget.g.onAnswer(p.c, false);
     }
@@ -618,7 +618,7 @@ class _WordSearchState extends State<_WordSearch> {
       child: Column(children: [
         Text(tr(g.native, 'دەست ل پیتا ئێکێ و یا دووماهیێ بدە', 'Tippe auf den ersten und letzten Buchstaben',
                 'Tap the first and the last letter'),
-            style: const TextStyle(color: Colors.white60)),
+            style: TextStyle(color: AppColors.fg60)),
         const SizedBox(height: 10),
         Directionality(
           textDirection: TextDirection.ltr,
@@ -628,7 +628,7 @@ class _WordSearchState extends State<_WordSearch> {
               decoration: BoxDecoration(
                 color: AppColors.card,
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: flashBad ? AppColors.red : Colors.white12, width: 2),
+                border: Border.all(color: flashBad ? AppColors.red : AppColors.fg12, width: 2),
               ),
               child: Wrap(children: [
                 for (var i = 0; i < grid.length; i++)
@@ -711,7 +711,7 @@ class _ShadowingState extends State<_Shadowing> {
             style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
         const SizedBox(height: 4),
         Text('💡 ${c.hint(g.target)}', textAlign: TextAlign.center, style: const TextStyle(color: AppColors.blue)),
-        Text(c.text(g.native), textDirection: g.native.direction, style: const TextStyle(color: Colors.white60)),
+        Text(c.text(g.native), textDirection: g.native.direction, style: TextStyle(color: AppColors.fg60)),
         const SizedBox(height: 16),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           soundBtn(() => say(c, g.target), size: 60, color: g.item.kind.color),
@@ -748,7 +748,7 @@ class _ShadowingState extends State<_Shadowing> {
         const SizedBox(height: 12),
         if (!finished)
           FilledButton(
-            style: FilledButton.styleFrom(backgroundColor: recorded ? AppColors.green : Colors.white24),
+            style: FilledButton.styleFrom(backgroundColor: recorded ? AppColors.green : AppColors.fg24),
             onPressed: () async {
               setState(() => finished = true);
               if (recorded) await g.onAnswer(c, true);

@@ -162,7 +162,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             decoration: BoxDecoration(color: c.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
             child: Column(children: [
               Text(v, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: c)),
-              Text(label, style: const TextStyle(fontSize: 12, color: Colors.white70)),
+              Text(label, style: TextStyle(fontSize: 12, color: AppColors.fg70)),
             ]),
           ),
         );
@@ -248,7 +248,7 @@ Future<void> sendMessageDialog(BuildContext context, {String? learnerId, require
         const SizedBox(height: 10),
         TextField(controller: body, maxLines: 4, decoration: const InputDecoration(labelText: 'نامە', border: OutlineInputBorder())),
         const SizedBox(height: 6),
-        const Text('دێ د ئەپی دا و وەکی ئاگەهداری (ئەگەر ڤەکری بیت) گەهیت.', style: TextStyle(fontSize: 12, color: Colors.white54)),
+        Text('دێ د ئەپی دا و وەکی ئاگەهداری (ئەگەر ڤەکری بیت) گەهیت.', style: TextStyle(fontSize: 12, color: AppColors.fg54)),
       ]),
       actions: [
         TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('بەتالکرن')),
@@ -345,12 +345,12 @@ class _LearnerDetailState extends State<LearnerDetail> {
                             margin: const EdgeInsets.symmetric(horizontal: 2),
                             height: 4 + 96 * (((byDay[d]?['seconds'] as num?) ?? 0) / maxSec),
                             decoration: BoxDecoration(
-                              color: byDay.containsKey(d) ? AppColors.green : Colors.white12,
+                              color: byDay.containsKey(d) ? AppColors.green : AppColors.fg12,
                               borderRadius: BorderRadius.circular(4),
                             ),
                           ),
                           const SizedBox(height: 4),
-                          Text(d.substring(8), style: const TextStyle(fontSize: 9, color: Colors.white54)),
+                          Text(d.substring(8), style: TextStyle(fontSize: 9, color: AppColors.fg54)),
                         ]),
                       ),
                   ]),
@@ -358,7 +358,7 @@ class _LearnerDetailState extends State<LearnerDetail> {
               ),
               const SizedBox(height: 18),
               const Text('📝 ئەزموون', style: TextStyle(fontWeight: FontWeight.bold)),
-              if (exams.isEmpty) const Text('هێشتا چ ئەزموون نەکرینە', style: TextStyle(color: Colors.white54)),
+              if (exams.isEmpty) Text('هێشتا چ ئەزموون نەکرینە', style: TextStyle(color: AppColors.fg54)),
               for (final e in exams)
                 ListTile(
                   dense: true,
@@ -384,7 +384,7 @@ class _LearnerDetailState extends State<LearnerDetail> {
         child: Row(children: [
           Text(e, style: const TextStyle(fontSize: 20)),
           const SizedBox(width: 10),
-          Text(k, style: const TextStyle(color: Colors.white60)),
+          Text(k, style: TextStyle(color: AppColors.fg60)),
           const Spacer(),
           Text(v, style: const TextStyle(fontWeight: FontWeight.bold)),
         ]),
@@ -503,7 +503,7 @@ class _ContentEditorState extends State<ContentEditor> {
         child: Row(children: [
           Expanded(
             child: Text(isOverride ? '✏️ ناڤەرۆکا گوهۆڕی یا ب کار دهێت' : '📦 ناڤەرۆکا ئەسلی',
-                style: const TextStyle(fontSize: 13, color: Colors.white70)),
+                style: TextStyle(fontSize: 13, color: AppColors.fg70)),
           ),
           if (isOverride)
             TextButton(

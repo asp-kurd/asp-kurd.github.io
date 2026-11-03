@@ -278,7 +278,7 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
       textDirection: native.direction,
       child: Scaffold(
         appBar: AppBar(
-          leading: IconButton(icon: const Icon(Icons.close, color: Colors.white70), onPressed: () => Navigator.pop(context)),
+          leading: IconButton(icon: Icon(Icons.close, color: AppColors.fg70), onPressed: () => Navigator.pop(context)),
           title: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: LinearProgressIndicator(
@@ -351,7 +351,7 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
         if (answerText != null) ...[
           const SizedBox(height: 4),
           Text(answerText!, textDirection: target.direction, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Text(item.word.text(native), textDirection: native.direction, style: const TextStyle(color: Colors.white60)),
+          Text(item.word.text(native), textDirection: native.direction, style: TextStyle(color: AppColors.fg60)),
         ],
       ]),
     );
@@ -414,7 +414,7 @@ class _GameResultScreenState extends State<GameResultScreen> {
                     builder: (_, v, __) => Transform.scale(
                       scale: i < widget.stars ? v : 1,
                       child: Icon(Icons.star_rounded,
-                          size: i == 1 ? 76 : 60, color: i < widget.stars ? AppColors.gold : Colors.white24),
+                          size: i == 1 ? 76 : 60, color: i < widget.stars ? AppColors.gold : AppColors.fg24),
                     ),
                   ),
               ]),

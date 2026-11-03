@@ -40,13 +40,13 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
               Text(
                 tr(n, 'ب خێر بێی بۆ ASP', 'Willkommen bei ASP', 'Welcome to ASP'),
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg),
               ),
               const SizedBox(height: 8),
               Text(
                 tr(n, 'زمانان ب دەنگێ خۆ فێر ببە', 'Lerne Sprachen mit deiner eigenen Stimme', 'Learn languages with your own voice'),
                 textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.white60),
+                style: TextStyle(color: AppColors.fg60),
               ),
               const SizedBox(height: 32),
               _label(tr(n, '١. زمانێ خۆ یێ ئاخفتنێ هەلبژێرە:', '1. Wähle deine Muttersprache:', '1. Select your native language:')),
@@ -87,7 +87,7 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
 
   Widget _label(String t) => Padding(
         padding: const EdgeInsets.only(bottom: 12),
-        child: Text(t, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white70)),
+        child: Text(t, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: AppColors.fg70)),
       );
 
   Widget _langOption(AppLanguage lang, bool isSelected, VoidCallback onTap) {
@@ -99,7 +99,7 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
         decoration: BoxDecoration(
           color: isSelected ? AppColors.blue.withValues(alpha: 0.15) : AppColors.card,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: isSelected ? AppColors.blue : Colors.white12, width: 2),
+          border: Border.all(color: isSelected ? AppColors.blue : AppColors.fg12, width: 2),
         ),
         child: Row(
           children: [
@@ -110,7 +110,7 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                color: isSelected ? AppColors.blue : Colors.white,
+                color: isSelected ? AppColors.blue : AppColors.fg,
               ),
             ),
             const Spacer(),

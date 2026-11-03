@@ -51,6 +51,7 @@ flutter:
     - assets/tts/ku/
     # پەرتووکا رێزمانێ «A1.1 mit Poya» (ژ book/A1_mit_Poya.md)
     - assets/book.json
+    - assets/a1_summary.json
     # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)
     - assets/sfx/
     # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)

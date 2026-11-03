@@ -28,11 +28,13 @@ class WordConcept {
   final String en, enHint; // ئینگلیزی + خوێندن ب کوردی
   final String emoji; // وێنەیێ پەیڤێ (ئیمۆجی)
   final LetterInfo? letter; // تنێ بۆ قۆناغێن ئەلفوبێ
+  final ClozeInfo? cloze; // رستەکا نموونە بۆ پڕکرنا جهێ ڤالا (ئەلمانی)
 
   const WordConcept(
     this.id, {
     this.emoji = '',
     this.letter,
+    this.cloze,
     required this.ku,
     required this.kuLat,
     required this.de,
@@ -55,6 +57,24 @@ class WordConcept {
         AppLanguage.german => deHint,
         AppLanguage.english => enHint,
       };
+}
+
+/// 📝 رستەکا ب جهەکێ ڤالا: «Ich esse einen ___.» ➔ Apfel
+class ClozeInfo {
+  final String sentence; // ب ___
+  final String answer; // «stehe … auf» بۆ دوو جهێن ڤالا
+  final List<String> distractors;
+  final String ku; // وەرگێڕانا رستێ
+  const ClozeInfo(this.sentence, this.answer, this.distractors, this.ku);
+
+  /// رستا تەمام ب بەرسڤەکێ
+  String filled(String option) {
+    var s = sentence;
+    for (final part in option.split(' … ')) {
+      s = s.replaceFirst('___', part);
+    }
+    return s;
+  }
 }
 
 /// 🔤 زانیاریێن پیتەکێ: ناڤ، دەنگ، پەیڤا نموونە
@@ -159,6 +179,7 @@ enum ExerciseType {
   wordBank, // ئاڤاکرنا رستێ ژ پارچەیان
   pickPicture, // وێنەیێ دروست هەلبژێرە (٢–٦ وێنە)
   trueFalse, // ئەڤە دروستە یان نە؟
+  cloze, // 📝 جهێ ڤالا د رستێ دا پڕ بکە
 }
 
 class Exercise {

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/sfx.dart';
+import '../services/theme_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
 
@@ -49,6 +50,43 @@ class _SettingsScreenState extends State<SettingsScreen> {
         _ => 'Hallo! Wie geht es dir heute?',
       };
 
+  /// 🌙 تاری · ☀️ رۆهن · 📱 وەکی مۆبایلێ
+  Widget _themePicker(AppLanguage n) {
+    final tc = ThemeController.instance;
+    Widget opt(String m, String emoji, String label) {
+      final sel = tc.mode == m;
+      return Expanded(
+        child: GestureDetector(
+          onTap: () async {
+            await tc.setMode(m);
+            if (mounted) setState(() {});
+          },
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 180),
+            margin: const EdgeInsets.symmetric(horizontal: 4),
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            decoration: BoxDecoration(
+              color: sel ? AppColors.blue.withValues(alpha: 0.18) : AppColors.card,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: sel ? AppColors.blue : AppColors.fg12, width: sel ? 2.5 : 1.5),
+            ),
+            child: Column(children: [
+              Text(emoji, style: const TextStyle(fontSize: 28)),
+              const SizedBox(height: 4),
+              Text(label, textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.blue : AppColors.fg)),
+            ]),
+          ),
+        ),
+      );
+    }
+
+    return Row(children: [
+      opt('dark', '🌙', tr(n, 'تاری', 'Dunkel', 'Dark')),
+      opt('light', '☀️', tr(n, 'رۆهن', 'Hell', 'Light')),
+      opt('system', '📱', tr(n, 'وەکی مۆبایلێ', 'Wie Gerät', 'System')),
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     final n = p.nativeLang;
@@ -61,6 +99,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
           builder: (context, _) => ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 40),
             children: [
+              _header(tr(n, 'ڕووکار', 'Design', 'Appearance')),
+              _themePicker(n),
+              const SizedBox(height: 18),
               _header(tr(n, 'دەنگ و شێوە', 'Ton & Aussehen', 'Sound & look')),
               _switch('🔊', tr(n, 'دەنگێن یاریێ', 'Spielgeräusche', 'Game sounds'),
                   tr(n, 'دەنگێ دروست و خەلەت د یاریان دا', 'Töne für richtig und falsch', 'Sounds for right and wrong'), p.gameSounds, (x) {
@@ -78,7 +119,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               _header(tr(n, 'دەنگێ ئاخفتنێ (زەلال)', 'Sprachausgabe', 'Speech voice')),
               Text(
                   tr(n, 'لەزا دەنگی', 'Sprechtempo', 'Speaking speed'),
-                  style: const TextStyle(color: Colors.white70)),
+                  style: TextStyle(color: AppColors.fg70)),
               const SizedBox(height: 8),
               SegmentedButton<double>(
                 segments: [
@@ -97,7 +138,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               Row(children: [
                 Expanded(
                   child: Text('${ttsLang.flag}  ${tr(n, 'هەلبژارتنا دەنگی', 'Stimme wählen', 'Choose a voice')}',
-                      style: const TextStyle(color: Colors.white70)),
+                      style: TextStyle(color: AppColors.fg70)),
                 ),
                 TextButton.icon(
                   onPressed: () => v.speakText(_sample, ttsLang),
@@ -117,7 +158,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         tr(n, 'ل سەر iPhone: ڕێکخستن ➔ Accessibility ➔ Spoken Content ➔ Voices ➔ German، دەنگەکێ «Enhanced» یان «Premium» دابەزینە.',
                             'iPhone: Einstellungen ➔ Bedienungshilfen ➔ Gesprochene Inhalte ➔ Stimmen ➔ Deutsch: eine „Premium“-Stimme laden.',
                             'iPhone: Settings ➔ Accessibility ➔ Spoken Content ➔ Voices ➔ German: download an Enhanced/Premium voice.'),
-                        style: const TextStyle(color: Colors.white54)),
+                        style: TextStyle(color: AppColors.fg54)),
                   ),
               ],
               const SizedBox(height: 10),
@@ -128,7 +169,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     tr(n, '💡 بۆ دەنگەکێ هەرە زەلال ل iPhone: Settings ➔ Accessibility ➔ Spoken Content ➔ Voices ➔ German ➔ «Anna (Premium)» یان «Helena (Enhanced)» دابەزینە، پاشان ل ڤێرە هەلبژێرە.',
                         '💡 Für die klarste Stimme auf dem iPhone eine Premium-/Enhanced-Stimme herunterladen und hier wählen.',
                         '💡 For the clearest voice on iPhone, download a Premium/Enhanced German voice in Spoken Content and pick it here.'),
-                    style: const TextStyle(color: Colors.white70, height: 1.5)),
+                    style: TextStyle(color: AppColors.fg70, height: 1.5)),
               ),
             ],
           ),
@@ -154,7 +195,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       child: SwitchListTile(
         secondary: Text(emoji, style: const TextStyle(fontSize: 28)),
         title: Text(title, style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.bold, fontSize: 17)),
-        subtitle: Text(sub, style: const TextStyle(color: Colors.white60)),
+        subtitle: Text(sub, style: TextStyle(color: AppColors.fg60)),
         value: value,
         onChanged: onChanged,
       ),
@@ -173,9 +214,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       child: ListTile(
         leading: Icon(selected ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
-            color: selected ? AppColors.blue : Colors.white38),
+            color: selected ? AppColors.blue : AppColors.fg38),
         title: Text(title, textDirection: name == null ? null : TextDirection.ltr),
-        subtitle: locale.isEmpty ? null : Text(locale, textDirection: TextDirection.ltr, style: const TextStyle(color: Colors.white54)),
+        subtitle: locale.isEmpty ? null : Text(locale, textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.fg54)),
         onTap: () async {
           await v.setPreferredVoice(ttsLang, name);
           setState(() {});

@@ -34,7 +34,7 @@ Future<void> showGrammarCard(BuildContext context, LessonUnit unit, {VoidCallbac
           children: [
             Center(
                 child: Container(
-                    width: 44, height: 5, decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(3)))),
+                    width: 44, height: 5, decoration: BoxDecoration(color: AppColors.fg24, borderRadius: BorderRadius.circular(3)))),
             const SizedBox(height: 16),
             Row(children: [
               Container(
@@ -111,7 +111,7 @@ class _GrammarTable extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(14),
         child: Table(
-          border: TableBorder.all(color: Colors.white12),
+          border: TableBorder.all(color: AppColors.fg12),
           children: [
             for (var r = 0; r < rows.length; r++)
               TableRow(
@@ -129,7 +129,7 @@ class _GrammarTable extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: r == 0 || c == 0 ? FontWeight.bold : FontWeight.w500,
-                                color: c == 0 && r > 0 ? AppColors.gold : Colors.white)),
+                                color: c == 0 && r > 0 ? AppColors.gold : AppColors.fg)),
                       ),
                     ),
                 ],
@@ -251,9 +251,9 @@ class _DialogScreenState extends State<DialogScreen> {
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: left ? AppColors.card : const Color(0xFF1B3A4B),
+            color: left ? AppColors.card : AppColors.tint,
             borderRadius: BorderRadius.circular(18),
-            border: Border.all(color: active ? AppColors.gold : Colors.white12, width: active ? 2.5 : 1),
+            border: Border.all(color: active ? AppColors.gold : AppColors.fg12, width: active ? 2.5 : 1),
           ),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(d.who, textDirection: TextDirection.ltr, style: TextStyle(color: left ? AppColors.blue : AppColors.green, fontWeight: FontWeight.bold)),
@@ -261,7 +261,7 @@ class _DialogScreenState extends State<DialogScreen> {
             Text(d.de, textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
             if (showKu) ...[
               const SizedBox(height: 6),
-              Text(d.ku, textDirection: TextDirection.rtl, style: const TextStyle(color: Colors.white70, fontSize: 15)),
+              Text(d.ku, textDirection: TextDirection.rtl, style: TextStyle(color: AppColors.fg70, fontSize: 15)),
             ],
           ]),
         ),
@@ -484,7 +484,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
             decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(14)),
             child: Column(children: [
-              Text(title, style: const TextStyle(color: Colors.white54, fontSize: 13)),
+              Text(title, style: TextStyle(color: AppColors.fg54, fontSize: 13)),
               const SizedBox(height: 4),
               Text(value, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.gold)),
             ]),
@@ -494,7 +494,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
     final spans = <TextSpan>[];
     for (final ch in l.word.split('')) {
       final hit = ch.toLowerCase() == l.upper.toLowerCase();
-      spans.add(TextSpan(text: ch, style: TextStyle(color: hit ? AppColors.gold : Colors.white, decoration: hit ? TextDecoration.underline : null)));
+      spans.add(TextSpan(text: ch, style: TextStyle(color: hit ? AppColors.gold : AppColors.fg, decoration: hit ? TextDecoration.underline : null)));
     }
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 8),
@@ -533,9 +533,9 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
               text: TextSpan(style: const TextStyle(fontFamily: 'LeagueGothic', fontSize: 40, letterSpacing: 1), children: spans),
             ),
             const SizedBox(height: 6),
-            Text('${tr(_ui, 'خواندن', 'Aussprache', 'Say')}: ${l.read}', style: const TextStyle(fontSize: 17, color: Colors.white70)),
+            Text('${tr(_ui, 'خواندن', 'Aussprache', 'Say')}: ${l.read}', style: TextStyle(fontSize: 17, color: AppColors.fg70)),
             Text('${tr(_ui, 'رامان', 'Bedeutung', 'Meaning')}: ${c.text(_ui).split('·').last.trim()}',
-                style: const TextStyle(fontSize: 16, color: Colors.white60)),
+                style: TextStyle(fontSize: 16, color: AppColors.fg60)),
           ]),
         ),
         const SizedBox(height: 14),

@@ -120,7 +120,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
                   'نموونەیەکا کورت (١٠–٢٠ چرکە) ژ دەنگێ خۆ تۆمار بکە. AI دێ هەمی پەیڤان ب دەنگێ تە ب بادینی، ئەلمانی و ئینگلیزی دروست کەت.',
                   'Nimm 10–20 Sekunden deiner Stimme auf. Die KI spricht dann alle Wörter in deiner Stimme – auf Badini, Deutsch und Englisch.',
                   'Record 10–20 seconds of your voice. AI will then speak every word in your voice — in Badini, German and English.'),
-              style: const TextStyle(color: Colors.white70, height: 1.5),
+              style: TextStyle(color: AppColors.fg70, height: 1.5),
             ),
             const SizedBox(height: 12),
             _progressCard(myVoiceCount, totalSlots),
@@ -172,7 +172,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
               LinearProgressIndicator(
                 value: total == 0 ? 0 : mine / total,
                 minHeight: 8,
-                backgroundColor: Colors.white12,
+                backgroundColor: AppColors.fg12,
                 valueColor: const AlwaysStoppedAnimation(AppColors.green),
               ),
             ]),
@@ -190,7 +190,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
       margin: const EdgeInsets.only(bottom: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: has ? AppColors.green : Colors.white12, width: 2),
+        side: BorderSide(color: has ? AppColors.green : AppColors.fg12, width: 2),
       ),
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -201,7 +201,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
               Text('${lang.flag} ${lang.title}', style: const TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(width: 8),
               Text(required ? tr(ui, '(پێدڤی)', '(Pflicht)', '(required)') : tr(ui, '(ئارەزوومەندانە)', '(optional)', '(optional)'),
-                  style: TextStyle(color: required ? AppColors.orange : Colors.white38, fontSize: 12)),
+                  style: TextStyle(color: required ? AppColors.orange : AppColors.fg38, fontSize: 12)),
               const Spacer(),
               if (has) const Icon(Icons.check_circle, color: AppColors.green),
             ]),
@@ -236,7 +236,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
                 if (has)
                   IconButton(
                     tooltip: 'Share',
-                    icon: const Icon(Icons.ios_share_rounded, color: Colors.white70),
+                    icon: Icon(Icons.ios_share_rounded, color: AppColors.fg70),
                     // ب Share دشێی نموونێ پاشەکەفت بکەی ل Files (Save to Files) بۆ Colab
                     onPressed: () => Share.shareXFiles([
                       XFile.fromData(voice.referenceBytes(lang)!,
@@ -266,7 +266,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
                 '١. نموونەیێ ب 📤 پاشەکەفت بکە ل Files\n٢. ZimanPro_Voice_Lab.ipynb ل Google Colab ڤەکە و نموونەیێ بار بکە\n٣. voice_pack.zip دێ هێتە داگرتن\n٤. دوگمەیا خوارێ بکە و zip هەلبژێرە ✅',
                 '1. Probe per 📤 in Dateien speichern\n2. ZimanPro_Voice_Lab.ipynb in Colab öffnen, Probe hochladen\n3. voice_pack.zip wird heruntergeladen\n4. Unten tippen und zip wählen ✅',
                 '1. Save the sample to Files via 📤\n2. Open ZimanPro_Voice_Lab.ipynb in Colab, upload sample\n3. voice_pack.zip downloads\n4. Tap below and pick the zip ✅'),
-            style: const TextStyle(color: Colors.white70, height: 1.6),
+            style: TextStyle(color: AppColors.fg70, height: 1.6),
           ),
           const SizedBox(height: 10),
           SizedBox(

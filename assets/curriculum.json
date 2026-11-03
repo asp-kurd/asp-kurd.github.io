@@ -1,5 +1,5 @@
 {
- "version": 6,
+ "version": 7,
  "sections": [
   {
    "ku": "دەستپێک · ئەلفوبێ (ABC) و دەنگ",
@@ -1554,7 +1554,16 @@
      "deHint": "ä = «ێ» یا ڤەکری · داس مێدشن",
      "en": "girl",
      "enHint": "گێرڵ",
-     "emoji": "👧"
+     "emoji": "👧",
+     "cloze": {
+      "de": "Das ___ heißt Lara.",
+      "a": "Mädchen",
+      "d": [
+       "Buch",
+       "Brot"
+      ],
+      "ku": "ناڤێ کچێ لارایە."
+     }
     },
     {
      "id": "ab2",
@@ -1564,7 +1573,16 @@
      "deHint": "ä = «ێ» · دێر کێزە",
      "en": "cheese",
      "enHint": "چیز",
-     "emoji": "🧀"
+     "emoji": "🧀",
+     "cloze": {
+      "de": "Ich esse Brot mit ___.",
+      "a": "Käse",
+      "d": [
+       "Stuhl",
+       "Bus"
+      ],
+      "ku": "ئەز نانی دگەل پەنیری دخۆم."
+     }
     },
     {
      "id": "ab3",
@@ -1574,7 +1592,16 @@
      "deHint": "ö = لێڤ گرۆڤەر + «ێ» · هۆرن",
      "en": "to hear",
      "enHint": "تو هیر",
-     "emoji": "👂"
+     "emoji": "👂",
+     "cloze": {
+      "de": "Ich ___ gern Musik.",
+      "a": "höre",
+      "d": [
+       "esse",
+       "schlafe"
+      ],
+      "ku": "ئەز حەز دکەم گوهداریا مۆسیقایێ بکەم."
+     }
     },
     {
      "id": "ab4",
@@ -1584,7 +1611,16 @@
      "deHint": "ö = لێڤ گرۆڤەر + «ێ» · داس ئۆل",
      "en": "oil",
      "enHint": "ئۆیل",
-     "emoji": "🫒"
+     "emoji": "🫒",
+     "cloze": {
+      "de": "Das ___ ist in der Küche.",
+      "a": "Öl",
+      "d": [
+       "Bett",
+       "Auto"
+      ],
+      "ku": "رۆن د مەتبەخێ دایە."
+     }
     },
     {
      "id": "ab5",
@@ -1594,7 +1630,16 @@
      "deHint": "ü = لێڤ گرۆڤەر + «ی» · دی بروکە",
      "en": "bridge",
      "enHint": "بریج",
-     "emoji": "🌉"
+     "emoji": "🌉",
+     "cloze": {
+      "de": "Die ___ ist sehr lang.",
+      "a": "Brücke",
+      "d": [
+       "Banane",
+       "Tomate"
+      ],
+      "ku": "پر گەلەک درێژە."
+     }
     },
     {
      "id": "ab6",
@@ -1614,7 +1659,16 @@
      "deHint": "ß = «س» یا تیژ · دی شتراسە",
      "en": "street",
      "enHint": "ستریت",
-     "emoji": "🛣️"
+     "emoji": "🛣️",
+     "cloze": {
+      "de": "Ich wohne in der Goethe___.",
+      "a": "straße",
+      "d": [
+       "küche",
+       "jacke"
+      ],
+      "ku": "ئەز ل جادەیا گۆتەی دژیم."
+     }
     },
     {
      "id": "ab8",
@@ -1624,7 +1678,16 @@
      "deHint": "ß = «س» · هایس",
      "en": "hot",
      "enHint": "هۆت",
-     "emoji": "🔥"
+     "emoji": "🔥",
+     "cloze": {
+      "de": "Der Kaffee ist sehr ___.",
+      "a": "heiß",
+      "d": [
+       "jung",
+       "blau"
+      ],
+      "ku": "قەهوە گەلەک گەرمە."
+     }
     }
    ],
    "section": 1,
@@ -1646,7 +1709,16 @@
      "deHint": "ei = «ئای» · داس ئای",
      "en": "egg",
      "enHint": "ئێگ",
-     "emoji": "🥚"
+     "emoji": "🥚",
+     "cloze": {
+      "de": "Zum Frühstück esse ich ein ___.",
+      "a": "Ei",
+      "d": [
+       "Bett",
+       "Ohr"
+      ],
+      "ku": "بۆ تێشتێ ئەز هێکەکێ دخۆم."
+     }
     },
     {
      "id": "ab10",
@@ -1666,7 +1738,16 @@
      "deHint": "eu = «ئۆی» · دۆیچلاند",
      "en": "Germany",
      "enHint": "جێرمەنی",
-     "emoji": "🇩🇪"
+     "emoji": "🇩🇪",
+     "cloze": {
+      "de": "Ich lerne Deutsch, denn ich wohne in ___.",
+      "a": "Deutschland",
+      "d": [
+       "Montag",
+       "Kaffee"
+      ],
+      "ku": "ئەز ئەلمانی فێر دبم، چونکی ئەز ل ئەلمانیا دژیم."
+     }
     },
     {
      "id": "ab12",
@@ -1676,7 +1757,16 @@
      "deHint": "ch پشتی a/o/u = «خ» · داس بوخ",
      "en": "book",
      "enHint": "بووک",
-     "emoji": "📘"
+     "emoji": "📘",
+     "cloze": {
+      "de": "Ich lese ein ___.",
+      "a": "Buch",
+      "d": [
+       "Ei",
+       "Bad"
+      ],
+      "ku": "ئەز پەرتووکەکێ دخوینم."
+     }
     },
     {
      "id": "ab13",
@@ -1696,7 +1786,16 @@
      "deHint": "sch = «ش» · شرایبن",
      "en": "to write",
      "enHint": "تو رایت",
-     "emoji": "✍️"
+     "emoji": "✍️",
+     "cloze": {
+      "de": "Bitte ___ Sie Ihren Namen.",
+      "a": "schreiben",
+      "d": [
+       "schlafen",
+       "schwimmen"
+      ],
+      "ku": "هیڤییە ناڤێ خۆ بنڤیسە."
+     }
     },
     {
      "id": "ab15",
@@ -1706,7 +1805,16 @@
      "deHint": "st ل دەستپێکێ = «شت» · دی شتات",
      "en": "city",
      "enHint": "سیتی",
-     "emoji": "🏙️"
+     "emoji": "🏙️",
+     "cloze": {
+      "de": "Duhok ist eine schöne ___.",
+      "a": "Stadt",
+      "d": [
+       "Milch",
+       "Hose"
+      ],
+      "ku": "دهۆک باژێڕەکێ جوانە."
+     }
     },
     {
      "id": "ab16",
@@ -1716,7 +1824,16 @@
      "deHint": "sp ل دەستپێکێ = «شپ» · دێر شپۆرت",
      "en": "sport",
      "enHint": "سپۆرت",
-     "emoji": "⚽"
+     "emoji": "⚽",
+     "cloze": {
+      "de": "Ich mache jeden Tag ___.",
+      "a": "Sport",
+      "d": [
+       "Käse",
+       "Zahn"
+      ],
+      "ku": "ئەز هەر رۆژ وەرزشێ دکەم."
+     }
     }
    ],
    "section": 1,
@@ -1738,7 +1855,16 @@
      "deHint": "w = «ڤ» · دی ڤێلت",
      "en": "world",
      "enHint": "وۆرڵد",
-     "emoji": "🌍"
+     "emoji": "🌍",
+     "cloze": {
+      "de": "Die ___ ist groß.",
+      "a": "Welt",
+      "d": [
+       "Nase",
+       "Lampe"
+      ],
+      "ku": "جیهان مەزنە."
+     }
     },
     {
      "id": "ab18",
@@ -1748,7 +1874,16 @@
      "deHint": "v = «ف» · دێر فۆگل",
      "en": "bird",
      "enHint": "بێرد",
-     "emoji": "🐦"
+     "emoji": "🐦",
+     "cloze": {
+      "de": "Der ___ singt am Morgen.",
+      "a": "Vogel",
+      "d": [
+       "Schrank",
+       "Pass"
+      ],
+      "ku": "بالندە سپێدێ دستریت."
+     }
     },
     {
      "id": "ab19",
@@ -1758,7 +1893,16 @@
      "deHint": "z = «تس» · دی تسایت",
      "en": "time",
      "enHint": "تایم",
-     "emoji": "⏳"
+     "emoji": "⏳",
+     "cloze": {
+      "de": "Ich habe heute keine ___.",
+      "a": "Zeit",
+      "d": [
+       "Hand",
+       "Post"
+      ],
+      "ku": "ئەڤرۆ دەمێ من نینە."
+     }
     },
     {
      "id": "ab20",
@@ -1768,7 +1912,16 @@
      "deHint": "j = «ی» · یونگ",
      "en": "young",
      "enHint": "یەنگ",
-     "emoji": "🧒"
+     "emoji": "🧒",
+     "cloze": {
+      "de": "Mein Bruder ist noch ___.",
+      "a": "jung",
+      "d": [
+       "teuer",
+       "rot"
+      ],
+      "ku": "برایێ من هێشتا گەنجە."
+     }
     },
     {
      "id": "ab21",
@@ -1788,7 +1941,16 @@
      "deHint": "pf = «پف» · داس پفێرت",
      "en": "horse",
      "enHint": "هۆرس",
-     "emoji": "🐴"
+     "emoji": "🐴",
+     "cloze": {
+      "de": "Das ___ läuft schnell.",
+      "a": "Pferd",
+      "d": [
+       "Brot",
+       "Bad"
+      ],
+      "ku": "هەسپ ب لەز دبەزیت."
+     }
     },
     {
      "id": "ab23",
@@ -1798,7 +1960,16 @@
      "deHint": "h پشتی پیتا دەنگدار بێدەنگە · گێئەن",
      "en": "to go",
      "enHint": "تو گۆ",
-     "emoji": "🚶"
+     "emoji": "🚶",
+     "cloze": {
+      "de": "Wir ___ heute ins Kino.",
+      "a": "gehen",
+      "d": [
+       "essen",
+       "trinken"
+      ],
+      "ku": "ئەم ئەڤرۆ دچینە سینەمایێ."
+     }
     },
     {
      "id": "ab24",
@@ -1808,7 +1979,16 @@
      "deHint": "s بەری دەنگداری = «ز» · زاگن",
      "en": "to say",
      "enHint": "تو سەی",
-     "emoji": "💬"
+     "emoji": "💬",
+     "cloze": {
+      "de": "Was ___ du?",
+      "a": "sagst",
+      "d": [
+       "schläfst",
+       "isst"
+      ],
+      "ku": "تو چ دبێژی؟"
+     }
     }
    ],
    "section": 1,
@@ -2084,7 +2264,16 @@
      "deHint": "دۆیچلاند",
      "en": "Germany",
      "enHint": "جێرمەنی",
-     "emoji": "🇩🇪"
+     "emoji": "🇩🇪",
+     "cloze": {
+      "de": "Ich lerne Deutsch, denn ich wohne in ___.",
+      "a": "Deutschland",
+      "d": [
+       "Montag",
+       "Kaffee"
+      ],
+      "ku": "ئەز ئەلمانی فێر دبم، چونکی ئەز ل ئەلمانیا دژیم."
+     }
     },
     {
      "id": "a1_21",
@@ -2094,7 +2283,16 @@
      "deHint": "ئۆستەرایش",
      "en": "Austria",
      "enHint": "ئۆستریا",
-     "emoji": "🇦🇹"
+     "emoji": "🇦🇹",
+     "cloze": {
+      "de": "Wien liegt in ___.",
+      "a": "Österreich",
+      "d": [
+       "Kaffee",
+       "Montag"
+      ],
+      "ku": "ڤیەننا ل نەمسا یە."
+     }
     },
     {
      "id": "a1_22",
@@ -2155,7 +2353,16 @@
      "deHint": "داس ئالفابێت",
      "en": "the alphabet",
      "enHint": "ذی ئالفابێت",
-     "emoji": "🔤"
+     "emoji": "🔤",
+     "cloze": {
+      "de": "Das deutsche ___ hat 26 Buchstaben.",
+      "a": "Alphabet",
+      "d": [
+       "Hotel",
+       "Taxi"
+      ],
+      "ku": "ئەلفوبێیا ئەلمانی ٢٦ پیت هەنە."
+     }
     },
     {
      "id": "a1_26",
@@ -2185,7 +2392,16 @@
      "deHint": "دی ئادرێسە",
      "en": "the address",
      "enHint": "ذی ئەدرێس",
-     "emoji": "🏠"
+     "emoji": "🏠",
+     "cloze": {
+      "de": "Wie ist Ihre ___?",
+      "a": "Adresse",
+      "d": [
+       "Banane",
+       "Jacke"
+      ],
+      "ku": "ناڤنیشانا تە چییە؟"
+     }
     },
     {
      "id": "a1_29",
@@ -2195,7 +2411,16 @@
      "deHint": "دێر فۆرنامە",
      "en": "the first name",
      "enHint": "ذە فێرست نەیم",
-     "emoji": "📛"
+     "emoji": "📛",
+     "cloze": {
+      "de": "Mein ___ ist Azad.",
+      "a": "Vorname",
+      "d": [
+       "Kühlschrank",
+       "Bauch"
+      ],
+      "ku": "ناڤێ من یێ ئێکێ ئازادە."
+     }
     },
     {
      "id": "a1_30",
@@ -2205,7 +2430,16 @@
      "deHint": "دێر فامیلیەن نامە",
      "en": "the surname",
      "enHint": "ذە سێرنەیم",
-     "emoji": "👪"
+     "emoji": "👪",
+     "cloze": {
+      "de": "Mein ___ ist Barwari.",
+      "a": "Familienname",
+      "d": [
+       "Supermarkt",
+       "Pullover"
+      ],
+      "ku": "ناڤێ بنەمالا من بەرواری یە."
+     }
     },
     {
      "id": "a1_31",
@@ -2215,7 +2449,16 @@
      "deHint": "دی پۆست لایت تسال",
      "en": "the postcode",
      "enHint": "ذە پۆستکۆد",
-     "emoji": "📮"
+     "emoji": "📮",
+     "cloze": {
+      "de": "Die ___ von Köln ist 50667.",
+      "a": "Postleitzahl",
+      "d": [
+       "Bratwurst",
+       "Straßenbahn"
+      ],
+      "ku": "کۆدێ پۆستێ یێ کۆلنێ 50667 ە."
+     }
     },
     {
      "id": "a1_32",
@@ -2399,7 +2642,16 @@
      "deHint": "دێر فاتەر",
      "en": "the father",
      "enHint": "ذە فاذەر",
-     "emoji": "👨"
+     "emoji": "👨",
+     "cloze": {
+      "de": "Mein ___ heißt Karim.",
+      "a": "Vater",
+      "d": [
+       "Tee",
+       "Bus"
+      ],
+      "ku": "ناڤێ بابێ من کەریمە."
+     }
     },
     {
      "id": "a2_10",
@@ -2409,7 +2661,16 @@
      "deHint": "دی موتەر",
      "en": "the mother",
      "enHint": "ذە مەذەر",
-     "emoji": "👩"
+     "emoji": "👩",
+     "cloze": {
+      "de": "Meine ___ kocht sehr gut.",
+      "a": "Mutter",
+      "d": [
+       "Lampe",
+       "Post"
+      ],
+      "ku": "دایکا من گەلەک باش خوارنێ چێدکەت."
+     }
     },
     {
      "id": "a2_11",
@@ -2419,7 +2680,16 @@
      "deHint": "دی ئێلتەرن (تنێ کۆ)",
      "en": "the parents",
      "enHint": "ذە پێرەنتس",
-     "emoji": "👨‍👩‍👧"
+     "emoji": "👨‍👩‍👧",
+     "cloze": {
+      "de": "Meine ___ wohnen in Duhok.",
+      "a": "Eltern",
+      "d": [
+       "Schuhe",
+       "Socken"
+      ],
+      "ku": "دایک و بابێن من ل دهۆکێ دژین."
+     }
     },
     {
      "id": "a2_12",
@@ -2429,7 +2699,16 @@
      "deHint": "دێر زۆن",
      "en": "the son",
      "enHint": "ذە سەن",
-     "emoji": "👦"
+     "emoji": "👦",
+     "cloze": {
+      "de": "Mein ___ ist fünf Jahre alt.",
+      "a": "Sohn",
+      "d": [
+       "Saft",
+       "Zug"
+      ],
+      "ku": "کوڕێ من پێنج سالییە."
+     }
     },
     {
      "id": "a2_13",
@@ -2439,7 +2718,16 @@
      "deHint": "دی تۆختەر",
      "en": "the daughter",
      "enHint": "ذە دۆتەر",
-     "emoji": "👧"
+     "emoji": "👧",
+     "cloze": {
+      "de": "Meine ___ geht in die Schule.",
+      "a": "Tochter",
+      "d": [
+       "Tomate",
+       "Bank"
+      ],
+      "ku": "کچا من دچیتە قوتابخانێ."
+     }
     },
     {
      "id": "a2_14",
@@ -2449,7 +2737,16 @@
      "deHint": "دی گەشڤیستەر (برا و خویشک)",
      "en": "the siblings",
      "enHint": "ذە سیبلینگز",
-     "emoji": "🧑‍🤝‍🧑"
+     "emoji": "🧑‍🤝‍🧑",
+     "cloze": {
+      "de": "Hast du ___?",
+      "a": "Geschwister",
+      "d": [
+       "Kartoffeln",
+       "Schuhe"
+      ],
+      "ku": "خویشک و برایێن تە هەنە؟"
+     }
     },
     {
      "id": "a2_15",
@@ -2601,7 +2898,16 @@
      "deHint": "داس برۆت",
      "en": "the bread",
      "enHint": "ذە برێد",
-     "emoji": "🍞"
+     "emoji": "🍞",
+     "cloze": {
+      "de": "Ich kaufe ein ___ in der Bäckerei.",
+      "a": "Brot",
+      "d": [
+       "Bett",
+       "Auge"
+      ],
+      "ku": "ئەز ل نانەواخانێ نانەکی دکڕم."
+     }
     },
     {
      "id": "a3_02",
@@ -2611,7 +2917,16 @@
      "deHint": "دێر کێزە",
      "en": "the cheese",
      "enHint": "ذە چیز",
-     "emoji": "🧀"
+     "emoji": "🧀",
+     "cloze": {
+      "de": "Ich esse Brot mit ___.",
+      "a": "Käse",
+      "d": [
+       "Stuhl",
+       "Bus"
+      ],
+      "ku": "ئەز نانی دگەل پەنیری دخۆم."
+     }
     },
     {
      "id": "a3_03",
@@ -2621,7 +2936,16 @@
      "deHint": "داس ئای (کۆ: die Eier)",
      "en": "the egg",
      "enHint": "ذی ئێگ",
-     "emoji": "🥚"
+     "emoji": "🥚",
+     "cloze": {
+      "de": "Zum Frühstück esse ich ein ___.",
+      "a": "Ei",
+      "d": [
+       "Bett",
+       "Ohr"
+      ],
+      "ku": "بۆ تێشتێ ئەز هێکەکێ دخۆم."
+     }
     },
     {
      "id": "a3_04",
@@ -2631,7 +2955,16 @@
      "deHint": "دێر ئاپفل (کۆ: die Äpfel)",
      "en": "the apple",
      "enHint": "ذی ئاپڵ",
-     "emoji": "🍎"
+     "emoji": "🍎",
+     "cloze": {
+      "de": "Ich esse einen ___.",
+      "a": "Apfel",
+      "d": [
+       "Stuhl",
+       "Zug"
+      ],
+      "ku": "ئەز سێڤەکێ دخۆم."
+     }
     },
     {
      "id": "a3_05",
@@ -2641,7 +2974,16 @@
      "deHint": "دی بانانە",
      "en": "the banana",
      "enHint": "ذە بەنانا",
-     "emoji": "🍌"
+     "emoji": "🍌",
+     "cloze": {
+      "de": "Die ___ ist gelb.",
+      "a": "Banane",
+      "d": [
+       "Brücke",
+       "Rechnung"
+      ],
+      "ku": "مۆز زەرە."
+     }
     },
     {
      "id": "a3_06",
@@ -2651,7 +2993,16 @@
      "deHint": "دی تۆماتە",
      "en": "the tomato",
      "enHint": "ذە تەمەیتۆ",
-     "emoji": "🍅"
+     "emoji": "🍅",
+     "cloze": {
+      "de": "Die ___ ist rot.",
+      "a": "Tomate",
+      "d": [
+       "Prüfung",
+       "Adresse"
+      ],
+      "ku": "تەماتە سۆرە."
+     }
     },
     {
      "id": "a3_07",
@@ -2661,7 +3012,16 @@
      "deHint": "دی کارتۆفل",
      "en": "the potato",
      "enHint": "ذە پەتەیتۆ",
-     "emoji": "🥔"
+     "emoji": "🥔",
+     "cloze": {
+      "de": "Ich koche eine ___.",
+      "a": "Kartoffel",
+      "d": [
+       "Postleitzahl",
+       "Straßenbahn"
+      ],
+      "ku": "ئەز پەتاتەیەکێ دکەلینم."
+     }
     },
     {
      "id": "a3_08",
@@ -2671,7 +3031,16 @@
      "deHint": "دێر فیش",
      "en": "the fish",
      "enHint": "ذە فیش",
-     "emoji": "🐟"
+     "emoji": "🐟",
+     "cloze": {
+      "de": "Am Freitag esse ich ___.",
+      "a": "Fisch",
+      "d": [
+       "Schrank",
+       "Husten"
+      ],
+      "ku": "ئەینیێ ئەز ماسیێ دخۆم."
+     }
     }
    ],
    "grammar": {
@@ -2702,7 +3071,16 @@
      "deHint": "داس ڤاسەر",
      "en": "the water",
      "enHint": "ذە ووتەر",
-     "emoji": "💧"
+     "emoji": "💧",
+     "cloze": {
+      "de": "Ich trinke ein Glas ___.",
+      "a": "Wasser",
+      "d": [
+       "Brot",
+       "Buch"
+      ],
+      "ku": "ئەز پەرداخەکا ئاڤێ ڤەدخۆم."
+     }
     },
     {
      "id": "a3_10",
@@ -2712,7 +3090,16 @@
      "deHint": "دی میلش",
      "en": "the milk",
      "enHint": "ذە میلک",
-     "emoji": "🥛"
+     "emoji": "🥛",
+     "cloze": {
+      "de": "Ich trinke Kaffee mit ___.",
+      "a": "Milch",
+      "d": [
+       "Hose",
+       "Post"
+      ],
+      "ku": "ئەز قەهوێ دگەل شیری ڤەدخۆم."
+     }
     },
     {
      "id": "a3_11",
@@ -2722,7 +3109,16 @@
      "deHint": "دێر کافێ",
      "en": "the coffee",
      "enHint": "ذە کۆفی",
-     "emoji": "☕"
+     "emoji": "☕",
+     "cloze": {
+      "de": "Am Morgen trinke ich ___.",
+      "a": "Kaffee",
+      "d": [
+       "Apfel",
+       "Kopf"
+      ],
+      "ku": "سپێدێ ئەز قەهوێ ڤەدخۆم."
+     }
     },
     {
      "id": "a3_12",
@@ -2732,7 +3128,16 @@
      "deHint": "دێر تێ",
      "en": "the tea",
      "enHint": "ذە تی",
-     "emoji": "🍵"
+     "emoji": "🍵",
+     "cloze": {
+      "de": "Möchtest du einen ___?",
+      "a": "Tee",
+      "d": [
+       "Bus",
+       "Zahn"
+      ],
+      "ku": "تە چایەک دڤێت؟"
+     }
     },
     {
      "id": "a3_13",
@@ -2742,7 +3147,16 @@
      "deHint": "دێر زافت",
      "en": "the juice",
      "enHint": "ذە جووس",
-     "emoji": "🧃"
+     "emoji": "🧃",
+     "cloze": {
+      "de": "Die Kinder trinken ___.",
+      "a": "Saft",
+      "d": [
+       "Stuhl",
+       "Berg"
+      ],
+      "ku": "زارۆک شەربەتێ ڤەدخۆن."
+     }
     },
     {
      "id": "a3_14",
@@ -2823,7 +3237,16 @@
      "deHint": "دێر ئاینکاوفس تسێتل",
      "en": "the shopping list",
      "enHint": "ذە شۆپینگ لیست",
-     "emoji": "📝"
+     "emoji": "📝",
+     "cloze": {
+      "de": "Milch steht auf dem ___.",
+      "a": "Einkaufszettel",
+      "d": [
+       "Kühlschrank",
+       "Pullover"
+      ],
+      "ku": "شیر ل سەر لیستا کڕینێ یە."
+     }
     },
     {
      "id": "a3_20",
@@ -2904,7 +3327,16 @@
      "deHint": "دی ڤۆنونگ",
      "en": "the flat",
      "enHint": "ذە فلات",
-     "emoji": "🏠"
+     "emoji": "🏠",
+     "cloze": {
+      "de": "Die ___ hat drei Zimmer.",
+      "a": "Wohnung",
+      "d": [
+       "Banane",
+       "Nase"
+      ],
+      "ku": "شوقە سێ ژوور هەنە."
+     }
     },
     {
      "id": "a4_02",
@@ -2914,7 +3346,16 @@
      "deHint": "دی کووشە",
      "en": "the kitchen",
      "enHint": "ذە کیچن",
-     "emoji": "🍳"
+     "emoji": "🍳",
+     "cloze": {
+      "de": "Meine Mutter kocht in der ___.",
+      "a": "Küche",
+      "d": [
+       "Bank",
+       "Straßenbahn"
+      ],
+      "ku": "دایکا من ل مەتبەخێ خوارنێ چێدکەت."
+     }
     },
     {
      "id": "a4_03",
@@ -2924,7 +3365,16 @@
      "deHint": "داس بات",
      "en": "the bathroom",
      "enHint": "ذە باسروم",
-     "emoji": "🛁"
+     "emoji": "🛁",
+     "cloze": {
+      "de": "Das ___ ist neben der Küche.",
+      "a": "Bad",
+      "d": [
+       "Ei",
+       "Taxi"
+      ],
+      "ku": "حەمام ل تەنشت مەتبەخێ یە."
+     }
     },
     {
      "id": "a4_04",
@@ -2934,7 +3384,16 @@
      "deHint": "داس شلاف تسیمەر",
      "en": "the bedroom",
      "enHint": "ذە بێدروم",
-     "emoji": "🛏️"
+     "emoji": "🛏️",
+     "cloze": {
+      "de": "Mein Bett steht im ___.",
+      "a": "Schlafzimmer",
+      "d": [
+       "Flugzeug",
+       "Praktikum"
+      ],
+      "ku": "تەختێ من د ژوورا نڤستنێ دایە."
+     }
     },
     {
      "id": "a4_05",
@@ -2944,7 +3403,16 @@
      "deHint": "داس ڤۆن تسیمەر",
      "en": "the living room",
      "enHint": "ذە لیڤینگ روم",
-     "emoji": "🛋️"
+     "emoji": "🛋️",
+     "cloze": {
+      "de": "Wir sehen im ___ fern.",
+      "a": "Wohnzimmer",
+      "d": [
+       "Hotel",
+       "Dorf"
+      ],
+      "ku": "ئەم ل دیوەخانێ تەماشەی تەلەفزیۆنێ دکەین."
+     }
     },
     {
      "id": "a4_06",
@@ -2954,7 +3422,16 @@
      "deHint": "داس کیندەر تسیمەر",
      "en": "the children's room",
      "enHint": "ذە چیلدرەنز روم",
-     "emoji": "🧸"
+     "emoji": "🧸",
+     "cloze": {
+      "de": "Die Kinder spielen im ___.",
+      "a": "Kinderzimmer",
+      "d": [
+       "Flugzeug",
+       "Amt"
+      ],
+      "ku": "زارۆک ل ژوورا زارۆکان یاری دکەن."
+     }
     },
     {
      "id": "a4_07",
@@ -2964,7 +3441,16 @@
      "deHint": "دێر بالکۆن",
      "en": "the balcony",
      "enHint": "ذە بالکەنی",
-     "emoji": "🌿"
+     "emoji": "🌿",
+     "cloze": {
+      "de": "Die Wohnung hat einen ___.",
+      "a": "Balkon",
+      "d": [
+       "Husten",
+       "Antrag"
+      ],
+      "ku": "شوقە بالکۆنەک هەیە."
+     }
     },
     {
      "id": "a4_08",
@@ -3005,7 +3491,16 @@
      "deHint": "گرۆس",
      "en": "big",
      "enHint": "بیگ",
-     "emoji": "🔺"
+     "emoji": "🔺",
+     "cloze": {
+      "de": "Das Haus ist sehr ___.",
+      "a": "groß",
+      "d": [
+       "leise",
+       "links"
+      ],
+      "ku": "خانی گەلەک مەزنە."
+     }
     },
     {
      "id": "a4_10",
@@ -3015,7 +3510,16 @@
      "deHint": "کلاین",
      "en": "small",
      "enHint": "سمۆڵ",
-     "emoji": "🔹"
+     "emoji": "🔹",
+     "cloze": {
+      "de": "Mein Zimmer ist ___.",
+      "a": "klein",
+      "d": [
+       "geradeaus",
+       "heiß"
+      ],
+      "ku": "ژوورا من بچووکە."
+     }
     },
     {
      "id": "a4_11",
@@ -3025,7 +3529,16 @@
      "deHint": "تۆیەر",
      "en": "expensive",
      "enHint": "ئیکسپێنسیڤ",
-     "emoji": "💸"
+     "emoji": "💸",
+     "cloze": {
+      "de": "Die Jacke kostet 200 Euro. Sie ist ___.",
+      "a": "teuer",
+      "d": [
+       "jung",
+       "links"
+      ],
+      "ku": "جاکێت ٢٠٠ یۆرۆیە. گرانە."
+     }
     },
     {
      "id": "a4_12",
@@ -3035,7 +3548,16 @@
      "deHint": "بیلیش",
      "en": "cheap",
      "enHint": "چیپ",
-     "emoji": "🏷️"
+     "emoji": "🏷️",
+     "cloze": {
+      "de": "Das Brot kostet nur 1 Euro. Es ist ___.",
+      "a": "billig",
+      "d": [
+       "dunkel",
+       "rechts"
+      ],
+      "ku": "نان تنێ ١ یۆرۆیە. هەرزانە."
+     }
     },
     {
      "id": "a4_13",
@@ -3045,7 +3567,16 @@
      "deHint": "نۆی",
      "en": "new",
      "enHint": "نیو",
-     "emoji": "✨"
+     "emoji": "✨",
+     "cloze": {
+      "de": "Ich habe ein ___es Handy.",
+      "a": "neu",
+      "d": [
+       "rechts",
+       "geradeaus"
+      ],
+      "ku": "مۆبایلەکا نوو یا من هەیە."
+     }
     },
     {
      "id": "a4_14",
@@ -3055,7 +3586,16 @@
      "deHint": "ئالت",
      "en": "old",
      "enHint": "ئۆڵد",
-     "emoji": "🏚️"
+     "emoji": "🏚️",
+     "cloze": {
+      "de": "Mein Opa ist 80 Jahre ___.",
+      "a": "alt",
+      "d": [
+       "blau",
+       "hell"
+      ],
+      "ku": "باپیرێ من ٨٠ سالییە."
+     }
     },
     {
      "id": "a4_15",
@@ -3065,7 +3605,16 @@
      "deHint": "هێل",
      "en": "bright",
      "enHint": "برایت",
-     "emoji": "🌞"
+     "emoji": "🌞",
+     "cloze": {
+      "de": "Das Zimmer hat große Fenster. Es ist ___.",
+      "a": "hell",
+      "d": [
+       "teuer",
+       "jung"
+      ],
+      "ku": "ژوور پەنجەرێن مەزن هەنە. رۆهنە."
+     }
     },
     {
      "id": "a4_16",
@@ -3075,7 +3624,16 @@
      "deHint": "دونکل",
      "en": "dark",
      "enHint": "دارک",
-     "emoji": "🌑"
+     "emoji": "🌑",
+     "cloze": {
+      "de": "In der Nacht ist es ___.",
+      "a": "dunkel",
+      "d": [
+       "billig",
+       "neu"
+      ],
+      "ku": "ب شەڤ تاری یە."
+     }
     }
    ],
    "grammar": {
@@ -3106,7 +3664,16 @@
      "deHint": "دێر شتوول",
      "en": "the chair",
      "enHint": "ذە چێر",
-     "emoji": "🪑"
+     "emoji": "🪑",
+     "cloze": {
+      "de": "Der ___ steht am Tisch.",
+      "a": "Stuhl",
+      "d": [
+       "Apfel",
+       "Tee"
+      ],
+      "ku": "کورسی ل نک مێزێ یە."
+     }
     },
     {
      "id": "a4_18",
@@ -3116,7 +3683,16 @@
      "deHint": "داس بێت",
      "en": "the bed",
      "enHint": "ذە بێد",
-     "emoji": "🛏"
+     "emoji": "🛏",
+     "cloze": {
+      "de": "Ich schlafe im ___.",
+      "a": "Bett",
+      "d": [
+       "Brot",
+       "Ei"
+      ],
+      "ku": "ئەز د تەختی دا دنڤم."
+     }
     },
     {
      "id": "a4_19",
@@ -3126,7 +3702,16 @@
      "deHint": "دێر شرانک",
      "en": "the cupboard",
      "enHint": "ذە کەبەرد",
-     "emoji": "🗄️"
+     "emoji": "🗄️",
+     "cloze": {
+      "de": "Die Kleidung ist im ___.",
+      "a": "Schrank",
+      "d": [
+       "Kaffee",
+       "Fisch"
+      ],
+      "ku": "جل د دۆلابی دانە."
+     }
     },
     {
      "id": "a4_20",
@@ -3136,7 +3721,16 @@
      "deHint": "دێر کوول شرانک",
      "en": "the fridge",
      "enHint": "ذە فریج",
-     "emoji": "🧊"
+     "emoji": "🧊",
+     "cloze": {
+      "de": "Die Milch ist im ___.",
+      "a": "Kühlschrank",
+      "d": [
+       "Vorname",
+       "Pullover"
+      ],
+      "ku": "شیر د سەلاجێ دایە."
+     }
     },
     {
      "id": "a4_21",
@@ -3146,7 +3740,16 @@
      "deHint": "دی لامپە",
      "en": "the lamp",
      "enHint": "ذە لامپ",
-     "emoji": "💡"
+     "emoji": "💡",
+     "cloze": {
+      "de": "Die ___ ist über dem Tisch.",
+      "a": "Lampe",
+      "d": [
+       "Milch",
+       "Tomate"
+      ],
+      "ku": "چرا ل سەر مێزێ یە."
+     }
     },
     {
      "id": "a4_22",
@@ -3156,7 +3759,16 @@
      "deHint": "رۆت",
      "en": "red",
      "enHint": "رێد",
-     "emoji": "🔴"
+     "emoji": "🔴",
+     "cloze": {
+      "de": "Die Tomate ist ___.",
+      "a": "rot",
+      "d": [
+       "blau",
+       "jung"
+      ],
+      "ku": "تەماتە سۆرە."
+     }
     },
     {
      "id": "a4_23",
@@ -3166,7 +3778,16 @@
      "deHint": "بلاو",
      "en": "blue",
      "enHint": "بلوو",
-     "emoji": "🔵"
+     "emoji": "🔵",
+     "cloze": {
+      "de": "Der Himmel ist ___.",
+      "a": "blau",
+      "d": [
+       "rot",
+       "teuer"
+      ],
+      "ku": "ئەسمان شینە."
+     }
     },
     {
      "id": "a4_24",
@@ -3207,7 +3828,16 @@
      "deHint": "ئاوف شتێئەن (Ich stehe … auf)",
      "en": "to get up",
      "enHint": "تو گێت ئەپ",
-     "emoji": "⏰"
+     "emoji": "⏰",
+     "cloze": {
+      "de": "Ich ___ um 7 Uhr ___.",
+      "a": "stehe … auf",
+      "d": [
+       "rufe … an",
+       "kaufe … ein"
+      ],
+      "ku": "ئەز دەمژمێر ٧ رادبم."
+     }
     },
     {
      "id": "a5_02",
@@ -3217,7 +3847,16 @@
      "deHint": "فرووشتوکن",
      "en": "to have breakfast",
      "enHint": "تو هاڤ برێکفاست",
-     "emoji": "🥐"
+     "emoji": "🥐",
+     "cloze": {
+      "de": "Wir ___ um 8 Uhr.",
+      "a": "frühstücken",
+      "d": [
+       "schlafen",
+       "schwimmen"
+      ],
+      "ku": "ئەم دەمژمێر ٨ تێشتێ دخۆین."
+     }
     },
     {
      "id": "a5_03",
@@ -3227,7 +3866,16 @@
      "deHint": "ئاوف رۆیمەن",
      "en": "to tidy up",
      "enHint": "تو تایدی ئەپ",
-     "emoji": "🧹"
+     "emoji": "🧹",
+     "cloze": {
+      "de": "Ich ___ mein Zimmer ___.",
+      "a": "räume … auf",
+      "d": [
+       "stehe … auf",
+       "rufe … an"
+      ],
+      "ku": "ئەز ژوورا خۆ رێک دخەم."
+     }
     },
     {
      "id": "a5_04",
@@ -3237,7 +3885,16 @@
      "deHint": "ئاین کاوفن",
      "en": "to go shopping",
      "enHint": "تو گۆ شۆپینگ",
-     "emoji": "🛍️"
+     "emoji": "🛍️",
+     "cloze": {
+      "de": "Am Samstag ___ ich im Supermarkt ___.",
+      "a": "kaufe … ein",
+      "d": [
+       "stehe … auf",
+       "sehe … fern"
+      ],
+      "ku": "شەمبیێ ئەز ل سووپەرمارکێتێ بازاڕی دکەم."
+     }
     },
     {
      "id": "a5_05",
@@ -3247,7 +3904,16 @@
      "deHint": "کۆخن",
      "en": "to cook",
      "enHint": "تو کووک",
-     "emoji": "🍲"
+     "emoji": "🍲",
+     "cloze": {
+      "de": "Meine Mutter ___ Reis.",
+      "a": "kocht",
+      "d": [
+       "schläft",
+       "fährt"
+      ],
+      "ku": "دایکا من برنجی چێدکەت."
+     }
     },
     {
      "id": "a5_06",
@@ -3257,7 +3923,16 @@
      "deHint": "فێرن زێئەن (Ich sehe fern)",
      "en": "to watch TV",
      "enHint": "تو وۆچ تیڤی",
-     "emoji": "📺"
+     "emoji": "📺",
+     "cloze": {
+      "de": "Am Abend ___ ich ___.",
+      "a": "sehe … fern",
+      "d": [
+       "räume … auf",
+       "stehe … auf"
+      ],
+      "ku": "ئێڤاری ئەز تەماشەی تەلەفزیۆنێ دکەم."
+     }
     },
     {
      "id": "a5_07",
@@ -3267,7 +3942,16 @@
      "deHint": "ئان روفن (Ich rufe dich an)",
      "en": "to call",
      "enHint": "تو کۆڵ",
-     "emoji": "📞"
+     "emoji": "📞",
+     "cloze": {
+      "de": "Ich ___ meine Mutter ___.",
+      "a": "rufe … an",
+      "d": [
+       "sehe … fern",
+       "kaufe … ein"
+      ],
+      "ku": "ئەز تەلەفۆنێ بۆ دایکا خۆ دکەم."
+     }
     },
     {
      "id": "a5_08",
@@ -3277,7 +3961,16 @@
      "deHint": "شلافن (du schläfst)",
      "en": "to sleep",
      "enHint": "تو سلیپ",
-     "emoji": "😴"
+     "emoji": "😴",
+     "cloze": {
+      "de": "Das Baby ___.",
+      "a": "schläft",
+      "d": [
+       "kocht",
+       "schreibt"
+      ],
+      "ku": "زارۆکێ ساڤا دنڤیت."
+     }
     }
    ],
    "grammar": {
@@ -3368,7 +4061,16 @@
      "deHint": "ئام مۆرگن",
      "en": "in the morning",
      "enHint": "ئین ذە مۆرنینگ",
-     "emoji": "🌄"
+     "emoji": "🌄",
+     "cloze": {
+      "de": "___ trinke ich Kaffee.",
+      "a": "Am Morgen",
+      "d": [
+       "Am Montag",
+       "Im Januar"
+      ],
+      "ku": "سپێدێ ئەز قەهوێ ڤەدخۆم."
+     }
     },
     {
      "id": "a5_16",
@@ -3378,7 +4080,16 @@
      "deHint": "ئام ئابەنت",
      "en": "in the evening",
      "enHint": "ئین ذی ئیڤنینگ",
-     "emoji": "🌃"
+     "emoji": "🌃",
+     "cloze": {
+      "de": "___ sehe ich fern.",
+      "a": "Am Abend",
+      "d": [
+       "Im Juli",
+       "Am Dienstag"
+      ],
+      "ku": "ئێڤاری ئەز تەماشەی تەلەفزیۆنێ دکەم."
+     }
     }
    ],
    "grammar": {
@@ -3409,7 +4120,16 @@
      "deHint": "دێر مۆنتاگ",
      "en": "Monday",
      "enHint": "مەندەی",
-     "emoji": "1️⃣"
+     "emoji": "1️⃣",
+     "cloze": {
+      "de": "Am ___ gehe ich zum Kurs.",
+      "a": "Montag",
+      "d": [
+       "Januar",
+       "Morgen"
+      ],
+      "ku": "دووشەمبێ ئەز دچمە خولێ."
+     }
     },
     {
      "id": "a5_18",
@@ -3419,7 +4139,16 @@
      "deHint": "دێر دینستاگ",
      "en": "Tuesday",
      "enHint": "تیوزدەی",
-     "emoji": "2️⃣"
+     "emoji": "2️⃣",
+     "cloze": {
+      "de": "Heute ist Montag, morgen ist ___.",
+      "a": "Dienstag",
+      "d": [
+       "Sonntag",
+       "Freitag"
+      ],
+      "ku": "ئەڤرۆ دووشەمبە، سوبەهی سێشەمبە."
+     }
     },
     {
      "id": "a5_19",
@@ -3429,7 +4158,16 @@
      "deHint": "دێر میتڤۆخ",
      "en": "Wednesday",
      "enHint": "وێنزدەی",
-     "emoji": "3️⃣"
+     "emoji": "3️⃣",
+     "cloze": {
+      "de": "Heute ist Dienstag, morgen ist ___.",
+      "a": "Mittwoch",
+      "d": [
+       "Montag",
+       "Samstag"
+      ],
+      "ku": "ئەڤرۆ سێشەمبە، سوبەهی چارشەمبە."
+     }
     },
     {
      "id": "a5_20",
@@ -3439,7 +4177,16 @@
      "deHint": "دێر دۆنەرستاگ",
      "en": "Thursday",
      "enHint": "سێرزدەی",
-     "emoji": "4️⃣"
+     "emoji": "4️⃣",
+     "cloze": {
+      "de": "Heute ist Mittwoch, morgen ist ___.",
+      "a": "Donnerstag",
+      "d": [
+       "Dienstag",
+       "Sonntag"
+      ],
+      "ku": "ئەڤرۆ چارشەمبە، سوبەهی پێنجشەمبە."
+     }
     },
     {
      "id": "a5_21",
@@ -3449,7 +4196,16 @@
      "deHint": "دێر فرایتاگ",
      "en": "Friday",
      "enHint": "فرایدەی",
-     "emoji": "5️⃣"
+     "emoji": "5️⃣",
+     "cloze": {
+      "de": "Heute ist Donnerstag, morgen ist ___.",
+      "a": "Freitag",
+      "d": [
+       "Montag",
+       "Mittwoch"
+      ],
+      "ku": "ئەڤرۆ پێنجشەمبە، سوبەهی ئەینییە."
+     }
     },
     {
      "id": "a5_22",
@@ -3459,7 +4215,16 @@
      "deHint": "دێر زامستاگ",
      "en": "Saturday",
      "enHint": "ساتەردەی",
-     "emoji": "6️⃣"
+     "emoji": "6️⃣",
+     "cloze": {
+      "de": "Heute ist Freitag, morgen ist ___.",
+      "a": "Samstag",
+      "d": [
+       "Dienstag",
+       "Donnerstag"
+      ],
+      "ku": "ئەڤرۆ ئەینییە، سوبەهی شەمبییە."
+     }
     },
     {
      "id": "a5_23",
@@ -3469,7 +4234,16 @@
      "deHint": "دێر زۆنتاگ",
      "en": "Sunday",
      "enHint": "سەندەی",
-     "emoji": "7️⃣"
+     "emoji": "7️⃣",
+     "cloze": {
+      "de": "Am ___ arbeite ich nicht.",
+      "a": "Sonntag",
+      "d": [
+       "Januar",
+       "Abend"
+      ],
+      "ku": "ئێکشەمبێ ئەز کار ناکەم."
+     }
     },
     {
      "id": "a5_24",
@@ -3520,7 +4294,16 @@
      "deHint": "ئێس رێگنەت",
      "en": "It's raining.",
      "enHint": "ئیتس رەینینگ",
-     "emoji": "🌧️"
+     "emoji": "🌧️",
+     "cloze": {
+      "de": "Nimm einen Schirm! Es ___.",
+      "a": "regnet",
+      "d": [
+       "schläft",
+       "kocht"
+      ],
+      "ku": "سیوانەکێ ببە! باران دباریت."
+     }
     },
     {
      "id": "a6_03",
@@ -3530,7 +4313,16 @@
      "deHint": "ئێس شنایت",
      "en": "It's snowing.",
      "enHint": "ئیتس سنۆوینگ",
-     "emoji": "❄️"
+     "emoji": "❄️",
+     "cloze": {
+      "de": "Im Winter ___ es oft.",
+      "a": "schneit",
+      "d": [
+       "kocht",
+       "singt"
+      ],
+      "ku": "زستانێ گەلەک جاران بەفر دباریت."
+     }
     },
     {
      "id": "a6_04",
@@ -3631,7 +4423,16 @@
      "deHint": "دی برات ڤورست",
      "en": "the sausage",
      "enHint": "ذە سۆسیج",
-     "emoji": "🌭"
+     "emoji": "🌭",
+     "cloze": {
+      "de": "Eine ___ mit Brot, bitte.",
+      "a": "Bratwurst",
+      "d": [
+       "Brücke",
+       "Rechnung"
+      ],
+      "ku": "سۆسیسەک دگەل نانی، هیڤییە."
+     }
     },
     {
      "id": "a6_12",
@@ -3741,7 +4542,16 @@
      "deHint": "شڤیمن",
      "en": "to swim",
      "enHint": "تو سویم",
-     "emoji": "🏊"
+     "emoji": "🏊",
+     "cloze": {
+      "de": "Im Sommer ___ wir im Meer.",
+      "a": "schwimmen",
+      "d": [
+       "schreiben",
+       "kochen"
+      ],
+      "ku": "هاڤینێ ئەم د دەریایێ دا مەلەڤانیێ دکەین."
+     }
     },
     {
      "id": "a6_19",
@@ -3751,7 +4561,16 @@
      "deHint": "فار رات فارن",
      "en": "to ride a bike",
      "enHint": "تو راید ئە بایک",
-     "emoji": "🚴"
+     "emoji": "🚴",
+     "cloze": {
+      "de": "Ich ___ gern Fahrrad.",
+      "a": "fahre",
+      "d": [
+       "esse",
+       "trinke"
+      ],
+      "ku": "ئەز حەز دکەم پاسکیلێ لێبخوڕم."
+     }
     },
     {
      "id": "a6_20",
@@ -3761,7 +4580,16 @@
      "deHint": "فۆتۆگرافیرن",
      "en": "to take photos",
      "enHint": "تو تەیک فۆتۆز",
-     "emoji": "📷"
+     "emoji": "📷",
+     "cloze": {
+      "de": "Im Urlaub ___ ich viel.",
+      "a": "fotografiere",
+      "d": [
+       "schlafe",
+       "koche"
+      ],
+      "ku": "د بێهنڤەدانێ دا ئەز گەلەک وێنان دگرم."
+     }
     },
     {
      "id": "a6_21",
@@ -3771,7 +4599,16 @@
      "deHint": "موزیک ماخن",
      "en": "to make music",
      "enHint": "تو مەیک میوزیک",
-     "emoji": "🎸"
+     "emoji": "🎸",
+     "cloze": {
+      "de": "Wir ___ zusammen Musik.",
+      "a": "machen",
+      "d": [
+       "essen",
+       "schlafen"
+      ],
+      "ku": "ئەم پێکڤە مۆسیقایێ دژەنین."
+     }
     },
     {
      "id": "a6_22",
@@ -3781,7 +4618,16 @@
      "deHint": "ڤاندەرن",
      "en": "to hike",
      "enHint": "تو هایک",
-     "emoji": "🥾"
+     "emoji": "🥾",
+     "cloze": {
+      "de": "Am Wochenende ___ wir in den Bergen.",
+      "a": "wandern",
+      "d": [
+       "kochen",
+       "schreiben"
+      ],
+      "ku": "دویماهیا حەفتیێ ئەم ل چیایان گەشتا پیادە دکەین."
+     }
     },
     {
      "id": "a6_23",
@@ -3862,7 +4708,16 @@
      "deHint": "مالن",
      "en": "to paint",
      "enHint": "تو پەینت",
-     "emoji": "🎨"
+     "emoji": "🎨",
+     "cloze": {
+      "de": "Das Kind ___ ein Bild.",
+      "a": "malt",
+      "d": [
+       "trinkt",
+       "schläft"
+      ],
+      "ku": "زارۆک وێنەیەکێ دکێشیت."
+     }
     },
     {
      "id": "a7_05",
@@ -3872,7 +4727,16 @@
      "deHint": "کوخن باکن",
      "en": "to bake a cake",
      "enHint": "تو بەیک ئە کەیک",
-     "emoji": "🎂"
+     "emoji": "🎂",
+     "cloze": {
+      "de": "Meine Oma ___ einen Kuchen.",
+      "a": "backt",
+      "d": [
+       "trinkt",
+       "liest"
+      ],
+      "ku": "داپیرا من کێکەکێ چێدکەت."
+     }
     },
     {
      "id": "a7_06",
@@ -3882,7 +4746,16 @@
      "deHint": "شاخ شپیلن",
      "en": "to play chess",
      "enHint": "تو پلەی چێس",
-     "emoji": "♟️"
+     "emoji": "♟️",
+     "cloze": {
+      "de": "Mein Vater ___ gern Schach.",
+      "a": "spielt",
+      "d": [
+       "isst",
+       "trinkt"
+      ],
+      "ku": "بابێ من حەز دکەت شەترەنجێ بکەت."
+     }
     },
     {
      "id": "a7_07",
@@ -3892,7 +4765,16 @@
      "deHint": "زینگن",
      "en": "to sing",
      "enHint": "تو سینگ",
-     "emoji": "🎤"
+     "emoji": "🎤",
+     "cloze": {
+      "de": "Lara ___ sehr schön.",
+      "a": "singt",
+      "d": [
+       "isst",
+       "kocht"
+      ],
+      "ku": "لارا گەلەک جوان دستریت."
+     }
     },
     {
      "id": "a7_08",
@@ -3989,7 +4871,16 @@
      "deHint": "دێر کورس",
      "en": "the course",
      "enHint": "ذە کۆرس",
-     "emoji": "📚"
+     "emoji": "📚",
+     "cloze": {
+      "de": "Der ___ beginnt um 9 Uhr.",
+      "a": "Kurs",
+      "d": [
+       "Käse",
+       "Bauch"
+      ],
+      "ku": "خول دەمژمێر ٩ دەستپێدکەت."
+     }
     },
     {
      "id": "a7_12",
@@ -3999,7 +4890,16 @@
      "deHint": "دی پرووفونگ",
      "en": "the exam",
      "enHint": "ذی ئیگزام",
-     "emoji": "📝"
+     "emoji": "📝",
+     "cloze": {
+      "de": "Morgen habe ich eine ___.",
+      "a": "Prüfung",
+      "d": [
+       "Banane",
+       "Lampe"
+      ],
+      "ku": "سوبەهی ئەزموونەک یا من هەیە."
+     }
     },
     {
      "id": "a7_13",
@@ -4009,7 +4909,16 @@
      "deHint": "ڤیدەرهۆلن",
      "en": "to repeat",
      "enHint": "تو ریپیت",
-     "emoji": "🔁"
+     "emoji": "🔁",
+     "cloze": {
+      "de": "Können Sie das bitte ___?",
+      "a": "wiederholen",
+      "d": [
+       "schwimmen",
+       "schlafen"
+      ],
+      "ku": "دشێی هیڤییە ڤێ دووبارە بکەی؟"
+     }
     },
     {
      "id": "a7_14",
@@ -4019,7 +4928,16 @@
      "deHint": "دێر تیپ",
      "en": "the tip",
      "enHint": "ذە تیپ",
-     "emoji": "💡"
+     "emoji": "💡",
+     "cloze": {
+      "de": "Danke für den ___!",
+      "a": "Tipp",
+      "d": [
+       "Husten",
+       "Zahn"
+      ],
+      "ku": "سوپاس بۆ شیرەتێ!"
+     }
     },
     {
      "id": "a7_15",
@@ -4200,7 +5118,16 @@
      "deHint": "دێر ئینژەنیۆر",
      "en": "the engineer",
      "enHint": "ذی ئێنجینیر",
-     "emoji": "👨‍🔧"
+     "emoji": "👨‍🔧",
+     "cloze": {
+      "de": "Mein Bruder ist ___ von Beruf.",
+      "a": "Ingenieur",
+      "d": [
+       "Kühlschrank",
+       "Schlüssel"
+      ],
+      "ku": "برایێ من ئەندازیارە."
+     }
     },
     {
      "id": "a8_05",
@@ -4230,7 +5157,16 @@
      "deHint": "دی کرانکن شڤێستەر",
      "en": "the nurse",
      "enHint": "ذە نێرس",
-     "emoji": "👩‍⚕️"
+     "emoji": "👩‍⚕️",
+     "cloze": {
+      "de": "Die ___ arbeitet im Krankenhaus.",
+      "a": "Krankenschwester",
+      "d": [
+       "Postleitzahl",
+       "Bratwurst"
+      ],
+      "ku": "پەرستار ل نەخۆشخانێ کار دکەت."
+     }
     },
     {
      "id": "a8_08",
@@ -4331,7 +5267,16 @@
      "deHint": "دی بەڤێربونگ",
      "en": "the application",
      "enHint": "ذی ئاپلیکەیشن",
-     "emoji": "🧾"
+     "emoji": "🧾",
+     "cloze": {
+      "de": "Ich schreibe eine ___ für die Stelle.",
+      "a": "Bewerbung",
+      "d": [
+       "Banane",
+       "Brücke"
+      ],
+      "ku": "ئەز داخوازیەکا کاری بۆ وی جهی دنڤیسم."
+     }
     },
     {
      "id": "a8_16",
@@ -4341,7 +5286,16 @@
      "deHint": "داس پراکتیکوم",
      "en": "the internship",
      "enHint": "ذی ئینتێرنشیپ",
-     "emoji": "🎓"
+     "emoji": "🎓",
+     "cloze": {
+      "de": "Ich mache ein ___ in einer Firma.",
+      "a": "Praktikum",
+      "d": [
+       "Pferd",
+       "Ei"
+      ],
+      "ku": "ئەز د کۆمپانیەکێ دا پراکتیکێ دکەم."
+     }
     }
    ],
    "grammar": {
@@ -4473,7 +5427,16 @@
      "deHint": "داس ئامت",
      "en": "the office (public)",
      "enHint": "ذی ئۆفیس",
-     "emoji": "🏛️"
+     "emoji": "🏛️",
+     "cloze": {
+      "de": "Ich muss heute zum ___.",
+      "a": "Amt",
+      "d": [
+       "Ei",
+       "Bett"
+      ],
+      "ku": "پێدڤییە ئەز ئەڤرۆ بچمە فەرمانگەهێ."
+     }
     },
     {
      "id": "a9_02",
@@ -4483,7 +5446,16 @@
      "deHint": "دێر ئانتراگ",
      "en": "the application form",
      "enHint": "ذە فۆرم",
-     "emoji": "📄"
+     "emoji": "📄",
+     "cloze": {
+      "de": "Bitte füllen Sie den ___ aus.",
+      "a": "Antrag",
+      "d": [
+       "Apfel",
+       "Tee"
+      ],
+      "ku": "هیڤییە داخوازنامێ پڕ بکە."
+     }
     },
     {
      "id": "a9_03",
@@ -4493,7 +5465,16 @@
      "deHint": "دێر پاس",
      "en": "the passport",
      "enHint": "ذە پاسپۆرت",
-     "emoji": "🛂"
+     "emoji": "🛂",
+     "cloze": {
+      "de": "Ihren ___, bitte!",
+      "a": "Pass",
+      "d": [
+       "Saft",
+       "Fisch"
+      ],
+      "ku": "پاسپۆرتا خۆ، هیڤییە!"
+     }
     },
     {
      "id": "a9_04",
@@ -4503,7 +5484,16 @@
      "deHint": "دێر ئاوسڤایس",
      "en": "the ID card",
      "enHint": "ذی ئای دی کارد",
-     "emoji": "🪪"
+     "emoji": "🪪",
+     "cloze": {
+      "de": "Ich habe meinen ___ vergessen.",
+      "a": "Ausweis",
+      "d": [
+       "Kaffee",
+       "Käse"
+      ],
+      "ku": "من ناسناما خۆ ژ بیر کر."
+     }
     },
     {
      "id": "a9_05",
@@ -4711,7 +5701,16 @@
      "deHint": "داس هۆتێل",
      "en": "the hotel",
      "enHint": "ذە هۆتێل",
-     "emoji": "🏨"
+     "emoji": "🏨",
+     "cloze": {
+      "de": "Das ___ hat 50 Zimmer.",
+      "a": "Hotel",
+      "d": [
+       "Ei",
+       "Brot"
+      ],
+      "ku": "هۆتێل ٥٠ ژوور هەنە."
+     }
     },
     {
      "id": "a9_18",
@@ -4721,7 +5720,16 @@
      "deHint": "دی رێتسێپتسیۆن",
      "en": "the reception",
      "enHint": "ذە ریسێپشن",
-     "emoji": "🛎️"
+     "emoji": "🛎️",
+     "cloze": {
+      "de": "Der Schlüssel ist an der ___.",
+      "a": "Rezeption",
+      "d": [
+       "Banane",
+       "Hose"
+      ],
+      "ku": "کلیل ل پێشوازیێ یە."
+     }
     },
     {
      "id": "a9_19",
@@ -4741,7 +5749,16 @@
      "deHint": "دێر شلووسل",
      "en": "the key",
      "enHint": "ذە کی",
-     "emoji": "🗝️"
+     "emoji": "🗝️",
+     "cloze": {
+      "de": "Wo ist mein ___?",
+      "a": "Schlüssel",
+      "d": [
+       "Kaffee",
+       "Tee"
+      ],
+      "ku": "کلیلا من ل کیرێ یە؟"
+     }
     },
     {
      "id": "a9_21",
@@ -4812,7 +5829,16 @@
      "deHint": "دێر کۆپف",
      "en": "the head",
      "enHint": "ذە هێد",
-     "emoji": "🧠"
+     "emoji": "🧠",
+     "cloze": {
+      "de": "Mein ___ tut weh.",
+      "a": "Kopf",
+      "d": [
+       "Stuhl",
+       "Bus"
+      ],
+      "ku": "سەرێ من دئێشیت."
+     }
     },
     {
      "id": "a10_02",
@@ -4822,7 +5848,16 @@
      "deHint": "داس ئاوگە (کۆ: die Augen)",
      "en": "the eye",
      "enHint": "ذی ئای",
-     "emoji": "👁️"
+     "emoji": "👁️",
+     "cloze": {
+      "de": "Mein linkes ___ tut weh.",
+      "a": "Auge",
+      "d": [
+       "Brot",
+       "Hotel"
+      ],
+      "ku": "چاڤێ من یێ چەپێ دئێشیت."
+     }
     },
     {
      "id": "a10_03",
@@ -4832,7 +5867,16 @@
      "deHint": "داس ئۆر",
      "en": "the ear",
      "enHint": "ذی ئیر",
-     "emoji": "👂"
+     "emoji": "👂",
+     "cloze": {
+      "de": "Ich höre mit dem ___.",
+      "a": "Ohr",
+      "d": [
+       "Bett",
+       "Bad"
+      ],
+      "ku": "ئەز ب گوهی گوهداریێ دکەم."
+     }
     },
     {
      "id": "a10_04",
@@ -4842,7 +5886,16 @@
      "deHint": "دی نازە",
      "en": "the nose",
      "enHint": "ذە نۆز",
-     "emoji": "👃"
+     "emoji": "👃",
+     "cloze": {
+      "de": "Ich rieche mit der ___.",
+      "a": "Nase",
+      "d": [
+       "Lampe",
+       "Küche"
+      ],
+      "ku": "ئەز ب دفنێ بێهنێ دکەم."
+     }
     },
     {
      "id": "a10_05",
@@ -4852,7 +5905,16 @@
      "deHint": "دێر تسان (کۆ: die Zähne)",
      "en": "the tooth",
      "enHint": "ذە تووس",
-     "emoji": "🦷"
+     "emoji": "🦷",
+     "cloze": {
+      "de": "Ich gehe zum Zahnarzt. Mein ___ tut weh.",
+      "a": "Zahn",
+      "d": [
+       "Stuhl",
+       "Saft"
+      ],
+      "ku": "ئەز دچمە نک دختۆرێ ددانان. ددانێ من دئێشیت."
+     }
     },
     {
      "id": "a10_06",
@@ -4862,7 +5924,16 @@
      "deHint": "دی هاند",
      "en": "the hand",
      "enHint": "ذە هاند",
-     "emoji": "✋"
+     "emoji": "✋",
+     "cloze": {
+      "de": "Ich schreibe mit der rechten ___.",
+      "a": "Hand",
+      "d": [
+       "Nase",
+       "Milch"
+      ],
+      "ku": "ئەز ب دەستێ راستێ دنڤیسم."
+     }
     },
     {
      "id": "a10_07",
@@ -4872,7 +5943,16 @@
      "deHint": "داس باین",
      "en": "the leg",
      "enHint": "ذە لێگ",
-     "emoji": "🦵"
+     "emoji": "🦵",
+     "cloze": {
+      "de": "Er hat ein gebrochenes ___.",
+      "a": "Bein",
+      "d": [
+       "Brot",
+       "Buch"
+      ],
+      "ku": "پێیێ وی شکەستییە."
+     }
     },
     {
      "id": "a10_08",
@@ -4882,7 +5962,16 @@
      "deHint": "دێر باوخ",
      "en": "the belly",
      "enHint": "ذە بێلی",
-     "emoji": "🫃"
+     "emoji": "🫃",
+     "cloze": {
+      "de": "Ich habe ___schmerzen.",
+      "a": "Bauch",
+      "d": [
+       "Kaffee",
+       "Balkon"
+      ],
+      "ku": "زکێ من دئێشیت."
+     }
     }
    ],
    "grammar": {
@@ -4943,7 +6032,16 @@
      "deHint": "دێر هوستن",
      "en": "the cough",
      "enHint": "ذە کۆف",
-     "emoji": "😷"
+     "emoji": "😷",
+     "cloze": {
+      "de": "Ich habe ___ und Fieber.",
+      "a": "Husten",
+      "d": [
+       "Balkon",
+       "Pass"
+      ],
+      "ku": "کۆخک و تا یا من هەیە."
+     }
     },
     {
      "id": "a10_13",
@@ -5063,7 +6161,16 @@
      "deHint": "دی فێرزیشەرونگس کارتە",
      "en": "the insurance card",
      "enHint": "ذی ئینشورەنس کارد",
-     "emoji": "💳"
+     "emoji": "💳",
+     "cloze": {
+      "de": "Haben Sie Ihre ___ dabei?",
+      "a": "Versicherungskarte",
+      "d": [
+       "Bratwurst",
+       "Straßenbahn"
+      ],
+      "ku": "کارتا تە یا بیمەیێ دگەل تە یە؟"
+     }
     },
     {
      "id": "a10_23",
@@ -5073,7 +6180,16 @@
      "deHint": "دی پراکسیس",
      "en": "the doctor's office",
      "enHint": "ذە پراکتیس",
-     "emoji": "🏥"
+     "emoji": "🏥",
+     "cloze": {
+      "de": "Die ___ ist am Mittwoch geschlossen.",
+      "a": "Praxis",
+      "d": [
+       "Banane",
+       "Socke"
+      ],
+      "ku": "کلینیک چارشەمبێ گرتییە."
+     }
     },
     {
      "id": "a10_24",
@@ -5113,7 +6229,16 @@
      "deHint": "لینکس",
      "en": "left",
      "enHint": "لێفت",
-     "emoji": "⬅️"
+     "emoji": "⬅️",
+     "cloze": {
+      "de": "Gehen Sie hier nach ___.",
+      "a": "links",
+      "d": [
+       "teuer",
+       "jung"
+      ],
+      "ku": "ل ڤێرێ بچە بۆ لایێ چەپێ."
+     }
     },
     {
      "id": "a11_02",
@@ -5123,7 +6248,16 @@
      "deHint": "رێشتس",
      "en": "right",
      "enHint": "رایت",
-     "emoji": "➡️"
+     "emoji": "➡️",
+     "cloze": {
+      "de": "Die Bank ist ___ neben der Post.",
+      "a": "rechts",
+      "d": [
+       "billig",
+       "alt"
+      ],
+      "ku": "بانک ل لایێ راستێ ل تەنشت پۆستێ یە."
+     }
     },
     {
      "id": "a11_03",
@@ -5133,7 +6267,16 @@
      "deHint": "گەراد ئاوس",
      "en": "straight ahead",
      "enHint": "سترەیت ئەهێد",
-     "emoji": "⬆️"
+     "emoji": "⬆️",
+     "cloze": {
+      "de": "Gehen Sie immer ___.",
+      "a": "geradeaus",
+      "d": [
+       "teuer",
+       "klein"
+      ],
+      "ku": "هەردەم راستەوخۆ بچە."
+     }
     },
     {
      "id": "a11_04",
@@ -5214,7 +6357,16 @@
      "deHint": "دێر بوس",
      "en": "the bus",
      "enHint": "ذە بەس",
-     "emoji": "🚌"
+     "emoji": "🚌",
+     "cloze": {
+      "de": "Ich fahre mit dem ___ zur Arbeit.",
+      "a": "Bus",
+      "d": [
+       "Kaffee",
+       "Kopf"
+      ],
+      "ku": "ئەز ب پاسێ دچمە سەر کاری."
+     }
     },
     {
      "id": "a11_10",
@@ -5224,7 +6376,16 @@
      "deHint": "دێر تسووگ",
      "en": "the train",
      "enHint": "ذە ترەین",
-     "emoji": "🚆"
+     "emoji": "🚆",
+     "cloze": {
+      "de": "Der ___ nach Berlin fährt um 10 Uhr.",
+      "a": "Zug",
+      "d": [
+       "Tee",
+       "Saft"
+      ],
+      "ku": "شەمەندەفەرا بەرلینێ دەمژمێر ١٠ دچیت."
+     }
     },
     {
      "id": "a11_11",
@@ -5234,7 +6395,16 @@
      "deHint": "دی شتراسن بان",
      "en": "the tram",
      "enHint": "ذە ترام",
-     "emoji": "🚊"
+     "emoji": "🚊",
+     "cloze": {
+      "de": "Ich nehme die ___ Linie 3.",
+      "a": "Straßenbahn",
+      "d": [
+       "Kartoffel",
+       "Rechnung"
+      ],
+      "ku": "ئەز ترامێ ژمارە ٣ ب کار دئینم."
+     }
     },
     {
      "id": "a11_12",
@@ -5244,7 +6414,16 @@
      "deHint": "دی ئوو بان",
      "en": "the underground",
      "enHint": "ذە ئەندەرگراوند",
-     "emoji": "🚇"
+     "emoji": "🚇",
+     "cloze": {
+      "de": "Die ___ ist schnell.",
+      "a": "U-Bahn",
+      "d": [
+       "Milch",
+       "Hose"
+      ],
+      "ku": "مێترۆ ب لەزە."
+     }
     },
     {
      "id": "a11_13",
@@ -5254,7 +6433,16 @@
      "deHint": "داس تاکسی",
      "en": "the taxi",
      "enHint": "ذە تاکسی",
-     "emoji": "🚕"
+     "emoji": "🚕",
+     "cloze": {
+      "de": "Wir nehmen ein ___ zum Flughafen.",
+      "a": "Taxi",
+      "d": [
+       "Ei",
+       "Bett"
+      ],
+      "ku": "ئەم تاکسیەکێ بۆ فرۆکەخانێ دگرین."
+     }
     },
     {
      "id": "a11_14",
@@ -5264,7 +6452,16 @@
      "deHint": "داس فلووگ تسۆیگ",
      "en": "the plane",
      "enHint": "ذە پلەین",
-     "emoji": "✈️"
+     "emoji": "✈️",
+     "cloze": {
+      "de": "Das ___ fliegt nach Erbil.",
+      "a": "Flugzeug",
+      "d": [
+       "Brot",
+       "Bad"
+      ],
+      "ku": "فرۆکە بۆ هەولێرێ دفڕیت."
+     }
     },
     {
      "id": "a11_15",
@@ -5336,7 +6533,16 @@
      "deHint": "دی بانک",
      "en": "the bank",
      "enHint": "ذە بانک",
-     "emoji": "🏦"
+     "emoji": "🏦",
+     "cloze": {
+      "de": "Ich hole Geld von der ___.",
+      "a": "Bank",
+      "d": [
+       "Nase",
+       "Jacke"
+      ],
+      "ku": "ئەز پارەی ژ بانکێ دئینم."
+     }
     },
     {
      "id": "a11_18",
@@ -5346,7 +6552,16 @@
      "deHint": "دی ئاپۆتێکە",
      "en": "the pharmacy",
      "enHint": "ذە فارمەسی",
-     "emoji": "💊"
+     "emoji": "💊",
+     "cloze": {
+      "de": "Medikamente kauft man in der ___.",
+      "a": "Apotheke",
+      "d": [
+       "Küche",
+       "Brücke"
+      ],
+      "ku": "دەرمان ل دەرمانخانێ دهێنە کڕین."
+     }
     },
     {
      "id": "a11_19",
@@ -5356,7 +6571,16 @@
      "deHint": "دی پۆست",
      "en": "the post office",
      "enHint": "ذە پۆست ئۆفیس",
-     "emoji": "📮"
+     "emoji": "📮",
+     "cloze": {
+      "de": "Ich bringe den Brief zur ___.",
+      "a": "Post",
+      "d": [
+       "Milch",
+       "Hand"
+      ],
+      "ku": "ئەز نامێ دبەمە پۆستێ."
+     }
     },
     {
      "id": "a11_20",
@@ -5366,7 +6590,16 @@
      "deHint": "دی بێکەرای",
      "en": "the bakery",
      "enHint": "ذە بەیکەری",
-     "emoji": "🥖"
+     "emoji": "🥖",
+     "cloze": {
+      "de": "Brot kaufe ich in der ___.",
+      "a": "Bäckerei",
+      "d": [
+       "Apotheke",
+       "Rezeption"
+      ],
+      "ku": "ئەز نانی ل نانەواخانێ دکڕم."
+     }
     },
     {
      "id": "a11_21",
@@ -5376,7 +6609,16 @@
      "deHint": "دێر زوپەر مارکت",
      "en": "the supermarket",
      "enHint": "ذە سوپەرمارکێت",
-     "emoji": "🏪"
+     "emoji": "🏪",
+     "cloze": {
+      "de": "Ich kaufe Milch im ___.",
+      "a": "Supermarkt",
+      "d": [
+       "Kühlschrank",
+       "Pullover"
+      ],
+      "ku": "ئەز شیری ل سووپەرمارکێتێ دکڕم."
+     }
     },
     {
      "id": "a11_22",
@@ -5386,7 +6628,16 @@
      "deHint": "دی تانک شتێلە",
      "en": "the petrol station",
      "enHint": "ذە پێترۆل ستەیشن",
-     "emoji": "⛽"
+     "emoji": "⛽",
+     "cloze": {
+      "de": "Das Auto braucht Benzin. Wir fahren zur ___.",
+      "a": "Tankstelle",
+      "d": [
+       "Bäckerei",
+       "Hochzeit"
+      ],
+      "ku": "ترۆمبێل بەنزینێ دڤێت. ئەم دچینە بەنزینخانێ."
+     }
     },
     {
      "id": "a11_23",
@@ -5568,7 +6819,16 @@
      "deHint": "دی رێپاراتوور",
      "en": "the repair",
      "enHint": "ذە ریپێر",
-     "emoji": "🛠️"
+     "emoji": "🛠️",
+     "cloze": {
+      "de": "Die ___ kostet 50 Euro.",
+      "a": "Reparatur",
+      "d": [
+       "Banane",
+       "Socke"
+      ],
+      "ku": "چاککرن ٥٠ یۆرۆیە."
+     }
     },
     {
      "id": "a12_13",
@@ -5639,7 +6899,16 @@
      "deHint": "دی رێشنونگ",
      "en": "the bill",
      "enHint": "ذە بیل",
-     "emoji": "🧾"
+     "emoji": "🧾",
+     "cloze": {
+      "de": "Die ___, bitte!",
+      "a": "Rechnung",
+      "d": [
+       "Tomate",
+       "Nase"
+      ],
+      "ku": "حسێب، هیڤییە!"
+     }
     },
     {
      "id": "a12_18",
@@ -5649,7 +6918,16 @@
      "deHint": "ئوم تاوشن",
      "en": "to exchange",
      "enHint": "تو ئیکسچەینج",
-     "emoji": "🔁"
+     "emoji": "🔁",
+     "cloze": {
+      "de": "Ich möchte die Hose ___.",
+      "a": "umtauschen",
+      "d": [
+       "schwimmen",
+       "schlafen"
+      ],
+      "ku": "من دڤێت پانتۆلی بگوهۆڕم."
+     }
     },
     {
      "id": "a12_19",
@@ -5659,7 +6937,16 @@
      "deHint": "دی راینیگونگ",
      "en": "the dry cleaner's",
      "enHint": "ذە درای کلینەرز",
-     "emoji": "🧼"
+     "emoji": "🧼",
+     "cloze": {
+      "de": "Ich bringe das Hemd zur ___.",
+      "a": "Reinigung",
+      "d": [
+       "Banane",
+       "Prüfung"
+      ],
+      "ku": "ئەز کراسی دبەمە جلشۆرخانێ."
+     }
     },
     {
      "id": "a12_20",
@@ -5739,7 +7026,16 @@
      "deHint": "داس تی شێرت",
      "en": "the T-shirt",
      "enHint": "ذە تی شێرت",
-     "emoji": "👕"
+     "emoji": "👕",
+     "cloze": {
+      "de": "Das ___ ist zu klein.",
+      "a": "T-Shirt",
+      "d": [
+       "Brot",
+       "Ei"
+      ],
+      "ku": "تیشێرت گەلەک بچووکە."
+     }
     },
     {
      "id": "a13_02",
@@ -5749,7 +7045,16 @@
      "deHint": "دی هۆزە",
      "en": "the trousers",
      "enHint": "ذە تراوزەرز",
-     "emoji": "👖"
+     "emoji": "👖",
+     "cloze": {
+      "de": "Die ___ ist zu lang.",
+      "a": "Hose",
+      "d": [
+       "Milch",
+       "Post"
+      ],
+      "ku": "پانتۆل گەلەک درێژە."
+     }
     },
     {
      "id": "a13_03",
@@ -5759,7 +7064,16 @@
      "deHint": "داس کلایت",
      "en": "the dress",
      "enHint": "ذە درێس",
-     "emoji": "👗"
+     "emoji": "👗",
+     "cloze": {
+      "de": "Sie trägt ein rotes ___.",
+      "a": "Kleid",
+      "d": [
+       "Ohr",
+       "Taxi"
+      ],
+      "ku": "وێ فستانەکا سۆر ل بەرە."
+     }
     },
     {
      "id": "a13_04",
@@ -5769,7 +7083,16 @@
      "deHint": "دی یاکە",
      "en": "the jacket",
      "enHint": "ذە جاکێت",
-     "emoji": "🧥"
+     "emoji": "🧥",
+     "cloze": {
+      "de": "Es ist kalt. Nimm eine ___ mit!",
+      "a": "Jacke",
+      "d": [
+       "Banane",
+       "Rechnung"
+      ],
+      "ku": "سارە. جاکێتەکێ دگەل خۆ ببە!"
+     }
     },
     {
      "id": "a13_05",
@@ -5779,7 +7102,16 @@
      "deHint": "داس هێمت",
      "en": "the shirt",
      "enHint": "ذە شێرت",
-     "emoji": "👔"
+     "emoji": "👔",
+     "cloze": {
+      "de": "Er trägt ein weißes ___.",
+      "a": "Hemd",
+      "d": [
+       "Ei",
+       "Bein"
+      ],
+      "ku": "وی کراسەکێ سپی ل بەرە."
+     }
     },
     {
      "id": "a13_06",
@@ -5789,7 +7121,16 @@
      "deHint": "دێر پولۆڤەر",
      "en": "the pullover",
      "enHint": "ذە پولۆڤەر",
-     "emoji": "🧶"
+     "emoji": "🧶",
+     "cloze": {
+      "de": "Im Winter trage ich einen ___.",
+      "a": "Pullover",
+      "d": [
+       "Kühlschrank",
+       "Husten"
+      ],
+      "ku": "زستانێ ئەز بلووزەکێ ل بەر دکەم."
+     }
     },
     {
      "id": "a13_07",
@@ -5799,7 +7140,16 @@
      "deHint": "دی شووە",
      "en": "the shoes",
      "enHint": "ذە شووز",
-     "emoji": "👟"
+     "emoji": "👟",
+     "cloze": {
+      "de": "Die ___ sind neu.",
+      "a": "Schuhe",
+      "d": [
+       "Eltern",
+       "Geschwister"
+      ],
+      "ku": "پێلاڤ نوونە."
+     }
     },
     {
      "id": "a13_08",
@@ -5809,7 +7159,16 @@
      "deHint": "دی زۆکن",
      "en": "the socks",
      "enHint": "ذە سۆکس",
-     "emoji": "🧦"
+     "emoji": "🧦",
+     "cloze": {
+      "de": "Ich brauche neue ___.",
+      "a": "Socken",
+      "d": [
+       "Eltern",
+       "Geschwister"
+      ],
+      "ku": "من گۆرەیێن نوو دڤێن."
+     }
     }
    ],
    "grammar": {
@@ -5981,7 +7340,16 @@
      "deHint": "دێر بێرگ",
      "en": "the mountain",
      "enHint": "ذە ماونتن",
-     "emoji": "⛰️"
+     "emoji": "⛰️",
+     "cloze": {
+      "de": "Der ___ ist sehr hoch.",
+      "a": "Berg",
+      "d": [
+       "Tee",
+       "Pass"
+      ],
+      "ku": "چیا گەلەک بلندە."
+     }
     },
     {
      "id": "a13_22",
@@ -5991,7 +7359,16 @@
      "deHint": "داس دۆرف",
      "en": "the village",
      "enHint": "ذە ڤیلیج",
-     "emoji": "🏘️"
+     "emoji": "🏘️",
+     "cloze": {
+      "de": "Mein Opa wohnt in einem ___.",
+      "a": "Dorf",
+      "d": [
+       "Ei",
+       "Ohr"
+      ],
+      "ku": "باپیرێ من د گوندەکی دا دژیت."
+     }
     },
     {
      "id": "a13_23",
@@ -6001,7 +7378,16 @@
      "deHint": "داس مێر",
      "en": "the sea",
      "enHint": "ذە سی",
-     "emoji": "🌊"
+     "emoji": "🌊",
+     "cloze": {
+      "de": "Im Sommer fahren wir ans ___.",
+      "a": "Meer",
+      "d": [
+       "Bett",
+       "Buch"
+      ],
+      "ku": "هاڤینێ ئەم دچینە دەریایێ."
+     }
     },
     {
      "id": "a13_24",
@@ -6041,7 +7427,16 @@
      "deHint": "دێر یانوار",
      "en": "January",
      "enHint": "جانیوەری",
-     "emoji": "❄️"
+     "emoji": "❄️",
+     "cloze": {
+      "de": "Der ___ ist der erste Monat.",
+      "a": "Januar",
+      "d": [
+       "Montag",
+       "Abend"
+      ],
+      "ku": "کانوونا دووێ ئێکەم هەیڤە."
+     }
     },
     {
      "id": "a14_02",
@@ -6051,7 +7446,16 @@
      "deHint": "دێر ئاپریل",
      "en": "April",
      "enHint": "ئەیپریل",
-     "emoji": "🌸"
+     "emoji": "🌸",
+     "cloze": {
+      "de": "Nach März kommt ___.",
+      "a": "April",
+      "d": [
+       "Montag",
+       "Oktober"
+      ],
+      "ku": "پشتی ئادارێ نیسان دهێت."
+     }
     },
     {
      "id": "a14_03",
@@ -6061,7 +7465,16 @@
      "deHint": "دێر یولی",
      "en": "July",
      "enHint": "جولای",
-     "emoji": "☀️"
+     "emoji": "☀️",
+     "cloze": {
+      "de": "Im ___ ist es sehr heiß.",
+      "a": "Juli",
+      "d": [
+       "Januar",
+       "Dezember"
+      ],
+      "ku": "د تیرمەهێ دا گەلەک گەرمە."
+     }
     },
     {
      "id": "a14_04",
@@ -6071,7 +7484,16 @@
      "deHint": "دێر ئۆکتۆبەر",
      "en": "October",
      "enHint": "ئۆکتۆبەر",
-     "emoji": "🍂"
+     "emoji": "🍂",
+     "cloze": {
+      "de": "Nach September kommt ___.",
+      "a": "Oktober",
+      "d": [
+       "April",
+       "Juli"
+      ],
+      "ku": "پشتی ئەیلوولێ چریا ئێکێ دهێت."
+     }
     },
     {
      "id": "a14_05",
@@ -6081,7 +7503,16 @@
      "deHint": "دێر دێتسێمبەر",
      "en": "December",
      "enHint": "دیسێمبەر",
-     "emoji": "🎄"
+     "emoji": "🎄",
+     "cloze": {
+      "de": "Der ___ ist der letzte Monat.",
+      "a": "Dezember",
+      "d": [
+       "Januar",
+       "April"
+      ],
+      "ku": "کانوونا ئێکێ دویماهیک هەیڤە."
+     }
     },
     {
      "id": "a14_06",
@@ -6162,7 +7593,16 @@
      "deHint": "داس گەشێنک",
      "en": "the present",
      "enHint": "ذە پرێزەنت",
-     "emoji": "🎁"
+     "emoji": "🎁",
+     "cloze": {
+      "de": "Das ___ ist für dich.",
+      "a": "Geschenk",
+      "d": [
+       "Ohr",
+       "Amt"
+      ],
+      "ku": "ئەڤ دیاریە بۆ تە یە."
+     }
     },
     {
      "id": "a14_12",
@@ -6192,7 +7632,16 @@
      "deHint": "دی هۆخ تسایت",
      "en": "the wedding",
      "enHint": "ذە وێدینگ",
-     "emoji": "💒"
+     "emoji": "💒",
+     "cloze": {
+      "de": "Die ___ ist am Samstag.",
+      "a": "Hochzeit",
+      "d": [
+       "Nase",
+       "Tomate"
+      ],
+      "ku": "داوەت شەمبیێ یە."
+     }
     },
     {
      "id": "a14_15",
@@ -6202,7 +7651,16 @@
      "deHint": "دی ئاین لادونگ",
      "en": "the invitation",
      "enHint": "ذی ئینڤیتەیشن",
-     "emoji": "✉️"
+     "emoji": "✉️",
+     "cloze": {
+      "de": "Danke für die ___!",
+      "a": "Einladung",
+      "d": [
+       "Banane",
+       "Rechnung"
+      ],
+      "ku": "سوپاس بۆ بانگهێشتنێ!"
+     }
     },
     {
      "id": "a14_16",

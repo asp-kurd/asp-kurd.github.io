@@ -11,7 +11,10 @@ import 'screens/mascot_demo.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
+import 'services/theme_service.dart';
 import 'services/voice_service.dart';
+import 'screens/lesson_screen.dart';
+import 'screens/summary_screen.dart';
 import 'ui.dart';
 
 Future<void> main() async {
@@ -24,35 +27,66 @@ Future<void> main() async {
   await ProgressService.instance.init();
   await VoiceService.instance.init();
   await CloneService.instance.load();
+  await ThemeController.instance.load();
+  if (Uri.base.queryParameters['demo'] != null) await A1Summary.load();
+  // ?theme=light|dark — بۆ تاقیکرنێ
+  final qt = Uri.base.queryParameters['theme'];
+  if (qt == 'light' || qt == 'dark') AppColors.dark = qt == 'dark';
   runApp(const ZimanProApp());
+  ThemeController.instance.markStarted();
 }
 
 class ZimanProApp extends StatelessWidget {
   const ZimanProApp({super.key});
 
+  static ThemeData _theme() {
+    final dark = AppColors.dark;
+    final scheme = ColorScheme.fromSeed(seedColor: AppColors.blue, brightness: dark ? Brightness.dark : Brightness.light);
+    return ThemeData(
+      useMaterial3: true,
+      brightness: dark ? Brightness.dark : Brightness.light,
+      // لاتینی/ئەلمانی ب League Gothic؛ هەر پیتەکا کوردی/عەرەبی ب Shasenem
+      fontFamily: 'LeagueGothic',
+      fontFamilyFallback: const ['Shasenem', 'Sarchia'],
+      colorScheme: scheme.copyWith(surface: AppColors.bg, onSurface: AppColors.fg),
+      scaffoldBackgroundColor: AppColors.bg,
+      cardColor: AppColors.card,
+      dividerColor: AppColors.fg12,
+      appBarTheme: AppBarTheme(backgroundColor: AppColors.bg, foregroundColor: AppColors.fg, elevation: 0, scrolledUnderElevation: 0),
+      navigationBarTheme: NavigationBarThemeData(backgroundColor: AppColors.card),
+      dialogTheme: DialogThemeData(backgroundColor: AppColors.card),
+      bottomSheetTheme: BottomSheetThemeData(backgroundColor: AppColors.bg),
+    );
+  }
+
+  static Widget? _demo() {
+    final d = Uri.base.queryParameters['demo'];
+    if (d == null) return null;
+    return switch (d) {
+      'mascot' => const MascotDemo(),
+      'home' => const HomeScreen(),
+      'summary' => const SummaryListScreen(),
+      'card' => const SummaryCardScreen(start: 9),
+      'lesson' => InteractiveLessonScreen(unit: appCurriculum[10], concepts: appCurriculum[10].concepts),
+      _ => null,
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ListenableBuilder(
+      listenable: ThemeController.instance,
+      builder: (context, _) => MaterialApp(
       title: 'ASP',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        // لاتینی/ئەلمانی ب League Gothic؛ هەر پیتەکا کوردی/عەرەبی ب Shasenem
-        fontFamily: 'LeagueGothic',
-        fontFamilyFallback: const ['Shasenem', 'Sarchia'],
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.blue, brightness: Brightness.dark),
-        scaffoldBackgroundColor: AppColors.bg,
-        appBarTheme: const AppBarTheme(backgroundColor: AppColors.bg, elevation: 0),
-      ),
-      home: Uri.base.queryParameters['demo'] == 'mascot'
-          ? const MascotDemo()
-          : !ProgressService.instance.onboarded
+      theme: _theme(),
+      home: _demo() ?? (!ProgressService.instance.onboarded
           ? const LanguageOnboardingScreen()
           : (Backend.instance.enabled && !Backend.instance.registered && !Backend.instance.isAdmin)
               ? const RegisterScreen(next: HomeScreen())
               : SetupScreen.needed()
                   ? const SetupScreen(next: HomeScreen())
-                  : const HomeScreen(),
+                  : const HomeScreen())),
     );
   }
 }

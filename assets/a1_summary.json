@@ -1,0 +1,1781 @@
+{
+ "version": 1,
+ "title": "A1 mit Poya",
+ "subtitle": "پوختەیێن رێزمانێ یێن A1 — کورت، باوەڕپێکری، ب شیکرنا رستان",
+ "legend": {
+  "S": [
+   "بکەر",
+   "Subjekt",
+   "#1CB0F6"
+  ],
+  "V": [
+   "کار",
+   "Verb",
+   "#FF4B4B"
+  ],
+  "V2": [
+   "دووماهیا کاری",
+   "Verb (Ende)",
+   "#FF4B4B"
+  ],
+  "O": [
+   "بەرکار (Akk.)",
+   "Objekt",
+   "#58CC02"
+  ],
+  "D": [
+   "بەرکار (Dativ)",
+   "Dativ",
+   "#00C2A8"
+  ],
+  "T": [
+   "دەم",
+   "Zeit",
+   "#FFC800"
+  ],
+  "L": [
+   "جه",
+   "Ort",
+   "#CE82FF"
+  ],
+  "W": [
+   "پرسیار",
+   "W-Wort",
+   "#FF9600"
+  ],
+  "N": [
+   "نەرێ",
+   "Negation",
+   "#FF4B91"
+  ],
+  "K": [
+   "گرێدەک",
+   "Konnektor",
+   "#8E9AA0"
+  ],
+  "A": [
+   "تەمامکەر",
+   "Ergänzung",
+   "#A0B4BE"
+  ]
+ },
+ "cards": [
+  {
+   "id": "satzbau",
+   "emoji": "🧱",
+   "color": "#1CB0F6",
+   "title": "رێزبەندیا رستێ: کار ل جهێ دووێ",
+   "de": "Satzbau – Verb auf Position 2",
+   "rules": [
+    "د رستا ئاسایی دا **کار هەردەم ل جهێ دووێ یە**.",
+    "جهێ ئێکێ دشێت بکەر بیت، یان دەم، یان جه. ئەگەر دەم ل پێشیێ بیت، **بکەر دچیتە پشتی کاری**.",
+    "رێزبەندیا ناڤەڕاستێ ب گشتی: **دەم ➔ چاوا ➔ جه** (Te-Ka-Mo-Lo)."
+   ],
+   "table": {
+    "head": [
+     "جهـ ١",
+     "جهـ ٢ (کار)",
+     "پاشماوە"
+    ],
+    "rows": [
+     [
+      "Ich",
+      "lerne",
+      "heute Deutsch."
+     ],
+     [
+      "Heute",
+      "lerne",
+      "ich Deutsch."
+     ],
+     [
+      "In Duhok",
+      "wohnt",
+      "meine Familie."
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich lerne heute Deutsch.",
+     "ku": "ئەز ئەڤرۆ ئەلمانی فێر دبم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "lerne",
+       "V"
+      ],
+      [
+       "heute",
+       "T"
+      ],
+      [
+       "Deutsch",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Heute lerne ich Deutsch.",
+     "ku": "ئەڤرۆ ئەز ئەلمانی فێر دبم.",
+     "parts": [
+      [
+       "Heute",
+       "T"
+      ],
+      [
+       "lerne",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "Deutsch",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Am Montag fahre ich mit dem Bus zur Arbeit.",
+     "ku": "دووشەمبێ ئەز ب پاسێ دچمە سەر کاری.",
+     "parts": [
+      [
+       "Am Montag",
+       "T"
+      ],
+      [
+       "fahre",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "mit dem Bus",
+       "A"
+      ],
+      [
+       "zur Arbeit",
+       "L"
+      ]
+     ]
+    }
+   ],
+   "tip": "خەلەتیا مەزن: «Heute ich lerne» ❌ — کار دڤێت ل جهێ دووێ بیت: «Heute lerne ich» ✅"
+  },
+  {
+   "id": "fragen",
+   "emoji": "❓",
+   "color": "#CE82FF",
+   "title": "پرسیار: W-Fragen و پرسیارێن بەلێ/نە",
+   "de": "W-Fragen und Ja/Nein-Fragen",
+   "rules": [
+    "**پرسیارا W:** پەیڤا پرسیارێ ل جهێ ١، **کار ل جهێ ٢**، پاشان بکەر.",
+    "**پرسیارا بەلێ/نە:** **کار ل جهێ ئێکێ** دهێت، پاشان بکەر.",
+    "بەرسڤا پرسیارێن نەرێ ب **Doch** دهێتە دان (نە ب Ja): Kommst du nicht? – Doch!"
+   ],
+   "table": {
+    "head": [
+     "پەیڤ",
+     "رامان",
+     "نموونە"
+    ],
+    "rows": [
+     [
+      "Wer?",
+      "کێ؟",
+      "Wer ist das?"
+     ],
+     [
+      "Was?",
+      "چ؟",
+      "Was machst du?"
+     ],
+     [
+      "Wo?",
+      "ل کیرێ؟",
+      "Wo wohnst du?"
+     ],
+     [
+      "Woher?",
+      "ژ کیرێ؟",
+      "Woher kommst du?"
+     ],
+     [
+      "Wohin?",
+      "بۆ کیرێ؟",
+      "Wohin gehst du?"
+     ],
+     [
+      "Wann?",
+      "کەنگی؟",
+      "Wann beginnt der Kurs?"
+     ],
+     [
+      "Wie?",
+      "چاوا؟",
+      "Wie heißt du?"
+     ],
+     [
+      "Wie viel?",
+      "چەند؟",
+      "Wie viel kostet das?"
+     ],
+     [
+      "Warum?",
+      "بۆچی؟",
+      "Warum lernst du Deutsch?"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Woher kommst du?",
+     "ku": "تو ژ کیرێ یی؟",
+     "parts": [
+      [
+       "Woher",
+       "W"
+      ],
+      [
+       "kommst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ]
+     ]
+    },
+    {
+     "de": "Wohnst du in Duhok?",
+     "ku": "تو ل دهۆکێ دژی؟",
+     "parts": [
+      [
+       "Wohnst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "in Duhok",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Wann beginnt der Kurs?",
+     "ku": "خول کەنگی دەستپێدکەت؟",
+     "parts": [
+      [
+       "Wann",
+       "W"
+      ],
+      [
+       "beginnt",
+       "V"
+      ],
+      [
+       "der Kurs",
+       "S"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "sein-haben",
+   "emoji": "👤",
+   "color": "#58CC02",
+   "title": "جێناڤ + sein و haben",
+   "de": "Personalpronomen, sein und haben",
+   "rules": [
+    "**sein** = بوون (ئەز ... مە) · **haben** = هەبوون (... یا من هەیە).",
+    "**Sie** (ب پیتا مەزن) = هوین بۆ رێزگرتنێ (بۆ ئێک کەس یان پتر).",
+    "**sie** (بچووک) دوو رامان هەنە: ئەو (مێ) یان ئەو (کۆ) — کار نیشان ددەت: sie ist / sie sind."
+   ],
+   "table": {
+    "head": [
+     "جێناڤ",
+     "رامان",
+     "sein",
+     "haben"
+    ],
+    "rows": [
+     [
+      "ich",
+      "ئەز",
+      "bin",
+      "habe"
+     ],
+     [
+      "du",
+      "تو",
+      "bist",
+      "hast"
+     ],
+     [
+      "er / sie / es",
+      "ئەو",
+      "ist",
+      "hat"
+     ],
+     [
+      "wir",
+      "ئەم",
+      "sind",
+      "haben"
+     ],
+     [
+      "ihr",
+      "هوین",
+      "seid",
+      "habt"
+     ],
+     [
+      "sie / Sie",
+      "ئەو / هوین",
+      "sind",
+      "haben"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich bin Lehrer.",
+     "ku": "ئەز مامۆستامە.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "bin",
+       "V"
+      ],
+      [
+       "Lehrer",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Wir haben zwei Kinder.",
+     "ku": "مە دوو زارۆک هەنە.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "haben",
+       "V"
+      ],
+      [
+       "zwei Kinder",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Sind Sie Frau Ahmad?",
+     "ku": "هوین خاتوو ئەحمەدن؟",
+     "parts": [
+      [
+       "Sind",
+       "V"
+      ],
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "Frau Ahmad",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "praesens",
+   "emoji": "🔁",
+   "color": "#FF9600",
+   "title": "کار د دەمێ نوکە دا (Präsens)",
+   "de": "Konjugation im Präsens",
+   "rules": [
+    "رەگێ کاری = کار بێ **-en**: wohn-en ➔ wohn.",
+    "دویماهیک: **-e · -st · -t · -en · -t · -en**.",
+    "هندەک کار دەنگا خۆ دگوهۆڕن تنێ دگەل **du** و **er/sie/es**: e➔i (essen: du isst)، e➔ie (sehen: du siehst)، a➔ä (fahren: du fährst).",
+    "رەگ ب -t/-d دوماهی بهێت ➔ e زێدە دبیت: arbeiten ➔ du arbeit**e**st، er arbeit**e**t."
+   ],
+   "table": {
+    "head": [
+     "",
+     "wohnen",
+     "arbeiten",
+     "essen",
+     "fahren"
+    ],
+    "rows": [
+     [
+      "ich",
+      "wohne",
+      "arbeite",
+      "esse",
+      "fahre"
+     ],
+     [
+      "du",
+      "wohnst",
+      "arbeitest",
+      "isst",
+      "fährst"
+     ],
+     [
+      "er/sie/es",
+      "wohnt",
+      "arbeitet",
+      "isst",
+      "fährt"
+     ],
+     [
+      "wir",
+      "wohnen",
+      "arbeiten",
+      "essen",
+      "fahren"
+     ],
+     [
+      "ihr",
+      "wohnt",
+      "arbeitet",
+      "esst",
+      "fahrt"
+     ],
+     [
+      "sie/Sie",
+      "wohnen",
+      "arbeiten",
+      "essen",
+      "fahren"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Er fährt nach Berlin.",
+     "ku": "ئەو دچیتە بەرلینێ.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "fährt",
+       "V"
+      ],
+      [
+       "nach Berlin",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Du isst gern Fisch.",
+     "ku": "تو حەز ژ خوارنا ماسیێ دکەی.",
+     "parts": [
+      [
+       "Du",
+       "S"
+      ],
+      [
+       "isst",
+       "V"
+      ],
+      [
+       "gern",
+       "A"
+      ],
+      [
+       "Fisch",
+       "O"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "artikel",
+   "emoji": "🏷️",
+   "color": "#FF4B4B",
+   "title": "ئارتیکل: der · die · das · ein · kein",
+   "de": "Artikel",
+   "rules": [
+    "هەر ناڤەک ئارتیکلا خۆ هەیە: **der** (نێر) · **die** (مێ) · **das** (بێلایەن). د کۆ دا هەردەم **die**.",
+    "**ein / eine** = ئێک (نەدیار). **kein / keine** = چ ... نینە (نەرێیا ein).",
+    "ناڤ هەردەم ب **پیتا مەزن** دهێنە نڤیسین.",
+    "یاسایێن هاریکار: -ung, -heit, -keit, -ion ➔ **die** · -chen, -lein ➔ **das** · رۆژ و هەیڤ ➔ **der**."
+   ],
+   "table": {
+    "head": [
+     "",
+     "der (نێر)",
+     "die (مێ)",
+     "das",
+     "کۆ"
+    ],
+    "rows": [
+     [
+      "دیار",
+      "der Tisch",
+      "die Lampe",
+      "das Buch",
+      "die Bücher"
+     ],
+     [
+      "نەدیار",
+      "ein Tisch",
+      "eine Lampe",
+      "ein Buch",
+      "– Bücher"
+     ],
+     [
+      "نەرێ",
+      "kein Tisch",
+      "keine Lampe",
+      "kein Buch",
+      "keine Bücher"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Das ist ein Buch.",
+     "ku": "ئەڤە پەرتووکەکە.",
+     "parts": [
+      [
+       "Das",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "ein Buch",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Die Lampe ist neu.",
+     "ku": "چرا نوویە.",
+     "parts": [
+      [
+       "Die Lampe",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "neu",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": "ناڤی هەردەم دگەل ئارتیکلێ ژبەر بکە: der Apfel، die Banane، das Brot."
+  },
+  {
+   "id": "akkusativ",
+   "emoji": "🎯",
+   "color": "#1CB0F6",
+   "title": "ئاکوزاتیڤ (بەرکار)",
+   "de": "Akkusativ",
+   "rules": [
+    "بەرکار (تشتێ کار ل سەر دهێتە کرن) د **ئاکوزاتیڤ** دایە. پرسیار: **Wen? / Was?**",
+    "**تنێ نێر دگوهۆڕیت:** der ➔ **den** · ein ➔ **einen** · kein ➔ **keinen**. die و das وەکی خۆ دمینن.",
+    "کارێن ب ئاکوزاتیڤ: haben, brauchen, kaufen, möchten, essen, trinken, sehen, suchen, besuchen …",
+    "ئامرازێن هەردەم ئاکوزاتیڤ: **für, ohne, durch, gegen, um**."
+   ],
+   "table": {
+    "head": [
+     "",
+     "نێر",
+     "مێ",
+     "بێلایەن",
+     "کۆ"
+    ],
+    "rows": [
+     [
+      "Nominativ",
+      "der / ein",
+      "die / eine",
+      "das / ein",
+      "die"
+     ],
+     [
+      "Akkusativ",
+      "den / einen",
+      "die / eine",
+      "das / ein",
+      "die"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich kaufe einen Apfel.",
+     "ku": "ئەز سێڤەکێ دکڕم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "kaufe",
+       "V"
+      ],
+      [
+       "einen Apfel",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Wir brauchen keinen Tisch.",
+     "ku": "مە مێز نە پێدڤییە.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "brauchen",
+       "V"
+      ],
+      [
+       "keinen Tisch",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Das Geschenk ist für den Vater.",
+     "ku": "دیاری بۆ بابی یە.",
+     "parts": [
+      [
+       "Das Geschenk",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "für den Vater",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "dativ",
+   "emoji": "🎁",
+   "color": "#FFC800",
+   "title": "داتیڤ",
+   "de": "Dativ",
+   "rules": [
+    "پرسیار: **Wem?** (بۆ کێ؟ ب کێ؟). داتیڤ گەلەک جاران پشتی ئامرازان دهێت.",
+    "ئامرازێن هەردەم داتیڤ: **mit, bei, von, zu, aus, nach, seit, gegenüber**.",
+    "der ➔ **dem** · die ➔ **der** · das ➔ **dem** · کۆ ➔ **den** (+n): mit den Kinder**n**.",
+    "کورتکرن: zu + dem = **zum** · zu + der = **zur** · bei + dem = **beim** · von + dem = **vom**."
+   ],
+   "table": {
+    "head": [
+     "",
+     "نێر",
+     "مێ",
+     "بێلایەن",
+     "کۆ"
+    ],
+    "rows": [
+     [
+      "Dativ (دیار)",
+      "dem",
+      "der",
+      "dem",
+      "den …n"
+     ],
+     [
+      "Dativ (نەدیار)",
+      "einem",
+      "einer",
+      "einem",
+      "–"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich fahre mit dem Bus.",
+     "ku": "ئەز ب پاسێ دچم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "fahre",
+       "V"
+      ],
+      [
+       "mit dem Bus",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Er geht zum Arzt.",
+     "ku": "ئەو دچیتە نک دختۆری.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "geht",
+       "V"
+      ],
+      [
+       "zum Arzt",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Ich gebe dem Kind einen Apfel.",
+     "ku": "ئەز سێڤەکێ ددەمە زارۆکی.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "gebe",
+       "V"
+      ],
+      [
+       "dem Kind",
+       "D"
+      ],
+      [
+       "einen Apfel",
+       "O"
+      ]
+     ]
+    }
+   ],
+   "tip": "دوو بەرکار: پێشی داتیڤ (کەس)، پاشان ئاکوزاتیڤ (تشت): Ich gebe **dem Kind** **einen Apfel**."
+  },
+  {
+   "id": "possessiv",
+   "emoji": "🏠",
+   "color": "#58CC02",
+   "title": "خودانی: mein · dein · sein · ihr",
+   "de": "Possessivartikel",
+   "rules": [
+    "mein (یێ من) · dein (یێ تە) · sein (یێ وی) · ihr (یێ وێ) · unser (یێ مە) · euer (یێ هەوە) · ihr/Ihr (یێ وان / یێ هەوە).",
+    "دویماهی وەکی **ein/kein** دهێت: mein Vater · mein**e** Mutter · mein Kind · mein**e** Eltern.",
+    "د ئاکوزاتیڤ دا نێر: mein**en** Vater · د داتیڤ دا: mit mein**em** Vater / mein**er** Mutter."
+   ],
+   "table": {
+    "head": [
+     "",
+     "der Vater",
+     "die Mutter",
+     "das Kind",
+     "die Eltern"
+    ],
+    "rows": [
+     [
+      "Nominativ",
+      "mein",
+      "meine",
+      "mein",
+      "meine"
+     ],
+     [
+      "Akkusativ",
+      "meinen",
+      "meine",
+      "mein",
+      "meine"
+     ],
+     [
+      "Dativ",
+      "meinem",
+      "meiner",
+      "meinem",
+      "meinen"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Das ist meine Schwester.",
+     "ku": "ئەڤە خویشکا منە.",
+     "parts": [
+      [
+       "Das",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "meine Schwester",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Ich besuche meinen Bruder.",
+     "ku": "ئەز سەرەدانا برایێ خۆ دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "besuche",
+       "V"
+      ],
+      [
+       "meinen Bruder",
+       "O"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "negation",
+   "emoji": "🚫",
+   "color": "#FF4B4B",
+   "title": "نەرێ: nicht یان kein؟",
+   "de": "Negation: nicht oder kein",
+   "rules": [
+    "**kein** بۆ ناڤێن ب ein یان بێ ئارتیکل: Ich habe ein Auto ➔ Ich habe **kein** Auto.",
+    "**nicht** بۆ کار، ئاوەلناڤ، ناڤێن ب der/die/das، و ناڤێن تایبەت: Ich komme **nicht**.",
+    "nicht ب گشتی دچیتە **دووماهیا رستێ** یان بەری وێ پارچا کو نەرێ دبیت: Das ist **nicht** teuer."
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Ich habe keine Zeit.",
+     "ku": "دەمێ من نینە.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "habe",
+       "V"
+      ],
+      [
+       "keine",
+       "N"
+      ],
+      [
+       "Zeit",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Er kommt heute nicht.",
+     "ku": "ئەو ئەڤرۆ نائێت.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "kommt",
+       "V"
+      ],
+      [
+       "heute",
+       "T"
+      ],
+      [
+       "nicht",
+       "N"
+      ]
+     ]
+    },
+    {
+     "de": "Das ist nicht mein Buch.",
+     "ku": "ئەڤە نە پەرتووکا منە.",
+     "parts": [
+      [
+       "Das",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "nicht",
+       "N"
+      ],
+      [
+       "mein Buch",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "modal",
+   "emoji": "💪",
+   "color": "#CE82FF",
+   "title": "کارێن مۆدال: können · müssen · wollen …",
+   "de": "Modalverben",
+   "rules": [
+    "کارێ مۆدال ل **جهێ ٢**، کارێ سەرەکی ب **ئینفینیتیڤ** ل **دووماهیا رستێ** (Satzklammer).",
+    "**können** شیان · **müssen** پێدڤی · **wollen** ڤیان · **möchten** حەزکرن (ب رێز) · **dürfen** دەستووری · **sollen** پێدڤی (ژ لایێ کەسەکێ دی).",
+    "ich و er/sie/es هەمان شێوە هەنە و بێ -t: ich **kann** / er **kann**."
+   ],
+   "table": {
+    "head": [
+     "",
+     "können",
+     "müssen",
+     "wollen",
+     "möchten"
+    ],
+    "rows": [
+     [
+      "ich",
+      "kann",
+      "muss",
+      "will",
+      "möchte"
+     ],
+     [
+      "du",
+      "kannst",
+      "musst",
+      "willst",
+      "möchtest"
+     ],
+     [
+      "er/sie/es",
+      "kann",
+      "muss",
+      "will",
+      "möchte"
+     ],
+     [
+      "wir/sie/Sie",
+      "können",
+      "müssen",
+      "wollen",
+      "möchten"
+     ],
+     [
+      "ihr",
+      "könnt",
+      "müsst",
+      "wollt",
+      "möchtet"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich kann gut schwimmen.",
+     "ku": "ئەز دشێم باش مەلەڤانیێ بکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "kann",
+       "V"
+      ],
+      [
+       "gut",
+       "A"
+      ],
+      [
+       "schwimmen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Morgen muss ich früh aufstehen.",
+     "ku": "سوبەهی پێدڤییە ئەز زوو رابم.",
+     "parts": [
+      [
+       "Morgen",
+       "T"
+      ],
+      [
+       "muss",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "früh",
+       "T"
+      ],
+      [
+       "aufstehen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Könnten Sie mir helfen?",
+     "ku": "دشێی هاریکاریا من بکەی؟",
+     "parts": [
+      [
+       "Könnten",
+       "V"
+      ],
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "mir",
+       "D"
+      ],
+      [
+       "helfen",
+       "V2"
+      ]
+     ]
+    }
+   ],
+   "tip": "Satzklammer = «قەفەسا رستێ»: کار ل جهێ ٢ ⟵ … ⟶ پارچا دووێ ل دووماهیێ."
+  },
+  {
+   "id": "trennbar",
+   "emoji": "✂️",
+   "color": "#FF9600",
+   "title": "کارێن جوداببن",
+   "de": "Trennbare Verben",
+   "rules": [
+    "هندەک کار ژ دوو پارچان پێک دهێن: **auf|stehen، ein|kaufen، an|rufen، fern|sehen، mit|kommen**.",
+    "د رستێ دا: کار ل **جهێ ٢**، پێشگر (auf/ein/an …) ل **دووماهیێ**.",
+    "دگەل کارێ مۆدال: پێکڤە ل دووماهیێ دمینن: Ich muss früh **aufstehen**."
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Ich stehe um sieben Uhr auf.",
+     "ku": "ئەز دەمژمێر حەفت رادبم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "stehe",
+       "V"
+      ],
+      [
+       "um sieben Uhr",
+       "T"
+      ],
+      [
+       "auf",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Am Samstag kaufe ich im Supermarkt ein.",
+     "ku": "شەمبیێ ئەز ل سووپەرمارکێتێ بازاڕی دکەم.",
+     "parts": [
+      [
+       "Am Samstag",
+       "T"
+      ],
+      [
+       "kaufe",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "im Supermarkt",
+       "L"
+      ],
+      [
+       "ein",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Rufst du mich heute an?",
+     "ku": "ئەڤرۆ تو تەلەفۆنێ بۆ من دکەی؟",
+     "parts": [
+      [
+       "Rufst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "mich",
+       "O"
+      ],
+      [
+       "heute",
+       "T"
+      ],
+      [
+       "an",
+       "V2"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "perfekt",
+   "emoji": "⏪",
+   "color": "#1CB0F6",
+   "title": "دەمێ بۆری: Perfekt",
+   "de": "Perfekt",
+   "rules": [
+    "**haben / sein** ل جهێ ٢ + **Partizip II** ل دووماهیێ.",
+    "**sein** بۆ لڤین و گوهۆڕین: gehen, fahren, kommen, fliegen, aufstehen, bleiben … · **haben** بۆ پتریا کاران.",
+    "Partizip II: کارێن رێکوپێک **ge-…-t** (machen ➔ gemacht) · نەرێکوپێک **ge-…-en** (sehen ➔ gesehen).",
+    "کارێن جوداببن: **auf·ge·standen، ein·ge·kauft** · کارێن ب -ieren بێ ge: **studiert، telefoniert**."
+   ],
+   "table": {
+    "head": [
+     "Infinitiv",
+     "Perfekt",
+     "رامان"
+    ],
+    "rows": [
+     [
+      "machen",
+      "hat gemacht",
+      "کر"
+     ],
+     [
+      "kaufen",
+      "hat gekauft",
+      "کڕی"
+     ],
+     [
+      "essen",
+      "hat gegessen",
+      "خوار"
+     ],
+     [
+      "trinken",
+      "hat getrunken",
+      "ڤەخوار"
+     ],
+     [
+      "sehen",
+      "hat gesehen",
+      "دیت"
+     ],
+     [
+      "gehen",
+      "ist gegangen",
+      "چوو"
+     ],
+     [
+      "fahren",
+      "ist gefahren",
+      "چوو (ب ئامیری)"
+     ],
+     [
+      "kommen",
+      "ist gekommen",
+      "هات"
+     ],
+     [
+      "aufstehen",
+      "ist aufgestanden",
+      "رابوو"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich habe Pizza gegessen.",
+     "ku": "من پیتزا خوار.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "habe",
+       "V"
+      ],
+      [
+       "Pizza",
+       "O"
+      ],
+      [
+       "gegessen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Gestern bin ich nach Erbil gefahren.",
+     "ku": "دوهی ئەز چوومە هەولێرێ.",
+     "parts": [
+      [
+       "Gestern",
+       "T"
+      ],
+      [
+       "bin",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "nach Erbil",
+       "L"
+      ],
+      [
+       "gefahren",
+       "V2"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "imperativ",
+   "emoji": "📢",
+   "color": "#58CC02",
+   "title": "فەرمان: Imperativ",
+   "de": "Imperativ",
+   "rules": [
+    "**Sie:** کار + Sie: **Kommen Sie** bitte!",
+    "**du:** رەگێ کاری بێ -st و بێ du: du kommst ➔ **Komm!** · du isst ➔ **Iss!** · du fährst ➔ **Fahr!** (بێ ä).",
+    "**ihr:** شێوەیێ ihr بێ ihr: ihr kommt ➔ **Kommt!**",
+    "sein: **Sei** leise! · **Seid** leise! · **Seien Sie** leise!"
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Mach bitte das Fenster zu!",
+     "ku": "هیڤییە پەنجەرێ بگرە!",
+     "parts": [
+      [
+       "Mach",
+       "V"
+      ],
+      [
+       "bitte",
+       "A"
+      ],
+      [
+       "das Fenster",
+       "O"
+      ],
+      [
+       "zu",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Nehmen Sie bitte Platz!",
+     "ku": "هیڤییە روینە!",
+     "parts": [
+      [
+       "Nehmen",
+       "V"
+      ],
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "bitte",
+       "A"
+      ],
+      [
+       "Platz",
+       "O"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "zeit",
+   "emoji": "🕒",
+   "color": "#FFC800",
+   "title": "ئامرازێن دەمی: am · um · im · von…bis",
+   "de": "Temporale Präpositionen",
+   "rules": [
+    "**am** + رۆژ / پشکا رۆژێ: am Montag، am Morgen، am Wochenende (بەلێ: **in der Nacht**).",
+    "**um** + دەمژمێر: um 8 Uhr.",
+    "**im** + هەیڤ / وەرز: im Mai، im Sommer · **seit** (ژ ... ڤە، هێشتا بەردەوامە) + داتیڤ: seit drei Monaten.",
+    "**von … bis** (ژ ... هەتا): von 9 bis 17 Uhr · **vor / nach** + داتیڤ: vor dem Essen، nach dem Kurs."
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Ich lerne seit drei Monaten Deutsch.",
+     "ku": "ئەز ژ سێ هەیڤان ڤە ئەلمانی فێر دبم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "lerne",
+       "V"
+      ],
+      [
+       "seit drei Monaten",
+       "T"
+      ],
+      [
+       "Deutsch",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Am Montag beginnt der Kurs um neun Uhr.",
+     "ku": "دووشەمبێ خول دەمژمێر نەهـ دەستپێدکەت.",
+     "parts": [
+      [
+       "Am Montag",
+       "T"
+      ],
+      [
+       "beginnt",
+       "V"
+      ],
+      [
+       "der Kurs",
+       "S"
+      ],
+      [
+       "um neun Uhr",
+       "T"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "ort",
+   "emoji": "📍",
+   "color": "#CE82FF",
+   "title": "جه: Wo? (داتیڤ) · Wohin? (ئاکوزاتیڤ)",
+   "de": "Lokale Präpositionen",
+   "rules": [
+    "**Wo?** (ل کیرێ؟ — جه، بێ لڤین) ➔ **داتیڤ**: Ich bin **im** Park.",
+    "**Wohin?** (بۆ کیرێ؟ — لڤین) ➔ **ئاکوزاتیڤ**: Ich gehe **in den** Park.",
+    "ئامرازێن دوو-لایەنە: in, an, auf, unter, über, vor, hinter, neben, zwischen.",
+    "**nach** + باژێڕ/وەلات (بێ ئارتیکل): nach Berlin · **zu** + کەس/جه: zum Arzt · **in** + وەلات ب ئارتیکل: in die Türkei."
+   ],
+   "table": {
+    "head": [
+     "",
+     "Wo? (Dativ)",
+     "Wohin? (Akkusativ)"
+    ],
+    "rows": [
+     [
+      "in",
+      "im Kino",
+      "ins Kino"
+     ],
+     [
+      "an",
+      "am Tisch",
+      "an den Tisch"
+     ],
+     [
+      "auf",
+      "auf dem Tisch",
+      "auf den Tisch"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Das Buch liegt auf dem Tisch.",
+     "ku": "پەرتووک ل سەر مێزێ یە.",
+     "parts": [
+      [
+       "Das Buch",
+       "S"
+      ],
+      [
+       "liegt",
+       "V"
+      ],
+      [
+       "auf dem Tisch",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Ich lege das Buch auf den Tisch.",
+     "ku": "ئەز پەرتووکێ ددانمە سەر مێزێ.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "lege",
+       "V"
+      ],
+      [
+       "das Buch",
+       "O"
+      ],
+      [
+       "auf den Tisch",
+       "L"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "pronomen",
+   "emoji": "🙋",
+   "color": "#1CB0F6",
+   "title": "جێناڤ د ئاکوزاتیڤ و داتیڤ دا",
+   "de": "Personalpronomen im Akkusativ und Dativ",
+   "rules": [
+    "Akkusativ: mich · dich · ihn · sie · es · uns · euch · sie/Sie.",
+    "Dativ: mir · dir · ihm · ihr · ihm · uns · euch · ihnen/Ihnen.",
+    "کارێن ب داتیڤ: **helfen, danken, gefallen, gehören, schmecken, antworten** — Das gefällt **mir**."
+   ],
+   "table": {
+    "head": [
+     "Nom.",
+     "Akk.",
+     "Dat."
+    ],
+    "rows": [
+     [
+      "ich",
+      "mich",
+      "mir"
+     ],
+     [
+      "du",
+      "dich",
+      "dir"
+     ],
+     [
+      "er",
+      "ihn",
+      "ihm"
+     ],
+     [
+      "sie",
+      "sie",
+      "ihr"
+     ],
+     [
+      "wir",
+      "uns",
+      "uns"
+     ],
+     [
+      "ihr",
+      "euch",
+      "euch"
+     ],
+     [
+      "sie / Sie",
+      "sie / Sie",
+      "ihnen / Ihnen"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Wie geht es dir?",
+     "ku": "تو چاوانی؟",
+     "parts": [
+      [
+       "Wie",
+       "W"
+      ],
+      [
+       "geht",
+       "V"
+      ],
+      [
+       "es",
+       "S"
+      ],
+      [
+       "dir",
+       "D"
+      ]
+     ]
+    },
+    {
+     "de": "Ich liebe dich.",
+     "ku": "ئەز حەز ژ تە دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "liebe",
+       "V"
+      ],
+      [
+       "dich",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Die Jacke gefällt mir.",
+     "ku": "جاکێت ب دلێ منە.",
+     "parts": [
+      [
+       "Die Jacke",
+       "S"
+      ],
+      [
+       "gefällt",
+       "V"
+      ],
+      [
+       "mir",
+       "D"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "konnektoren",
+   "emoji": "🔗",
+   "color": "#58CC02",
+   "title": "گرێدەک: und · aber · oder · denn · sondern",
+   "de": "Konnektoren (Position 0)",
+   "rules": [
+    "ئەڤ پێنج گرێدەک **ل جهێ ٠** نە: رێزبەندیا رستا دووێ **ناگوهۆڕن** (کار هەر ل جهێ ٢).",
+    "**und** و · **aber** بەلێ · **oder** یان · **denn** چونکی · **sondern** بەلکو (پشتی نەرێ)."
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Ich lerne Deutsch, denn ich wohne in Köln.",
+     "ku": "ئەز ئەلمانی فێر دبم، چونکی ئەز ل کۆلنێ دژیم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "lerne",
+       "V"
+      ],
+      [
+       "Deutsch",
+       "O"
+      ],
+      [
+       ",",
+       ""
+      ],
+      [
+       "denn",
+       "K"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "wohne",
+       "V"
+      ],
+      [
+       "in Köln",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Er ist nicht müde, sondern krank.",
+     "ku": "ئەو نە وەستیایە، بەلکو نەخۆشە.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "nicht",
+       "N"
+      ],
+      [
+       "müde",
+       "A"
+      ],
+      [
+       ",",
+       ""
+      ],
+      [
+       "sondern",
+       "K"
+      ],
+      [
+       "krank",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  },
+  {
+   "id": "gern",
+   "emoji": "❤️",
+   "color": "#FF4B4B",
+   "title": "gern · lieber · am liebsten",
+   "de": "Vorlieben ausdrücken",
+   "rules": [
+    "کار + **gern** = حەز دکەم: Ich schwimme **gern**.",
+    "**lieber** = پتر حەز دکەم · **am liebsten** = ژ هەمیان پتر.",
+    "**nicht gern** = حەز ناکەم: Ich koche **nicht gern**.",
+    "بەراوردکرن: gut ➔ **besser** ➔ am besten · viel ➔ **mehr** ➔ am meisten · groß ➔ **größer** als …"
+   ],
+   "table": null,
+   "examples": [
+    {
+     "de": "Ich trinke gern Tee, aber lieber Kaffee.",
+     "ku": "ئەز حەز ژ چایێ دکەم، بەلێ پتر حەز ژ قەهوێ دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "trinke",
+       "V"
+      ],
+      [
+       "gern",
+       "A"
+      ],
+      [
+       "Tee",
+       "O"
+      ],
+      [
+       ",",
+       ""
+      ],
+      [
+       "aber",
+       "K"
+      ],
+      [
+       "lieber",
+       "A"
+      ],
+      [
+       "Kaffee",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Berlin ist größer als Köln.",
+     "ku": "بەرلین ژ کۆلنێ مەزنترە.",
+     "parts": [
+      [
+       "Berlin",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "größer als Köln",
+       "A"
+      ]
+     ]
+    }
+   ],
+   "tip": null
+  }
+ ]
+}

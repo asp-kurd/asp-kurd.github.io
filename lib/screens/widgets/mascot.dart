@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../services/backend.dart';
 import '../../services/voice_service.dart';
+import '../../ui.dart';
 
 /// 🧑‍🏫 کاریکاتێرێن ASP — وەکی Duolingo: چاڤان دقوچینن، دەڤێ خۆ دلڤینن دەمێ دئاخڤن،
 /// و ب بازدان / هەژاندنێ بەرسڤێ ددەن.
@@ -309,14 +310,14 @@ class MascotSays extends StatelessWidget {
   }) : char = char ?? MascotChar.forUser();
 
   Color get _bubble => switch (mood) {
-        MascotMood.happy => const Color(0xFF1F4D1A),
-        MascotMood.sad => const Color(0xFF4D1F23),
-        _ => const Color(0xFF233640),
+        MascotMood.happy => AppColors.dark ? const Color(0xFF1F4D1A) : const Color(0xFFE5F7D6),
+        MascotMood.sad => AppColors.dark ? const Color(0xFF4D1F23) : const Color(0xFFFFE4E4),
+        _ => AppColors.dark ? const Color(0xFF233640) : Colors.white,
       };
   Color get _border => switch (mood) {
         MascotMood.happy => const Color(0xFF58CC02),
         MascotMood.sad => const Color(0xFFFF4B4B),
-        _ => Colors.white24,
+        _ => AppColors.fg24,
       };
 
   @override
@@ -349,7 +350,7 @@ class MascotSays extends StatelessWidget {
                     text,
                     key: ValueKey(text),
                     textDirection: textDirection,
-                    style: const TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w600, height: 1.35),
+                    style: TextStyle(fontSize: 18, color: AppColors.fg, fontWeight: FontWeight.w600, height: 1.35),
                   ),
                 ),
               ),
@@ -405,7 +406,7 @@ class MascotAvatar extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: const Color(0xFF2B3B44), border: Border.all(color: ring, width: 2.5)),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.chip, border: Border.all(color: ring, width: 2.5)),
       child: ClipOval(
         child: OverflowBox(
           alignment: Alignment.topCenter,

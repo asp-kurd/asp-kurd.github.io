@@ -138,6 +138,7 @@ void _parse(String raw, {int minVersion = 0}) {
           enHint: x['enHint'] as String,
           emoji: (x['emoji'] as String?) ?? '',
           letter: _letter(x['letter']),
+          cloze: _cloze(x['cloze']),
         );
       }).toList(),
     );
@@ -158,6 +159,16 @@ void _parse(String raw, {int minVersion = 0}) {
           .toList(),
     );
   }).toList();
+}
+
+ClozeInfo? _cloze(dynamic c) {
+  if (c is! Map) return null;
+  return ClozeInfo(
+    c['de'] as String,
+    c['a'] as String,
+    ((c['d'] as List?) ?? const []).map((e) => e.toString()).toList(),
+    (c['ku'] as String?) ?? '',
+  );
 }
 
 LetterInfo? _letter(dynamic l) {

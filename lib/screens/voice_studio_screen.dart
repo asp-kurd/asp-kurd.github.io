@@ -49,7 +49,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
                   tr(ui, 'دەست ب سەر 🎤 دا بگرە و پەیڤێ بێژە. دەنگێ تە دێ د وانەیاندا هێتە لێدان. هەر تۆمارەکا نوو = ❤️ +١',
                       'Halte 🎤 gedrückt und sprich. Deine Stimme wird in den Lektionen benutzt. Jede neue Aufnahme = ❤️ +1',
                       'Hold 🎤 and speak. Your voice is used in lessons. Each new recording = ❤️ +1'),
-                  style: const TextStyle(color: Colors.white60),
+                  style: TextStyle(color: AppColors.fg60),
                 ),
                 const SizedBox(height: 12),
                 // 🧬 دەروازەیا کلۆنکرنا دەنگی
@@ -74,7 +74,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
                               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white)),
                           Text(tr(ui, '١٥ چرکە دەنگ ➔ هەمی وانە ب ٣ زمانان', '15 Sek. ➔ alle Lektionen in 3 Sprachen',
                                   '15 sec ➔ every lesson in 3 languages'),
-                              style: const TextStyle(color: Colors.white70, fontSize: 13)),
+                              style: TextStyle(color: AppColors.fg70, fontSize: 13)),
                         ]),
                       ),
                       const Icon(Icons.chevron_right_rounded, color: Colors.white),
@@ -165,7 +165,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
               child: const Text('🧬', style: TextStyle(fontSize: 17)),
             )
           else
-            const Icon(Icons.radio_button_unchecked, color: Colors.white24, size: 20),
+            Icon(Icons.radio_button_unchecked, color: AppColors.fg24, size: 20),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -173,7 +173,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
               children: [
                 Text(c.text(lang), textDirection: lang.direction,
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                Text(c.hint(lang), style: const TextStyle(fontSize: 12, color: Colors.white54)),
+                Text(c.hint(lang), style: TextStyle(fontSize: 12, color: AppColors.fg54)),
               ],
             ),
           ),
@@ -183,7 +183,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
               onPressed: () => voice.playFile(voice.pathFor(lang, c.id)),
             ),
             IconButton(
-              icon: const Icon(Icons.delete_outline_rounded, color: Colors.white38),
+              icon: Icon(Icons.delete_outline_rounded, color: AppColors.fg38),
               onPressed: () async {
                 await voice.deleteRecording(lang, c.id);
                 setState(() {});
@@ -259,7 +259,7 @@ class _QuickRecordScreenState extends State<QuickRecordScreen> {
               Text(c.hint(lang), textAlign: TextAlign.center, style: const TextStyle(color: AppColors.blue, fontSize: 16)),
               if (lang != ui) ...[
                 const SizedBox(height: 6),
-                Text(c.text(ui), textAlign: TextAlign.center, style: const TextStyle(color: Colors.white54)),
+                Text(c.text(ui), textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg54)),
               ],
               const Spacer(),
               Center(

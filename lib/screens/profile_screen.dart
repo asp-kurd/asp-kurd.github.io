@@ -48,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
             ),
           ]),
           Text(tr(n, 'ڤێبوونا تە یا راستەقینە', 'Deine echte Übung', 'Your real practice'),
-              style: const TextStyle(color: Colors.white60)),
+              style: TextStyle(color: AppColors.fg60)),
           const SizedBox(height: 14),
           const StatsSection(),
           const SizedBox(height: 24),
@@ -68,7 +68,7 @@ class ProfileScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: a.unlocked ? AppColors.gold.withValues(alpha: 0.15) : AppColors.card,
                         borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: a.unlocked ? AppColors.gold : Colors.white12, width: 2),
+                        border: Border.all(color: a.unlocked ? AppColors.gold : AppColors.fg12, width: 2),
                       ),
                       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                         Opacity(opacity: a.unlocked ? 1 : 0.25, child: Text(a.emoji, style: const TextStyle(fontSize: 30))),
@@ -76,7 +76,7 @@ class ProfileScreen extends StatelessWidget {
                         Text(tr(n, a.ku, a.de, a.en),
                             textAlign: TextAlign.center,
                             maxLines: 2,
-                            style: TextStyle(fontSize: 12, color: a.unlocked ? Colors.white : Colors.white38)),
+                            style: TextStyle(fontSize: 12, color: a.unlocked ? AppColors.fg : AppColors.fg38)),
                       ]),
                     ))
                 .toList(),

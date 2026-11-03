@@ -130,7 +130,7 @@ class _RecordButtonState extends State<RecordButton> {
         if (widget.hintText != null || recording)
           Text(
             recording ? '● 0:${seconds.toString().padLeft(2, '0')}' : widget.hintText!,
-            style: TextStyle(color: recording ? AppColors.red : Colors.white54, fontSize: 13),
+            style: TextStyle(color: recording ? AppColors.red : AppColors.fg54, fontSize: 13),
           ),
       ],
     );

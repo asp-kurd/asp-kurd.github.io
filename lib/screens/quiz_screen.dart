@@ -170,7 +170,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(part, style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold)),
                 ),
-              Text(_instruction(), style: const TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.w600)),
+              Text(_instruction(), style: TextStyle(color: AppColors.fg70, fontSize: 16, fontWeight: FontWeight.w600)),
               const SizedBox(height: 14),
               Expanded(child: SingleChildScrollView(child: _body())),
               if (checked) _feedback(),
@@ -202,7 +202,7 @@ class _QuizScreenState extends State<QuizScreen> {
         decoration: BoxDecoration(
           color: AppColors.card,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: Colors.white12, width: 2),
+          border: Border.all(color: AppColors.fg12, width: 2),
         ),
         child: child,
       );
@@ -261,9 +261,9 @@ class _QuizScreenState extends State<QuizScreen> {
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 160),
                     decoration: BoxDecoration(
-                      color: (_state(k) ?? (picked == k ? AppColors.blue : Colors.white24)).withValues(alpha: picked == k || _state(k) != null ? 0.2 : 0.06),
+                      color: (_state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24)).withValues(alpha: picked == k || _state(k) != null ? 0.2 : 0.06),
                       borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : Colors.white24), width: 3),
+                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24), width: 3),
                     ),
                     child: Center(child: Text(q.options[k], style: TextStyle(fontSize: cols == 3 ? 46 : 60))),
                   ),
@@ -288,7 +288,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     decoration: BoxDecoration(
                       color: (_state(k) ?? (picked == k ? AppColors.blue : AppColors.card)).withValues(alpha: picked == k || _state(k) != null ? 0.25 : 1),
                       borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : Colors.white24), width: 3),
+                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24), width: 3),
                     ),
                     child: Column(children: [
                       Text(k == 0 ? '✅' : '❌', style: const TextStyle(fontSize: 34)),
@@ -367,7 +367,7 @@ class _QuizScreenState extends State<QuizScreen> {
             Container(
               constraints: const BoxConstraints(minHeight: 70),
               padding: const EdgeInsets.all(8),
-              decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.white24, width: 2))),
+              decoration: BoxDecoration(border: Border(bottom: BorderSide(color: AppColors.fg24, width: 2))),
               child: Wrap(spacing: 6, runSpacing: 6, children: [
                 for (final k in order)
                   ActionChip(
@@ -438,7 +438,7 @@ class _QuizScreenState extends State<QuizScreen> {
             Text(ok ? tr(ui, 'دەستخۆش! 🎉', 'Super! 🎉', 'Great! 🎉') : '${tr(ui, 'بەرسڤا دروست:', 'Richtig:', 'Answer:')} $correct',
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
             if (q.explain.isNotEmpty)
-              Text(q.explain, style: const TextStyle(color: Colors.white70)),
+              Text(q.explain, style: TextStyle(color: AppColors.fg70)),
           ]),
         ),
       ]),
@@ -468,7 +468,7 @@ class QuizResultScreen extends StatelessWidget {
               const Spacer(),
               Text(pct >= 90 ? '🏆' : (pass ? '🎉' : '💪'), style: const TextStyle(fontSize: 90)),
               const SizedBox(height: 10),
-              Text(title, textAlign: TextAlign.center, style: const TextStyle(fontSize: 20, color: Colors.white70)),
+              Text(title, textAlign: TextAlign.center, style: TextStyle(fontSize: 20, color: AppColors.fg70)),
               const SizedBox(height: 16),
               Text('$pct%', style: TextStyle(fontSize: 64, fontWeight: FontWeight.bold, color: pass ? AppColors.green : AppColors.orange)),
               Text('$score / $total', style: const TextStyle(fontSize: 18)),

@@ -31,7 +31,7 @@ class StatsSection extends StatelessWidget {
 BoxDecoration _cardBox() => BoxDecoration(
       color: AppColors.card,
       borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: Colors.white10),
+      border: Border.all(color: AppColors.fg10),
     );
 
 // ───────── 🌳 دارا تە ─────────
@@ -89,7 +89,7 @@ class _TreeCardState extends State<TreeCard> {
           Text(tr(n, 'دارا تە', 'Dein Baum', 'Your tree'), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
           const Spacer(),
           Text(tr(n, 'قۆناغ ${stage + 1} ژ ٨', 'Stufe ${stage + 1} von 8', 'Stage ${stage + 1} of 8'),
-              style: const TextStyle(color: Colors.white60)),
+              style: TextStyle(color: AppColors.fg60)),
         ]),
         const SizedBox(height: 12),
         ClipRRect(
@@ -116,14 +116,14 @@ class _TreeCardState extends State<TreeCard> {
           child: LinearProgressIndicator(
             value: total,
             minHeight: 12,
-            backgroundColor: Colors.white10,
+            backgroundColor: AppColors.fg10,
             valueColor: const AlwaysStoppedAnimation(AppColors.blue),
           ),
         ),
         const SizedBox(height: 8),
         Row(children: [
           Text(tr(n, 'مەزنبوون: ${(total * 100).round()}%', 'Wachstum: ${(total * 100).round()} %', 'Tree growth: ${(total * 100).round()} %'),
-              style: const TextStyle(color: Colors.white70)),
+              style: TextStyle(color: AppColors.fg70)),
           const Spacer(),
           if (!last)
             Text(
@@ -141,18 +141,18 @@ class _TreeCardState extends State<TreeCard> {
           Text(
               tr(n, 'هەر XPیەکا تو ژ وانە و یاریان وەردگری، دارا تە ئاڤ ددەت.',
                   'Jedes XP aus Lektionen und Spielen gießt deinen Baum.', 'Every XP from lessons and games waters your tree.'),
-              style: const TextStyle(color: Colors.white60)),
+              style: TextStyle(color: AppColors.fg60)),
           const SizedBox(height: 6),
           for (var i = 0; i < treeStages.length; i++)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 3),
               child: Row(children: [
-                Text(treeStages[i].emoji, style: TextStyle(fontSize: 20, color: i <= stage ? null : Colors.white24)),
+                Text(treeStages[i].emoji, style: TextStyle(fontSize: 20, color: i <= stage ? null : AppColors.fg24)),
                 const SizedBox(width: 10),
                 Expanded(
                     child: Text(tr(n, treeStages[i].ku, treeStages[i].de, treeStages[i].en),
-                        style: TextStyle(fontWeight: i == stage ? FontWeight.bold : FontWeight.normal, color: i <= stage ? Colors.white : Colors.white38))),
-                Text('${treeStages[i].xp} XP', style: const TextStyle(color: Colors.white54)),
+                        style: TextStyle(fontWeight: i == stage ? FontWeight.bold : FontWeight.normal, color: i <= stage ? AppColors.fg : AppColors.fg38))),
+                Text('${treeStages[i].xp} XP', style: TextStyle(color: AppColors.fg54)),
               ]),
             ),
         ],
@@ -341,7 +341,7 @@ class StudyChart extends StatelessWidget {
           TextSpan(text: tr(n, 'دەمێ خواندنێ', 'Lernzeit', 'Study time'), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
           TextSpan(
               text: tr(n, '  ٧ رۆژێن دووماهیێ · $total خولەک', '  letzte 7 Tage · $total Min', '  last 7 days · $total min'),
-              style: const TextStyle(color: Colors.white54)),
+              style: TextStyle(color: AppColors.fg54)),
         ])),
         const SizedBox(height: 16),
         Directionality(
@@ -362,14 +362,14 @@ class StudyChart extends StatelessWidget {
                         height: 4 + 96 * v,
                         margin: const EdgeInsets.symmetric(horizontal: 6),
                         decoration: BoxDecoration(
-                          color: mins[i] > 0 ? AppColors.blue : Colors.white12,
+                          color: mins[i] > 0 ? AppColors.blue : AppColors.fg12,
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
                     const SizedBox(height: 6),
                     Text(i == 6 ? tr(n, 'ئەڤرۆ', 'Heute', 'Today') : _dayName(days[i], n),
-                        style: TextStyle(fontSize: 12, color: i == 6 ? Colors.white : Colors.white54, fontWeight: i == 6 ? FontWeight.bold : null)),
+                        style: TextStyle(fontSize: 12, color: i == 6 ? AppColors.fg : AppColors.fg54, fontWeight: i == 6 ? FontWeight.bold : null)),
                   ]),
                 ),
             ]),
@@ -388,7 +388,7 @@ class PracticeHeatmap extends StatelessWidget {
   static const weeks = 20;
 
   Color _level(int xp) {
-    if (xp <= 0) return Colors.white.withValues(alpha: 0.06);
+    if (xp <= 0) return AppColors.fg.withValues(alpha: 0.06);
     if (xp < 15) return AppColors.blue.withValues(alpha: 0.35);
     if (xp < 35) return AppColors.blue.withValues(alpha: 0.55);
     if (xp < 70) return AppColors.blue.withValues(alpha: 0.8);
@@ -412,7 +412,7 @@ class PracticeHeatmap extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text.rich(TextSpan(children: [
           TextSpan(text: tr(n, 'رۆژێن ڤێبوونێ', 'Übungstage', 'Days of practice'), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
-          TextSpan(text: tr(n, '  ٢٠ حەفتیێن دووماهیێ', '  letzte 20 Wochen', '  last 20 weeks'), style: const TextStyle(color: Colors.white54)),
+          TextSpan(text: tr(n, '  ٢٠ حەفتیێن دووماهیێ', '  letzte 20 Wochen', '  last 20 weeks'), style: TextStyle(color: AppColors.fg54)),
         ])),
         const SizedBox(height: 12),
         Directionality(
@@ -435,7 +435,7 @@ class PracticeHeatmap extends StatelessWidget {
                             final m = dayAt(w * 7).month - 1;
                             return tr(n, _monthKu[m], deMonths[m], enMonths[m]);
                           }(),
-                          style: const TextStyle(fontSize: 11, color: Colors.white54),
+                          style: TextStyle(fontSize: 11, color: AppColors.fg54),
                         ),
                       ),
                 ]),
@@ -445,7 +445,7 @@ class PracticeHeatmap extends StatelessWidget {
                   SizedBox(
                     width: labelW,
                     child: Text(rowLabels[r] == null ? '' : tr(n, rowLabels[r]!.$1, rowLabels[r]!.$2, rowLabels[r]!.$3),
-                        style: const TextStyle(fontSize: 11, color: Colors.white54)),
+                        style: TextStyle(fontSize: 11, color: AppColors.fg54)),
                   ),
                   for (var w = 0; w < weeks; w++)
                     () {
@@ -459,14 +459,14 @@ class PracticeHeatmap extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: future ? Colors.transparent : _level(p.xpOn(d)),
                           borderRadius: BorderRadius.circular(cell * 0.22),
-                          border: isToday ? Border.all(color: Colors.white, width: 2) : null,
+                          border: isToday ? Border.all(color: AppColors.fg, width: 2) : null,
                         ),
                       );
                     }(),
                 ]),
               const SizedBox(height: 8),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                Text(tr(n, 'کێم', 'Weniger', 'Less'), style: const TextStyle(fontSize: 12, color: Colors.white54)),
+                Text(tr(n, 'کێم', 'Weniger', 'Less'), style: TextStyle(fontSize: 12, color: AppColors.fg54)),
                 const SizedBox(width: 6),
                 for (final x in [0, 10, 20, 50, 80])
                   Container(
@@ -476,7 +476,7 @@ class PracticeHeatmap extends StatelessWidget {
                     decoration: BoxDecoration(color: _level(x), borderRadius: BorderRadius.circular(4)),
                   ),
                 const SizedBox(width: 2),
-                Text(tr(n, 'پتر', 'Mehr', 'More'), style: const TextStyle(fontSize: 12, color: Colors.white54)),
+                Text(tr(n, 'پتر', 'Mehr', 'More'), style: TextStyle(fontSize: 12, color: AppColors.fg54)),
               ]),
             ]);
           }),
@@ -525,7 +525,7 @@ class StatTiles extends StatelessWidget {
                     alignment: AlignmentDirectional.centerStart,
                     child: Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
                   ),
-                  Text(label, maxLines: 2, style: const TextStyle(fontSize: 13, color: Colors.white60)),
+                  Text(label, maxLines: 2, style: TextStyle(fontSize: 13, color: AppColors.fg60)),
                 ]),
               ),
             ]),

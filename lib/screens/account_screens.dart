@@ -80,12 +80,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
           decoration: BoxDecoration(
             color: sel ? AppColors.blue.withValues(alpha: 0.2) : AppColors.card,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: sel ? AppColors.blue : Colors.white24, width: sel ? 3 : 1.5),
+            border: Border.all(color: sel ? AppColors.blue : AppColors.fg24, width: sel ? 3 : 1.5),
           ),
           child: Column(children: [
             Text(emoji, style: const TextStyle(fontSize: 32)),
             const SizedBox(height: 4),
-            Text(label, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: sel ? Colors.white : Colors.white70)),
+            Text(label, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: sel ? AppColors.fg : AppColors.fg70)),
           ]),
         ),
       ),
@@ -120,7 +120,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const Text('ب خێر بێی بۆ ASP! 👋',
                   textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Sarchia', fontSize: 26, fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              const Text('بەری دەستپێکرنێ، خۆ بدە ناسین', textAlign: TextAlign.center, style: TextStyle(color: Colors.white60)),
+              Text('بەری دەستپێکرنێ، خۆ بدە ناسین', textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg60)),
               const SizedBox(height: 26),
               TextField(controller: name, textInputAction: TextInputAction.next, decoration: _dec('ناڤێ تە', Icons.person_rounded)),
               const SizedBox(height: 14),
@@ -191,7 +191,7 @@ class _InboxScreenState extends State<InboxScreen> {
           listenable: b,
           builder: (_, __) {
             if (b.messages.isEmpty) {
-              return const Center(child: Text('چ نامە نینن', style: TextStyle(color: Colors.white54)));
+              return Center(child: Text('چ نامە نینن', style: TextStyle(color: AppColors.fg54)));
             }
             return RefreshIndicator(
               onRefresh: b.loadMessages,
@@ -209,16 +209,16 @@ class _InboxScreenState extends State<InboxScreen> {
   Widget _tile(AppMessage m) {
     final icon = switch (m.kind) { 'streak' => '🔥', 'system' => '⚙️', _ => '✉️' };
     return Card(
-      color: m.read ? AppColors.card : const Color(0xFF1B3A4B),
+      color: m.read ? AppColors.card : AppColors.tint,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: m.read ? Colors.white12 : AppColors.gold, width: m.read ? 1 : 2),
+        side: BorderSide(color: m.read ? AppColors.fg12 : AppColors.gold, width: m.read ? 1 : 2),
       ),
       child: ExpansionTile(
         shape: const Border(),
         leading: Text(icon, style: const TextStyle(fontSize: 26)),
         title: Text(m.title, style: TextStyle(fontWeight: m.read ? FontWeight.normal : FontWeight.bold)),
-        subtitle: Text('ژ ASP · ${_ago(m.created)}', style: const TextStyle(fontSize: 12, color: Colors.white54)),
+        subtitle: Text('ژ ASP · ${_ago(m.created)}', style: TextStyle(fontSize: 12, color: AppColors.fg54)),
         onExpansionChanged: (open) {
           if (open) b.markRead(m);
         },
@@ -275,7 +275,7 @@ class _NotifyCardState extends State<NotifyCard> {
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const Text('ئاگەهداریان ڤەکە', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 16)),
-            Text(msg ?? 'دا نامە و بیرئینانا Streak بگەهنە تە', style: const TextStyle(color: Colors.white70, fontSize: 13)),
+            Text(msg ?? 'دا نامە و بیرئینانا Streak بگەهنە تە', style: TextStyle(color: AppColors.fg70, fontSize: 13)),
           ]),
         ),
         busy
@@ -406,7 +406,7 @@ class _SetupScreenState extends State<SetupScreen> {
                     height: 6,
                     margin: const EdgeInsets.symmetric(horizontal: 4),
                     decoration: BoxDecoration(
-                      color: (k == 0 ? step >= 0 : step == 1) ? AppColors.green : Colors.white12,
+                      color: (k == 0 ? step >= 0 : step == 1) ? AppColors.green : AppColors.fg12,
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -419,7 +419,7 @@ class _SetupScreenState extends State<SetupScreen> {
               Text(note!, textAlign: TextAlign.center, style: const TextStyle(color: AppColors.gold)),
             ],
             const SizedBox(height: 10),
-            TextButton(onPressed: step == 1 ? _afterPush : _done, child: const Text('پاشان', style: TextStyle(color: Colors.white54))),
+            TextButton(onPressed: step == 1 ? _afterPush : _done, child: Text('پاشان', style: TextStyle(color: AppColors.fg54))),
           ]),
         ),
       ),
@@ -432,18 +432,18 @@ class _SetupScreenState extends State<SetupScreen> {
         const Text('ئاگەهداریان ڤەکە', textAlign: TextAlign.center,
             style: TextStyle(fontFamily: 'Sarchia', fontSize: 28, fontWeight: FontWeight.bold)),
         const SizedBox(height: 10),
-        const Text(
+        Text(
           'دا نامە، بیرئینانا وانەیان و هشیاریا 🔥 Streak بگەهنە تە — حەتا دەمێ ئەپ گرتی ژی بیت.',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16, color: Colors.white70, height: 1.6),
+          style: TextStyle(fontSize: 16, color: AppColors.fg70, height: 1.6),
         ),
         const SizedBox(height: 30),
         busy
             ? const Center(child: CircularProgressIndicator())
             : BigButton(label: 'ڤەکە 🔔', onPressed: _enablePush),
         const SizedBox(height: 8),
-        const Text('پشتی هنگێ، مۆبایل دێ پرسیار کەت: «Allow» بکە.',
-            textAlign: TextAlign.center, style: TextStyle(color: Colors.white54, fontSize: 13)),
+        Text('پشتی هنگێ، مۆبایل دێ پرسیار کەت: «Allow» بکە.',
+            textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg54, fontSize: 13)),
       ];
 
   List<Widget> _installStep() {
@@ -475,7 +475,7 @@ class _SetupScreenState extends State<SetupScreen> {
             ? 'دا وەکی ئەپەکێ راستەقینە ل سەر شاشێ بیت — و دا ئاگەهداری بگەهنە تە (ل iPhone ئەڤە پێدڤییە).'
             : 'دا وەکی ئەپەکێ راستەقینە ل سەر شاشێ بیت.',
         textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white70, fontSize: 15, height: 1.6),
+        style: TextStyle(color: AppColors.fg70, fontSize: 15, height: 1.6),
       ),
       const SizedBox(height: 22),
       if (_ios) ...[

@@ -154,7 +154,7 @@ class _LearnPath extends StatelessWidget {
           ),
         if (Backend.instance.unread > 0)
           Card(
-            color: const Color(0xFF1B3A4B),
+            color: AppColors.tint,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: const BorderSide(color: AppColors.gold)),
             child: ListTile(
               leading: const Text('📬', style: TextStyle(fontSize: 26)),
@@ -238,7 +238,7 @@ class _LearnPath extends StatelessWidget {
                 Text(emoji, style: const TextStyle(fontSize: 30)),
                 const SizedBox(height: 6),
                 Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white)),
-                Text(sub, style: const TextStyle(fontSize: 12, color: Colors.white70)),
+                Text(sub, style: TextStyle(fontSize: 12, color: AppColors.fg70)),
               ]),
             ),
           ),
@@ -261,12 +261,12 @@ class _LearnPath extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 16),
       child: Row(children: [
-        const Expanded(child: Divider(color: Colors.white24)),
+        Expanded(child: Divider(color: AppColors.fg24)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(title, style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
+          child: Text(title, style: TextStyle(color: AppColors.fg70, fontWeight: FontWeight.bold)),
         ),
-        const Expanded(child: Divider(color: Colors.white24)),
+        Expanded(child: Divider(color: AppColors.fg24)),
       ]),
     );
   }
@@ -286,12 +286,12 @@ class _LearnPath extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Text(title, style: TextStyle(fontFamily: 'Sarchia', fontSize: 19, color: lek.color, fontWeight: FontWeight.bold)),
           Text(lek.titleDe, textDirection: TextDirection.ltr, textAlign: TextAlign.end,
-              style: const TextStyle(color: Colors.white60, fontSize: 13)),
+              style: TextStyle(color: AppColors.fg60, fontSize: 13)),
           const SizedBox(height: 10),
           Row(children: [
             Expanded(
               child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: const BorderSide(color: Colors.white30)),
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: BorderSide(color: AppColors.fg30)),
                 onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
                 icon: const Text('💬'),
                 label: Text(tr(n, 'دیالۆگ', 'Dialog', 'Dialogue')),
@@ -301,7 +301,7 @@ class _LearnPath extends StatelessWidget {
             Expanded(
               child: OutlinedButton.icon(
                 style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.white, side: BorderSide(color: best != null && best >= 60 ? AppColors.green : Colors.white30)),
+                    foregroundColor: Colors.white, side: BorderSide(color: best != null && best >= 60 ? AppColors.green : AppColors.fg30)),
                 onPressed: () => openLektionTest(context, lek),
                 icon: Text(best != null && best >= 60 ? '✅' : '📝'),
                 label: Text(best == null ? tr(n, 'ئەزموون', 'Test', 'Test') : '$best%'),
@@ -357,7 +357,7 @@ class _LearnPath extends StatelessWidget {
             CircularProgressIndicator(
               value: p.dailyProgress,
               strokeWidth: 7,
-              backgroundColor: Colors.white12,
+              backgroundColor: AppColors.fg12,
               valueColor: const AlwaysStoppedAnimation(AppColors.gold),
             ),
             Text(p.dailyGoalMet ? '☀️' : '🌤️', style: const TextStyle(fontSize: 26)),
@@ -373,7 +373,7 @@ class _LearnPath extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: Colors.white),
             ),
             const SizedBox(height: 4),
-            Text('${p.todayXp} / ${p.dailyGoal} XP', style: const TextStyle(color: Colors.white70)),
+            Text('${p.todayXp} / ${p.dailyGoal} XP', style: TextStyle(color: AppColors.fg70)),
           ]),
         ),
       ]),
@@ -428,7 +428,7 @@ class _LearnPath extends StatelessWidget {
                   ),
               ]),
               const SizedBox(height: 4),
-              Text(unit.title(p.targetLang), style: const TextStyle(color: Colors.white70)),
+              Text(unit.title(p.targetLang), style: TextStyle(color: AppColors.fg70)),
             ],
           ),
         ),

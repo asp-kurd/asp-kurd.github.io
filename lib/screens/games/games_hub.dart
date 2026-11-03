@@ -31,7 +31,7 @@ class GamesHubScreen extends StatelessWidget {
                       style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.w600)),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.settings_rounded, color: Colors.white70),
+                  icon: Icon(Icons.settings_rounded, color: AppColors.fg70),
                   onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())),
                 ),
               ]),
@@ -42,7 +42,7 @@ class GamesHubScreen extends StatelessWidget {
                   tr(n, 'وێنە، دەنگ و یاریێن بچووک. یاریەکێ بدۆزە کو حەز ژێ دکەی.',
                       'Bilder, Töne und kleine Spiele. Finde ein Spiel, das dir gefällt.',
                       'Pictures, sounds and small challenges. Find a game you enjoy.'),
-                  style: const TextStyle(color: Colors.white60, fontSize: 15)),
+                  style: TextStyle(color: AppColors.fg60, fontSize: 15)),
               const SizedBox(height: 18),
               _heroCard(context, n),
               const SizedBox(height: 12),
@@ -104,7 +104,7 @@ class GamesHubScreen extends StatelessWidget {
             for (final c in preview.take(3))
               Padding(padding: const EdgeInsetsDirectional.only(end: 14), child: Text(c.pic, style: const TextStyle(fontSize: 44))),
             const Spacer(),
-            const Icon(Icons.chevron_right_rounded, color: Colors.white54),
+            Icon(Icons.chevron_right_rounded, color: AppColors.fg54),
           ]),
           const SizedBox(height: 10),
           Text(tr(n, 'جهەکێ باش بۆ دەستپێکێ', 'Ein guter Anfang', 'A good place to start'),
@@ -119,7 +119,7 @@ class GamesHubScreen extends StatelessWidget {
           ]),
           const SizedBox(height: 6),
           Text(tr(n, 'ئێک وێنە. ئێک پەیڤ. ب لەزا خۆ.', 'Ein Bild. Ein Wort. Dein Tempo.', 'One picture. One word. Your pace.'),
-              style: const TextStyle(color: Colors.white60)),
+              style: TextStyle(color: AppColors.fg60)),
         ]),
       ),
     );
@@ -147,8 +147,8 @@ class GamesHubScreen extends StatelessWidget {
       ),
       child: ListTile(
         leading: Icon(icon, color: color, size: 30),
-        title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, color: count > 0 ? color : Colors.white)),
-        subtitle: Text(subtitle, style: const TextStyle(color: Colors.white54)),
+        title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, color: count > 0 ? color : AppColors.fg)),
+        subtitle: Text(subtitle, style: TextStyle(color: AppColors.fg54)),
         trailing: count > 0
             ? Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -172,7 +172,7 @@ class GamesHubScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.card,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: Colors.white10),
+          border: Border.all(color: AppColors.fg10),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
@@ -184,17 +184,17 @@ class GamesHubScreen extends StatelessWidget {
               child: Text(g.emoji, style: const TextStyle(fontSize: 32)),
             ),
             const Spacer(),
-            const Icon(Icons.chevron_right_rounded, color: Colors.white38),
+            Icon(Icons.chevron_right_rounded, color: AppColors.fg38),
           ]),
           const Spacer(),
           Text(g.title(n), maxLines: 2, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
           const SizedBox(height: 4),
-          Text(g.subtitle(n), maxLines: 2, style: const TextStyle(fontSize: 13, color: Colors.white54)),
+          Text(g.subtitle(n), maxLines: 2, style: TextStyle(fontSize: 13, color: AppColors.fg54)),
           const SizedBox(height: 6),
           Row(children: [
             const Icon(Icons.star_rounded, size: 16, color: AppColors.gold),
             const SizedBox(width: 3),
-            Text('$stars / ${appCurriculum.length * 3}', style: const TextStyle(fontSize: 12, color: Colors.white54)),
+            Text('$stars / ${appCurriculum.length * 3}', style: TextStyle(fontSize: 12, color: AppColors.fg54)),
           ]),
         ]),
       ),
@@ -252,7 +252,7 @@ class GamePathScreen extends StatelessWidget {
                           Text(tr(n, 'هەمی قۆناغ', 'Alle Kapitel', 'All chapters'),
                               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                           Text(tr(n, 'بەردەوام بە: $played / ${units.length} قۆناغ', 'Weiter: $played / ${units.length}',
-                              'Continue: $played / ${units.length}'), style: const TextStyle(color: Colors.white60)),
+                              'Continue: $played / ${units.length}'), style: TextStyle(color: AppColors.fg60)),
                         ]),
                       ),
                     ]),
@@ -346,9 +346,9 @@ class _SnakePath extends StatelessWidget {
           height: 96,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: const Color(0xFF253740),
+            color: AppColors.chip,
             borderRadius: BorderRadius.circular(26),
-            border: Border.all(color: isCurrent ? kind.color : (stars == 3 ? AppColors.gold : Colors.white12), width: 3),
+            border: Border.all(color: isCurrent ? kind.color : (stars == 3 ? AppColors.gold : AppColors.fg12), width: 3),
             boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.35), blurRadius: 10, offset: const Offset(0, 5))],
           ),
           child: Text(pic, style: const TextStyle(fontSize: 48)),
@@ -362,7 +362,7 @@ class _SnakePath extends StatelessWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
         ),
-        Text('$stars / 3 ⭐', style: const TextStyle(color: Colors.white54, fontSize: 12)),
+        Text('$stars / 3 ⭐', style: TextStyle(color: AppColors.fg54, fontSize: 12)),
       ]),
     );
   }

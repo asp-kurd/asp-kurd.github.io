@@ -45,6 +45,12 @@ def collect():
                 jobs["en"][c["en"]] = c["en"]
             if only in (None, "ku"):
                 jobs["ku"][c["ku"]] = c["kuLat"]  # کلیل: نڤیسینا کوردی؛ دەنگ: لاتینی
+            cz = c.get("cloze")
+            if cz:  # رستا تەمام یا «جهێ ڤالا»
+                full = cz["de"]
+                for part in cz["a"].split(" … "):
+                    full = full.replace("___", part, 1)
+                jobs["de"][full] = full
     for l in cur.get("lektionen", []):
         for line in l["dialog"]["lines"]:
             jobs["de"][line["de"]] = line["de"]
@@ -55,6 +61,11 @@ def collect():
         for q in qs:
             if q.get("audio"):
                 jobs["de"][q["audio"]] = q["audio"]
+    summ = ROOT / "assets/a1_summary.json"
+    if summ.exists():  # ⚡ A1 mit Poya: رستێن نموونە
+        for c in json.loads(summ.read_text(encoding="utf-8"))["cards"]:
+            for e in c["examples"]:
+                jobs["de"][e["de"]] = e["de"]
     book = ROOT / "assets/book.json"
     if book.exists():
         def walk(o):

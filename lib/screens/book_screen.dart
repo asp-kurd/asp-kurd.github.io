@@ -6,6 +6,7 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import 'summary_screen.dart';
 
 /// 📖 پەرتووکا رێزمانێ: «A1.1 mit Poya» — ٢٠ بەش، ژ ئەلفوبێ هەتا Perfekt
 /// ناڤەرۆک هەردەم ب بادینییە (پەرتووکا ئەلمانی ب بادینی)، لەوما RTL دمینیت.
@@ -68,7 +69,8 @@ TextSpan richSpan(String s, TextStyle base, {Color? boldColor}) {
   );
 }
 
-Widget rich(String s, {double size = 16, Color color = Colors.white, TextAlign? align, Color? boldColor}) {
+Widget rich(String s, {double size = 16, Color? color, TextAlign? align, Color? boldColor}) {
+  color ??= AppColors.fg;
   return Text.rich(
     richSpan(s, TextStyle(fontSize: size, color: color, height: 1.6), boldColor: boldColor),
     textDirection: dirOf(s),
@@ -82,7 +84,7 @@ Color genderColor(String g) => switch (g) {
       'der' => AppColors.blue,
       'die' => AppColors.red,
       'das' => AppColors.green,
-      _ => Colors.white,
+      _ => AppColors.fg,
     };
 
 // ───────── لیستا بەشان ─────────
@@ -118,6 +120,8 @@ class _BookScreenState extends State<BookScreen> {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
               children: [
+                const SummaryBanner(),
+                const SizedBox(height: 12),
                 _cover(done, n),
                 const SizedBox(height: 8),
                 for (final part in bookParts) ...[
@@ -179,7 +183,7 @@ class _BookScreenState extends State<BookScreen> {
 
   Widget _partHeader(String t) => Padding(
         padding: const EdgeInsets.only(top: 18, bottom: 8),
-        child: Text(t, style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold, fontSize: 15)),
+        child: Text(t, style: TextStyle(color: AppColors.fg70, fontWeight: FontWeight.bold, fontSize: 15)),
       );
 
   Widget _chapterTile(BuildContext context, int i) {
@@ -201,7 +205,7 @@ class _BookScreenState extends State<BookScreen> {
           child: Icon(read ? Icons.check_rounded : c.icon, color: Colors.white),
         ),
         title: Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: no.isEmpty ? null : Text(no, style: const TextStyle(color: Colors.white54)),
+        subtitle: no.isEmpty ? null : Text(no, style: TextStyle(color: AppColors.fg54)),
         trailing: const Icon(Icons.chevron_right_rounded),
         onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ChapterScreen(index: i))),
       ),
@@ -227,7 +231,7 @@ class ChapterScreen extends StatelessWidget {
           foregroundColor: Colors.white,
           toolbarHeight: 76,
           title: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-            if (no.isNotEmpty) Text(no, style: const TextStyle(fontSize: 13, color: Colors.white70)),
+            if (no.isNotEmpty) Text(no, style: TextStyle(fontSize: 13, color: AppColors.fg70)),
             Text(name, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), maxLines: 2, overflow: TextOverflow.ellipsis),
           ]),
         ),
@@ -264,7 +268,7 @@ class ChapterScreen extends StatelessWidget {
           child: Row(children: [
             Container(width: 5, height: 24, decoration: BoxDecoration(color: accent, borderRadius: BorderRadius.circular(3))),
             const SizedBox(width: 10),
-            Expanded(child: rich(b.text, size: 19, color: Colors.white)),
+            Expanded(child: rich(b.text, size: 19, color: AppColors.fg)),
           ]),
         );
       case 'p':
@@ -285,7 +289,7 @@ class ChapterScreen extends StatelessWidget {
           for (var i = 0; i < b.items.length; i++) _listItem(b.items[i], b.type == 'ol' ? '${i + 1}' : '•', accent),
         ]);
       case 'table':
-        return _BookTable(head: b.head, rows: b.rows, accent: accent);
+        return BookTable(head: b.head, rows: b.rows, accent: accent);
       case 'vocab':
         return _VocabGrid(gender: b.gender, items: b.rows);
       case 'quiz':
@@ -323,11 +327,11 @@ class ChapterScreen extends StatelessWidget {
 }
 
 // ───────── خشتە (ب ستوونێن ئەلمانی یێن ب دەنگ) ─────────
-class _BookTable extends StatelessWidget {
+class BookTable extends StatelessWidget {
   final List<String> head;
   final List<List<String>> rows;
   final Color accent;
-  const _BookTable({required this.head, required this.rows, required this.accent});
+  const BookTable({required this.head, required this.rows, required this.accent});
 
   @override
   Widget build(BuildContext context) {
@@ -345,7 +349,7 @@ class _BookTable extends StatelessWidget {
                 fontSize: header ? 14 : 15,
                 height: 1.45,
                 fontWeight: header ? FontWeight.bold : FontWeight.normal,
-                color: header ? Colors.white : (german ? const Color(0xFFBEE9FF) : Colors.white),
+                color: header ? Colors.white : (german ? AppColors.germanText : AppColors.fg),
               ),
             ),
             textDirection: dirOf(s),
@@ -363,7 +367,7 @@ class _BookTable extends StatelessWidget {
         child: Table(
           defaultColumnWidth: const IntrinsicColumnWidth(),
           defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-          border: TableBorder.symmetric(inside: const BorderSide(color: Colors.white10)),
+          border: TableBorder.symmetric(inside: BorderSide(color: AppColors.fg10)),
           children: [
             TableRow(
               decoration: BoxDecoration(color: accent.withValues(alpha: 0.85)),
@@ -371,7 +375,7 @@ class _BookTable extends StatelessWidget {
             ),
             for (var r = 0; r < rows.length; r++)
               TableRow(
-                decoration: BoxDecoration(color: r.isEven ? AppColors.card : const Color(0xFF1A282E)),
+                decoration: BoxDecoration(color: r.isEven ? AppColors.card : AppColors.cardAlt),
                 children: [
                   for (var c = 0; c < head.length; c++) cell(c < rows[r].length ? rows[r][c] : ''),
                 ],
@@ -437,7 +441,7 @@ class _VocabGridState extends State<_VocabGrid> {
                     const SizedBox(height: 4),
                     Text(
                       quizMode && !shown.contains(i) ? '؟ ؟ ؟' : widget.items[i][1],
-                      style: const TextStyle(color: Colors.white, fontSize: 15),
+                      style: TextStyle(color: AppColors.fg, fontSize: 15),
                     ),
                   ]),
                 ),
@@ -507,7 +511,7 @@ class _QuizBlockState extends State<_QuizBlock> {
       decoration: BoxDecoration(
         color: AppColors.card,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: open ? AppColors.green : Colors.white12, width: 1.5),
+        border: Border.all(color: open ? AppColors.green : AppColors.fg12, width: 1.5),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         Text('${i + 1}. ${it.q}', textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 16, height: 1.5)),
