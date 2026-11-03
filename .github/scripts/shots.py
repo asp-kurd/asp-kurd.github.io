@@ -32,9 +32,9 @@ with sync_playwright() as p:
         # بۆ هەر خەلەتیەکێ: کۆدێ دۆرا وێ ژ main.dart.js
         import re
         js = open("build/web/main.dart.js", encoding="utf-8").read().split("\n")
-        for ln in sorted({int(m.group(1)) for m in re.finditer(r"main\.dart\.js\?v=\w+:(\d+):\d+", "\n".join(logs))})[:6]:
+        for ln in list(dict.fromkeys(int(m.group(1)) for m in re.finditer(r"main\.dart\.js\?v=\w+:(\d+):\d+", "\n".join(logs))))[:3]:
             logs.append(f"----- main.dart.js:{ln}")
-            logs.extend(f"{k+1}: {js[k][:300]}" for k in range(max(0, ln - 12), min(len(js), ln + 3)))
+            logs.extend(f"{k+1}: {js[k][:300]}" for k in range(max(0, ln - 40), min(len(js), ln + 3)))
         open(f"{out}/{name}.log", "w").write("\n".join(logs))
         pg.close()
     b.close()
