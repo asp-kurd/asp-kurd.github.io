@@ -257,7 +257,7 @@ class _SummaryCardScreenState extends State<SummaryCardScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('${i + 1} / ${cards.length}'),
+          title: Text('${i + 1} ژ ${cards.length}'),
           actions: [
             TextButton.icon(
               onPressed: () => setState(() {

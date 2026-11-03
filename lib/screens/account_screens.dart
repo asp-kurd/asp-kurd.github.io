@@ -416,7 +416,7 @@ class _SetupScreenState extends State<SetupScreen> {
             if (step == 1) ..._pushStep() else ..._installStep(),
             if (note != null) ...[
               const SizedBox(height: 14),
-              Text(note!, textAlign: TextAlign.center, style: const TextStyle(color: AppColors.gold)),
+              Text(note!, textAlign: TextAlign.center, style: TextStyle(color: AppColors.goldText)),
             ],
             const SizedBox(height: 10),
             TextButton(onPressed: step == 1 ? _afterPush : _done, child: Text('پاشان', style: TextStyle(color: AppColors.fg54))),
@@ -484,7 +484,7 @@ class _SetupScreenState extends State<SetupScreen> {
         row('٣', '✅', 'ل سەری «Add» بکە'),
         row('٤', '🏠', 'ASP ژ Home Screen ڤەکە — ئاگەهداری دێ ل وێرێ هێنە پرسیارکرن'),
         const SizedBox(height: 6),
-        const Center(child: Text('👇 دوگمەیا Share ل خوارێ یە', style: TextStyle(color: AppColors.gold))),
+        Center(child: Text('👇 دوگمەیا Share ل خوارێ یە', style: TextStyle(color: AppColors.goldText))),
       ] else ...[
         BigButton(label: 'دامەزراندن 📲', onPressed: _install),
         const SizedBox(height: 16),

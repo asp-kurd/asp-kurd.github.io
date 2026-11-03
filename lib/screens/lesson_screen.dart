@@ -22,7 +22,10 @@ class InteractiveLessonScreen extends StatefulWidget {
   /// ئەگەر null بیت، ئەڤە وانەیا دووبارەکرنا خەلەتیانە
   final LessonUnit? unit;
   final List<WordConcept> concepts;
-  const InteractiveLessonScreen({super.key, required this.unit, required this.concepts});
+
+  /// بۆ تاقیکرنێ: هەمی پرسیار ژ ئێک جۆری
+  final ExerciseType? onlyType;
+  const InteractiveLessonScreen({super.key, required this.unit, required this.concepts, this.onlyType});
 
   @override
   State<InteractiveLessonScreen> createState() => _InteractiveLessonScreenState();
@@ -101,6 +104,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     ];
     final list = <Exercise>[];
     final concepts = [...widget.concepts]..shuffle(_rng);
+    if (widget.onlyType != null) return [for (final c in concepts) Exercise(c, widget.onlyType!)];
     // دەستپێک ب یاریا جووتکرنێ
     if (concepts.length >= 4) {
       list.add(Exercise(concepts.first, ExerciseType.match, group: concepts.take(4).toList()));
@@ -495,7 +499,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             Text(c.text(native), textDirection: native.direction, textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: AppColors.fg70)),
             const SizedBox(height: 6),
-            const Text('=', style: TextStyle(fontSize: 26, color: AppColors.gold, fontWeight: FontWeight.bold)),
+            Text('=', style: TextStyle(fontSize: 26, color: AppColors.goldText, fontWeight: FontWeight.bold)),
             const SizedBox(height: 6),
           ],
           Text(shown.text(target), textDirection: target.direction, textAlign: TextAlign.center,
@@ -1035,7 +1039,7 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                     children: [
                       const Icon(Icons.bolt, color: AppColors.gold, size: 36),
                       Text('+${widget.xp} XP',
-                          style: const TextStyle(fontSize: 28, color: AppColors.gold, fontWeight: FontWeight.bold)),
+                          style: TextStyle(fontSize: 28, color: AppColors.goldText, fontWeight: FontWeight.bold)),
                     ],
                   ),
                   const Spacer(),

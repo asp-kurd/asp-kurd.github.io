@@ -26,6 +26,9 @@ class AppColors {
   static Color get fg12 => _a(Colors.white12, 0.10);
   static Color get fg10 => _a(Colors.white10, 0.08);
 
+  /// زێڕی بۆ نڤیسینێ (ل رۆهنی تاریتر دا بهێتە خواندن)
+  static Color get goldText => dark ? gold : const Color(0xFFB86E00);
+
   static const green = Color(0xFF58CC02);
   static const blue = Color(0xFF1CB0F6);
   static const red = Color(0xFFFF4B4B);

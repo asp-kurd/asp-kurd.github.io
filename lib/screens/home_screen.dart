@@ -345,7 +345,7 @@ class _LearnPath extends StatelessWidget {
         gradient: LinearGradient(
           colors: p.dailyGoalMet
               ? const [Color(0xFFFFC800), Color(0xFFFF9600)]
-              : const [Color(0xFF202F36), Color(0xFF1A3A4A)],
+              : (AppColors.dark ? const [Color(0xFF202F36), Color(0xFF1A3A4A)] : const [Color(0xFF1CB0F6), Color(0xFF2B70C9)]),
         ),
         borderRadius: BorderRadius.circular(20),
       ),

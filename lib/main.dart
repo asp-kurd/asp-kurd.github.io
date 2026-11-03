@@ -15,6 +15,7 @@ import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/summary_screen.dart';
+import 'models.dart';
 import 'ui.dart';
 
 Future<void> main() async {
@@ -66,6 +67,8 @@ class ZimanProApp extends StatelessWidget {
       'mascot' => const MascotDemo(),
       'home' => const HomeScreen(),
       'summary' => const SummaryListScreen(),
+      'cloze' => InteractiveLessonScreen(
+          unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze),
       'card' => const SummaryCardScreen(start: 9),
       'lesson' => InteractiveLessonScreen(unit: appCurriculum[10], concepts: appCurriculum[10].concepts),
       _ => null,

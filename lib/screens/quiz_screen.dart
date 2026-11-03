@@ -168,7 +168,7 @@ class _QuizScreenState extends State<QuizScreen> {
               if (part.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(part, style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold)),
+                  child: Text(part, style: TextStyle(color: AppColors.goldText, fontWeight: FontWeight.bold)),
                 ),
               Text(_instruction(), style: TextStyle(color: AppColors.fg70, fontSize: 16, fontWeight: FontWeight.w600)),
               const SizedBox(height: 14),
@@ -483,7 +483,7 @@ class QuizResultScreen extends StatelessWidget {
               ),
               if (extra != null) ...[
                 const SizedBox(height: 12),
-                Text(extra!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, color: AppColors.gold)),
+                Text(extra!, textAlign: TextAlign.center, style: TextStyle(fontSize: 16, color: AppColors.goldText)),
               ],
               const Spacer(),
               SizedBox(

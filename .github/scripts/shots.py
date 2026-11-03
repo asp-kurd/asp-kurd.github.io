@@ -6,7 +6,7 @@ out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
     ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
-    ("lesson_light", "demo=lesson&theme=light"), ("summary_light", "demo=summary&theme=light"),
+    ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
     ("mascot", "demo=mascot"),
 ]
@@ -20,8 +20,9 @@ with sync_playwright() as p:
             pg.screenshot(path=f"{out}/{name}.png")
             if name.startswith("lesson"):
                 # بەرسڤەکێ هەلبژێرە و پشکنین بکە
-                pg.mouse.click(214, 600); time.sleep(0.6)
-                pg.mouse.click(214, 860); time.sleep(1.2)
+                for y in (560, 640, 720):
+                    pg.mouse.click(214, y); time.sleep(0.4)
+                pg.mouse.click(214, 880); time.sleep(1.5)
                 pg.screenshot(path=f"{out}/{name}_2.png")
         except Exception as e:
             print("fail", name, e)

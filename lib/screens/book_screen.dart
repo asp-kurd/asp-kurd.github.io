@@ -63,7 +63,7 @@ TextSpan richSpan(String s, TextStyle base, {Color? boldColor}) {
         if (parts[i].isNotEmpty)
           TextSpan(
             text: parts[i],
-            style: i.isOdd ? TextStyle(fontWeight: FontWeight.bold, color: boldColor ?? AppColors.gold) : null,
+            style: i.isOdd ? TextStyle(fontWeight: FontWeight.bold, color: boldColor ?? AppColors.goldText) : null,
           ),
     ],
   );

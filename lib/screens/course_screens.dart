@@ -47,7 +47,7 @@ Future<void> showGrammarCard(BuildContext context, LessonUnit unit, {VoidCallbac
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(g.titleKu, style: const TextStyle(fontSize: 21, fontWeight: FontWeight.bold, fontFamily: 'Sarchia')),
                   if (g.titleDe.isNotEmpty)
-                    Text(g.titleDe, textDirection: TextDirection.ltr, style: const TextStyle(color: AppColors.gold)),
+                    Text(g.titleDe, textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.goldText)),
                 ]),
               ),
             ]),
@@ -129,7 +129,7 @@ class _GrammarTable extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: r == 0 || c == 0 ? FontWeight.bold : FontWeight.w500,
-                                color: c == 0 && r > 0 ? AppColors.gold : AppColors.fg)),
+                                color: c == 0 && r > 0 ? AppColors.goldText : AppColors.fg)),
                       ),
                     ),
                 ],
@@ -486,7 +486,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
             child: Column(children: [
               Text(title, style: TextStyle(color: AppColors.fg54, fontSize: 13)),
               const SizedBox(height: 4),
-              Text(value, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.gold)),
+              Text(value, textAlign: TextAlign.center, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.goldText)),
             ]),
           ),
         );
