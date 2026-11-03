@@ -195,8 +195,15 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       return;
     }
     if (ex.type == ExerciseType.cloze) {
-      cz = _clozeFor(ex.concept);
-      options = [cz!.answer, ...cz!.distractors]..shuffle(_rng);
+      final z = _clozeFor(ex.concept) ?? ex.concept.cloze;
+      if (z == null) {
+        // نابیت ئەڤ پرسیارە ب جهێ ڤالا بیت ➔ وەرگێڕان
+        queue[index] = Exercise(ex.concept, ExerciseType.translate);
+        _prepare();
+        return;
+      }
+      cz = z;
+      options = [z.answer, ...z.distractors]..shuffle(_rng);
       return;
     }
     if (ex.type == ExerciseType.trueFalse) {
