@@ -511,7 +511,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
               border: Border.all(color: color, width: 4),
             ),
             child: Text('${l.upper} ${l.lower}',
-                textDirection: TextDirection.ltr, style: const TextStyle(fontFamily: 'LeagueGothic', fontSize: 78, height: 1)),
+                textDirection: TextDirection.ltr, style: const TextStyle(fontFamily: 'Roboto', fontSize: 72, fontWeight: FontWeight.w900, height: 1)),
           ),
         ),
         const SizedBox(height: 14),
@@ -530,7 +530,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
             const SizedBox(height: 6),
             RichText(
               textDirection: TextDirection.ltr,
-              text: TextSpan(style: const TextStyle(fontFamily: 'LeagueGothic', fontSize: 40, letterSpacing: 1), children: spans),
+              text: TextSpan(style: const TextStyle(fontFamily: 'Roboto', fontSize: 36, fontWeight: FontWeight.bold), children: spans),
             ),
             const SizedBox(height: 6),
             Text('${tr(_ui, 'خواندن', 'Aussprache', 'Say')}: ${l.read}', style: TextStyle(fontSize: 17, color: AppColors.fg70)),

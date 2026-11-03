@@ -46,8 +46,8 @@ class ZimanProApp extends StatelessWidget {
     return ThemeData(
       useMaterial3: true,
       brightness: dark ? Brightness.dark : Brightness.light,
-      // لاتینی/ئەلمانی ب League Gothic؛ هەر پیتەکا کوردی/عەرەبی ب Shasenem
-      fontFamily: 'LeagueGothic',
+      // لاتینی/ئەلمانی/ئینگلیزی ب Roboto؛ هەر پیتەکا کوردی/عەرەبی ب Shasenem
+      fontFamily: 'Roboto',
       fontFamilyFallback: const ['Shasenem', 'Sarchia'],
       colorScheme: scheme.copyWith(surface: AppColors.bg, onSurface: AppColors.fg),
       scaffoldBackgroundColor: AppColors.bg,
