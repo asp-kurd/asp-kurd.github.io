@@ -1,0 +1,15 @@
+name: Auth probe
+on:
+  push:
+    paths: [.github/workflows/auth_probe.yml, .github/scripts/auth_probe.py]
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install -q requests && python .github/scripts/auth_probe.py | tee probe.log
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      - if: always()
+        run: python3 -c "import sys;[print('::notice title=probe::'+l.strip()) for l in open('probe.log')]"

@@ -1,0 +1,24 @@
+"""Probe: auth settings, anonymous → email/password link, password login, progress table. Cleans up."""
+import os, sys, time, requests
+URL = "https://pecnuohpxraoxvfjsngm.supabase.co"
+KEY = "sb_publishable_btfzw-7Kc7ZJmfqvhPYr5w_ybgL55CJ"
+SVC = (os.environ.get("SUPABASE_SERVICE_KEY") or "").strip()
+def show(name, r):
+    print(("✅" if r.status_code < 300 else "❌"), name, r.status_code, r.text[:260].replace("\n", " "))
+    return r
+s = requests.get(f"{URL}/auth/v1/settings", headers={"apikey": KEY}).json()
+print("settings: mailer_autoconfirm=%s anonymous=%s email=%s disable_signup=%s" % (
+    s.get("mailer_autoconfirm"), s.get("external", {}).get("anonymous_users"), s.get("external", {}).get("email"), s.get("disable_signup")))
+r = show("anon signup", requests.post(f"{URL}/auth/v1/signup", headers={"apikey": KEY}, json={"data": {}}))
+j = r.json(); tok = j["access_token"]; uid = j["user"]["id"]
+H = {"apikey": KEY, "Authorization": f"Bearer {tok}", "Content-Type": "application/json"}
+email = f"probe{int(time.time())}@example.com"
+r = show("link email+password (PUT /user)", requests.put(f"{URL}/auth/v1/user", headers=H, json={"email": email, "password": "Probe#12345"}))
+if r.ok:
+    u = r.json(); print("   email=", u.get("email"), "new_email=", u.get("new_email"), "is_anonymous=", u.get("is_anonymous"))
+r = show("password login", requests.post(f"{URL}/auth/v1/token?grant_type=password", headers={"apikey": KEY}, json={"email": email, "password": "Probe#12345"}))
+if r.ok: print("   same user:", r.json()["user"]["id"] == uid)
+show("progress table select", requests.get(f"{URL}/rest/v1/progress?select=user_id&limit=1", headers=H))
+show("learners email column", requests.get(f"{URL}/rest/v1/learners?select=email&limit=1", headers=H))
+if SVC:
+    show("cleanup (admin delete user)", requests.delete(f"{URL}/auth/v1/admin/users/{uid}", headers={"apikey": SVC, "Authorization": f"Bearer {SVC}"}))
