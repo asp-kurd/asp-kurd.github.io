@@ -10,6 +10,9 @@ import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web
 import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
 import 'screens/character_screen.dart';
 import 'screens/book_screen.dart';
+import 'screens/games/extra_games.dart';
+import 'screens/games/games_hub.dart';
+import 'screens/games/goethe_mock.dart';
 import 'screens/grammar_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
@@ -101,6 +104,11 @@ class ZimanProApp extends StatelessWidget {
       'book' => const Scaffold(body: BookScreen()),
       'letters' => LetterLessonScreen(unit: appCurriculum.firstWhere((u) => u.isAlphabet)),
       'gpractice' => const _GramPracticeDemo(),
+      'article' => const ArticleGameScreen(),
+      'conj' => const ConjugationGameScreen(),
+      'goethe' => const GoetheMockScreen(),
+      'games' => const Scaffold(body: GamesHubScreen()),
+      'gram4' => const GrammarLektionScreen(n: 4),
       'grammar' => const GrammarLektionScreen(n: 6),
       'grammarlist' => const GrammarListScreen(),
       'home' => const HomeScreen(),

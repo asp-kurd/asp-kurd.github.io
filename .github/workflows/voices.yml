@@ -11,6 +11,8 @@ on:
       - assets/book.json
       - assets/a1_summary.json
       - assets/grammar.json
+      - assets/kommunikation.json
+      - assets/goethe.json
       - voice_lab/make_ai_voices.py
       - .github/workflows/voices.yml
   workflow_dispatch:

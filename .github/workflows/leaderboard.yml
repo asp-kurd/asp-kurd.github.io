@@ -1,0 +1,16 @@
+# 🏆 لیستا باشترینان یا هەفتیێ — هەر دەمژمێرەکێ ژ نوو دهێتە حسابکرن
+name: Leaderboard
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    paths: [.github/scripts/leaderboard.py, .github/workflows/leaderboard.yml]
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install -q requests && python .github/scripts/leaderboard.py
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}

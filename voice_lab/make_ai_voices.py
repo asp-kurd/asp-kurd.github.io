@@ -50,7 +50,7 @@ def fnv(text: str) -> str:
 def collect():
     """{lang: {text_key_source: synth_text}}"""
     cur = json.loads((ROOT / "assets/curriculum.json").read_text(encoding="utf-8"))
-    jobs = {"de": {}, "en": {}, "ku": {}}
+    jobs = {"de": {}, "en": {}, "ku": {}, "de_f": {}, "en_m": {}}
     for u in cur["units"]:
         only = u.get("only")  # قۆناغێن تایبەت ب زمانەکی (ئەلفوبێ)
         for c in u["concepts"]:
@@ -95,6 +95,26 @@ def collect():
                         txt = pr[k]
                         if "→" not in txt and ":" not in txt and "(" not in txt and "___" not in txt:
                             jobs["de"][txt] = txt
+    goe = ROOT / "assets/goethe.json"
+    if goe.exists():  # 🎓 Goethe Modelltest: دەنگێ گوهداریێ (ب ڕەگەزێ ئاخفتنکەری)
+        for part in json.loads(goe.read_text(encoding="utf-8"))["parts"]:
+            for sec in part["sections"]:
+                for it in sec["items"]:
+                    for ln in it.get("audio") or []:
+                        key = "de_f" if ln["g"] == "f" else "de"
+                        jobs[key][ln["t"]] = ln["t"]
+                    for c in it.get("cards") or []:
+                        if isinstance(c, dict) and c.get("ex"):
+                            jobs["de"][c["ex"]] = c["ex"]
+                    if it.get("example"):
+                        jobs["de"][it["example"]] = it["example"]
+    kom = ROOT / "assets/kommunikation.json"
+    if kom.exists():  # 💬 Kommunikation ژ پەرتووکێ
+        for l in json.loads(kom.read_text(encoding="utf-8"))["lektionen"]:
+            for g in l["groups"]:
+                for ln in g["lines"]:
+                    if "…" not in ln["de"]:
+                        jobs["de"][ln["de"]] = ln["de"]
     book = ROOT / "assets/book.json"
     if book.exists():
         def walk(o):
@@ -108,7 +128,7 @@ def collect():
                     walk(v)
         walk(json.loads(book.read_text(encoding="utf-8")))
     for k, src in SAME_TEXT.items():
-        jobs[k] = dict(jobs[src])
+        jobs[k] = {**jobs[src], **jobs[k]}
     return jobs
 
 

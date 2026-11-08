@@ -12,6 +12,7 @@ import 'streak_screen.dart';
 import 'widgets/combo.dart';
 import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
+import 'widgets/speak_check.dart';
 
 /// شاشەیا وانەیێ: ٤ جۆرێن ڕاهێنانان
 /// - وەرگێڕان (دایک ➔ فێربوون)
@@ -163,6 +164,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     checked = false;
     isCorrect = false;
     hasPracticeRecording = false;
+    _speechPct = null;
     final ex = current;
     if (ex.type == ExerciseType.match) {
       matchLeft = [...ex.group]..shuffle(_rng);
@@ -291,7 +293,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     _praiseText = native == AppLanguage.badini ? randomPraise() : tr(native, '', 'Super! 🎉', 'Great! 🎉');
     _comfortText = native == AppLanguage.badini ? randomComfort() : tr(native, '', 'Fast! 💪', 'Almost! 💪');
     final ok = switch (ex.type) {
-      ExerciseType.speak => true,
+      ExerciseType.speak => true, // 🗣️ ناسینا دەنگی ١٠٠٪ نینە: دل ناچن
       ExerciseType.match => !matchHadMistake,
       ExerciseType.wordBank => bankPicked.map((i) => bankTiles[i]).join(' ') == ex.concept.text(target),
       _ => selected == _correctAnswer,
@@ -306,7 +308,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       Sfx.wrong();
     }
     // ⚡ کۆمبۆ + XP بۆ ڤێ بەرسڤێ
-    final gained = ex.type == ExerciseType.speak ? 2 : progress.registerAnswer(ok);
+    final gained = ex.type == ExerciseType.speak ? ((_speechPct ?? 100) >= 50 ? 2 : 0) : progress.registerAnswer(ok);
     answerXp += gained;
     if (gained > 0) showXpPop(context, gained, combo: progress.combo);
     if (ok && ex.type != ExerciseType.speak && progress.combo > 0 && progress.combo % 5 == 0) {
@@ -749,7 +751,20 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     ]);
   }
 
+  int? _speechPct; // 🗣️ ئەنجاما ناسینا گۆتنێ
+
   Widget _speakArea(Exercise ex) {
+    if (speechSupported && target.ttsCode != null) {
+      return SpeakCheck(
+        key: ValueKey('speak_$index'),
+        target: ex.concept.text(target),
+        lang: target,
+        onResult: (sc) => setState(() {
+          _speechPct = sc.percent;
+          hasPracticeRecording = true;
+        }),
+      );
+    }
     final practice = voice.practiceRecording;
     return Column(
       children: [

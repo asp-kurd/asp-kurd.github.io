@@ -1,0 +1,709 @@
+{
+ "version": 1,
+ "title": "Goethe-Zertifikat A1 · Start Deutsch 1 — Modelltest",
+ "parts": [
+  {
+   "id": "hoeren",
+   "title": "Hören",
+   "ku": "🎧 گوهداری",
+   "minutes": 20,
+   "points": 15,
+   "sections": [
+    {
+     "title": "Teil 1",
+     "ku": "گوهداریا ٦ دیالۆگێن کورت بکە و بەرسڤا دروست هەلبژێرە. هەر دیالۆگەک ٢ جاران دهێت.",
+     "repeat": 2,
+     "items": [
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Entschuldigung, wie spät ist es?"
+        },
+        {
+         "g": "m",
+         "t": "Es ist Viertel nach drei."
+        },
+        {
+         "g": "f",
+         "t": "Danke! Dann habe ich noch Zeit."
+        }
+       ],
+       "q": "Wie spät ist es?",
+       "options": [
+        "3:15 Uhr",
+        "3:45 Uhr",
+        "2:45 Uhr"
+       ],
+       "answer": 0,
+       "ku": "دەمژمێر چەندە؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "m",
+         "t": "Was möchten Sie trinken?"
+        },
+        {
+         "g": "f",
+         "t": "Einen Kaffee, bitte. Ohne Milch."
+        },
+        {
+         "g": "m",
+         "t": "Und etwas zu essen?"
+        },
+        {
+         "g": "f",
+         "t": "Nein, danke."
+        }
+       ],
+       "q": "Was bestellt die Frau?",
+       "options": [
+        "Kaffee mit Milch",
+        "Kaffee ohne Milch",
+        "Tee und Kuchen"
+       ],
+       "answer": 1,
+       "ku": "ئافرەت چ داخواز دکەت؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Wie komme ich zum Bahnhof?"
+        },
+        {
+         "g": "m",
+         "t": "Gehen Sie hier geradeaus und dann die zweite Straße links."
+        }
+       ],
+       "q": "Wo ist der Bahnhof?",
+       "options": [
+        "Erste Straße rechts",
+        "Zweite Straße links",
+        "Immer geradeaus"
+       ],
+       "answer": 1,
+       "ku": "وێستگەه ل کیڤەیە؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "m",
+         "t": "Hallo Sara, kommst du am Samstag zu meiner Party?"
+        },
+        {
+         "g": "f",
+         "t": "Am Samstag arbeite ich leider. Aber am Sonntag habe ich Zeit."
+        }
+       ],
+       "q": "Wann hat Sara Zeit?",
+       "options": [
+        "Am Freitag",
+        "Am Samstag",
+        "Am Sonntag"
+       ],
+       "answer": 2,
+       "ku": "سارا کەنگی دەمێ وێ هەیە؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Was kosten die Äpfel?"
+        },
+        {
+         "g": "m",
+         "t": "Ein Kilo kostet zwei Euro fünfzig."
+        },
+        {
+         "g": "f",
+         "t": "Dann nehme ich zwei Kilo."
+        }
+       ],
+       "q": "Wie viel kostet ein Kilo Äpfel?",
+       "options": [
+        "2,15 €",
+        "2,50 €",
+        "5,00 €"
+       ],
+       "answer": 1,
+       "ku": "کیلۆیەکا سێڤان ب چەندە؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "m",
+         "t": "Guten Tag, ich habe einen Termin bei Doktor Weber."
+        },
+        {
+         "g": "f",
+         "t": "Ja, um zehn Uhr. Bitte nehmen Sie noch kurz im Wartezimmer Platz."
+        }
+       ],
+       "q": "Wo ist der Mann?",
+       "options": [
+        "Beim Arzt",
+        "Im Hotel",
+        "Im Supermarkt"
+       ],
+       "answer": 0,
+       "ku": "زەلام ل کیڤەیە؟"
+      }
+     ]
+    },
+    {
+     "title": "Teil 2",
+     "ku": "گوهداریا ئاگەهداریان بکە: دروستە یان خەلەتە؟ تنێ ئێک جار.",
+     "repeat": 1,
+     "items": [
+      {
+       "t": "rf",
+       "text": null,
+       "audio": [
+        {
+         "g": "m",
+         "t": "Achtung an Gleis drei: Der Zug nach Hamburg fährt heute von Gleis sieben."
+        }
+       ],
+       "q": "Der Zug nach Hamburg fährt heute von Gleis 5.",
+       "answer": false,
+       "ku": "شەمەندەفەرا هامبورگێ ژ ڕێکا ٥ دچیت."
+      },
+      {
+       "t": "rf",
+       "text": null,
+       "audio": [
+        {
+         "g": "f",
+         "t": "Liebe Kunden, unser Markt schließt in fünfzehn Minuten. Bitte kommen Sie zur Kasse."
+        }
+       ],
+       "q": "Der Supermarkt schließt in fünfzehn Minuten.",
+       "answer": true,
+       "ku": "سوپەرمارکێت پشتی ١٥ خولەکان دهێتە گرتن."
+      },
+      {
+       "t": "rf",
+       "text": null,
+       "audio": [
+        {
+         "g": "f",
+         "t": "Herr Ali, bitte kommen Sie zur Information im Erdgeschoss."
+        }
+       ],
+       "q": "Herr Ali soll zur Information kommen.",
+       "answer": true,
+       "ku": "دڤێت کاک عەلی بچیتە پشکا پێزانینان."
+      },
+      {
+       "t": "rf",
+       "text": null,
+       "audio": [
+        {
+         "g": "m",
+         "t": "Information zum Flug nach Erbil: Der Flug hat leider dreißig Minuten Verspätung."
+        }
+       ],
+       "q": "Das Flugzeug nach Erbil fliegt pünktlich.",
+       "answer": false,
+       "ku": "فرۆکا هەولێرێ ل دەمێ خۆ دفڕیت."
+      }
+     ]
+    },
+    {
+     "title": "Teil 3",
+     "ku": "گوهداریا نامەیێن تەلەفۆنێ بکە و بەرسڤێ هەلبژێرە. ٢ جاران.",
+     "repeat": 2,
+     "items": [
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Hallo Azad, hier ist Lina. Wir treffen uns nicht um sechs, sondern um halb sieben vor dem Kino. Bis dann!"
+        }
+       ],
+       "q": "Wann treffen sie sich?",
+       "options": [
+        "6:00 Uhr",
+        "6:30 Uhr",
+        "7:30 Uhr"
+       ],
+       "answer": 1,
+       "ku": "ئەو کەنگی دێ ئێکدو بینن؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "m",
+         "t": "Guten Tag, hier ist die Praxis Doktor Müller. Ihr Termin am Montag geht leider nicht. Können Sie am Dienstag um neun Uhr kommen?"
+        }
+       ],
+       "q": "Wann ist der neue Termin?",
+       "options": [
+        "Montag, 9 Uhr",
+        "Dienstag, 9 Uhr",
+        "Dienstag, 10 Uhr"
+       ],
+       "answer": 1,
+       "ku": "ژڤانێ نوو کەنگییە؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Hallo Papa, ich bin noch in der Schule. Kannst du mich bitte um drei Uhr mit dem Auto abholen?"
+        }
+       ],
+       "q": "Was soll Papa machen?",
+       "options": [
+        "Einkaufen gehen",
+        "Die Tochter abholen",
+        "Zur Schule anrufen"
+       ],
+       "answer": 1,
+       "ku": "دڤێت باب چ بکەت؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "m",
+         "t": "Hallo Sara, hier ist Karim. Ich brauche für morgen noch Brot und Milch. Kannst du das bitte kaufen? Danke!"
+        }
+       ],
+       "q": "Was soll Sara kaufen?",
+       "options": [
+        "Brot und Käse",
+        "Milch und Eier",
+        "Brot und Milch"
+       ],
+       "answer": 2,
+       "ku": "دڤێت سارا چ بکڕیت؟"
+      },
+      {
+       "t": "mc",
+       "audio": [
+        {
+         "g": "f",
+         "t": "Guten Tag, hier ist das Reisebüro Sonne. Ihre Tickets sind da. Sie können sie ab Mittwoch abholen."
+        }
+       ],
+       "q": "Ab wann kann man die Tickets abholen?",
+       "options": [
+        "Ab Montag",
+        "Ab Mittwoch",
+        "Ab Freitag"
+       ],
+       "answer": 1,
+       "ku": "ژ کەنگی ڤە دشێت بلیتان وەربگریت؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lesen",
+   "title": "Lesen",
+   "ku": "📖 خواندن",
+   "minutes": 25,
+   "points": 15,
+   "sections": [
+    {
+     "title": "Teil 1",
+     "ku": "دەقان بخوینە: دروستە یان خەلەتە؟",
+     "items": [
+      {
+       "t": "rf",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "audio": null,
+       "q": "Lara wohnt jetzt in Berlin.",
+       "answer": true,
+       "ku": "لارا نوکە ل بەرلینێ دژیت."
+      },
+      {
+       "t": "rf",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "audio": null,
+       "q": "Die Wohnung hat drei Zimmer.",
+       "answer": false,
+       "ku": "خانی سێ ژوور هەنە."
+      },
+      {
+       "t": "rf",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "audio": null,
+       "q": "Lara arbeitet am Wochenende.",
+       "answer": false,
+       "ku": "لارا ل دویماهیا هەفتیێ کار دکەت."
+      },
+      {
+       "t": "rf",
+       "text": "Sehr geehrte Frau Ahmad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
+       "audio": null,
+       "q": "Herr Koch kann am Freitag nicht kommen.",
+       "answer": true,
+       "ku": "کاک کۆخ رۆژا ئەینیێ نەشێت بێت."
+      },
+      {
+       "t": "rf",
+       "text": "Sehr geehrte Frau Ahmad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
+       "audio": null,
+       "q": "Er möchte die Hausaufgaben per Post bekommen.",
+       "answer": false,
+       "ku": "ئەو دخوازیت ئەرکێن مالێ ب پۆستێ وەربگریت."
+      }
+     ]
+    },
+    {
+     "title": "Teil 2",
+     "ku": "ل کیژ ڕیکلامێ (a یان b) دێ بەرسڤێ بینی؟",
+     "items": [
+      {
+       "t": "ab",
+       "q": "Sie möchten am Sonntag schwimmen gehen.",
+       "a": "Hallenbad Mitte – Mo bis Fr 7–20 Uhr, Sa 8–14 Uhr",
+       "b": "Stadtbad Nord – täglich 9–21 Uhr, auch am Wochenende",
+       "answer": "b",
+       "ku": "دخوازی رۆژا یەکشەمبیێ مەلەڤانیێ بکەی."
+      },
+      {
+       "t": "ab",
+       "q": "Sie suchen einen Deutschkurs am Abend.",
+       "a": "Sprachschule Lingua: Deutsch A1, Mo + Mi 18–20 Uhr",
+       "b": "Volkshochschule: Deutsch A1, Di + Do 9–12 Uhr",
+       "answer": "a",
+       "ku": "ل خولەکا ئەلمانی ب ئێڤاری دگەڕێی."
+      },
+      {
+       "t": "ab",
+       "q": "Sie möchten ein Fahrrad kaufen.",
+       "a": "Fahrradverleih am Bahnhof – 10 € pro Tag",
+       "b": "Rad-Shop Müller – neue und gebrauchte Fahrräder ab 99 €",
+       "answer": "b",
+       "ku": "دخوازی پاسکیلەکێ بکڕی."
+      },
+      {
+       "t": "ab",
+       "q": "Sie brauchen am Samstagabend einen Arzt.",
+       "a": "Praxis Dr. Weber – Mo bis Fr 8–18 Uhr",
+       "b": "Ärztlicher Notdienst – Tel. 116 117, auch am Wochenende und nachts",
+       "answer": "b",
+       "ku": "رۆژا شەمبیێ ب ئێڤاری دکتۆرەک بۆ تە پێدڤییە."
+      },
+      {
+       "t": "ab",
+       "q": "Sie möchten günstig essen.",
+       "a": "Restaurant Goldener Stern – Menü ab 35 €",
+       "b": "Mensa der Universität – Mittagessen ab 4,50 €, für alle",
+       "answer": "b",
+       "ku": "دخوازی ب هەرزانی بخۆی."
+      }
+     ]
+    },
+    {
+     "title": "Teil 3",
+     "ku": "تابلۆیان بخوینە: دروستە یان خەلەتە؟",
+     "items": [
+      {
+       "t": "rf",
+       "text": "🥖 Bäckerei Schmidt\nMontag Ruhetag\nDi – Sa 6.30 – 18.00 Uhr",
+       "audio": null,
+       "q": "Hier kann man am Montag Brot kaufen.",
+       "answer": false,
+       "ku": "ل ڤێرێ رۆژا دووشەمبیێ دشێی نانی بکڕی."
+      },
+      {
+       "t": "rf",
+       "text": "🚫🅿️ Parken verboten!\nAusfahrt Tag und Nacht freihalten",
+       "audio": null,
+       "q": "Man darf hier nicht parken.",
+       "answer": true,
+       "ku": "ل ڤێرێ ترومبێل ڕاگرتن قەدەغەیە."
+      },
+      {
+       "t": "rf",
+       "text": "Deutschkurs A1\nHeute NICHT in Raum 12,\nsondern in Raum 21 (2. Stock)",
+       "audio": null,
+       "q": "Der Deutschkurs ist heute in Raum 12.",
+       "answer": false,
+       "ku": "خولا ئەلمانی ئەڤرۆ ل ژوورا ١٢ یە."
+      },
+      {
+       "t": "rf",
+       "text": "🚻 WC\n1. OG ➜ (bitte Treppe benutzen)",
+       "audio": null,
+       "q": "Die Toiletten sind im ersten Stock.",
+       "answer": true,
+       "ku": "ئاڤدەست ل قاتێ ئێکێ نە."
+      },
+      {
+       "t": "rf",
+       "text": "🦁 Zoo-Eintritt\nErwachsene 12 €\nKinder (6–14) 6 €\nKinder unter 6 frei",
+       "audio": null,
+       "q": "Kinder bezahlen im Zoo nichts.",
+       "answer": false,
+       "ku": "زارۆک ل باخچێ گیانەوەران چ نادەن."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "schreiben",
+   "title": "Schreiben",
+   "ku": "✍️ نڤیسین",
+   "minutes": 20,
+   "points": 15,
+   "sections": [
+    {
+     "title": "Teil 1",
+     "ku": "فۆرمێ پڕ بکە (٥ خال).",
+     "items": [
+      {
+       "t": "form",
+       "text": "Ihre Freundin Mina Rahimi möchte einen Deutschkurs machen. Sie füllen das Anmeldeformular für sie aus.\n\nMina ist 24 Jahre alt und kommt aus dem Iran. Sie wohnt in der Gartenstraße 8 in 12345 Berlin. Sie möchte am Abend lernen. Sie bezahlt bar.",
+       "ku": "هەڤالا تە دخوازیت بچیتە خولا ئەلمانی. فۆرمێ بۆ وێ پڕ بکە.",
+       "fields": [
+        {
+         "label": "Familienname",
+         "answer": [
+          "Rahimi"
+         ]
+        },
+        {
+         "label": "Alter",
+         "answer": [
+          "24",
+          "24 Jahre",
+          "vierundzwanzig"
+         ]
+        },
+        {
+         "label": "Herkunftsland",
+         "answer": [
+          "Iran",
+          "der Iran",
+          "aus dem Iran"
+         ]
+        },
+        {
+         "label": "Kurszeit (Vormittag / Abend)",
+         "answer": [
+          "Abend",
+          "am Abend",
+          "abends"
+         ]
+        },
+        {
+         "label": "Zahlung (bar / Überweisung)",
+         "answer": [
+          "bar"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Teil 2",
+     "ku": "ئیمەیلەکێ کورت بنڤیسە (٣ خال).",
+     "items": [
+      {
+       "t": "write",
+       "task": "Sie haben am Samstag Geburtstag und möchten eine Party machen. Schreiben Sie eine E-Mail an Ihren Freund Tim (ca. 30 Wörter).",
+       "ku": "رۆژا شەمبیێ رۆژبوونا تە یە. ئیمەیلەکێ بۆ هەڤالێ خۆ تیم بنڤیسە (نێزیکی ٣٠ پەیڤان):",
+       "points": [
+        {
+         "de": "Warum schreiben Sie? (Party)",
+         "ku": "بۆچی دنڤیسی؟ (ئاهەنگ)",
+         "kw": [
+          "party",
+          "feier",
+          "geburtstag",
+          "einladen",
+          "lade"
+         ]
+        },
+        {
+         "de": "Wann und wo ist die Party?",
+         "ku": "کەنگی و ل کیڤە؟",
+         "kw": [
+          "samstag",
+          "uhr",
+          "bei mir",
+          "wohnung",
+          "zu hause",
+          "um "
+         ]
+        },
+        {
+         "de": "Was soll Tim mitbringen?",
+         "ku": "دڤێت تیم چ دگەل خۆ بینیت؟",
+         "kw": [
+          "mitbringen",
+          "bring",
+          "salat",
+          "kuchen",
+          "getränke",
+          "musik",
+          "cola",
+          "saft"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sprechen",
+   "title": "Sprechen",
+   "ku": "🗣️ ئاخفتن",
+   "minutes": 15,
+   "points": 15,
+   "sections": [
+    {
+     "title": "Teil 1",
+     "ku": "خۆناساندن",
+     "items": [
+      {
+       "t": "speak1",
+       "ku": "خۆ بناسینە. ئەڤان خالان بێژە:",
+       "cards": [
+        "Name?",
+        "Alter?",
+        "Land?",
+        "Wohnort?",
+        "Sprachen?",
+        "Beruf?",
+        "Hobby?"
+       ],
+       "kw": [
+        [
+         "heiße",
+         "name",
+         "bin"
+        ],
+        [
+         "jahre",
+         "alt"
+        ],
+        [
+         "komme",
+         "aus"
+        ],
+        [
+         "wohne",
+         "lebe",
+         "in"
+        ],
+        [
+         "spreche",
+         "sprache"
+        ],
+        [
+         "arbeite",
+         "beruf",
+         "bin",
+         "student",
+         "schüler"
+        ],
+        [
+         "hobby",
+         "gern",
+         "spiele",
+         "lese",
+         "mache"
+        ]
+       ],
+       "example": "Ich heiße Azad. Ich bin 25 Jahre alt. Ich komme aus Kurdistan und wohne in Duhok. Ich spreche Kurdisch, Arabisch und ein bisschen Deutsch. Ich bin Student. Mein Hobby ist Fußball."
+      }
+     ]
+    },
+    {
+     "title": "Teil 2",
+     "ku": "پرسیار بکە",
+     "items": [
+      {
+       "t": "speak2",
+       "ku": "ل سەر بابەتێ «Essen und Trinken» ب پەیڤا سەر کارتێ پرسیارەکێ بکە:",
+       "theme": "Essen und Trinken",
+       "cards": [
+        {
+         "w": "Frühstück",
+         "ex": "Was isst du zum Frühstück?"
+        },
+        {
+         "w": "Lieblingsessen",
+         "ex": "Was ist dein Lieblingsessen?"
+        },
+        {
+         "w": "Kaffee",
+         "ex": "Trinkst du gern Kaffee?"
+        },
+        {
+         "w": "Restaurant",
+         "ex": "Gehst du oft ins Restaurant?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Teil 3",
+     "ku": "داخوازی بکە",
+     "items": [
+      {
+       "t": "speak3",
+       "ku": "ب ڕێز داخوازیەکێ ل سەر ڤی وێنەی بکە:",
+       "cards": [
+        {
+         "pic": "🪟",
+         "kw": [
+          "fenster"
+         ],
+         "ex": "Können Sie bitte das Fenster aufmachen?"
+        },
+        {
+         "pic": "🧂",
+         "kw": [
+          "salz"
+         ],
+         "ex": "Gib mir bitte das Salz."
+        },
+        {
+         "pic": "🖊️",
+         "kw": [
+          "kuli",
+          "stift",
+          "kugelschreiber"
+         ],
+         "ex": "Haben Sie einen Kuli für mich?"
+        },
+        {
+         "pic": "💡",
+         "kw": [
+          "licht",
+          "lampe"
+         ],
+         "ex": "Mach bitte das Licht an."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1002 @@
+{
+ "version": 1,
+ "lektionen": [
+  {
+   "n": 1,
+   "groups": [
+    {
+     "emoji": "👋",
+     "de": "Begrüßung",
+     "ku": "سلاڤکرن",
+     "lines": [
+      {
+       "de": "Hallo!",
+       "ku": "سلاڤ!"
+      },
+      {
+       "de": "Guten Morgen, Frau Eco.",
+       "ku": "سپێدە باش، خاتوو ئێکۆ."
+      },
+      {
+       "de": "Guten Tag, Herr Yulu.",
+       "ku": "رۆژ باش، کاک یولو."
+      },
+      {
+       "de": "Guten Abend!",
+       "ku": "ئێڤار باش!"
+      },
+      {
+       "de": "Herzlich willkommen!",
+       "ku": "ب خێر بێی!"
+      },
+      {
+       "de": "Freut mich.",
+       "ku": "کەیفا من هات."
+      }
+     ]
+    },
+    {
+     "emoji": "🚪",
+     "de": "Abschied",
+     "ku": "خاترخواستن",
+     "lines": [
+      {
+       "de": "Auf Wiedersehen!",
+       "ku": "ب خاترا تە!"
+      },
+      {
+       "de": "Tschüs!",
+       "ku": "بای!"
+      },
+      {
+       "de": "Gute Nacht!",
+       "ku": "شەڤ باش!"
+      },
+      {
+       "de": "Bis später!",
+       "ku": "هەتا پاشی!"
+      }
+     ]
+    },
+    {
+     "emoji": "🪪",
+     "de": "Name und Herkunft",
+     "ku": "ناڤ و وەلات",
+     "lines": [
+      {
+       "de": "Wie heißen Sie?",
+       "ku": "ناڤێ هەوە چییە؟"
+      },
+      {
+       "de": "Ich heiße Lara Nowak.",
+       "ku": "ناڤێ من لارا نۆڤاکە."
+      },
+      {
+       "de": "Wer ist das?",
+       "ku": "ئەڤە کییە؟"
+      },
+      {
+       "de": "Das ist Herr Yulu.",
+       "ku": "ئەڤە کاک یولۆیە."
+      },
+      {
+       "de": "Woher kommen Sie?",
+       "ku": "هوین ژ کیڤەنە؟"
+      },
+      {
+       "de": "Ich komme aus Polen.",
+       "ku": "ئەز ژ پۆڵۆنیا مە."
+      },
+      {
+       "de": "Was sprechen Sie?",
+       "ku": "هوین ب چ زمانی دئاخڤن؟"
+      },
+      {
+       "de": "Ich spreche Deutsch und ein bisschen Englisch.",
+       "ku": "ئەز ب ئەلمانی و کێمەکێ ئینگلیزی دئاخڤم."
+      },
+      {
+       "de": "Entschuldigung!",
+       "ku": "ببورە!"
+      },
+      {
+       "de": "Tut mir leid.",
+       "ku": "ببورە / مخابن."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "groups": [
+    {
+     "emoji": "😊",
+     "de": "Befinden",
+     "ku": "تو چەوانی؟",
+     "lines": [
+      {
+       "de": "Wie geht's?",
+       "ku": "چەوانی؟"
+      },
+      {
+       "de": "Danke, super!",
+       "ku": "سوپاس، گەلەک باشم!"
+      },
+      {
+       "de": "Sehr gut, danke.",
+       "ku": "گەلەک باشم، سوپاس."
+      },
+      {
+       "de": "Wie geht es Ihnen?",
+       "ku": "هوین چەوانن؟"
+      },
+      {
+       "de": "Na ja, es geht.",
+       "ku": "باشە، نە خراب."
+      },
+      {
+       "de": "Ach, nicht so gut.",
+       "ku": "ئاخ، نە گەلەک باشم."
+      },
+      {
+       "de": "Und dir?",
+       "ku": "و تو؟"
+      },
+      {
+       "de": "Auch gut, danke.",
+       "ku": "ئەز ژی باشم، سوپاس."
+      }
+     ]
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "de": "Andere vorstellen",
+     "ku": "ناساندنا کەسێن دی",
+     "lines": [
+      {
+       "de": "Das ist mein Vater.",
+       "ku": "ئەڤە بابێ منە."
+      },
+      {
+       "de": "Er kommt aus Kurdistan.",
+       "ku": "ئەو ژ کوردستانێ یە."
+      },
+      {
+       "de": "Jetzt lebt er in Berlin.",
+       "ku": "نوکە ئەو ل بەرلینێ دژیت."
+      },
+      {
+       "de": "Das sind meine Großeltern.",
+       "ku": "ئەڤە باپیر و داپیرێن منن."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "groups": [
+    {
+     "emoji": "🛒",
+     "de": "Einkaufen",
+     "ku": "کڕین",
+     "lines": [
+      {
+       "de": "Was ist das?",
+       "ku": "ئەڤە چییە؟"
+      },
+      {
+       "de": "Das ist doch kein Ei.",
+       "ku": "ئەڤە خۆ هێک نینە."
+      },
+      {
+       "de": "Was brauchen wir?",
+       "ku": "مە چ پێدڤییە؟"
+      },
+      {
+       "de": "Wir brauchen noch Eier.",
+       "ku": "هێشتا هێک بۆ مە پێدڤینە."
+      },
+      {
+       "de": "Haben wir Zucker?",
+       "ku": "ئەرێ شەکر مە هەیە؟"
+      },
+      {
+       "de": "Was kostet das?",
+       "ku": "ئەڤە ب چەندە؟"
+      },
+      {
+       "de": "Ein Kilo Äpfel kostet zwei Euro.",
+       "ku": "کیلۆیەکا سێڤان دوو یۆرۆیە."
+      }
+     ]
+    },
+    {
+     "emoji": "🍽️",
+     "de": "Essen",
+     "ku": "خوارن",
+     "lines": [
+      {
+       "de": "Was isst du gern?",
+       "ku": "تو حەز ژ خوارنا چ دکەی؟"
+      },
+      {
+       "de": "Ich esse gern Fisch.",
+       "ku": "ئەز حەز ژ خوارنا ماسیان دکەم."
+      },
+      {
+       "de": "Mein Lieblingsessen ist Reis mit Fleisch.",
+       "ku": "خوارنا من یا دلخواز برنج دگەل گۆشتییە."
+      },
+      {
+       "de": "Guten Appetit!",
+       "ku": "نۆشی گیان بیت!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "groups": [
+    {
+     "emoji": "🏠",
+     "de": "Nach dem Ort fragen",
+     "ku": "پرسیارا جهی",
+     "lines": [
+      {
+       "de": "Wo ist denn die Küche?",
+       "ku": "ئەرێ مەتبەخ ل کیڤەیە؟"
+      },
+      {
+       "de": "Hier. / Dort.",
+       "ku": "ل ڤێرێ. / ل وێرێ."
+      },
+      {
+       "de": "Ist das hier das Bad?",
+       "ku": "ئەرێ ئەڤە حەمامە؟"
+      },
+      {
+       "de": "Ja, das hier ist das Bad.",
+       "ku": "بەلێ، ئەڤە حەمامە."
+      }
+     ]
+    },
+    {
+     "emoji": "📏",
+     "de": "Beschreiben",
+     "ku": "وەسفکرن",
+     "lines": [
+      {
+       "de": "Wie ist dein Zimmer?",
+       "ku": "ژوورا تە چەوایە؟"
+      },
+      {
+       "de": "Es ist nicht teuer.",
+       "ku": "نە یا گرانە."
+      },
+      {
+       "de": "Wie groß ist das Bett?",
+       "ku": "تەخت چەند مەزنە؟"
+      },
+      {
+       "de": "Ungefähr zwei Meter.",
+       "ku": "نێزیکی دوو مەتران."
+      }
+     ]
+    },
+    {
+     "emoji": "👍",
+     "de": "Gefallen",
+     "ku": "دلچوون",
+     "lines": [
+      {
+       "de": "Wie gefällt dir der Tisch?",
+       "ku": "مێز چەوا تە دلچوو؟"
+      },
+      {
+       "de": "Sehr gut.",
+       "ku": "گەلەک باش."
+      },
+      {
+       "de": "Es geht.",
+       "ku": "ئاسایی."
+      },
+      {
+       "de": "Nicht so gut.",
+       "ku": "نە گەلەک باش."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "groups": [
+    {
+     "emoji": "🕐",
+     "de": "Uhrzeit",
+     "ku": "دەمژمێر",
+     "lines": [
+      {
+       "de": "Wie spät ist es?",
+       "ku": "دەمژمێر چەندە؟"
+      },
+      {
+       "de": "Es ist halb neun.",
+       "ku": "دەمژمێر هەشت و نیڤە."
+      },
+      {
+       "de": "Es ist Viertel vor zwölf.",
+       "ku": "دەمژمێر دوازدە کێم چارەکە."
+      },
+      {
+       "de": "Um wie viel Uhr gehst du ins Bett?",
+       "ku": "تو دەمژمێر چەند دچییە جهێ خەوێ؟"
+      },
+      {
+       "de": "Um elf Uhr.",
+       "ku": "دەمژمێر یازدە."
+      }
+     ]
+    },
+    {
+     "emoji": "🏪",
+     "de": "Öffnungszeiten",
+     "ku": "دەمێ ڤەکرنێ",
+     "lines": [
+      {
+       "de": "Wann ist die Bibliothek geöffnet?",
+       "ku": "پەرتووکخانە کەنگی ڤەکرییە؟"
+      },
+      {
+       "de": "Von Montag bis Freitag, von 8 bis 17 Uhr.",
+       "ku": "ژ دووشەمبیێ هەتا ئەینیێ، ژ ٨ هەتا ١٧."
+      }
+     ]
+    },
+    {
+     "emoji": "🎉",
+     "de": "Verabredung",
+     "ku": "ژڤان",
+     "lines": [
+      {
+       "de": "Hast du am Freitag Zeit?",
+       "ku": "ئەرێ رۆژا ئەینیێ دەمێ تە هەیە؟"
+      },
+      {
+       "de": "Wann fängt die Party an?",
+       "ku": "ئاهەنگ کەنگی دەستپێدکەت؟"
+      },
+      {
+       "de": "Das passt gut. Ich komme gern.",
+       "ku": "باشە. ب دلخۆشی دێ هێم."
+      },
+      {
+       "de": "Da habe ich keine Zeit.",
+       "ku": "هینگێ دەمێ من نینە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "groups": [
+    {
+     "emoji": "⚽",
+     "de": "Hobbys",
+     "ku": "حەزێن من",
+     "lines": [
+      {
+       "de": "Was sind deine Hobbys?",
+       "ku": "حەزێن تە چنە؟"
+      },
+      {
+       "de": "Meine Hobbys sind Lesen und Gitarre spielen.",
+       "ku": "حەزێن من خواندن و گیتار لێدانن."
+      },
+      {
+       "de": "Was machst du gern in der Freizeit?",
+       "ku": "تو د دەمێ ڤالا دا حەز دکەی چ بکەی؟"
+      },
+      {
+       "de": "Ich tanze gern. Das macht Spaß.",
+       "ku": "ئەز حەز ژ سەمایێ دکەم. خۆشە."
+      }
+     ]
+    },
+    {
+     "emoji": "☀️",
+     "de": "Das Wetter",
+     "ku": "کەش و هەوا",
+     "lines": [
+      {
+       "de": "Wie ist das Wetter?",
+       "ku": "کەش و هەوا چەوایە؟"
+      },
+      {
+       "de": "Die Sonne scheint.",
+       "ku": "رۆژ یا دەرکەفتی."
+      },
+      {
+       "de": "Es regnet.",
+       "ku": "باران دباریت."
+      },
+      {
+       "de": "Es ist kalt.",
+       "ku": "سارە."
+      },
+      {
+       "de": "Es schneit.",
+       "ku": "بەفر دباریت."
+      },
+      {
+       "de": "Heute sind es sieben Grad.",
+       "ku": "ئەڤرۆ حەفت پلەیە."
+      }
+     ]
+    },
+    {
+     "emoji": "🍟",
+     "de": "Am Imbiss",
+     "ku": "ل خوارنگەهێ",
+     "lines": [
+      {
+       "de": "Ich nehme die Würstchen und einen Saft.",
+       "ku": "ئەز سۆسیس و شەربەتەکێ دبەم."
+      },
+      {
+       "de": "Was nimmst du?",
+       "ku": "تو چ دبەی؟"
+      },
+      {
+       "de": "Hast du keinen Hunger? – Doch!",
+       "ku": "ئەرێ تو نە یێ برسیی؟ – بەلێ، یێ برسیمە!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "groups": [
+    {
+     "emoji": "💪",
+     "de": "Fähigkeit",
+     "ku": "شیان",
+     "lines": [
+      {
+       "de": "Kannst du Ski fahren?",
+       "ku": "ئەرێ تو دشێی سکیێ بکەی؟"
+      },
+      {
+       "de": "Ja, ich kann sehr gut Ski fahren.",
+       "ku": "بەلێ، ئەز دشێم گەلەک باش سکیێ بکەم."
+      },
+      {
+       "de": "Nein, nicht so gut.",
+       "ku": "نەخێر، نە گەلەک باش."
+      }
+     ]
+    },
+    {
+     "emoji": "🎯",
+     "de": "Wunsch und Vorschlag",
+     "ku": "ڤیان و پێشنیار",
+     "lines": [
+      {
+       "de": "Was willst du in den Ferien machen?",
+       "ku": "تو دخوازی د بێهنڤەدانێ دا چ بکەی؟"
+      },
+      {
+       "de": "Ich will Freunde treffen.",
+       "ku": "ئەز دخوازم هەڤالان ببینم."
+      },
+      {
+       "de": "Wollen wir Fahrrad fahren?",
+       "ku": "ئەم پاسکیلێ بهاژۆین؟"
+      },
+      {
+       "de": "Ja, super!",
+       "ku": "بەلێ، نایابە!"
+      }
+     ]
+    },
+    {
+     "emoji": "🔁",
+     "de": "Häufigkeit",
+     "ku": "چەند جاران",
+     "lines": [
+      {
+       "de": "Bist du schon mal 100 Kilometer Fahrrad gefahren?",
+       "ku": "ئەرێ تە چ جاران ١٠٠ کیلۆمەتر پاسکیل هاژۆتییە؟"
+      },
+      {
+       "de": "Ja, schon einmal.",
+       "ku": "بەلێ، جارەکێ."
+      },
+      {
+       "de": "Ja, schon öfter.",
+       "ku": "بەلێ، چەند جاران."
+      },
+      {
+       "de": "Nein, noch nie.",
+       "ku": "نەخێر، قەت."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "groups": [
+    {
+     "emoji": "💼",
+     "de": "Über den Beruf sprechen",
+     "ku": "ئاخفتن ل سەر کاری",
+     "lines": [
+      {
+       "de": "Was sind Sie von Beruf?",
+       "ku": "کارێ هەوە چییە؟"
+      },
+      {
+       "de": "Ich arbeite als Koch bei einem Restaurant.",
+       "ku": "ئەز وەکی ئاشپەز ل خوارنگەهەکێ کار دکەم."
+      },
+      {
+       "de": "Ich bin Schüler.",
+       "ku": "ئەز قوتابیمە."
+      },
+      {
+       "de": "Ich studiere noch.",
+       "ku": "ئەز هێشتا دخوینم."
+      },
+      {
+       "de": "Ich bin zurzeit arbeitslos.",
+       "ku": "ئەز نوکە بێکارم."
+      }
+     ]
+    },
+    {
+     "emoji": "📅",
+     "de": "Über Privates sprechen",
+     "ku": "ئاخفتن ل سەر ژیانا خۆ",
+     "lines": [
+      {
+       "de": "Wann bist du geboren?",
+       "ku": "تو کەنگی بوویی؟"
+      },
+      {
+       "de": "Wo bist du geboren?",
+       "ku": "تو ل کیڤە بوویی؟"
+      },
+      {
+       "de": "Seit wann lernst du schon Deutsch?",
+       "ku": "ژ کەنگی ڤە تو ئەلمانی فێر دبی؟"
+      },
+      {
+       "de": "Seit zwei Jahren.",
+       "ku": "ژ دوو سالان ڤە."
+      }
+     ]
+    },
+    {
+     "emoji": "📞",
+     "de": "Am Telefon",
+     "ku": "ل سەر تەلەفۆنێ",
+     "lines": [
+      {
+       "de": "Ist die Stelle noch frei?",
+       "ku": "ئەرێ کار هێشتا یێ ڤالایە؟"
+      },
+      {
+       "de": "Wie ist die Arbeitszeit?",
+       "ku": "دەمێ کاری چەوایە؟"
+      },
+      {
+       "de": "Ich hatte viel Arbeit.",
+       "ku": "کارێ من گەلەک بوو."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "groups": [
+    {
+     "emoji": "❓",
+     "de": "Nachfragen",
+     "ku": "دووبارە پرسیارکرن",
+     "lines": [
+      {
+       "de": "Wie bitte?",
+       "ku": "چ؟ (ببورە، دووبارە بکە)"
+      },
+      {
+       "de": "Können Sie das bitte wiederholen?",
+       "ku": "هوین دشێن ڤێ دووبارە بکەن؟"
+      },
+      {
+       "de": "Ich brauche eine Auskunft.",
+       "ku": "پێزانینەک بۆ من پێدڤییە."
+      },
+      {
+       "de": "Darf ich Sie etwas fragen?",
+       "ku": "ئەرێ ئەز دشێم پرسیارەکێ ژ هەوە بکەم؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🏨",
+     "de": "Im Hotel",
+     "ku": "ل ئوتێلێ",
+     "lines": [
+      {
+       "de": "Ich habe ein Einzelzimmer reserviert.",
+       "ku": "من ژوورەکا ئێک کەسی حجز کرییە."
+      },
+      {
+       "de": "Nur Frühstück, bitte.",
+       "ku": "تنێ تێشت، ژ کەرەما خۆ."
+      },
+      {
+       "de": "Hier ist Ihr Schlüssel.",
+       "ku": "ئەڤە کلیلا هەوەیە."
+      },
+      {
+       "de": "Wann muss ich auschecken?",
+       "ku": "دڤێت ئەز کەنگی دەرکەڤم؟"
+      }
+     ]
+    },
+    {
+     "emoji": "📋",
+     "de": "Eine Aussage gliedern",
+     "ku": "رێکخستنا ئاخفتنێ",
+     "lines": [
+      {
+       "de": "Zuerst muss man das Formular ausfüllen.",
+       "ku": "بەری هەمیان دڤێت فۆرم بهێتە پڕکرن."
+      },
+      {
+       "de": "Danach …",
+       "ku": "پشتی هینگێ …"
+      },
+      {
+       "de": "Zum Schluss …",
+       "ku": "ل دوماهیێ …"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "groups": [
+    {
+     "emoji": "🩺",
+     "de": "Anweisungen",
+     "ku": "ئامۆژگاری",
+     "lines": [
+      {
+       "de": "Gehen Sie zum Arzt.",
+       "ku": "بچنە دەڤ دکتۆری."
+      },
+      {
+       "de": "Gehen Sie gleich ins Bett.",
+       "ku": "یەکسەر بچنە جهێ خەوێ."
+      },
+      {
+       "de": "Der Doktor sagt, ich soll Tabletten nehmen.",
+       "ku": "دکتۆر دبێژیت دڤێت ئەز حەبان بخۆم."
+      },
+      {
+       "de": "Er soll viel trinken.",
+       "ku": "دڤێت ئەو گەلەک ڤەخوت."
+      }
+     ]
+    },
+    {
+     "emoji": "📆",
+     "de": "Termine",
+     "ku": "ژڤان",
+     "lines": [
+      {
+       "de": "Könnte ich bitte einen Termin haben?",
+       "ku": "ئەرێ ئەز دشێم ژڤانەکێ وەربگرم؟"
+      },
+      {
+       "de": "Wann haben Sie denn Zeit?",
+       "ku": "هوین کەنگی دەمێ هەوە هەیە؟"
+      },
+      {
+       "de": "Kommen Sie am Freitag um zehn Uhr.",
+       "ku": "رۆژا ئەینیێ دەمژمێر دەهـ وەرن."
+      },
+      {
+       "de": "Kann ich früher kommen? Es ist dringend.",
+       "ku": "ئەرێ ئەز دشێم زووتر بێم؟ یا پەلەیە."
+      },
+      {
+       "de": "Ich kann heute leider nicht kommen.",
+       "ku": "مخابن ئەز ئەڤرۆ نەشێم بێم."
+      }
+     ]
+    },
+    {
+     "emoji": "🙏",
+     "de": "Strategien",
+     "ku": "دەربڕین",
+     "lines": [
+      {
+       "de": "Oh, nein!",
+       "ku": "ئاخ، نە!"
+      },
+      {
+       "de": "Oje!",
+       "ku": "ئۆی!"
+      },
+      {
+       "de": "Hoffentlich!",
+       "ku": "هیڤیدارم!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "groups": [
+    {
+     "emoji": "🗺️",
+     "de": "Nach dem Weg fragen",
+     "ku": "پرسیارا رێکێ",
+     "lines": [
+      {
+       "de": "Wo ist hier die Post?",
+       "ku": "پۆست ل کیڤەیە ل ڤێرێ؟"
+      },
+      {
+       "de": "Gehen Sie geradeaus und dann links.",
+       "ku": "راستەوخۆ بچن و پاشان بەرەف چەپێ."
+      },
+      {
+       "de": "Ist hier ein Hotel in der Nähe?",
+       "ku": "ئەرێ ل ڤێرێ ئوتێلەک نێزیک هەیە؟"
+      },
+      {
+       "de": "Tut mir leid, ich bin auch fremd hier.",
+       "ku": "ببورن، ئەز ژی ل ڤێرێ بیانیمە."
+      },
+      {
+       "de": "Kann ich zu Fuß gehen?",
+       "ku": "ئەرێ ئەز دشێم ب پێیان بچم؟"
+      },
+      {
+       "de": "Nein, Sie müssen mit dem Bus fahren.",
+       "ku": "نەخێر، دڤێت هوین ب پاسێ بچن."
+      }
+     ]
+    },
+    {
+     "emoji": "🚉",
+     "de": "Am Schalter",
+     "ku": "ل شبەکێ",
+     "lines": [
+      {
+       "de": "Wann fährt der nächste Zug nach Köln?",
+       "ku": "شەمەندەفەرا دی کەنگی دچیتە کۆلن؟"
+      },
+      {
+       "de": "Von welchem Gleis fährt der Zug ab?",
+       "ku": "شەمەندەفەر ژ کیژ ڕێکێ دچیت؟"
+      },
+      {
+       "de": "Muss ich umsteigen?",
+       "ku": "ئەرێ دڤێت ئەز بگوهۆڕم؟"
+      },
+      {
+       "de": "Einfach oder hin und zurück?",
+       "ku": "تنێ چوون یان چوون و هاتن؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "groups": [
+    {
+     "emoji": "🙏",
+     "de": "Um etwas bitten",
+     "ku": "داخوازکرن",
+     "lines": [
+      {
+       "de": "Könnten Sie mir bitte helfen?",
+       "ku": "هوین دشێن هاریکاریا من بکەن، ژ کەرەما خۆ؟"
+      },
+      {
+       "de": "Könnten Sie mir das bitte zeigen?",
+       "ku": "هوین دشێن ڤێ نیشا من بدەن؟"
+      },
+      {
+       "de": "Würden Sie mir das bitte erklären?",
+       "ku": "هوین دشێن ڤێ بۆ من ڕوون بکەن؟"
+      },
+      {
+       "de": "Natürlich, gern.",
+       "ku": "بێگومان، ب دلخۆشی."
+      },
+      {
+       "de": "Nein, das geht leider gerade nicht.",
+       "ku": "نەخێر، مخابن نوکە نابیت."
+      },
+      {
+       "de": "Nichts zu danken.",
+       "ku": "سوپاس نەڤێت."
+      }
+     ]
+    },
+    {
+     "emoji": "📱",
+     "de": "Auf die Mailbox sprechen",
+     "ku": "نامەیا دەنگی",
+     "lines": [
+      {
+       "de": "Hier spricht Azad Ali.",
+       "ku": "ئەز ئازاد عەلی مە کو دئاخڤم."
+      },
+      {
+       "de": "Bitte rufen Sie mich zurück.",
+       "ku": "ژ کەرەما خۆ پەیوەندیێ ب من بکەن."
+      },
+      {
+       "de": "Meine Nummer ist 0750 123 4567.",
+       "ku": "ژمارا من ٠٧٥٠ ١٢٣ ٤٥٦٧ یە."
+      },
+      {
+       "de": "Vielen Dank und auf Wiederhören!",
+       "ku": "گەلەک سوپاس و هەتا جارەکا دی!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "groups": [
+    {
+     "emoji": "🧥",
+     "de": "Etwas bewerten",
+     "ku": "بۆچوون",
+     "lines": [
+      {
+       "de": "Die Jacke ist sehr schön.",
+       "ku": "جاکێت گەلەک یا جوانە."
+      },
+      {
+       "de": "Die Schuhe sind zu teuer.",
+       "ku": "پێڵاڤ زێدە گرانن."
+      },
+      {
+       "de": "Der Pullover passt dir perfekt.",
+       "ku": "بلووز ب تەمامی ب قەدەرێ تەیە."
+      },
+      {
+       "de": "Wie findest du das Hemd?",
+       "ku": "تو کراسی چەوا دبینی؟"
+      },
+      {
+       "de": "Welche Tasche findest du schön? – Diese.",
+       "ku": "کیژ جانتە ب دیتنا تە جوانە؟ – ئەڤە."
+      }
+     ]
+    },
+    {
+     "emoji": "🛍️",
+     "de": "Kleidung kaufen",
+     "ku": "کڕینا جلکان",
+     "lines": [
+      {
+       "de": "Entschuldigen Sie bitte, ich suche Stiefel.",
+       "ku": "ببورن، ئەز ل جزمێن بلند دگەڕێم."
+      },
+      {
+       "de": "Haben Sie die Hose auch in Größe 40?",
+       "ku": "ئەرێ ئەڤ پانتۆڵە ب قەبارێ ٤٠ هەیە؟"
+      },
+      {
+       "de": "Was kostet denn der Rock?",
+       "ku": "تەنوور ب چەندە؟"
+      },
+      {
+       "de": "Wo ist die Kasse, bitte?",
+       "ku": "سندووقا پارەدانێ ل کیڤەیە؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "groups": [
+    {
+     "emoji": "🎂",
+     "de": "Jahrestage",
+     "ku": "رۆژێن تایبەت",
+     "lines": [
+      {
+       "de": "Wann hast du Geburtstag?",
+       "ku": "رۆژبوونا تە کەنگییە؟"
+      },
+      {
+       "de": "Ich habe am 4. Januar Geburtstag.",
+       "ku": "رۆژبوونا من ٤ێ کانوونا دووێ یە."
+      },
+      {
+       "de": "Ich bin am 19. Januar geboren.",
+       "ku": "ئەز ١٩ێ کانوونا دووێ بوویمە."
+      }
+     ]
+    },
+    {
+     "emoji": "🎉",
+     "de": "Glückwünsche",
+     "ku": "پیرۆزباهی",
+     "lines": [
+      {
+       "de": "Alles Gute zum Geburtstag!",
+       "ku": "رۆژبوونا تە پیرۆز بیت!"
+      },
+      {
+       "de": "Herzlichen Glückwunsch!",
+       "ku": "پیرۆز بیت!"
+      },
+      {
+       "de": "Ich wünsche dir viel Glück und Gesundheit.",
+       "ku": "ئەز بۆ تە بەختەوەری و ساخلەمیێ دخوازم."
+      },
+      {
+       "de": "Frohes neues Jahr!",
+       "ku": "سالا نوو پیرۆز بیت!"
+      }
+     ]
+    },
+    {
+     "emoji": "💌",
+     "de": "Einladen und antworten",
+     "ku": "داخوازکرن و بەرسڤ",
+     "lines": [
+      {
+       "de": "Ich lade dich zu meiner Geburtstagsparty ein.",
+       "ku": "ئەز تە بۆ ئاهەنگا رۆژبوونا خۆ داخواز دکەم."
+      },
+      {
+       "de": "Kannst du kommen?",
+       "ku": "ئەرێ تو دشێی بێی؟"
+      },
+      {
+       "de": "Vielen Dank für die Einladung.",
+       "ku": "گەلەک سوپاس بۆ داخوازیێ."
+      },
+      {
+       "de": "Ich komme gern!",
+       "ku": "ب دلخۆشی دێ هێم!"
+      },
+      {
+       "de": "Leider kann ich nicht kommen.",
+       "ku": "مخابن ئەز نەشێم بێم."
+      },
+      {
+       "de": "Viele Grüße",
+       "ku": "سلاڤێن گەرم"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

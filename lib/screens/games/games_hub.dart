@@ -6,7 +6,10 @@ import '../../services/progress_service.dart';
 import '../../ui.dart';
 import '../settings_screen.dart';
 import 'game_kind.dart';
+import 'extra_games.dart';
 import 'game_session.dart';
+import 'goethe_mock.dart';
+import 'pronunciation.dart';
 
 /// 🎮 تابا یاریان — وەکی «Let's play with words»
 class GamesHubScreen extends StatelessWidget {
@@ -64,8 +67,22 @@ class GamesHubScreen extends StatelessWidget {
                 title: tr(n, 'پەیڤێن خەلەت', 'Fehlerwörter', 'Mistake Words'),
                 subtitle: tr(n, 'ئەو پەیڤێن تە خەلەت کرین', 'Wörter mit Fehlern', 'Words you got wrong'),
                 count: weak.length,
-                onTap: weak.isEmpty ? null : () => _openMixed(context, weak.take(10).toList()),
+                onTap: weak.isEmpty ? null : () => Navigator.push(context, MaterialPageRoute(builder: (_) => const MistakesNotebookScreen())),
               ),
+              const SizedBox(height: 8),
+              Row(children: [
+                Expanded(child: _bigTile(context, '🎨', 'der · die · das', 'ئارتیکلێ دروست ب لەز', const Color(0xFF1CB0F6), const ArticleGameScreen())),
+                const SizedBox(width: 10),
+                Expanded(child: _bigTile(context, '🔤', 'Konjugation', 'ich bin · du bist …', const Color(0xFFCE82FF), const ConjugationGameScreen())),
+              ]),
+              const SizedBox(height: 10),
+              Row(children: [
+                Expanded(child: _bigTile(context, '🗣️', 'Aussprache', 'بێژە و ئەپ گوهداری دکەت', const Color(0xFF00C2A8), const PronunciationScreen())),
+                const SizedBox(width: 10),
+                Expanded(child: _bigTile(context, '🏆', 'Rangliste', 'باشترینێن هەفتیێ', const Color(0xFFFFC800), const LeaderboardScreen())),
+              ]),
+              const SizedBox(height: 10),
+              _bigTile(context, '🎓', 'Goethe A1 — Modelltest', 'ئەزموونەکا تەمام وەکی یا ڕاستی ب دەمژمێر', const Color(0xFFFF4B4B), const GoetheMockScreen(), wide: true),
               const SizedBox(height: 18),
               Text(tr(n, 'رێکێن دی یێن یاریێ', 'Mehr Spiele', 'More ways to play'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.bold)),
@@ -121,6 +138,38 @@ class GamesHubScreen extends StatelessWidget {
           Text(tr(n, 'ئێک وێنە. ئێک پەیڤ. ب لەزا خۆ.', 'Ein Bild. Ein Wort. Dein Tempo.', 'One picture. One word. Your pace.'),
               style: TextStyle(color: AppColors.fg60)),
         ]),
+      ),
+    );
+  }
+
+  Widget _bigTile(BuildContext context, String emoji, String title, String sub, Color color, Widget page, {bool wide = false}) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(18),
+      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.13),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: color.withValues(alpha: 0.7), width: 1.5),
+        ),
+        child: wide
+            ? Row(children: [
+                Text(emoji, style: const TextStyle(fontSize: 34)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: color)),
+                    Text(sub, style: TextStyle(color: AppColors.fg60, fontSize: 13)),
+                  ]),
+                ),
+              ])
+            : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(emoji, style: const TextStyle(fontSize: 30)),
+                const SizedBox(height: 6),
+                Text(title, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: color)),
+                Text(sub, maxLines: 2, style: TextStyle(color: AppColors.fg60, fontSize: 12)),
+              ]),
       ),
     );
   }

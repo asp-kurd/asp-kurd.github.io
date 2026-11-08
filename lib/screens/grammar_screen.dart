@@ -46,13 +46,31 @@ class GramTopic {
   const GramTopic(this.emoji, this.title, this.explain, this.tip, this.head, this.rows, this.examples, this.practice);
 }
 
+/// 💬 رستێن ئامادە یێن وانێ (Kommunikation)
+class KommGroup {
+  final String emoji, de, ku;
+  final List<GramText> lines;
+  const KommGroup(this.emoji, this.de, this.ku, this.lines);
+}
+
 class Grammar {
   static Map<int, List<GramTopic>> byLektion = {};
+  static Map<int, List<KommGroup>> komm = {};
   static Future<void>? _loading;
 
   static Future<void> load() => _loading ??= () async {
         final m = jsonDecode(await rootBundle.loadString('assets/grammar.json')) as Map<String, dynamic>;
         List<String> strs(dynamic v) => ((v as List?) ?? const []).map((e) => e.toString()).toList();
+        try {
+          final k = jsonDecode(await rootBundle.loadString('assets/kommunikation.json')) as Map<String, dynamic>;
+          komm = {
+            for (final l in k['lektionen'] as List)
+              l['n'] as int: [
+                for (final g in l['groups'] as List)
+                  KommGroup(g['emoji'] as String, g['de'] as String, g['ku'] as String, (g['lines'] as List).map(GramText.of).toList()),
+              ],
+          };
+        } catch (_) {}
         byLektion = {
           for (final l in m['lektionen'] as List)
             l['n'] as int: [
@@ -238,10 +256,59 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
                     ),
                   _langSwitch(ku),
                   const SizedBox(height: 14),
+                  if ((Grammar.komm[widget.n] ?? const []).isNotEmpty) _kommCard(Grammar.komm[widget.n]!, color),
                   for (var i = 0; i < topics.length; i++) _topic(topics[i], i + 1, color, ku),
                 ],
               ),
       ),
+    );
+  }
+
+  bool _kommOpen = false;
+
+  /// 💬 Kommunikation: رستێن ئامادە یێن پەرتووکێ — بکە تپ دا گوهداری بکەی
+  Widget _kommCard(List<KommGroup> groups, Color color) {
+    final count = groups.fold<int>(0, (a, g) => a + g.lines.length);
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: AppColors.card,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: color.withValues(alpha: 0.6), width: 1.5),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: () => setState(() => _kommOpen = !_kommOpen),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(children: [
+              const Text('💬', style: TextStyle(fontSize: 28)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const Text('Kommunikation — رستێن ئامادە', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+                  Text('$count رستە ژ پەرتووکێ · بکە تپ دا گوهداری بکەی', style: TextStyle(color: AppColors.fg60, fontSize: 13)),
+                ]),
+              ),
+              Icon(_kommOpen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppColors.fg60),
+            ]),
+          ),
+        ),
+        if (_kommOpen)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              for (final g in groups) ...[
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 6),
+                  child: Text('${g.emoji} ${g.ku} · ${g.de}', style: TextStyle(fontWeight: FontWeight.bold, color: color)),
+                ),
+                for (final l in g.lines) _example(l, color),
+              ],
+            ]),
+          ),
+      ]),
     );
   }
 

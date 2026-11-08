@@ -55,6 +55,8 @@ flutter:
     - assets/book.json
     - assets/a1_summary.json
     - assets/grammar.json
+    - assets/kommunikation.json
+    - assets/goethe.json
     # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)
     - assets/sfx/
     # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)
