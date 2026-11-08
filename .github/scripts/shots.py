@@ -8,7 +8,7 @@ pages = [
     ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
     ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
-    ("streak", "demo=streak"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
+    ("streak", "demo=streak"), ("toast", "demo=toast"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -21,6 +21,9 @@ with sync_playwright() as p:
             pg.goto(f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
+            if name == "toast":
+                for k in range(16):
+                    time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_{k:02d}.png")
             if name == "streak":
                 for k in range(4):
                     time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")

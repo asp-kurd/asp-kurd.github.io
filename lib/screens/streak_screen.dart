@@ -89,7 +89,7 @@ class _StreakScreenState extends State<StreakScreen> with TickerProviderStateMix
                   child: Column(children: [
                     const Spacer(flex: 2),
                     SizedBox(
-                      height: 260,
+                      height: 300,
                       child: Stack(alignment: Alignment.center, clipBehavior: Clip.none, children: [
                         // پریسک
                         for (final (ang, sp, kind) in _sparks)
@@ -106,27 +106,27 @@ class _StreakScreenState extends State<StreakScreen> with TickerProviderStateMix
                           scale: (0.2 + 0.8 * grow) * (1 + 0.05 * f),
                           child: Transform.rotate(
                             angle: (f - 0.5) * 0.06,
-                            child: Text('🔥',
+                            child: Transform.translate(offset: const Offset(0, -40), child: Text('🔥',
                                 style: TextStyle(fontSize: 170, shadows: [
                                   Shadow(color: const Color(0xFFFF9600).withValues(alpha: 0.9), blurRadius: 40 + 20 * f),
-                                ])),
+                                ]))),
                           ),
                         ),
                         // ژمارە: ٣ دچیتە ژۆر، ٤ دهێت
                         Positioned(
-                          bottom: 18,
+                          bottom: -6,
                           child: ClipRect(
                             child: SizedBox(
-                              height: 74,
-                              width: 160,
+                              height: 96,
+                              width: 200,
                               child: Stack(alignment: Alignment.center, children: [
                                 if (widget.from > 0)
                                   Transform.translate(
-                                    offset: Offset(0, -74 * flip),
+                                    offset: Offset(0, -96 * flip),
                                     child: Opacity(opacity: 1 - flip, child: _num(widget.from)),
                                   ),
                                 Transform.translate(
-                                  offset: Offset(0, 74 * (1 - flip)),
+                                  offset: Offset(0, 96 * (1 - flip)),
                                   child: Opacity(opacity: widget.from > 0 ? flip : grow.clamp(0.0, 1.0), child: _num(to)),
                                 ),
                               ]),
@@ -176,10 +176,14 @@ class _StreakScreenState extends State<StreakScreen> with TickerProviderStateMix
   Widget _num(int v) => Text(
         num(v),
         style: const TextStyle(
-          fontSize: 60,
+          fontSize: 80,
+          height: 1.1,
           fontWeight: FontWeight.w900,
           color: Colors.white,
-          shadows: [Shadow(color: Color(0xFFB34700), blurRadius: 0, offset: Offset(0, 4))],
+          shadows: [
+            Shadow(color: Color(0xFFB34700), blurRadius: 0, offset: Offset(0, 5)),
+            Shadow(color: Color(0xAAFF9600), blurRadius: 24),
+          ],
         ),
       );
 

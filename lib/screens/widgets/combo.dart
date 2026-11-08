@@ -111,10 +111,14 @@ class _ComboBarState extends State<ComboBar> with SingleTickerProviderStateMixin
               Positioned.fill(
                 child: IgnorePointer(child: CustomPaint(painter: _OrbitBorder(v, h))),
               ),
-            // ١٥+: برووسک
+            // ١٥+: برووسک (ل سەر بەشێ پڕکری)
             if (tier == 2)
               Positioned.fill(
-                child: IgnorePointer(child: CustomPaint(painter: _Lightning(v, h))),
+                child: IgnorePointer(
+                  child: Directionality.of(context) == TextDirection.rtl
+                      ? Transform.flip(flipX: true, child: CustomPaint(painter: _Lightning(v, h, widget.value)))
+                      : CustomPaint(painter: _Lightning(v, h, widget.value)),
+                ),
               ),
           ]),
         );
@@ -147,24 +151,25 @@ class _OrbitBorder extends CustomPainter {
 }
 
 class _Lightning extends CustomPainter {
-  final double v, h;
-  _Lightning(this.v, this.h);
+  final double v, h, fill;
+  _Lightning(this.v, this.h, this.fill);
   @override
   void paint(Canvas canvas, Size s) {
     // هەر ~٩٠ms برووسکەکا نوو
     final rng = Random((v * 16).floor() * 7919);
     final cy = s.height / 2;
-    final bolts = 2 + rng.nextInt(2);
+    final w = s.width * fill.clamp(0.15, 1.0);
+    final bolts = 1 + rng.nextInt(2);
     for (var b = 0; b < bolts; b++) {
       final path = Path();
-      var x = rng.nextDouble() * s.width * 0.3;
-      final end = x + s.width * (0.35 + rng.nextDouble() * 0.5);
+      var x = rng.nextDouble() * w * 0.4;
+      final end = x + w * (0.3 + rng.nextDouble() * 0.5);
       var y = cy + (rng.nextBool() ? -1 : 1) * (h * 0.2 + rng.nextDouble() * h * 0.6);
       path.moveTo(x, y);
-      while (x < end && x < s.width) {
-        x += 6 + rng.nextDouble() * 14;
-        y = cy + (rng.nextDouble() * 2 - 1) * (h * 0.5 + 7);
-        path.lineTo(min(x, s.width), y);
+      while (x < end && x < w) {
+        x += 8 + rng.nextDouble() * 16;
+        y = cy + (rng.nextDouble() * 2 - 1) * (h * 0.45 + 5);
+        path.lineTo(min(x, w), y);
       }
       final flick = 0.45 + rng.nextDouble() * 0.55;
       canvas.drawPath(
@@ -597,3 +602,33 @@ class _PowerRings extends CustomPainter {
   bool shouldRepaint(_PowerRings o) => o.t != t;
 }
 
+
+/// 🧪 ?demo=toast — پشکنینا پەیامێن کۆمبۆیێ
+class ToastDemo extends StatefulWidget {
+  const ToastDemo({super.key});
+  @override
+  State<ToastDemo> createState() => _ToastDemoState();
+}
+
+class _ToastDemoState extends State<ToastDemo> {
+  @override
+  void initState() {
+    super.initState();
+    var k = 0;
+    const seq = [5, 10, 15, 20];
+    void next() {
+      if (!mounted) return;
+      showComboToast(context, seq[k % seq.length], AppLanguage.badini);
+      k++;
+      Future.delayed(const Duration(milliseconds: 3200), next);
+    }
+
+    Future.delayed(const Duration(milliseconds: 500), next);
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(title: const ComboBar(value: 0.6, combo: 16)),
+        body: const Center(child: Text('toast demo')),
+      );
+}

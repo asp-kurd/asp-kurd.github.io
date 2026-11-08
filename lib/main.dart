@@ -16,6 +16,7 @@ import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/summary_screen.dart';
 import 'screens/streak_screen.dart';
+import 'screens/widgets/combo.dart' show ToastDemo;
 import 'models.dart';
 import 'ui.dart';
 
@@ -69,6 +70,7 @@ class ZimanProApp extends StatelessWidget {
       'home' => const HomeScreen(),
       'summary' => const SummaryListScreen(),
       'streak' => const StreakScreen(from: 3, to: 4),
+      'toast' => const ToastDemo(),
       'combo' => () {
           ProgressService.instance.combo = 14;
           return InteractiveLessonScreen(
