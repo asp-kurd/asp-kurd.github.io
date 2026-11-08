@@ -35,7 +35,8 @@ String? handoffEmail;
 
 /// 🛡️ پەڕێ ئەدمینی تنێ ب ڤی لینکی ڤەدبیت: https://asp-poya.com/?admin=asp-d7k2
 const _adminKey = 'asp-d7k2';
-final bool adminMode = Uri.base.queryParameters['admin'] == _adminKey;
+/// یان پەڕێ جودا: https://asp-poya.com/asp-d7k2/ (بۆ Home Screen)
+final bool adminMode = Uri.base.queryParameters['admin'] == _adminKey || isAdminPage;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,7 +51,7 @@ Future<void> main() async {
   await ThemeController.instance.load();
   // 📲 iPhone: ئەپا سەر شاشێ ب کۆدێ لینکی هەمان هەژمار بەردەوام دکەت (نە ژ نوی)
   final handoff = Uri.base.queryParameters['h'];
-  if (adminMode) prepareAdminHomeScreen();
+  if (adminMode && !isAdminPage) prepareAdminHomeScreen();
   if (!adminMode && handoff != null && Backend.instance.enabled && !Backend.instance.registered) {
     try {
       final res = await Backend.instance.handoffLogin(handoff).timeout(const Duration(seconds: 12));

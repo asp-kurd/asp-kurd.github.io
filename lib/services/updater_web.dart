@@ -14,7 +14,8 @@ void startAutoUpdate(String buildId) {
     if (busy) return;
     busy = true;
     try {
-      final r = await http.get(Uri.base.resolve('build_id.txt?t=${DateTime.now().millisecondsSinceEpoch}'));
+      // ب base href (/) نە ب لینکێ پەڕێ (دا /asp-d7k2/ ژی کار بکەت)
+      final r = await http.get(Uri.parse(web.document.baseURI).resolve('build_id.txt?t=${DateTime.now().millisecondsSinceEpoch}'));
       final remote = r.statusCode == 200 ? r.body.trim() : '';
       if (remote.isNotEmpty && remote != buildId && remote.length < 64) {
         // پاراستن ژ دووبارەبوونا بێ دویماهی
@@ -22,8 +23,10 @@ void startAutoUpdate(String buildId) {
         if (store.getItem('asp_reload_for') == remote) return;
         store.setItem('asp_reload_for', remote);
         await _clearFlutterCache();
-        final path = web.window.location.pathname;
-        web.window.location.replace('$path?v=$remote');
+        // لینک وەکی خۆ دمینیت (?h=… یان ?admin=…)، تنێ v دگوهۆڕیت
+        final cur = Uri.parse(web.window.location.href);
+        final q = Map<String, String>.from(cur.queryParameters)..['v'] = remote;
+        web.window.location.replace(cur.replace(queryParameters: q, fragment: '').toString());
       }
     } catch (_) {
     } finally {

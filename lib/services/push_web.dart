@@ -93,6 +93,9 @@ void prepareHomeScreenHandoff(String code) {
 
 
 /// 🛡️ پەڕێ ئەدمینی: ئایکۆنەکا جودا ل سەر Home Screen (ب ناڤێ «ASP Admin» و لینکێ تایبەت)
+/// 🛡️ پەڕێ /asp-d7k2/ (admin/index.html) ئەڤ نیشانە دانایە
+bool get isAdminPage => globalContext['__aspAdmin']?.dartify() == true;
+
 void prepareAdminHomeScreen() {
   web.document.querySelector('link[rel="manifest"]')?.remove();
   web.document.title = 'ASP Admin';

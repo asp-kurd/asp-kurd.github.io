@@ -20,3 +20,20 @@ s = re.sub(r'src="flutter_bootstrap\.js(\?v=[^"]*)?"', f'src="flutter_bootstrap.
 s = re.sub(r'src="main\.dart\.js(\?v=[^"]*)?"', f'src="main.dart.js?v={bid}"', s)
 idx.write_text(s, encoding="utf-8")
 print("build id:", bid)
+
+# 🛡️ پەڕێ ئەدمینی یێ جودا: /asp-d7k2/ — manifest و ناڤێ خۆ هەنە دا ل Home Screen وەکی «ASP Admin» بمینیت
+import json
+adm = web / "asp-d7k2"
+adm.mkdir(exist_ok=True)
+a = s
+a = re.sub(r"<title>.*?</title>", "<title>ASP Admin</title>", a, flags=re.S)
+a = re.sub(r'(name="apple-mobile-web-app-title" content=")[^"]*', r"\1ASP Admin", a)
+a = re.sub(r'<link rel="manifest"[^>]*>', '<link rel="manifest" href="/asp-d7k2/manifest.json">', a)
+a = a.replace("</head>", "  <script>window.__aspAdmin=true;</script>\n</head>", 1)
+(adm / "index.html").write_text(a, encoding="utf-8")
+man = json.loads((web / "manifest.json").read_text(encoding="utf-8"))
+man.update(name="ASP Admin", short_name="ASP Admin", start_url="/asp-d7k2/", scope="/asp-d7k2/", id="/asp-d7k2/")
+for ic in man.get("icons", []):
+    ic["src"] = "/" + ic["src"].lstrip("/")
+(adm / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=2), encoding="utf-8")
+print("admin page: /asp-d7k2/")

@@ -9,4 +9,6 @@ Future<bool> promptInstall() async => false;
 void prepareHomeScreenHandoff(String code) {}
 
 
+bool get isAdminPage => false;
+
 void prepareAdminHomeScreen() {}

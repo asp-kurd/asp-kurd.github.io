@@ -8,7 +8,7 @@ pages = [
     ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
     ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
-    ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"), ("book", "demo=book"), ("letters", "demo=letters"), ("article", "demo=article"), ("conj", "demo=conj"), ("goethe", "demo=goethe"), ("backup", "demo=backup"), ("leader", "demo=leader"), ("games", "demo=games&theme=light"), ("gram4", "demo=gram4"), ("gpractice", "demo=gpractice"),
+    ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"), ("book", "demo=book"), ("letters", "demo=letters"), ("article", "demo=article"), ("conj", "demo=conj"), ("goethe", "demo=goethe"), ("backup", "demo=backup"), ("adminpage", "asp-d7k2/"), ("leader", "demo=leader"), ("games", "demo=games&theme=light"), ("gram4", "demo=gram4"), ("gpractice", "demo=gpractice"),
     ("streak", "demo=streak"), ("toast", "demo=toast"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
 ]
 with sync_playwright() as p:
@@ -19,7 +19,7 @@ with sync_playwright() as p:
         pg.on("console", lambda m: logs.append(f"[{m.type}] {m.text}"))
         pg.on("pageerror", lambda e: logs.append(f"[pageerror] {e}"))
         try:
-            pg.goto(f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
+            pg.goto(f"http://127.0.0.1:8080/{q}" if q.startswith("asp-") else f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
             if name == "toast":
