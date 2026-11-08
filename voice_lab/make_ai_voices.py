@@ -29,6 +29,17 @@ VOICE_VERSION = {"de": "2-slow-clear", "en": "2-slow-clear", "ku": "3-slower", "
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 
 
+# ناڤێ پیتان وەکی دهێنە خواندن (دا AI «A» وەکی پیت بخوینیت، نە وەکی پەیڤ)
+LETTER_NAMES = {
+    "de": dict(A="A", B="Be", C="Ze", D="De", E="E", F="Eff", G="Ge", H="Ha", I="I", J="Jott", K="Ka", L="El", M="Em",
+               N="En", O="O", P="Pe", Q="Ku", R="Er", S="Es", T="Te", U="U", V="Fau", W="We", X="Ix", Y="Ypsilon",
+               Z="Zett", **{"Ä": "Ä", "Ö": "Ö", "Ü": "Ü", "ß": "Eszett"}),
+    "en": dict(A="ay", B="bee", C="see", D="dee", E="ee", F="eff", G="gee", H="aitch", I="eye", J="jay", K="kay",
+               L="el", M="em", N="en", O="oh", P="pee", Q="queue", R="are", S="ess", T="tee", U="you", V="vee",
+               W="double you", X="ex", Y="why", Z="zee"),
+}
+
+
 def fnv(text: str) -> str:
     h = 0x811C9DC5
     for b in text.encode("utf-8"):
@@ -49,6 +60,9 @@ def collect():
                 jobs["en"][c["en"]] = c["en"]
             if only in (None, "ku"):
                 jobs["ku"][c["ku"]] = c["kuLat"]  # کلیل: نڤیسینا کوردی؛ دەنگ: لاتینی
+            lt = c.get("letter")  # 🔤 ناڤێ پیتێ ب تنێ (C ➔ «تسێ»)
+            if lt and only in ("de", "en"):
+                jobs[only][lt["L"]] = LETTER_NAMES[only].get(lt["L"], lt["L"])
             cz = c.get("cloze")
             if cz:  # رستا تەمام یا «جهێ ڤالا»
                 full = cz["de"]
@@ -76,6 +90,11 @@ def collect():
             for t in l["topics"]:
                 for e in t["examples"]:
                     jobs["de"][e["de"]] = e["de"]
+                for pr in t.get("practice", []):  # 🎯 راهێنان: پرسیار + بەرسڤ
+                    for k in ("q", "a"):
+                        txt = pr[k]
+                        if "→" not in txt and ":" not in txt and "(" not in txt and "___" not in txt:
+                            jobs["de"][txt] = txt
     book = ROOT / "assets/book.json"
     if book.exists():
         def walk(o):

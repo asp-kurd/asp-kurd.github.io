@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "title": {
   "de": "Grammatik nach Lektion",
   "ku": "رێزمان ل دویف وانێ"
@@ -65,7 +65,37 @@
      "tip": {
       "de": "„Sie“ ist höflich (für Fremde). „du“ ist für Freunde und Familie.",
       "ku": "«Sie» ب ڕێز و فەرمییە (بۆ کەسێن نەناس). «du» بۆ هەڤال و مالباتێ یە."
-     }
+     },
+     "practice": [
+      {
+       "q": "Wie heißt du?",
+       "qku": "ناڤێ تە چییە؟",
+       "cue": "Azad",
+       "a": "Ich heiße Azad.",
+       "aku": "ناڤێ من ئازادە."
+      },
+      {
+       "q": "Woher kommst du?",
+       "qku": "تو ژ کیڤەیی؟",
+       "cue": "Kurdistan",
+       "a": "Ich komme aus Kurdistan.",
+       "aku": "ئەز ژ کوردستانێ مە."
+      },
+      {
+       "q": "Was sprichst du?",
+       "qku": "تو ب چ زمانی دئاخڤی؟",
+       "cue": "Kurdisch",
+       "a": "Ich spreche Kurdisch.",
+       "aku": "ئەز ب کوردی دئاخڤم."
+      },
+      {
+       "q": "Wer sind Sie?",
+       "qku": "هوین کینە؟",
+       "cue": "Lehrer",
+       "a": "Ich bin Lehrer.",
+       "aku": "ئەز مامۆستامە."
+      }
+     ]
     },
     {
      "emoji": "❓",
@@ -116,6 +146,29 @@
       {
        "de": "Was sprechen Sie?",
        "ku": "هوین ب چ زمانی دئاخڤن؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich heiße Sara. → Frage?",
+       "qku": "پرسیارێ بۆ ڤێ بەرسڤێ چێکە",
+       "cue": "wie",
+       "a": "Wie heißt du?",
+       "aku": "ناڤێ تە چییە؟"
+      },
+      {
+       "q": "Ich komme aus Syrien. → Frage?",
+       "qku": "پرسیارێ چێکە",
+       "cue": "woher",
+       "a": "Woher kommst du?",
+       "aku": "تو ژ کیڤەیی؟"
+      },
+      {
+       "q": "Ich wohne in Duhok. → Frage?",
+       "qku": "پرسیارێ چێکە",
+       "cue": "wo",
+       "a": "Wo wohnst du?",
+       "aku": "تو ل کیڤە دژی؟"
       }
      ]
     },
@@ -168,7 +221,30 @@
      "tip": {
       "de": "„Mein Name“ sind zwei Wörter, aber nur eine Position.",
       "ku": "«Mein Name» دوو پەیڤن، بەلێ تنێ ئێک جهن."
-     }
+     },
+     "practice": [
+      {
+       "q": "Bilde einen Satz: ich / heißen / Lara",
+       "qku": "رستەکێ چێکە",
+       "cue": "",
+       "a": "Ich heiße Lara.",
+       "aku": "ناڤێ من لارایە."
+      },
+      {
+       "q": "Bilde einen Satz: ich / kommen / aus dem Irak",
+       "qku": "رستەکێ چێکە",
+       "cue": "",
+       "a": "Ich komme aus dem Irak.",
+       "aku": "ئەز ژ عیراقێ مە."
+      },
+      {
+       "q": "Bilde einen Satz: mein Name / sein / Karim",
+       "qku": "رستەکێ چێکە",
+       "cue": "",
+       "a": "Mein Name ist Karim.",
+       "aku": "ناڤێ من کەریمە."
+      }
+     ]
     },
     {
      "emoji": "🌍",
@@ -210,6 +286,29 @@
       {
        "de": "Woher kommen Sie?",
        "ku": "هوین ژ کیڤەنە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Woher kommt Azad?",
+       "qku": "ئازاد ژ کیڤەیە؟",
+       "cue": "Kurdistan",
+       "a": "Er kommt aus Kurdistan.",
+       "aku": "ئەو ژ کوردستانێ یە."
+      },
+      {
+       "q": "Woher kommt Ali?",
+       "qku": "عەلی ژ کیڤەیە؟",
+       "cue": "der Irak",
+       "a": "Er kommt aus dem Irak.",
+       "aku": "ئەو ژ عیراقێ یە."
+      },
+      {
+       "q": "Woher kommt Ayşe?",
+       "qku": "عائیشە ژ کیڤەیە؟",
+       "cue": "die Türkei",
+       "a": "Sie kommt aus der Türkei.",
+       "aku": "ئەو ژ تورکیا یە."
       }
      ]
     }
@@ -292,6 +391,29 @@
        "de": "Habt ihr Kinder?",
        "ku": "ئەرێ هەوە زارۆک هەنە؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wo lebt ihr?",
+       "qku": "هوین ل کیڤە دژین؟",
+       "cue": "Berlin",
+       "a": "Wir leben in Berlin.",
+       "aku": "ئەم ل بەرلینێ دژین."
+      },
+      {
+       "q": "Hat er Kinder?",
+       "qku": "ئەرێ زارۆک وی هەنە؟",
+       "cue": "ja, zwei",
+       "a": "Ja, er hat zwei Kinder.",
+       "aku": "بەلێ، دوو زارۆک وی هەنە."
+      },
+      {
+       "q": "Was sprechen sie?",
+       "qku": "ئەو ب چ زمانی دئاخڤن؟",
+       "cue": "Arabisch",
+       "a": "Sie sprechen Arabisch.",
+       "aku": "ئەو ب عەرەبی دئاخڤن."
+      }
      ]
     },
     {
@@ -347,6 +469,29 @@
        "de": "Ist das Ihr Sohn?",
        "ku": "ئەرێ ئەڤە کوڕێ هەوەیە؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wer ist das?",
+       "qku": "ئەڤە کییە؟",
+       "cue": "Mutter (ich)",
+       "a": "Das ist meine Mutter.",
+       "aku": "ئەڤە دایکا منە."
+      },
+      {
+       "q": "Wer ist das?",
+       "qku": "ئەڤە کییە؟",
+       "cue": "Vater (ich)",
+       "a": "Das ist mein Vater.",
+       "aku": "ئەڤە بابێ منە."
+      },
+      {
+       "q": "Ist das deine Schwester?",
+       "qku": "ئەرێ ئەڤە خویشکا تەیە؟",
+       "cue": "ja",
+       "a": "Ja, das ist meine Schwester.",
+       "aku": "بەلێ، ئەڤە خویشکا منە."
+      }
      ]
     },
     {
@@ -389,6 +534,29 @@
       {
        "de": "Lebt deine Schwester in Deutschland?",
        "ku": "ئەرێ خویشکا تە ل ئەلمانیا دژیت؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wo lebst du?",
+       "qku": "تو ل کیڤە دژی؟",
+       "cue": "Duhok",
+       "a": "Ich lebe in Duhok.",
+       "aku": "ئەز ل دهۆکێ دژیم."
+      },
+      {
+       "q": "Wo leben deine Eltern?",
+       "qku": "دایک و بابێن تە ل کیڤە دژین؟",
+       "cue": "der Irak",
+       "a": "Sie leben im Irak.",
+       "aku": "ئەو ل عیراقێ دژین."
+      },
+      {
+       "q": "Wo wohnt Ayşe?",
+       "qku": "عائیشە ل کیڤە دژیت؟",
+       "cue": "die Türkei",
+       "a": "Sie wohnt in der Türkei.",
+       "aku": "ئەو ل تورکیا دژیت."
       }
      ]
     }
@@ -444,7 +612,30 @@
      "tip": {
       "de": "Lerne jedes Nomen immer mit Artikel: der Tee, die Milch, das Brot.",
       "ku": "هەر ناڤەکی هەردەم دگەل ئارتیکلێ وی فێر بە: der Tee، die Milch، das Brot."
-     }
+     },
+     "practice": [
+      {
+       "q": "Was ist das? 🍎",
+       "qku": "ئەڤە چییە؟",
+       "cue": "Apfel (der)",
+       "a": "Das ist ein Apfel.",
+       "aku": "ئەڤە سێڤەکە."
+      },
+      {
+       "q": "Was ist das? 🍌",
+       "qku": "ئەڤە چییە؟",
+       "cue": "Banane (die)",
+       "a": "Das ist eine Banane.",
+       "aku": "ئەڤە موزەکە."
+      },
+      {
+       "q": "Was ist das? 🥚",
+       "qku": "ئەڤە چییە؟",
+       "cue": "Ei (das)",
+       "a": "Das ist ein Ei.",
+       "aku": "ئەڤە هێکەکە."
+      }
+     ]
     },
     {
      "emoji": "🚫",
@@ -486,6 +677,29 @@
       {
        "de": "Ich trinke keinen Kaffee.",
        "ku": "ئەز قەهوێ ڤەناخۆم."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ist das ein Ei?",
+       "qku": "ئەرێ ئەڤە هێکە؟",
+       "cue": "nein",
+       "a": "Nein, das ist kein Ei.",
+       "aku": "نەخێر، ئەڤە هێک نینە."
+      },
+      {
+       "q": "Ist das eine Tomate?",
+       "qku": "ئەرێ ئەڤە تەماتەیە؟",
+       "cue": "nein",
+       "a": "Nein, das ist keine Tomate.",
+       "aku": "نەخێر، ئەڤە تەماتە نینە."
+      },
+      {
+       "q": "Haben wir Eier?",
+       "qku": "ئەرێ هێک مە هەنە؟",
+       "cue": "nein",
+       "a": "Nein, wir haben keine Eier.",
+       "aku": "نەخێر، هێک مە نینن."
       }
      ]
     },
@@ -553,7 +767,30 @@
      "tip": {
       "de": "Lerne den Plural mit dem Wort: der Apfel, die Äpfel.",
       "ku": "کۆیێ دگەل پەیڤێ پێکڤە فێر بە: der Apfel، die Äpfel."
-     }
+     },
+     "practice": [
+      {
+       "q": "der Apfel → Plural?",
+       "qku": "کۆیا ڤێ پەیڤێ؟",
+       "cue": "",
+       "a": "die Äpfel",
+       "aku": "سێڤ"
+      },
+      {
+       "q": "die Banane → Plural?",
+       "qku": "کۆیا ڤێ پەیڤێ؟",
+       "cue": "",
+       "a": "die Bananen",
+       "aku": "موز"
+      },
+      {
+       "q": "das Ei → Plural?",
+       "qku": "کۆیا ڤێ پەیڤێ؟",
+       "cue": "",
+       "a": "die Eier",
+       "aku": "هێک"
+      }
+     ]
     },
     {
      "emoji": "✅",
@@ -600,6 +837,29 @@
        "de": "Nein, ich bin ledig.",
        "ku": "نەخێر، ئەز یێ/یا سەڵتم."
       }
+     ],
+     "practice": [
+      {
+       "q": "Frage: du / sein / verheiratet",
+       "qku": "پرسیارا ئەرێ/نەخێر چێکە",
+       "cue": "",
+       "a": "Bist du verheiratet?",
+       "aku": "ئەرێ تو یێ زەویجی؟"
+      },
+      {
+       "q": "Frage: Sie / haben / Kinder",
+       "qku": "پرسیارێ چێکە",
+       "cue": "",
+       "a": "Haben Sie Kinder?",
+       "aku": "ئەرێ زارۆک هەوە هەنە؟"
+      },
+      {
+       "q": "Frage: du / wohnen / in Berlin",
+       "qku": "پرسیارێ چێکە",
+       "cue": "",
+       "a": "Wohnst du in Berlin?",
+       "aku": "ئەرێ تو ل بەرلینێ دژی؟"
+      }
      ]
     },
     {
@@ -642,6 +902,29 @@
       {
        "de": "Wir brauchen Mehl und Zucker.",
        "ku": "ئارد و شەکر بۆ مە پێدڤینە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Was brauchen wir?",
+       "qku": "مە چ پێدڤییە؟",
+       "cue": "Zucker",
+       "a": "Wir brauchen Zucker.",
+       "aku": "شەکر بۆ مە پێدڤییە."
+      },
+      {
+       "q": "Was trinkst du gern?",
+       "qku": "تو حەز ژ ڤەخوارنا چ دکەی؟",
+       "cue": "Tee",
+       "a": "Ich trinke gern Tee.",
+       "aku": "ئەز حەز ژ ڤەخوارنا چایێ دکەم."
+      },
+      {
+       "q": "Haben wir noch Milch?",
+       "qku": "ئەرێ هێشتا شیر مە هەیە؟",
+       "cue": "ja",
+       "a": "Ja, wir haben noch Milch.",
+       "aku": "بەلێ، هێشتا شیر مە هەیە."
       }
      ]
     },
@@ -698,6 +981,29 @@
        "de": "Wir essen zusammen.",
        "ku": "ئەم پێکڤە دخۆین."
       }
+     ],
+     "practice": [
+      {
+       "q": "Was isst du gern?",
+       "qku": "تو حەز ژ خوارنا چ دکەی؟",
+       "cue": "Reis",
+       "a": "Ich esse gern Reis.",
+       "aku": "ئەز حەز ژ خوارنا برنجی دکەم."
+      },
+      {
+       "q": "Was isst Lara?",
+       "qku": "لارا چ دخوت؟",
+       "cue": "Pizza",
+       "a": "Sie isst Pizza.",
+       "aku": "ئەو پیتزایێ دخوت."
+      },
+      {
+       "q": "Esst ihr Fisch?",
+       "qku": "ئەرێ هوین ماسیان دخۆن؟",
+       "cue": "ja",
+       "a": "Ja, wir essen Fisch.",
+       "aku": "بەلێ، ئەم ماسیان دخۆین."
+      }
      ]
     }
    ]
@@ -752,7 +1058,30 @@
      "tip": {
       "de": "Neu: ein / eine. Bekannt: der / das / die.",
       "ku": "نوو: ein / eine. ناسکری: der / das / die."
-     }
+     },
+     "practice": [
+      {
+       "q": "Das ist eine Küche. Wie ist ___ Küche? (groß)",
+       "qku": "ئارتیکلێ دیار + بەرسڤ",
+       "cue": "groß",
+       "a": "Die Küche ist groß.",
+       "aku": "مەتبەخ یا مەزنە."
+      },
+      {
+       "q": "Das ist ein Bad. Wie ist ___ Bad? (klein)",
+       "qku": "ئارتیکلێ دیار + بەرسڤ",
+       "cue": "klein",
+       "a": "Das Bad ist klein.",
+       "aku": "حەمام یێ بچووکە."
+      },
+      {
+       "q": "Das ist ein Balkon. Wie ist ___ Balkon? (schön)",
+       "qku": "ئارتیکلێ دیار + بەرسڤ",
+       "cue": "schön",
+       "a": "Der Balkon ist schön.",
+       "aku": "بالکۆن یێ جوانە."
+      }
+     ]
     },
     {
      "emoji": "👉",
@@ -794,6 +1123,29 @@
       {
        "de": "Ist der Schlüssel hier? – Nein, dort.",
        "ku": "ئەرێ کلیل ل ڤێرێ یە؟ – نەخێر، ل وێرێ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wo ist das Bad?",
+       "qku": "حەمام ل کیڤەیە؟",
+       "cue": "hier",
+       "a": "Das Bad ist hier.",
+       "aku": "حەمام ل ڤێرێ یە."
+      },
+      {
+       "q": "Wo ist die Küche?",
+       "qku": "مەتبەخ ل کیڤەیە؟",
+       "cue": "dort",
+       "a": "Die Küche ist dort.",
+       "aku": "مەتبەخ ل وێرێ یە."
+      },
+      {
+       "q": "Wo ist der Schlüssel?",
+       "qku": "کلیل ل کیڤەیە؟",
+       "cue": "hier",
+       "a": "Der Schlüssel ist hier.",
+       "aku": "کلیل ل ڤێرێ یە."
       }
      ]
     },
@@ -842,6 +1194,29 @@
        "de": "Das Bett ist alt. Es ist bequem.",
        "ku": "تەخت یێ کەڤنە. یێ ئارامە."
       }
+     ],
+     "practice": [
+      {
+       "q": "Wie ist der Tisch?",
+       "qku": "مێز چەوایە؟",
+       "cue": "neu",
+       "a": "Er ist neu.",
+       "aku": "یا نوویە."
+      },
+      {
+       "q": "Wie ist die Lampe?",
+       "qku": "چرا چەوایە؟",
+       "cue": "schön",
+       "a": "Sie ist schön.",
+       "aku": "یا جوانە."
+      },
+      {
+       "q": "Wie ist das Sofa?",
+       "qku": "قەنەفە چەوایە؟",
+       "cue": "bequem",
+       "a": "Es ist bequem.",
+       "aku": "یا ئارامە."
+      }
      ]
     },
     {
@@ -885,7 +1260,30 @@
      "tip": {
       "de": "„nicht“ für Adjektive und Verben, „kein“ für Nomen.",
       "ku": "«nicht» بۆ هەڤاڵناڤ و کاران، «kein» بۆ ناڤان."
-     }
+     },
+     "practice": [
+      {
+       "q": "Ist die Wohnung teuer?",
+       "qku": "ئەرێ خانی یێ گرانە؟",
+       "cue": "nein",
+       "a": "Nein, die Wohnung ist nicht teuer.",
+       "aku": "نەخێر، خانی نە یێ گرانە."
+      },
+      {
+       "q": "Ist das Zimmer groß?",
+       "qku": "ئەرێ ژوور یێ مەزنە؟",
+       "cue": "nein",
+       "a": "Nein, das Zimmer ist nicht groß.",
+       "aku": "نەخێر، ژوور نە یێ مەزنە."
+      },
+      {
+       "q": "Ist der Garten schön?",
+       "qku": "ئەرێ باخچە یێ جوانە؟",
+       "cue": "ja",
+       "a": "Ja, der Garten ist schön.",
+       "aku": "بەلێ، باخچە یێ جوانە."
+      }
+     ]
     },
     {
      "emoji": "🧩",
@@ -937,6 +1335,29 @@
        "de": "Wo ist das Wohnzimmer?",
        "ku": "ژوورا دانیشتنێ ل کیڤەیە؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "kühl + der Schrank = ?",
+       "qku": "پەیڤا لێکدای؟",
+       "cue": "",
+       "a": "der Kühlschrank",
+       "aku": "سەلاجە"
+      },
+      {
+       "q": "wohnen + das Zimmer = ?",
+       "qku": "پەیڤا لێکدای؟",
+       "cue": "",
+       "a": "das Wohnzimmer",
+       "aku": "ژوورا دانیشتنێ"
+      },
+      {
+       "q": "waschen + die Maschine = ?",
+       "qku": "پەیڤا لێکدای؟",
+       "cue": "",
+       "a": "die Waschmaschine",
+       "aku": "غەسالە"
+      }
      ]
     },
     {
@@ -978,6 +1399,29 @@
       {
        "de": "Das Zimmer ist zu dunkel.",
        "ku": "ژوور زێدە یێ تاریە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wie ist das Sofa? 😊",
+       "qku": "قەنەفە چەوایە؟",
+       "cue": "sehr schön",
+       "a": "Das Sofa ist sehr schön.",
+       "aku": "قەنەفە گەلەک یا جوانە."
+      },
+      {
+       "q": "Wie ist die Miete? 😟",
+       "qku": "کرێ چەوایە؟",
+       "cue": "zu hoch",
+       "a": "Die Miete ist zu hoch.",
+       "aku": "کرێ زێدە یا بلندە."
+      },
+      {
+       "q": "Wie ist das Zimmer? 😟",
+       "qku": "ژوور چەوایە؟",
+       "cue": "zu klein",
+       "a": "Das Zimmer ist zu klein.",
+       "aku": "ژوور زێدە یێ بچووکە."
       }
      ]
     }
@@ -1041,6 +1485,29 @@
        "de": "Wann rufst du mich an?",
        "ku": "تو کەنگی تەلەفۆنێ بۆ من دکەی؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wann stehst du auf?",
+       "qku": "تو کەنگی ڕادبی؟",
+       "cue": "um 7 Uhr",
+       "a": "Ich stehe um 7 Uhr auf.",
+       "aku": "ئەز دەمژمێر ٧ ڕادبم."
+      },
+      {
+       "q": "Wann kaufst du ein?",
+       "qku": "تو کەنگی بازاڕێ دکەی؟",
+       "cue": "am Samstag",
+       "a": "Ich kaufe am Samstag ein.",
+       "aku": "ئەز رۆژا شەمبیێ بازاڕێ دکەم."
+      },
+      {
+       "q": "Wann siehst du fern?",
+       "qku": "تو کەنگی تەلەڤزیۆنێ دبینی؟",
+       "cue": "am Abend",
+       "a": "Ich sehe am Abend fern.",
+       "aku": "ئەز ئێڤاری تەلەڤزیۆنێ دبینم."
+      }
      ]
     },
     {
@@ -1092,6 +1559,29 @@
        "de": "Ich arbeite von Montag bis Freitag.",
        "ku": "ئەز ژ دووشەمبیێ هەتا ئەینیێ کار دکەم."
       }
+     ],
+     "practice": [
+      {
+       "q": "Wann beginnt der Kurs?",
+       "qku": "خول کەنگی دەستپێدکەت؟",
+       "cue": "9 Uhr",
+       "a": "Der Kurs beginnt um 9 Uhr.",
+       "aku": "خول دەمژمێر ٩ دەستپێدکەت."
+      },
+      {
+       "q": "Wann arbeitest du?",
+       "qku": "تو کەنگی کار دکەی؟",
+       "cue": "Montag",
+       "a": "Ich arbeite am Montag.",
+       "aku": "ئەز رۆژا دووشەمبیێ کار دکەم."
+      },
+      {
+       "q": "Wann ist die Bank offen?",
+       "qku": "بانک کەنگی ڤەکرییە؟",
+       "cue": "9 – 16 Uhr",
+       "a": "Von 9 bis 16 Uhr.",
+       "aku": "ژ ٩ هەتا ١٦."
+      }
      ]
     },
     {
@@ -1138,6 +1628,29 @@
       {
        "de": "Heute habe ich Zeit.",
        "ku": "ئەڤرۆ دەمێ من هەیە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Am Abend … (ich / fernsehen)",
+       "qku": "رستێ ب دەمی دەستپێبکە",
+       "cue": "",
+       "a": "Am Abend sehe ich fern.",
+       "aku": "ئێڤاری ئەز تەلەڤزیۆنێ دبینم."
+      },
+      {
+       "q": "Am Montag … (ich / arbeiten)",
+       "qku": "رستێ ب دەمی دەستپێبکە",
+       "cue": "",
+       "a": "Am Montag arbeite ich.",
+       "aku": "رۆژا دووشەمبیێ ئەز کار دکەم."
+      },
+      {
+       "q": "Heute … (ich / haben / Zeit)",
+       "qku": "رستێ ب دەمی دەستپێبکە",
+       "cue": "",
+       "a": "Heute habe ich Zeit.",
+       "aku": "ئەڤرۆ دەمێ من هەیە."
       }
      ]
     },
@@ -1201,6 +1714,29 @@
        "de": "Arbeitest du am Samstag?",
        "ku": "ئەرێ تو رۆژا شەمبیێ کار دکەی؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wie lange schläft Tim?",
+       "qku": "تیم هەتا کەنگی دنڤیت؟",
+       "cue": "bis 8 Uhr",
+       "a": "Er schläft bis 8 Uhr.",
+       "aku": "ئەو هەتا دەمژمێر ٨ دنڤیت."
+      },
+      {
+       "q": "Arbeitest du heute?",
+       "qku": "ئەرێ تو ئەڤرۆ کار دکەی؟",
+       "cue": "ja",
+       "a": "Ja, ich arbeite heute.",
+       "aku": "بەلێ، ئەز ئەڤرۆ کار دکەم."
+      },
+      {
+       "q": "Wann fängt der Film an?",
+       "qku": "فیلم کەنگی دەستپێدکەت؟",
+       "cue": "um 8 Uhr",
+       "a": "Der Film fängt um 8 Uhr an.",
+       "aku": "فیلم دەمژمێر ٨ دەستپێدکەت."
+      }
      ]
     }
    ]
@@ -1258,7 +1794,30 @@
      "tip": {
       "de": "Frage: Wen oder was? → Akkusativ.",
       "ku": "پرسیار: Wen oder was? (کێ یان چ؟) ← ئاکوزاتیڤ."
-     }
+     },
+     "practice": [
+      {
+       "q": "Was brauchst du?",
+       "qku": "تە چ پێدڤییە؟",
+       "cue": "ein Ball (der)",
+       "a": "Ich brauche einen Ball.",
+       "aku": "تەپەک بۆ من پێدڤییە."
+      },
+      {
+       "q": "Was kaufst du?",
+       "qku": "تو چ دکڕی؟",
+       "cue": "ein Saft (der)",
+       "a": "Ich kaufe einen Saft.",
+       "aku": "ئەز شەربەتەکێ دکڕم."
+      },
+      {
+       "q": "Hast du einen Fernseher?",
+       "qku": "ئەرێ تەلەڤزیۆن تە هەیە؟",
+       "cue": "nein",
+       "a": "Nein, ich habe keinen Fernseher.",
+       "aku": "نەخێر، تەلەڤزیۆن من نینە."
+      }
+     ]
     },
     {
      "emoji": "🔤",
@@ -1320,6 +1879,29 @@
        "de": "Sie trifft ihre Freundin.",
        "ku": "ئەو هەڤالا خۆ دبینیت."
       }
+     ],
+     "practice": [
+      {
+       "q": "Was nimmst du?",
+       "qku": "تو چ دبەی؟",
+       "cue": "einen Tee",
+       "a": "Ich nehme einen Tee.",
+       "aku": "ئەز چایەکێ دبەم."
+      },
+      {
+       "q": "Was liest Sara?",
+       "qku": "سارا چ دخوینیت؟",
+       "cue": "ein Buch",
+       "a": "Sie liest ein Buch.",
+       "aku": "ئەو پەرتووکەکێ دخوینیت."
+      },
+      {
+       "q": "Wohin fährt Karim?",
+       "qku": "کەریم دچیتە کیڤە؟",
+       "cue": "nach Köln",
+       "a": "Er fährt nach Köln.",
+       "aku": "ئەو دچیتە کۆلن."
+      }
      ]
     },
     {
@@ -1361,6 +1943,29 @@
       {
        "de": "Hast du kein Hobby? – Nein.",
        "ku": "ئەرێ چ هۆبی تە نینن؟ – نەخێر."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Hast du keine Zeit? 🙂 (Zeit: ja)",
+       "qku": "ئەرێ دەمێ تە نینە؟",
+       "cue": "doch",
+       "a": "Doch, ich habe Zeit.",
+       "aku": "بەلێ، دەمێ من هەیە."
+      },
+      {
+       "q": "Kommst du nicht mit? (positiv)",
+       "qku": "ئەرێ تو دگەل نائێی؟",
+       "cue": "doch",
+       "a": "Doch, ich komme mit.",
+       "aku": "بەلێ، ئەز دگەل دێ هێم."
+      },
+      {
+       "q": "Hast du Hunger? (negativ)",
+       "qku": "ئەرێ تو یێ برسیی؟",
+       "cue": "nein",
+       "a": "Nein, ich habe keinen Hunger.",
+       "aku": "نەخێر، ئەز نە یێ برسیمە."
       }
      ]
     },
@@ -1416,6 +2021,29 @@
       {
        "de": "Sie möchte ins Kino gehen.",
        "ku": "ئەو دخوازیت بچیتە سینەمایێ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Was möchten Sie?",
+       "qku": "هوین چ دخوازن؟",
+       "cue": "einen Kaffee",
+       "a": "Ich möchte einen Kaffee.",
+       "aku": "ئەز قەهوەکێ دخوازم."
+      },
+      {
+       "q": "Was möchtest du essen?",
+       "qku": "تو دخوازی چ بخۆی؟",
+       "cue": "Pizza",
+       "a": "Ich möchte Pizza essen.",
+       "aku": "ئەز دخوازم پیتزایێ بخۆم."
+      },
+      {
+       "q": "Was möchte Lina?",
+       "qku": "لینا چ دخوازیت؟",
+       "cue": "ein Eis",
+       "a": "Sie möchte ein Eis.",
+       "aku": "ئەو بەفرەکێ (ئایسکرێم) دخوازیت."
       }
      ]
     }
@@ -1488,7 +2116,30 @@
      "tip": {
       "de": "ich kann / er kann: keine Endung!",
       "ku": "ich kann / er kann: چ دوماهی نینن!"
-     }
+     },
+     "practice": [
+      {
+       "q": "Kannst du schwimmen?",
+       "qku": "ئەرێ تو دشێی مەلەڤانیێ بکەی؟",
+       "cue": "ja, gut",
+       "a": "Ja, ich kann gut schwimmen.",
+       "aku": "بەلێ، ئەز دشێم باش مەلەڤانیێ بکەم."
+      },
+      {
+       "q": "Kann er kochen?",
+       "qku": "ئەرێ ئەو دشێت خوارنێ چێبکەت؟",
+       "cue": "nein",
+       "a": "Nein, er kann nicht kochen.",
+       "aku": "نەخێر، ئەو نەشێت خوارنێ چێبکەت."
+      },
+      {
+       "q": "Könnt ihr Deutsch sprechen?",
+       "qku": "ئەرێ هوین دشێن ئەلمانی باخڤن؟",
+       "cue": "ja, ein bisschen",
+       "a": "Ja, wir können ein bisschen Deutsch sprechen.",
+       "aku": "بەلێ، ئەم دشێین کێمەکێ ئەلمانی باخڤین."
+      }
+     ]
     },
     {
      "emoji": "🎯",
@@ -1547,7 +2198,30 @@
      "tip": {
       "de": "möchte = höflich, wollen = direkt und stark.",
       "ku": "möchte نەرم و ب ڕێزە، wollen ڕاستەوخۆ و بهێزە."
-     }
+     },
+     "practice": [
+      {
+       "q": "Was willst du lernen?",
+       "qku": "تو دخوازی چ فێر ببی؟",
+       "cue": "Deutsch",
+       "a": "Ich will Deutsch lernen.",
+       "aku": "ئەز دخوازم ئەلمانی فێر ببم."
+      },
+      {
+       "q": "Wohin wollt ihr fahren?",
+       "qku": "هوین دخوازن بچنە کیڤە؟",
+       "cue": "nach Berlin",
+       "a": "Wir wollen nach Berlin fahren.",
+       "aku": "ئەم دخوازین بچینە بەرلینێ."
+      },
+      {
+       "q": "Was will Sara machen?",
+       "qku": "سارا دخوازیت چ بکەت؟",
+       "cue": "Sport",
+       "a": "Sie will Sport machen.",
+       "aku": "ئەو دخوازیت وەرزشێ بکەت."
+      }
+     ]
     },
     {
      "emoji": "📖",
@@ -1598,6 +2272,29 @@
       {
        "de": "Sie hat einen Brief geschrieben.",
        "ku": "وێ نامەیەک نڤیسی."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Was hast du gestern gemacht?",
+       "qku": "تە دوهی چ کر؟",
+       "cue": "Deutsch lernen",
+       "a": "Ich habe Deutsch gelernt.",
+       "aku": "من ئەلمانی خواند."
+      },
+      {
+       "q": "Was hat Lara gekocht?",
+       "qku": "لارایێ چ چێکر؟",
+       "cue": "Suppe",
+       "a": "Sie hat Suppe gekocht.",
+       "aku": "وێ شۆرباڤ چێکر."
+      },
+      {
+       "q": "Was habt ihr gespielt?",
+       "qku": "هەوە چ یاری کر؟",
+       "cue": "Fußball",
+       "a": "Wir haben Fußball gespielt.",
+       "aku": "مە تەپا پێ یاری کر."
       }
      ]
     },
@@ -1651,6 +2348,29 @@
        "de": "Bist du gestern zu Hause geblieben?",
        "ku": "ئەرێ تو دوهی ل مال مای؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wohin bist du gefahren?",
+       "qku": "تو چوویە کیڤە؟",
+       "cue": "nach Hamburg",
+       "a": "Ich bin nach Hamburg gefahren.",
+       "aku": "ئەز چوومە هامبورگێ."
+      },
+      {
+       "q": "Wann ist er gekommen?",
+       "qku": "ئەو کەنگی هات؟",
+       "cue": "gestern",
+       "a": "Er ist gestern gekommen.",
+       "aku": "ئەو دوهی هات."
+      },
+      {
+       "q": "Wo seid ihr geblieben?",
+       "qku": "هوین ل کیڤە مان؟",
+       "cue": "zu Hause",
+       "a": "Wir sind zu Hause geblieben.",
+       "aku": "ئەم ل مال ماین."
+      }
      ]
     },
     {
@@ -1701,6 +2421,29 @@
       {
        "de": "Am Morgen habe ich gefrühstückt.",
        "ku": "سپێدێ من تێشت خوار."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Frage: du / gestern / machen (Perfekt) – Was …?",
+       "qku": "پرسیارێ ب Perfekt چێکە",
+       "cue": "",
+       "a": "Was hast du gestern gemacht?",
+       "aku": "تە دوهی چ کر؟"
+      },
+      {
+       "q": "Frage: du / schon mal / in Berlin sein (Perfekt)",
+       "qku": "پرسیارێ چێکە",
+       "cue": "",
+       "a": "Bist du schon mal in Berlin gewesen?",
+       "aku": "ئەرێ تو چ جاران ل بەرلینێ بووی؟"
+      },
+      {
+       "q": "Satz: am Morgen / ich / frühstücken (Perfekt)",
+       "qku": "رستێ چێکە",
+       "cue": "",
+       "a": "Am Morgen habe ich gefrühstückt.",
+       "aku": "سپێدێ من تێشت خوار."
       }
      ]
     }
@@ -1769,6 +2512,29 @@
        "de": "Wo warst du gestern?",
        "ku": "تو دوهی ل کیڤە بووی؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wo warst du gestern?",
+       "qku": "تو دوهی ل کیڤە بووی؟",
+       "cue": "zu Hause",
+       "a": "Ich war zu Hause.",
+       "aku": "ئەز ل مال بووم."
+      },
+      {
+       "q": "Was warst du von Beruf?",
+       "qku": "کارێ تە چ بوو؟",
+       "cue": "Lehrer",
+       "a": "Ich war Lehrer.",
+       "aku": "ئەز مامۆستا بووم."
+      },
+      {
+       "q": "Hattest du Zeit?",
+       "qku": "ئەرێ دەمێ تە هەبوو؟",
+       "cue": "nein",
+       "a": "Nein, ich hatte keine Zeit.",
+       "aku": "نەخێر، دەمێ من نەبوو."
+      }
      ]
     },
     {
@@ -1811,6 +2577,29 @@
       {
        "de": "Er geht für ein Jahr nach Spanien.",
        "ku": "ئەو بۆ سالەکێ دچیتە ئیسپانیا."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wann bist du nach Deutschland gekommen?",
+       "qku": "تو کەنگی هاتییە ئەلمانیا؟",
+       "cue": "vor 2 Jahren",
+       "a": "Ich bin vor zwei Jahren gekommen.",
+       "aku": "ئەز بەری دوو سالان هاتم."
+      },
+      {
+       "q": "Seit wann arbeitest du hier?",
+       "qku": "ژ کەنگی ڤە تو ل ڤێرێ کار دکەی؟",
+       "cue": "seit 3 Monaten",
+       "a": "Ich arbeite seit drei Monaten hier.",
+       "aku": "ژ سێ هەیڤان ڤە ئەز ل ڤێرێ کار دکەم."
+      },
+      {
+       "q": "Wie lange bleibst du?",
+       "qku": "تو هەتا کەنگی دمینی؟",
+       "cue": "für 1 Jahr",
+       "a": "Ich bleibe für ein Jahr.",
+       "aku": "ئەز بۆ سالەکێ دمینم."
       }
      ]
     },
@@ -1863,6 +2652,29 @@
        "de": "Was sind Sie von Beruf?",
        "ku": "کارێ هەوە چییە؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Er ist Lehrer. Und sie?",
+       "qku": "ئەو مامۆستایە. و ئەو (ئافرەت)؟",
+       "cue": "Lehrerin",
+       "a": "Sie ist Lehrerin.",
+       "aku": "ئەو مامۆستایە."
+      },
+      {
+       "q": "Er ist Arzt. Und sie?",
+       "qku": "ئەو دکتۆرە. و ئەو (ئافرەت)؟",
+       "cue": "Ärztin",
+       "a": "Sie ist Ärztin.",
+       "aku": "ئەو دکتۆرە."
+      },
+      {
+       "q": "Was sind Sie von Beruf?",
+       "qku": "کارێ هەوە چییە؟",
+       "cue": "Koch",
+       "a": "Ich bin Koch.",
+       "aku": "ئەز ئاشپەزم."
+      }
      ]
     },
     {
@@ -1904,6 +2716,29 @@
       {
        "de": "Er arbeitet bei der Post als Fahrer.",
        "ku": "ئەو ل پۆستێ وەکی شۆفێر کار دکەت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wo arbeitest du?",
+       "qku": "تو ل کیڤە کار دکەی؟",
+       "cue": "Siemens",
+       "a": "Ich arbeite bei Siemens.",
+       "aku": "ئەز ل سیمێنس کار دکەم."
+      },
+      {
+       "q": "Als was arbeitest du?",
+       "qku": "تو وەکی چ کار دکەی؟",
+       "cue": "Fahrer",
+       "a": "Ich arbeite als Fahrer.",
+       "aku": "ئەز وەکی شۆفێر کار دکەم."
+      },
+      {
+       "q": "Wo arbeitet Lara?",
+       "qku": "لارا ل کیڤە کار دکەت؟",
+       "cue": "eine Bank",
+       "a": "Sie arbeitet bei einer Bank.",
+       "aku": "ئەو ل بانکەکێ کار دکەت."
       }
      ]
     }
@@ -1972,6 +2807,29 @@
        "de": "Sie müssen hier umsteigen.",
        "ku": "دڤێت هوین ل ڤێرە پاسێ بگوهۆڕن."
       }
+     ],
+     "practice": [
+      {
+       "q": "Darf man hier rauchen?",
+       "qku": "ئەرێ ل ڤێرێ جگارە کێشان دبیت؟",
+       "cue": "nein",
+       "a": "Nein, hier darf man nicht rauchen.",
+       "aku": "نەخێر، ل ڤێرێ جگارە کێشان قەدەغەیە."
+      },
+      {
+       "q": "Was musst du morgen machen?",
+       "qku": "دڤێت تو سوبەهی چ بکەی؟",
+       "cue": "arbeiten",
+       "a": "Ich muss morgen arbeiten.",
+       "aku": "دڤێت ئەز سوبەهی کار بکەم."
+      },
+      {
+       "q": "Muss ich hier umsteigen?",
+       "qku": "ئەرێ دڤێت ئەز ل ڤێرێ بگوهۆڕم؟",
+       "cue": "ja",
+       "a": "Ja, Sie müssen hier umsteigen.",
+       "aku": "بەلێ، دڤێت هوین ل ڤێرێ بگوهۆڕن."
+      }
      ]
     },
     {
@@ -2014,6 +2872,29 @@
       {
        "de": "In Deutschland muss man den Müll trennen.",
        "ku": "ل ئەلمانیا دڤێت زبل ژێک بهێتە جوداکرن."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Was darf man hier nicht? 🚭",
+       "qku": "ل ڤێرێ چ قەدەغەیە؟",
+       "cue": "rauchen",
+       "a": "Hier darf man nicht rauchen.",
+       "aku": "ل ڤێرێ جگارە کێشان قەدەغەیە."
+      },
+      {
+       "q": "Was muss man im Bus haben? 🎫",
+       "qku": "د پاسێ دا دڤێت چ هەبیت؟",
+       "cue": "ein Ticket",
+       "a": "Man muss ein Ticket haben.",
+       "aku": "دڤێت بلیتەک هەبیت."
+      },
+      {
+       "q": "Wie schreibt man das?",
+       "qku": "ئەڤە چەوا دهێتە نڤیسین؟",
+       "cue": "mit „ß“",
+       "a": "Man schreibt das mit „ß“.",
+       "aku": "ئەڤە ب «ß» دهێتە نڤیسین."
       }
      ]
     },
@@ -2072,6 +2953,29 @@
        "de": "Bleib heute im Bett!",
        "ku": "ئەڤرۆ د جهێ خۆ دا بمینە!"
       }
+     ],
+     "practice": [
+      {
+       "q": "Sag es höflich (Sie): warten",
+       "qku": "ب ڕێز بێژە (Sie)",
+       "cue": "bitte",
+       "a": "Warten Sie bitte!",
+       "aku": "چاڤەڕێ بکەن، ژ کەرەما خۆ!"
+      },
+      {
+       "q": "Sag es zu deinem Freund (du): trinken / viel Wasser",
+       "qku": "بۆ هەڤالێ خۆ بێژە (du)",
+       "cue": "",
+       "a": "Trink viel Wasser!",
+       "aku": "گەلەک ئاڤێ ڤەخۆ!"
+      },
+      {
+       "q": "Sag es zu deinem Freund (du): nehmen / die Tabletten",
+       "qku": "بۆ هەڤالێ خۆ بێژە (du)",
+       "cue": "",
+       "a": "Nimm die Tabletten!",
+       "aku": "حەبان بخۆ!"
+      }
      ]
     },
     {
@@ -2126,6 +3030,29 @@
       {
        "de": "Hilfst du mir bitte?",
        "ku": "تو دێ هاریکاریا من کەی، ژ کەرەما خۆ؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Kannst du mir helfen?",
+       "qku": "تو دشێی هاریکاریا من بکەی؟",
+       "cue": "ja",
+       "a": "Ja, ich helfe dir.",
+       "aku": "بەلێ، ئەز هاریکاریا تە دکەم."
+      },
+      {
+       "q": "Wem hilft Karim?",
+       "qku": "کەریم هاریکاریا کێ دکەت؟",
+       "cue": "seine Mutter",
+       "a": "Er hilft seiner Mutter.",
+       "aku": "ئەو هاریکاریا دایکا خۆ دکەت."
+      },
+      {
+       "q": "Hilfst du mir bitte?",
+       "qku": "تو دێ هاریکاریا من کەی؟",
+       "cue": "ja, gern",
+       "a": "Ja, gern helfe ich dir.",
+       "aku": "بەلێ، ب دلخۆشی."
       }
      ]
     }
@@ -2189,6 +3116,29 @@
        "de": "Unser Kind ist krank.",
        "ku": "زارۆکێ مە یێ نەساخە."
       }
+     ],
+     "practice": [
+      {
+       "q": "Was tut Karim weh?",
+       "qku": "کەریم چ دئێشیت؟",
+       "cue": "Kopf",
+       "a": "Sein Kopf tut weh.",
+       "aku": "سەرێ وی دئێشیت."
+      },
+      {
+       "q": "Was tut Sara weh?",
+       "qku": "سارا چ دئێشیت؟",
+       "cue": "Hand",
+       "a": "Ihre Hand tut weh.",
+       "aku": "دەستێ وێ دئێشیت."
+      },
+      {
+       "q": "Wer ist krank?",
+       "qku": "کی یێ نەساخە؟",
+       "cue": "unser Kind",
+       "a": "Unser Kind ist krank.",
+       "aku": "زارۆکێ مە یێ نەساخە."
+      }
      ]
     },
     {
@@ -2244,6 +3194,29 @@
        "de": "Soll ich morgen wiederkommen?",
        "ku": "ئەرێ دڤێت ئەز سوبەهی دووبارە بێم؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Was sagt der Arzt? (im Bett bleiben)",
+       "qku": "دکتۆر چ دبێژیت؟",
+       "cue": "",
+       "a": "Ich soll im Bett bleiben.",
+       "aku": "دڤێت ئەز د جهێ خۆ دا بمینم."
+      },
+      {
+       "q": "Was soll Tim machen? (viel trinken)",
+       "qku": "دڤێت تیم چ بکەت؟",
+       "cue": "",
+       "a": "Er soll viel trinken.",
+       "aku": "دڤێت ئەو گەلەک ڤەخوت."
+      },
+      {
+       "q": "Soll ich wiederkommen?",
+       "qku": "ئەرێ دڤێت ئەز دووبارە بێم؟",
+       "cue": "ja, morgen",
+       "a": "Ja, Sie sollen morgen wiederkommen.",
+       "aku": "بەلێ، دڤێت هوین سوبەهی بێن."
+      }
      ]
     },
     {
@@ -2282,6 +3255,29 @@
       {
        "de": "Ich habe Halsschmerzen.",
        "ku": "قرکا من دئێشیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Was tut dir weh?",
+       "qku": "چ تە دئێشیت؟",
+       "cue": "der Bauch",
+       "a": "Mein Bauch tut weh.",
+       "aku": "زکێ من دئێشیت."
+      },
+      {
+       "q": "Was tut dir weh?",
+       "qku": "چ تە دئێشیت؟",
+       "cue": "die Füße",
+       "a": "Meine Füße tun weh.",
+       "aku": "پێیێن من دئێشن."
+      },
+      {
+       "q": "Was hast du?",
+       "qku": "تە چ هەیە؟",
+       "cue": "Kopfschmerzen",
+       "a": "Ich habe Kopfschmerzen.",
+       "aku": "سەرێ من دئێشیت."
       }
      ]
     }
@@ -2334,6 +3330,29 @@
       {
        "de": "Er geht zu Fuß.",
        "ku": "ئەو ب پێیان دچیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wie fährst du zur Arbeit?",
+       "qku": "تو چەوا دچییە کاری؟",
+       "cue": "der Bus",
+       "a": "Ich fahre mit dem Bus.",
+       "aku": "ئەز ب پاسێ دچم."
+      },
+      {
+       "q": "Wie fahrt ihr nach Köln?",
+       "qku": "هوین چەوا دچنە کۆلن؟",
+       "cue": "der Zug",
+       "a": "Wir fahren mit dem Zug.",
+       "aku": "ئەم ب شەمەندەفەرێ دچین."
+      },
+      {
+       "q": "Wie kommt Sara?",
+       "qku": "سارا چەوا دهێت؟",
+       "cue": "die U-Bahn",
+       "a": "Sie kommt mit der U-Bahn.",
+       "aku": "ئەو ب مەترۆیێ دهێت."
       }
      ]
     },
@@ -2390,6 +3409,29 @@
        "de": "Die Apotheke ist zwischen der Post und dem Supermarkt.",
        "ku": "دەرمانخانە د ناڤبەرا پۆستێ و سوپەرمارکێتێ دا یە."
       }
+     ],
+     "practice": [
+      {
+       "q": "Wo ist das Café?",
+       "qku": "کافێ ل کیڤەیە؟",
+       "cue": "neben / die Bank",
+       "a": "Das Café ist neben der Bank.",
+       "aku": "کافێ ل تەنیشت بانکێ یە."
+      },
+      {
+       "q": "Wo wartest du?",
+       "qku": "تو ل کیڤە چاڤەڕێ دکەی؟",
+       "cue": "vor / der Bahnhof",
+       "a": "Ich warte vor dem Bahnhof.",
+       "aku": "ئەز ل بەر وێستگەهێ چاڤەڕێ دکەم."
+      },
+      {
+       "q": "Wo ist das Auto?",
+       "qku": "ترومبێل ل کیڤەیە؟",
+       "cue": "auf / der Parkplatz",
+       "a": "Das Auto ist auf dem Parkplatz.",
+       "aku": "ترومبێل ل سەر پارکینگێ یە."
+      }
      ]
     },
     {
@@ -2437,6 +3479,29 @@
       {
        "de": "Er spielt mit den Kindern.",
        "ku": "ئەو دگەل زارۆکان یاری دکەت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Mit wem spielt er?",
+       "qku": "ئەو دگەل کێ یاری دکەت؟",
+       "cue": "die Kinder",
+       "a": "Er spielt mit den Kindern.",
+       "aku": "ئەو دگەل زارۆکان یاری دکەت."
+      },
+      {
+       "q": "Wo steht das Auto?",
+       "qku": "ترومبێل ل کیڤەیە؟",
+       "cue": "vor / das Haus",
+       "a": "Das Auto steht vor dem Haus.",
+       "aku": "ترومبێل ل بەر خانی یە."
+      },
+      {
+       "q": "Wo wohnst du?",
+       "qku": "تو ل کیڤە دژی؟",
+       "cue": "bei / eine Familie",
+       "a": "Ich wohne bei einer Familie.",
+       "aku": "ئەز ل دەڤ مالباتەکێ دژیم."
       }
      ]
     },
@@ -2489,7 +3554,30 @@
      "tip": {
       "de": "Wo? → bei / in / an. Wohin? → zu / nach.",
       "ku": "Wo? (ل کیڤە) ← bei / in / an. Wohin? (بۆ کیڤە) ← zu / nach."
-     }
+     },
+     "practice": [
+      {
+       "q": "Wohin gehst du?",
+       "qku": "تو دچییە کیڤە؟",
+       "cue": "der Arzt",
+       "a": "Ich gehe zum Arzt.",
+       "aku": "ئەز دچمە دەڤ دکتۆری."
+      },
+      {
+       "q": "Wohin fahrt ihr?",
+       "qku": "هوین دچنە کیڤە؟",
+       "cue": "Berlin",
+       "a": "Wir fahren nach Berlin.",
+       "aku": "ئەم دچینە بەرلینێ."
+      },
+      {
+       "q": "Wohin geht Lara?",
+       "qku": "لارا دچیتە کیڤە؟",
+       "cue": "die Post",
+       "a": "Sie geht zur Post.",
+       "aku": "ئەو دچیتە پۆستێ."
+      }
+     ]
     }
    ]
   },
@@ -2536,6 +3624,29 @@
       {
        "de": "Ich hätte gern einen Termin.",
        "ku": "ئەز ژڤانەکێ دخوازم."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Bitte höflich: mir helfen (können)",
+       "qku": "ب ڕێز داخواز بکە",
+       "cue": "",
+       "a": "Könnten Sie mir bitte helfen?",
+       "aku": "هوین دشێن هاریکاریا من بکەن؟"
+      },
+      {
+       "q": "Bitte höflich: langsam sprechen (würden)",
+       "qku": "ب ڕێز داخواز بکە",
+       "cue": "",
+       "a": "Würden Sie bitte langsam sprechen?",
+       "aku": "ب هێدی باخڤن، ژ کەرەما خۆ."
+      },
+      {
+       "q": "Bitte höflich: das wiederholen (können)",
+       "qku": "ب ڕێز داخواز بکە",
+       "cue": "",
+       "a": "Könnten Sie das bitte wiederholen?",
+       "aku": "هوین دشێن ڤێ دووبارە بکەن؟"
       }
      ]
     },
@@ -2592,6 +3703,29 @@
        "de": "Nach der Arbeit gehe ich einkaufen.",
        "ku": "پشتی کاری ئەز دچمە بازاڕێ."
       }
+     ],
+     "practice": [
+      {
+       "q": "Wann kommt der Techniker?",
+       "qku": "تەکنیکی کەنگی دهێت؟",
+       "cue": "in / eine Stunde",
+       "a": "In einer Stunde.",
+       "aku": "پشتی دەمژمێرەکێ."
+      },
+      {
+       "q": "Ab wann ist das Geschäft offen?",
+       "qku": "دوکان ژ کەنگی ڤە ڤەکرییە؟",
+       "cue": "ab / morgen",
+       "a": "Ab morgen.",
+       "aku": "ژ سوبەهی ڤە."
+      },
+      {
+       "q": "Wann gehst du einkaufen?",
+       "qku": "تو کەنگی دچییە بازاڕێ؟",
+       "cue": "nach / die Arbeit",
+       "a": "Nach der Arbeit.",
+       "aku": "پشتی کاری."
+      }
      ]
     },
     {
@@ -2638,6 +3772,29 @@
       {
        "de": "Machen Sie bitte die Tür zu.",
        "ku": "دەرگەهی بگرن، ژ کەرەما خۆ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Es ist dunkel. (das Licht / anmachen)",
+       "qku": "تاریە. چ دکەی؟",
+       "cue": "",
+       "a": "Ich mache das Licht an.",
+       "aku": "ئەز گلۆپێ هەلدکەم."
+      },
+      {
+       "q": "Es ist warm. (das Fenster / aufmachen)",
+       "qku": "گەرمە. چ دکەی؟",
+       "cue": "",
+       "a": "Ich mache das Fenster auf.",
+       "aku": "ئەز پەنجەرێ ڤەدکەم."
+      },
+      {
+       "q": "Es ist kalt. (die Tür / zumachen)",
+       "qku": "سارە. چ دکەی؟",
+       "cue": "",
+       "a": "Ich mache die Tür zu.",
+       "aku": "ئەز دەرگەهی دگرم."
       }
      ]
     }
@@ -2699,6 +3856,29 @@
        "de": "Dieses Kleid ist sehr schön.",
        "ku": "ئەڤ کراسە گەلەک یێ جوانە."
       }
+     ],
+     "practice": [
+      {
+       "q": "Welcher Rock gefällt dir?",
+       "qku": "کیژ تەنوور تە دلچوو؟",
+       "cue": "dieser",
+       "a": "Dieser Rock gefällt mir.",
+       "aku": "ئەڤ تەنوورە من دلچوو."
+      },
+      {
+       "q": "Welche Jacke nimmst du?",
+       "qku": "تو کیژ جاکێتێ دبەی؟",
+       "cue": "diese",
+       "a": "Ich nehme diese Jacke.",
+       "aku": "ئەز ڤێ جاکێتێ دبەم."
+      },
+      {
+       "q": "Welches Hemd ist billiger?",
+       "qku": "کیژ کراس هەرزانترە؟",
+       "cue": "dieses",
+       "a": "Dieses Hemd ist billiger.",
+       "aku": "ئەڤ کراسە هەرزانترە."
+      }
      ]
     },
     {
@@ -2758,6 +3938,29 @@
        "de": "Wie geht es dir?",
        "ku": "تو چەوانی؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wie geht es dir?",
+       "qku": "تو چەوانی؟",
+       "cue": "gut",
+       "a": "Mir geht es gut.",
+       "aku": "ئەز باشم."
+      },
+      {
+       "q": "Wie geht es Ihnen?",
+       "qku": "هوین چەوانن؟",
+       "cue": "sehr gut, danke",
+       "a": "Mir geht es sehr gut, danke.",
+       "aku": "ئەز گەلەک باشم، سوپاس."
+      },
+      {
+       "q": "Kannst du mir helfen?",
+       "qku": "تو دشێی هاریکاریا من بکەی؟",
+       "cue": "ja",
+       "a": "Ja, ich helfe dir.",
+       "aku": "بەلێ، ئەز هاریکاریا تە دکەم."
+      }
      ]
     },
     {
@@ -2804,6 +4007,29 @@
       {
        "de": "Blau steht dir gut.",
        "ku": "ڕەنگێ شین باش ل تە دهێت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Gefällt dir das Kleid?",
+       "qku": "ئەرێ کراس تە دلچوو؟",
+       "cue": "ja, sehr",
+       "a": "Ja, das Kleid gefällt mir sehr.",
+       "aku": "بەلێ، کراس گەلەک من دلچوو."
+      },
+      {
+       "q": "Passt dir die Hose?",
+       "qku": "ئەرێ پانتۆڵ ب قەدەرێ تەیە؟",
+       "cue": "nein",
+       "a": "Nein, die Hose passt mir nicht.",
+       "aku": "نەخێر، پانتۆڵ ب قەدەرێ من نینە."
+      },
+      {
+       "q": "Wem gehört die Tasche?",
+       "qku": "جانتە یا کێیە؟",
+       "cue": "ihr",
+       "a": "Die Tasche gehört ihr.",
+       "aku": "جانتە یا وێیە."
       }
      ]
     },
@@ -2862,6 +4088,29 @@
        "de": "Dieser Mantel gefällt mir am besten.",
        "ku": "ئەڤ قاپوتە ژ هەمییان پتر من دلچوویێ."
       }
+     ],
+     "practice": [
+      {
+       "q": "Was ist billiger? (die Hose 20 € / der Rock 30 €)",
+       "qku": "کیژ هەرزانترە؟",
+       "cue": "",
+       "a": "Die Hose ist billiger als der Rock.",
+       "aku": "پانتۆڵ ژ تەنوورێ هەرزانترە."
+      },
+      {
+       "q": "Was trinkst du lieber? (Tee / Kaffee)",
+       "qku": "تو پتر حەز ژ چ دکەی؟",
+       "cue": "Tee",
+       "a": "Ich trinke lieber Tee.",
+       "aku": "ئەز پتر حەز ژ چایێ دکەم."
+      },
+      {
+       "q": "Welcher Mantel gefällt dir am besten?",
+       "qku": "کیژ قاپوت ژ هەمییان پتر تە دلچوو؟",
+       "cue": "der blaue",
+       "a": "Der blaue Mantel gefällt mir am besten.",
+       "aku": "قاپوتێ شین ژ هەمییان پتر من دلچوو."
+      }
      ]
     },
     {
@@ -2916,6 +4165,29 @@
       {
        "de": "Sie mag keine Kleider.",
        "ku": "ئەو حەز ژ کراسان ناکەت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Magst du Jeans?",
+       "qku": "ئەرێ تو حەز ژ جینزی دکەی؟",
+       "cue": "ja",
+       "a": "Ja, ich mag Jeans.",
+       "aku": "بەلێ، ئەز حەز ژ جینزی دکەم."
+      },
+      {
+       "q": "Mag Sara Röcke?",
+       "qku": "ئەرێ سارا حەز ژ تەنووران دکەت؟",
+       "cue": "nein",
+       "a": "Nein, sie mag keine Röcke.",
+       "aku": "نەخێر، ئەو حەز ژ تەنووران ناکەت."
+      },
+      {
+       "q": "Welche Farbe magst du?",
+       "qku": "تو حەز ژ کیژ ڕەنگی دکەی؟",
+       "cue": "Blau",
+       "a": "Ich mag Blau.",
+       "aku": "ئەز حەز ژ شینی دکەم."
       }
      ]
     }
@@ -2983,7 +4255,30 @@
      "tip": {
       "de": "Unregelmäßig: erste, dritte, siebte.",
       "ku": "نە ل سەر یاسایێ: erste، dritte، siebte."
-     }
+     },
+     "practice": [
+      {
+       "q": "Wann hast du Geburtstag? (12.6.)",
+       "qku": "رۆژبوونا تە کەنگییە؟",
+       "cue": "",
+       "a": "Am zwölften Juni.",
+       "aku": "د دوازدێ حوزەیرانێ دا."
+      },
+      {
+       "q": "Welches Datum ist heute? (1.5.)",
+       "qku": "ئەڤرۆ چ رێکەفتە؟",
+       "cue": "",
+       "a": "Heute ist der erste Mai.",
+       "aku": "ئەڤرۆ ئێکێ گولانێ یە."
+      },
+      {
+       "q": "Wann ist die Party? (3.10.)",
+       "qku": "ئاهەنگ کەنگییە؟",
+       "cue": "",
+       "a": "Am dritten Oktober.",
+       "aku": "د سێیێ چریا ئێکێ دا."
+      }
+     ]
     },
     {
      "emoji": "💌",
@@ -3045,6 +4340,29 @@
        "de": "Wir besuchen euch am Sonntag.",
        "ku": "ئەم رۆژا یەکشەمبیێ دێ سەرا هەوە دەین."
       }
+     ],
+     "practice": [
+      {
+       "q": "Besuchst du mich?",
+       "qku": "ئەرێ تو دێ سەرا من دەی؟",
+       "cue": "ja",
+       "a": "Ja, ich besuche dich.",
+       "aku": "بەلێ، ئەز دێ سەرا تە دەم."
+      },
+      {
+       "q": "Kennst du Karim?",
+       "qku": "ئەرێ تو کەریمی دناسی؟",
+       "cue": "ja",
+       "a": "Ja, ich kenne ihn.",
+       "aku": "بەلێ، ئەز وی دناسم."
+      },
+      {
+       "q": "Lädst du Sara ein?",
+       "qku": "ئەرێ تو سارایێ داخواز دکەی؟",
+       "cue": "ja",
+       "a": "Ja, ich lade sie ein.",
+       "aku": "بەلێ، ئەز وێ داخواز دکەم."
+      }
      ]
     },
     {
@@ -3086,6 +4404,29 @@
       {
        "de": "Sie kommt nicht, denn sie hat keine Zeit.",
        "ku": "ئەو نائێت، چونکی دەمێ وێ نینە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Warum kommst du nicht? (krank)",
+       "qku": "بۆچی تو نائێی؟",
+       "cue": "denn",
+       "a": "Ich komme nicht, denn ich bin krank.",
+       "aku": "ئەز نائێم، چونکی ئەز یێ نەساخم."
+      },
+      {
+       "q": "Warum feiert ihr? (Geburtstag)",
+       "qku": "بۆچی هوین ئاهەنگێ دگێڕن؟",
+       "cue": "denn",
+       "a": "Wir feiern, denn heute ist mein Geburtstag.",
+       "aku": "ئەم ئاهەنگێ دگێڕین، چونکی ئەڤرۆ رۆژبوونا منە."
+      },
+      {
+       "q": "Warum bist du müde? (viel gearbeitet)",
+       "qku": "بۆچی تو یێ وەستیایی؟",
+       "cue": "denn",
+       "a": "Ich bin müde, denn ich habe viel gearbeitet.",
+       "aku": "ئەز یێ وەستیایم، چونکی من گەلەک کار کر."
       }
      ]
     },
@@ -3142,6 +4483,29 @@
        "de": "Was willst du werden?",
        "ku": "تو دخوازی ببییە چ؟"
       }
+     ],
+     "practice": [
+      {
+       "q": "Wie alt wird dein Sohn?",
+       "qku": "کوڕێ تە دبیتە چەند سالی؟",
+       "cue": "5",
+       "a": "Er wird fünf.",
+       "aku": "ئەو دبیتە پێنج سالی."
+      },
+      {
+       "q": "Wie wird das Wetter?",
+       "qku": "هەوا دێ چەوا بیت؟",
+       "cue": "kalt",
+       "a": "Es wird kalt.",
+       "aku": "هەوا دێ سار بیت."
+      },
+      {
+       "q": "Was willst du werden?",
+       "qku": "تو دخوازی ببییە چ؟",
+       "cue": "Arzt",
+       "a": "Ich will Arzt werden.",
+       "aku": "ئەز دخوازم ببمە دکتۆر."
+      }
      ]
     },
     {
@@ -3180,6 +4544,29 @@
       {
        "de": "Der Kuchen ist für meine Mutter.",
        "ku": "کێک بۆ دایکا منە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Für wen ist das Geschenk?",
+       "qku": "دیاری بۆ کێیە؟",
+       "cue": "du",
+       "a": "Das Geschenk ist für dich.",
+       "aku": "دیاری بۆ تە یە."
+      },
+      {
+       "q": "Kommst du mit deinem Mann?",
+       "qku": "ئەرێ تو دگەل مێرێ خۆ دهێی؟",
+       "cue": "nein, ohne",
+       "a": "Nein, ich komme ohne meinen Mann.",
+       "aku": "نەخێر، ئەز بێ مێرێ خۆ دهێم."
+      },
+      {
+       "q": "Für wen ist der Kuchen?",
+       "qku": "کێک بۆ کێیە؟",
+       "cue": "meine Mutter",
+       "a": "Der Kuchen ist für meine Mutter.",
+       "aku": "کێک بۆ دایکا منە."
       }
      ]
     }

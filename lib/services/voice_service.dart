@@ -301,7 +301,9 @@ class VoiceService {
       case VoiceSource.cloned:
         return _playKey(clonedPathFor(lang, c.id), rate, mime: 'audio/mpeg');
       case VoiceSource.pack:
+        final g = _gen;
         final data = await rootBundle.load(_packAsset(lang, c.id));
+        if (g != _gen) return false;
         _talkFor(await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg'));
         return true;
       case VoiceSource.ai:
@@ -432,8 +434,10 @@ class VoiceService {
   }
 
   Future<bool> _playAsset(String asset, double rate) async {
+    final g = _gen;
     try {
       final data = await rootBundle.load(asset);
+      if (g != _gen) return false; // پرسیار هاتە گوهۆڕین
       final secs = await _out.play(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), rate: rate, mime: 'audio/mpeg');
       if (secs > 0) _talkFor(secs);
       return true;
@@ -443,7 +447,9 @@ class VoiceService {
   }
 
   Future<bool> _playKey(String key, double rate, {String mime = 'audio/wav'}) async {
+    final g = _gen;
     final b = await _box.get(key);
+    if (g != _gen) return false;
     if (b is! Uint8List) return false;
     final secs = await _out.play(b, rate: rate, mime: mime);
     if (secs > 0) _talkFor(secs);
@@ -456,7 +462,12 @@ class VoiceService {
     await _playKey(key, 1.0, mime: key.startsWith('cloned/') ? 'audio/mpeg' : 'audio/wav');
   }
 
+  /// هەر جارا دەنگ دهێتە ڕاوەستاندن زێدە دبیت؛ دەنگەکێ کەڤن (ب درەنگی بار بوو) ئێدی لێنادەت
+  int _gen = 0;
+  int get playGen => _gen;
+
   Future<void> stopPlayback() async {
+    _gen++;
     _talkTimer?.cancel();
     speaking.value = false;
     await _out.stop();

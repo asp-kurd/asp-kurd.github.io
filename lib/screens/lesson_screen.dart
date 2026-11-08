@@ -152,7 +152,12 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     return ClozeInfo(sentence, answer, ds.take(2).toList(), c.text(native));
   }
 
+  /// 🔇 هەر پرسیارەکا نوو ژمارەکا نوو: دەنگێ پرسیارا بەرێ ل سەر یا نوو لێنادەت
+  int _qToken = 0;
+
   void _prepare() {
+    _qToken++;
+    voice.stopPlayback();
     selected = null;
     cz = null;
     checked = false;
@@ -227,7 +232,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     options = [correct, ...pool.take(n - 1)]..shuffle(_rng);
 
     if (ex.type == ExerciseType.listen) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => voice.speak(ex.concept, target));
+      final tok = _qToken;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && tok == _qToken) voice.speak(ex.concept, target);
+      });
     }
   }
 
@@ -308,11 +316,18 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     if (ok && index < totalInitial && ex.type != ExerciseType.speak) firstCorrect++;
     if (ex.type == ExerciseType.speak && index < totalInitial) firstCorrect++;
     // پشتی پشکنینێ دەنگێ دروست لێدە
+    // (تنێ ئەگەر بکارهێنەر هێشتا ل سەر هەمان پرسیارێ بیت)
+    final tok = _qToken;
+    bool still() => mounted && tok == _qToken;
     if (ex.type == ExerciseType.cloze && cz != null) {
       final full = cz!.filled(cz!.answer);
-      Future.delayed(const Duration(milliseconds: 450), () => voice.speakText(full, target));
+      Future.delayed(const Duration(milliseconds: 450), () {
+        if (still()) voice.speakText(full, target);
+      });
     } else if (ex.type != ExerciseType.listen && ex.type != ExerciseType.match) {
-      Future.delayed(const Duration(milliseconds: 450), () => voice.speak(ex.concept, target));
+      Future.delayed(const Duration(milliseconds: 450), () {
+        if (still()) voice.speak(ex.concept, target);
+      });
     }
 
     if (ex.type == ExerciseType.match) {
@@ -1141,4 +1156,314 @@ class _PerfectHeroState extends State<_PerfectHero> with SingleTickerProviderSta
           child: Image.asset(widget.char.happyFull, height: 200),
         ),
       );
+}
+
+// ═════════════════════════ 🔤 وانا پیتان ═════════════════════════
+/// پرسیارێن تایبەت بۆ فێربوونا پیتان:
+/// - پیت + خواندنا وێ (C = «تسێ») سەرەکییە؛ نموونە (Computer) پشتی بەرسڤێ ل بن هەمییان دیار دبیت.
+/// - هەلبژارتنا خەلەت ➔ سۆر دبیت و «دیسا هەول بدە» — دل و XP ناچن.
+/// - ئەگەر ٣ ژ ٤ هەلبژارتنان خەلەت بن ➔ چ XP نینە و ئەو پیت ل دوماهیا قۆناغێ دووبارە دبیت.
+enum _LetterQ { nameToLetter, listenToLetter, letterToName, wordToLetter }
+
+class LetterLessonScreen extends StatefulWidget {
+  final LessonUnit unit;
+  const LetterLessonScreen({super.key, required this.unit});
+
+  @override
+  State<LetterLessonScreen> createState() => _LetterLessonScreenState();
+}
+
+class _LetterLessonScreenState extends State<LetterLessonScreen> {
+  final progress = ProgressService.instance;
+  final voice = VoiceService.instance;
+  final _rng = Random();
+  final _watch = Stopwatch()..start();
+  late final AppLanguage native = progress.nativeLang;
+  late final AppLanguage target = progress.targetLang;
+
+  late final List<WordConcept> letters = widget.unit.concepts.where((c) => c.letter != null).toList();
+  late final List<WordConcept> pool = {
+    ...letters,
+    ...allConcepts.where((c) => c.letter != null && c.id.startsWith('${letters.first.id.split('_').first}_')),
+  }.toList();
+
+  late List<(WordConcept, _LetterQ)> queue;
+  int index = 0, firstTry = 0, total = 0, answerXp = 0;
+  final Set<String> _requeued = {};
+
+  List<WordConcept> options = [];
+  final Set<String> wrong = {};
+  bool solved = false;
+  int _tok = 0;
+
+  (WordConcept, _LetterQ) get cur => queue[index];
+
+  @override
+  void initState() {
+    super.initState();
+    final ls = [...letters]..shuffle(_rng);
+    const types = _LetterQ.values;
+    queue = [for (var k = 0; k < ls.length; k++) (ls[k], types[k % types.length])];
+    total = queue.length;
+    _prepare();
+  }
+
+  @override
+  void dispose() {
+    voice.stopPlayback();
+    progress.addStudyTime(_watch.elapsed);
+    super.dispose();
+  }
+
+  void _prepare() {
+    _tok++;
+    voice.stopPlayback();
+    wrong.clear();
+    solved = false;
+    final c = cur.$1;
+    final others = pool.where((o) => o.id != c.id && o.letter!.upper != c.letter!.upper).toList()..shuffle(_rng);
+    options = [c, ...others.take(3)]..shuffle(_rng);
+    if (cur.$2 == _LetterQ.listenToLetter || cur.$2 == _LetterQ.nameToLetter) {
+      final t = _tok;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && t == _tok) _sayLetter(c);
+      });
+    }
+  }
+
+  void _sayLetter(WordConcept c, [double rate = 1.0]) => voice.speakText(c.letter!.upper, target, rate: rate);
+  void _sayWord(WordConcept c) => voice.speak(c, target);
+
+  Future<void> _pick(WordConcept o) async {
+    if (solved || wrong.contains(o.id)) return;
+    final c = cur.$1;
+    if (o.id != c.id) {
+      Sfx.wrong();
+      setState(() => wrong.add(o.id));
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(SnackBar(
+          duration: const Duration(milliseconds: 1400),
+          backgroundColor: AppColors.red,
+          content: Text(tr(native, '❌ خەلەتە — دیسا هەول بدە', '❌ Falsch – versuch es nochmal', '❌ Wrong – try again'),
+              textDirection: native.direction, style: const TextStyle(fontWeight: FontWeight.bold)),
+        ));
+      if (wrong.length >= 3) {
+        // ٣ ژ ٤ خەلەت: چ XP نینە، و ل دوماهیێ دووبارە دبیت
+        setState(() => solved = true);
+        progress.registerAnswer(false);
+        if (!_requeued.contains(c.id)) {
+          _requeued.add(c.id);
+          final next = _LetterQ.values[(cur.$2.index + 1) % _LetterQ.values.length];
+          queue.add((c, next));
+        }
+        final t = _tok;
+        Future.delayed(const Duration(milliseconds: 500), () {
+          if (mounted && t == _tok) _sayWord(c);
+        });
+      }
+      return;
+    }
+    Sfx.correct();
+    setState(() => solved = true);
+    int gained;
+    if (wrong.isEmpty) {
+      gained = progress.registerAnswer(true);
+      if (index < total) firstTry++;
+    } else {
+      progress.registerAnswer(false); // کۆمبۆ ب دوماهی دهێت، بەلێ XP ناچیت
+      gained = 1;
+    }
+    answerXp += gained;
+    if (gained > 0) showXpPop(context, gained, combo: progress.combo);
+    final t = _tok;
+    Future.delayed(const Duration(milliseconds: 350), () {
+      if (mounted && t == _tok) _sayWord(c);
+    });
+  }
+
+  Future<void> _continue() async {
+    if (index + 1 < queue.length) {
+      setState(() {
+        index++;
+        _prepare();
+      });
+      return;
+    }
+    final xp = 10 + answerXp;
+    final percent = total == 0 ? 100 : (firstTry * 100 / total).round().clamp(0, 100);
+    await progress.completeLesson(unitId: widget.unit.id, earnedXp: xp, perfect: percent >= 100);
+    Sfx.done();
+    if (!mounted) return;
+    final unit = widget.unit;
+    await Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (_) => _ResultScreen(
+          xp: xp,
+          perfect: percent >= 100,
+          lang: native,
+          percent: percent,
+          correct: firstTry.clamp(0, total),
+          total: total,
+          onRetry: (ctx) => Navigator.pushReplacement(ctx, MaterialPageRoute(builder: (_) => LetterLessonScreen(unit: unit))),
+        ),
+      ),
+    );
+  }
+
+  String get _instruction => switch (cur.$2) {
+        _LetterQ.nameToLetter => tr(native, 'کیژ پیت ب ڤی رەنگی دهێتە خواندن؟', 'Welcher Buchstabe ist das?', 'Which letter is this?'),
+        _LetterQ.listenToLetter => tr(native, 'گوهداری بکە 🎧 — کیژ پیتە؟', 'Hör zu 🎧 – welcher Buchstabe?', 'Listen 🎧 – which letter?'),
+        _LetterQ.letterToName => tr(native, 'ئەڤ پیتە چەوا دهێتە خواندن؟', 'Wie spricht man den Buchstaben?', 'How do you say this letter?'),
+        _LetterQ.wordToLetter => tr(native, 'ئەڤ پەیڤە ب کیژ پیتێ دەستپێدکەت؟', 'Mit welchem Buchstaben beginnt das Wort?', 'Which letter does it start with?'),
+      };
+
+  @override
+  Widget build(BuildContext context) {
+    final c = cur.$1, q = cur.$2;
+    final l = c.letter!;
+    final color = widget.unit.color;
+    return Directionality(
+      textDirection: native.direction,
+      child: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(icon: Icon(Icons.close, color: AppColors.fg70), onPressed: () => Navigator.pop(context)),
+          title: ListenableBuilder(
+            listenable: progress,
+            builder: (_, __) => Row(children: [
+              Expanded(child: ComboBar(value: (index + (solved ? 1 : 0)) / queue.length, combo: progress.combo)),
+              ComboBadge(combo: progress.combo),
+            ]),
+          ),
+        ),
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              MascotSays(
+                mood: !solved ? (wrong.isEmpty ? MascotMood.ask : MascotMood.think) : (wrong.length >= 3 ? MascotMood.sad : MascotMood.happy),
+                text: !solved
+                    ? (wrong.isEmpty ? _instruction : tr(native, 'نێزیکە! دیسا هەول بدە 💪', 'Fast! Nochmal 💪', 'Close! Try again 💪'))
+                    : (wrong.length >= 3
+                        ? tr(native, 'ئەڤ پیتە دێ ل دوماهیێ دووبارە بیت 🔁', 'Kommt am Ende nochmal 🔁', 'This one comes back at the end 🔁')
+                        : (native == AppLanguage.badini ? randomPraise() : 'Super! 🎉')),
+                height: 120,
+                textDirection: native.direction,
+              ),
+              const SizedBox(height: 10),
+              // ───── پرسیار ─────
+              Container(
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(18), border: Border.all(color: AppColors.fg12, width: 2)),
+                child: Column(children: [
+                  if (q == _LetterQ.nameToLetter) ...[
+                    Text('«${l.name}»', textDirection: TextDirection.rtl, style: TextStyle(fontSize: 38, fontWeight: FontWeight.w900, color: AppColors.goldText)),
+                    const SizedBox(height: 8),
+                    _sound(() => _sayLetter(c), 46),
+                  ],
+                  if (q == _LetterQ.listenToLetter)
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      _sound(() => _sayLetter(c), 72),
+                      const SizedBox(width: 14),
+                      InkWell(
+                        customBorder: const CircleBorder(),
+                        onTap: () => _sayLetter(c, 0.7),
+                        child: Container(
+                          width: 52, height: 52,
+                          decoration: BoxDecoration(color: AppColors.blue.withValues(alpha: 0.2), shape: BoxShape.circle),
+                          child: const Center(child: Text('🐢', style: TextStyle(fontSize: 24))),
+                        ),
+                      ),
+                    ]),
+                  if (q == _LetterQ.letterToName) ...[
+                    Text('${l.upper} ${l.lower}', textDirection: TextDirection.ltr,
+                        style: const TextStyle(fontFamily: 'Roboto', fontSize: 64, fontWeight: FontWeight.w900, height: 1.1)),
+                  ],
+                  if (q == _LetterQ.wordToLetter) ...[
+                    Text(c.pic, style: const TextStyle(fontSize: 52)),
+                    Text(l.word, textDirection: TextDirection.ltr, style: const TextStyle(fontFamily: 'Roboto', fontSize: 32, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 6),
+                    _sound(() => _sayWord(c), 44),
+                  ],
+                ]),
+              ),
+              const SizedBox(height: 14),
+              // ───── هەلبژارتن ─────
+              Expanded(
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: solved ? 1.05 : 1.35,
+                  children: [for (final o in options) _option(o, q, color)],
+                ),
+              ),
+              if (solved)
+                BigButton(
+                  label: tr(native, 'بەردەوام بە', 'Weiter', 'CONTINUE'),
+                  color: wrong.length >= 3 ? AppColors.red : AppColors.green,
+                  onPressed: _continue,
+                ),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _sound(VoidCallback onTap, double size) => InkWell(
+        customBorder: const CircleBorder(),
+        onTap: onTap,
+        child: Container(
+          width: size,
+          height: size,
+          decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+          child: Icon(Icons.volume_up_rounded, color: Colors.white, size: size * 0.55),
+        ),
+      );
+
+  Widget _option(WordConcept o, _LetterQ q, Color accent) {
+    final l = o.letter!;
+    final isAnswer = o.id == cur.$1.id;
+    final isWrong = wrong.contains(o.id);
+    final Color border = isWrong ? AppColors.red : (solved && isAnswer ? AppColors.green : AppColors.fg24);
+    final main = q == _LetterQ.letterToName ? '«${l.name}»' : '${l.upper} ${l.lower}';
+    return GestureDetector(
+      onTap: () {
+        if (solved) {
+          _sayWord(o); // پشتی بەرسڤێ: گوهداریا نموونەیا هەر پیتەکێ
+        } else {
+          _pick(o);
+        }
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: border.withValues(alpha: isWrong || (solved && isAnswer) ? 0.16 : 0.04),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: border, width: 3),
+        ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(main,
+              textDirection: q == _LetterQ.letterToName ? TextDirection.rtl : TextDirection.ltr,
+              style: TextStyle(
+                  fontFamily: q == _LetterQ.letterToName ? null : 'Roboto',
+                  fontSize: q == _LetterQ.letterToName ? 26 : 38,
+                  fontWeight: FontWeight.w900,
+                  color: isWrong ? AppColors.red : (solved && isAnswer ? AppColors.green : AppColors.fg))),
+          // پشتی بەرسڤێ: نموونە ل بن هەمی هەلبژارتنان
+          if (solved) ...[
+            const SizedBox(height: 4),
+            Text(q == _LetterQ.letterToName ? '${l.upper} ${l.lower}' : '«${l.name}»',
+                textDirection: q == _LetterQ.letterToName ? TextDirection.ltr : TextDirection.rtl,
+                style: TextStyle(fontSize: 15, color: AppColors.goldText, fontWeight: FontWeight.bold)),
+            Text('${o.pic} ${l.word}', textDirection: TextDirection.ltr, maxLines: 1, overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 14, color: AppColors.fg70)),
+          ],
+        ]),
+      ),
+    );
+  }
 }

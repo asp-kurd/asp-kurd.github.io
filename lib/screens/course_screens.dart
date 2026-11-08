@@ -387,7 +387,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _say());
+    WidgetsBinding.instance.addPostFrameCallback((_) => _sayLetter());
   }
 
   @override
@@ -400,6 +400,12 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
   void _say([double rate = 1.0]) {
     if (cards.isEmpty) return;
     VoiceService.instance.speak(cards[i], target, rate: rate);
+  }
+
+  /// 🔤 تنێ ناڤێ پیتێ (C ➔ «تسێ»)
+  void _sayLetter() {
+    if (cards.isEmpty) return;
+    VoiceService.instance.speakText(cards[i].letter!.upper, target);
   }
 
   @override
@@ -439,7 +445,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
                 itemCount: cards.length,
                 onPageChanged: (k) {
                   setState(() => i = k);
-                  _say();
+                  _sayLetter();
                 },
                 itemBuilder: (_, k) => _card(cards[k]),
               ),
@@ -503,7 +509,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 8),
       child: Column(children: [
         GestureDetector(
-          onTap: _say,
+          onTap: _sayLetter,
           child: Container(
             width: 150,
             height: 150,

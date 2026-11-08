@@ -99,6 +99,8 @@ class ZimanProApp extends StatelessWidget {
       'mascot' => const MascotDemo(),
       'pick' => const CharacterPickerScreen(),
       'book' => const Scaffold(body: BookScreen()),
+      'letters' => LetterLessonScreen(unit: appCurriculum.firstWhere((u) => u.isAlphabet)),
+      'gpractice' => const _GramPracticeDemo(),
       'grammar' => const GrammarLektionScreen(n: 6),
       'grammarlist' => const GrammarListScreen(),
       'home' => const HomeScreen(),
@@ -143,5 +145,28 @@ class ZimanProApp extends StatelessWidget {
                   ? const SetupScreen(next: HomeScreen())
                   : const HomeScreen())),
     );
+  }
+}
+
+
+/// 🎯 بۆ وێنەگرتنا تاقیکرنێ
+class _GramPracticeDemo extends StatefulWidget {
+  const _GramPracticeDemo();
+  @override
+  State<_GramPracticeDemo> createState() => _GramPracticeDemoState();
+}
+
+class _GramPracticeDemoState extends State<_GramPracticeDemo> {
+  @override
+  void initState() {
+    super.initState();
+    Grammar.load().then((_) => mounted ? setState(() {}) : null);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Grammar.byLektion[6]?.first;
+    if (t == null) return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    return GrammarPracticeScreen(topic: t, color: const Color(0xFF00CD9C), pool: Grammar.byLektion[6]!);
   }
 }

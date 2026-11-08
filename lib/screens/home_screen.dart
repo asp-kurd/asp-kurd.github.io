@@ -573,7 +573,10 @@ class _LearnPath extends StatelessWidget {
     }
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => InteractiveLessonScreen(unit: unit, concepts: concepts)),
+      MaterialPageRoute(
+          builder: (_) => unit != null && unit.isAlphabet && concepts.where((c) => c.letter != null).length >= 2
+              ? LetterLessonScreen(unit: unit)
+              : InteractiveLessonScreen(unit: unit, concepts: concepts)),
     );
   }
 }

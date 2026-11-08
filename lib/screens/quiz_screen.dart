@@ -65,6 +65,7 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _prepare() {
+    voice.stopPlayback(); // دەنگێ پرسیارا بەرێ ڕاوەستینە
     picked = null;
     checked = false;
     ok = false;
