@@ -1,0 +1,15 @@
+name: Site check
+on:
+  workflow_dispatch:
+  push:
+    paths: [.github/workflows/site_check.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://asp-poya.com/ https://www.asp-poya.com/ https://asp-kurd.github.io/ http://asp-poya.com/; do
+            r=$(curl -s -o /dev/null -w "%{http_code} -> %{redirect_url} (ssl=%{ssl_verify_result})" -m 20 "$u" || echo "fail")
+            echo "::notice title=site::$u $r"
+          done
+          echo "::notice title=site::build_id $(curl -s -m 20 https://asp-poya.com/build_id.txt)"
