@@ -105,12 +105,22 @@ const _bookIcons = <String, IconData>{
 
 Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16));
 
-late List<BookPart> bookParts;
-late List<BookChapter> bookChapters;
+List<BookPart> bookParts = const [];
+List<BookChapter> bookChapters = const [];
+String? bookError;
 
-Future<void> loadBook() async {
+/// دەمێ بارکرن سەرنەکەفت (بۆ نموونە ئینتەرنێت لاواز بوو) دووبارە تاقی دکەت
+Future<void> loadBook({int tries = 3}) async {
+  for (var i = 0; i < tries && bookChapters.isEmpty; i++) {
+    if (i > 0) await Future.delayed(Duration(milliseconds: 800 * i));
+    await _loadBookOnce();
+  }
+}
+
+Future<void> _loadBookOnce() async {
   try {
-    final data = jsonDecode(await rootBundle.loadString('assets/book.json')) as Map<String, dynamic>;
+    bookError = null;
+    final data = jsonDecode(await rootBundle.loadString('assets/book.json', cache: false)) as Map<String, dynamic>;
     bookParts = (data['parts'] as List)
         .map((p) => BookPart((p['id'] as num).toInt(), p['ku'] as String, p['de'] as String, p['en'] as String))
         .toList();
@@ -125,8 +135,9 @@ Future<void> loadBook() async {
         (m['blocks'] as List).map((b) => BookBlock.fromJson(b as Map<String, dynamic>)).toList(),
       );
     }).toList();
-  } catch (_) {
+  } catch (e) {
     // ئەگەر فایل نەبیت، ئەپ هەر کار دکەت
+    bookError = '$e';
     bookParts = const [];
     bookChapters = const [];
   }

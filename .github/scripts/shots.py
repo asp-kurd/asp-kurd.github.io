@@ -8,7 +8,7 @@ pages = [
     ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
     ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
-    ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"),
+    ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"), ("book", "demo=book"),
     ("streak", "demo=streak"), ("toast", "demo=toast"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
 ]
 with sync_playwright() as p:

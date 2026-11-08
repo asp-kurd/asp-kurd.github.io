@@ -99,11 +99,23 @@ class BookScreen extends StatefulWidget {
 class _BookScreenState extends State<BookScreen> {
   final bp = BookProgress.instance;
 
+  bool _retrying = false;
+
   @override
   void initState() {
     super.initState();
     bp.load();
+    if (bookChapters.isEmpty) _retry();
   }
+
+  Future<void> _retry() async {
+    setState(() => _retrying = true);
+    await loadBook();
+    if (mounted) setState(() => _retrying = false);
+  }
+
+  /// 📘 + ⚡ هەردەم دیار دبن، هەتا ئەگەر پەرتووک هێشتا بار نەبوو بیت
+  List<Widget> get _banners => const [GrammarBanner(), SizedBox(height: 12), SummaryBanner(), SizedBox(height: 12)];
 
   @override
   Widget build(BuildContext context) {
@@ -114,17 +126,29 @@ class _BookScreenState extends State<BookScreen> {
         listenable: bp,
         builder: (context, _) {
           if (bookChapters.isEmpty) {
-            return const Center(child: Text('📖 …'));
+            return SafeArea(
+              child: ListView(padding: const EdgeInsets.fromLTRB(16, 12, 16, 40), children: [
+                ..._banners,
+                const SizedBox(height: 30),
+                if (_retrying)
+                  const Center(child: CircularProgressIndicator())
+                else
+                  Center(
+                    child: Column(children: [
+                      const Text('📖 پەرتووکا A1.1 mit Poya بار نەبوو', style: TextStyle(fontSize: 16)),
+                      const SizedBox(height: 10),
+                      FilledButton.icon(onPressed: _retry, icon: const Icon(Icons.refresh_rounded), label: const Text('دووبارە تاقی بکە')),
+                    ]),
+                  ),
+              ]),
+            );
           }
           final done = bookChapters.where((c) => bp.read.contains(c.id)).length;
           return SafeArea(
             child: ListView(
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
               children: [
-                const GrammarBanner(),
-                const SizedBox(height: 12),
-                const SummaryBanner(),
-                const SizedBox(height: 12),
+                ..._banners,
                 _cover(done, n),
                 const SizedBox(height: 8),
                 for (final part in bookParts) ...[
