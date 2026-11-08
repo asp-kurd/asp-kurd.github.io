@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: pip install -q requests && python .github/scripts/auth_probe.py | tee probe.log
+      - run: |
+          echo "dns A: $(dig +short asp-poya.com A | tr '\n' ' ')" | tee -a probe.log
+          echo "dns www: $(dig +short www.asp-poya.com | tr '\n' ' ')" | tee -a probe.log
+      - run: pip install -q requests && python .github/scripts/auth_probe.py | tee -a probe.log
         env:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       - if: always()
