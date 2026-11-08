@@ -79,3 +79,14 @@ Future<bool> promptInstall() async {
     return false;
   }
 }
+
+// ───────── 📲 ژ Safari بۆ ئەپا سەر شاشێ (iPhone) ─────────
+
+/// iPhone: ئەپا سەر شاشێ (Home Screen) جهێ خۆ یێ جودا هەیە (نە وەکی Safari).
+/// لەوما کۆدەکێ دانینە د لینکێ دا: دەمێ کەس «Add to Home Screen» دکەت، ئەپ ب ڤی لینکی ڤەدبیت و هەژمار بەردەوام دبیت.
+void prepareHomeScreenHandoff(String code) {
+  // بێی manifest، Safari لینکێ نوکە (دگەل کۆدی) بۆ ئەپێ ب کار دئینیت
+  web.document.querySelector('link[rel="manifest"]')?.remove();
+  final path = web.window.location.pathname;
+  web.window.history.replaceState(null, '', '$path?h=$code');
+}

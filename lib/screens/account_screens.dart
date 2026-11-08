@@ -602,13 +602,14 @@ InputDecoration _authDec(String label, IconData icon) => InputDecoration(
 
 class LoginScreen extends StatefulWidget {
   final Widget next;
-  const LoginScreen({super.key, required this.next});
+  final String? prefillEmail;
+  const LoginScreen({super.key, required this.next, this.prefillEmail});
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final email = TextEditingController();
+  late final email = TextEditingController(text: widget.prefillEmail ?? '');
   final pass = TextEditingController();
   bool busy = false, show = false;
   String? error;
@@ -654,7 +655,10 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Scaffold(
         appBar: AppBar(title: const Text('🔑 چوونا ژوور')),
         body: ListView(padding: const EdgeInsets.all(24), children: [
-          Text('ب ئیمەیل و پاسۆردا خۆ بچە ژوور. هەمی پێشکەفتنا تە (XP، ستریک، قۆناغ) دێ زڤڕیت.',
+          Text(
+              widget.prefillEmail != null
+                  ? 'ب خێر بێی بۆ ئەپا ASP ل سەر شاشێ! 📲 پاسۆردا خۆ بنڤیسە دا هەمی پێشکەفتنا تە ل ڤێرێ ژی بهێت.'
+                  : 'ب ئیمەیل و پاسۆردا خۆ بچە ژوور. هەمی پێشکەفتنا تە (XP، ستریک، قۆناغ) دێ زڤڕیت.',
               style: TextStyle(color: AppColors.fg70, fontSize: 15, height: 1.5)),
           const SizedBox(height: 20),
           TextField(

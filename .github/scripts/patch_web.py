@@ -12,7 +12,7 @@ m.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
 i = Path("web/index.html")
 s = i.read_text(encoding="utf-8")
 s = re.sub(r"<title>.*?</title>", "<title>ASP</title>", s, flags=re.S)
-s = re.sub(r'(name="apple-mobile-web-app-title" content=")[^"]*', r"\1ZimanPro", s)
+s = re.sub(r'(name="apple-mobile-web-app-title" content=")[^"]*', r"\1ASP", s)
 extra = ('  <meta name="apple-mobile-web-app-capable" content="yes">\n'
          '  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
          '  <meta name="theme-color" content="#131F24">\n'

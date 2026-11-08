@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
@@ -125,7 +126,7 @@ class Backend extends ChangeNotifier {
       r = await http.put(Uri.parse('$_base/auth/v1/user'), headers: _h, body: body);
       if (r.statusCode >= 300) return authError(r.body);
       final u = jsonDecode(r.body) as Map<String, dynamic>;
-      if ((u['email'] as String?)?.isEmpty ?? true) return authError('confirm');
+      if ((u['email'] as String?)?.toLowerCase() != email.trim().toLowerCase()) return authError('confirm');
     } else {
       r = await http.post(Uri.parse('$_base/auth/v1/signup'),
           headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'}, body: body);
@@ -164,6 +165,66 @@ class Backend extends ChangeNotifier {
         if (list.isNotEmpty) _setProfile(list.first as Map<String, dynamic>);
       }
     } catch (_) {}
+  }
+
+  // ───────── 📲 دەربازکرنا هەژمارێ بۆ ئەپا سەر شاشێ (iPhone) ─────────
+
+  /// کۆدەک بۆ لینکێ ئەپا سەر شاشێ. هەژمارێن ب ناڤ تنێ ئیمەیل/پاسۆردەکێ ڤەشارتی وەردگرن (ب خۆ).
+  Future<String?> handoffCode() async {
+    if (!enabled || !registered || isAdmin || userId == null) return null;
+    String enc(String v) => base64Url.encode(utf8.encode(v)).replaceAll('=', '');
+    if (hasEmail) return 'e${enc(email!)}';
+    var em = _p.getString('sb_gem'), pw = _p.getString('sb_gpw');
+    if (em == null || pw == null) {
+      try {
+        await _ensureToken();
+        final rnd = Random.secure();
+        const chars = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        final newPw = List.generate(22, (_) => chars[rnd.nextInt(chars.length)]).join();
+        final newEm = 'g${userId!.replaceAll('-', '').substring(0, 16)}@guest.asp-poya.com';
+        final r = await http.put(Uri.parse('$_base/auth/v1/user'), headers: _h, body: jsonEncode({'email': newEm, 'password': newPw}));
+        if (r.statusCode >= 300) return null;
+        final u = jsonDecode(r.body) as Map<String, dynamic>;
+        if ((u['email'] as String?)?.toLowerCase() != newEm) return null;
+        em = newEm;
+        pw = newPw;
+        await _p.setString('sb_gem', em);
+        await _p.setString('sb_gpw', pw);
+      } catch (_) {
+        return null;
+      }
+    }
+    return 'g${enc('$em\n$pw')}';
+  }
+
+  /// ئەپا سەر شاشێ: ب کۆدێ لینکی بچە ناڤ هەمان هەژمار. ئەگەر هەژمار ب ئیمەیلا تە بیت: 'email:<ئیمەیل>' (پاسۆرد پێدڤییە).
+  Future<String?> handoffLogin(String code) async {
+    if (!enabled || code.length < 2) return 'bad';
+    String dec(String v) => utf8.decode(base64Url.decode(base64Url.normalize(v)));
+    try {
+      final body = dec(code.substring(1));
+      if (code[0] == 'e') return 'email:$body';
+      if (code[0] != 'g') return 'bad';
+      final parts = body.split('\n');
+      if (parts.length != 2) return 'bad';
+      final r = await http.post(Uri.parse('$_base/auth/v1/token?grant_type=password'),
+          headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'},
+          body: jsonEncode({'email': parts[0], 'password': parts[1]}));
+      if (r.statusCode != 200) return authError(r.body);
+      isAdmin = false;
+      await _p.setBool('sb_admin', false);
+      _saveSession(jsonDecode(r.body) as Map<String, dynamic>);
+      await _p.setString('sb_gem', parts[0]);
+      await _p.setString('sb_gpw', parts[1]);
+      await _loadProfile();
+      if (profile == null) return 'no profile';
+      unawaited(track(open: true));
+      unawaited(loadMessages());
+      notifyListeners();
+      return null;
+    } catch (e) {
+      return '$e';
+    }
   }
 
   /// 🔑 چوونا ژوور ب ئیمەیل + پاسۆرد (بۆ نموونە ل مۆبایلەکا نوو)

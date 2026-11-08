@@ -6,6 +6,7 @@ import 'data/curriculum.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
 import 'services/backend.dart';
+import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web.dart';
 import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
@@ -21,6 +22,9 @@ import 'screens/widgets/combo.dart' show ToastDemo;
 import 'models.dart';
 import 'ui.dart';
 
+/// ئیمەیلا هەژمارێ ژ لینکێ ئەپا سەر شاشێ (پاسۆرد پێدڤییە)
+String? handoffEmail;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
@@ -32,6 +36,18 @@ Future<void> main() async {
   await VoiceService.instance.init();
   await CloneService.instance.load();
   await ThemeController.instance.load();
+  // 📲 iPhone: ئەپا سەر شاشێ ب کۆدێ لینکی هەمان هەژمار بەردەوام دکەت (نە ژ نوی)
+  final handoff = Uri.base.queryParameters['h'];
+  if (handoff != null && Backend.instance.enabled && !Backend.instance.registered) {
+    try {
+      final res = await Backend.instance.handoffLogin(handoff).timeout(const Duration(seconds: 12));
+      if (res == null) {
+        await ProgressService.instance.syncFromCloud(preferServer: true).timeout(const Duration(seconds: 12));
+      } else if (res.startsWith('email:')) {
+        handoffEmail = res.substring(6);
+      }
+    } catch (_) {}
+  }
   // ☁️ پێشکەفتن: ئەگەر ل مۆبایلەکا دی پێشکەفتنەکا مەزنتر هەبیت، وێ بینە؛ یان یا ڤێرێ بپارێزە
   if (Backend.instance.registered && !Backend.instance.isAdmin) {
     unawaited(ProgressService.instance.syncFromCloud().catchError((_) => false));
@@ -42,6 +58,12 @@ Future<void> main() async {
   if (qt == 'light' || qt == 'dark') AppColors.dark = qt == 'dark';
   runApp(const ZimanProApp());
   ThemeController.instance.markStarted();
+  // Safari ل iPhone: لینکێ ئامادە بکە دا «Add to Home Screen» هەژمارێ دگەل خۆ ببەت
+  if (platformKind == 'ios' && !isStandalone && Backend.instance.registered && !Backend.instance.isAdmin) {
+    unawaited(Backend.instance.handoffCode().then((c) {
+      if (c != null) prepareHomeScreenHandoff(c);
+    }).catchError((_) {}));
+  }
 }
 
 class ZimanProApp extends StatelessWidget {
@@ -102,7 +124,11 @@ class ZimanProApp extends StatelessWidget {
       title: 'ASP',
       debugShowCheckedModeBanner: false,
       theme: _theme(),
-      home: _demo() ?? (!ProgressService.instance.onboarded
+      home: _demo() ??
+          (handoffEmail != null && !Backend.instance.registered
+              ? LoginScreen(next: const HomeScreen(), prefillEmail: handoffEmail)
+              : null) ??
+          (!ProgressService.instance.onboarded
           ? const LanguageOnboardingScreen()
           : (Backend.instance.enabled && !Backend.instance.registered && !Backend.instance.isAdmin)
               ? const RegisterScreen(next: HomeScreen())

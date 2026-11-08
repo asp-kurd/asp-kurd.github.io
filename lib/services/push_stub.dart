@@ -6,3 +6,4 @@ String get platformKind => 'other';
 bool get isStandalone => true;
 bool get canPromptInstall => false;
 Future<bool> promptInstall() async => false;
+void prepareHomeScreenHandoff(String code) {}
