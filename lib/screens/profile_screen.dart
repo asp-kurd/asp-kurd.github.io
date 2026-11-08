@@ -9,7 +9,6 @@ import '../ui.dart';
 import 'account_screens.dart';
 import 'character_screen.dart';
 import 'widgets/mascot.dart';
-import 'admin_screens.dart';
 import 'onboarding_screen.dart';
 import 'settings_screen.dart';
 import 'stats_section.dart';
@@ -160,15 +159,7 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
           const SizedBox(height: 18),
-          if (Backend.instance.enabled)
-            ListTile(
-              tileColor: AppColors.card,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              leading: const Text('🛡️', style: TextStyle(fontSize: 22)),
-              title: const Text('رێڤەبەری (ئەدمین)'),
-              trailing: const Icon(Icons.chevron_left_rounded),
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminEntry())),
-            ),
+          // 🛡️ ئەدمین ل ڤێرە نینە: تنێ ب لینکێ تایبەت (?admin=...) ڤەدبیت
         ],
       ),
     );

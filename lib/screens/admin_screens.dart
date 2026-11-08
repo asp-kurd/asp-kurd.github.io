@@ -25,7 +25,7 @@ class AdminEntry extends StatefulWidget {
 }
 
 class _AdminEntryState extends State<AdminEntry> {
-  final email = TextEditingController(text: 'groupkurdish@gmail.com');
+  final email = TextEditingController();
   final pass = TextEditingController();
   bool busy = false;
   String? error;

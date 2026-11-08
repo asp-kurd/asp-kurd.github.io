@@ -5,6 +5,7 @@ import 'data/book.dart';
 import 'data/curriculum.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
+import 'screens/admin_screens.dart';
 import 'services/backend.dart';
 import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web.dart';
 import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
@@ -14,6 +15,7 @@ import 'screens/games/extra_games.dart';
 import 'screens/games/games_hub.dart';
 import 'screens/games/goethe_mock.dart';
 import 'screens/grammar_screen.dart';
+import 'screens/voice_backup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/onboarding_screen.dart';
@@ -31,6 +33,10 @@ import 'ui.dart';
 /// ئیمەیلا هەژمارێ ژ لینکێ ئەپا سەر شاشێ (پاسۆرد پێدڤییە)
 String? handoffEmail;
 
+/// 🛡️ پەڕێ ئەدمینی تنێ ب ڤی لینکی ڤەدبیت: https://asp-poya.com/?admin=asp-d7k2
+const _adminKey = 'asp-d7k2';
+final bool adminMode = Uri.base.queryParameters['admin'] == _adminKey;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
@@ -44,7 +50,8 @@ Future<void> main() async {
   await ThemeController.instance.load();
   // 📲 iPhone: ئەپا سەر شاشێ ب کۆدێ لینکی هەمان هەژمار بەردەوام دکەت (نە ژ نوی)
   final handoff = Uri.base.queryParameters['h'];
-  if (handoff != null && Backend.instance.enabled && !Backend.instance.registered) {
+  if (adminMode) prepareAdminHomeScreen();
+  if (!adminMode && handoff != null && Backend.instance.enabled && !Backend.instance.registered) {
     try {
       final res = await Backend.instance.handoffLogin(handoff).timeout(const Duration(seconds: 12));
       if (res == null) {
@@ -55,7 +62,7 @@ Future<void> main() async {
     } catch (_) {}
   }
   // ☁️ پێشکەفتن: ئەگەر ل مۆبایلەکا دی پێشکەفتنەکا مەزنتر هەبیت، وێ بینە؛ یان یا ڤێرێ بپارێزە
-  if (Backend.instance.registered && !Backend.instance.isAdmin) {
+  if (!adminMode && Backend.instance.registered && !Backend.instance.isAdmin) {
     unawaited(ProgressService.instance.syncFromCloud().catchError((_) => false));
   }
   if (Uri.base.queryParameters['demo'] != null) await A1Summary.load();
@@ -65,7 +72,7 @@ Future<void> main() async {
   runApp(const ZimanProApp());
   ThemeController.instance.markStarted();
   // Safari ل iPhone: لینکێ ئامادە بکە دا «Add to Home Screen» هەژمارێ دگەل خۆ ببەت
-  if (platformKind == 'ios' && !isStandalone && Backend.instance.registered && !Backend.instance.isAdmin) {
+  if (!adminMode && platformKind == 'ios' && !isStandalone && Backend.instance.registered && !Backend.instance.isAdmin) {
     unawaited(Backend.instance.handoffCode().then((c) {
       if (c != null) prepareHomeScreenHandoff(c);
     }).catchError((_) {}));
@@ -105,6 +112,8 @@ class ZimanProApp extends StatelessWidget {
       'letters' => LetterLessonScreen(unit: appCurriculum.firstWhere((u) => u.isAlphabet)),
       'gpractice' => const _GramPracticeDemo(),
       'article' => const ArticleGameScreen(),
+      'backup' => const VoiceBackupScreen(),
+      'leader' => const LeaderboardScreen(),
       'conj' => const ConjugationGameScreen(),
       'goethe' => const GoetheMockScreen(),
       'games' => const Scaffold(body: GamesHubScreen()),
@@ -141,7 +150,8 @@ class ZimanProApp extends StatelessWidget {
       title: 'ASP',
       debugShowCheckedModeBanner: false,
       theme: _theme(),
-      home: _demo() ??
+      home: (adminMode ? const AdminEntry() : null) ??
+          _demo() ??
           (handoffEmail != null && !Backend.instance.registered
               ? LoginScreen(next: const HomeScreen(), prefillEmail: handoffEmail)
               : null) ??

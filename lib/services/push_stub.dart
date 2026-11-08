@@ -7,3 +7,6 @@ bool get isStandalone => true;
 bool get canPromptInstall => false;
 Future<bool> promptInstall() async => false;
 void prepareHomeScreenHandoff(String code) {}
+
+
+void prepareAdminHomeScreen() {}

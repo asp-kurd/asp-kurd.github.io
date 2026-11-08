@@ -90,3 +90,12 @@ void prepareHomeScreenHandoff(String code) {
   final path = web.window.location.pathname;
   web.window.history.replaceState(null, '', '$path?h=$code');
 }
+
+
+/// 🛡️ پەڕێ ئەدمینی: ئایکۆنەکا جودا ل سەر Home Screen (ب ناڤێ «ASP Admin» و لینکێ تایبەت)
+void prepareAdminHomeScreen() {
+  web.document.querySelector('link[rel="manifest"]')?.remove();
+  web.document.title = 'ASP Admin';
+  final m = web.document.querySelector('meta[name="apple-mobile-web-app-title"]');
+  m?.setAttribute('content', 'ASP Admin');
+}

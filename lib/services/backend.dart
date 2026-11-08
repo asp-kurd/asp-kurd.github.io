@@ -1,3 +1,4 @@
+import 'dart:typed_data';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -550,6 +551,42 @@ class Backend extends ChangeNotifier {
   // ───────────────────────── ناڤەرۆک (گوهۆڕین ژ لایێ ئەدمینی) ─────────────────────────
 
   /// ناڤەرۆکا گوهۆڕی ژ سێرڤەری (یان ژ کاشێ). null = ناڤەرۆکا ئەسلی یا ئەپی.
+  // ───────── ☁️ پاشەکەفتکرنا دەنگان ل سەر هەژمارێ (Supabase Storage: voices/<uid>/backup.zip) ─────────
+  String get _voicesUrl => '$_base/storage/v1/object/voices/$userId/backup.zip';
+
+  /// null = سەرکەفت؛ یان پەیاما خەلەتیێ
+  Future<String?> uploadVoices(Uint8List zip) async {
+    if (!enabled || userId == null) return 'offline';
+    try {
+      await _ensureToken();
+      final r = await http
+          .post(Uri.parse(_voicesUrl),
+              headers: {
+                'apikey': AppConfig.supabaseAnonKey,
+                'Authorization': 'Bearer $_access',
+                'Content-Type': 'application/zip',
+                'x-upsert': 'true',
+              },
+              body: zip)
+          .timeout(const Duration(minutes: 2));
+      return r.statusCode < 300 ? null : '${r.statusCode}';
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  Future<Uint8List?> downloadVoices() async {
+    if (!enabled || userId == null) return null;
+    try {
+      await _ensureToken();
+      final r = await http.get(Uri.parse('$_base/storage/v1/object/authenticated/voices/$userId/backup.zip'),
+          headers: {'apikey': AppConfig.supabaseAnonKey, 'Authorization': 'Bearer $_access'}).timeout(const Duration(minutes: 2));
+      return r.statusCode == 200 ? r.bodyBytes : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
   Future<String?> contentOverride(String key) async {
     if (!enabled) return null;
     final cached = _p.getString('content_$key');

@@ -174,6 +174,15 @@ class VoiceService {
 
   Future<void> putCloned(AppLanguage lang, String id, Uint8List mp3) => _box.put(clonedPathFor(lang, id), mp3);
 
+  // ───────── 💾 پاشەکەفتکرنا تۆمارێن من ─────────
+  List<String> get myRecordingKeys => _box.keys.map((k) => '$k').where((k) => k.startsWith('mine/')).toList();
+  Future<Uint8List?> rawRecording(String key) async {
+    final b = await _box.get(key);
+    return b is Uint8List ? b : null;
+  }
+
+  Future<void> putRawRecording(String key, Uint8List wav) => _box.put(key, wav);
+
   // ───────── تۆمارکرن (PCM ➔ WAV) ─────────
   Future<bool> hasPermission() => _recorder.hasPermission();
 

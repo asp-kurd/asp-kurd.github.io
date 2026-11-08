@@ -5,6 +5,8 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import '../services/backend.dart';
+import 'voice_backup_screen.dart';
 import 'voice_clone_screen.dart';
 import 'widgets/record_button.dart';
 
@@ -52,7 +54,19 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
                   style: TextStyle(color: AppColors.fg60),
                 ),
                 const SizedBox(height: 12),
-                // 🧬 دەروازەیا کلۆنکرنا دەنگی
+                // 💾 پاشەکەفتکرنا دەنگان (بۆ هەمیان)
+                ListTile(
+                  tileColor: AppColors.card,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  leading: const Text('💾', style: TextStyle(fontSize: 28)),
+                  title: const Text('پاشەکەفتکرنا دەنگێن من', style: TextStyle(fontWeight: FontWeight.bold)),
+                  subtitle: const Text('ل سەر هەژمارێ یان وەکی فایل — دا بەرزە نەبن'),
+                  trailing: const Icon(Icons.chevron_left_rounded),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const VoiceBackupScreen())),
+                ),
+                // 🧬 کلۆنکرنا دەنگی: تنێ بۆ ئادمینی
+                if (Backend.instance.isAdmin) ...[
+                  const SizedBox(height: 10),
                 InkWell(
                   borderRadius: BorderRadius.circular(16),
                   onTap: () async {
@@ -81,6 +95,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
                     ]),
                   ),
                 ),
+                ],
                 const SizedBox(height: 14),
                 SegmentedButton<AppLanguage>(
                   segments: AppLanguage.values
