@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'data/book.dart';
@@ -31,6 +32,10 @@ Future<void> main() async {
   await VoiceService.instance.init();
   await CloneService.instance.load();
   await ThemeController.instance.load();
+  // ☁️ پێشکەفتن: ئەگەر ل مۆبایلەکا دی پێشکەفتنەکا مەزنتر هەبیت، وێ بینە؛ یان یا ڤێرێ بپارێزە
+  if (Backend.instance.registered && !Backend.instance.isAdmin) {
+    unawaited(ProgressService.instance.syncFromCloud().catchError((_) => false));
+  }
   if (Uri.base.queryParameters['demo'] != null) await A1Summary.load();
   // ?theme=light|dark — بۆ تاقیکرنێ
   final qt = Uri.base.queryParameters['theme'];

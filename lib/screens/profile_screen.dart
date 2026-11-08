@@ -35,6 +35,8 @@ class ProfileScreen extends StatelessWidget {
               ),
             ]),
             const SizedBox(height: 12),
+            const AccountCard(),
+            const SizedBox(height: 12),
             const NotifyCard(),
           ],
           Row(children: [

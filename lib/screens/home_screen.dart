@@ -139,6 +139,17 @@ class _LearnPath extends StatelessWidget {
             child: Text('${tr(n, 'سلاڤ', 'Hallo', 'Hi')} ${Backend.instance.name} 👋',
                 style: const TextStyle(fontFamily: 'Sarchia', fontSize: 22, fontWeight: FontWeight.bold)),
           ),
+        // 🔒 هەژمارێن ب ناڤ تنێ: بیرئینان بۆ زێدەکرنا ئیمەیلێ (هەر رۆژ ئێک جار، دشێی بگری)
+        if (Backend.instance.registered &&
+            !Backend.instance.hasEmail &&
+            !Backend.instance.flag('nag_${DateTime.now().toIso8601String().substring(0, 10)}'))
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: AccountCard(
+              compact: true,
+              onClose: () => Backend.instance.setFlagNotify('nag_${DateTime.now().toIso8601String().substring(0, 10)}'),
+            ),
+          ),
         if (p.streakAtRisk)
           Container(
             margin: const EdgeInsets.only(bottom: 12),

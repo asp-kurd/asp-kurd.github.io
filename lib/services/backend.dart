@@ -31,6 +31,14 @@ class Backend extends ChangeNotifier {
   String? get gender => (profile?['gender'] as String?) ?? (enabled ? _p.getString('gender') : null);
   int get unread => messages.where((m) => !m.read).length;
 
+  /// 📧 ئیمەیلا هەژمارێ (بۆ هەژمارێن ب ناڤ تنێ: null)
+  String? get email {
+    final e = (profile?['email'] as String?) ?? (enabled ? _p.getString('sb_email') : null);
+    return (e == null || e.isEmpty) ? null : e;
+  }
+
+  bool get hasEmail => email != null;
+
   String get _base => AppConfig.supabaseUrl;
   // کلیلێن نوو (sb_publishable_...) تنێ د apikey دا دهێن؛ Authorization تنێ دگەل تۆکنا بکارهێنەری
   Map<String, String> get _h => {
@@ -42,6 +50,10 @@ class Backend extends ChangeNotifier {
   /// ئالایێن بچووک (بۆ نموونە: ئایا پرسیارا ئاگەهداریان هاتییە کرن)
   bool flag(String k) => _p.getBool('flag_$k') ?? false;
   Future<void> setFlag(String k) => _p.setBool('flag_$k', true);
+  Future<void> setFlagNotify(String k) async {
+    await setFlag(k);
+    notifyListeners();
+  }
 
   // ───────────────────────── Auth ─────────────────────────
 
@@ -91,13 +103,149 @@ class Backend extends ChangeNotifier {
     }
   }
 
-  /// تۆمارکرنا فێرخوازەکێ نوو: ناڤ + تەمەن + جهێ ئاکنجیبوونێ
+  /// خەلەتیێن Supabase ب کوردی
+  static String authError(String body) {
+    if (body.contains('already') || body.contains('email_exists') || body.contains('user_already_exists')) {
+      return 'ئەڤ ئیمەیلە بەری نوکە هاتییە تۆمارکرن. «چوونا ژوور» ب کار بینە.';
+    }
+    if (body.contains('weak_password') || body.contains('at least 6')) return 'پاسۆرد دڤێت ب کێمی ٦ پیت بیت.';
+    if (body.contains('email_address_invalid') || body.contains('invalid format')) return 'ئیمەیل نە دروستە.';
+    if (body.contains('invalid_credentials')) return 'ئیمەیل یان پاسۆرد خەلەتە.';
+    if (body.contains('email_not_confirmed') || body.contains('confirm')) return 'پشتراستکرنا ئیمەیلێ ل سێرڤەری هێشتا ڤەکرییە (ئەدمین دڤێت بگریت).';
+    if (body.contains('over_email_send_rate_limit') || body.contains('rate limit')) return 'گەلەک هەولدان — کەمەکێ دی دیسا تاقی بکە.';
+    return body.length > 160 ? body.substring(0, 160) : body;
+  }
+
+  /// 📧 ئیمەیل + پاسۆرد: هەژمارا نوو، یان گرێدانا هەژمارا ب ناڤ تنێ (بێ کو پێشکەفتن ژ دەست بچیت)
+  Future<String?> _emailAuth(String email, String password) async {
+    final body = jsonEncode({'email': email.trim().toLowerCase(), 'password': password});
+    http.Response r;
+    if (userId != null && !isAdmin && _refresh != null && _refresh!.isNotEmpty) {
+      await _ensureToken();
+      r = await http.put(Uri.parse('$_base/auth/v1/user'), headers: _h, body: body);
+      if (r.statusCode >= 300) return authError(r.body);
+      final u = jsonDecode(r.body) as Map<String, dynamic>;
+      if ((u['email'] as String?)?.isEmpty ?? true) return authError('confirm');
+    } else {
+      r = await http.post(Uri.parse('$_base/auth/v1/signup'),
+          headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'}, body: body);
+      if (r.statusCode >= 300) return authError(r.body);
+      final j = jsonDecode(r.body) as Map<String, dynamic>;
+      if (j['access_token'] == null) return authError('confirm');
+      isAdmin = false;
+      await _p.setBool('sb_admin', false);
+      _saveSession(j);
+    }
+    await _p.setString('sb_email', email.trim().toLowerCase());
+    return null;
+  }
+
+  /// گرێدانا ئیمەیلێ ب هەژمارا نوکە (ژ پرۆفایلێ)
+  Future<String?> linkEmail(String email, String password) async {
+    if (!enabled) return 'offline';
+    try {
+      final err = await _emailAuth(email, password);
+      if (err != null) return err;
+      await _patchLearner({'email': email.trim().toLowerCase()});
+      notifyListeners();
+      return null;
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  Future<void> _patchLearner(Map<String, dynamic> m) async {
+    try {
+      await _ensureToken();
+      final r = await http.patch(Uri.parse('$_base/rest/v1/learners?id=eq.$userId'),
+          headers: {..._h, 'Prefer': 'return=representation'}, body: jsonEncode(m));
+      if (r.statusCode < 300) {
+        final list = jsonDecode(r.body) as List;
+        if (list.isNotEmpty) _setProfile(list.first as Map<String, dynamic>);
+      }
+    } catch (_) {}
+  }
+
+  /// 🔑 چوونا ژوور ب ئیمەیل + پاسۆرد (بۆ نموونە ل مۆبایلەکا نوو)
+  Future<String?> loginEmail(String email, String password) async {
+    if (!enabled) return 'offline';
+    try {
+      final r = await http.post(Uri.parse('$_base/auth/v1/token?grant_type=password'),
+          headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'},
+          body: jsonEncode({'email': email.trim().toLowerCase(), 'password': password}));
+      if (r.statusCode != 200) return authError(r.body);
+      isAdmin = false;
+      await _p.setBool('sb_admin', false);
+      _saveSession(jsonDecode(r.body) as Map<String, dynamic>);
+      await _p.setString('sb_email', email.trim().toLowerCase());
+      profile = null;
+      await _loadProfile();
+      if (profile == null) return 'ئەڤ هەژمارە پرۆفایل نینە.';
+      unawaited(track(open: true));
+      unawaited(loadMessages());
+      notifyListeners();
+      return null;
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  /// 🚪 دەرکەفتن: هەمی زانیاریێن ڤێ مۆبایلێ ژێدبەت (پێشکەفتن ل سەر سێرڤەری دمینیت)
+  Future<void> logout() async {
+    for (final k in _p.getKeys().toList()) {
+      if (k == 'theme_mode') continue;
+      await _p.remove(k);
+    }
+    _access = _refresh = userId = null;
+    _expires = DateTime.fromMillisecondsSinceEpoch(0);
+    profile = null;
+    messages = [];
+    isAdmin = false;
+    notifyListeners();
+  }
+
+  // ───────────────────────── ☁️ پاراستنا پێشکەفتنێ ─────────────────────────
+
+  Future<void> pushProgress(Map<String, Object> data, int xp) async {
+    if (!enabled || userId == null || isAdmin || profile == null) return;
+    try {
+      await _ensureToken();
+      await http.post(Uri.parse('$_base/rest/v1/progress'),
+          headers: {..._h, 'Prefer': 'resolution=merge-duplicates'},
+          body: jsonEncode({'user_id': userId, 'data': data, 'xp': xp, 'updated_at': DateTime.now().toUtc().toIso8601String()}));
+    } catch (_) {}
+  }
+
+  Future<Map<String, dynamic>?> pullProgress() async {
+    if (!enabled || userId == null || isAdmin) return null;
+    try {
+      await _ensureToken();
+      final r = await http.get(Uri.parse('$_base/rest/v1/progress?user_id=eq.$userId&select=data,xp,updated_at'), headers: _h);
+      if (r.statusCode != 200) return null;
+      final list = jsonDecode(r.body) as List;
+      return list.isEmpty ? null : list.first as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// تۆمارکرنا فێرخوازەکێ نوو: ناڤ + تەمەن + جهێ ئاکنجیبوونێ (+ ئیمەیل/پاسۆرد ئەگەر هەبن)
   Future<String?> register(
-      {required String name, required int? age, required String city, String? gender, String native = 'ku', String target = 'de'}) async {
+      {required String name,
+      required int? age,
+      required String city,
+      String? gender,
+      String? email,
+      String? password,
+      String native = 'ku',
+      String target = 'de'}) async {
     if (gender != null) await _p.setString('gender', gender);
     if (!enabled) return 'offline';
     try {
-      if (userId == null || isAdmin) {
+      if (email != null && password != null) {
+        final err = await _emailAuth(email, password);
+        if (err != null) return err;
+      } else if (userId == null || isAdmin) {
         final r = await http.post(Uri.parse('$_base/auth/v1/signup'),
             headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'}, body: jsonEncode({'data': {}}));
         if (r.statusCode >= 300) return 'auth ${r.statusCode}: ${r.body}';
@@ -114,13 +262,15 @@ class Backend extends ChangeNotifier {
         'target_lang': target,
         'last_seen': DateTime.now().toUtc().toIso8601String(),
         if (gender != null) 'gender': gender,
+        if (email != null) 'email': email.trim().toLowerCase(),
       };
       Future<http.Response> send() => http.post(Uri.parse('$_base/rest/v1/learners'),
           headers: {..._h, 'Prefer': 'resolution=merge-duplicates,return=representation'}, body: jsonEncode(row));
       var r = await send();
-      // ئەگەر ستوونا gender هێشتا د داتابەیسێ دا نەبیت، بێ وێ تۆمار بکە
-      if (r.statusCode >= 300 && r.body.contains('gender')) {
+      // ئەگەر ستوونێن نوو (gender / email) هێشتا د داتابەیسێ دا نەبن، بێ وان تۆمار بکە
+      if (r.statusCode >= 300 && (r.body.contains('gender') || r.body.contains('email'))) {
         row.remove('gender');
+        row.remove('email');
         r = await send();
       }
       if (r.statusCode >= 300) return 'db ${r.statusCode}: ${r.body}';

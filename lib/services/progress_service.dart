@@ -62,8 +62,86 @@ class ProgressService extends ChangeNotifier {
 
   String get _pairKey => '${nativeLang.code}_${targetLang.code}';
 
+  // ───────── ☁️ پاراستنا پێشکەفتنێ ل سەر سێرڤەری ─────────
+  bool _ready = false;
+  Timer? _cloudTimer;
+  String _lastCloud = '';
+
+  static bool _noSync(String k) => k.startsWith('sb_') || k.startsWith('flag_') || k.startsWith('asp_') || k == 'theme_mode';
+
+  /// هەمی پێشکەفتن وەکی JSON (بۆ سێرڤەری)
+  Map<String, Object> exportState() {
+    final out = <String, Object>{};
+    for (final k in _p.getKeys()) {
+      if (_noSync(k)) continue;
+      final v = _p.get(k);
+      if (v == null || (v is String && v.length > 20000)) continue;
+      out[k] = v is List ? v.map((e) => '$e').toList() : v;
+    }
+    return out;
+  }
+
+  Future<void> importState(Map<String, dynamic> m) async {
+    for (final e in m.entries) {
+      if (_noSync(e.key)) continue;
+      final v = e.value;
+      if (v is bool) {
+        await _p.setBool(e.key, v);
+      } else if (v is int) {
+        await _p.setInt(e.key, v);
+      } else if (v is double) {
+        await _p.setDouble(e.key, v);
+      } else if (v is String) {
+        await _p.setString(e.key, v);
+      } else if (v is List) {
+        await _p.setStringList(e.key, v.map((x) => '$x').toList());
+      }
+    }
+    await init();
+    _lastCloud = jsonEncode(exportState());
+    notifyListeners();
+  }
+
+  /// ئەگەر ل سەر سێرڤەری پێشکەفتنەکا مەزنتر هەبیت (ژ مۆبایلەکا دی)، وێ بینە
+  Future<bool> syncFromCloud({bool preferServer = false}) async {
+    final m = await Backend.instance.pullProgress();
+    if (m == null) {
+      _scheduleCloud(immediate: true);
+      return false;
+    }
+    final serverXp = (m['xp'] as num?)?.toInt() ?? 0;
+    final data = m['data'];
+    if (data is Map<String, dynamic> && (preferServer ? serverXp >= xp : serverXp > xp)) {
+      await importState(data);
+      return true;
+    }
+    _scheduleCloud(immediate: true);
+    return false;
+  }
+
+  void _scheduleCloud({bool immediate = false}) {
+    if (!_ready) return;
+    // throttle: نە debounce (دلێن دزڤڕن هەر چرکەکێ notify دکەن)
+    if (!immediate && (_cloudTimer?.isActive ?? false)) return;
+    _cloudTimer?.cancel();
+    _cloudTimer = Timer(Duration(seconds: immediate ? 1 : 8), () {
+      final s = exportState();
+      final j = jsonEncode(s);
+      if (j == _lastCloud) return;
+      _lastCloud = j;
+      Backend.instance.pushProgress(s, xp);
+    });
+  }
+
+  @override
+  void notifyListeners() {
+    super.notifyListeners();
+    _scheduleCloud();
+  }
+
   Future<void> init() async {
     _p = await SharedPreferences.getInstance();
+    _ready = true;
     nativeLang = AppLanguage.fromCode(_p.getString('native'), AppLanguage.badini);
     targetLang = AppLanguage.fromCode(_p.getString('target'), AppLanguage.german);
     onboarded = _p.getBool('onboarded') ?? false;

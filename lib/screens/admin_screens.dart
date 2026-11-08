@@ -218,7 +218,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
               child: Container(width: 12, height: 12, decoration: BoxDecoration(color: AppColors.green, shape: BoxShape.circle, border: Border.all(color: AppColors.card, width: 2))),
             ),
         ]),
-        title: Text('${l['name']}${switch (l['gender']) { 'm' => ' 👨', 'f' => ' 👩', _ => '' }}',
+        title: Text('${l['name']}${switch (l['gender']) { 'm' => ' 👨', 'f' => ' 👩', _ => '' }}${(l['email'] ?? '') != '' ? ' 📧' : ''}',
             style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(
           '${l['age'] ?? '–'} سال · ${l['city'] ?? ''}\n'
@@ -321,6 +321,7 @@ class _LearnerDetailState extends State<LearnerDetail> {
           : ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 90), children: [
               _info('👤', 'ناڤ', '${l['name']}'),
               _info('🎂', 'تەمەن', '${l['age'] ?? '–'}'),
+              _info('📧', 'ئیمەیل', (l['email'] as String?) ?? '— (تنێ ب ناڤ)'),
               _info('⚧', 'ڕەگەز', switch (l['gender']) { 'm' => '👨 نێر', 'f' => '👩 مێ', _ => '–' }),
               _info('📍', 'جه', '${l['city'] ?? '–'}'),
               _info('🗓️', 'دەستپێک', created == null ? '–' : '${created.year}/${created.month}/${created.day}'),

@@ -12,13 +12,14 @@ print("settings: mailer_autoconfirm=%s anonymous=%s email=%s disable_signup=%s" 
 r = show("anon signup", requests.post(f"{URL}/auth/v1/signup", headers={"apikey": KEY}, json={"data": {}}))
 j = r.json(); tok = j["access_token"]; uid = j["user"]["id"]
 H = {"apikey": KEY, "Authorization": f"Bearer {tok}", "Content-Type": "application/json"}
-email = f"probe{int(time.time())}@example.com"
+email = f"asp.probe.{int(time.time())}@gmail.com"
 r = show("link email+password (PUT /user)", requests.put(f"{URL}/auth/v1/user", headers=H, json={"email": email, "password": "Probe#12345"}))
 if r.ok:
     u = r.json(); print("   email=", u.get("email"), "new_email=", u.get("new_email"), "is_anonymous=", u.get("is_anonymous"))
 r = show("password login", requests.post(f"{URL}/auth/v1/token?grant_type=password", headers={"apikey": KEY}, json={"email": email, "password": "Probe#12345"}))
 if r.ok: print("   same user:", r.json()["user"]["id"] == uid)
-show("progress table select", requests.get(f"{URL}/rest/v1/progress?select=user_id&limit=1", headers=H))
+show("progress upsert", requests.post(f"{URL}/rest/v1/progress", headers={**H, "Prefer": "resolution=merge-duplicates"}, json={"user_id": uid, "data": {"xp": 5}, "xp": 5}))
+show("progress read", requests.get(f"{URL}/rest/v1/progress?user_id=eq.{uid}&select=xp", headers=H))
 show("learners email column", requests.get(f"{URL}/rest/v1/learners?select=email&limit=1", headers=H))
 if SVC:
     show("cleanup (admin delete user)", requests.delete(f"{URL}/auth/v1/admin/users/{uid}", headers={"apikey": SVC, "Authorization": f"Bearer {SVC}"}))
