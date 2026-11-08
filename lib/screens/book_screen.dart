@@ -136,6 +136,11 @@ class _BookScreenState extends State<BookScreen> {
                   Center(
                     child: Column(children: [
                       const Text('📖 پەرتووکا A1.1 mit Poya بار نەبوو', style: TextStyle(fontSize: 16)),
+                      if (bookError != null)
+                        Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Text(bookError!, textDirection: TextDirection.ltr, style: TextStyle(fontSize: 11, color: AppColors.fg38)),
+                        ),
                       const SizedBox(height: 10),
                       FilledButton.icon(onPressed: _retry, icon: const Icon(Icons.refresh_rounded), label: const Text('دووبارە تاقی بکە')),
                     ]),

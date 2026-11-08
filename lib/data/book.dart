@@ -45,12 +45,12 @@ class BookBlock {
   });
 
   factory BookBlock.fromJson(Map<String, dynamic> m) {
-    List<String> strs(dynamic v) => ((v as List?) ?? []).map((e) => e as String).toList();
+    List<String> strs(dynamic v) => ((v as List?) ?? []).map((e) => '$e').toList();
     final t = m['t'] as String;
     return BookBlock(
       type: t,
       text: (m['text'] ?? m['why'] ?? '') as String,
-      items: t == 'vocab' ? const [] : strs(m['items']),
+      items: (t == 'ul' || t == 'ol') ? strs(m['items']) : const [],
       head: strs(m['head']),
       rows: t == 'vocab'
           ? ((m['items'] as List).map((r) => strs(r)).toList())
