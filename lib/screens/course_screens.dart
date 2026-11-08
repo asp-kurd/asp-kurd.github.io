@@ -153,6 +153,7 @@ class DialogScreen extends StatefulWidget {
 
 class _DialogScreenState extends State<DialogScreen> {
   Map<String, MascotChar> _cast = {};
+  String _genderOf(String who) => (_cast[who] ?? MascotChar.forSpeaker(who)).gender;
   bool showKu = true;
   int? playing;
   bool auto = false;
@@ -162,7 +163,7 @@ class _DialogScreenState extends State<DialogScreen> {
     for (var k = 0; k < widget.lektion.dialog.length && auto && mounted; k++) {
       setState(() => playing = k);
       final line = widget.lektion.dialog[k];
-      await VoiceService.instance.speakText(line.de, AppLanguage.german);
+      await VoiceService.instance.speakText(line.de, AppLanguage.german, gender: _genderOf(line.who));
       // دەمێ خواندنێ ب نێزیکی
       await Future.delayed(Duration(milliseconds: 900 + line.de.length * 75));
     }
@@ -245,7 +246,7 @@ class _DialogScreenState extends State<DialogScreen> {
       child: GestureDetector(
         onTap: () {
           setState(() => playing = k);
-          VoiceService.instance.speakText(d.de, AppLanguage.german);
+          VoiceService.instance.speakText(d.de, AppLanguage.german, gender: _genderOf(d.who));
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),

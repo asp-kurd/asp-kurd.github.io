@@ -92,6 +92,7 @@ class VoiceService {
     _fx.installUnlock();
     _prefs = await SharedPreferences.getInstance();
     ttsRate = _prefs!.getDouble('tts_rate') ?? 0.42;
+    aiGender = _prefs!.getString('ai_gender') ?? 'm';
     for (final l in AppLanguage.values) {
       final v = _prefs!.getString('voice_${l.code}');
       if (v != null) _preferredVoice[l.code] = v;
@@ -127,7 +128,29 @@ class VoiceService {
     return h.toRadixString(16).padLeft(8, '0');
   }
 
-  String aiAsset(String text, AppLanguage lang) => 'assets/tts/${lang.code}/${textKey(text)}.mp3';
+  // ───────── 👨/👩 دەنگێ AI ─────────
+  /// ڕەگەزێ دەنگێ سەرەکی د هەر فۆلدەرەکی دا: de = 👨 thorsten، en = 👩 lessac
+  static const _baseGender = {'de': 'm', 'en': 'f', 'ku': 'm'};
+
+  /// 'm' یان 'f' — بکارهێنەر د ڕێکخستنان دا هەلدبژێریت
+  String aiGender = 'm';
+  Future<void> setAiGender(String g) async {
+    aiGender = g;
+    await _prefs?.setString('ai_gender', g);
+  }
+
+  /// ئایا دەنگێ AI ب ڤی ڕەگەزی بۆ ڤی زمانی هەیە؟
+  bool hasGender(AppLanguage lang, String g) =>
+      _baseGender[lang.code] == g || _aiAssets.any((a) => a.startsWith('assets/tts/${lang.code}_$g/'));
+
+  String aiAsset(String text, AppLanguage lang, [String? gender]) {
+    final g = gender ?? aiGender;
+    final base = 'assets/tts/${lang.code}/${textKey(text)}.mp3';
+    if (_baseGender[lang.code] == g) return base;
+    final alt = 'assets/tts/${lang.code}_$g/${textKey(text)}.mp3';
+    return _aiAssets.contains(alt) ? alt : base;
+  }
+
   bool hasAi(String text, AppLanguage lang) => _aiAssets.contains(aiAsset(text, lang));
 
   VoiceSource sourceFor(WordConcept c, AppLanguage lang) {
@@ -298,13 +321,14 @@ class VoiceService {
   }
 
   /// خواندنا دەقەکێ ئازاد ب TTS (بۆ پەرتووکا رێزمانێ)
-  Future<void> speakText(String text, AppLanguage lang, {double rate = 1.0}) async {
+  /// [gender]: 'm'/'f' بۆ دیالۆگان (ئافرەت ب دەنگێ ئافرەتی)؛ null = هەلبژارتنا بکارهێنەری
+  Future<void> speakText(String text, AppLanguage lang, {double rate = 1.0, String? gender}) async {
     if (text.trim().isEmpty) return;
     await init();
     await stopPlayback();
     _talkFor(_estimate(text, rate));
     if (hasAi(text, lang)) {
-      await _playAsset(aiAsset(text, lang), rate);
+      await _playAsset(aiAsset(text, lang, gender), rate);
       return;
     }
     if (lang.ttsCode == null) return;

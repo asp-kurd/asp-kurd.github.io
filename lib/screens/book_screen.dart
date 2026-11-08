@@ -6,6 +6,7 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import 'grammar_screen.dart';
 import 'summary_screen.dart';
 
 /// 📖 پەرتووکا رێزمانێ: «A1.1 mit Poya» — ٢٠ بەش، ژ ئەلفوبێ هەتا Perfekt
@@ -120,6 +121,8 @@ class _BookScreenState extends State<BookScreen> {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 40),
               children: [
+                const GrammarBanner(),
+                const SizedBox(height: 12),
                 const SummaryBanner(),
                 const SizedBox(height: 12),
                 _cover(done, n),

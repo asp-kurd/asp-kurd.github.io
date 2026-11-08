@@ -1,0 +1,2291 @@
+{
+ "version": 1,
+ "title": {
+  "de": "Grammatik nach Lektion",
+  "ku": "رێزمان ل دویف وانێ"
+ },
+ "lektionen": [
+  {
+   "n": 1,
+   "topics": [
+    {
+     "emoji": "🗣️",
+     "title": {
+      "de": "Verben: ich, du, Sie",
+      "ku": "کار: ich، du، Sie"
+     },
+     "explain": {
+      "de": "Das Verb hat verschiedene Endungen. ich → -e, du → -st, Sie → -en. Das Verb „sein“ ist unregelmäßig: Man muss es lernen.",
+      "ku": "کار ل دویف جێناڤی دوماهیا خۆ دگوهۆڕیت: ich ← ‎-e، du ← ‎-st، Sie ← ‎-en. کارێ «sein» (بوون) نە ل سەر یاسایێ یە، دڤێت ژبەر بکەی."
+     },
+     "head": [
+      "",
+      "heißen",
+      "kommen",
+      "wohnen",
+      "sein"
+     ],
+     "rows": [
+      [
+       "ich",
+       "heiße",
+       "komme",
+       "wohne",
+       "bin"
+      ],
+      [
+       "du",
+       "heißt",
+       "kommst",
+       "wohnst",
+       "bist"
+      ],
+      [
+       "Sie",
+       "heißen",
+       "kommen",
+       "wohnen",
+       "sind"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich heiße Azad.",
+       "ku": "ناڤێ من ئازادە."
+      },
+      {
+       "de": "Woher kommst du?",
+       "ku": "تو ژ کیڤەیی؟"
+      },
+      {
+       "de": "Wo wohnen Sie?",
+       "ku": "هوین ل کیڤە دژین؟"
+      }
+     ],
+     "tip": {
+      "de": "„Sie“ ist höflich (für Fremde). „du“ ist für Freunde und Familie.",
+      "ku": "«Sie» ب ڕێز و فەرمییە (بۆ کەسێن نەناس). «du» بۆ هەڤال و مالباتێ یە."
+     }
+    },
+    {
+     "emoji": "❓",
+     "title": {
+      "de": "W-Fragen",
+      "ku": "پرسیارێن W"
+     },
+     "explain": {
+      "de": "W-Fragen beginnen mit einem W-Wort: wie, wer, woher, wo, was. Das Verb steht immer auf Position 2.",
+      "ku": "پرسیارێن W ب پەیڤەکا W دەستپێدکەن: wie (چەوا)، wer (کی)، woher (ژ کیڤە)، wo (ل کیڤە)، was (چ). کار هەردەم ل جهێ دووێ یە."
+     },
+     "head": [
+      "Position 1",
+      "Position 2: Verb",
+      "…"
+     ],
+     "rows": [
+      [
+       "Wie",
+       "heißen",
+       "Sie?"
+      ],
+      [
+       "Woher",
+       "kommst",
+       "du?"
+      ],
+      [
+       "Wo",
+       "wohnst",
+       "du?"
+      ],
+      [
+       "Wer",
+       "ist",
+       "das?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Wie heißt du?",
+       "ku": "ناڤێ تە چییە؟"
+      },
+      {
+       "de": "Wer ist das?",
+       "ku": "ئەڤە کییە؟"
+      },
+      {
+       "de": "Was sprechen Sie?",
+       "ku": "هوین ب چ زمانی دئاخڤن؟"
+      }
+     ]
+    },
+    {
+     "emoji": "➡️",
+     "title": {
+      "de": "Der Aussagesatz",
+      "ku": "رستا ئاسایی"
+     },
+     "explain": {
+      "de": "Auch im normalen Satz steht das Verb auf Position 2. Position 1 kann ein Wort oder mehrere Wörter sein.",
+      "ku": "د رستا ئاسایی دا ژی کار ل جهێ دووێ یە. جهێ ئێکێ دبیت ئێک پەیڤ بیت یان چەند پەیڤ."
+     },
+     "head": [
+      "Position 1",
+      "Position 2: Verb",
+      "…"
+     ],
+     "rows": [
+      [
+       "Ich",
+       "heiße",
+       "Sara."
+      ],
+      [
+       "Ich",
+       "komme",
+       "aus Kurdistan."
+      ],
+      [
+       "Mein Name",
+       "ist",
+       "Lara."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich komme aus dem Irak.",
+       "ku": "ئەز ژ عیراقێ مە."
+      },
+      {
+       "de": "Mein Name ist Karim.",
+       "ku": "ناڤێ من کەریمە."
+      },
+      {
+       "de": "Ich spreche Kurdisch und Deutsch.",
+       "ku": "ئەز ب کوردی و ئەلمانی دئاخڤم."
+      }
+     ],
+     "tip": {
+      "de": "„Mein Name“ sind zwei Wörter, aber nur eine Position.",
+      "ku": "«Mein Name» دوو پەیڤن، بەلێ تنێ ئێک جهن."
+     }
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topics": [
+    {
+     "emoji": "👥",
+     "title": {
+      "de": "Alle Personen: Konjugation",
+      "ku": "هەمی جێناڤ: گوهۆڕینا کاری"
+     },
+     "explain": {
+      "de": "Jetzt lernen wir alle Personen: ich, du, er/sie/es, wir, ihr, sie/Sie. Bei wir, sie und Sie ist die Endung -en.",
+      "ku": "نوکە هەمی جێناڤان فێر دبین: ich (ئەز)، du (تو)، er/sie/es (ئەو)، wir (ئەم)، ihr (هوین)، sie/Sie (ئەو / هوین ب ڕێز). د گەل wir و sie و Sie دوماهی ‎-en ە."
+     },
+     "head": [
+      "",
+      "wohnen",
+      "sein",
+      "haben"
+     ],
+     "rows": [
+      [
+       "ich",
+       "wohne",
+       "bin",
+       "habe"
+      ],
+      [
+       "du",
+       "wohnst",
+       "bist",
+       "hast"
+      ],
+      [
+       "er/sie/es",
+       "wohnt",
+       "ist",
+       "hat"
+      ],
+      [
+       "wir",
+       "wohnen",
+       "sind",
+       "haben"
+      ],
+      [
+       "ihr",
+       "wohnt",
+       "seid",
+       "habt"
+      ],
+      [
+       "sie/Sie",
+       "wohnen",
+       "sind",
+       "haben"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Wir wohnen in Duhok.",
+       "ku": "ئەم ل دهۆکێ دژین."
+      },
+      {
+       "de": "Er ist mein Bruder.",
+       "ku": "ئەو برایێ منە."
+      },
+      {
+       "de": "Habt ihr Kinder?",
+       "ku": "ئەرێ هەوە زارۆک هەنە؟"
+      }
+     ]
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "title": {
+      "de": "mein, dein, Ihr",
+      "ku": "یێ من، یێ تە، یێ هەوە"
+     },
+     "explain": {
+      "de": "Possessivartikel zeigen: Wem gehört das? Bei der und das: mein. Bei die und Plural: meine.",
+      "ku": "ئەڤ پەیڤە نیشان ددەن کا تشت یێ کێیە. د گەل der و das: ‏mein؛ د گەل die و کۆ: ‏meine."
+     },
+     "head": [
+      "",
+      "der Vater",
+      "die Mutter",
+      "das Kind",
+      "die Eltern"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mein Vater",
+       "meine Mutter",
+       "mein Kind",
+       "meine Eltern"
+      ],
+      [
+       "du",
+       "dein Vater",
+       "deine Mutter",
+       "dein Kind",
+       "deine Eltern"
+      ],
+      [
+       "Sie",
+       "Ihr Vater",
+       "Ihre Mutter",
+       "Ihr Kind",
+       "Ihre Eltern"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist meine Mutter.",
+       "ku": "ئەڤە دایکا منە."
+      },
+      {
+       "de": "Wie heißt dein Bruder?",
+       "ku": "ناڤێ برایێ تە چییە؟"
+      },
+      {
+       "de": "Ist das Ihr Sohn?",
+       "ku": "ئەرێ ئەڤە کوڕێ هەوەیە؟"
+      }
+     ]
+    },
+    {
+     "emoji": "✅",
+     "title": {
+      "de": "Ja/Nein-Fragen",
+      "ku": "پرسیارێن ئەرێ/نەخێر"
+     },
+     "explain": {
+      "de": "Bei Ja/Nein-Fragen steht das Verb auf Position 1. Die Antwort ist „Ja“ oder „Nein“.",
+      "ku": "د پرسیارێن ئەرێ/نەخێر دا کار ل جهێ ئێکێ یە. بەرسڤ «Ja» (بەلێ) یان «Nein» (نەخێر) ە."
+     },
+     "head": [
+      "Position 1: Verb",
+      "…",
+      "Antwort"
+     ],
+     "rows": [
+      [
+       "Bist",
+       "du verheiratet?",
+       "Ja, ich bin verheiratet."
+      ],
+      [
+       "Hast",
+       "du Geschwister?",
+       "Nein, ich habe keine Geschwister."
+      ],
+      [
+       "Wohnen",
+       "Sie in Berlin?",
+       "Ja."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Bist du verheiratet?",
+       "ku": "ئەرێ تو یێ/یا زەویجی؟"
+      },
+      {
+       "de": "Hast du Geschwister?",
+       "ku": "ئەرێ خویشک و برا تە هەنە؟"
+      },
+      {
+       "de": "Nein, ich bin ledig.",
+       "ku": "نەخێر، ئەز یێ/یا سەڵتم."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topics": [
+    {
+     "emoji": "🍎",
+     "title": {
+      "de": "der, die, das — ein, eine",
+      "ku": "der، die، das — ein، eine"
+     },
+     "explain": {
+      "de": "Jedes Nomen hat einen Artikel. Neu → unbestimmter Artikel (ein, eine). Bekannt → bestimmter Artikel (der, die, das).",
+      "ku": "هەر ناڤەکی ئارتیکلەک هەیە. ئەگەر تشت نوو بیت ← ein / eine (ئێک). ئەگەر تشت ناسکری بیت ← der / die / das."
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "bestimmt",
+       "der Apfel",
+       "das Ei",
+       "die Banane",
+       "die Äpfel"
+      ],
+      [
+       "unbestimmt",
+       "ein Apfel",
+       "ein Ei",
+       "eine Banane",
+       "– Äpfel"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist ein Apfel.",
+       "ku": "ئەڤە سێڤەکە."
+      },
+      {
+       "de": "Der Apfel ist gut.",
+       "ku": "سێڤ یا باشە."
+      },
+      {
+       "de": "Ich möchte eine Banane.",
+       "ku": "ئەز موزەکێ دخوازم."
+      }
+     ],
+     "tip": {
+      "de": "Lerne jedes Nomen immer mit Artikel: der Tee, die Milch, das Brot.",
+      "ku": "هەر ناڤەکی هەردەم دگەل ئارتیکلێ وی فێر بە: der Tee، die Milch، das Brot."
+     }
+    },
+    {
+     "emoji": "🚫",
+     "title": {
+      "de": "kein, keine",
+      "ku": "kein، keine (چ … نە)"
+     },
+     "explain": {
+      "de": "„kein“ ist die Negation von „ein“. ein → kein, eine → keine. Im Plural: keine.",
+      "ku": "«kein» شێوێ نەرێنی یێ «ein» ە. ein ← kein، eine ← keine. د کۆ دا: keine."
+     },
+     "head": [
+      "positiv",
+      "negativ"
+     ],
+     "rows": [
+      [
+       "Das ist ein Ei.",
+       "Das ist kein Ei."
+      ],
+      [
+       "Das ist eine Tomate.",
+       "Das ist keine Tomate."
+      ],
+      [
+       "Ich habe Eier.",
+       "Ich habe keine Eier."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist kein Fisch.",
+       "ku": "ئەڤە ماسی نینە."
+      },
+      {
+       "de": "Wir haben keine Milch.",
+       "ku": "شیر مە نینە."
+      },
+      {
+       "de": "Ich trinke keinen Kaffee.",
+       "ku": "ئەز قەهوێ ڤەناخۆم."
+      }
+     ]
+    },
+    {
+     "emoji": "🧺",
+     "title": {
+      "de": "Plural",
+      "ku": "کۆ (پتر ژ ئێکێ)"
+     },
+     "explain": {
+      "de": "Der Plural-Artikel ist immer „die“. Die Endungen sind verschieden: -e, -en, -n, -er, -s oder ohne Endung, manchmal mit Umlaut (ä, ö, ü).",
+      "ku": "ئارتیکلێ کۆیێ هەردەم «die» یە. دوماهی جودا نە: ‎-e، ‎-en، ‎-n، ‎-er، ‎-s یان بێ دوماهی، و جار جار ب ä، ö، ü."
+     },
+     "head": [
+      "Singular",
+      "Plural",
+      "Endung"
+     ],
+     "rows": [
+      [
+       "der Apfel",
+       "die Äpfel",
+       "¨"
+      ],
+      [
+       "die Banane",
+       "die Bananen",
+       "-n"
+      ],
+      [
+       "das Ei",
+       "die Eier",
+       "-er"
+      ],
+      [
+       "der Saft",
+       "die Säfte",
+       "¨e"
+      ],
+      [
+       "der Joghurt",
+       "die Joghurts",
+       "-s"
+      ],
+      [
+       "das Brötchen",
+       "die Brötchen",
+       "–"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich kaufe drei Äpfel.",
+       "ku": "ئەز سێ سێڤان دکڕم."
+      },
+      {
+       "de": "Die Tomaten sind frisch.",
+       "ku": "تەماتە د تازەنە."
+      },
+      {
+       "de": "Wir brauchen zehn Eier.",
+       "ku": "مە دەه هێک پێدڤینە."
+      }
+     ],
+     "tip": {
+      "de": "Lerne den Plural mit dem Wort: der Apfel, die Äpfel.",
+      "ku": "کۆیێ دگەل پەیڤێ پێکڤە فێر بە: der Apfel، die Äpfel."
+     }
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topics": [
+    {
+     "emoji": "🛋️",
+     "title": {
+      "de": "er, sie, es für Dinge",
+      "ku": "er، sie، es بۆ تشتان"
+     },
+     "explain": {
+      "de": "Für Dinge benutzen wir auch er, sie, es. der → er, die → sie, das → es, Plural → sie.",
+      "ku": "بۆ تشتان ژی er، sie، es بکاردئینین: der ← er، die ← sie، das ← es، کۆ ← sie."
+     },
+     "head": [
+      "Nomen",
+      "Pronomen"
+     ],
+     "rows": [
+      [
+       "der Tisch",
+       "er"
+      ],
+      [
+       "die Lampe",
+       "sie"
+      ],
+      [
+       "das Sofa",
+       "es"
+      ],
+      [
+       "die Stühle",
+       "sie"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Der Tisch ist neu. Er ist schön.",
+       "ku": "مێز یا نوویە. یا جوانە."
+      },
+      {
+       "de": "Wie ist die Küche? – Sie ist klein.",
+       "ku": "مەتبەخ چەوایە؟ – یا بچووکە."
+      },
+      {
+       "de": "Das Bett ist alt. Es ist bequem.",
+       "ku": "تەخت یێ کەڤنە. یێ ئارامە."
+      }
+     ]
+    },
+    {
+     "emoji": "🏠",
+     "title": {
+      "de": "sein + Adjektiv, nicht",
+      "ku": "sein + هەڤاڵناڤ، nicht"
+     },
+     "explain": {
+      "de": "Nach „sein“ hat das Adjektiv keine Endung: Die Wohnung ist groß. Negation mit „nicht“: Die Wohnung ist nicht groß.",
+      "ku": "پشتی «sein» هەڤاڵناڤ چ دوماهی نینن: Die Wohnung ist groß (خانی یێ مەزنە). بۆ نەرێنیێ «nicht» دهێت: Die Wohnung ist nicht groß."
+     },
+     "head": [
+      "positiv",
+      "negativ"
+     ],
+     "rows": [
+      [
+       "Das Zimmer ist hell.",
+       "Das Zimmer ist nicht hell."
+      ],
+      [
+       "Die Miete ist teuer.",
+       "Die Miete ist nicht teuer."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Wohnung ist schön und hell.",
+       "ku": "خانی یێ جوان و ڕۆهنە."
+      },
+      {
+       "de": "Das Bad ist nicht groß.",
+       "ku": "حەمام نە یێ مەزنە."
+      },
+      {
+       "de": "Die Küche ist sehr klein.",
+       "ku": "مەتبەخ گەلەک یا بچووکە."
+      }
+     ],
+     "tip": {
+      "de": "„nicht“ für Adjektive und Verben, „kein“ für Nomen.",
+      "ku": "«nicht» بۆ هەڤاڵناڤ و کاران، «kein» بۆ ناڤان."
+     }
+    },
+    {
+     "emoji": "📏",
+     "title": {
+      "de": "sehr und zu",
+      "ku": "sehr (گەلەک) و zu (زێدە)"
+     },
+     "explain": {
+      "de": "„sehr“ ist positiv oder neutral. „zu“ bedeutet: zu viel, das ist ein Problem.",
+      "ku": "«sehr» واتە گەلەک (باش یان ئاسایی). «zu» واتە زێدەتر ژ پێدڤی، ئەڤە ئاریشەیە."
+     },
+     "head": [
+      "",
+      "Beispiel",
+      "Bedeutung"
+     ],
+     "rows": [
+      [
+       "sehr",
+       "Das Sofa ist sehr schön.",
+       "😊"
+      ],
+      [
+       "zu",
+       "Das Sofa ist zu teuer.",
+       "😟"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Wohnung ist sehr schön.",
+       "ku": "خانی گەلەک یێ جوانە."
+      },
+      {
+       "de": "Die Miete ist zu hoch.",
+       "ku": "کرێ زێدە یا بلندە."
+      },
+      {
+       "de": "Das Zimmer ist zu dunkel.",
+       "ku": "ژوور زێدە یێ تاریە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topics": [
+    {
+     "emoji": "⏰",
+     "title": {
+      "de": "Trennbare Verben",
+      "ku": "کارێن ژێکڤەبوو"
+     },
+     "explain": {
+      "de": "Manche Verben haben zwei Teile: aufstehen → ich stehe … auf. Das Verb steht auf Position 2, der kleine Teil (auf, ein, an …) steht am Ende.",
+      "ku": "هندەک کار ژ دوو پارچان پێکدهێن: aufstehen ← ich stehe … auf. کار ل جهێ دووێ یە، پارچا بچووک (auf، ein، an…) دچیتە دوماهیا رستێ."
+     },
+     "head": [
+      "Infinitiv",
+      "Position 2",
+      "…",
+      "Ende"
+     ],
+     "rows": [
+      [
+       "aufstehen",
+       "Ich stehe",
+       "um 7 Uhr",
+       "auf."
+      ],
+      [
+       "einkaufen",
+       "Er kauft",
+       "im Supermarkt",
+       "ein."
+      ],
+      [
+       "anrufen",
+       "Ich rufe",
+       "dich morgen",
+       "an."
+      ],
+      [
+       "fernsehen",
+       "Wir sehen",
+       "am Abend",
+       "fern."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich stehe um sieben Uhr auf.",
+       "ku": "ئەز دەمژمێر حەفت ژ خەو ڕادبم."
+      },
+      {
+       "de": "Sie kauft am Samstag ein.",
+       "ku": "ئەو رۆژا شەمبیێ بازاڕێ دکەت."
+      },
+      {
+       "de": "Wann rufst du mich an?",
+       "ku": "تو کەنگی تەلەفۆنێ بۆ من دکەی؟"
+      }
+     ]
+    },
+    {
+     "emoji": "📅",
+     "title": {
+      "de": "um, am, in der",
+      "ku": "um، am، in der (دەم)"
+     },
+     "explain": {
+      "de": "Uhrzeit → um (um 8 Uhr). Tag und Tageszeit → am (am Montag, am Abend). Aber: in der Nacht.",
+      "ku": "دەمژمێر ← um (um 8 Uhr). رۆژ و پشکێن رۆژێ ← am (am Montag، am Abend). بەلێ: in der Nacht (ب شەڤ)."
+     },
+     "head": [
+      "Wann?",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "um",
+       "um acht Uhr, um halb neun"
+      ],
+      [
+       "am",
+       "am Montag, am Morgen, am Abend"
+      ],
+      [
+       "in der",
+       "in der Nacht"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich arbeite am Montag.",
+       "ku": "ئەز رۆژا دووشەمبیێ کار دکەم."
+      },
+      {
+       "de": "Der Kurs beginnt um neun Uhr.",
+       "ku": "خول دەمژمێر نەهـ دەستپێدکەت."
+      },
+      {
+       "de": "In der Nacht schlafe ich.",
+       "ku": "ب شەڤ ئەز دنڤم."
+      }
+     ]
+    },
+    {
+     "emoji": "🔄",
+     "title": {
+      "de": "Zeit auf Position 1",
+      "ku": "دەم ل جهێ ئێکێ"
+     },
+     "explain": {
+      "de": "Die Zeit kann auf Position 1 stehen. Dann kommt das Verb auf Position 2 und die Person nach dem Verb.",
+      "ku": "دەم دشێت ل جهێ ئێکێ بیت. هینگێ کار ل جهێ دووێ دمینیت و کەس پشتی کاری دهێت."
+     },
+     "head": [
+      "Position 1",
+      "Position 2: Verb",
+      "…"
+     ],
+     "rows": [
+      [
+       "Ich",
+       "arbeite",
+       "am Montag."
+      ],
+      [
+       "Am Montag",
+       "arbeite",
+       "ich."
+      ],
+      [
+       "Um 7 Uhr",
+       "stehe",
+       "ich auf."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Am Abend sehe ich fern.",
+       "ku": "ئێڤاری ئەز تەلەڤزیۆنێ دبینم."
+      },
+      {
+       "de": "Um acht Uhr frühstücke ich.",
+       "ku": "دەمژمێر هەشت ئەز تێشتێ دخۆم."
+      },
+      {
+       "de": "Heute habe ich Zeit.",
+       "ku": "ئەڤرۆ دەمێ من هەیە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "topics": [
+    {
+     "emoji": "⚽",
+     "title": {
+      "de": "Akkusativ: den, einen, keinen",
+      "ku": "ئاکوزاتیڤ: den، einen، keinen"
+     },
+     "explain": {
+      "de": "Viele Verben haben ein Objekt im Akkusativ: haben, brauchen, kaufen, möchten, sehen … Nur maskulin ändert sich: der → den, ein → einen, kein → keinen.",
+      "ku": "گەلەک کار بەرکارەکێ ئاکوزاتیڤ دخوازن: haben، brauchen، kaufen، möchten، sehen… تنێ نێر دگوهۆڕیت: der ← den، ein ← einen، kein ← keinen."
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Nominativ",
+       "der / ein Ball",
+       "das / ein Buch",
+       "die / eine Karte",
+       "die / – Bälle"
+      ],
+      [
+       "Akkusativ",
+       "den / einen Ball",
+       "das / ein Buch",
+       "die / eine Karte",
+       "die / – Bälle"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich brauche einen Ball.",
+       "ku": "تەپەک بۆ من پێدڤییە."
+      },
+      {
+       "de": "Hast du den Film gesehen?",
+       "ku": "ئەرێ تە فیلم دیت؟"
+      },
+      {
+       "de": "Wir haben keinen Fernseher.",
+       "ku": "تەلەڤزیۆن مە نینە."
+      }
+     ],
+     "tip": {
+      "de": "Frage: Wen oder was? → Akkusativ.",
+      "ku": "پرسیار: Wen oder was? (کێ یان چ؟) ← ئاکوزاتیڤ."
+     }
+    },
+    {
+     "emoji": "🔤",
+     "title": {
+      "de": "Verben mit Vokalwechsel",
+      "ku": "کارێن دەنگ-گوهۆڕ"
+     },
+     "explain": {
+      "de": "Bei manchen Verben ändert sich der Vokal bei du und er/sie/es: e → i (sprechen), e → ie (lesen), a → ä (fahren).",
+      "ku": "د هندەک کاران دا دەنگدار دگوهۆڕیت تنێ د گەل du و er/sie/es: ‏e ← i (sprechen)، e ← ie (lesen)، a ← ä (fahren)."
+     },
+     "head": [
+      "",
+      "sprechen",
+      "lesen",
+      "fahren",
+      "treffen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "spreche",
+       "lese",
+       "fahre",
+       "treffe"
+      ],
+      [
+       "du",
+       "sprichst",
+       "liest",
+       "fährst",
+       "triffst"
+      ],
+      [
+       "er/sie/es",
+       "spricht",
+       "liest",
+       "fährt",
+       "trifft"
+      ],
+      [
+       "wir",
+       "sprechen",
+       "lesen",
+       "fahren",
+       "treffen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Er liest gern Bücher.",
+       "ku": "ئەو حەز ژ خواندنا پەرتووکان دکەت."
+      },
+      {
+       "de": "Fährst du Fahrrad?",
+       "ku": "ئەرێ تو پاسکیلێ دهاژوی؟"
+      },
+      {
+       "de": "Sie trifft ihre Freundin.",
+       "ku": "ئەو هەڤالا خۆ دبینیت."
+      }
+     ]
+    },
+    {
+     "emoji": "💬",
+     "title": {
+      "de": "ja, nein, doch",
+      "ku": "ja، nein، doch"
+     },
+     "explain": {
+      "de": "Auf eine negative Frage antwortet man mit „doch“, wenn die Antwort positiv ist.",
+      "ku": "ئەگەر پرسیار نەرێنی بیت (ب kein یان nicht) و بەرسڤا تە ئەرێنی بیت، بێژە «doch»."
+     },
+     "head": [
+      "Frage",
+      "positiv",
+      "negativ"
+     ],
+     "rows": [
+      [
+       "Hast du Zeit?",
+       "Ja.",
+       "Nein."
+      ],
+      [
+       "Hast du keine Zeit?",
+       "Doch!",
+       "Nein."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Spielst du nicht Fußball? – Doch!",
+       "ku": "ئەرێ تو تەپا پێ یاری ناکەی؟ – بەلێ دکەم!"
+      },
+      {
+       "de": "Kommst du nicht mit? – Doch, ich komme.",
+       "ku": "ئەرێ تو دگەل نائێی؟ – بەلێ، ئەز دێ هێم."
+      },
+      {
+       "de": "Hast du kein Hobby? – Nein.",
+       "ku": "ئەرێ چ هۆبی تە نینن؟ – نەخێر."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "topics": [
+    {
+     "emoji": "💪",
+     "title": {
+      "de": "Modalverb können",
+      "ku": "کارێ können (شیان)"
+     },
+     "explain": {
+      "de": "„können“ steht auf Position 2. Das zweite Verb steht im Infinitiv am Ende. Das ist die Satzklammer.",
+      "ku": "«können» ل جهێ دووێ یە. کارێ دووێ ب شێوێ سەرەکی (Infinitiv) دچیتە دوماهیا رستێ."
+     },
+     "head": [
+      "",
+      "können",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "ich",
+       "kann",
+       "Ich kann gut schwimmen."
+      ],
+      [
+       "du",
+       "kannst",
+       "Kannst du kochen?"
+      ],
+      [
+       "er/sie",
+       "kann",
+       "Sie kann Auto fahren."
+      ],
+      [
+       "wir",
+       "können",
+       "Wir können Englisch sprechen."
+      ],
+      [
+       "ihr",
+       "könnt",
+       "Könnt ihr helfen?"
+      ],
+      [
+       "sie/Sie",
+       "können",
+       "Sie können gut singen."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich kann ein bisschen Deutsch sprechen.",
+       "ku": "ئەز دشێم کێمەکێ ب ئەلمانی باخڤم."
+      },
+      {
+       "de": "Kannst du Fahrrad fahren?",
+       "ku": "ئەرێ تو دشێی پاسکیلێ بهاژوی؟"
+      },
+      {
+       "de": "Er kann nicht gut tanzen.",
+       "ku": "ئەو نەشێت باش سەما بکەت."
+      }
+     ],
+     "tip": {
+      "de": "ich kann / er kann: keine Endung!",
+      "ku": "ich kann / er kann: چ دوماهی نینن!"
+     }
+    },
+    {
+     "emoji": "📖",
+     "title": {
+      "de": "Perfekt mit haben",
+      "ku": "دەمێ بۆری ب haben"
+     },
+     "explain": {
+      "de": "Über die Vergangenheit sprechen: haben (Position 2) + Partizip (am Ende). Viele Partizipien: ge- … -t (lernen → gelernt).",
+      "ku": "بۆ ئاخفتن ل سەر دەمێ بۆری: haben (جهێ دووێ) + Partizip (دوماهیێ). گەلەک Partizip ب ‎ge-…-t دهێن (lernen ← gelernt)."
+     },
+     "head": [
+      "Infinitiv",
+      "Partizip",
+      "Satz"
+     ],
+     "rows": [
+      [
+       "lernen",
+       "gelernt",
+       "Ich habe Deutsch gelernt."
+      ],
+      [
+       "machen",
+       "gemacht",
+       "Was hast du gemacht?"
+      ],
+      [
+       "lesen",
+       "gelesen",
+       "Er hat ein Buch gelesen."
+      ],
+      [
+       "schreiben",
+       "geschrieben",
+       "Wir haben eine E-Mail geschrieben."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich habe gestern Deutsch gelernt.",
+       "ku": "دوهی من ئەلمانی خواند."
+      },
+      {
+       "de": "Was hast du am Wochenende gemacht?",
+       "ku": "تە دویماهیا هەفتیێ چ کر؟"
+      },
+      {
+       "de": "Sie hat einen Brief geschrieben.",
+       "ku": "وێ نامەیەک نڤیسی."
+      }
+     ]
+    },
+    {
+     "emoji": "✈️",
+     "title": {
+      "de": "Perfekt mit sein",
+      "ku": "دەمێ بۆری ب sein"
+     },
+     "explain": {
+      "de": "Verben der Bewegung (gehen, fahren, kommen, fliegen) und „bleiben“ bilden das Perfekt mit „sein“.",
+      "ku": "کارێن لڤینێ (gehen، fahren، kommen، fliegen) و «bleiben» دەمێ بۆری ب «sein» چێدکەن، نە ب haben."
+     },
+     "head": [
+      "Infinitiv",
+      "Partizip",
+      "Satz"
+     ],
+     "rows": [
+      [
+       "gehen",
+       "gegangen",
+       "Ich bin ins Kino gegangen."
+      ],
+      [
+       "fahren",
+       "gefahren",
+       "Wir sind nach Berlin gefahren."
+      ],
+      [
+       "kommen",
+       "gekommen",
+       "Er ist spät gekommen."
+      ],
+      [
+       "bleiben",
+       "geblieben",
+       "Sie ist zu Hause geblieben."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich bin nach Deutschland gekommen.",
+       "ku": "ئەز هاتمە ئەلمانیا."
+      },
+      {
+       "de": "Wir sind mit dem Zug gefahren.",
+       "ku": "ئەم ب شەمەندەفەرێ چووین."
+      },
+      {
+       "de": "Bist du gestern zu Hause geblieben?",
+       "ku": "ئەرێ تو دوهی ل مال مای؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "topics": [
+    {
+     "emoji": "🕰️",
+     "title": {
+      "de": "Präteritum: war, hatte",
+      "ku": "دەمێ بۆری: war، hatte"
+     },
+     "explain": {
+      "de": "Bei „sein“ und „haben“ benutzt man in der Vergangenheit meistens das Präteritum: war und hatte.",
+      "ku": "بۆ «sein» و «haben» د دەمێ بۆری دا پتریا جاران war (بوو) و hatte (هەبوو) بکاردئینین."
+     },
+     "head": [
+      "",
+      "sein",
+      "haben"
+     ],
+     "rows": [
+      [
+       "ich",
+       "war",
+       "hatte"
+      ],
+      [
+       "du",
+       "warst",
+       "hattest"
+      ],
+      [
+       "er/sie/es",
+       "war",
+       "hatte"
+      ],
+      [
+       "wir",
+       "waren",
+       "hatten"
+      ],
+      [
+       "ihr",
+       "wart",
+       "hattet"
+      ],
+      [
+       "sie/Sie",
+       "waren",
+       "hatten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich war Lehrer in Duhok.",
+       "ku": "ئەز ل دهۆکێ مامۆستا بووم."
+      },
+      {
+       "de": "Wir hatten keine Zeit.",
+       "ku": "دەمێ مە نەبوو."
+      },
+      {
+       "de": "Wo warst du gestern?",
+       "ku": "تو دوهی ل کیڤە بووی؟"
+      }
+     ]
+    },
+    {
+     "emoji": "⏳",
+     "title": {
+      "de": "vor, seit, für",
+      "ku": "vor (بەری)، seit (ژ … ڤە)، für (بۆ ماوێ)"
+     },
+     "explain": {
+      "de": "vor = Vergangenheit, fertig. seit = von früher bis jetzt. für = eine Zeitdauer (auch in der Zukunft). Nach vor und seit kommt Dativ.",
+      "ku": "vor = بەری (دەمێ بۆری، ب دوماهی هاتی). seit = ژ وی دەمی ڤە هەتا نوکە. für = بۆ ماوەیەکێ. پشتی vor و seit داتیڤ دهێت."
+     },
+     "head": [
+      "",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "vor",
+       "vor zwei Jahren"
+      ],
+      [
+       "seit",
+       "seit drei Monaten"
+      ],
+      [
+       "für",
+       "für ein Jahr"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+       "ku": "ئەز بەری دوو سالان هاتمە ئەلمانیا."
+      },
+      {
+       "de": "Ich arbeite seit drei Monaten hier.",
+       "ku": "ژ سێ هەیڤان ڤە ئەز ل ڤێرە کار دکەم."
+      },
+      {
+       "de": "Er geht für ein Jahr nach Spanien.",
+       "ku": "ئەو بۆ سالەکێ دچیتە ئیسپانیا."
+      }
+     ]
+    },
+    {
+     "emoji": "👩‍⚕️",
+     "title": {
+      "de": "Berufe: der Lehrer – die Lehrerin",
+      "ku": "پیشە: نێر و مێ"
+     },
+     "explain": {
+      "de": "Für Frauen kommt meistens -in an das Wort. Wichtig: „Ich bin Lehrerin.“ – ohne Artikel!",
+      "ku": "بۆ ئافرەتان پتریا جاران ‎-in دچیتە دوماهیا پەیڤێ. گرنگ: «Ich bin Lehrerin.» — بێ ئارتیکل!"
+     },
+     "head": [
+      "Mann",
+      "Frau"
+     ],
+     "rows": [
+      [
+       "der Lehrer",
+       "die Lehrerin"
+      ],
+      [
+       "der Arzt",
+       "die Ärztin"
+      ],
+      [
+       "der Verkäufer",
+       "die Verkäuferin"
+      ],
+      [
+       "der Koch",
+       "die Köchin"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich bin Ärztin.",
+       "ku": "ئەز دکتۆرم (ئافرەت)."
+      },
+      {
+       "de": "Mein Vater ist Koch.",
+       "ku": "بابێ من ئاشپەزە."
+      },
+      {
+       "de": "Was sind Sie von Beruf?",
+       "ku": "کارێ هەوە چییە؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "topics": [
+    {
+     "emoji": "📋",
+     "title": {
+      "de": "müssen und dürfen",
+      "ku": "müssen (دڤێت) و dürfen (دەستووری)"
+     },
+     "explain": {
+      "de": "müssen = es ist nötig. dürfen = es ist erlaubt. nicht dürfen = es ist verboten. Satzklammer: Modalverb Position 2, Infinitiv am Ende.",
+      "ku": "müssen = پێدڤییە / دڤێت. dürfen = دەستوور هەیە. nicht dürfen = قەدەغەیە. کارێ مۆدال ل جهێ دووێ، کارێ دی ل دوماهیێ."
+     },
+     "head": [
+      "",
+      "müssen",
+      "dürfen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "muss",
+       "darf"
+      ],
+      [
+       "du",
+       "musst",
+       "darfst"
+      ],
+      [
+       "er/sie/es",
+       "muss",
+       "darf"
+      ],
+      [
+       "wir",
+       "müssen",
+       "dürfen"
+      ],
+      [
+       "ihr",
+       "müsst",
+       "dürft"
+      ],
+      [
+       "sie/Sie",
+       "müssen",
+       "dürfen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich muss morgen früh aufstehen.",
+       "ku": "دڤێت ئەز سوبەهی زوو ڕابم."
+      },
+      {
+       "de": "Hier darf man nicht rauchen.",
+       "ku": "ل ڤێرە جگارە کێشان قەدەغەیە."
+      },
+      {
+       "de": "Sie müssen hier umsteigen.",
+       "ku": "دڤێت هوین ل ڤێرە پاسێ بگوهۆڕن."
+      }
+     ]
+    },
+    {
+     "emoji": "🎯",
+     "title": {
+      "de": "wollen und möchten",
+      "ku": "wollen و möchten (ڤیان)"
+     },
+     "explain": {
+      "de": "wollen = ein starker Wunsch, ein Plan. möchten = ein höflicher Wunsch.",
+      "ku": "wollen = ڤیانەکا بهێز یان پلانەک. möchten = ڤیانەکا ب ڕێز و نەرم."
+     },
+     "head": [
+      "",
+      "wollen",
+      "möchten"
+     ],
+     "rows": [
+      [
+       "ich",
+       "will",
+       "möchte"
+      ],
+      [
+       "du",
+       "willst",
+       "möchtest"
+      ],
+      [
+       "er/sie/es",
+       "will",
+       "möchte"
+      ],
+      [
+       "wir",
+       "wollen",
+       "möchten"
+      ],
+      [
+       "ihr",
+       "wollt",
+       "möchtet"
+      ],
+      [
+       "sie/Sie",
+       "wollen",
+       "möchten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich will nach Hamburg fahren.",
+       "ku": "ئەز دخوازم بچمە هامبورگێ."
+      },
+      {
+       "de": "Ich möchte eine Fahrkarte, bitte.",
+       "ku": "ئەز بلیتەکێ دخوازم، ژ کەرەما خۆ."
+      },
+      {
+       "de": "Wohin willst du reisen?",
+       "ku": "تو دخوازی بچییە کیڤە؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🚌",
+     "title": {
+      "de": "mit + Dativ: Verkehrsmittel",
+      "ku": "mit + داتیڤ: ئامرازێن هاتن و چوونێ"
+     },
+     "explain": {
+      "de": "Nach „mit“ kommt immer Dativ: mit dem Bus, mit der U-Bahn, mit dem Auto. Aber: zu Fuß.",
+      "ku": "پشتی «mit» (ب / دگەل) هەردەم داتیڤ دهێت: mit dem Bus، mit der U-Bahn، mit dem Auto. بەلێ: zu Fuß (ب پێیان)."
+     },
+     "head": [
+      "Nominativ",
+      "mit + Dativ"
+     ],
+     "rows": [
+      [
+       "der Bus",
+       "mit dem Bus"
+      ],
+      [
+       "das Auto",
+       "mit dem Auto"
+      ],
+      [
+       "die U-Bahn",
+       "mit der U-Bahn"
+      ],
+      [
+       "das Fahrrad",
+       "mit dem Fahrrad"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich fahre mit dem Bus zur Arbeit.",
+       "ku": "ئەز ب پاسێ دچمە کاری."
+      },
+      {
+       "de": "Wir fahren mit dem Zug nach Köln.",
+       "ku": "ئەم ب شەمەندەفەرێ دچینە کۆلن."
+      },
+      {
+       "de": "Er geht zu Fuß.",
+       "ku": "ئەو ب پێیان دچیت."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "topics": [
+    {
+     "emoji": "🤒",
+     "title": {
+      "de": "sein, ihr, unser, euer",
+      "ku": "یێ وی، یێ وێ، یێ مە، یێ هەوە"
+     },
+     "explain": {
+      "de": "Possessivartikel für alle Personen: er → sein, sie → ihr, wir → unser, ihr → euer, sie/Sie → ihr/Ihr. Bei die: +e (seine, ihre …).",
+      "ku": "بۆ هەمی کەسان: er ← sein (یێ وی)، sie ← ihr (یێ وێ)، wir ← unser (یێ مە)، ihr ← euer (یێ هەوە)، sie/Sie ← ihr/Ihr. د گەل die: ‎+e (seine، ihre…)."
+     },
+     "head": [
+      "",
+      "der Kopf",
+      "die Hand",
+      "das Bein"
+     ],
+     "rows": [
+      [
+       "er",
+       "sein Kopf",
+       "seine Hand",
+       "sein Bein"
+      ],
+      [
+       "sie",
+       "ihr Kopf",
+       "ihre Hand",
+       "ihr Bein"
+      ],
+      [
+       "wir",
+       "unser Kopf",
+       "unsere Hand",
+       "unser Bein"
+      ],
+      [
+       "ihr",
+       "euer Kopf",
+       "eure Hand",
+       "euer Bein"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Sein Kopf tut weh.",
+       "ku": "سەرێ وی دئێشیت."
+      },
+      {
+       "de": "Ihre Hand tut weh.",
+       "ku": "دەستێ وێ دئێشیت."
+      },
+      {
+       "de": "Unser Kind ist krank.",
+       "ku": "زارۆکێ مە یێ نەساخە."
+      }
+     ]
+    },
+    {
+     "emoji": "📢",
+     "title": {
+      "de": "Imperativ",
+      "ku": "فەرمان (Imperativ)"
+     },
+     "explain": {
+      "de": "Mit dem Imperativ gibt man Tipps oder Anweisungen. Sie-Form: Verb + Sie. du-Form: ohne du und ohne -st.",
+      "ku": "ب فەرمانێ ئامۆژگاری و ڕێنمایی ددەین. ب ڕێز: کار + Sie. بۆ du: بێ «du» و بێ ‎-st."
+     },
+     "head": [
+      "Infinitiv",
+      "Sie",
+      "du",
+      "ihr"
+     ],
+     "rows": [
+      [
+       "trinken",
+       "Trinken Sie!",
+       "Trink!",
+       "Trinkt!"
+      ],
+      [
+       "nehmen",
+       "Nehmen Sie!",
+       "Nimm!",
+       "Nehmt!"
+      ],
+      [
+       "bleiben",
+       "Bleiben Sie!",
+       "Bleib!",
+       "Bleibt!"
+      ],
+      [
+       "sein",
+       "Seien Sie!",
+       "Sei!",
+       "Seid!"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Trinken Sie viel Wasser!",
+       "ku": "گەلەک ئاڤێ ڤەخۆن!"
+      },
+      {
+       "de": "Bleib heute im Bett!",
+       "ku": "ئەڤرۆ د جهێ خۆ دا بمینە!"
+      },
+      {
+       "de": "Nimm die Tabletten!",
+       "ku": "حەبان بخۆ!"
+      }
+     ]
+    },
+    {
+     "emoji": "🩺",
+     "title": {
+      "de": "Modalverb sollen",
+      "ku": "کارێ sollen (پێدڤیە / دڤێت)"
+     },
+     "explain": {
+      "de": "„sollen“ sagt: Eine andere Person (zum Beispiel der Arzt) sagt, was ich machen muss.",
+      "ku": "«sollen» دبێژیت: کەسەکێ دی (بۆ نموونە دکتۆر) دبێژیت کا من چ پێدڤییە بکەم."
+     },
+     "head": [
+      "",
+      "sollen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "soll"
+      ],
+      [
+       "du",
+       "sollst"
+      ],
+      [
+       "er/sie/es",
+       "soll"
+      ],
+      [
+       "wir",
+       "sollen"
+      ],
+      [
+       "ihr",
+       "sollt"
+      ],
+      [
+       "sie/Sie",
+       "sollen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Der Arzt sagt, ich soll im Bett bleiben.",
+       "ku": "دکتۆر دبێژیت دڤێت ئەز د جهێ خۆ دا بمینم."
+      },
+      {
+       "de": "Du sollst mehr Obst essen.",
+       "ku": "دڤێت تو پتر مێوە بخۆی."
+      },
+      {
+       "de": "Soll ich morgen wiederkommen?",
+       "ku": "ئەرێ دڤێت ئەز سوبەهی دووبارە بێم؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "topics": [
+    {
+     "emoji": "📍",
+     "title": {
+      "de": "Wo? Präposition + Dativ",
+      "ku": "ل کیڤە؟ ئامراز + داتیڤ"
+     },
+     "explain": {
+      "de": "Auf die Frage „Wo?“ antworten wir mit Präposition + Dativ: in, an, auf, neben, vor, hinter, über, unter, zwischen.",
+      "ku": "بۆ پرسیارا «Wo?» (ل کیڤە؟) ئامراز + داتیڤ بکاردئینین: in (د … دا)، an (ل تەنیشت/ل سەر دیواری)، auf (ل سەر)، neben (ل تەنیشت)، vor (ل بەر)، hinter (ل پشت)، über (ل سەر/ل ژۆر)، unter (ل بن)، zwischen (د ناڤبەرا)."
+     },
+     "head": [
+      "Präposition",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "neben",
+       "neben der Bank"
+      ],
+      [
+       "vor",
+       "vor dem Bahnhof"
+      ],
+      [
+       "hinter",
+       "hinter dem Hotel"
+      ],
+      [
+       "zwischen",
+       "zwischen der Post und dem Café"
+      ],
+      [
+       "in",
+       "im Park (in dem)"
+      ],
+      [
+       "an",
+       "an der Ampel"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Café ist neben der Bank.",
+       "ku": "کافێ ل تەنیشت بانکێ یە."
+      },
+      {
+       "de": "Ich warte vor dem Bahnhof.",
+       "ku": "ئەز ل بەر وێستگەهێ چاڤەڕێ دکەم."
+      },
+      {
+       "de": "Die Apotheke ist zwischen der Post und dem Supermarkt.",
+       "ku": "دەرمانخانە د ناڤبەرا پۆستێ و سوپەرمارکێتێ دا یە."
+      }
+     ]
+    },
+    {
+     "emoji": "🔁",
+     "title": {
+      "de": "Dativ: dem, der, dem",
+      "ku": "داتیڤ: dem، der، dem"
+     },
+     "explain": {
+      "de": "Im Dativ ändern sich alle Artikel: der → dem, die → der, das → dem, Plural die → den (+n).",
+      "ku": "د داتیڤێ دا هەمی ئارتیکل دگوهۆڕن: der ← dem، die ← der، das ← dem، کۆ die ← den (+n)."
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Nominativ",
+       "der / ein",
+       "das / ein",
+       "die / eine",
+       "die"
+      ],
+      [
+       "Dativ",
+       "dem / einem",
+       "dem / einem",
+       "der / einer",
+       "den …n"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich wohne bei einer Familie.",
+       "ku": "ئەز ل دەڤ مالباتەکێ دژیم."
+      },
+      {
+       "de": "Das Auto steht vor dem Haus.",
+       "ku": "ترومبێل ل بەر خانی یە."
+      },
+      {
+       "de": "Er spielt mit den Kindern.",
+       "ku": "ئەو دگەل زارۆکان یاری دکەت."
+      }
+     ]
+    },
+    {
+     "emoji": "🧭",
+     "title": {
+      "de": "Wohin? zu und nach",
+      "ku": "بۆ کیڤە؟ zu و nach"
+     },
+     "explain": {
+      "de": "Zu Personen und Orten in der Stadt: zu + Dativ (zum = zu dem, zur = zu der). Zu Städten und Ländern: nach.",
+      "ku": "بۆ کەسان و جهێن د باژێڕی دا: zu + داتیڤ (zum = zu dem، zur = zu der). بۆ باژێڕ و وەلاتان: nach."
+     },
+     "head": [
+      "",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "zum",
+       "zum Arzt, zum Bahnhof"
+      ],
+      [
+       "zur",
+       "zur Post, zur Bank"
+      ],
+      [
+       "nach",
+       "nach Berlin, nach Hause"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich gehe zum Arzt.",
+       "ku": "ئەز دچمە دەڤ دکتۆری."
+      },
+      {
+       "de": "Wie komme ich zur Post?",
+       "ku": "ئەز چەوا بگەهمە پۆستێ؟"
+      },
+      {
+       "de": "Wir fahren nach Hause.",
+       "ku": "ئەم دچینە مال."
+      }
+     ],
+     "tip": {
+      "de": "Wo? → bei / in / an. Wohin? → zu / nach.",
+      "ku": "Wo? (ل کیڤە) ← bei / in / an. Wohin? (بۆ کیڤە) ← zu / nach."
+     }
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "topics": [
+    {
+     "emoji": "🙏",
+     "title": {
+      "de": "Höfliche Bitten: könnten, würden",
+      "ku": "داخوازیا ب ڕێز: könnten، würden"
+     },
+     "explain": {
+      "de": "Höflich fragen: Könnten Sie …? / Würden Sie bitte …? Das Verb am Ende steht im Infinitiv.",
+      "ku": "بۆ داخوازیەکا ب ڕێز: Könnten Sie …? (هوین دشێن…؟) / Würden Sie bitte …? کارێ دی د دوماهیێ دا ب شێوێ Infinitiv دهێت."
+     },
+     "head": [
+      "",
+      "Satz"
+     ],
+     "rows": [
+      [
+       "könnten",
+       "Könnten Sie mir helfen?"
+      ],
+      [
+       "würden",
+       "Würden Sie bitte langsam sprechen?"
+      ],
+      [
+       "hätte gern",
+       "Ich hätte gern eine Auskunft."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Könnten Sie mir bitte helfen?",
+       "ku": "هوین دشێن هاریکاریا من بکەن، ژ کەرەما خۆ؟"
+      },
+      {
+       "de": "Würden Sie das bitte wiederholen?",
+       "ku": "هوین دشێن ڤێ دووبارە بکەن، ژ کەرەما خۆ؟"
+      },
+      {
+       "de": "Ich hätte gern einen Termin.",
+       "ku": "ئەز ژڤانەکێ دخوازم."
+      }
+     ]
+    },
+    {
+     "emoji": "📆",
+     "title": {
+      "de": "vor, nach, bei, in, bis, ab",
+      "ku": "ئامرازێن دەمی"
+     },
+     "explain": {
+      "de": "vor, nach, bei, in + Dativ: nach dem Essen, in einer Woche. „bis“ = Ende, „ab“ = Anfang.",
+      "ku": "vor (بەری)، nach (پشتی)، bei (دەمێ)، in (پشتی ماوەیەکێ) + داتیڤ. «bis» = هەتا (دوماهی)، «ab» = ژ … ڤە (دەستپێک)."
+     },
+     "head": [
+      "",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "nach",
+       "nach dem Essen"
+      ],
+      [
+       "vor",
+       "vor der Arbeit"
+      ],
+      [
+       "in",
+       "in einer Woche"
+      ],
+      [
+       "bei",
+       "beim Frühstück"
+      ],
+      [
+       "bis",
+       "bis Freitag"
+      ],
+      [
+       "ab",
+       "ab Montag"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Der Techniker kommt in einer Woche.",
+       "ku": "تەکنیکی پشتی هەفتیەکێ دێ هێت."
+      },
+      {
+       "de": "Das Geschäft ist bis 20 Uhr offen.",
+       "ku": "دوکان هەتا دەمژمێر بیستێ یا ڤەکرییە."
+      },
+      {
+       "de": "Nach der Arbeit gehe ich einkaufen.",
+       "ku": "پشتی کاری ئەز دچمە بازاڕێ."
+      }
+     ]
+    },
+    {
+     "emoji": "🙋",
+     "title": {
+      "de": "mir, dir, Ihnen",
+      "ku": "mir، dir، Ihnen (بۆ من، بۆ تە، بۆ هەوە)"
+     },
+     "explain": {
+      "de": "Personalpronomen im Dativ: ich → mir, du → dir, er → ihm, sie → ihr, Sie → Ihnen.",
+      "ku": "جێناڤ د داتیڤێ دا: ich ← mir، du ← dir، er ← ihm، sie ← ihr، wir ← uns، Sie ← Ihnen."
+     },
+     "head": [
+      "Nominativ",
+      "Dativ"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mir"
+      ],
+      [
+       "du",
+       "dir"
+      ],
+      [
+       "er / es",
+       "ihm"
+      ],
+      [
+       "sie",
+       "ihr"
+      ],
+      [
+       "wir",
+       "uns"
+      ],
+      [
+       "ihr",
+       "euch"
+      ],
+      [
+       "sie / Sie",
+       "ihnen / Ihnen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Können Sie mir helfen?",
+       "ku": "هوین دشێن هاریکاریا من بکەن؟"
+      },
+      {
+       "de": "Ich danke Ihnen.",
+       "ku": "ئەز سوپاسیا هەوە دکەم."
+      },
+      {
+       "de": "Wie geht es dir?",
+       "ku": "تو چەوانی؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "topics": [
+    {
+     "emoji": "👗",
+     "title": {
+      "de": "welch- und dies-",
+      "ku": "کیژ؟ و ئەڤە"
+     },
+     "explain": {
+      "de": "„welch-“ fragt, „dies-“ zeigt. Die Endung ist wie beim Artikel: der → welcher/dieser, die → welche/diese, das → welches/dieses.",
+      "ku": "«welch-» پرسیار دکەت (کیژ؟)، «dies-» نیشان ددەت (ئەڤە). دوماهی وەکی ئارتیکلی یە: der ← welcher/dieser، die ← welche/diese، das ← welches/dieses."
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Frage",
+       "welcher Rock?",
+       "welches Hemd?",
+       "welche Hose?",
+       "welche Schuhe?"
+      ],
+      [
+       "Antwort",
+       "dieser Rock",
+       "dieses Hemd",
+       "diese Hose",
+       "diese Schuhe"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Welche Jacke gefällt dir? – Diese hier.",
+       "ku": "کیژ جاکێت تە دلچوون؟ – ئەڤە."
+      },
+      {
+       "de": "Welcher Pullover ist billiger?",
+       "ku": "کیژ بلووز هەرزانترە؟"
+      },
+      {
+       "de": "Dieses Kleid ist sehr schön.",
+       "ku": "ئەڤ کراسە گەلەک یێ جوانە."
+      }
+     ]
+    },
+    {
+     "emoji": "📈",
+     "title": {
+      "de": "Komparativ und Superlativ",
+      "ku": "بەراوردکرن: -er و am -sten"
+     },
+     "explain": {
+      "de": "Vergleichen: Adjektiv + -er + als. Das Beste: am + Adjektiv + -sten. Unregelmäßig: gut – besser – am besten, gern – lieber – am liebsten, viel – mehr – am meisten.",
+      "ku": "بۆ بەراوردکرنێ: هەڤاڵناڤ + ‎-er + als (ژ). بۆ یێ هەرە باش: am + هەڤاڵناڤ + ‎-sten. نە ل سەر یاسایێ: gut – besser – am besten، gern – lieber – am liebsten، viel – mehr – am meisten."
+     },
+     "head": [
+      "",
+      "Komparativ",
+      "Superlativ"
+     ],
+     "rows": [
+      [
+       "billig",
+       "billiger",
+       "am billigsten"
+      ],
+      [
+       "schön",
+       "schöner",
+       "am schönsten"
+      ],
+      [
+       "gut",
+       "besser",
+       "am besten"
+      ],
+      [
+       "gern",
+       "lieber",
+       "am liebsten"
+      ],
+      [
+       "viel",
+       "mehr",
+       "am meisten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Hose ist billiger als der Rock.",
+       "ku": "پانتۆڵ ژ تەنوورێ هەرزانترە."
+      },
+      {
+       "de": "Ich trage lieber Jeans.",
+       "ku": "ئەز پتر حەز ژ جینزی دکەم."
+      },
+      {
+       "de": "Dieser Mantel gefällt mir am besten.",
+       "ku": "ئەڤ قاپوتە ژ هەمییان پتر من دلچوویێ."
+      }
+     ]
+    },
+    {
+     "emoji": "👍",
+     "title": {
+      "de": "Verben mit Dativ",
+      "ku": "کارێن داتیڤی"
+     },
+     "explain": {
+      "de": "Einige Verben haben ein Dativ-Objekt: gefallen, passen, stehen, gehören, helfen, danken.",
+      "ku": "هندەک کار بەرکارێ داتیڤ دخوازن: gefallen (دلچوون)، passen (ب قەدەر بوون)، stehen (لێهاتن)، gehören (یێ کەسەکی بوون)، helfen، danken."
+     },
+     "head": [
+      "Verb",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "gefallen",
+       "Die Hose gefällt mir."
+      ],
+      [
+       "passen",
+       "Der Rock passt mir nicht."
+      ],
+      [
+       "stehen",
+       "Die Farbe steht dir gut."
+      ],
+      [
+       "gehören",
+       "Die Tasche gehört ihr."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Kleid gefällt mir sehr.",
+       "ku": "ئەڤ کراسە گەلەک من دلچوویێ."
+      },
+      {
+       "de": "Die Schuhe passen mir nicht.",
+       "ku": "پێڵاڤ ب قەدەرێ من نینن."
+      },
+      {
+       "de": "Blau steht dir gut.",
+       "ku": "ڕەنگێ شین باش ل تە دهێت."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "topics": [
+    {
+     "emoji": "🎂",
+     "title": {
+      "de": "Ordinalzahlen und Datum",
+      "ku": "ژمارێن ڕێزبەندی و رێکەفت"
+     },
+     "explain": {
+      "de": "Das Datum sagt man mit Ordinalzahlen. 1–19: -te (der zweite), ab 20: -ste (der zwanzigste). Wann? → am …ten.",
+      "ku": "رێکەفت ب ژمارێن ڕێزبەندی دهێتە گۆتن. ١–١٩: ‎-te (der zweite)، ژ ٢٠ ڤە: ‎-ste (der zwanzigste). کەنگی؟ ← am …ten."
+     },
+     "head": [
+      "",
+      "Was ist heute?",
+      "Wann?"
+     ],
+     "rows": [
+      [
+       "1.",
+       "der erste",
+       "am ersten"
+      ],
+      [
+       "2.",
+       "der zweite",
+       "am zweiten"
+      ],
+      [
+       "3.",
+       "der dritte",
+       "am dritten"
+      ],
+      [
+       "7.",
+       "der siebte",
+       "am siebten"
+      ],
+      [
+       "20.",
+       "der zwanzigste",
+       "am zwanzigsten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Heute ist der erste Mai.",
+       "ku": "ئەڤرۆ ئێکێ گولانێ یە."
+      },
+      {
+       "de": "Ich habe am zwölften Juni Geburtstag.",
+       "ku": "رۆژبوونا من د دوازدێ حوزەیرانێ دا یە."
+      },
+      {
+       "de": "Wann ist die Hochzeit? – Am dritten Oktober.",
+       "ku": "داوەت کەنگییە؟ – سێیێ چریا ئێکێ."
+      }
+     ],
+     "tip": {
+      "de": "Unregelmäßig: erste, dritte, siebte.",
+      "ku": "نە ل سەر یاسایێ: erste، dritte، siebte."
+     }
+    },
+    {
+     "emoji": "💌",
+     "title": {
+      "de": "mich, dich, ihn …",
+      "ku": "mich، dich، ihn (من، تە، وی)"
+     },
+     "explain": {
+      "de": "Personalpronomen im Akkusativ: ich → mich, du → dich, er → ihn, sie → sie, es → es, wir → uns, ihr → euch, Sie → Sie.",
+      "ku": "جێناڤ د ئاکوزاتیڤێ دا: ich ← mich، du ← dich، er ← ihn، sie ← sie، es ← es، wir ← uns، ihr ← euch، Sie ← Sie."
+     },
+     "head": [
+      "Nominativ",
+      "Akkusativ",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "Besuchst du mich?"
+      ],
+      [
+       "du",
+       "dich",
+       "Ich lade dich ein."
+      ],
+      [
+       "er",
+       "ihn",
+       "Ich rufe ihn an."
+      ],
+      [
+       "sie",
+       "sie",
+       "Wir besuchen sie."
+      ],
+      [
+       "wir",
+       "uns",
+       "Er besucht uns."
+      ],
+      [
+       "ihr",
+       "euch",
+       "Ich lade euch ein."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich lade dich zu meiner Party ein.",
+       "ku": "ئەز تە بۆ ئاهەنگا خۆ داخواز دکەم."
+      },
+      {
+       "de": "Kennst du ihn?",
+       "ku": "ئەرێ تو وی دناسی؟"
+      },
+      {
+       "de": "Wir besuchen euch am Sonntag.",
+       "ku": "ئەم رۆژا یەکشەمبیێ دێ سەرا هەوە دەین."
+      }
+     ]
+    },
+    {
+     "emoji": "🎁",
+     "title": {
+      "de": "für und ohne + Akkusativ",
+      "ku": "für (بۆ) و ohne (بێ) + ئاکوزاتیڤ"
+     },
+     "explain": {
+      "de": "Nach „für“ und „ohne“ kommt immer Akkusativ: für dich, für meinen Vater, ohne meinen Mann.",
+      "ku": "پشتی «für» (بۆ) و «ohne» (بێ) هەردەم ئاکوزاتیڤ دهێت: für dich، für meinen Vater، ohne meinen Mann."
+     },
+     "head": [
+      "",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "für",
+       "für dich, für meinen Bruder"
+      ],
+      [
+       "ohne",
+       "ohne dich, ohne meinen Mann"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Geschenk ist für dich.",
+       "ku": "ئەڤ دیارییە بۆ تە یە."
+      },
+      {
+       "de": "Ich komme ohne meinen Mann.",
+       "ku": "ئەز بێ مێرێ خۆ دێ هێم."
+      },
+      {
+       "de": "Der Kuchen ist für meine Mutter.",
+       "ku": "کێک بۆ دایکا منە."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

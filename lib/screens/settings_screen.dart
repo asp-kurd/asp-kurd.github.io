@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/sfx.dart';
@@ -49,6 +50,57 @@ class _SettingsScreenState extends State<SettingsScreen> {
         AppLanguage.english => 'Hello! How are you today?',
         _ => 'Hallo! Wie geht es dir heute?',
       };
+
+  /// 🎙️ نموونەیەک ژ وانەیان کو دەنگێ AI هەی
+  void _playAiSample() {
+    for (final c in allConcepts) {
+      final t = c.text(ttsLang);
+      if (t.contains(' ') && v.hasAi(t, ttsLang)) {
+        v.speakText(t, ttsLang);
+        return;
+      }
+    }
+    v.speakText(_sample, ttsLang);
+  }
+
+  /// 👨 دەنگێ زەلامی · 👩 دەنگێ ئافرەتی (دەنگێ AI یێ وانەیان)
+  Widget _aiVoicePicker(AppLanguage n) {
+    Widget opt(String g, String emoji, String label) {
+      final sel = v.aiGender == g;
+      final ok = v.hasGender(ttsLang, g);
+      return Expanded(
+        child: GestureDetector(
+          onTap: () async {
+            await v.setAiGender(g);
+            setState(() {});
+            _playAiSample();
+          },
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 180),
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            decoration: BoxDecoration(
+              color: sel ? AppColors.blue.withValues(alpha: 0.15) : AppColors.card,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: sel ? AppColors.blue : AppColors.fg12, width: sel ? 2.5 : 1.5),
+            ),
+            child: Column(children: [
+              Text(emoji, style: const TextStyle(fontSize: 34)),
+              const SizedBox(height: 4),
+              Text(label, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.blue : AppColors.fg)),
+              if (!ok)
+                Text(tr(n, 'زوو دێ هێت', 'bald verfügbar', 'coming soon'), style: TextStyle(fontSize: 11, color: AppColors.fg54)),
+            ]),
+          ),
+        ),
+      );
+    }
+
+    return Row(children: [
+      opt('m', '👨', tr(n, 'دەنگێ زەلامی', 'Männerstimme', 'Male voice')),
+      const SizedBox(width: 10),
+      opt('f', '👩', tr(n, 'دەنگێ ئافرەتی', 'Frauenstimme', 'Female voice')),
+    ]);
+  }
 
   /// 🌙 تاری · ☀️ رۆهن · 📱 وەکی مۆبایلێ
   Widget _themePicker(AppLanguage n) {
@@ -116,7 +168,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   tr(n, 'د «پەیڤێ بنڤیسە» دا پەیڤ ب کالی دیار دبیت', 'Zeigt das Wort blass beim Tippen', 'Show the word pale while typing'),
                   p.paleLetters, p.setPaleLetters),
               const SizedBox(height: 18),
-              _header(tr(n, 'دەنگێ ئاخفتنێ (زەلال)', 'Sprachausgabe', 'Speech voice')),
+              _header(tr(n, '🎙️ دەنگێ مامۆستای', '🎙️ Stimme der Lektionen', '🎙️ Lesson voice')),
+              _aiVoicePicker(n),
+              const SizedBox(height: 6),
+              Text(
+                  tr(n, 'د دیالۆگان دا ئافرەت هەردەم ب دەنگێ ئافرەتی و زەلام ب دەنگێ زەلامی دئاخڤن.',
+                      'In Dialogen sprechen Frauen immer mit Frauen- und Männer mit Männerstimme.',
+                      'In dialogs, women always speak with a female voice and men with a male voice.'),
+                  style: TextStyle(color: AppColors.fg54, fontSize: 13)),
+              const SizedBox(height: 18),
+              _header(tr(n, 'دەنگێ مۆبایلێ (ئەگەر دەنگێ AI نەبیت)', 'Gerätestimme (Ersatz)', 'Device voice (fallback)')),
               Text(
                   tr(n, 'لەزا دەنگی', 'Sprechtempo', 'Speaking speed'),
                   style: TextStyle(color: AppColors.fg70)),

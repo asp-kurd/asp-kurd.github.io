@@ -9,6 +9,7 @@ import 'services/backend.dart';
 import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web.dart';
 import 'services/updater_stub.dart' if (dart.library.js_interop) 'services/updater_web.dart';
 import 'screens/character_screen.dart';
+import 'screens/grammar_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/onboarding_screen.dart';
@@ -96,6 +97,8 @@ class ZimanProApp extends StatelessWidget {
     return switch (d) {
       'mascot' => const MascotDemo(),
       'pick' => const CharacterPickerScreen(),
+      'grammar' => const GrammarLektionScreen(n: 6),
+      'grammarlist' => const GrammarListScreen(),
       'home' => const HomeScreen(),
       'summary' => const SummaryListScreen(),
       'streak' => const StreakScreen(from: 3, to: 4),

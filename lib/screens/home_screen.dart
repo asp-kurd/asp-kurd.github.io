@@ -9,6 +9,7 @@ import 'account_screens.dart';
 import 'book_screen.dart';
 import 'character_screen.dart';
 import 'course_screens.dart';
+import 'grammar_screen.dart';
 import 'streak_screen.dart';
 import 'widgets/combo.dart' show kuNum;
 import 'games/game_session.dart';
@@ -319,15 +320,25 @@ class _LearnPath extends StatelessWidget {
           Text(lek.titleDe, textDirection: TextDirection.ltr, textAlign: TextAlign.end,
               style: TextStyle(color: AppColors.fg60, fontSize: 13)),
           const SizedBox(height: 10),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton.icon(
-              style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
-              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
-              icon: const Text('💬'),
-              label: Text(tr(n, 'دیالۆگا ڤێ وانێ', 'Dialog', 'Dialogue')),
+          Row(children: [
+            Expanded(
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
+                icon: const Text('💬'),
+                label: Text(tr(n, 'دیالۆگ', 'Dialog', 'Dialogue')),
+              ),
             ),
-          ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => GrammarLektionScreen(n: lek.n))),
+                icon: const Text('📘'),
+                label: Text(tr(n, 'رێزمان', 'Grammatik', 'Grammar')),
+              ),
+            ),
+          ]),
         ]),
       );
     });

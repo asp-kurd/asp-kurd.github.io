@@ -14,14 +14,18 @@ from pathlib import Path
 ROOT = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 OUT = ROOT / "assets" / "tts"
 MODELS = Path(os.environ.get("PIPER_DIR", "/tmp/piper"))
-# (مۆدێل، length_scale) — length_scale > 1 = هێدیتر و ئاشکەراتر بۆ فێرخوازان
+# ([مۆدێل، جهگر…], length_scale) — length_scale > 1 = هێدیتر و ئاشکەراتر بۆ فێرخوازان
+# فۆلدەر: de = 👨 (thorsten)، de_f = 👩؛ en = 👩 (lessac)، en_m = 👨
 PIPER = {
-    "de": ("de/de_DE/thorsten/high/de_DE-thorsten-high", 1.22),
-    "en": ("en/en_US/lessac/high/en_US-lessac-high", 1.15),
+    "de": (["de/de_DE/thorsten/high/de_DE-thorsten-high"], 1.22),
+    "de_f": (["de/de_DE/kerstin/low/de_DE-kerstin-low", "de/de_DE/ramona/low/de_DE-ramona-low"], 1.18),
+    "en": (["en/en_US/lessac/high/en_US-lessac-high"], 1.15),
+    "en_m": (["en/en_US/ryan/high/en_US-ryan-high", "en/en_US/joe/medium/en_US-joe-medium"], 1.15),
 }
-MMS_RATE = 0.85  # بادینی: هێدیتر
-# دەمێ شێوازێ دەنگی دگوهۆڕیت، ڤێ ژمارێ زێدە بکە دا هەمی دەنگ ژ نوو بهێنە دروستکرن
-VOICE_VERSION = "2-slow-clear"
+SAME_TEXT = {"de_f": "de", "en_m": "en"}  # هەمان دەق، دەنگەکێ دی
+MMS_RATE = 0.72  # بادینی: هێدیتر و ئارامتر
+# دەمێ شێوازێ دەنگی دگوهۆڕیت، ڤێ ژمارێ زێدە بکە دا هەمی دەنگ ژ نوو بهێنە دروستکرن (بۆ هەر فۆلدەرەکی ب جودا)
+VOICE_VERSION = {"de": "2-slow-clear", "en": "2-slow-clear", "ku": "3-slower", "de_f": "1", "en_m": "1"}
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 
 
@@ -66,6 +70,12 @@ def collect():
         for c in json.loads(summ.read_text(encoding="utf-8"))["cards"]:
             for e in c["examples"]:
                 jobs["de"][e["de"]] = e["de"]
+    gram = ROOT / "assets/grammar.json"
+    if gram.exists():  # 📘 رێزمان ل دویف وانێ: نموونە
+        for l in json.loads(gram.read_text(encoding="utf-8"))["lektionen"]:
+            for t in l["topics"]:
+                for e in t["examples"]:
+                    jobs["de"][e["de"]] = e["de"]
     book = ROOT / "assets/book.json"
     if book.exists():
         def walk(o):
@@ -78,6 +88,8 @@ def collect():
                 for v in o:
                     walk(v)
         walk(json.loads(book.read_text(encoding="utf-8")))
+    for k, src in SAME_TEXT.items():
+        jobs[k] = dict(jobs[src])
     return jobs
 
 
@@ -97,14 +109,22 @@ def to_mp3(wav_path: str, dst: Path):
 
 def piper_voice(lang):
     from piper import PiperVoice  # noqa
-    name, _ = PIPER[lang]
+    names, _ = PIPER[lang]
     MODELS.mkdir(parents=True, exist_ok=True)
-    onnx = MODELS / (Path(name).name + ".onnx")
-    for ext in (".onnx", ".onnx.json"):
-        p = MODELS / (Path(name).name + ext)
-        if not p.exists():
-            subprocess.run(["curl", "-sSfL", "-o", str(p), HF + name + ext], check=True)
-    return PiperVoice.load(str(onnx))
+    for name in names:  # ئەگەر مۆدێلەک نەبیت، یێ دی تاقی بکە
+        onnx = MODELS / (Path(name).name + ".onnx")
+        try:
+            for ext in (".onnx", ".onnx.json"):
+                p = MODELS / (Path(name).name + ext)
+                if not p.exists():
+                    subprocess.run(["curl", "-sSfL", "-o", str(p), HF + name + ext], check=True)
+            print(f"[{lang}] model {Path(name).name}", flush=True)
+            return PiperVoice.load(str(onnx))
+        except Exception as e:
+            print(f"[{lang}] ! {name}: {e}", flush=True)
+            for ext in (".onnx", ".onnx.json"):
+                (MODELS / (Path(name).name + ext)).unlink(missing_ok=True)
+    raise RuntimeError(f"no model for {lang}")
 
 
 def piper_say(voice, text, wav_path, length_scale=1.0):
@@ -145,7 +165,7 @@ def main():
     total_new = 0
     for lang in only:
         vfile = OUT / lang / ".version"
-        if not vfile.exists() or vfile.read_text().strip() != VOICE_VERSION:
+        if not vfile.exists() or vfile.read_text().strip() != VOICE_VERSION[lang]:
             # شێوازێ دەنگی هاتە گوهۆڕین ➔ هەمی فایلێن کەڤن ژێببە
             removed = 0
             for f in (OUT / lang).glob("*.mp3"):
@@ -172,7 +192,7 @@ def main():
             if i % 50 == 0:
                 print(f"  {lang} {i}/{len(todo)}", flush=True)
         (OUT / lang).mkdir(parents=True, exist_ok=True)
-        vfile.write_text(VOICE_VERSION)
+        vfile.write_text(VOICE_VERSION[lang])
     print(f"done: {total_new} new files")
 
 

@@ -9,6 +9,8 @@ on:
       - assets/curriculum.json
       - assets/exams.json
       - assets/book.json
+      - assets/a1_summary.json
+      - assets/grammar.json
       - voice_lab/make_ai_voices.py
       - .github/workflows/voices.yml
   workflow_dispatch:
@@ -42,6 +44,12 @@ jobs:
       - name: Generate German + English (Piper)
         env:
           LANGS: de,en
+        run: python voice_lab/make_ai_voices.py .
+
+      - name: Generate female German + male English (Piper)
+        continue-on-error: true
+        env:
+          LANGS: de_f,en_m
         run: python voice_lab/make_ai_voices.py .
 
       - name: Generate Badini (MMS)
