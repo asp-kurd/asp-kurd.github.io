@@ -68,6 +68,10 @@ Future<void> main() async {
   }
   if (Uri.base.queryParameters['demo'] != null) await A1Summary.load();
   // ?theme=light|dark — بۆ تاقیکرنێ
+  // ?target=en — بۆ تاقیکرنا رێکا ئینگلیزی
+  if (Uri.base.queryParameters['demo'] != null && Uri.base.queryParameters['target'] == 'en') {
+    ProgressService.instance.targetLang = AppLanguage.english;
+  }
   final qt = Uri.base.queryParameters['theme'];
   if (qt == 'light' || qt == 'dark') AppColors.dark = qt == 'dark';
   runApp(const ZimanProApp());

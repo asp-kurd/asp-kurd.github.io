@@ -50,6 +50,35 @@ class ProfileScreen extends StatelessWidget {
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen())),
             ),
             const SizedBox(height: 12),
+            // 🌍 زمانێن دی — زوو
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [AppColors.blue.withValues(alpha: 0.18), AppColors.green.withValues(alpha: 0.18)]),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: AppColors.blue.withValues(alpha: 0.5)),
+              ),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const Row(children: [
+                  Text('🌍', style: TextStyle(fontSize: 26)),
+                  SizedBox(width: 10),
+                  Expanded(child: Text('زمانێن دی ژی دێ زوو بەردەست بن!', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900))),
+                ]),
+                const SizedBox(height: 6),
+                Text('نوکە: 🇩🇪 ئەلمانی و 🇬🇧 ئینگلیزی. ل نێزیک: زمانێن دی ب هەمان رێک — ب کوردیا بادینی.',
+                    style: TextStyle(color: AppColors.fg70, height: 1.5)),
+                const SizedBox(height: 10),
+                Wrap(spacing: 8, runSpacing: 8, children: [
+                  for (final l in const ['🇫🇷 Français', '🇹🇷 Türkçe', '🇸🇦 العربية', '🇪🇸 Español', '🇳🇱 Nederlands', '🇸🇪 Svenska'])
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(20)),
+                      child: Text('$l · زوو', style: TextStyle(fontSize: 13, color: AppColors.fg70)),
+                    ),
+                ]),
+              ]),
+            ),
+            const SizedBox(height: 12),
             const AccountCard(),
             const SizedBox(height: 12),
             const NotifyCard(),

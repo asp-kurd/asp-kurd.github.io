@@ -125,6 +125,10 @@ class _BookScreenState extends State<BookScreen> {
       child: ListenableBuilder(
         listenable: bp,
         builder: (context, _) {
+          // 🇬🇧 بۆ ئینگلیزی: رێزمانا ئینگلیزی (پەرتووک و پوختە یێن ئەلمانینە)
+          if (ProgressService.instance.targetLang == AppLanguage.english) {
+            return const GrammarListScreen(embedded: true);
+          }
           if (bookChapters.isEmpty) {
             return SafeArea(
               child: ListView(padding: const EdgeInsets.fromLTRB(16, 12, 16, 40), children: [

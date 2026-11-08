@@ -230,14 +230,15 @@ class _LearnPath extends StatelessWidget {
           ),
         _practiceCard(context, p),
         const SizedBox(height: 8),
-        _examCards(context, p),
-        const SizedBox(height: 12),
+        // 🇩🇪 تاقیکرنا ئاستی و ئەزموونا A1 یێن ئەلمانینە
+        if (p.targetLang == AppLanguage.german) ...[_examCards(context, p), const SizedBox(height: 12)],
         for (var i = 0; i < appCurriculum.length; i++) ...[
           if (i == 0 || appCurriculum[i].section != appCurriculum[i - 1].section) _sectionHeader(appCurriculum[i].section, n),
           _unitBlock(context, i),
           // 📝 ئەزموونا وانێ: پشتی دویماهیک قۆناغا وێ (هەر کەسێ بڤێت)
           if ((i == appCurriculum.length - 1 || appCurriculum[i + 1].section != appCurriculum[i].section) &&
-              lektionForSection(appCurriculum[i].section) != null)
+              lektionForSection(appCurriculum[i].section) != null &&
+              p.targetLang == AppLanguage.german)
             _lektionTestCard(context, lektionForSection(appCurriculum[i].section)!, i, n),
         ],
         if (p.completedUnits.length >= appCurriculum.length)
@@ -290,7 +291,8 @@ class _LearnPath extends StatelessWidget {
   Widget _sectionHeader(int section, AppLanguage n) {
     final title = section - 1 < appSections.length ? appSections[section - 1].title(n) : '';
     final lek = lektionForSection(section);
-    if (lek != null) return _lektionHeader(lek, title, n);
+    // Lektion (دیالۆگ + رێزمان) ژ پەرتووکا ئەلمانی نە — بۆ ئینگلیزی سەرناڤەکێ ئاسایی
+    if (lek != null && ProgressService.instance.targetLang == AppLanguage.german) return _lektionHeader(lek, title, n);
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 16),
       child: Row(children: [

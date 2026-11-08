@@ -229,6 +229,41 @@ const _verbs = [
   _Verb('lernen', 'فێربوون', ['lerne', 'lernst', 'lernt', 'lernen', 'lernt', 'lernen']),
 ];
 
+// 🇬🇧 ئینگلیزی: (کەس، کارێ سەرەکی، بەرسڤ، هەلبژارتنێن دی، کوردی)
+class _EnQ {
+  final String subject, verb, answer, ku;
+  final List<String> others;
+  final String rest;
+  const _EnQ(this.subject, this.verb, this.answer, this.others, this.rest, this.ku);
+}
+
+const _enQs = [
+  _EnQ('I', 'be', 'am', ['is', 'are', 'be'], 'a student.', 'ئەز قوتابیمە.'),
+  _EnQ('She', 'be', 'is', ['am', 'are', 'be'], 'my sister.', 'ئەو خویشکا منە.'),
+  _EnQ('They', 'be', 'are', ['is', 'am', 'be'], 'from Duhok.', 'ئەو ژ دهۆکێ نە.'),
+  _EnQ('We', 'be', 'are', ['is', 'am', 'were'], 'happy today.', 'ئەم ئەڤرۆ دلخۆشین.'),
+  _EnQ('He', 'have', 'has', ['have', 'having', 'had'], 'two brothers.', 'دوو برا وی هەنە.'),
+  _EnQ('I', 'have', 'have', ['has', 'having', 'haves'], 'a car.', 'ترومبێلەک من هەیە.'),
+  _EnQ('She', 'go', 'goes', ['go', 'going', 'gos'], 'to school every day.', 'ئەو هەر رۆژ دچیتە قوتابخانێ.'),
+  _EnQ('He', 'work', 'works', ['work', 'working', 'worken'], 'in a bank.', 'ئەو ل بانکێ کار دکەت.'),
+  _EnQ('They', 'live', 'live', ['lives', 'living', 'lived'], 'in Erbil.', 'ئەو ل هەولێرێ دژین.'),
+  _EnQ('My mother', 'cook', 'cooks', ['cook', 'cooking', 'cookes'], 'every evening.', 'دایکا من هەر ئێڤار خوارنێ چێدکەت.'),
+  _EnQ('He', 'watch', 'watches', ['watchs', 'watch', 'watching'], 'TV at night.', 'ئەو ب شەڤ تەلەڤزیۆنێ دبینیت.'),
+  _EnQ('She', 'study', 'studies', ['studys', 'study', 'studying'], 'English.', 'ئەو ئینگلیزی دخوینیت.'),
+  _EnQ('We', 'play', 'play', ['plays', 'playing', 'plaies'], 'football on Friday.', 'ئەم رۆژا ئەینیێ تەپا پێ یاری دکەین.'),
+  _EnQ('She', 'not / like', "doesn't like", ["don't like", "doesn't likes", 'not like'], 'coffee.', 'ئەو حەز ژ قەهوێ ناکەت.'),
+  _EnQ('I', 'not / eat', "don't eat", ["doesn't eat", 'not eat', "don't eats"], 'meat.', 'ئەز گۆشتی ناخۆم.'),
+  _EnQ('I', 'be (now)', 'am reading', ['reading', 'is reading', 'are read'], 'a book now.', 'ئەز نوکە پەرتووکەکێ دخوینم.'),
+  _EnQ('They', 'play (now)', 'are playing', ['is playing', 'playing', 'are play'], 'outside now.', 'ئەو نوکە ل دەرڤە یاری دکەن.'),
+  _EnQ('I', 'be (yesterday)', 'was', ['were', 'am', 'be'], 'at home yesterday.', 'دوهی ئەز ل مال بووم.'),
+  _EnQ('They', 'be (yesterday)', 'were', ['was', 'are', 'been'], 'tired yesterday.', 'دوهی ئەو یێن وەستیایی بوون.'),
+  _EnQ('We', 'go (yesterday)', 'went', ['goed', 'go', 'gone'], 'to the market yesterday.', 'دوهی ئەم چووینە بازاڕێ.'),
+  _EnQ('She', 'watch (yesterday)', 'watched', ['watch', 'watches', 'watching'], 'a film last night.', 'دوهی شەڤێ وێ فیلمەک دیت.'),
+  _EnQ('He', 'can / swim', 'can swim', ['cans swim', 'can swims', 'can to swim'], 'very well.', 'ئەو دشێت گەلەک باش مەلەڤانیێ بکەت.'),
+  _EnQ('I', 'eat (yesterday)', 'ate', ['eated', 'eat', 'eaten'], 'rice for lunch.', 'من نیڤرۆ برنج خوار.'),
+  _EnQ('He', 'have (yesterday)', 'had', ['haved', 'has', 'have'], 'a cold last week.', 'هەفتیا بۆری ئەو هاتبوو سەرما.'),
+];
+
 class ConjugationGameScreen extends StatefulWidget {
   const ConjugationGameScreen({super.key});
   @override
@@ -249,7 +284,19 @@ class _ConjugationGameScreenState extends State<ConjugationGameScreen> {
     _start();
   }
 
+  bool get _en => ProgressService.instance.targetLang == AppLanguage.english;
+  late List<_EnQ> enRound;
+
   void _start() {
+    if (_en) {
+      enRound = ([..._enQs]..shuffle(_rng)).take(15).toList();
+      setState(() {
+        i = correct = xp = 0;
+        done = false;
+      });
+      _prepare();
+      return;
+    }
     final vs = [..._verbs]..shuffle(_rng);
     round = [for (var k = 0; k < 15; k++) (vs[k % vs.length], _rng.nextInt(6))];
     setState(() {
@@ -260,6 +307,12 @@ class _ConjugationGameScreenState extends State<ConjugationGameScreen> {
   }
 
   void _prepare() {
+    if (_en) {
+      final q = enRound[i];
+      options = [q.answer, ...q.others.take(3)]..shuffle(_rng);
+      picked = null;
+      return;
+    }
     final (v, p) = round[i];
     final right = v.forms[p];
     final wrong = v.forms.toSet().where((f) => f != right).toList()..shuffle(_rng);
@@ -267,8 +320,28 @@ class _ConjugationGameScreenState extends State<ConjugationGameScreen> {
     picked = null;
   }
 
+  int get _total => _en ? enRound.length : round.length;
+
   Future<void> _pick(String f) async {
     if (picked != null) return;
+    if (_en) {
+      final q = enRound[i];
+      final ok = f == q.answer;
+      setState(() => picked = f);
+      if (ok) {
+        Sfx.correct();
+        correct++;
+        xp += 2;
+        showXpPop(context, 2);
+      } else {
+        Sfx.wrong();
+      }
+      VoiceService.instance.speakText('${q.subject} ${q.answer} ${q.rest}', AppLanguage.english);
+      await Future.delayed(Duration(milliseconds: ok ? 1100 : 1900));
+      if (!mounted) return;
+      await _advance();
+      return;
+    }
     final (v, p) = round[i];
     final ok = f == v.forms[p];
     setState(() => picked = f);
@@ -284,7 +357,11 @@ class _ConjugationGameScreenState extends State<ConjugationGameScreen> {
     VoiceService.instance.speakText('$pr ${v.forms[p]}', AppLanguage.german);
     await Future.delayed(Duration(milliseconds: ok ? 900 : 1700));
     if (!mounted) return;
-    if (i + 1 < round.length) {
+    await _advance();
+  }
+
+  Future<void> _advance() async {
+    if (i + 1 < _total) {
       setState(() {
         i++;
         _prepare();
@@ -301,14 +378,50 @@ class _ConjugationGameScreenState extends State<ConjugationGameScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('🔤 گوهۆڕینا کاران (Konjugation)'),
+          title: Text(_en ? '🔤 شێوێن کاران (Verb forms)' : '🔤 گوهۆڕینا کاران (Konjugation)'),
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(6),
-            child: LinearProgressIndicator(value: done ? 1 : i / round.length, minHeight: 6, backgroundColor: AppColors.card),
+            child: LinearProgressIndicator(value: done ? 1 : i / _total, minHeight: 6, backgroundColor: AppColors.card),
           ),
         ),
-        body: SafeArea(child: done ? _GameDone(correct: correct, total: round.length, xp: xp, onAgain: _start) : _play()),
+        body: SafeArea(child: done ? _GameDone(correct: correct, total: _total, xp: xp, onAgain: _start) : (_en ? _playEn() : _play())),
       ),
+    );
+  }
+
+  Widget _playEn() {
+    final q = enRound[i];
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        const Text('شێوێ دروست یێ کاری هەلبژێرە', textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
+        const SizedBox(height: 24),
+        Container(
+          padding: const EdgeInsets.all(22),
+          decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(20)),
+          child: Column(children: [
+            Text('(${q.verb})', textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.goldText, fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
+            Directionality(
+              textDirection: TextDirection.ltr,
+              child: Text('${q.subject} ${picked == null ? '_____' : q.answer} ${q.rest}',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: picked == null ? AppColors.fg : AppColors.green)),
+            ),
+            const SizedBox(height: 8),
+            Text(q.ku, style: TextStyle(color: AppColors.fg60)),
+          ]),
+        ),
+        const SizedBox(height: 24),
+        for (final o in options)
+          OptionTile(
+            text: o,
+            selected: picked == o,
+            textDirection: TextDirection.ltr,
+            stateColor: picked == null ? null : (o == q.answer ? AppColors.green : (o == picked ? AppColors.red : null)),
+            onTap: picked == null ? () => _pick(o) : null,
+          ),
+      ]),
     );
   }
 

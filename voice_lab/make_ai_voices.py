@@ -84,6 +84,17 @@ def collect():
         for c in json.loads(summ.read_text(encoding="utf-8"))["cards"]:
             for e in c["examples"]:
                 jobs["de"][e["de"]] = e["de"]
+    gen = ROOT / "assets/grammar_en.json"
+    if gen.exists():  # 📘 English grammar: نموونە و راهێنان
+        for l in json.loads(gen.read_text(encoding="utf-8"))["lektionen"]:
+            for t in l["topics"]:
+                for e in t["examples"]:
+                    jobs["en"][e["de"]] = e["de"]
+                for pr in t.get("practice", []):
+                    for k in ("q", "a"):
+                        txt = pr[k]
+                        if "→" not in txt and ":" not in txt and "(" not in txt and "___" not in txt:
+                            jobs["en"][txt] = txt
     gram = ROOT / "assets/grammar.json"
     if gram.exists():  # 📘 رێزمان ل دویف وانێ: نموونە
         for l in json.loads(gram.read_text(encoding="utf-8"))["lektionen"]:

@@ -71,9 +71,13 @@ class GamesHubScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Row(children: [
-                Expanded(child: _bigTile(context, '🎨', 'der · die · das', 'ئارتیکلێ دروست ب لەز', const Color(0xFF1CB0F6), const ArticleGameScreen())),
-                const SizedBox(width: 10),
-                Expanded(child: _bigTile(context, '🔤', 'Konjugation', 'ich bin · du bist …', const Color(0xFFCE82FF), const ConjugationGameScreen())),
+                if (p.targetLang == AppLanguage.german) ...[
+                  Expanded(child: _bigTile(context, '🎨', 'der · die · das', 'ئارتیکلێ دروست ب لەز', const Color(0xFF1CB0F6), const ArticleGameScreen())),
+                  const SizedBox(width: 10),
+                ],
+                Expanded(
+                    child: _bigTile(context, '🔤', p.targetLang == AppLanguage.english ? 'Verb forms' : 'Konjugation',
+                        p.targetLang == AppLanguage.english ? 'I am · she goes …' : 'ich bin · du bist …', const Color(0xFFCE82FF), const ConjugationGameScreen())),
               ]),
               const SizedBox(height: 10),
               Row(children: [
@@ -81,8 +85,9 @@ class GamesHubScreen extends StatelessWidget {
                 const SizedBox(width: 10),
                 Expanded(child: _bigTile(context, '🏆', 'Rangliste', 'باشترینێن هەفتیێ', const Color(0xFFFFC800), const LeaderboardScreen())),
               ]),
-              const SizedBox(height: 10),
-              _bigTile(context, '🎓', 'Goethe A1 — Modelltest', 'ئەزموونەکا تەمام وەکی یا ڕاستی ب دەمژمێر', const Color(0xFFFF4B4B), const GoetheMockScreen(), wide: true),
+              if (p.targetLang == AppLanguage.german) const SizedBox(height: 10),
+              if (p.targetLang == AppLanguage.german)
+                _bigTile(context, '🎓', 'Goethe A1 — Modelltest', 'ئەزموونەکا تەمام وەکی یا ڕاستی ب دەمژمێر', const Color(0xFFFF4B4B), const GoetheMockScreen(), wide: true),
               const SizedBox(height: 18),
               Text(tr(n, 'رێکێن دی یێن یاریێ', 'Mehr Spiele', 'More ways to play'),
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.bold)),

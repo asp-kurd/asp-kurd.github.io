@@ -55,6 +55,7 @@ flutter:
     - assets/book.json
     - assets/a1_summary.json
     - assets/grammar.json
+    - assets/grammar_en.json
     - assets/kommunikation.json
     - assets/goethe.json
     # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)

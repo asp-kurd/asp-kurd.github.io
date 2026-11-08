@@ -58,10 +58,42 @@ class Grammar {
   static Map<int, List<KommGroup>> komm = {};
   static Future<void>? _loading;
 
-  static Future<void> load() => _loading ??= () async {
-        final m = jsonDecode(await rootBundle.loadString('assets/grammar.json')) as Map<String, dynamic>;
+  /// 🇩🇪 ئەلمانی (Lektion 1–14 ژ Schritte) یان 🇬🇧 ئینگلیزی (Unit 1–6)
+  static AppLanguage lang = AppLanguage.german;
+  static AppLanguage? _loadedFor;
+  static bool get en => lang == AppLanguage.english;
+  static final Map<int, (String, String, Color)> _units = {};
+
+  static Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16));
+
+  /// ناڤ و ڕەنگێ وانێ: (کوردی، زمانێ فێربوونێ، ڕەنگ)
+  static (String, String, Color)? unitInfo(int n) {
+    if (en) return _units[n];
+    final l = appLektionen.where((l) => l.n == n).firstOrNull;
+    return l == null ? null : (l.titleKu, l.titleDe, l.color);
+  }
+
+  static Future<void> load() {
+    final want = ProgressService.instance.targetLang == AppLanguage.english ? AppLanguage.english : AppLanguage.german;
+    if (_loadedFor != want) {
+      _loading = null;
+      _loadedFor = want;
+      lang = want;
+    }
+    return _loading ??= _load();
+  }
+
+  static Future<void> _load() async {
+        final m = jsonDecode(await rootBundle.loadString(en ? 'assets/grammar_en.json' : 'assets/grammar.json')) as Map<String, dynamic>;
+        _units.clear();
+        if (en) {
+          for (final l in m['lektionen'] as List) {
+            _units[l['n'] as int] = (l['titleKu'] as String, l['title'] as String, _hex(l['color'] as String));
+          }
+        }
         List<String> strs(dynamic v) => ((v as List?) ?? const []).map((e) => e.toString()).toList();
-        try {
+        komm = {};
+        if (!en) try {
           final k = jsonDecode(await rootBundle.loadString('assets/kommunikation.json')) as Map<String, dynamic>;
           komm = {
             for (final l in k['lektionen'] as List)
@@ -87,7 +119,7 @@ class Grammar {
                 ),
             ],
         };
-      }();
+      }
 
   /// 'de' (سەرەکی) یان 'ku'
   static bool kurdish = false;
@@ -105,11 +137,12 @@ class Grammar {
   }
 }
 
-Future<void> _say(String de) => VoiceService.instance.speakText(de, AppLanguage.german);
+Future<void> _say(String de) => VoiceService.instance.speakText(de, Grammar.lang);
 
 /// 📘 کارتا دەستپێکێ (د تابێ پەرتووکێ دا)
 class GrammarBanner extends StatelessWidget {
   const GrammarBanner({super.key});
+  bool get _en => ProgressService.instance.targetLang == AppLanguage.english;
 
   @override
   Widget build(BuildContext context) {
@@ -122,17 +155,19 @@ class GrammarBanner extends StatelessWidget {
           gradient: const LinearGradient(colors: [Color(0xFF58CC02), Color(0xFF1CB0F6)]),
           borderRadius: BorderRadius.circular(22),
         ),
-        child: const Row(children: [
-          Text('📘', style: TextStyle(fontSize: 34)),
-          SizedBox(width: 12),
+        child: Row(children: [
+          const Text('📘', style: TextStyle(fontSize: 34)),
+          const SizedBox(width: 12),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('Grammatik — Lektion 1–14', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white)),
-              SizedBox(height: 4),
-              Text('رێزمانا هەر وانەکێ ب ئەلمانی + کوردی', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
+              Text(_en ? 'English Grammar A1' : 'Grammatik — Lektion 1–14',
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white)),
+              const SizedBox(height: 4),
+              Text(_en ? 'رێزمانا ئینگلیزی ب ئینگلیزی + کوردی + راهێنان' : 'رێزمانا هەر وانەکێ ب ئەلمانی + کوردی',
+                  style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
             ]),
           ),
-          Icon(Icons.chevron_left_rounded, color: Colors.white, size: 30),
+          const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 30),
         ]),
       ),
     );
@@ -141,7 +176,9 @@ class GrammarBanner extends StatelessWidget {
 
 // ───────── لیستا وانان ─────────
 class GrammarListScreen extends StatefulWidget {
-  const GrammarListScreen({super.key});
+  /// ل ناڤ تابێ رێزمانێ (بێ AppBar)
+  final bool embedded;
+  const GrammarListScreen({super.key, this.embedded = false});
   @override
   State<GrammarListScreen> createState() => _GrammarListScreenState();
 }
@@ -158,23 +195,31 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
   @override
   Widget build(BuildContext context) {
     final ns = Grammar.byLektion.keys.toList()..sort();
+    final body = ns.isEmpty
+        ? const Center(child: CircularProgressIndicator())
+        : ListView(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 40),
+            children: [
+              if (widget.embedded) ...[
+                Text(Grammar.en ? '📘 English Grammar A1' : '📘 رێزمان ل دویف وانێ',
+                    textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
+                Text('ڕوونکرن ب ئینگلیزی و کوردی، خشتە، نموونە ب دەنگ، و 🎯 راهێنان', style: TextStyle(color: AppColors.fg60)),
+                const SizedBox(height: 14),
+              ],
+              for (final n in ns) _tile(n),
+            ],
+          );
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: Scaffold(
-        appBar: AppBar(title: const Text('📘 رێزمان ل دویف وانێ')),
-        body: ns.isEmpty
-            ? const Center(child: CircularProgressIndicator())
-            : ListView(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 40),
-                children: [for (final n in ns) _tile(n)],
-              ),
-      ),
+      child: widget.embedded
+          ? SafeArea(child: body)
+          : Scaffold(appBar: AppBar(title: Text(Grammar.en ? '📘 English Grammar' : '📘 رێزمان ل دویف وانێ')), body: body),
     );
   }
 
   Widget _tile(int n) {
-    final lek = appLektionen.where((l) => l.n == n).firstOrNull;
-    final color = lek?.color ?? AppColors.blue;
+    final info = Grammar.unitInfo(n);
+    final color = info?.$3 ?? AppColors.blue;
     final topics = Grammar.byLektion[n]!;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -197,7 +242,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
             const SizedBox(width: 12),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(lek?.titleKu ?? 'Lektion $n', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: color)),
+                Text(info?.$1 ?? 'Lektion $n', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: color)),
                 const SizedBox(height: 4),
                 Directionality(
                   textDirection: TextDirection.ltr,
@@ -235,14 +280,14 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final lek = appLektionen.where((l) => l.n == widget.n).firstOrNull;
-    final color = lek?.color ?? AppColors.blue;
+    final lek = Grammar.unitInfo(widget.n);
+    final color = lek?.$3 ?? AppColors.blue;
     final topics = Grammar.byLektion[widget.n] ?? const [];
     final ku = Grammar.kurdish;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(title: Text('📘 Lektion ${widget.n} · Grammatik')),
+        appBar: AppBar(title: Text(Grammar.en ? '📘 Unit ${widget.n} · Grammar' : '📘 Lektion ${widget.n} · Grammatik')),
         body: !ready
             ? const Center(child: CircularProgressIndicator())
             : ListView(
@@ -251,7 +296,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
                   if (lek != null)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
-                      child: Text('${lek.titleKu} · ${lek.titleDe}',
+                      child: Text('${lek.$1} · ${lek.$2}',
                           style: TextStyle(fontFamily: 'Sarchia', fontSize: 17, color: color, fontWeight: FontWeight.bold)),
                     ),
                   _langSwitch(ku),
@@ -340,7 +385,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(15)),
-      child: Row(children: [opt(false, '🇩🇪 Deutsch'), const SizedBox(width: 4), opt(true, '☀️ کوردی')]),
+      child: Row(children: [opt(false, Grammar.en ? '🇬🇧 English' : '🇩🇪 Deutsch'), const SizedBox(width: 4), opt(true, '☀️ کوردی')]),
     );
   }
 
@@ -385,7 +430,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
           ),
         ],
         const SizedBox(height: 12),
-        Text(ku ? '🔊 نموونە — بکە تپ دا گوهداری بکەی' : '🔊 Beispiele — tippen zum Anhören',
+        Text(ku ? '🔊 نموونە — بکە تپ دا گوهداری بکەی' : (Grammar.en ? '🔊 Examples — tap to listen' : '🔊 Beispiele — tippen zum Anhören'),
             textDirection: dir, style: TextStyle(color: AppColors.fg60, fontSize: 13, fontWeight: FontWeight.bold)),
         const SizedBox(height: 6),
         for (final e in t.examples) _example(e, color),
@@ -399,7 +444,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
               onPressed: () => Navigator.push(context,
                   MaterialPageRoute(builder: (_) => GrammarPracticeScreen(topic: t, color: color, pool: Grammar.byLektion[widget.n] ?? const []))),
               icon: const Text('🎯', style: TextStyle(fontSize: 18)),
-              label: Text(ku ? 'راهێنان — نوکە تو بەرسڤێ بدە!' : 'Üben – jetzt bist du dran!',
+              label: Text(ku ? 'راهێنان — نوکە تو بەرسڤێ بدە!' : (Grammar.en ? 'Practice – your turn!' : 'Üben – jetzt bist du dran!'),
                   style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             ),
           ),
@@ -486,11 +531,11 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
   Future<void> _playModel() async {
     if (!mounted || step != -1) return;
     if (model.speakableQ) {
-      await voice.speakText(model.q, AppLanguage.german, gender: asker.gender);
+      await voice.speakText(model.q, Grammar.lang, gender: asker.gender);
       await Future.delayed(Duration(milliseconds: 900 + model.q.length * 70));
     }
     if (!mounted || step != -1) return;
-    voice.speakText(model.a, AppLanguage.german, gender: me.gender);
+    voice.speakText(model.a, Grammar.lang, gender: me.gender);
   }
 
   GramPractice get task => tasks[step];
@@ -518,7 +563,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
     if (k >= 0 && k < tasks.length && task.speakableQ) {
       final s = k;
       Future.delayed(const Duration(milliseconds: 300), () {
-        if (mounted && step == s) voice.speakText(task.q, AppLanguage.german, gender: asker.gender);
+        if (mounted && step == s) voice.speakText(task.q, Grammar.lang, gender: asker.gender);
       });
     }
   }
@@ -549,7 +594,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
       Sfx.wrong();
     }
     Future.delayed(const Duration(milliseconds: 350), () {
-      if (mounted) voice.speakText(task.a, AppLanguage.german, gender: me.gender);
+      if (mounted) voice.speakText(task.a, Grammar.lang, gender: me.gender);
     });
   }
 
@@ -558,7 +603,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
       skipped = true;
       result = false;
     });
-    voice.speakText(task.a, AppLanguage.german, gender: me.gender);
+    voice.speakText(task.a, Grammar.lang, gender: me.gender);
   }
 
   Future<void> _finish() async {
@@ -638,10 +683,10 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
         ),
         const SizedBox(height: 16),
         _bubble(asker, model.q, model.qku,
-            left: true, onTap: model.speakableQ ? () => voice.speakText(model.q, AppLanguage.german, gender: asker.gender) : null),
+            left: true, onTap: model.speakableQ ? () => voice.speakText(model.q, Grammar.lang, gender: asker.gender) : null),
         if (model.cue.isNotEmpty) _cue(model.cue),
         _bubble(me, model.a, model.aku,
-            left: false, border: AppColors.green, onTap: () => voice.speakText(model.a, AppLanguage.german, gender: me.gender)),
+            left: false, border: AppColors.green, onTap: () => voice.speakText(model.a, Grammar.lang, gender: me.gender)),
         const SizedBox(height: 18),
         BigButton(label: 'نوکە تو! 💪', color: color, onPressed: () => _go(0)),
       ]);
@@ -663,13 +708,13 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
     return Column(children: [
       Expanded(
         child: ListView(padding: const EdgeInsets.all(18), children: [
-          _bubble(asker, t.q, t.qku, left: true, onTap: t.speakableQ ? () => voice.speakText(t.q, AppLanguage.german, gender: asker.gender) : null),
+          _bubble(asker, t.q, t.qku, left: true, onTap: t.speakableQ ? () => voice.speakText(t.q, Grammar.lang, gender: asker.gender) : null),
           if (t.cue.isNotEmpty) _cue(t.cue),
           if (done)
             _bubble(me, t.a, t.aku,
                 left: false,
                 border: result! ? AppColors.green : AppColors.red,
-                onTap: () => voice.speakText(t.a, AppLanguage.german, gender: me.gender)),
+                onTap: () => voice.speakText(t.a, Grammar.lang, gender: me.gender)),
           if (!done) ...[
             // ✍️ / 🧩
             Row(children: [
@@ -686,7 +731,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
                 style: const TextStyle(fontSize: 20),
                 onChanged: (_) => setState(() {}),
                 decoration: InputDecoration(
-                  hintText: 'Schreib deine Antwort …',
+                  hintText: Grammar.en ? 'Write your answer …' : 'Schreib deine Antwort …',
                   hintTextDirection: TextDirection.ltr,
                   filled: true,
                   fillColor: AppColors.card,

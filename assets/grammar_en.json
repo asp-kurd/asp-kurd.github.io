@@ -1,0 +1,1783 @@
+{
+ "version": 1,
+ "lang": "en",
+ "title": {
+  "de": "English Grammar A1",
+  "ku": "رێزمانا ئینگلیزی A1"
+ },
+ "lektionen": [
+  {
+   "n": 1,
+   "title": "Hello! I am …",
+   "titleKu": "سلاڤ! ئەز … مە",
+   "color": "#58CC02",
+   "topics": [
+    {
+     "emoji": "🙋",
+     "title": {
+      "de": "Personal pronouns + to be",
+      "ku": "جێناڤ + کارێ to be (بوون)"
+     },
+     "explain": {
+      "de": "The verb “to be” has three forms in the present: am, is, are. I → am. He, she, it → is. You, we, they → are.",
+      "ku": "کارێ «to be» (بوون) سێ شێوە هەنە: am، is، are. I ← am. He / she / it ← is. You / we / they ← are."
+     },
+     "head": [
+      "",
+      "to be",
+      "short form"
+     ],
+     "rows": [
+      [
+       "I",
+       "am",
+       "I'm"
+      ],
+      [
+       "you",
+       "are",
+       "you're"
+      ],
+      [
+       "he / she / it",
+       "is",
+       "he's / she's / it's"
+      ],
+      [
+       "we",
+       "are",
+       "we're"
+      ],
+      [
+       "they",
+       "are",
+       "they're"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I am Azad.",
+       "ku": "ئەز ئازادم."
+      },
+      {
+       "de": "She is a teacher.",
+       "ku": "ئەو مامۆستایە."
+      },
+      {
+       "de": "We are from Kurdistan.",
+       "ku": "ئەم ژ کوردستانێ نە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Who are you?",
+       "qku": "تو کیی؟",
+       "cue": "Azad",
+       "a": "I am Azad.",
+       "aku": "ئەز ئازادم."
+      },
+      {
+       "q": "Where is Sara from?",
+       "qku": "سارا ژ کیڤەیە؟",
+       "cue": "Iraq",
+       "a": "She is from Iraq.",
+       "aku": "ئەو ژ عیراقێ یە."
+      },
+      {
+       "q": "Are you students?",
+       "qku": "ئەرێ هوین قوتابینە؟",
+       "cue": "yes",
+       "a": "Yes, we are students.",
+       "aku": "بەلێ، ئەم قوتابینە."
+      }
+     ],
+     "tip": {
+      "de": "Don't forget the verb: “I am a student”, not “I a student”.",
+      "ku": "کاری ژ بیر نەکە: «I am a student»، نە «I a student»."
+     }
+    },
+    {
+     "emoji": "❓",
+     "title": {
+      "de": "Questions and negatives with be",
+      "ku": "پرسیار و نەرێنی ب be"
+     },
+     "explain": {
+      "de": "Questions: put am/is/are first: Are you OK? Negative: add not: I am not tired. She isn't here.",
+      "ku": "بۆ پرسیارێ: am/is/are دهێتە دەستپێکێ: Are you OK? بۆ نەرێنیێ: not زێدە بکە: I am not tired. She isn't here."
+     },
+     "head": [
+      "positive",
+      "negative",
+      "question"
+     ],
+     "rows": [
+      [
+       "I am happy.",
+       "I'm not happy.",
+       "Am I happy?"
+      ],
+      [
+       "She is at home.",
+       "She isn't at home.",
+       "Is she at home?"
+      ],
+      [
+       "They are late.",
+       "They aren't late.",
+       "Are they late?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Are you tired? – No, I'm not.",
+       "ku": "ئەرێ تو یێ وەستیایی؟ – نەخێر."
+      },
+      {
+       "de": "Is he your brother?",
+       "ku": "ئەرێ ئەو برایێ تەیە؟"
+      },
+      {
+       "de": "It isn't expensive.",
+       "ku": "ئەو نە یێ گرانە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Make a question: you / happy",
+       "qku": "پرسیارێ چێکە",
+       "cue": "",
+       "a": "Are you happy?",
+       "aku": "ئەرێ تو یێ دلخۆشی؟"
+      },
+      {
+       "q": "Make it negative: She is at school.",
+       "qku": "نەرێنی بکە",
+       "cue": "",
+       "a": "She isn't at school.",
+       "aku": "ئەو ل قوتابخانێ نینە."
+      },
+      {
+       "q": "Is he a doctor?",
+       "qku": "ئەرێ ئەو دکتۆرە؟",
+       "cue": "no",
+       "a": "No, he isn't.",
+       "aku": "نەخێر، نینە."
+      }
+     ]
+    },
+    {
+     "emoji": "🔎",
+     "title": {
+      "de": "Wh- questions",
+      "ku": "پرسیارێن Wh-"
+     },
+     "explain": {
+      "de": "Wh- words ask for information: what, where, who, when, how, how old. The verb comes after the question word: Where are you from?",
+      "ku": "پەیڤێن Wh- پێزانینان دپرسن: what (چ)، where (ل کیڤە)، who (کی)، when (کەنگی)، how (چەوا)، how old (چەند سالی). کار پشتی پەیڤا پرسیارێ دهێت."
+     },
+     "head": [
+      "question word",
+      "example",
+      "answer"
+     ],
+     "rows": [
+      [
+       "What",
+       "What is your name?",
+       "My name is Lara."
+      ],
+      [
+       "Where",
+       "Where are you from?",
+       "I'm from Duhok."
+      ],
+      [
+       "How old",
+       "How old are you?",
+       "I'm 25."
+      ],
+      [
+       "Who",
+       "Who is that?",
+       "That's my sister."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "What is your name?",
+       "ku": "ناڤێ تە چییە؟"
+      },
+      {
+       "de": "Where do you live?",
+       "ku": "تو ل کیڤە دژی؟"
+      },
+      {
+       "de": "How are you? – I'm fine, thanks.",
+       "ku": "تو چەوانی؟ – باشم، سوپاس."
+      }
+     ],
+     "practice": [
+      {
+       "q": "My name is Sara. → Question?",
+       "qku": "پرسیارێ چێکە",
+       "cue": "what",
+       "a": "What is your name?",
+       "aku": "ناڤێ تە چییە؟"
+      },
+      {
+       "q": "I'm from Erbil. → Question?",
+       "qku": "پرسیارێ چێکە",
+       "cue": "where",
+       "a": "Where are you from?",
+       "aku": "تو ژ کیڤەیی؟"
+      },
+      {
+       "q": "I'm 30. → Question?",
+       "qku": "پرسیارێ چێکە",
+       "cue": "how old",
+       "a": "How old are you?",
+       "aku": "تو چەند سالی؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "My family and things",
+   "titleKu": "مالباتا من و تشت",
+   "color": "#1CB0F6",
+   "topics": [
+    {
+     "emoji": "🅰️",
+     "title": {
+      "de": "a, an, the",
+      "ku": "a، an، the (ئارتیکل)"
+     },
+     "explain": {
+      "de": "Use a before a consonant sound (a book) and an before a vowel sound (an apple). Use the when we know which one: the book on the table.",
+      "ku": "a بەری دەنگەکێ نەدەنگدار (a book) و an بەری دەنگدارەکێ (an apple). the دەمێ ئەم دزانین کیژ تشتە: the book on the table."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "a",
+       "a car, a house, a university"
+      ],
+      [
+       "an",
+       "an egg, an orange, an hour"
+      ],
+      [
+       "the",
+       "the sun, the door, the teacher"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I have a brother.",
+       "ku": "برایەک من هەیە."
+      },
+      {
+       "de": "She eats an apple.",
+       "ku": "ئەو سێڤەکێ دخوت."
+      },
+      {
+       "de": "The teacher is nice.",
+       "ku": "مامۆستا یێ باشە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "___ apple (a / an)",
+       "qku": "a یان an؟",
+       "cue": "",
+       "a": "an apple",
+       "aku": "سێڤەک"
+      },
+      {
+       "q": "___ car (a / an)",
+       "qku": "a یان an؟",
+       "cue": "",
+       "a": "a car",
+       "aku": "ترومبێلەک"
+      },
+      {
+       "q": "___ egg (a / an)",
+       "qku": "a یان an؟",
+       "cue": "",
+       "a": "an egg",
+       "aku": "هێکەک"
+      }
+     ],
+     "tip": {
+      "de": "“a university” (the sound is “you”), “an hour” (h is silent).",
+      "ku": "«a university» (دەنگ «یوو» یە)، «an hour» (h ناهێتە خواندن)."
+     }
+    },
+    {
+     "emoji": "🧺",
+     "title": {
+      "de": "Plural nouns",
+      "ku": "کۆ (پتر ژ ئێکێ)"
+     },
+     "explain": {
+      "de": "Most nouns add -s: book → books. After s, sh, ch, x add -es: box → boxes. Consonant + y → -ies: baby → babies. Some are irregular: man → men, child → children.",
+      "ku": "پتریا ناڤان ‎-s وەردگرن: book ← books. پشتی s، sh، ch، x ‎-es: box ← boxes. نەدەنگدار + y ← ‎-ies: baby ← babies. هندەک نە ل سەر یاسایێ نە: man ← men، child ← children."
+     },
+     "head": [
+      "singular",
+      "plural"
+     ],
+     "rows": [
+      [
+       "book",
+       "books"
+      ],
+      [
+       "box",
+       "boxes"
+      ],
+      [
+       "city",
+       "cities"
+      ],
+      [
+       "man",
+       "men"
+      ],
+      [
+       "woman",
+       "women"
+      ],
+      [
+       "child",
+       "children"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I have two brothers.",
+       "ku": "دوو برا من هەنە."
+      },
+      {
+       "de": "The children are at school.",
+       "ku": "زارۆک ل قوتابخانێ نە."
+      },
+      {
+       "de": "There are three boxes.",
+       "ku": "سێ سندووق هەنە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "one book → two ___",
+       "qku": "کۆ",
+       "cue": "",
+       "a": "two books",
+       "aku": "دوو پەرتووک"
+      },
+      {
+       "q": "one child → three ___",
+       "qku": "کۆ",
+       "cue": "",
+       "a": "three children",
+       "aku": "سێ زارۆک"
+      },
+      {
+       "q": "one city → many ___",
+       "qku": "کۆ",
+       "cue": "",
+       "a": "many cities",
+       "aku": "گەلەک باژێڕ"
+      }
+     ]
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "title": {
+      "de": "my, your, his, her …",
+      "ku": "یێ من، یێ تە، یێ وی…"
+     },
+     "explain": {
+      "de": "Possessive adjectives show who has something: I → my, you → your, he → his, she → her, it → its, we → our, they → their.",
+      "ku": "ئەڤ پەیڤە نیشان ددەن کا تشت یێ کێیە: I ← my، you ← your، he ← his، she ← her، it ← its، we ← our، they ← their."
+     },
+     "head": [
+      "pronoun",
+      "possessive",
+      "example"
+     ],
+     "rows": [
+      [
+       "I",
+       "my",
+       "my mother"
+      ],
+      [
+       "you",
+       "your",
+       "your phone"
+      ],
+      [
+       "he",
+       "his",
+       "his car"
+      ],
+      [
+       "she",
+       "her",
+       "her bag"
+      ],
+      [
+       "we",
+       "our",
+       "our house"
+      ],
+      [
+       "they",
+       "their",
+       "their children"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "This is my father.",
+       "ku": "ئەڤە بابێ منە."
+      },
+      {
+       "de": "Her name is Mina.",
+       "ku": "ناڤێ وێ مینایە."
+      },
+      {
+       "de": "Our house is small.",
+       "ku": "خانیێ مە یێ بچووکە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Who is this? (my / sister)",
+       "qku": "ئەڤە کییە؟",
+       "cue": "",
+       "a": "This is my sister.",
+       "aku": "ئەڤە خویشکا منە."
+      },
+      {
+       "q": "What is his name? (Karim)",
+       "qku": "ناڤێ وی چییە؟",
+       "cue": "",
+       "a": "His name is Karim.",
+       "aku": "ناڤێ وی کەریمە."
+      },
+      {
+       "q": "Is this their car?",
+       "qku": "ئەرێ ئەڤە ترومبێلا وانە؟",
+       "cue": "yes",
+       "a": "Yes, it's their car.",
+       "aku": "بەلێ، ترومبێلا وانە."
+      }
+     ]
+    },
+    {
+     "emoji": "👉",
+     "title": {
+      "de": "this, that, these, those",
+      "ku": "this، that، these، those"
+     },
+     "explain": {
+      "de": "this / these = near me. that / those = far from me. this and that are singular, these and those are plural.",
+      "ku": "this / these = نێزیک. that / those = دویر. this و that تاکن، these و those کۆنە."
+     },
+     "head": [
+      "",
+      "near",
+      "far"
+     ],
+     "rows": [
+      [
+       "singular",
+       "this book",
+       "that book"
+      ],
+      [
+       "plural",
+       "these books",
+       "those books"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "This is my bag.",
+       "ku": "ئەڤە جانتا منە."
+      },
+      {
+       "de": "Those are my friends.",
+       "ku": "ئەو هەڤالێن منن."
+      },
+      {
+       "de": "Is that your car?",
+       "ku": "ئەرێ ئەو ترومبێلا تەیە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "(near, one pen) ___ is my pen.",
+       "qku": "this یان that؟",
+       "cue": "",
+       "a": "This is my pen.",
+       "aku": "ئەڤە قەلەمێ منە."
+      },
+      {
+       "q": "(far, two cars) ___ are new.",
+       "qku": "these یان those؟",
+       "cue": "",
+       "a": "Those are new.",
+       "aku": "ئەو یێن نوونە."
+      },
+      {
+       "q": "(near, two apples) ___ apples are red.",
+       "qku": "this یان these؟",
+       "cue": "",
+       "a": "These apples are red.",
+       "aku": "ئەڤ سێڤە د سۆرن."
+      }
+     ]
+    },
+    {
+     "emoji": "🎒",
+     "title": {
+      "de": "have / has got",
+      "ku": "هەبوون: have / has"
+     },
+     "explain": {
+      "de": "Use have for I, you, we, they. Use has for he, she, it. Question: Do you have …? Does she have …?",
+      "ku": "have بۆ I، you، we، they. has بۆ he، she، it. پرسیار: Do you have …? Does she have …?"
+     },
+     "head": [
+      "",
+      "have",
+      "negative"
+     ],
+     "rows": [
+      [
+       "I / you / we / they",
+       "have",
+       "don't have"
+      ],
+      [
+       "he / she / it",
+       "has",
+       "doesn't have"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I have two sisters.",
+       "ku": "دوو خویشک من هەنە."
+      },
+      {
+       "de": "She has a cat.",
+       "ku": "پشیکەک وێ هەیە."
+      },
+      {
+       "de": "Do you have a car? – No, I don't.",
+       "ku": "ئەرێ ترومبێلا تە هەیە؟ – نەخێر."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Do you have children?",
+       "qku": "ئەرێ زارۆک تە هەنە؟",
+       "cue": "yes, two",
+       "a": "Yes, I have two children.",
+       "aku": "بەلێ، دوو زارۆک من هەنە."
+      },
+      {
+       "q": "Does Karim have a car?",
+       "qku": "ئەرێ ترومبێلا کەریمی هەیە؟",
+       "cue": "yes",
+       "a": "Yes, he has a car.",
+       "aku": "بەلێ، ترومبێلا وی هەیە."
+      },
+      {
+       "q": "Does she have a phone?",
+       "qku": "ئەرێ تەلەفۆنا وێ هەیە؟",
+       "cue": "no",
+       "a": "No, she doesn't have a phone.",
+       "aku": "نەخێر، تەلەفۆنا وێ نینە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "My day",
+   "titleKu": "رۆژا من",
+   "color": "#FF9600",
+   "topics": [
+    {
+     "emoji": "⏰",
+     "title": {
+      "de": "Present simple",
+      "ku": "دەمێ نوکە یێ ساکار"
+     },
+     "explain": {
+      "de": "We use the present simple for habits and facts. With he, she, it add -s: I work → she works. go → goes, watch → watches, study → studies.",
+      "ku": "بۆ کار و رەوشتێن هەر رۆژ و ڕاستیان بکاردئینین. دگەل he، she، it ‎-s زێدە دبیت: I work ← she works. go ← goes، watch ← watches، study ← studies."
+     },
+     "head": [
+      "",
+      "work",
+      "go",
+      "have"
+     ],
+     "rows": [
+      [
+       "I / you / we / they",
+       "work",
+       "go",
+       "have"
+      ],
+      [
+       "he / she / it",
+       "works",
+       "goes",
+       "has"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I get up at seven.",
+       "ku": "ئەز دەمژمێر حەفت ڕادبم."
+      },
+      {
+       "de": "He works in a bank.",
+       "ku": "ئەو ل بانکێ کار دکەت."
+      },
+      {
+       "de": "She goes to school by bus.",
+       "ku": "ئەو ب پاسێ دچیتە قوتابخانێ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What time do you get up?",
+       "qku": "تو دەمژمێر چەند ڕادبی؟",
+       "cue": "7 o'clock",
+       "a": "I get up at seven o'clock.",
+       "aku": "ئەز دەمژمێر حەفت ڕادبم."
+      },
+      {
+       "q": "Where does Sara work?",
+       "qku": "سارا ل کیڤە کار دکەت؟",
+       "cue": "a hospital",
+       "a": "She works in a hospital.",
+       "aku": "ئەو ل نەخۆشخانەکێ کار دکەت."
+      },
+      {
+       "q": "What does he watch?",
+       "qku": "ئەو چ دبینیت؟",
+       "cue": "football",
+       "a": "He watches football.",
+       "aku": "ئەو تەپا پێ دبینیت."
+      }
+     ],
+     "tip": {
+      "de": "He, she, it → don't forget the -s!",
+      "ku": "دگەل he، she، it ‎-s ژ بیر نەکە!"
+     }
+    },
+    {
+     "emoji": "🚫",
+     "title": {
+      "de": "do / does: negatives and questions",
+      "ku": "do / does: نەرێنی و پرسیار"
+     },
+     "explain": {
+      "de": "Negative: don't / doesn't + verb (no -s): She doesn't like tea. Question: Do / Does + subject + verb: Do you speak English?",
+      "ku": "نەرێنی: don't / doesn't + کار (بێ ‎-s): She doesn't like tea. پرسیار: Do / Does + کەس + کار: Do you speak English?"
+     },
+     "head": [
+      "",
+      "negative",
+      "question"
+     ],
+     "rows": [
+      [
+       "I / you / we / they",
+       "I don't work.",
+       "Do you work?"
+      ],
+      [
+       "he / she / it",
+       "She doesn't work.",
+       "Does she work?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I don't eat meat.",
+       "ku": "ئەز گۆشتی ناخۆم."
+      },
+      {
+       "de": "Does he speak Kurdish? – Yes, he does.",
+       "ku": "ئەرێ ئەو ب کوردی دئاخڤیت؟ – بەلێ."
+      },
+      {
+       "de": "We don't live in Erbil.",
+       "ku": "ئەم ل هەولێرێ ناژین."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Make a question: you / like / coffee",
+       "qku": "پرسیارێ چێکە",
+       "cue": "",
+       "a": "Do you like coffee?",
+       "aku": "ئەرێ تو حەز ژ قەهوێ دکەی؟"
+      },
+      {
+       "q": "Make it negative: He plays football.",
+       "qku": "نەرێنی بکە",
+       "cue": "",
+       "a": "He doesn't play football.",
+       "aku": "ئەو تەپا پێ یاری ناکەت."
+      },
+      {
+       "q": "Does she speak Arabic?",
+       "qku": "ئەرێ ئەو ب عەرەبی دئاخڤیت؟",
+       "cue": "yes",
+       "a": "Yes, she does.",
+       "aku": "بەلێ."
+      }
+     ]
+    },
+    {
+     "emoji": "🕐",
+     "title": {
+      "de": "at, on, in (time)",
+      "ku": "at، on، in (دەم)"
+     },
+     "explain": {
+      "de": "at + clock time (at 8 o'clock). on + day/date (on Monday). in + month, year, part of the day (in May, in the morning). But: at night.",
+      "ku": "at + دەمژمێر (at 8 o'clock). on + رۆژ/رێکەفت (on Monday). in + هەیڤ، سال، پشکێن رۆژێ (in May، in the morning). بەلێ: at night."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "at",
+       "at 7:30, at night"
+      ],
+      [
+       "on",
+       "on Friday, on 5 May"
+      ],
+      [
+       "in",
+       "in June, in 2025, in the evening"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "The class starts at nine.",
+       "ku": "وانە دەمژمێر نەهـ دەستپێدکەت."
+      },
+      {
+       "de": "I don't work on Friday.",
+       "ku": "ئەز رۆژا ئەینیێ کار ناکەم."
+      },
+      {
+       "de": "My birthday is in March.",
+       "ku": "رۆژبوونا من د ئادارێ دا یە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "When do you get up? (7 o'clock)",
+       "qku": "تو کەنگی ڕادبی؟",
+       "cue": "",
+       "a": "At seven o'clock.",
+       "aku": "دەمژمێر حەفت."
+      },
+      {
+       "q": "When is the party? (Saturday)",
+       "qku": "ئاهەنگ کەنگییە؟",
+       "cue": "",
+       "a": "On Saturday.",
+       "aku": "رۆژا شەمبیێ."
+      },
+      {
+       "q": "When is your birthday? (April)",
+       "qku": "رۆژبوونا تە کەنگییە؟",
+       "cue": "",
+       "a": "In April.",
+       "aku": "د نیسانێ دا."
+      }
+     ]
+    },
+    {
+     "emoji": "🔁",
+     "title": {
+      "de": "always, usually, never",
+      "ku": "هەردەم، پتریا جاران، قەت"
+     },
+     "explain": {
+      "de": "Frequency words go before the main verb but after “be”: I always get up early. She is never late.",
+      "ku": "پەیڤێن چەند جاران بەری کاری دهێن، بەلێ پشتی «be»: I always get up early. She is never late."
+     },
+     "head": [
+      "word",
+      "%"
+     ],
+     "rows": [
+      [
+       "always",
+       "100%"
+      ],
+      [
+       "usually",
+       "80%"
+      ],
+      [
+       "often",
+       "60%"
+      ],
+      [
+       "sometimes",
+       "40%"
+      ],
+      [
+       "never",
+       "0%"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I always drink tea in the morning.",
+       "ku": "ئەز هەردەم سپێدێ چایێ ڤەدخۆم."
+      },
+      {
+       "de": "He sometimes plays football.",
+       "ku": "ئەو جار جار تەپا پێ یاری دکەت."
+      },
+      {
+       "de": "She is never late.",
+       "ku": "ئەو قەت درەنگ نامینیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How often do you drink coffee? (always)",
+       "qku": "تو چەند جاران قەهوێ ڤەدخۆی؟",
+       "cue": "",
+       "a": "I always drink coffee.",
+       "aku": "ئەز هەردەم قەهوێ ڤەدخۆم."
+      },
+      {
+       "q": "Is he late? (never)",
+       "qku": "ئەرێ ئەو درەنگ دمینیت؟",
+       "cue": "",
+       "a": "He is never late.",
+       "aku": "ئەو قەت درەنگ نامینیت."
+      },
+      {
+       "q": "Do you cook? (sometimes)",
+       "qku": "ئەرێ تو خوارنێ چێدکەی؟",
+       "cue": "",
+       "a": "I sometimes cook.",
+       "aku": "ئەز جار جار خوارنێ چێدکەم."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "My home and my town",
+   "titleKu": "خانی و باژێڕێ من",
+   "color": "#CE82FF",
+   "topics": [
+    {
+     "emoji": "🏠",
+     "title": {
+      "de": "There is / There are",
+      "ku": "There is / There are (هەیە / هەنە)"
+     },
+     "explain": {
+      "de": "There is + singular: There is a bed. There are + plural: There are two chairs. Question: Is there …? Are there …?",
+      "ku": "There is + تاک: There is a bed (تەختەک هەیە). There are + کۆ: There are two chairs (دوو کورسی هەنە). پرسیار: Is there …? Are there …?"
+     },
+     "head": [
+      "",
+      "positive",
+      "negative",
+      "question"
+     ],
+     "rows": [
+      [
+       "singular",
+       "There is a sofa.",
+       "There isn't a sofa.",
+       "Is there a sofa?"
+      ],
+      [
+       "plural",
+       "There are two rooms.",
+       "There aren't any rooms.",
+       "Are there any rooms?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "There is a park near my house.",
+       "ku": "پارکەک نێزیکی خانیێ من هەیە."
+      },
+      {
+       "de": "There are three bedrooms.",
+       "ku": "سێ ژوورێن نڤستنێ هەنە."
+      },
+      {
+       "de": "Is there a bank here?",
+       "ku": "ئەرێ ل ڤێرێ بانکەک هەیە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Is there a kitchen? (yes)",
+       "qku": "ئەرێ مەتبەخ هەیە؟",
+       "cue": "",
+       "a": "Yes, there is.",
+       "aku": "بەلێ، هەیە."
+      },
+      {
+       "q": "How many chairs are there? (four)",
+       "qku": "چەند کورسی هەنە؟",
+       "cue": "",
+       "a": "There are four chairs.",
+       "aku": "چار کورسی هەنە."
+      },
+      {
+       "q": "Is there a hospital here? (no)",
+       "qku": "ئەرێ ل ڤێرێ نەخۆشخانە هەیە؟",
+       "cue": "",
+       "a": "No, there isn't.",
+       "aku": "نەخێر، نینە."
+      }
+     ]
+    },
+    {
+     "emoji": "📍",
+     "title": {
+      "de": "in, on, under, next to …",
+      "ku": "in، on، under، next to (جهـ)"
+     },
+     "explain": {
+      "de": "Prepositions of place: in (inside), on (on top of), under, next to, behind, in front of, between.",
+      "ku": "ئامرازێن جهی: in (د ناڤ دا)، on (ل سەر)، under (ل بن)، next to (ل تەنیشت)، behind (ل پشت)، in front of (ل بەر)، between (د ناڤبەرا)."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "in",
+       "in the box"
+      ],
+      [
+       "on",
+       "on the table"
+      ],
+      [
+       "under",
+       "under the bed"
+      ],
+      [
+       "next to",
+       "next to the bank"
+      ],
+      [
+       "behind",
+       "behind the door"
+      ],
+      [
+       "between",
+       "between the bank and the café"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "The keys are on the table.",
+       "ku": "کلیل ل سەر مێزێ نە."
+      },
+      {
+       "de": "The cat is under the bed.",
+       "ku": "پشیک ل بن تەختی یە."
+      },
+      {
+       "de": "The café is next to the bank.",
+       "ku": "کافێ ل تەنیشت بانکێ یە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where is the phone? (on / table)",
+       "qku": "تەلەفۆن ل کیڤەیە؟",
+       "cue": "",
+       "a": "It's on the table.",
+       "aku": "ل سەر مێزێ یە."
+      },
+      {
+       "q": "Where is the bag? (under / chair)",
+       "qku": "جانتە ل کیڤەیە؟",
+       "cue": "",
+       "a": "It's under the chair.",
+       "aku": "ل بن کورسیێ یە."
+      },
+      {
+       "q": "Where is the pharmacy? (next to / bank)",
+       "qku": "دەرمانخانە ل کیڤەیە؟",
+       "cue": "",
+       "a": "It's next to the bank.",
+       "aku": "ل تەنیشت بانکێ یە."
+      }
+     ]
+    },
+    {
+     "emoji": "📢",
+     "title": {
+      "de": "Imperative",
+      "ku": "فەرمان"
+     },
+     "explain": {
+      "de": "Use the base verb to give instructions: Open the door! Turn left. Negative: Don't + verb: Don't run!",
+      "ku": "بۆ ڕێنمایی شێوێ سەرەکی یێ کاری بکاربینە: Open the door! (دەرگەهی ڤەکە!) Turn left. نەرێنی: Don't + کار: Don't run!"
+     },
+     "head": [
+      "positive",
+      "negative"
+     ],
+     "rows": [
+      [
+       "Sit down, please.",
+       "Don't sit there."
+      ],
+      [
+       "Turn left.",
+       "Don't turn right."
+      ],
+      [
+       "Be quiet!",
+       "Don't be late!"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Go straight on and turn left.",
+       "ku": "راستەوخۆ بچە و بەرەف چەپێ بزڤڕە."
+      },
+      {
+       "de": "Please close the window.",
+       "ku": "ژ کەرەما خۆ پەنجەرێ بگرە."
+      },
+      {
+       "de": "Don't forget your keys!",
+       "ku": "کلیلێن خۆ ژ بیر نەکە!"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Tell your friend: open / the window",
+       "qku": "بۆ هەڤالێ خۆ بێژە",
+       "cue": "",
+       "a": "Open the window, please.",
+       "aku": "پەنجەرێ ڤەکە، ژ کەرەما خۆ."
+      },
+      {
+       "q": "Tell your friend: not / be late",
+       "qku": "بۆ هەڤالێ خۆ بێژە",
+       "cue": "",
+       "a": "Don't be late!",
+       "aku": "درەنگ نەمینە!"
+      },
+      {
+       "q": "Give directions: turn / right",
+       "qku": "رێکێ نیشان بدە",
+       "cue": "",
+       "a": "Turn right.",
+       "aku": "بەرەف ڕاستێ بزڤڕە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Free time and food",
+   "titleKu": "دەمێ ڤالا و خوارن",
+   "color": "#00CD9C",
+   "topics": [
+    {
+     "emoji": "💪",
+     "title": {
+      "de": "can / can't",
+      "ku": "can / can't (شیان)"
+     },
+     "explain": {
+      "de": "can + base verb for ability: I can swim. Negative: can't. Question: Can you …? can is the same for all persons (no -s).",
+      "ku": "can + کار بۆ شیانێ: I can swim (ئەز دشێم مەلەڤانیێ بکەم). نەرێنی: can't. پرسیار: Can you …? can بۆ هەمی کەسان وەکی ئێکە (بێ ‎-s)."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "positive",
+       "She can drive."
+      ],
+      [
+       "negative",
+       "I can't cook."
+      ],
+      [
+       "question",
+       "Can you swim? – Yes, I can."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I can speak three languages.",
+       "ku": "ئەز دشێم ب سێ زمانان باخڤم."
+      },
+      {
+       "de": "He can't play the guitar.",
+       "ku": "ئەو نەشێت گیتارێ لێبدەت."
+      },
+      {
+       "de": "Can you help me?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Can you swim? (yes)",
+       "qku": "ئەرێ تو دشێی مەلەڤانیێ بکەی؟",
+       "cue": "",
+       "a": "Yes, I can.",
+       "aku": "بەلێ، دشێم."
+      },
+      {
+       "q": "Can she drive? (no)",
+       "qku": "ئەرێ ئەو دشێت ترومبێلێ بهاژۆت؟",
+       "cue": "",
+       "a": "No, she can't.",
+       "aku": "نەخێر، نەشێت."
+      },
+      {
+       "q": "What can you cook? (rice)",
+       "qku": "تو دشێی چ چێبکەی؟",
+       "cue": "",
+       "a": "I can cook rice.",
+       "aku": "ئەز دشێم برنجی چێبکەم."
+      }
+     ]
+    },
+    {
+     "emoji": "🍕",
+     "title": {
+      "de": "like + -ing",
+      "ku": "حەز ژێ کرن: like + ‎-ing"
+     },
+     "explain": {
+      "de": "After like, love, hate we often use verb + -ing: I like reading. She loves cooking. I don't like running.",
+      "ku": "پشتی like، love، hate پتریا جاران کار + ‎-ing دهێت: I like reading (ئەز حەز ژ خواندنێ دکەم). She loves cooking."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "love ❤️",
+       "I love swimming."
+      ],
+      [
+       "like 🙂",
+       "He likes reading."
+      ],
+      [
+       "don't like 🙁",
+       "We don't like running."
+      ],
+      [
+       "hate 😠",
+       "She hates waiting."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I like playing football.",
+       "ku": "ئەز حەز ژ یاریا تەپا پێ دکەم."
+      },
+      {
+       "de": "She loves cooking Kurdish food.",
+       "ku": "ئەو گەلەک حەز ژ چێکرنا خوارنا کوردی دکەت."
+      },
+      {
+       "de": "Do you like dancing?",
+       "ku": "ئەرێ تو حەز ژ سەمایێ دکەی؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "What do you like doing? (read)",
+       "qku": "تو حەز ژ چ دکەی؟",
+       "cue": "",
+       "a": "I like reading.",
+       "aku": "ئەز حەز ژ خواندنێ دکەم."
+      },
+      {
+       "q": "Does he like swimming? (yes)",
+       "qku": "ئەرێ ئەو حەز ژ مەلەڤانیێ دکەت؟",
+       "cue": "",
+       "a": "Yes, he likes swimming.",
+       "aku": "بەلێ، حەز ژ مەلەڤانیێ دکەت."
+      },
+      {
+       "q": "Do they like waiting? (no)",
+       "qku": "ئەرێ ئەو حەز ژ چاڤەڕێکرنێ دکەن؟",
+       "cue": "",
+       "a": "No, they don't like waiting.",
+       "aku": "نەخێر، حەز ژ چاڤەڕێکرنێ ناکەن."
+      }
+     ]
+    },
+    {
+     "emoji": "🧂",
+     "title": {
+      "de": "some / any, How much / How many",
+      "ku": "some / any — How much / How many"
+     },
+     "explain": {
+      "de": "some in positive sentences, any in negatives and questions. How many + countable (apples). How much + uncountable (water, money).",
+      "ku": "some د رستێن ئەرێنی دا، any د نەرێنی و پرسیاران دا. How many + تشتێن دهێنە هژمارتن (apples). How much + یێن ناهێنە هژمارتن (water، money)."
+     },
+     "head": [
+      "",
+      "countable",
+      "uncountable"
+     ],
+     "rows": [
+      [
+       "+",
+       "some eggs",
+       "some milk"
+      ],
+      [
+       "– / ?",
+       "any eggs",
+       "any milk"
+      ],
+      [
+       "question",
+       "How many eggs?",
+       "How much milk?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "We need some bread.",
+       "ku": "نان بۆ مە پێدڤییە."
+      },
+      {
+       "de": "Is there any milk?",
+       "ku": "ئەرێ شیر هەیە؟"
+      },
+      {
+       "de": "How much is it? – Five dollars.",
+       "ku": "ب چەندە؟ – پێنج دۆلار."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Do we have any eggs? (yes)",
+       "qku": "ئەرێ هێک مە هەنە؟",
+       "cue": "",
+       "a": "Yes, we have some eggs.",
+       "aku": "بەلێ، هندەک هێک مە هەنە."
+      },
+      {
+       "q": "___ apples do you want? (How many / How much)",
+       "qku": "کیژ؟",
+       "cue": "",
+       "a": "How many apples do you want?",
+       "aku": "تو چەند سێڤان دخوازی؟"
+      },
+      {
+       "q": "___ water do you drink? (How many / How much)",
+       "qku": "کیژ؟",
+       "cue": "",
+       "a": "How much water do you drink?",
+       "aku": "تو چەند ئاڤێ ڤەدخۆی؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🏃",
+     "title": {
+      "de": "Present continuous",
+      "ku": "دەمێ نوکە یێ بەردەوام"
+     },
+     "explain": {
+      "de": "For things happening now: am / is / are + verb-ing. I am reading. She is cooking now. Are you working?",
+      "ku": "بۆ تشتێن نوکە دبن: am / is / are + کار-ing. I am reading (ئەز یێ دخوینم). She is cooking now. Are you working?"
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "I",
+       "I am eating."
+      ],
+      [
+       "he / she / it",
+       "She is sleeping."
+      ],
+      [
+       "you / we / they",
+       "They are playing."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I am learning English now.",
+       "ku": "ئەز نوکە ئینگلیزی فێر دبم."
+      },
+      {
+       "de": "What are you doing? – I'm cooking.",
+       "ku": "تو چ دکەی؟ – ئەز خوارنێ چێدکەم."
+      },
+      {
+       "de": "The children are playing outside.",
+       "ku": "زارۆک ل دەرڤە یاری دکەن."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What are you doing now? (read / a book)",
+       "qku": "تو نوکە چ دکەی؟",
+       "cue": "",
+       "a": "I am reading a book.",
+       "aku": "ئەز پەرتووکەکێ دخوینم."
+      },
+      {
+       "q": "What is Sara doing? (cook)",
+       "qku": "سارا چ دکەت؟",
+       "cue": "",
+       "a": "She is cooking.",
+       "aku": "ئەو خوارنێ چێدکەت."
+      },
+      {
+       "q": "Are they sleeping? (no / play)",
+       "qku": "ئەرێ ئەو دنڤن؟",
+       "cue": "",
+       "a": "No, they are playing.",
+       "aku": "نەخێر، ئەو یاری دکەن."
+      }
+     ],
+     "tip": {
+      "de": "Every day → present simple. Now → present continuous.",
+      "ku": "هەر رۆژ ← present simple. نوکە ← present continuous."
+     }
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Past and future",
+   "titleKu": "بۆری و پاشەڕۆژ",
+   "color": "#FF4B4B",
+   "topics": [
+    {
+     "emoji": "🕰️",
+     "title": {
+      "de": "was / were",
+      "ku": "was / were (بوو)"
+     },
+     "explain": {
+      "de": "The past of be: I / he / she / it → was. You / we / they → were. Negative: wasn't / weren't.",
+      "ku": "دەمێ بۆری یێ be: I / he / she / it ← was. You / we / they ← were. نەرێنی: wasn't / weren't."
+     },
+     "head": [
+      "",
+      "past of be",
+      "negative"
+     ],
+     "rows": [
+      [
+       "I / he / she / it",
+       "was",
+       "wasn't"
+      ],
+      [
+       "you / we / they",
+       "were",
+       "weren't"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I was at home yesterday.",
+       "ku": "دوهی ئەز ل مال بووم."
+      },
+      {
+       "de": "They were very happy.",
+       "ku": "ئەو گەلەک دلخۆش بوون."
+      },
+      {
+       "de": "Where were you last night?",
+       "ku": "تو دوهی شەڤێ ل کیڤە بووی؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where were you yesterday? (at work)",
+       "qku": "تو دوهی ل کیڤە بووی؟",
+       "cue": "",
+       "a": "I was at work.",
+       "aku": "ئەز ل کاری بووم."
+      },
+      {
+       "q": "Was it cold? (yes)",
+       "qku": "ئەرێ هەوا سار بوو؟",
+       "cue": "",
+       "a": "Yes, it was.",
+       "aku": "بەلێ، سار بوو."
+      },
+      {
+       "q": "Were they at school? (no)",
+       "qku": "ئەرێ ئەو ل قوتابخانێ بوون؟",
+       "cue": "",
+       "a": "No, they weren't.",
+       "aku": "نەخێر، نەبوون."
+      }
+     ]
+    },
+    {
+     "emoji": "📖",
+     "title": {
+      "de": "Past simple",
+      "ku": "دەمێ بۆری یێ ساکار"
+     },
+     "explain": {
+      "de": "Regular verbs add -ed: work → worked, play → played. Many verbs are irregular: go → went, have → had, eat → ate, see → saw. Negative/question: didn't / Did + base verb.",
+      "ku": "کارێن ل سەر یاسایێ ‎-ed وەردگرن: work ← worked. گەلەک کار نە ل سەر یاسایێ نە: go ← went، have ← had، eat ← ate، see ← saw. نەرێنی/پرسیار: didn't / Did + کارێ سەرەکی."
+     },
+     "head": [
+      "verb",
+      "past",
+      "verb",
+      "past"
+     ],
+     "rows": [
+      [
+       "work",
+       "worked",
+       "go",
+       "went"
+      ],
+      [
+       "play",
+       "played",
+       "have",
+       "had"
+      ],
+      [
+       "watch",
+       "watched",
+       "eat",
+       "ate"
+      ],
+      [
+       "study",
+       "studied",
+       "see",
+       "saw"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I watched a film last night.",
+       "ku": "دوهی شەڤێ من فیلمەک دیت."
+      },
+      {
+       "de": "We went to Duhok on Friday.",
+       "ku": "رۆژا ئەینیێ ئەم چووینە دهۆکێ."
+      },
+      {
+       "de": "Did you see Karim? – No, I didn't.",
+       "ku": "ئەرێ تە کەریم دیت؟ – نەخێر."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What did you do yesterday? (play / football)",
+       "qku": "تە دوهی چ کر؟",
+       "cue": "",
+       "a": "I played football.",
+       "aku": "من تەپا پێ یاری کر."
+      },
+      {
+       "q": "Where did she go? (to the market)",
+       "qku": "ئەو چوو کیڤە؟",
+       "cue": "",
+       "a": "She went to the market.",
+       "aku": "ئەو چوو بازاڕێ."
+      },
+      {
+       "q": "Did you eat breakfast? (no)",
+       "qku": "ئەرێ تە تێشت خوار؟",
+       "cue": "",
+       "a": "No, I didn't.",
+       "aku": "نەخێر، من نەخوار."
+      }
+     ]
+    },
+    {
+     "emoji": "🙋‍♀️",
+     "title": {
+      "de": "me, him, her, us, them",
+      "ku": "me، him، her… (جێناڤێن بەرکار)"
+     },
+     "explain": {
+      "de": "After a verb or preposition we use object pronouns: I → me, he → him, she → her, we → us, they → them. Call me! I like her.",
+      "ku": "پشتی کاری یان ئامرازی جێناڤێن بەرکار دهێن: I ← me، he ← him، she ← her، we ← us، they ← them. Call me! I like her."
+     },
+     "head": [
+      "subject",
+      "object"
+     ],
+     "rows": [
+      [
+       "I",
+       "me"
+      ],
+      [
+       "you",
+       "you"
+      ],
+      [
+       "he",
+       "him"
+      ],
+      [
+       "she",
+       "her"
+      ],
+      [
+       "it",
+       "it"
+      ],
+      [
+       "we",
+       "us"
+      ],
+      [
+       "they",
+       "them"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Can you help me?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟"
+      },
+      {
+       "de": "I see him every day.",
+       "ku": "ئەز هەر رۆژ وی دبینم."
+      },
+      {
+       "de": "This gift is for them.",
+       "ku": "ئەڤ دیارییە بۆ وانە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Do you know Karim? (yes)",
+       "qku": "ئەرێ تو کەریمی دناسی؟",
+       "cue": "",
+       "a": "Yes, I know him.",
+       "aku": "بەلێ، ئەز وی دناسم."
+      },
+      {
+       "q": "Do you like Sara? (yes)",
+       "qku": "ئەرێ تو حەز ژ سارایێ دکەی؟",
+       "cue": "",
+       "a": "Yes, I like her.",
+       "aku": "بەلێ، حەز ژ وێ دکەم."
+      },
+      {
+       "q": "Is this for us? (yes)",
+       "qku": "ئەرێ ئەڤە بۆ مە یە؟",
+       "cue": "",
+       "a": "Yes, it's for you.",
+       "aku": "بەلێ، بۆ هەوە یە."
+      }
+     ]
+    },
+    {
+     "emoji": "📈",
+     "title": {
+      "de": "Comparatives and superlatives",
+      "ku": "بەراوردکرن: ‎-er و the ‎-est"
+     },
+     "explain": {
+      "de": "Short adjectives: -er than / the -est: big → bigger → the biggest. Long adjectives: more / the most: more expensive. Irregular: good → better → the best, bad → worse → the worst.",
+      "ku": "هەڤاڵناڤێن کورت: ‎-er than / the ‎-est: big ← bigger ← the biggest. یێن درێژ: more / the most. نە ل سەر یاسایێ: good ← better ← the best، bad ← worse ← the worst."
+     },
+     "head": [
+      "adjective",
+      "comparative",
+      "superlative"
+     ],
+     "rows": [
+      [
+       "cheap",
+       "cheaper",
+       "the cheapest"
+      ],
+      [
+       "big",
+       "bigger",
+       "the biggest"
+      ],
+      [
+       "expensive",
+       "more expensive",
+       "the most expensive"
+      ],
+      [
+       "good",
+       "better",
+       "the best"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Erbil is bigger than Duhok.",
+       "ku": "هەولێر ژ دهۆکێ مەزنترە."
+      },
+      {
+       "de": "This phone is more expensive.",
+       "ku": "ئەڤ تەلەفۆنە گرانترە."
+      },
+      {
+       "de": "She is the best student in the class.",
+       "ku": "ئەو باشترین قوتابییا پۆلێ یە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which is bigger? (an elephant / a cat)",
+       "qku": "کیژ مەزنترە؟",
+       "cue": "",
+       "a": "An elephant is bigger than a cat.",
+       "aku": "فیل ژ پشیکێ مەزنترە."
+      },
+      {
+       "q": "good → comparative?",
+       "qku": "بەراوردکرن",
+       "cue": "",
+       "a": "better",
+       "aku": "باشتر"
+      },
+      {
+       "q": "Who is the tallest? (Karim)",
+       "qku": "کی درێژترینە؟",
+       "cue": "",
+       "a": "Karim is the tallest.",
+       "aku": "کەریم درێژترینە."
+      }
+     ]
+    },
+    {
+     "emoji": "🔮",
+     "title": {
+      "de": "going to + will",
+      "ku": "پاشەڕۆژ: going to و will"
+     },
+     "explain": {
+      "de": "Plans: am/is/are going to + verb: I'm going to visit my aunt. Quick decisions and predictions: will + verb: I'll help you. It will rain.",
+      "ku": "بۆ پلانان: am/is/are going to + کار: I'm going to visit my aunt. بۆ بڕیارێن ب لەز و پێشبینیان: will + کار: I'll help you (دێ هاریکاریا تە کەم)."
+     },
+     "head": [
+      "",
+      "example"
+     ],
+     "rows": [
+      [
+       "plan",
+       "We are going to travel in summer."
+      ],
+      [
+       "decision",
+       "I'll take the blue one."
+      ],
+      [
+       "prediction",
+       "It will be hot tomorrow."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "I'm going to study tonight.",
+       "ku": "ئەز دێ ئەڤ شەڤە خوینم."
+      },
+      {
+       "de": "Don't worry, I'll call you.",
+       "ku": "خەم نەخۆ، ئەز دێ تەلەفۆنێ بۆ تە کەم."
+      },
+      {
+       "de": "Will you come tomorrow?",
+       "ku": "ئەرێ تو سوبەهی دێ هێی؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "What are you going to do tomorrow? (visit / my parents)",
+       "qku": "تو سوبەهی دێ چ کەی؟",
+       "cue": "",
+       "a": "I'm going to visit my parents.",
+       "aku": "ئەز دێ سەرا دایک و بابێن خۆ دەم."
+      },
+      {
+       "q": "The phone is ringing! (I / answer)",
+       "qku": "تەلەفۆن لێ ددەت!",
+       "cue": "",
+       "a": "I'll answer it.",
+       "aku": "ئەز دێ بەرسڤێ دەم."
+      },
+      {
+       "q": "Will it rain tomorrow? (yes)",
+       "qku": "ئەرێ سوبەهی باران دێ باریت؟",
+       "cue": "",
+       "a": "Yes, it will.",
+       "aku": "بەلێ، دێ باریت."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
