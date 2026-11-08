@@ -459,9 +459,22 @@ class _ComboToastState extends State<_ComboToast> with SingleTickerProviderState
           child: Opacity(
             opacity: t > 0.8 ? 0 : 1,
             child: Transform.rotate(
-              angle: 0.5,
+              angle: 0.35,
               child: Stack(clipBehavior: Clip.none, children: [
-                Positioned(left: -h * 0.9, top: h * 0.2, child: CustomPaint(size: Size(h, h * 0.8), painter: _CapeAndSpeed(t, accent))),
+                // خەتێن لەزێ + سێبەرێن ل دویڤ (motion trail)
+                Positioned(left: -h * 1.1, top: h * 0.1, child: CustomPaint(size: Size(h * 1.1, h * 0.8), painter: _SpeedLines(t, accent))),
+                for (var k = 3; k >= 1; k--)
+                  Positioned(
+                    left: -k * 26.0,
+                    top: k * 6.0,
+                    child: Opacity(
+                      opacity: 0.12 * (4 - k),
+                      child: ColorFiltered(
+                        colorFilter: ColorFilter.mode(accent, BlendMode.srcATop),
+                        child: Image.asset(char.base, height: h),
+                      ),
+                    ),
+                  ),
                 img,
               ]),
             ),
@@ -525,41 +538,26 @@ class _ComboToastState extends State<_ComboToast> with SingleTickerProviderState
   }
 }
 
-class _CapeAndSpeed extends CustomPainter {
+class _SpeedLines extends CustomPainter {
   final double t;
   final Color accent;
-  _CapeAndSpeed(this.t, this.accent);
+  _SpeedLines(this.t, this.accent);
   @override
   void paint(Canvas canvas, Size s) {
-    // خەتێن لەزێ
-    for (var k = 0; k < 5; k++) {
-      final y = s.height * (0.15 + k * 0.17);
-      final len = s.width * (0.5 + 0.4 * ((k * 37 % 10) / 10));
-      canvas.drawLine(Offset(s.width - len, y), Offset(s.width, y),
-          Paint()
-            ..strokeWidth = 3
-            ..strokeCap = StrokeCap.round
-            ..color = Colors.white.withValues(alpha: 0.5));
+    for (var k = 0; k < 6; k++) {
+      final y = s.height * (0.08 + k * 0.16);
+      final len = s.width * (0.35 + 0.5 * (((k * 37 + (t * 30).floor()) % 10) / 10));
+      final paint = Paint()
+        ..strokeWidth = k.isEven ? 3 : 2
+        ..strokeCap = StrokeCap.round
+        ..shader = LinearGradient(colors: [Colors.transparent, (k.isEven ? Colors.white : accent).withValues(alpha: 0.8)])
+            .createShader(Rect.fromLTWH(s.width - len, y - 2, len, 4));
+      canvas.drawLine(Offset(s.width - len, y), Offset(s.width, y), paint);
     }
-    // کەپ (پێچا سۆر)
-    final wave = sin(t * 40) * 8;
-    final path = Path()
-      ..moveTo(s.width, s.height * 0.1)
-      ..quadraticBezierTo(s.width * 0.5, s.height * 0.0 + wave, 0, s.height * 0.25 + wave)
-      ..lineTo(s.width * 0.1, s.height * 0.75 - wave)
-      ..quadraticBezierTo(s.width * 0.55, s.height * 0.9 + wave, s.width, s.height * 0.55)
-      ..close();
-    canvas.drawPath(path, Paint()..color = const Color(0xFFE53935));
-    canvas.drawPath(
-        path,
-        Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 2
-          ..color = const Color(0xFF8E0000));
   }
 
   @override
-  bool shouldRepaint(_CapeAndSpeed o) => o.t != t;
+  bool shouldRepaint(_SpeedLines o) => o.t != t;
 }
 
 class _PowerRings extends CustomPainter {
