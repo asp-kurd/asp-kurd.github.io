@@ -26,6 +26,8 @@ class ProgressService extends ChangeNotifier {
   bool onboarded = false;
   int xp = 0;
   int streak = 0;
+  int combo = 0, bestCombo = 0; // ⚡ بەرسڤێن دروست ل دویڤ ئێک
+  (int, int)? streakEvent; // 🔥 ستریک ژ ٣ بوو ٤ ➔ شاشا ئاهەنگێ
   int hearts = maxHearts;
   Set<String> completedUnits = {};
   Map<String, int> mistakes = {}; // conceptId -> ژمارا خەلەتیان (بۆ دووبارەکرنێ)
@@ -67,6 +69,8 @@ class ProgressService extends ChangeNotifier {
     onboarded = _p.getBool('onboarded') ?? false;
     xp = _p.getInt('xp') ?? 0;
     streak = _p.getInt('streak') ?? 0;
+    combo = _p.getInt('combo') ?? 0;
+    bestCombo = _p.getInt('best_combo') ?? 0;
     dailyGoal = _p.getInt('daily_goal') ?? 30;
     lessonsDone = _p.getInt('lessons_done') ?? 0;
     perfectLessons = _p.getInt('perfect_lessons') ?? 0;
@@ -232,6 +236,34 @@ class ProgressService extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// XP بۆ هەر بەرسڤەکێ ل دویف کۆمبۆیێ: ٢ · ١٠+ ➔ ٤ · ٢٥+ ➔ ٥ · ٥٠+ ➔ ٧
+  static int xpFor(int combo) => combo >= 50 ? 7 : (combo >= 25 ? 5 : (combo >= 10 ? 4 : 2));
+
+  /// بەرسڤەک تۆمار بکە: کۆمبۆ زێدە دبیت یان دبیتە ٠. XP ـا ڤێ بەرسڤێ ددەتە دەر.
+  int registerAnswer(bool ok) {
+    if (ok) {
+      combo++;
+      if (combo > bestCombo) {
+        bestCombo = combo;
+        _p.setInt('best_combo', bestCombo);
+      }
+    } else {
+      combo = 0;
+    }
+    _p.setInt('combo', combo);
+    notifyListeners();
+    return ok ? xpFor(combo) : 0;
+  }
+
+  /// ئایا ل ڤی رۆژی خواندن هەبوو؟ (بۆ شاشا ستریکێ)
+  bool studiedOn(DateTime d) => (dayXp[_day(d)] ?? 0) > 0;
+
+  (int, int)? takeStreakEvent() {
+    final e = streakEvent;
+    streakEvent = null;
+    return e;
+  }
+
   Future<void> completeLesson({required String? unitId, required int earnedXp, bool perfect = false}) async {
     lessonsDone++;
     Backend.instance.track(lessons: 1);
@@ -278,7 +310,9 @@ class ProgressService extends ChangeNotifier {
     final lastStudy = _p.getString('last_study');
     if (lastStudy != today) {
       final yesterday = _day(DateTime.now().subtract(const Duration(days: 1)));
-      streak = (lastStudy == yesterday) ? streak + 1 : 1;
+      final old = (lastStudy == yesterday) ? streak : 0;
+      streak = old + 1;
+      streakEvent = (old, streak);
       await _p.setString('last_study', today);
     }
     await _p.setInt('xp', xp);

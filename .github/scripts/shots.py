@@ -8,7 +8,7 @@ pages = [
     ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
     ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
-    ("mascot", "demo=mascot"),
+    ("streak", "demo=streak"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -21,12 +21,19 @@ with sync_playwright() as p:
             pg.goto(f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
-            if name.startswith("lesson"):
+            if name == "streak":
+                for k in range(4):
+                    time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")
+            if name.startswith("combo"):
+                time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
+            if name.startswith("lesson") or name.startswith("combo"):
                 # بەرسڤەکێ هەلبژێرە و پشکنین بکە
                 for y in (560, 640, 720):
                     pg.mouse.click(214, y); time.sleep(0.4)
-                pg.mouse.click(214, 880); time.sleep(1.5)
+                pg.mouse.click(214, 880); time.sleep(0.35)
                 pg.screenshot(path=f"{out}/{name}_2.png")
+                time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_3.png")
+                time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_4.png")
         except Exception as e:
             print("fail", name, e)
         # بۆ هەر خەلەتیەکێ: کۆدێ دۆرا وێ ژ main.dart.js

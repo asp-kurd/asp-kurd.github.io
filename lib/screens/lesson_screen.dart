@@ -8,6 +8,8 @@ import '../services/progress_service.dart';
 import '../services/sfx.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import 'streak_screen.dart';
+import 'widgets/combo.dart';
 import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 
@@ -44,7 +46,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   final Set<String> _requeued = {};
   int index = 0;
   int correctCount = 0;
-  int firstCorrect = 0; // بەرسڤێن دروست ژ جارا ئێکێ (بۆ ڕێژا ٪)
+  int firstCorrect = 0;
+  int answerXp = 0; // XP ژ بەرسڤان (ل دویف کۆمبۆیێ) // بەرسڤێن دروست ژ جارا ئێکێ (بۆ ڕێژا ٪)
   int totalInitial = 0;
   ClozeInfo? cz; // 📝 بۆ پرسیارا جهێ ڤالا
 
@@ -294,6 +297,14 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     } else {
       Sfx.wrong();
     }
+    // ⚡ کۆمبۆ + XP بۆ ڤێ بەرسڤێ
+    final gained = ex.type == ExerciseType.speak ? 2 : progress.registerAnswer(ok);
+    answerXp += gained;
+    if (gained > 0) showXpPop(context, gained, combo: progress.combo);
+    if (ok && ex.type != ExerciseType.speak && progress.combo > 0 && progress.combo % 5 == 0) {
+      Sfx.star();
+      showComboToast(context, progress.combo, native);
+    }
     if (ok && index < totalInitial && ex.type != ExerciseType.speak) firstCorrect++;
     if (ex.type == ExerciseType.speak && index < totalInitial) firstCorrect++;
     // پشتی پشکنینێ دەنگێ دروست لێدە
@@ -352,7 +363,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   }
 
   Future<void> _finish() async {
-    final xp = 10 + correctCount * 2;
+    final xp = 10 + answerXp;
     final percent = totalInitial == 0 ? 100 : (firstCorrect * 100 / totalInitial).round().clamp(0, 100);
     final perfect = percent >= 100;
     await progress.completeLesson(unitId: widget.unit?.id, earnedXp: xp, perfect: perfect);
@@ -393,14 +404,12 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(icon: Icon(Icons.close, color: AppColors.fg70), onPressed: () => Navigator.pop(context)),
-          title: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: LinearProgressIndicator(
-              value: (index + (checked ? 1 : 0)) / queue.length,
-              minHeight: 12,
-              backgroundColor: AppColors.card,
-              valueColor: const AlwaysStoppedAnimation(AppColors.green),
-            ),
+          title: ListenableBuilder(
+            listenable: progress,
+            builder: (_, __) => Row(children: [
+              Expanded(child: ComboBar(value: (index + (checked ? 1 : 0)) / queue.length, combo: progress.combo)),
+              ComboBadge(combo: progress.combo),
+            ]),
           ),
           actions: [
             const Icon(Icons.favorite, color: AppColors.red),
@@ -1052,7 +1061,12 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                   const Spacer(),
                   SizedBox(
                     width: double.infinity,
-                    child: BigButton(label: tr(lang, 'بەردەوام بە', 'Weiter', 'CONTINUE'), onPressed: () => Navigator.pop(context)),
+                    child: BigButton(
+                      label: tr(lang, 'بەردەوام بە', 'Weiter', 'CONTINUE'),
+                      onPressed: () async {
+                        if (!await maybeShowStreak(context, replace: true) && context.mounted) Navigator.pop(context);
+                      },
+                    ),
                   ),
                   const SizedBox(height: 10),
                   SizedBox(

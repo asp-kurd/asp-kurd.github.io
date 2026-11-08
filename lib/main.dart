@@ -15,6 +15,7 @@ import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/summary_screen.dart';
+import 'screens/streak_screen.dart';
 import 'models.dart';
 import 'ui.dart';
 
@@ -67,6 +68,17 @@ class ZimanProApp extends StatelessWidget {
       'mascot' => const MascotDemo(),
       'home' => const HomeScreen(),
       'summary' => const SummaryListScreen(),
+      'streak' => const StreakScreen(from: 3, to: 4),
+      'combo' => () {
+          ProgressService.instance.combo = 14;
+          return InteractiveLessonScreen(
+              unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze);
+        }(),
+      'combo10' => () {
+          ProgressService.instance.combo = 19;
+          return InteractiveLessonScreen(
+              unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze);
+        }(),
       'cloze' => InteractiveLessonScreen(
           unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze),
       'card' => const SummaryCardScreen(start: 9),

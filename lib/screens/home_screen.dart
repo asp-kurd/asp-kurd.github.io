@@ -8,6 +8,8 @@ import '../services/backend.dart';
 import 'account_screens.dart';
 import 'book_screen.dart';
 import 'course_screens.dart';
+import 'streak_screen.dart';
+import 'widgets/combo.dart' show kuNum;
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
 import 'lesson_screen.dart';
@@ -33,6 +35,12 @@ class _HomeScreenState extends State<HomeScreen> {
       listenable: Listenable.merge([progress, Backend.instance]),
       builder: (context, _) {
         final n = progress.nativeLang;
+        // 🔥 ستریک زێدە بوو (بۆ نموونە ژ یاریێ) ➔ شاشا ئاهەنگێ
+        if (progress.streakEvent != null) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted && (ModalRoute.of(context)?.isCurrent ?? false)) maybeShowStreak(context);
+          });
+        }
         return Directionality(
           textDirection: n.direction,
           child: Scaffold(
@@ -206,6 +214,10 @@ class _LearnPath extends StatelessWidget {
         for (var i = 0; i < appCurriculum.length; i++) ...[
           if (i == 0 || appCurriculum[i].section != appCurriculum[i - 1].section) _sectionHeader(appCurriculum[i].section, n),
           _unitBlock(context, i),
+          // 📝 ئەزموونا وانێ: پشتی دویماهیک قۆناغا وێ (هەر کەسێ بڤێت)
+          if ((i == appCurriculum.length - 1 || appCurriculum[i + 1].section != appCurriculum[i].section) &&
+              lektionForSection(appCurriculum[i].section) != null)
+            _lektionTestCard(context, lektionForSection(appCurriculum[i].section)!, i, n),
         ],
         if (p.completedUnits.length >= appCurriculum.length)
           Container(
@@ -274,7 +286,6 @@ class _LearnPath extends StatelessWidget {
   /// سەرێ وانەیەکا پەرتووکێ: ناڤ + 💬 دیالۆگ + 📝 ئەزموون
   Widget _lektionHeader(LektionInfo lek, String title, AppLanguage n) {
     return Builder(builder: (context) {
-      final best = ProgressService.instance.examBest('lek_${lek.n}');
       return Container(
         margin: const EdgeInsets.only(top: 12, bottom: 18),
         padding: const EdgeInsets.all(14),
@@ -288,29 +299,72 @@ class _LearnPath extends StatelessWidget {
           Text(lek.titleDe, textDirection: TextDirection.ltr, textAlign: TextAlign.end,
               style: TextStyle(color: AppColors.fg60, fontSize: 13)),
           const SizedBox(height: 10),
-          Row(children: [
-            Expanded(
-              child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: BorderSide(color: AppColors.fg30)),
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
-                icon: const Text('💬'),
-                label: Text(tr(n, 'دیالۆگ', 'Dialog', 'Dialogue')),
-              ),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
+              icon: const Text('💬'),
+              label: Text(tr(n, 'دیالۆگا ڤێ وانێ', 'Dialog', 'Dialogue')),
             ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.white, side: BorderSide(color: best != null && best >= 60 ? AppColors.green : AppColors.fg30)),
-                onPressed: () => openLektionTest(context, lek),
-                icon: Text(best != null && best >= 60 ? '✅' : '📝'),
-                label: Text(best == null ? tr(n, 'ئەزموون', 'Test', 'Test') : '$best%'),
-              ),
-            ),
-          ]),
+          ),
         ]),
       );
     });
+  }
+
+  /// 🏁 ئەزموونا وانێ — پشتی قۆناغێن وێ (نە بەری)
+  Widget _lektionTestCard(BuildContext context, LektionInfo lek, int lastIndex, AppLanguage n) {
+    final p = ProgressService.instance;
+    final best = p.examBest('lek_${lek.n}');
+    final units = appCurriculum.where((u) => u.section == appCurriculum[lastIndex].section);
+    final ready = units.every((u) => p.completedUnits.contains(u.id));
+    final passed = best != null && best >= 60;
+    return Padding(
+      padding: const EdgeInsets.only(top: 4, bottom: 22),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: () {
+          if (!ready) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text(tr(n, 'پێشی قۆناغێن ڤێ وانێ تەمام بکە، پاشان ئەزموون ڤەدبیت 🔒',
+                    'Schließe zuerst die Einheiten ab 🔒', 'Finish this lesson’s units first 🔒'))));
+            return;
+          }
+          openLektionTest(context, lek);
+        },
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            gradient: ready
+                ? LinearGradient(colors: passed ? const [Color(0xFF58CC02), Color(0xFF2E9E00)] : [lek.color, lek.color.withValues(alpha: 0.7)])
+                : null,
+            color: ready ? null : AppColors.card,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: ready ? Colors.transparent : AppColors.fg12, width: 1.5),
+          ),
+          child: Row(children: [
+            Text(passed ? '🏆' : (ready ? '📝' : '🔒'), style: const TextStyle(fontSize: 34)),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(tr(n, 'ئەزموونا وانا ${kuNum(lek.n)}', 'Test Lektion ${lek.n}', 'Lesson ${lek.n} test'),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: ready ? Colors.white : AppColors.fg)),
+                Text(
+                  best != null
+                      ? '${tr(n, 'باشترین ئەنجام', 'Bestes Ergebnis', 'Best')}: $best%'
+                      : (ready
+                          ? tr(n, 'ئەگەر تە بڤێت خۆ تاقی بکە ✨', 'Teste dich, wenn du willst ✨', 'Test yourself if you like ✨')
+                          : tr(n, 'پشتی تەمامکرنا قۆناغێن سەری ڤەدبیت', 'Nach den Einheiten oben', 'Unlocks after the units above')),
+                  style: TextStyle(fontSize: 13, color: ready ? Colors.white70 : AppColors.fg60),
+                ),
+              ]),
+            ),
+            if (ready) const Icon(Icons.play_circle_fill_rounded, color: Colors.white, size: 34),
+          ]),
+        ),
+      ),
+    );
   }
 
   /// 🔁 ڕاهێنانا ئازاد — ٨ پەیڤێن هەڕەمەکی ژ قۆناغێن تە دیتین (هەرگیز ب دویماهی نائێت)

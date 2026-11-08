@@ -9,6 +9,8 @@ import '../services/progress_service.dart';
 import '../services/sfx.dart';
 import '../services/voice_service.dart';
 import '../ui.dart';
+import 'streak_screen.dart';
+import 'widgets/combo.dart';
 
 /// 📝 ئەزموون: ئەزموونا وانێ، ئەزموونا A1، و تاقیکرنا ئاستی.
 /// جۆرێن جودا: هەلبژارتن، دروست/خەلەت، وێنە (٢–٦)، ئیمۆجی ➔ پەیڤ، گوهداری، نڤیسین، رێزکرنا رستێ.
@@ -41,6 +43,7 @@ class _QuizScreenState extends State<QuizScreen> {
   int? picked;
   bool checked = false;
   bool ok = false;
+  int quizXp = 0; // XP ل دویف کۆمبۆیێ
   final results = <bool>[];
   final typeCtrl = TextEditingController();
   List<String> tiles = [];
@@ -104,6 +107,10 @@ class _QuizScreenState extends State<QuizScreen> {
     } else {
       Sfx.wrong();
     }
+    final gained = progress.registerAnswer(good);
+    quizXp += gained;
+    if (gained > 0) showXpPop(context, gained, combo: progress.combo);
+    if (good && progress.combo % 5 == 0) showComboToast(context, progress.combo, ui);
     if (q.audio != null && q.type != QType.listen) _play();
   }
 
@@ -120,7 +127,7 @@ class _QuizScreenState extends State<QuizScreen> {
     final pct = (score * 100 / results.length).round();
     await progress.saveExam(widget.examId, pct);
     Backend.instance.examResult(widget.examId, score, results.length);
-    await progress.earn(5 + score);
+    await progress.earn(5 + quizXp);
     Sfx.done();
     if (!mounted) return;
     if (widget.onDone != null) {
@@ -143,15 +150,17 @@ class _QuizScreenState extends State<QuizScreen> {
           title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(widget.title, style: const TextStyle(fontSize: 15)),
             const SizedBox(height: 6),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: LinearProgressIndicator(
-                value: (i + (checked ? 1 : 0)) / widget.questions.length,
-                minHeight: 8,
-                backgroundColor: AppColors.card,
-                valueColor: const AlwaysStoppedAnimation(AppColors.gold),
+            ListenableBuilder(
+                listenable: progress,
+                builder: (_, __) => Row(children: [
+                  Expanded(
+                    child: ComboBar(
+                        value: (i + (checked ? 1 : 0)) / widget.questions.length, combo: progress.combo, color: AppColors.gold, height: 9),
+                  ),
+                  ComboBadge(combo: progress.combo),
+                ]),
               ),
-            ),
+
           ]),
           actions: [
             Center(
@@ -488,7 +497,12 @@ class QuizResultScreen extends StatelessWidget {
               const Spacer(),
               SizedBox(
                 width: double.infinity,
-                child: BigButton(label: tr(ui, 'باشە', 'OK', 'OK'), onPressed: () => Navigator.pop(context)),
+                child: BigButton(
+                  label: tr(ui, 'باشە', 'OK', 'OK'),
+                  onPressed: () async {
+                    if (!await maybeShowStreak(context, replace: true) && context.mounted) Navigator.pop(context);
+                  },
+                ),
               ),
             ]),
           ),
