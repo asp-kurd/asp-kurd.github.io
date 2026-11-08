@@ -56,6 +56,13 @@ class ProgressService extends ChangeNotifier {
   bool gameSounds = true;
   bool funnySounds = true;
   bool paleLetters = true;
+  String? mascotId; // 🦸 کاراکتەرێ هەلبژارتی
+
+  Future<void> setMascot(String id) async {
+    mascotId = id;
+    await _p.setString('mascot', id);
+    notifyListeners();
+  }
 
   double get dailyProgress => (todayXp / dailyGoal).clamp(0.0, 1.0);
   bool get dailyGoalMet => todayXp >= dailyGoal;
@@ -160,6 +167,7 @@ class ProgressService extends ChangeNotifier {
     gameSounds = _p.getBool('set_sounds') ?? true;
     funnySounds = _p.getBool('set_funny') ?? true;
     paleLetters = _p.getBool('set_pale') ?? true;
+    mascotId = _p.getString('mascot');
     _loadPair();
     _refreshDaily();
   }

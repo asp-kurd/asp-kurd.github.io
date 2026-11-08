@@ -144,10 +144,52 @@ class Backend extends ChangeNotifier {
   /// گرێدانا ئیمەیلێ ب هەژمارا نوکە (ژ پرۆفایلێ)
   Future<String?> linkEmail(String email, String password) async {
     if (!enabled) return 'offline';
+    // هەژمارێن ئیمەیلا ڤەشارتی هەی (ژ ئەپا سەر شاشێ): هەژمارەکا نوو + گوهاستنا پرۆفایل و پێشکەفتنێ
+    if (_p.getString('sb_gem') != null) return _migrateGuestToEmail(email, password);
     try {
       final err = await _emailAuth(email, password);
       if (err != null) return err;
       await _patchLearner({'email': email.trim().toLowerCase()});
+      notifyListeners();
+      return null;
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  Future<String?> _migrateGuestToEmail(String email, String password) async {
+    try {
+      await _ensureToken();
+      final oldTok = _access, oldId = userId, old = profile ?? {};
+      final r = await http.post(Uri.parse('$_base/auth/v1/signup'),
+          headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'},
+          body: jsonEncode({'email': email.trim().toLowerCase(), 'password': password}));
+      if (r.statusCode >= 300) return authError(r.body);
+      final j = jsonDecode(r.body) as Map<String, dynamic>;
+      if (j['access_token'] == null) return authError('confirm');
+      _saveSession(j);
+      await _p.setString('sb_email', email.trim().toLowerCase());
+      await _p.remove('sb_gem');
+      await _p.remove('sb_gpw');
+      const keep = ['name', 'age', 'city', 'native_lang', 'target_lang', 'gender', 'xp', 'streak', 'completed_units', 'current_unit', 'last_study_date'];
+      final row = <String, dynamic>{
+        for (final k in keep)
+          if (old[k] != null) k: old[k],
+        'id': userId,
+        'email': email.trim().toLowerCase(),
+        'last_seen': DateTime.now().toUtc().toIso8601String(),
+      };
+      final r2 = await http.post(Uri.parse('$_base/rest/v1/learners'),
+          headers: {..._h, 'Prefer': 'resolution=merge-duplicates,return=representation'}, body: jsonEncode(row));
+      if (r2.statusCode < 300) {
+        final list = jsonDecode(r2.body) as List;
+        if (list.isNotEmpty) _setProfile(list.first as Map<String, dynamic>);
+      }
+      // ردیفا کەڤن ژێببە (دا ئەدمین دوو جاران نەبینیت)
+      if (oldTok != null && oldId != null && oldId != userId) {
+        unawaited(http.delete(Uri.parse('$_base/rest/v1/learners?id=eq.$oldId'),
+            headers: {'apikey': AppConfig.supabaseAnonKey, 'Authorization': 'Bearer $oldTok'}));
+      }
       notifyListeners();
       return null;
     } catch (e) {

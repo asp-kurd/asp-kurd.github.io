@@ -152,6 +152,7 @@ class DialogScreen extends StatefulWidget {
 }
 
 class _DialogScreenState extends State<DialogScreen> {
+  Map<String, MascotChar> _cast = {};
   bool showKu = true;
   int? playing;
   bool auto = false;
@@ -179,6 +180,7 @@ class _DialogScreenState extends State<DialogScreen> {
   Widget build(BuildContext context) {
     final l = widget.lektion;
     final speakers = l.dialog.map((d) => d.who).toSet().toList();
+    _cast = MascotChar.castFor(speakers);
     return Directionality(
       textDirection: _ui.direction,
       child: Scaffold(
@@ -219,7 +221,7 @@ class _DialogScreenState extends State<DialogScreen> {
         scale: active ? 1.12 : 1,
         duration: const Duration(milliseconds: 200),
         child: MascotAvatar(
-          char: MascotChar.forSpeaker(d.who),
+          char: _cast[d.who] ?? MascotChar.forSpeaker(d.who),
           talking: active,
           size: 52,
           ring: active ? AppColors.gold : (left ? AppColors.blue : AppColors.green),

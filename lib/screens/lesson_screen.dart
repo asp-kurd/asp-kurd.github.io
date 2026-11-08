@@ -1027,18 +1027,8 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                   const Spacer(),
                   ScaleTransition(
                     scale: CurvedAnimation(parent: _c, curve: const Interval(0, 0.25, curve: Curves.elasticOut)),
-                    child: widget.perfect && MascotChar.forUser() == MascotChar.teacher
-                        ? Container(
-                            width: 180,
-                            height: 180,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: AppColors.gold, width: 6),
-                              boxShadow: [BoxShadow(color: AppColors.gold.withValues(alpha: 0.5), blurRadius: 30)],
-                              image: const DecorationImage(
-                                  image: AssetImage(MascotChar.happyPhoto), fit: BoxFit.cover, alignment: Alignment(0, -0.6)),
-                            ),
-                          )
+                    child: widget.perfect
+                        ? _PerfectHero(char: MascotChar.forUser())
                         : MascotView(char: MascotChar.forUser(), mood: MascotMood.happy, height: 190),
                   ),
                   const SizedBox(height: 18),
@@ -1117,4 +1107,38 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
       ),
     );
   }
+}
+
+
+/// 🏆 وانەیا بێ خەلەتی: کاراکتەر ب کەیف بازددەت (هەمی لەش)
+class _PerfectHero extends StatefulWidget {
+  final MascotChar char;
+  const _PerfectHero({required this.char});
+  @override
+  State<_PerfectHero> createState() => _PerfectHeroState();
+}
+
+class _PerfectHeroState extends State<_PerfectHero> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 1100))..repeat();
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => AnimatedBuilder(
+        animation: _c,
+        builder: (_, child) {
+          final j = sin(_c.value * pi);
+          return Transform.translate(
+            offset: Offset(0, -30 * j),
+            child: Transform.scale(scaleY: 1 + 0.04 * j, scaleX: 1 - 0.03 * j, alignment: Alignment.bottomCenter, child: child),
+          );
+        },
+        child: Container(
+          decoration: BoxDecoration(boxShadow: [BoxShadow(color: AppColors.gold.withValues(alpha: 0.35), blurRadius: 40)]),
+          child: Image.asset(widget.char.happyFull, height: 200),
+        ),
+      );
 }

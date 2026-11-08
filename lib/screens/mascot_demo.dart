@@ -13,7 +13,7 @@ class MascotDemo extends StatefulWidget {
 }
 
 class _MascotDemoState extends State<MascotDemo> {
-  static const moods = [MascotMood.ask, MascotMood.happy, MascotMood.listen, MascotMood.sad, MascotMood.speak];
+  static const moods = [MascotMood.ask, MascotMood.happy, MascotMood.think, MascotMood.sad, MascotMood.speak];
   int k = 0;
   Timer? t;
 
@@ -41,6 +41,7 @@ class _MascotDemoState extends State<MascotDemo> {
           MascotMood.happy => 'دەستخۆش! 👏',
           MascotMood.sad => 'نە خەم، جارا بێت! 💪',
           MascotMood.listen => 'گوهداری بکە و رامانێ هەلبژێرە 🎧',
+          MascotMood.think => 'هممم… 🤔',
           MascotMood.speak => 'ب دەنگێ خۆ بێژە 🎤',
           MascotMood.ask => 'ئەڤێ وەرگێڕە بۆ ئەلمانی:',
         };
@@ -51,18 +52,18 @@ class _MascotDemoState extends State<MascotDemo> {
           child: ListView(padding: const EdgeInsets.all(20), children: [
             Text('mood: ${m.name}', textDirection: TextDirection.ltr),
             const SizedBox(height: 10),
-            MascotSays(mood: m, text: text(m), height: 140, char: MascotChar.teacher),
+            MascotSays(mood: m, text: text(m), height: 140, char: MascotChar.hawraz),
             const SizedBox(height: 24),
-            MascotSays(mood: m, text: text(m), height: 140, char: MascotChar.woman),
+            MascotSays(mood: m, text: text(m), height: 140, char: MascotChar.nazdar),
             const SizedBox(height: 24),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-              for (final c in [MascotChar.teacher, MascotChar.woman, MascotChar.boy, MascotChar.kid])
+              for (final c in [MascotChar.shaho, MascotChar.hani, MascotChar.banu, MascotChar.shahyan])
                 MascotAvatar(char: c, size: 56, talking: k.isEven),
             ]),
             const SizedBox(height: 24),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-              MascotView(char: MascotChar.boy, mood: m, height: 120),
-              MascotView(char: MascotChar.kid, mood: m, height: 120),
+              MascotView(char: MascotChar.banu, mood: m, height: 120),
+              MascotView(char: MascotChar.shahyan, mood: m, height: 120),
             ]),
           ]),
         ),

@@ -5,6 +5,7 @@ import '../services/backend.dart';
 import '../services/progress_service.dart';
 import '../services/push_stub.dart' if (dart.library.js_interop) '../services/push_web.dart';
 import '../ui.dart';
+import 'character_screen.dart';
 import 'onboarding_screen.dart';
 
 // ───────────────────────── 📝 تۆمارکرن ─────────────────────────
@@ -81,7 +82,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
       });
       return;
     }
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => SetupScreen(next: widget.next)));
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (_) => CharacterPickerScreen(next: SetupScreen(next: widget.next))));
   }
 
   Widget _genderBtn(String v, String emoji, String label) {

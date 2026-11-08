@@ -4,48 +4,67 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../services/backend.dart';
+import '../../services/progress_service.dart';
 import '../../services/voice_service.dart';
 import '../../ui.dart';
 
 /// 🧑‍🏫 کاریکاتێرێن ASP — وەکی Duolingo: چاڤان دقوچینن، دەڤێ خۆ دلڤینن دەمێ دئاخڤن،
 /// و ب بازدان / هەژاندنێ بەرسڤێ ددەن.
-enum MascotMood { ask, listen, speak, happy, sad }
+enum MascotMood { ask, listen, speak, happy, sad, think }
 
 class MascotChar {
-  final String id;
-  const MascotChar(this.id);
+  final String id, name, note, gender; // gender: 'm' / 'f'
+  const MascotChar(this.id, this.name, this.note, this.gender);
 
   String get base => 'assets/mascot/${id}_base.webp';
   String get blink => 'assets/mascot/${id}_blink.webp';
-  String get talk1 => 'assets/mascot/${id}_talk1.webp';
-  String get talk2 => 'assets/mascot/${id}_talk2.webp';
-  String get side => 'assets/mascot/${id}_side.webp';
-  List<String> get all => [base, blink, talk1, talk2, side];
+  String get talk => 'assets/mascot/${id}_talk.webp';
+  String get happy => 'assets/mascot/${id}_happy.webp';
+  String get sad => 'assets/mascot/${id}_sad.webp';
+  String get think => 'assets/mascot/${id}_think.webp';
+  String get full => 'assets/mascot/${id}_full.webp';
+  String get happyFull => 'assets/mascot/${id}_happy_full.webp';
+  String get flyFull => 'assets/mascot/${id}_fly_full.webp';
+  String get landFull => 'assets/mascot/${id}_land_full.webp';
+  List<String> get all => [base, blink, talk, happy, sad, think];
 
-  static const teacher = MascotChar('teacher');
-  static const woman = MascotChar('woman');
-  static const boy = MascotChar('boy');
-  static const kid = MascotChar('kid');
-  static const happyPhoto = 'assets/mascot/teacher_happy.webp';
+  // 🦸 کاراکتەرێن ASP
+  static const hawraz = MascotChar('hawraz', 'هەوراز', 'ئەوێ سمبێل', 'm');
+  static const shaho = MascotChar('shaho', 'شاهۆ', 'ئەوێ کەچەل', 'm');
+  static const nazdar = MascotChar('nazdar', 'نازدار', 'جزیری — کراسێ شین', 'f');
+  static const hani = MascotChar('hani', 'هانی', 'کچکا سەرسپی', 'f');
+  static const banu = MascotChar('banu', 'بانو', 'کچکا قاتێ رەش', 'f');
+  static const shahyan = MascotChar('shahyan', 'شەهیان', 'کچکا قاتێ شین', 'f');
+  static const values = [hawraz, shaho, nazdar, hani, banu, shahyan];
 
-  /// کاریکاتێرێ سەرەکی: ئافرەت بۆ ئافرەتان، مامۆستا بۆ هەمییێن دی
-  static MascotChar forUser() => Backend.instance.gender == 'f' ? woman : teacher;
+  static MascotChar byId(String? id) => values.firstWhere((c) => c.id == id, orElse: () => hawraz);
+
+  /// کاراکتەرێ بکارهێنەری: یێ وی هەلبژارتی، یان ل دویف ڕەگەزی
+  static MascotChar forUser() {
+    final id = ProgressService.instance.mascotId;
+    if (id != null) return byId(id);
+    return Backend.instance.gender == 'f' ? nazdar : hawraz;
+  }
 
   static const _female = {
     'Dilan', 'Frau', 'Frau Ahmad', 'Kundin', 'Lara', 'Lehrerin', 'Lina', 'Mina', 'Sara', 'Verkäuferin', 'Ärztin', 'Rezeption'
   };
-  static const _young = {'Tim', 'Sami'};
+  static bool _isFemale(String who) => _female.contains(who) || who.startsWith('Frau');
 
-  /// بۆ دیالۆگان: ل دویف ناڤێ ئاخفتنکەری
-  static MascotChar forSpeaker(String who) {
-    if (_female.contains(who) || who.startsWith('Frau')) return woman;
-    if (_young.contains(who)) return boy;
-    return teacher;
+  /// بۆ دیالۆگان: هەر ئاخفتنکەرەکی کاراکتەرەکێ جودا ل دویف ڕەگەزی
+  static Map<String, MascotChar> castFor(List<String> speakers) {
+    final men = [hawraz, shaho], women = [nazdar, banu, shahyan, hani];
+    var mi = 0, wi = 0;
+    return {
+      for (final s in speakers) s: _isFemale(s) ? women[wi++ % women.length] : men[mi++ % men.length],
+    };
   }
 
+  static MascotChar forSpeaker(String who) => _isFemale(who) ? nazdar : hawraz;
+
   /// هەمی وێنەیان پێشوەخت بار بکە دا لڤین نەڕاوەستیت
-  static void precache(BuildContext context) {
-    for (final c in [teacher, woman, boy, kid]) {
+  static void precache(BuildContext context, [MascotChar? only]) {
+    for (final c in only != null ? [only] : values) {
       for (final p in c.all) {
         precacheImage(AssetImage(p), context);
       }
@@ -80,6 +99,18 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   late final AnimationController _enter = AnimationController(vsync: this, duration: const Duration(milliseconds: 450))..forward();
 
   bool _blinking = false;
+  bool _thinking = false; // پشتی چەند چرکەیان بێ بەرسڤ: هزر دکەت 🤔
+  Timer? _thinkTimer;
+
+  void _armThink() {
+    _thinkTimer?.cancel();
+    if (mounted && _thinking) setState(() => _thinking = false);
+    if (widget.mood == MascotMood.ask) {
+      _thinkTimer = Timer(const Duration(seconds: 5), () {
+        if (mounted && widget.mood == MascotMood.ask) setState(() => _thinking = true);
+      });
+    }
+  }
   int _mouth = 0; // 0 گرتی · 1 نیڤ · 2 ڤەکری
   Timer? _blinkTimer, _talkTimer, _cheerTimer;
   bool _cheering = false; // پشتی بەرسڤا دروست کورتەکێ دئاخڤیت
@@ -90,6 +121,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _scheduleBlink();
+    _armThink();
     if (widget.mood == MascotMood.happy) _react.repeat(period: const Duration(milliseconds: 1400));
     if (widget.lipSync) _voice.speaking.addListener(_onSpeaking);
   }
@@ -97,6 +129,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   @override
   void didUpdateWidget(MascotView old) {
     super.didUpdateWidget(old);
+    if (old.mood != widget.mood) _armThink();
     if (old.mood != widget.mood) {
       if (widget.mood == MascotMood.happy || widget.mood == MascotMood.sad) {
         _react.forward(from: 0);
@@ -158,6 +191,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   void dispose() {
     _voice.speaking.removeListener(_onSpeaking);
     _blinkTimer?.cancel();
+    _thinkTimer?.cancel();
     _talkTimer?.cancel();
     _cheerTimer?.cancel();
     _idle.dispose();
@@ -168,9 +202,17 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
 
   String get _frame {
     final c = widget.char;
-    if (widget.mood == MascotMood.listen) return c.side;
-    if (_mouth == 1) return c.talk1;
-    if (_mouth == 2) return c.talk2;
+    if (_mouth > 0) return c.talk;
+    switch (widget.mood) {
+      case MascotMood.happy:
+        return c.happy;
+      case MascotMood.sad:
+        return c.sad;
+      case MascotMood.think:
+        return c.think;
+      default:
+        if (_thinking) return c.think;
+    }
     if (_blinking) return c.blink;
     return c.base;
   }
@@ -410,11 +452,11 @@ class MascotAvatar extends StatelessWidget {
       child: ClipOval(
         child: OverflowBox(
           alignment: Alignment.topCenter,
-          maxWidth: size * 1.55,
-          maxHeight: size * 1.55 * 1.4,
+          maxWidth: size * 1.35,
+          maxHeight: size * 1.35 * 1.12,
           child: talking
-              ? MascotView(char: char, height: size * 1.55 * 1.4, mood: MascotMood.speak)
-              : Image.asset(char.base, height: size * 1.55 * 1.4, fit: BoxFit.fitHeight),
+              ? MascotView(char: char, height: size * 1.35 * 1.12, mood: MascotMood.speak)
+              : Image.asset(char.base, height: size * 1.35 * 1.12, fit: BoxFit.fitHeight),
         ),
       ),
     );

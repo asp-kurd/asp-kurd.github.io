@@ -7,6 +7,8 @@ import '../services/voice_service.dart';
 import '../services/backend.dart';
 import '../ui.dart';
 import 'account_screens.dart';
+import 'character_screen.dart';
+import 'widgets/mascot.dart';
 import 'admin_screens.dart';
 import 'onboarding_screen.dart';
 import 'settings_screen.dart';
@@ -34,6 +36,20 @@ class ProfileScreen extends StatelessWidget {
                     style: const TextStyle(fontFamily: 'Sarchia', fontSize: 24, fontWeight: FontWeight.bold)),
               ),
             ]),
+            const SizedBox(height: 12),
+            ListTile(
+              tileColor: AppColors.card,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              leading: CircleAvatar(
+                radius: 24,
+                backgroundColor: AppColors.chip,
+                backgroundImage: AssetImage(MascotChar.forUser().base),
+              ),
+              title: Text('🦸 کاراکتەرێ من: ${MascotChar.forUser().name}', style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: const Text('بگوهۆڕە'),
+              trailing: const Icon(Icons.chevron_left_rounded),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen())),
+            ),
             const SizedBox(height: 12),
             const AccountCard(),
             const SizedBox(height: 12),

@@ -7,6 +7,7 @@ import '../ui.dart';
 import '../services/backend.dart';
 import 'account_screens.dart';
 import 'book_screen.dart';
+import 'character_screen.dart';
 import 'course_screens.dart';
 import 'streak_screen.dart';
 import 'widgets/combo.dart' show kuNum;
@@ -36,6 +37,14 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context, _) {
         final n = progress.nativeLang;
         // 🔥 ستریک زێدە بوو (بۆ نموونە ژ یاریێ) ➔ شاشا ئاهەنگێ
+        // 🦸 بکارهێنەرێن کەڤن: جارەکێ کاراکتەرێ خۆ هەلبژێرن
+        if (Backend.instance.registered && !Backend.instance.isAdmin && progress.mascotId == null && !Backend.instance.flag('asked_mascot')) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (!mounted || !(ModalRoute.of(context)?.isCurrent ?? false) || Backend.instance.flag('asked_mascot')) return;
+            Backend.instance.setFlag('asked_mascot');
+            Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen()));
+          });
+        }
         if (progress.streakEvent != null) {
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (mounted && (ModalRoute.of(context)?.isCurrent ?? false)) maybeShowStreak(context);
