@@ -12,4 +12,4 @@ jobs:
             r=$(curl -s -o /dev/null -w "%{http_code} -> %{redirect_url} (ssl=%{ssl_verify_result})" -m 20 "$u" || echo "fail")
             echo "::notice title=site::$u $r"
           done
-          echo "::notice title=site::build_id $(curl -s -m 20 https://asp-poya.com/build_id.txt)"
+          echo "::notice title=site::build_id $(curl -sL -m 20 -w " [%{http_code}]" https://asp-poya.com/build_id.txt) title=$(curl -sL -m 20 https://asp-poya.com/ | grep -o "<title>[^<]*")"
