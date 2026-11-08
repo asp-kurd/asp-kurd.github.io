@@ -35,7 +35,18 @@ class MascotChar {
   static const hani = MascotChar('hani', 'هانی', 'کچکا سەرسپی', 'f');
   static const banu = MascotChar('banu', 'بانو', 'کچکا قاتێ رەش', 'f');
   static const shahyan = MascotChar('shahyan', 'شەهیان', 'کچکا قاتێ شین', 'f');
-  static const values = [hawraz, shaho, nazdar, hani, banu, shahyan];
+  static const poya = MascotChar('poya', 'پویا', 'زەلامێ قاتێ رەش', 'm');
+  static const abusafin = MascotChar('abusafin', 'ئەبو سەفین', 'زەلامێ جلکێن کوردی', 'm');
+  static const safin = MascotChar('safin', 'سەفین', 'کوڕکێ بچووک', 'm');
+  static const warxaz = MascotChar('warxaz', 'وارخاز', 'کچکا سەرملێن زیڤ', 'f');
+  static const hene = MascotChar('hene', 'هێنێ', 'جلکێن کوردی یێن سۆر', 'f');
+  static const dile = MascotChar('dile', 'دلێ', 'کراسێ گول گول', 'f');
+  static const avin = MascotChar('avin', 'ئەڤین', 'کچکا پرچ سۆر', 'f');
+  static const hajya = MascotChar('hajya', 'حجیا', 'کچکا حیجاب', 'f');
+  static const values = [
+    hawraz, shaho, poya, abusafin, safin, //
+    nazdar, hani, banu, shahyan, warxaz, hene, dile, avin, hajya,
+  ];
 
   static MascotChar byId(String? id) => values.firstWhere((c) => c.id == id, orElse: () => hawraz);
 
@@ -53,7 +64,7 @@ class MascotChar {
 
   /// بۆ دیالۆگان: هەر ئاخفتنکەرەکی کاراکتەرەکێ جودا ل دویف ڕەگەزی
   static Map<String, MascotChar> castFor(List<String> speakers) {
-    final men = [hawraz, shaho], women = [nazdar, banu, shahyan, hani];
+    final men = [hawraz, abusafin, poya, shaho], women = [nazdar, hene, banu, dile, shahyan, avin, warxaz, hani, hajya];
     var mi = 0, wi = 0;
     return {
       for (final s in speakers) s: _isFemale(s) ? women[wi++ % women.length] : men[mi++ % men.length],

@@ -78,7 +78,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     super.initState();
     queue = _buildQueue();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) MascotChar.precache(context);
+      if (mounted) MascotChar.precache(context, MascotChar.forUser());
     });
     totalInitial = queue.length;
     _prepare();
