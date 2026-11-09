@@ -85,6 +85,9 @@ class GamesHubScreen extends StatelessWidget {
                 const SizedBox(width: 10),
                 Expanded(child: _bigTile(context, '🏆', 'Rangliste', 'باشترینێن هەفتیێ', const Color(0xFFFFC800), const LeaderboardScreen())),
               ]),
+              const SizedBox(height: 10),
+              _bigTile(context, '🌈', p.targetLang == AppLanguage.english ? 'Colours' : 'Farben',
+                  'گوهداری بکە و ڕەنگێ دروست هەلبژێرە', const Color(0xFFFF9600), const ColorGameScreen(), wide: true),
               if (p.targetLang == AppLanguage.german) const SizedBox(height: 10),
               if (p.targetLang == AppLanguage.german)
                 _bigTile(context, '🎓', 'Goethe A1 — Modelltest', 'ئەزموونەکا تەمام وەکی یا ڕاستی ب دەمژمێر', const Color(0xFFFF4B4B), const GoetheMockScreen(), wide: true),

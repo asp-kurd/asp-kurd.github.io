@@ -592,3 +592,311 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     );
   }
 }
+
+// ═════════════════════════ 🌈 ڕەنگ: گوهداری بکە و ڕەنگێ دروست هەلبژێرە ═════════════════════════
+
+/// ڕەنگ ب ئەلمانی، ئینگلیزی و کوردی + چەند تشتێن ب وی ڕەنگی
+class GameColor {
+  final String de, en, ku;
+  final Color color;
+  final List<(String emoji, String de, String en, String ku)> things;
+  const GameColor(this.de, this.en, this.ku, this.color, this.things);
+  String word(AppLanguage l) => l == AppLanguage.english ? en : de;
+}
+
+const gameColors = <GameColor>[
+  GameColor('weiß', 'white', 'سپی', Color(0xFFFFFFFF), [
+    ('🥛', 'Die Milch ist weiß.', 'The milk is white.', 'شیر سپیە.'),
+    ('☁️', 'Die Wolke ist weiß.', 'The cloud is white.', 'عەور سپیە.'),
+  ]),
+  GameColor('schwarz', 'black', 'ڕەش', Color(0xFF151515), [
+    ('🐈‍⬛', 'Die Katze ist schwarz.', 'The cat is black.', 'پشیک ڕەشە.'),
+    ('🎱', 'Der Ball ist schwarz.', 'The ball is black.', 'تۆپ ڕەشە.'),
+  ]),
+  GameColor('rot', 'red', 'سۆر', Color(0xFFE53935), [
+    ('🍅', 'Die Tomate ist rot.', 'The tomato is red.', 'باجانێ سۆر سۆرە.'),
+    ('🍓', 'Die Erdbeere ist rot.', 'The strawberry is red.', 'فراولە سۆرە.'),
+  ]),
+  GameColor('blau', 'blue', 'شین', Color(0xFF1E88E5), [
+    ('🌊', 'Das Meer ist blau.', 'The sea is blue.', 'دەریا شینە.'),
+    ('💙', 'Das Herz ist blau.', 'The heart is blue.', 'دل شینە.'),
+  ]),
+  GameColor('grün', 'green', 'سەوز', Color(0xFF43A047), [
+    ('🌳', 'Der Baum ist grün.', 'The tree is green.', 'دار سەوزە.'),
+    ('🥒', 'Die Gurke ist grün.', 'The cucumber is green.', 'خیار سەوزە.'),
+  ]),
+  GameColor('gelb', 'yellow', 'زەر', Color(0xFFFDD835), [
+    ('🍌', 'Die Banane ist gelb.', 'The banana is yellow.', 'مۆز زەرە.'),
+    ('🌞', 'Die Sonne ist gelb.', 'The sun is yellow.', 'رۆژ زەرە.'),
+  ]),
+  GameColor('orange', 'orange', 'پرتەقالی', Color(0xFFFB8C00), [
+    ('🍊', 'Die Orange ist orange.', 'The orange is orange.', 'پرتەقال پرتەقالیە.'),
+    ('🥕', 'Die Karotte ist orange.', 'The carrot is orange.', 'گێزەر پرتەقالیە.'),
+  ]),
+  GameColor('braun', 'brown', 'قاوەیی', Color(0xFF795548), [
+    ('🐻', 'Der Bär ist braun.', 'The bear is brown.', 'هرچ قاوەییە.'),
+    ('🍫', 'Die Schokolade ist braun.', 'The chocolate is brown.', 'چکلێت قاوەییە.'),
+  ]),
+  GameColor('grau', 'grey', 'خۆلەمێشی', Color(0xFF9E9E9E), [
+    ('🐘', 'Der Elefant ist grau.', 'The elephant is grey.', 'فیل خۆلەمێشیە.'),
+    ('🐭', 'Die Maus ist grau.', 'The mouse is grey.', 'مشک خۆلەمێشیە.'),
+  ]),
+  GameColor('rosa', 'pink', 'پەمەیی', Color(0xFFF48FB1), [
+    ('🐷', 'Das Schwein ist rosa.', 'The pig is pink.', 'بەراز پەمەییە.'),
+    ('🌸', 'Die Blume ist rosa.', 'The flower is pink.', 'گول پەمەییە.'),
+  ]),
+  GameColor('lila', 'purple', 'مۆر', Color(0xFF8E24AA), [
+    ('🍆', 'Die Aubergine ist lila.', 'The eggplant is purple.', 'باجانێ ڕەش مۆرە.'),
+    ('🍇', 'Die Trauben sind lila.', 'The grapes are purple.', 'تری مۆرن.'),
+  ]),
+];
+
+enum _ColorMode { word, listen, thing, swatch }
+
+class ColorGameScreen extends StatefulWidget {
+  const ColorGameScreen({super.key});
+  @override
+  State<ColorGameScreen> createState() => _ColorGameScreenState();
+}
+
+class _ColorGameScreenState extends State<ColorGameScreen> {
+  static const _len = 12;
+  final _rng = Random();
+  final lang = ProgressService.instance.targetLang == AppLanguage.english ? AppLanguage.english : AppLanguage.german;
+  late List<(GameColor, _ColorMode, int)> round;
+  List<GameColor> options = [];
+  final List<String> _recent = [];
+  int i = 0, correct = 0, xp = 0, streak = 0;
+  GameColor? picked;
+  bool done = false;
+  int _tok = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _start();
+  }
+
+  @override
+  void dispose() {
+    VoiceService.instance.stopPlayback();
+    super.dispose();
+  }
+
+  void _start() {
+    final cs = [...gameColors]..shuffle(_rng);
+    final modes = [..._ColorMode.values, ..._ColorMode.values, ..._ColorMode.values]..shuffle(_rng);
+    round = [
+      for (var k = 0; k < _len; k++) (cs[k % cs.length], modes[k], _rng.nextInt(cs[k % cs.length].things.length)),
+    ];
+    i = correct = xp = streak = 0;
+    done = false;
+    _recent.clear();
+    _prepare();
+    setState(() {});
+  }
+
+  void _prepare() {
+    _tok++;
+    picked = null;
+    final c = round[i].$1;
+    // ٣–٤ هەلبژارتن، و نە هەمان ڕەنگ د پرسیارا بەری دا (دا جۆراوجۆر بن)
+    final n = _rng.nextInt(3) == 0 ? 3 : 4;
+    final others = gameColors.where((g) => g != c).toList()..shuffle(_rng);
+    others.sort((a, b) => (_recent.contains(a.de) ? 1 : 0) - (_recent.contains(b.de) ? 1 : 0));
+    options = [c, ...others.take(n - 1)]..shuffle(_rng);
+    _recent
+      ..clear()
+      ..addAll(options.map((o) => o.de));
+    if (round[i].$2 == _ColorMode.listen) {
+      final t = _tok;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && t == _tok) _say(c.word(lang));
+      });
+    }
+  }
+
+  void _say(String s) => VoiceService.instance.speakText(s, lang);
+
+  Future<void> _pick(GameColor g) async {
+    if (picked != null) return;
+    final (c, mode, t) = round[i];
+    final ok = g == c;
+    setState(() => picked = g);
+    if (ok) {
+      Sfx.correct();
+      correct++;
+      streak++;
+      final gx = streak >= 5 ? 3 : 2;
+      xp += gx;
+      showXpPop(context, gx);
+    } else {
+      Sfx.wrong();
+      streak = 0;
+    }
+    final th = c.things[t];
+    _say(mode == _ColorMode.thing ? (lang == AppLanguage.english ? th.$3 : th.$2) : c.word(lang));
+    await Future.delayed(Duration(milliseconds: ok ? 1300 : 2200));
+    if (!mounted) return;
+    if (i + 1 < round.length) {
+      setState(() {
+        i++;
+        _prepare();
+      });
+    } else {
+      if (xp > 0) await ProgressService.instance.earn(xp);
+      setState(() => done = true);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(lang == AppLanguage.english ? '🌈 Colours' : '🌈 Farben'),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(6),
+            child: LinearProgressIndicator(value: done ? 1 : i / round.length, minHeight: 6, backgroundColor: AppColors.card),
+          ),
+        ),
+        body: SafeArea(child: done ? _GameDone(correct: correct, total: round.length, xp: xp, onAgain: _start) : _play()),
+      ),
+    );
+  }
+
+  Widget _swatch(Color col, double size, {Widget? child}) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          color: col,
+          borderRadius: BorderRadius.circular(size * 0.28),
+          border: Border.all(color: AppColors.fg24, width: 2),
+          boxShadow: [BoxShadow(color: col.withValues(alpha: 0.35), blurRadius: 14, offset: const Offset(0, 5))],
+        ),
+        alignment: Alignment.center,
+        child: child,
+      );
+
+  Widget _play() {
+    final (c, mode, t) = round[i];
+    final th = c.things[t];
+    final word = c.word(lang);
+    final question = switch (mode) {
+      _ColorMode.word => 'ڕەنگێ «$word» هەلبژێرە',
+      _ColorMode.listen => 'گوهداری بکە و ڕەنگی هەلبژێرە',
+      _ColorMode.thing => 'ئەڤ تشتە چ ڕەنگە؟',
+      _ColorMode.swatch => 'ئەڤ ڕەنگە ب ${lang == AppLanguage.english ? 'ئینگلیزی' : 'ئەلمانی'} چییە؟',
+    };
+    final blank = (lang == AppLanguage.english ? th.$3 : th.$2).replaceFirst(RegExp(r'\S+\.$'), '___ .');
+    Widget prompt = switch (mode) {
+      _ColorMode.word => Directionality(
+          textDirection: TextDirection.ltr,
+          child: InkWell(
+            onTap: () => _say(word),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Text(word, style: const TextStyle(fontSize: 52, fontWeight: FontWeight.w900)),
+              const SizedBox(width: 8),
+              Icon(Icons.volume_up_rounded, color: AppColors.fg60),
+            ]),
+          ),
+        ),
+      _ColorMode.listen => InkWell(
+          customBorder: const CircleBorder(),
+          onTap: () => _say(word),
+          child: Container(
+            padding: const EdgeInsets.all(26),
+            decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+            child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 54),
+          ),
+        ),
+      _ColorMode.thing => Column(children: [
+          Text(th.$1, style: const TextStyle(fontSize: 86)),
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Text(picked == null ? blank : (lang == AppLanguage.english ? th.$3 : th.$2),
+                style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800)),
+          ),
+          Text(th.$4, style: TextStyle(color: AppColors.fg60, fontSize: 16)),
+        ]),
+      _ColorMode.swatch => _swatch(c.color, 130),
+    };
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(children: [
+        Text(question, textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg70, fontSize: 18, fontWeight: FontWeight.bold)),
+        if (streak >= 3) Text('🔥 ${_ku(streak)} ل دویف ئێک', style: TextStyle(color: AppColors.goldText, fontWeight: FontWeight.bold)),
+        const Spacer(),
+        prompt,
+        if (picked != null) ...[
+          const SizedBox(height: 12),
+          Text(
+            picked == c ? '✅ $word = ${c.ku}' : '❌ دروست: $word = ${c.ku}',
+            style: TextStyle(color: picked == c ? AppColors.green : AppColors.red, fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+        ],
+        const Spacer(),
+        if (mode == _ColorMode.swatch)
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
+              for (final o in options) _wordBtn(o, c),
+            ]),
+          )
+        else
+          Wrap(spacing: 14, runSpacing: 14, alignment: WrapAlignment.center, children: [
+            for (final o in options) _swatchBtn(o, c),
+          ]),
+        const SizedBox(height: 16),
+      ]),
+    );
+  }
+
+  Color _state(GameColor o, GameColor c) =>
+      picked == null ? AppColors.fg24 : (o == c ? AppColors.green : (o == picked ? AppColors.red : AppColors.fg24));
+
+  Widget _swatchBtn(GameColor o, GameColor c) {
+    final st = _state(o, c);
+    final show = picked != null && (o == c || o == picked);
+    return GestureDetector(
+      onTap: () => _pick(o),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(34),
+          border: Border.all(color: st, width: picked == null ? 0 : 4),
+        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          _swatch(o.color, 96,
+              child: show ? Icon(o == c ? Icons.check_rounded : Icons.close_rounded, size: 46, color: o.color.computeLuminance() > 0.5 ? Colors.black87 : Colors.white) : null),
+          if (picked != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Text(o.word(lang), style: const TextStyle(fontWeight: FontWeight.bold)),
+            ),
+        ]),
+      ),
+    );
+  }
+
+  Widget _wordBtn(GameColor o, GameColor c) {
+    final st = _state(o, c);
+    return GestureDetector(
+      onTap: () => _pick(o),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: 150,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        decoration: BoxDecoration(
+          color: picked != null && st != AppColors.fg24 ? st.withValues(alpha: 0.18) : AppColors.card,
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: picked == null ? AppColors.fg24 : st, width: 2.5),
+        ),
+        alignment: Alignment.center,
+        child: Text(o.word(lang), style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800)),
+      ),
+    );
+  }
+}

@@ -38,6 +38,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   final progress = ProgressService.instance;
   final voice = VoiceService.instance;
   final _rng = Random();
+  final Set<String> _recentPics = <String>{}; // وێنەیێن پرسیارێن داوی — دا دووبارە نەبن
   final _watch = Stopwatch()..start();
 
   late final AppLanguage native = progress.nativeLang;
@@ -195,13 +196,23 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       final n = counts[_rng.nextInt(counts.length)];
       final pics = <String>{ex.concept.pic};
       final others = [...allConcepts]..shuffle(_rng);
-      // پێشی ژ هەمان قۆناغێ (زەحمەتتر)، پاشان ژ هەمییان
-      final same = widget.concepts.where((c) => c.id != ex.concept.id).toList()..shuffle(_rng);
-      for (final d in [...same, ...others]) {
+      // تنێ ئێک وێنە ژ هەمان قۆناغێ (زەحمەتتر)، یێن دی ژ هەمییان —
+      // و نە ئەو وێنەیێن د پرسیارێن بەری نوکە دا هاتین (دا جۆراوجۆر بن)
+      final same = widget.concepts.where((c) => c.id != ex.concept.id && !_recentPics.contains(c.pic)).toList()
+        ..shuffle(_rng);
+      for (final d in [...same.take(1), ...others]) {
+        if (pics.length >= n) break;
+        if (d.emoji.isNotEmpty && !_recentPics.contains(d.pic)) pics.add(d.pic);
+      }
+      for (final d in others) {
         if (pics.length >= n) break;
         if (d.emoji.isNotEmpty) pics.add(d.pic);
       }
       options = pics.toList()..shuffle(_rng);
+      _recentPics.addAll(pics.where((p) => p != ex.concept.pic));
+      while (_recentPics.length > 14) {
+        _recentPics.remove(_recentPics.first);
+      }
       return;
     }
     if (ex.type == ExerciseType.cloze) {
@@ -1205,6 +1216,7 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
   late List<(WordConcept, _LetterQ)> queue;
   int index = 0, firstTry = 0, total = 0, answerXp = 0;
   final Set<String> _requeued = {};
+  final Set<String> _recent = <String>{}; // وێنەیێن پرسیارێن داوی
 
   List<WordConcept> options = [];
   final Set<String> wrong = {};
@@ -1237,7 +1249,13 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
     solved = false;
     final c = cur.$1;
     final others = pool.where((o) => o.id != c.id && o.letter!.upper != c.letter!.upper).toList()..shuffle(_rng);
+    // نە هەمان ٤ وێنە د پرسیارێن ل دویف ئێک دا: پێشی ئەوێن نوکە نەهاتین
+    others.sort((a, b) => (_recent.contains(a.id) ? 1 : 0) - (_recent.contains(b.id) ? 1 : 0));
     options = [c, ...others.take(3)]..shuffle(_rng);
+    _recent.addAll(options.map((o) => o.id));
+    while (_recent.length > (pool.length - 4).clamp(4, 12)) {
+      _recent.remove(_recent.first);
+    }
     if (cur.$2 == _LetterQ.listenToLetter || cur.$2 == _LetterQ.nameToLetter) {
       final t = _tok;
       WidgetsBinding.instance.addPostFrameCallback((_) {

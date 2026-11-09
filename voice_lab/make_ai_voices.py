@@ -82,8 +82,17 @@ def collect():
     summ = ROOT / "assets/a1_summary.json"
     if summ.exists():  # ⚡ A1 mit Poya: رستێن نموونە
         for c in json.loads(summ.read_text(encoding="utf-8"))["cards"]:
-            for e in c["examples"]:
+            for e in c["examples"] + c.get("more", []):  # ⬇️ نموونەیێن زێدەتر ژی
                 jobs["de"][e["de"]] = e["de"]
+    cg = ROOT / "lib/screens/games/extra_games.dart"
+    if cg.exists():  # 🌈 یاریا ڕەنگان: پەیڤ و رستە (ئەلمانی + ئینگلیزی)
+        src = cg.read_text(encoding="utf-8")
+        for de, en in re.findall(r"GameColor\('([^']+)', '([^']+)'", src):
+            jobs["de"][de] = de
+            jobs["en"][en] = en
+        for de, en in re.findall(r"\('[^']*', '([^']+\.)', '([^']+\.)', '[^']*'\)", src):
+            jobs["de"][de] = de
+            jobs["en"][en] = en
     gen = ROOT / "assets/grammar_en.json"
     if gen.exists():  # 📘 English grammar: نموونە و راهێنان
         for l in json.loads(gen.read_text(encoding="utf-8"))["lektionen"]:

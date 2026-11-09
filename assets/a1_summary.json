@@ -167,7 +167,75 @@
      ]
     }
    ],
-   "tip": "خەلەتیا مەزن: «Heute ich lerne» ❌ — کار دڤێت ل جهێ دووێ بیت: «Heute lerne ich» ✅"
+   "tip": "خەلەتیا مەزن: «Heute ich lerne» ❌ — کار دڤێت ل جهێ دووێ بیت: «Heute lerne ich» ✅",
+   "more": [
+    {
+     "de": "Morgen fahre ich nach Erbil.",
+     "ku": "سوبەهی ئەز دچمە هەولێرێ.",
+     "parts": [
+      [
+       "Morgen",
+       "T"
+      ],
+      [
+       "fahre",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "nach Erbil",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Meine Mutter kocht heute Dolma.",
+     "ku": "دایکا من ئەڤرۆ دۆلمێ چێدکەت.",
+     "parts": [
+      [
+       "Meine Mutter",
+       "S"
+      ],
+      [
+       "kocht",
+       "V"
+      ],
+      [
+       "heute",
+       "T"
+      ],
+      [
+       "Dolma",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Im Sommer besuchen wir unsere Oma.",
+     "ku": "ل هاڤینێ ئەم سەرا داپیرا خۆ ددەین.",
+     "parts": [
+      [
+       "Im Sommer",
+       "T"
+      ],
+      [
+       "besuchen",
+       "V"
+      ],
+      [
+       "wir",
+       "S"
+      ],
+      [
+       "unsere Oma",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "fragen",
@@ -290,7 +358,71 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Was machst du am Wochenende?",
+     "ku": "تو دویماهیا هەفتیێ چ دکەی؟",
+     "parts": [
+      [
+       "Was",
+       "W"
+      ],
+      [
+       "machst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "am Wochenende",
+       "T"
+      ]
+     ]
+    },
+    {
+     "de": "Wo wohnt deine Familie?",
+     "ku": "خێزانا تە ل کیڤە دژیت؟",
+     "parts": [
+      [
+       "Wo",
+       "W"
+      ],
+      [
+       "wohnt",
+       "V"
+      ],
+      [
+       "deine Familie",
+       "S"
+      ]
+     ]
+    },
+    {
+     "de": "Trinkst du gern Tee?",
+     "ku": "ئەرێ تو حەز ژ چایێ دکەی؟",
+     "parts": [
+      [
+       "Trinkst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "gern",
+       "A"
+      ],
+      [
+       "Tee",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "sein-haben",
@@ -405,7 +537,71 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Er ist sehr müde.",
+     "ku": "ئەو گەلەک یێ وەستیایە.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "sehr müde",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Hast du ein Auto?",
+     "ku": "ئەرێ ترومبێلەک تە هەیە؟",
+     "parts": [
+      [
+       "Hast",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "ein Auto",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Heute habe ich keine Zeit.",
+     "ku": "ئەڤرۆ دەمێ من نینە.",
+     "parts": [
+      [
+       "Heute",
+       "T"
+      ],
+      [
+       "habe",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "keine",
+       "N"
+      ],
+      [
+       "Zeit",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "praesens",
@@ -514,7 +710,63 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Sie spricht drei Sprachen.",
+     "ku": "ئەو ب سێ زمانان دئاخڤیت.",
+     "parts": [
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "spricht",
+       "V"
+      ],
+      [
+       "drei Sprachen",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Wir wohnen in Duhok.",
+     "ku": "ئەم ل دهۆکێ دژین.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "wohnen",
+       "V"
+      ],
+      [
+       "in Duhok",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Liest du jeden Tag?",
+     "ku": "ئەرێ تو هەر ڕۆژ دخوینی؟",
+     "parts": [
+      [
+       "Liest",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "jeden Tag",
+       "T"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "artikel",
@@ -598,7 +850,67 @@
      ]
     }
    ],
-   "tip": "ناڤی هەردەم دگەل ئارتیکلێ ژبەر بکە: der Apfel، die Banane، das Brot."
+   "tip": "ناڤی هەردەم دگەل ئارتیکلێ ژبەر بکە: der Apfel، die Banane، das Brot.",
+   "more": [
+    {
+     "de": "Der Tisch ist groß.",
+     "ku": "مێز یا مەزنە.",
+     "parts": [
+      [
+       "Der Tisch",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "groß",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Ich habe kein Auto.",
+     "ku": "ترومبێل من نینە.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "habe",
+       "V"
+      ],
+      [
+       "kein",
+       "N"
+      ],
+      [
+       "Auto",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Das Kind spielt im Garten.",
+     "ku": "زارۆک د باخچەی دا یاری دکەت.",
+     "parts": [
+      [
+       "Das Kind",
+       "S"
+      ],
+      [
+       "spielt",
+       "V"
+      ],
+      [
+       "im Garten",
+       "L"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "akkusativ",
@@ -693,7 +1005,67 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Er trinkt einen Kaffee.",
+     "ku": "ئەو قەهوەکێ ڤەدخوت.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "trinkt",
+       "V"
+      ],
+      [
+       "einen Kaffee",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Siehst du den Bus?",
+     "ku": "ئەرێ تو پاسێ دبینی؟",
+     "parts": [
+      [
+       "Siehst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "den Bus",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Morgen kaufe ich eine Jacke.",
+     "ku": "سوبەهی ئەز جاکێتەکێ دکڕم.",
+     "parts": [
+      [
+       "Morgen",
+       "T"
+      ],
+      [
+       "kaufe",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "eine Jacke",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "dativ",
@@ -792,7 +1164,67 @@
      ]
     }
    ],
-   "tip": "دوو بەرکار: پێشی داتیڤ (کەس)، پاشان ئاکوزاتیڤ (تشت): Ich gebe **dem Kind** **einen Apfel**."
+   "tip": "دوو بەرکار: پێشی داتیڤ (کەس)، پاشان ئاکوزاتیڤ (تشت): Ich gebe **dem Kind** **einen Apfel**.",
+   "more": [
+    {
+     "de": "Sie wohnt bei ihrer Tante.",
+     "ku": "ئەو ل دەڤ خالەتا خۆ دژیت.",
+     "parts": [
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "wohnt",
+       "V"
+      ],
+      [
+       "bei ihrer Tante",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Ich helfe meinem Vater.",
+     "ku": "ئەز هاریکاریا بابێ خۆ دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "helfe",
+       "V"
+      ],
+      [
+       "meinem Vater",
+       "D"
+      ]
+     ]
+    },
+    {
+     "de": "Wir schenken der Mutter Blumen.",
+     "ku": "ئەم گولان دیاری ددەینە دایکێ.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "schenken",
+       "V"
+      ],
+      [
+       "der Mutter",
+       "D"
+      ],
+      [
+       "Blumen",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "possessiv",
@@ -875,7 +1307,67 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Wo ist dein Handy?",
+     "ku": "مۆبایلا تە ل کیڤەیە؟",
+     "parts": [
+      [
+       "Wo",
+       "W"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "dein Handy",
+       "S"
+      ]
+     ]
+    },
+    {
+     "de": "Unsere Wohnung ist klein.",
+     "ku": "خانیێ مە یێ بچووکە.",
+     "parts": [
+      [
+       "Unsere Wohnung",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "klein",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Er ruft seine Frau an.",
+     "ku": "ئەو تەلەفۆنێ بۆ ژنا خۆ دکەت.",
+     "parts": [
+      [
+       "Er",
+       "S"
+      ],
+      [
+       "ruft",
+       "V"
+      ],
+      [
+       "seine Frau",
+       "O"
+      ],
+      [
+       "an",
+       "V2"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "negation",
@@ -957,7 +1449,75 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Ich trinke keinen Kaffee.",
+     "ku": "ئەز قەهوێ ڤەناخۆم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "trinke",
+       "V"
+      ],
+      [
+       "keinen",
+       "N"
+      ],
+      [
+       "Kaffee",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Sie arbeitet morgen nicht.",
+     "ku": "ئەو سوبەهی کار ناکەت.",
+     "parts": [
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "arbeitet",
+       "V"
+      ],
+      [
+       "morgen",
+       "T"
+      ],
+      [
+       "nicht",
+       "N"
+      ]
+     ]
+    },
+    {
+     "de": "Wir haben kein Geld.",
+     "ku": "پارە مە نینن.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "haben",
+       "V"
+      ],
+      [
+       "kein",
+       "N"
+      ],
+      [
+       "Geld",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "modal",
@@ -1088,7 +1648,79 @@
      ]
     }
    ],
-   "tip": "Satzklammer = «قەفەسا رستێ»: کار ل جهێ ٢ ⟵ … ⟶ پارچا دووێ ل دووماهیێ."
+   "tip": "Satzklammer = «قەفەسا رستێ»: کار ل جهێ ٢ ⟵ … ⟶ پارچا دووێ ل دووماهیێ.",
+   "more": [
+    {
+     "de": "Du musst viel Wasser trinken.",
+     "ku": "دڤێت تو گەلەک ئاڤێ ڤەخۆی.",
+     "parts": [
+      [
+       "Du",
+       "S"
+      ],
+      [
+       "musst",
+       "V"
+      ],
+      [
+       "viel Wasser",
+       "O"
+      ],
+      [
+       "trinken",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Heute will ich früh schlafen.",
+     "ku": "ئەڤرۆ ئەز دخوازم زوو بنڤم.",
+     "parts": [
+      [
+       "Heute",
+       "T"
+      ],
+      [
+       "will",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "früh",
+       "T"
+      ],
+      [
+       "schlafen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Darf ich hier sitzen?",
+     "ku": "ئەرێ دەستوور هەیە ئەز ل ڤێرە ڕوینم؟",
+     "parts": [
+      [
+       "Darf",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "hier",
+       "L"
+      ],
+      [
+       "sitzen",
+       "V2"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "trennbar",
@@ -1178,7 +1810,75 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Der Zug fährt um acht Uhr ab.",
+     "ku": "شەمەندەفەر دەمژمێر هەشت دچیت.",
+     "parts": [
+      [
+       "Der Zug",
+       "S"
+      ],
+      [
+       "fährt",
+       "V"
+      ],
+      [
+       "um acht Uhr",
+       "T"
+      ],
+      [
+       "ab",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Ich mache das Fenster auf.",
+     "ku": "ئەز پەنجەرێ ڤەدکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "mache",
+       "V"
+      ],
+      [
+       "das Fenster",
+       "O"
+      ],
+      [
+       "auf",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Wann kommst du zurück?",
+     "ku": "تو کەنگی دزڤڕی؟",
+     "parts": [
+      [
+       "Wann",
+       "W"
+      ],
+      [
+       "kommst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "zurück",
+       "V2"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "perfekt",
@@ -1296,7 +1996,79 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Wir haben gestern Fußball gespielt.",
+     "ku": "مە دوهی تەپا پێ یاری کر.",
+     "parts": [
+      [
+       "Wir",
+       "S"
+      ],
+      [
+       "haben",
+       "V"
+      ],
+      [
+       "gestern",
+       "T"
+      ],
+      [
+       "Fußball",
+       "O"
+      ],
+      [
+       "gespielt",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Sie ist um sieben Uhr gekommen.",
+     "ku": "ئەو دەمژمێر حەفت هات.",
+     "parts": [
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "um sieben Uhr",
+       "T"
+      ],
+      [
+       "gekommen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Hast du das Buch gelesen?",
+     "ku": "ئەرێ تە پەرتووک خواند؟",
+     "parts": [
+      [
+       "Hast",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "das Buch",
+       "O"
+      ],
+      [
+       "gelesen",
+       "V2"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "imperativ",
@@ -1357,7 +2129,59 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Komm bitte morgen!",
+     "ku": "ژ کەرەما خۆ سوبەهی وەرە!",
+     "parts": [
+      [
+       "Komm",
+       "V"
+      ],
+      [
+       "bitte",
+       "A"
+      ],
+      [
+       "morgen",
+       "T"
+      ]
+     ]
+    },
+    {
+     "de": "Trink viel Wasser!",
+     "ku": "گەلەک ئاڤێ ڤەخۆ!",
+     "parts": [
+      [
+       "Trink",
+       "V"
+      ],
+      [
+       "viel Wasser",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Schreiben Sie Ihren Namen!",
+     "ku": "ناڤێ خۆ بنڤیسن!",
+     "parts": [
+      [
+       "Schreiben",
+       "V"
+      ],
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "Ihren Namen",
+       "O"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "zeit",
@@ -1418,7 +2242,67 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Im Winter ist es kalt.",
+     "ku": "ل زستانێ هەوا سارە.",
+     "parts": [
+      [
+       "Im Winter",
+       "T"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "es",
+       "S"
+      ],
+      [
+       "kalt",
+       "A"
+      ]
+     ]
+    },
+    {
+     "de": "Ich arbeite von acht bis vier Uhr.",
+     "ku": "ئەز ژ هەشتێ هەتا چارێ کار دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "arbeite",
+       "V"
+      ],
+      [
+       "von acht bis vier Uhr",
+       "T"
+      ]
+     ]
+    },
+    {
+     "de": "Um zehn Uhr schläft das Kind.",
+     "ku": "دەمژمێر دەهـ زارۆک دنڤیت.",
+     "parts": [
+      [
+       "Um zehn Uhr",
+       "T"
+      ],
+      [
+       "schläft",
+       "V"
+      ],
+      [
+       "das Kind",
+       "S"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "ort",
@@ -1498,7 +2382,63 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Das Bild hängt an der Wand.",
+     "ku": "وێنە ب دیواری ڤە هەلاویستییە.",
+     "parts": [
+      [
+       "Das Bild",
+       "S"
+      ],
+      [
+       "hängt",
+       "V"
+      ],
+      [
+       "an der Wand",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Ich gehe in die Schule.",
+     "ku": "ئەز دچمە قوتابخانێ.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "gehe",
+       "V"
+      ],
+      [
+       "in die Schule",
+       "L"
+      ]
+     ]
+    },
+    {
+     "de": "Die Katze ist unter dem Tisch.",
+     "ku": "پشیک ل بن مێزێ یە.",
+     "parts": [
+      [
+       "Die Katze",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "unter dem Tisch",
+       "L"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "pronomen",
@@ -1615,7 +2555,75 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Ich rufe dich morgen an.",
+     "ku": "ئەز دێ سوبەهی تەلەفۆنێ بۆ تە کەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "rufe",
+       "V"
+      ],
+      [
+       "dich",
+       "O"
+      ],
+      [
+       "morgen",
+       "T"
+      ],
+      [
+       "an",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Kannst du mir helfen?",
+     "ku": "تو دشێی هاریکاریا من بکەی؟",
+     "parts": [
+      [
+       "Kannst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "mir",
+       "D"
+      ],
+      [
+       "helfen",
+       "V2"
+      ]
+     ]
+    },
+    {
+     "de": "Das Essen schmeckt ihm.",
+     "ku": "خوارن ب دلێ وی یە.",
+     "parts": [
+      [
+       "Das Essen",
+       "S"
+      ],
+      [
+       "schmeckt",
+       "V"
+      ],
+      [
+       "ihm",
+       "D"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "konnektoren",
@@ -1702,7 +2710,103 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Ich trinke Tee und er trinkt Kaffee.",
+     "ku": "ئەز چایێ ڤەدخۆم و ئەو قەهوێ ڤەدخوت.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "trinke",
+       "V"
+      ],
+      [
+       "Tee",
+       "O"
+      ],
+      [
+       "und",
+       "K"
+      ],
+      [
+       "er",
+       "S"
+      ],
+      [
+       "trinkt",
+       "V"
+      ],
+      [
+       "Kaffee",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Sie ist krank, aber sie arbeitet.",
+     "ku": "ئەو یا نەساخە، بەلێ کار دکەت.",
+     "parts": [
+      [
+       "Sie",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "krank",
+       "A"
+      ],
+      [
+       ",",
+       ""
+      ],
+      [
+       "aber",
+       "K"
+      ],
+      [
+       "sie",
+       "S"
+      ],
+      [
+       "arbeitet",
+       "V"
+      ]
+     ]
+    },
+    {
+     "de": "Kommst du heute oder morgen?",
+     "ku": "تو ئەڤرۆ دێ هێی یان سوبەهی؟",
+     "parts": [
+      [
+       "Kommst",
+       "V"
+      ],
+      [
+       "du",
+       "S"
+      ],
+      [
+       "heute",
+       "T"
+      ],
+      [
+       "oder",
+       "K"
+      ],
+      [
+       "morgen",
+       "T"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "gern",
@@ -1775,7 +2879,71 @@
      ]
     }
    ],
-   "tip": null
+   "tip": null,
+   "more": [
+    {
+     "de": "Ich spiele gern Fußball.",
+     "ku": "ئەز حەز ژ یاریا تەپا پێ دکەم.",
+     "parts": [
+      [
+       "Ich",
+       "S"
+      ],
+      [
+       "spiele",
+       "V"
+      ],
+      [
+       "gern",
+       "A"
+      ],
+      [
+       "Fußball",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Am liebsten esse ich Dolma.",
+     "ku": "ئەز ژ هەمییان پتر حەز ژ دۆلمێ دکەم.",
+     "parts": [
+      [
+       "Am liebsten",
+       "A"
+      ],
+      [
+       "esse",
+       "V"
+      ],
+      [
+       "ich",
+       "S"
+      ],
+      [
+       "Dolma",
+       "O"
+      ]
+     ]
+    },
+    {
+     "de": "Der Tee ist heißer als der Kaffee.",
+     "ku": "چا ژ قەهوێ گەرمترە.",
+     "parts": [
+      [
+       "Der Tee",
+       "S"
+      ],
+      [
+       "ist",
+       "V"
+      ],
+      [
+       "heißer als der Kaffee",
+       "A"
+      ]
+     ]
+    }
+   ]
   }
  ]
 }

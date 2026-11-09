@@ -132,14 +132,25 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
     return [for (final c in cs) if (seen.add(c.pic)) c];
   }
 
+  /// وێنەیێن د پرسیارێن داوی دا هاتین — دا هەر جار هەمان ٤ وێنە دووبارە نەبن
+  final Set<String> _recentPics = <String>{};
+
   GameItem _pickItem(WordConcept c, List<WordConcept> local) {
     final pics = <String>{c.pic};
     final distract = <WordConcept>[];
-    for (final pool in [local, [...allConcepts]..shuffle(rng)]) {
+    bool fresh(WordConcept d) => d.id != c.id && d.emoji.isNotEmpty && !_recentPics.contains(d.pic);
+    // تنێ ئێک ژ هەمان کۆمێ (زەحمەتتر)، یێن دی ژ هەمی پەیڤان ب شێوەیەکێ هەڕەمەکی
+    final near = local.where(fresh).toList()..shuffle(rng);
+    final far = [...allConcepts]..shuffle(rng);
+    for (final pool in [near.take(1), far.where(fresh), far]) {
       for (final d in pool) {
         if (distract.length >= 3) break;
         if (d.id != c.id && d.emoji.isNotEmpty && pics.add(d.pic)) distract.add(d);
       }
+    }
+    _recentPics.addAll(distract.map((d) => d.pic));
+    while (_recentPics.length > 15) {
+      _recentPics.remove(_recentPics.first);
     }
     final choices = [c, ...distract]..shuffle(rng);
     return GameItem(GameKind.pickPicture, [c], choices: choices);
