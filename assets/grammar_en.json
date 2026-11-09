@@ -94,7 +94,21 @@
      "tip": {
       "de": "Don't forget the verb: “I am a student”, not “I a student”.",
       "ku": "کاری ژ بیر نەکە: «I am a student»، نە «I a student»."
-     }
+     },
+     "more": [
+      {
+       "de": "You are my friend.",
+       "ku": "تو هەڤالێ منی."
+      },
+      {
+       "de": "He is from Duhok.",
+       "ku": "ئەو ژ دهۆکێ یە."
+      },
+      {
+       "de": "They are students.",
+       "ku": "ئەو قوتابینە."
+      }
+     ]
     },
     {
      "emoji": "❓",
@@ -163,6 +177,20 @@
        "cue": "no",
        "a": "No, he isn't.",
        "aku": "نەخێر، نینە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Is she a doctor? – Yes, she is.",
+       "ku": "ئەرێ ئەو دکتۆرە؟ – بەلێ."
+      },
+      {
+       "de": "I'm not hungry.",
+       "ku": "ئەز نە یێ برسیمە."
+      },
+      {
+       "de": "Are they at home?",
+       "ku": "ئەرێ ئەو ل مالن؟"
       }
      ]
     },
@@ -238,6 +266,20 @@
        "cue": "how old",
        "a": "How old are you?",
        "aku": "تو چەند سالی؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "How old are you?",
+       "ku": "تو چەند سالی؟"
+      },
+      {
+       "de": "Who is that?",
+       "ku": "ئەو کییە؟"
+      },
+      {
+       "de": "When is the class?",
+       "ku": "وانە کەنگییە؟"
       }
      ]
     }
@@ -317,7 +359,21 @@
      "tip": {
       "de": "“a university” (the sound is “you”), “an hour” (h is silent).",
       "ku": "«a university» (دەنگ «یوو» یە)، «an hour» (h ناهێتە خواندن)."
-     }
+     },
+     "more": [
+      {
+       "de": "It's an orange.",
+       "ku": "ئەو پرتەقالەکە."
+      },
+      {
+       "de": "I have a car. The car is red.",
+       "ku": "ترومبێلەک من هەیە. ترومبێل یا سۆرە."
+      },
+      {
+       "de": "She is an engineer.",
+       "ku": "ئەو ئەندازیارە."
+      }
+     ]
     },
     {
      "emoji": "🧺",
@@ -394,6 +450,20 @@
        "cue": "",
        "a": "many cities",
        "aku": "گەلەک باژێڕ"
+      }
+     ],
+     "more": [
+      {
+       "de": "I have three sisters.",
+       "ku": "سێ خویشک من هەنە."
+      },
+      {
+       "de": "The women are here.",
+       "ku": "ئافرەت ل ڤێرێ نە."
+      },
+      {
+       "de": "My feet are cold.",
+       "ku": "پێیێن من د سارن."
       }
      ]
     },
@@ -480,6 +550,20 @@
        "a": "Yes, it's their car.",
        "aku": "بەلێ، ترومبێلا وانە."
       }
+     ],
+     "more": [
+      {
+       "de": "Your phone is new.",
+       "ku": "مۆبایلا تە یا نوویە."
+      },
+      {
+       "de": "His car is black.",
+       "ku": "ترومبێلا وی یا ڕەشە."
+      },
+      {
+       "de": "Their children are at school.",
+       "ku": "زارۆکێن وان ل قوتابخانێ نە."
+      }
      ]
     },
     {
@@ -545,6 +629,20 @@
        "a": "These apples are red.",
        "aku": "ئەڤ سێڤە د سۆرن."
       }
+     ],
+     "more": [
+      {
+       "de": "These apples are fresh.",
+       "ku": "ئەڤ سێڤە د تازەنە."
+      },
+      {
+       "de": "That house is big.",
+       "ku": "ئەو خانی یێ مەزنە."
+      },
+      {
+       "de": "Is this your pen?",
+       "ku": "ئەرێ ئەڤە پێنووسا تەیە؟"
+      }
      ]
     },
     {
@@ -609,6 +707,20 @@
        "cue": "no",
        "a": "No, she doesn't have a phone.",
        "aku": "نەخێر، تەلەفۆنا وێ نینە."
+      }
+     ],
+     "more": [
+      {
+       "de": "He has three children.",
+       "ku": "سێ زارۆک وی هەنە."
+      },
+      {
+       "de": "We have a big house.",
+       "ku": "خانیەکێ مەزن مە هەیە."
+      },
+      {
+       "de": "Does she have a phone? – Yes, she does.",
+       "ku": "ئەرێ مۆبایل وێ هەیە؟ – بەلێ."
       }
      ]
     }
@@ -690,7 +802,21 @@
      "tip": {
       "de": "He, she, it → don't forget the -s!",
       "ku": "دگەل he، she، it ‎-s ژ بیر نەکە!"
-     }
+     },
+     "more": [
+      {
+       "de": "We live in Duhok.",
+       "ku": "ئەم ل دهۆکێ دژین."
+      },
+      {
+       "de": "My father drinks coffee every morning.",
+       "ku": "بابێ من هەر سپێدە قەهوێ ڤەدخوت."
+      },
+      {
+       "de": "They play football on Fridays.",
+       "ku": "ئەو رۆژێن ئەینیێ تەپا پێ یاری دکەن."
+      }
+     ]
     },
     {
      "emoji": "🚫",
@@ -754,6 +880,20 @@
        "cue": "yes",
        "a": "Yes, she does.",
        "aku": "بەلێ."
+      }
+     ],
+     "more": [
+      {
+       "de": "Do you speak English? – Yes, I do.",
+       "ku": "ئەرێ تو ب ئینگلیزی دئاخڤی؟ – بەلێ."
+      },
+      {
+       "de": "She doesn't like coffee.",
+       "ku": "ئەو حەز ژ قەهوێ ناکەت."
+      },
+      {
+       "de": "Where does he work?",
+       "ku": "ئەو ل کیڤە کار دکەت؟"
       }
      ]
     },
@@ -820,6 +960,20 @@
        "cue": "",
        "a": "In April.",
        "aku": "د نیسانێ دا."
+      }
+     ],
+     "more": [
+      {
+       "de": "I get up at six o'clock.",
+       "ku": "ئەز دەمژمێر شەش ڕادبم."
+      },
+      {
+       "de": "We go to the park on Sunday.",
+       "ku": "ئەم رۆژا یەکشەمبیێ دچینە پارکێ."
+      },
+      {
+       "de": "It is cold in winter.",
+       "ku": "ل زستانێ هەوا سارە."
       }
      ]
     },
@@ -894,6 +1048,20 @@
        "cue": "",
        "a": "I sometimes cook.",
        "aku": "ئەز جار جار خوارنێ چێدکەم."
+      }
+     ],
+     "more": [
+      {
+       "de": "I usually walk to work.",
+       "ku": "ئەز پتریا جاران ب پێیان دچمە کاری."
+      },
+      {
+       "de": "We often eat rice.",
+       "ku": "ئەم گەلەک جاران برنجی دخۆین."
+      },
+      {
+       "de": "He never drinks coffee.",
+       "ku": "ئەو قەت قەهوێ ڤەناخوت."
       }
      ]
     }
@@ -970,6 +1138,20 @@
        "cue": "",
        "a": "No, there isn't.",
        "aku": "نەخێر، نینە."
+      }
+     ],
+     "more": [
+      {
+       "de": "There is a cat in the garden.",
+       "ku": "پشیکەک د باخچەی دا هەیە."
+      },
+      {
+       "de": "There are two chairs in the room.",
+       "ku": "دوو کورسی د ژوورێ دا هەنە."
+      },
+      {
+       "de": "Are there any shops near here?",
+       "ku": "ئەرێ دوکان نێزیکی ڤێرێ هەنە؟"
       }
      ]
     },
@@ -1049,6 +1231,20 @@
        "a": "It's next to the bank.",
        "aku": "ل تەنیشت بانکێ یە."
       }
+     ],
+     "more": [
+      {
+       "de": "My phone is in my bag.",
+       "ku": "مۆبایلا من د جانتا من دا یە."
+      },
+      {
+       "de": "The picture is on the wall.",
+       "ku": "وێنە ل سەر دیواری یە."
+      },
+      {
+       "de": "The shoes are under the chair.",
+       "ku": "پێڵاڤ ل بن کورسیێ نە."
+      }
      ]
     },
     {
@@ -1114,6 +1310,20 @@
        "cue": "",
        "a": "Turn right.",
        "aku": "بەرەف ڕاستێ بزڤڕە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Sit down, please.",
+       "ku": "ژ کەرەما خۆ ڕوینە."
+      },
+      {
+       "de": "Open your books.",
+       "ku": "پەرتووکێن خۆ ڤەکەن."
+      },
+      {
+       "de": "Don't be late!",
+       "ku": "درەنگ نەمینە!"
       }
      ]
     }
@@ -1189,6 +1399,20 @@
        "a": "I can cook rice.",
        "aku": "ئەز دشێم برنجی چێبکەم."
       }
+     ],
+     "more": [
+      {
+       "de": "She can swim very well.",
+       "ku": "ئەو دشێت گەلەک باش مەلەڤانیێ بکەت."
+      },
+      {
+       "de": "Can I sit here?",
+       "ku": "ئەرێ دشێم ل ڤێرێ ڕوینم؟"
+      },
+      {
+       "de": "We can't come tomorrow.",
+       "ku": "ئەم نەشێین سوبەهی بێین."
+      }
      ]
     },
     {
@@ -1258,6 +1482,20 @@
        "cue": "",
        "a": "No, they don't like waiting.",
        "aku": "نەخێر، حەز ژ چاڤەڕێکرنێ ناکەن."
+      }
+     ],
+     "more": [
+      {
+       "de": "He likes reading books.",
+       "ku": "ئەو حەز ژ خواندنا پەرتووکان دکەت."
+      },
+      {
+       "de": "I don't like waiting.",
+       "ku": "ئەز حەز ژ چاڤەڕێکرنێ ناکەم."
+      },
+      {
+       "de": "We love travelling.",
+       "ku": "ئەم گەلەک حەز ژ گەشتکرنێ دکەین."
       }
      ]
     },
@@ -1329,6 +1567,20 @@
        "a": "How much water do you drink?",
        "aku": "تو چەند ئاڤێ ڤەدخۆی؟"
       }
+     ],
+     "more": [
+      {
+       "de": "How many brothers do you have?",
+       "ku": "چەند برا تە هەنە؟"
+      },
+      {
+       "de": "I don't have any money.",
+       "ku": "چ پارە من نینن."
+      },
+      {
+       "de": "How much water do you drink?",
+       "ku": "تو چەند ئاڤێ ڤەدخۆی؟"
+      }
      ]
     },
     {
@@ -1399,7 +1651,21 @@
      "tip": {
       "de": "Every day → present simple. Now → present continuous.",
       "ku": "هەر رۆژ ← present simple. نوکە ← present continuous."
-     }
+     },
+     "more": [
+      {
+       "de": "She is reading a book.",
+       "ku": "ئەو پەرتووکەکێ دخوینیت."
+      },
+      {
+       "de": "We are watching TV.",
+       "ku": "ئەم تەلەڤزیۆنێ دبینین."
+      },
+      {
+       "de": "Is it raining?",
+       "ku": "ئەرێ باران دباریت؟"
+      }
+     ]
     }
    ]
   },
@@ -1471,6 +1737,20 @@
        "cue": "",
        "a": "No, they weren't.",
        "aku": "نەخێر، نەبوون."
+      }
+     ],
+     "more": [
+      {
+       "de": "The film was very good.",
+       "ku": "فیلم گەلەک یێ باش بوو."
+      },
+      {
+       "de": "Were you at school yesterday?",
+       "ku": "ئەرێ تو دوهی ل قوتابخانێ بووی؟"
+      },
+      {
+       "de": "We weren't tired.",
+       "ku": "ئەم نە یێن وەستیایی بووین."
       }
      ]
     },
@@ -1551,6 +1831,20 @@
        "cue": "",
        "a": "No, I didn't.",
        "aku": "نەخێر، من نەخوار."
+      }
+     ],
+     "more": [
+      {
+       "de": "She cooked dinner.",
+       "ku": "وێ شیڤ چێکر."
+      },
+      {
+       "de": "I didn't go to work yesterday.",
+       "ku": "دوهی ئەز نەچوومە کاری."
+      },
+      {
+       "de": "What did you buy?",
+       "ku": "تە چ کڕی؟"
       }
      ]
     },
@@ -1634,6 +1928,20 @@
        "a": "Yes, it's for you.",
        "aku": "بەلێ، بۆ هەوە یە."
       }
+     ],
+     "more": [
+      {
+       "de": "I love them.",
+       "ku": "ئەز حەز ژ وان دکەم."
+      },
+      {
+       "de": "Call me tomorrow.",
+       "ku": "سوبەهی تەلەفۆنێ بۆ من بکە."
+      },
+      {
+       "de": "She knows us.",
+       "ku": "ئەو مە دناسیت."
+      }
      ]
     },
     {
@@ -1709,6 +2017,20 @@
        "a": "Karim is the tallest.",
        "aku": "کەریم درێژترینە."
       }
+     ],
+     "more": [
+      {
+       "de": "My brother is taller than me.",
+       "ku": "برایێ من ژ من درێژترە."
+      },
+      {
+       "de": "This is the cheapest shop.",
+       "ku": "ئەڤە هەرزانترین دوکانە."
+      },
+      {
+       "de": "Today is hotter than yesterday.",
+       "ku": "ئەڤرۆ ژ دوهی گەرمترە."
+      }
      ]
     },
     {
@@ -1774,6 +2096,20 @@
        "cue": "",
        "a": "Yes, it will.",
        "aku": "بەلێ، دێ باریت."
+      }
+     ],
+     "more": [
+      {
+       "de": "We're going to visit our grandmother.",
+       "ku": "ئەم دێ سەرا داپیرا خۆ دەین."
+      },
+      {
+       "de": "It will rain tomorrow.",
+       "ku": "سوبەهی دێ باران باریت."
+      },
+      {
+       "de": "I think she will win.",
+       "ku": "ئەز هزر دکەم ئەو دێ ب سەرکەڤیت."
       }
      ]
     }

@@ -43,7 +43,11 @@ class GramTopic {
   final List<List<String>> rows;
   final List<GramText> examples;
   final List<GramPractice> practice;
-  const GramTopic(this.emoji, this.title, this.explain, this.tip, this.head, this.rows, this.examples, this.practice);
+
+  /// ⬇️ نموونەیێن زێدەتر — ل بن نموونەیان، ب تیرەکێ ڤەدبن
+  final List<GramText> more;
+  const GramTopic(this.emoji, this.title, this.explain, this.tip, this.head, this.rows, this.examples, this.practice,
+      {this.more = const []});
 }
 
 /// 💬 رستێن ئامادە یێن وانێ (Kommunikation)
@@ -116,6 +120,7 @@ class Grammar {
                   (t['rows'] as List).map(strs).toList(),
                   (t['examples'] as List).map(GramText.of).toList(),
                   ((t['practice'] as List?) ?? const []).map(GramPractice.of).toList(),
+                  more: ((t['more'] as List?) ?? const []).map(GramText.of).toList(),
                 ),
             ],
         };
@@ -434,6 +439,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
             textDirection: dir, style: TextStyle(color: AppColors.fg60, fontSize: 13, fontWeight: FontWeight.bold)),
         const SizedBox(height: 6),
         for (final e in t.examples) _example(e, color),
+        if (t.more.isNotEmpty) _MoreExamples(more: t.more, color: color, ku: ku, item: (e) => _example(e, color)),
         if (t.practice.length >= 2)
           Padding(
             padding: const EdgeInsets.only(top: 6, bottom: 4),
@@ -483,6 +489,66 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
         ),
       ),
     );
+  }
+}
+
+
+/// ⬇️ تیرا «نموونەیێن زێدەتر»: ب تپەکێ ڤەدبیت و دگریت
+class _MoreExamples extends StatefulWidget {
+  final List<GramText> more;
+  final Color color;
+  final bool ku;
+  final Widget Function(GramText) item;
+  const _MoreExamples({required this.more, required this.color, required this.ku, required this.item});
+
+  @override
+  State<_MoreExamples> createState() => _MoreExamplesState();
+}
+
+class _MoreExamplesState extends State<_MoreExamples> {
+  bool open = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = widget.color;
+    final n = widget.more.length;
+    final label = open
+        ? (widget.ku ? 'کێمتر نیشان بدە' : (Grammar.en ? 'Show less' : 'Weniger anzeigen'))
+        : (widget.ku ? '$n نموونەیێن زێدەتر' : (Grammar.en ? '$n more examples' : '$n weitere Beispiele'));
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      AnimatedSize(
+        duration: const Duration(milliseconds: 280),
+        curve: Curves.easeOutCubic,
+        alignment: Alignment.topCenter,
+        child: open
+            ? Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [for (final e in widget.more) widget.item(e)])
+            : const SizedBox(width: double.infinity),
+      ),
+      Center(
+        child: InkWell(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () => setState(() => open = !open),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Text(label,
+                  textDirection: widget.ku ? TextDirection.rtl : TextDirection.ltr,
+                  style: TextStyle(color: c, fontSize: 13, fontWeight: FontWeight.bold)),
+              AnimatedRotation(
+                turns: open ? 0.5 : 0,
+                duration: const Duration(milliseconds: 280),
+                child: Container(
+                  margin: const EdgeInsets.only(top: 4),
+                  decoration: BoxDecoration(color: c.withValues(alpha: 0.15), shape: BoxShape.circle),
+                  padding: const EdgeInsets.all(2),
+                  child: Icon(Icons.keyboard_arrow_down_rounded, color: c, size: 30),
+                ),
+              ),
+            ]),
+          ),
+        ),
+      ),
+    ]);
   }
 }
 

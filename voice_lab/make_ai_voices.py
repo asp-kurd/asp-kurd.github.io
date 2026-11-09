@@ -8,7 +8,7 @@
 فایل: assets/tts/<lang>/<fnv1a32(text)>.mp3 — کلیل ژ دەقێ تەمام دهێتە دروستکرن،
 هەمان یێ VoiceService.textKey د Dart دا. تنێ فایلێن کێم دهێنە دروستکرن.
 """
-import json, os, subprocess, sys, tempfile, wave
+import json, os, re, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 ROOT = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
@@ -88,7 +88,7 @@ def collect():
     if gen.exists():  # 📘 English grammar: نموونە و راهێنان
         for l in json.loads(gen.read_text(encoding="utf-8"))["lektionen"]:
             for t in l["topics"]:
-                for e in t["examples"]:
+                for e in t["examples"] + t.get("more", []):  # ⬇️ نموونەیێن زێدەتر ژی
                     jobs["en"][e["de"]] = e["de"]
                 for pr in t.get("practice", []):
                     for k in ("q", "a"):
@@ -99,8 +99,12 @@ def collect():
     if gram.exists():  # 📘 رێزمان ل دویف وانێ: نموونە
         for l in json.loads(gram.read_text(encoding="utf-8"))["lektionen"]:
             for t in l["topics"]:
-                for e in t["examples"]:
+                for e in t["examples"] + t.get("more", []):  # ⬇️ نموونەیێن زێدەتر ژی
                     jobs["de"][e["de"]] = e["de"]
+                for row in t.get("rows", []):  # خانێن خشتێ ب تپێ دهێنە خواندن
+                    for x in row:
+                        if german_only(x):
+                            jobs["de"][plain(x)] = plain(x)
                 for pr in t.get("practice", []):  # 🎯 راهێنان: پرسیار + بەرسڤ
                     for k in ("q", "a"):
                         txt = pr[k]
@@ -137,10 +141,69 @@ def collect():
             elif isinstance(o, list):
                 for v in o:
                     walk(v)
-        walk(json.loads(book.read_text(encoding="utf-8")))
+        bk = json.loads(book.read_text(encoding="utf-8"))
+        walk(bk)
+        # 🔊 هەر تشتێ د پەرتووکێ دا ب تپێ دهێتە خواندن (هەمان کلیل وەکی book_screen.dart)
+        for ch in bk.get("chapters", []):
+            for bl in ch.get("blocks", []):
+                t = bl.get("t")
+                if t == "vocab":  # فەرهەنگۆک: der Vater، die Mutter …
+                    for it in bl.get("items", []):
+                        jobs["de"][plain(it[0])] = plain(it[0])
+                elif t == "table":
+                    for row in bl.get("rows", []):
+                        for x in row:
+                            if german_only(x):
+                                jobs["de"][plain(x)] = plain(x)
+                elif t in ("ul", "ol"):
+                    for s in bl.get("items", []):
+                        d = s.find(" — ")
+                        if d > 0:
+                            left = re.sub(r"^[^:]{1,20}:\s*", "", plain(s[:d]), count=1)
+                            if german_only(left):
+                                jobs["de"][left] = left
+                elif t == "quiz":
+                    for it in bl.get("items", []):
+                        f = plain(quiz_filled(it["q"], it["a"]))
+                        if f:
+                            jobs["de"][f] = f
     for k, src in SAME_TEXT.items():
         jobs[k] = {**jobs[src], **jobs[k]}
     return jobs
+
+
+_LATIN = re.compile(r"[A-Za-zÄÖÜäöüß]")
+_ARABIC = re.compile(r"[\u0600-\u06FF]")
+
+
+def german_only(s: str) -> bool:
+    """هەمان isGermanOnly د book_screen.dart دا"""
+    return bool(_LATIN.search(s)) and not _ARABIC.search(s)
+
+
+def plain(s: str) -> str:
+    return s.replace("**", "").strip()
+
+
+def quiz_filled(q: str, a: str) -> str:
+    """هەمان _QuizBlockState.filled: رستا تەمام ب بەرسڤێ"""
+    arrow = q.find("→")
+    if arrow >= 0:
+        q = q[arrow + 1:].strip()
+    answers = a.split(" / ")
+    k = [0]
+
+    def rep(_m):
+        if k[0] < len(answers):
+            k[0] += 1
+            return answers[k[0] - 1]
+        return "…"
+
+    q = re.sub(r"_{3,}", rep, q)
+    if k[0] == 0:
+        q = re.sub(r"\([^)]*/[^)]*\)", lambda _m: a, q, count=1)
+    q = re.sub(r"\s*\([^)]*\)", "", q)
+    return re.sub(r"\s+([.?!,])", lambda m: m.group(1), q)
 
 
 def clean(t: str) -> str:

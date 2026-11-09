@@ -95,6 +95,24 @@
        "a": "Ich bin Lehrer.",
        "aku": "ئەز مامۆستامە."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich wohne in Duhok.",
+       "ku": "ئەز ل دهۆکێ دژیم."
+      },
+      {
+       "de": "Du sprichst gut Deutsch.",
+       "ku": "تو باش ب ئەلمانی دئاخڤی."
+      },
+      {
+       "de": "Sind Sie Herr Weber?",
+       "ku": "ئەرێ هوین بەڕێز ڤێبەرن؟"
+      },
+      {
+       "de": "Ich bin Student.",
+       "ku": "ئەز قوتابیم."
+      }
      ]
     },
     {
@@ -170,6 +188,24 @@
        "a": "Wo wohnst du?",
        "aku": "تو ل کیڤە دژی؟"
       }
+     ],
+     "more": [
+      {
+       "de": "Wo wohnst du?",
+       "ku": "تو ل کیڤە دژی؟"
+      },
+      {
+       "de": "Wie alt bist du?",
+       "ku": "تو چەند سالی؟"
+      },
+      {
+       "de": "Wie ist Ihre Telefonnummer?",
+       "ku": "ژمارا تەلەفۆنا هەوە چەندە؟"
+      },
+      {
+       "de": "Was machst du hier?",
+       "ku": "تو ل ڤێرە چ دکەی؟"
+      }
      ]
     },
     {
@@ -244,6 +280,24 @@
        "a": "Mein Name ist Karim.",
        "aku": "ناڤێ من کەریمە."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich wohne in Erbil.",
+       "ku": "ئەز ل هەولێرێ دژیم."
+      },
+      {
+       "de": "Mein Bruder heißt Aram.",
+       "ku": "ناڤێ برایێ من ئارامە."
+      },
+      {
+       "de": "Wir lernen jetzt Deutsch.",
+       "ku": "ئەم نوکە ئەلمانی فێر دبین."
+      },
+      {
+       "de": "Sara spricht Arabisch.",
+       "ku": "سارا ب عەرەبی دئاخڤیت."
+      }
      ]
     },
     {
@@ -309,6 +363,24 @@
        "cue": "die Türkei",
        "a": "Sie kommt aus der Türkei.",
        "aku": "ئەو ژ تورکیا یە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich komme aus Duhok.",
+       "ku": "ئەز ژ دهۆکێ مە."
+      },
+      {
+       "de": "Sie kommt aus Deutschland.",
+       "ku": "ئەو ژ ئەلمانیا یە."
+      },
+      {
+       "de": "Wir kommen aus dem Irak.",
+       "ku": "ئەم ژ عیراقێ نە."
+      },
+      {
+       "de": "Kommst du aus Syrien?",
+       "ku": "ئەرێ تو ژ سووریا یی؟"
       }
      ]
     }
@@ -414,6 +486,24 @@
        "a": "Sie sprechen Arabisch.",
        "aku": "ئەو ب عەرەبی دئاخڤن."
       }
+     ],
+     "more": [
+      {
+       "de": "Ihr seid meine Freunde.",
+       "ku": "هوین هەڤالێن منن."
+      },
+      {
+       "de": "Sie hat zwei Kinder.",
+       "ku": "دوو زارۆکێن وێ هەنە."
+      },
+      {
+       "de": "Wir sprechen Kurdisch.",
+       "ku": "ئەم ب کوردی دئاخڤین."
+      },
+      {
+       "de": "Lebst du allein?",
+       "ku": "ئەرێ تو ب تنێ دژی؟"
+      }
      ]
     },
     {
@@ -492,6 +582,24 @@
        "a": "Ja, das ist meine Schwester.",
        "aku": "بەلێ، ئەڤە خویشکا منە."
       }
+     ],
+     "more": [
+      {
+       "de": "Mein Kind ist drei Jahre alt.",
+       "ku": "زارۆکێ من سێ سالییە."
+      },
+      {
+       "de": "Wo wohnen deine Eltern?",
+       "ku": "دایک و بابێن تە ل کیڤە دژین؟"
+      },
+      {
+       "de": "Ist das dein Handy?",
+       "ku": "ئەرێ ئەڤە مۆبایلا تەیە؟"
+      },
+      {
+       "de": "Wie ist Ihr Name?",
+       "ku": "ناڤێ هەوە چییە؟"
+      }
      ]
     },
     {
@@ -557,6 +665,24 @@
        "cue": "die Türkei",
        "a": "Sie wohnt in der Türkei.",
        "aku": "ئەو ل تورکیا دژیت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Mein Bruder lebt in Deutschland.",
+       "ku": "برایێ من ل ئەلمانیا دژیت."
+      },
+      {
+       "de": "Wir sind im Irak.",
+       "ku": "ئەم ل عیراقێ نە."
+      },
+      {
+       "de": "Sie arbeitet in der Türkei.",
+       "ku": "ئەو ل تورکیا کار دکەت."
+      },
+      {
+       "de": "Wohnst du in Erbil?",
+       "ku": "ئەرێ تو ل هەولێرێ دژی؟"
       }
      ]
     }
@@ -635,6 +761,24 @@
        "a": "Das ist ein Ei.",
        "aku": "ئەڤە هێکەکە."
       }
+     ],
+     "more": [
+      {
+       "de": "Das ist ein Saft.",
+       "ku": "ئەڤە شەربەتەکە."
+      },
+      {
+       "de": "Ich kaufe eine Tomate.",
+       "ku": "ئەز تەماتەکێ دکڕم."
+      },
+      {
+       "de": "Wir brauchen ein Brot.",
+       "ku": "نانەک بۆ مە پێدڤییە."
+      },
+      {
+       "de": "Er isst eine Orange.",
+       "ku": "ئەو پرتەقالەکێ دخوت."
+      }
      ]
     },
     {
@@ -700,6 +844,24 @@
        "cue": "nein",
        "a": "Nein, wir haben keine Eier.",
        "aku": "نەخێر، هێک مە نینن."
+      }
+     ],
+     "more": [
+      {
+       "de": "Das ist keine Banane.",
+       "ku": "ئەڤە موز نینە."
+      },
+      {
+       "de": "Ich habe kein Auto.",
+       "ku": "ترومبێل من نینە."
+      },
+      {
+       "de": "Er hat keine Zeit.",
+       "ku": "دەمێ وی نینە."
+      },
+      {
+       "de": "Wir haben keine Kinder.",
+       "ku": "زارۆک مە نینن."
       }
      ]
     },
@@ -790,6 +952,24 @@
        "a": "die Eier",
        "aku": "هێک"
       }
+     ],
+     "more": [
+      {
+       "de": "Ich habe zwei Brüder.",
+       "ku": "دوو برا من هەنە."
+      },
+      {
+       "de": "Die Kinder spielen.",
+       "ku": "زارۆک یاری دکەن."
+      },
+      {
+       "de": "Wir kaufen fünf Bananen.",
+       "ku": "ئەم پێنج موزان دکڕین."
+      },
+      {
+       "de": "Die Bücher sind neu.",
+       "ku": "پەرتووک د نوینە."
+      }
      ]
     },
     {
@@ -860,6 +1040,24 @@
        "a": "Wohnst du in Berlin?",
        "aku": "ئەرێ تو ل بەرلینێ دژی؟"
       }
+     ],
+     "more": [
+      {
+       "de": "Sprichst du Deutsch? – Ja, ein bisschen.",
+       "ku": "ئەرێ تو ب ئەلمانی دئاخڤی؟ – بەلێ، کێمەکێ."
+      },
+      {
+       "de": "Haben Sie Kinder? – Ja, zwei.",
+       "ku": "ئەرێ زارۆکێن هەوە هەنە؟ – بەلێ، دوو."
+      },
+      {
+       "de": "Kommst du aus Duhok? – Nein, aus Zakho.",
+       "ku": "ئەرێ تو ژ دهۆکێ یی؟ – نەخێر، ژ زاخۆ."
+      },
+      {
+       "de": "Ist das dein Bruder? – Ja.",
+       "ku": "ئەرێ ئەڤە برایێ تەیە؟ – بەلێ."
+      }
      ]
     },
     {
@@ -925,6 +1123,24 @@
        "cue": "ja",
        "a": "Ja, wir haben noch Milch.",
        "aku": "بەلێ، هێشتا شیر مە هەیە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich esse gern Reis.",
+       "ku": "ئەز حەز ژ خوارنا برنجی دکەم."
+      },
+      {
+       "de": "Trinkst du Kaffee?",
+       "ku": "ئەرێ تو قەهوێ ڤەدخۆی؟"
+      },
+      {
+       "de": "Wir kaufen Obst und Gemüse.",
+       "ku": "ئەم مێوە و زەرزەواتان دکڕین."
+      },
+      {
+       "de": "Brauchst du Salz?",
+       "ku": "ئەرێ خوێ بۆ تە پێدڤییە؟"
       }
      ]
     },
@@ -1004,6 +1220,24 @@
        "a": "Ja, wir essen Fisch.",
        "aku": "بەلێ، ئەم ماسیان دخۆین."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich esse gern Dolma.",
+       "ku": "ئەز حەز ژ دۆلمێ دکەم."
+      },
+      {
+       "de": "Isst du Fisch?",
+       "ku": "ئەرێ تو ماسیان دخۆی؟"
+      },
+      {
+       "de": "Sie isst einen Apfel.",
+       "ku": "ئەو سێڤەکێ دخوت."
+      },
+      {
+       "de": "Was esst ihr heute?",
+       "ku": "هوین ئەڤرۆ چ دخۆن؟"
+      }
      ]
     }
    ]
@@ -1081,6 +1315,24 @@
        "a": "Der Balkon ist schön.",
        "aku": "بالکۆن یێ جوانە."
       }
+     ],
+     "more": [
+      {
+       "de": "Die Küche ist groß.",
+       "ku": "مەتبەخ یا مەزنە."
+      },
+      {
+       "de": "Das Zimmer ist hell.",
+       "ku": "ژوور یێ ڕۆهنە."
+      },
+      {
+       "de": "Wo ist der Stuhl?",
+       "ku": "کورسی ل کیڤەیە؟"
+      },
+      {
+       "de": "Die Stühle sind neu.",
+       "ku": "کورسی د نوینە."
+      }
      ]
     },
     {
@@ -1146,6 +1398,24 @@
        "cue": "hier",
        "a": "Der Schlüssel ist hier.",
        "aku": "کلیل ل ڤێرێ یە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Hier ist die Küche.",
+       "ku": "مەتبەخ ل ڤێرێ یە."
+      },
+      {
+       "de": "Dort ist mein Zimmer.",
+       "ku": "ژوورا من ل وێرێ یە."
+      },
+      {
+       "de": "Wo ist die Lampe? – Hier.",
+       "ku": "لامپا ل کیڤەیە؟ – ل ڤێرێ."
+      },
+      {
+       "de": "Ist das Bad dort? – Ja, dort links.",
+       "ku": "ئەرێ حەمام ل وێرێ یە؟ – بەلێ، ل وێرێ ل لایێ چەپێ."
       }
      ]
     },
@@ -1217,6 +1487,24 @@
        "a": "Es ist bequem.",
        "aku": "یا ئارامە."
       }
+     ],
+     "more": [
+      {
+       "de": "Wo ist der Schlüssel? – Er ist hier.",
+       "ku": "کلیل ل کیڤەیە؟ – ل ڤێرێ یە."
+      },
+      {
+       "de": "Die Lampe ist neu. Sie ist modern.",
+       "ku": "لامپا یا نوویە. یا مۆدێرنە."
+      },
+      {
+       "de": "Das Sofa ist groß. Es ist bequem.",
+       "ku": "قەنەفە یا مەزنە. یا ئارامە."
+      },
+      {
+       "de": "Wie ist das Zimmer? – Es ist hell.",
+       "ku": "ژوور چەوایە؟ – یێ ڕۆهنە."
+      }
      ]
     },
     {
@@ -1282,6 +1570,24 @@
        "cue": "ja",
        "a": "Ja, der Garten ist schön.",
        "aku": "بەلێ، باخچە یێ جوانە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Das Haus ist alt.",
+       "ku": "خانی یێ کەڤنە."
+      },
+      {
+       "de": "Die Wohnung ist nicht teuer.",
+       "ku": "خانی نە یێ گرانە."
+      },
+      {
+       "de": "Der Garten ist sehr schön.",
+       "ku": "باخچە گەلەک یێ جوانە."
+      },
+      {
+       "de": "Das Zimmer ist nicht groß, aber hell.",
+       "ku": "ژوور نە یێ مەزنە، بەلێ یێ ڕۆهنە."
       }
      ]
     },
@@ -1358,6 +1664,24 @@
        "a": "die Waschmaschine",
        "aku": "غەسالە"
       }
+     ],
+     "more": [
+      {
+       "de": "Das Schlafzimmer ist groß.",
+       "ku": "ژوورا نڤستنێ یا مەزنە."
+      },
+      {
+       "de": "Der Kleiderschrank ist alt.",
+       "ku": "دۆلابا جلکان یا کەڤنە."
+      },
+      {
+       "de": "Wo ist die Haustür?",
+       "ku": "دەرگەهێ خانی ل کیڤەیە؟"
+      },
+      {
+       "de": "Der Esstisch ist aus Holz.",
+       "ku": "مێزا خوارنێ ژ داری یە."
+      }
      ]
     },
     {
@@ -1422,6 +1746,24 @@
        "cue": "zu klein",
        "a": "Das Zimmer ist zu klein.",
        "aku": "ژوور زێدە یێ بچووکە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Das Auto ist sehr schnell.",
+       "ku": "ترومبێل گەلەک ب لەزە."
+      },
+      {
+       "de": "Der Tee ist zu heiß.",
+       "ku": "چا زێدە یا گەرمە."
+      },
+      {
+       "de": "Die Wohnung ist sehr groß.",
+       "ku": "خانی گەلەک یێ مەزنە."
+      },
+      {
+       "de": "Die Schuhe sind zu klein.",
+       "ku": "پێڵاڤ زێدە د بچووکن."
       }
      ]
     }
@@ -1508,6 +1850,24 @@
        "a": "Ich sehe am Abend fern.",
        "aku": "ئەز ئێڤاری تەلەڤزیۆنێ دبینم."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich kaufe heute ein.",
+       "ku": "ئەز ئەڤرۆ بازاڕێ دکەم."
+      },
+      {
+       "de": "Er steht um sechs Uhr auf.",
+       "ku": "ئەو دەمژمێر شەش ژ خەو ڕادبیت."
+      },
+      {
+       "de": "Ich rufe meine Mutter an.",
+       "ku": "ئەز تەلەفۆنێ بۆ دایکا خۆ دکەم."
+      },
+      {
+       "de": "Der Film fängt um acht Uhr an.",
+       "ku": "فیلم دەمژمێر هەشت دەستپێدکەت."
+      }
      ]
     },
     {
@@ -1582,6 +1942,24 @@
        "a": "Von 9 bis 16 Uhr.",
        "aku": "ژ ٩ هەتا ١٦."
       }
+     ],
+     "more": [
+      {
+       "de": "Wir treffen uns um halb acht.",
+       "ku": "ئەم دەمژمێر حەفت و نیڤ ئێکدو دبینین."
+      },
+      {
+       "de": "Am Freitag habe ich frei.",
+       "ku": "رۆژا ئەینیێ بێهنڤەدانا منە."
+      },
+      {
+       "de": "Am Abend lerne ich Deutsch.",
+       "ku": "ئێڤاری ئەز ئەلمانی دخوینم."
+      },
+      {
+       "de": "Der Kurs ist von neun bis zwölf Uhr.",
+       "ku": "خول ژ دەمژمێر نەهـ هەتا دوازدێ یە."
+      }
      ]
     },
     {
@@ -1651,6 +2029,24 @@
        "cue": "",
        "a": "Heute habe ich Zeit.",
        "aku": "ئەڤرۆ دەمێ من هەیە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Morgen gehe ich zum Arzt.",
+       "ku": "سوبەهی ئەز دچمە دەڤ دکتۆری."
+      },
+      {
+       "de": "Am Sonntag besuche ich meine Eltern.",
+       "ku": "رۆژا یەکشەمبیێ ئەز سەرا دایک و بابێن خۆ ددەم."
+      },
+      {
+       "de": "Um neun Uhr beginnt der Unterricht.",
+       "ku": "دەمژمێر نەهـ وانە دەستپێدکەت."
+      },
+      {
+       "de": "Heute Abend koche ich.",
+       "ku": "ئەڤرۆ ئێڤاری ئەز خوارنێ چێدکەم."
       }
      ]
     },
@@ -1737,6 +2133,24 @@
        "a": "Der Film fängt um 8 Uhr an.",
        "aku": "فیلم دەمژمێر ٨ دەستپێدکەت."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich arbeite von acht bis vier.",
+       "ku": "ئەز ژ هەشتێ هەتا چارێ کار دکەم."
+      },
+      {
+       "de": "Schläfst du gut?",
+       "ku": "ئەرێ تو باش دنڤی؟"
+      },
+      {
+       "de": "Sie sieht jeden Abend fern.",
+       "ku": "ئەو هەر ئێڤار تەلەڤزیۆنێ دبینیت."
+      },
+      {
+       "de": "Wann fängst du an?",
+       "ku": "تو کەنگی دەستپێدکەی؟"
+      }
      ]
     }
    ]
@@ -1816,6 +2230,24 @@
        "cue": "nein",
        "a": "Nein, ich habe keinen Fernseher.",
        "aku": "نەخێر، تەلەڤزیۆن من نینە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich kaufe einen Tisch.",
+       "ku": "ئەز مێزەکێ دکڕم."
+      },
+      {
+       "de": "Siehst du den Bus?",
+       "ku": "ئەرێ تو پاسێ دبینی؟"
+      },
+      {
+       "de": "Er hat keinen Bruder.",
+       "ku": "برا وی نینە."
+      },
+      {
+       "de": "Ich nehme die Tasche.",
+       "ku": "ئەز جانتایێ دبەم."
       }
      ]
     },
@@ -1902,6 +2334,24 @@
        "a": "Er fährt nach Köln.",
        "aku": "ئەو دچیتە کۆلن."
       }
+     ],
+     "more": [
+      {
+       "de": "Liest du gern?",
+       "ku": "ئەرێ تو حەز ژ خواندنێ دکەی؟"
+      },
+      {
+       "de": "Er fährt nach Erbil.",
+       "ku": "ئەو دچیتە هەولێرێ."
+      },
+      {
+       "de": "Was nimmst du? – Einen Tee.",
+       "ku": "تو چ دبەی؟ – چایەکێ."
+      },
+      {
+       "de": "Triffst du heute Karim?",
+       "ku": "ئەرێ تو ئەڤرۆ کەریمی دبینی؟"
+      }
      ]
     },
     {
@@ -1966,6 +2416,24 @@
        "cue": "nein",
        "a": "Nein, ich habe keinen Hunger.",
        "aku": "نەخێر، ئەز نە یێ برسیمە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Hast du keinen Hunger? – Doch!",
+       "ku": "ئەرێ تو یێ برسی نینی؟ – بەلێ، یێ برسیمە!"
+      },
+      {
+       "de": "Bist du müde? – Nein.",
+       "ku": "ئەرێ تو یێ وەستیایی؟ – نەخێر."
+      },
+      {
+       "de": "Kommst du heute? – Ja, gern.",
+       "ku": "ئەرێ تو ئەڤرۆ دێ هێی؟ – بەلێ، ب دلخۆشی."
+      },
+      {
+       "de": "Magst du keinen Kaffee? – Doch, sehr!",
+       "ku": "ئەرێ تو حەز ژ قەهوێ ناکەی؟ – بەلێ، گەلەک!"
       }
      ]
     },
@@ -2044,6 +2512,24 @@
        "cue": "ein Eis",
        "a": "Sie möchte ein Eis.",
        "aku": "ئەو بەفرەکێ (ئایسکرێم) دخوازیت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Möchtest du einen Kaffee?",
+       "ku": "ئەرێ تو قەهوەکێ دخوازی؟"
+      },
+      {
+       "de": "Wir möchten eine Pizza.",
+       "ku": "ئەم پیتزایەکێ دخوازین."
+      },
+      {
+       "de": "Er möchte Arzt werden.",
+       "ku": "ئەو دخوازیت ببیتە دکتۆر."
+      },
+      {
+       "de": "Ich möchte Wasser, bitte.",
+       "ku": "ئەز ئاڤێ دخوازم، ژ کەرەما خۆ."
       }
      ]
     }
@@ -2139,6 +2625,24 @@
        "a": "Ja, wir können ein bisschen Deutsch sprechen.",
        "aku": "بەلێ، ئەم دشێین کێمەکێ ئەلمانی باخڤین."
       }
+     ],
+     "more": [
+      {
+       "de": "Kannst du mir helfen?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟"
+      },
+      {
+       "de": "Wir können morgen kommen.",
+       "ku": "ئەم دشێین سوبەهی بێین."
+      },
+      {
+       "de": "Sie kann sehr gut kochen.",
+       "ku": "ئەو دشێت گەلەک باش خوارنێ چێبکەت."
+      },
+      {
+       "de": "Ich kann heute nicht.",
+       "ku": "ئەز ئەڤرۆ نەشێم."
+      }
      ]
     },
     {
@@ -2221,6 +2725,24 @@
        "a": "Sie will Sport machen.",
        "aku": "ئەو دخوازیت وەرزشێ بکەت."
       }
+     ],
+     "more": [
+      {
+       "de": "Er will ein Auto kaufen.",
+       "ku": "ئەو دخوازیت ترومبێلەکێ بکڕیت."
+      },
+      {
+       "de": "Was willst du essen?",
+       "ku": "تو دخوازی چ بخۆی؟"
+      },
+      {
+       "de": "Ich will heute schwimmen gehen.",
+       "ku": "ئەز دخوازم ئەڤرۆ بچم مەلەڤانیێ."
+      },
+      {
+       "de": "Wollt ihr Fußball spielen?",
+       "ku": "ئەرێ هوین دخوازن تەپا پێ یاری بکەن؟"
+      }
      ]
     },
     {
@@ -2295,6 +2817,24 @@
        "cue": "Fußball",
        "a": "Wir haben Fußball gespielt.",
        "aku": "مە تەپا پێ یاری کر."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich habe Pizza gegessen.",
+       "ku": "من پیتزا خوار."
+      },
+      {
+       "de": "Hast du schon gefrühstückt?",
+       "ku": "ئەرێ تە تێشت خوار؟"
+      },
+      {
+       "de": "Wir haben einen Film gesehen.",
+       "ku": "مە فیلمەک دیت."
+      },
+      {
+       "de": "Er hat lange geschlafen.",
+       "ku": "ئەو گەلەک دەمان نڤست."
       }
      ]
     },
@@ -2371,6 +2911,24 @@
        "a": "Wir sind zu Hause geblieben.",
        "aku": "ئەم ل مال ماین."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich bin früh aufgestanden.",
+       "ku": "ئەز زوو ژ خەو ڕابووم."
+      },
+      {
+       "de": "Sie ist nach Hause gegangen.",
+       "ku": "ئەو چوو مال."
+      },
+      {
+       "de": "Wann bist du gekommen?",
+       "ku": "تو کەنگی هاتی؟"
+      },
+      {
+       "de": "Wir sind nach Erbil gefahren.",
+       "ku": "ئەم چووینە هەولێرێ."
+      }
      ]
     },
     {
@@ -2444,6 +3002,24 @@
        "cue": "",
        "a": "Am Morgen habe ich gefrühstückt.",
        "aku": "سپێدێ من تێشت خوار."
+      }
+     ],
+     "more": [
+      {
+       "de": "Gestern habe ich viel gearbeitet.",
+       "ku": "دوهی من گەلەک کار کر."
+      },
+      {
+       "de": "Hast du die Hausaufgaben gemacht?",
+       "ku": "ئەرێ تە ئەرکێن خۆ یێن مالێ کرن؟"
+      },
+      {
+       "de": "Am Wochenende sind wir in den Park gegangen.",
+       "ku": "دویماهیا هەفتیێ ئەم چووینە پارکێ."
+      },
+      {
+       "de": "Wo hast du Deutsch gelernt?",
+       "ku": "تو ل کیڤە ئەلمانی فێر بووی؟"
       }
      ]
     }
@@ -2535,6 +3111,24 @@
        "a": "Nein, ich hatte keine Zeit.",
        "aku": "نەخێر، دەمێ من نەبوو."
       }
+     ],
+     "more": [
+      {
+       "de": "Gestern war ich krank.",
+       "ku": "دوهی ئەز یێ نەساخ بووم."
+      },
+      {
+       "de": "Hattest du Zeit?",
+       "ku": "ئەرێ دەمێ تە هەبوو؟"
+      },
+      {
+       "de": "Das Wetter war schön.",
+       "ku": "هەوا یا خۆش بوو."
+      },
+      {
+       "de": "Wir waren in Zakho.",
+       "ku": "ئەم ل زاخۆ بووین."
+      }
      ]
     },
     {
@@ -2600,6 +3194,24 @@
        "cue": "für 1 Jahr",
        "a": "Ich bleibe für ein Jahr.",
        "aku": "ئەز بۆ سالەکێ دمینم."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich lerne seit einem Jahr Deutsch.",
+       "ku": "ژ سالەکێ ڤە ئەز ئەلمانی فێر دبم."
+      },
+      {
+       "de": "Vor einer Woche war ich in Erbil.",
+       "ku": "بەری هەفتیەکێ ئەز ل هەولێرێ بووم."
+      },
+      {
+       "de": "Wir fahren für zwei Wochen nach Duhok.",
+       "ku": "ئەم بۆ دوو هەفتیان دچینە دهۆکێ."
+      },
+      {
+       "de": "Seit wann wohnst du hier?",
+       "ku": "ژ کەنگی ڤە تو ل ڤێرە دژی؟"
       }
      ]
     },
@@ -2675,6 +3287,24 @@
        "a": "Ich bin Koch.",
        "aku": "ئەز ئاشپەزم."
       }
+     ],
+     "more": [
+      {
+       "de": "Meine Schwester ist Lehrerin.",
+       "ku": "خویشکا من مامۆستایە."
+      },
+      {
+       "de": "Er ist Verkäufer.",
+       "ku": "ئەو فرۆشیارە."
+      },
+      {
+       "de": "Sie ist Krankenschwester.",
+       "ku": "ئەو پەرستارە."
+      },
+      {
+       "de": "Mein Bruder ist Ingenieur.",
+       "ku": "برایێ من ئەندازیارە."
+      }
      ]
     },
     {
@@ -2739,6 +3369,24 @@
        "cue": "eine Bank",
        "a": "Sie arbeitet bei einer Bank.",
        "aku": "ئەو ل بانکەکێ کار دکەت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich arbeite bei einer Bank als Kassierer.",
+       "ku": "ئەز ل بانکەکێ وەکی سندووقدار کار دکەم."
+      },
+      {
+       "de": "Sie arbeitet als Lehrerin.",
+       "ku": "ئەو وەکی مامۆستا کار دکەت."
+      },
+      {
+       "de": "Arbeitest du bei der Polizei?",
+       "ku": "ئەرێ تو ل پۆلیسان کار دکەی؟"
+      },
+      {
+       "de": "Mein Vater arbeitet als Taxifahrer.",
+       "ku": "بابێ من وەکی شۆفێرێ تەکسیێ کار دکەت."
       }
      ]
     }
@@ -2830,6 +3478,24 @@
        "a": "Ja, Sie müssen hier umsteigen.",
        "aku": "بەلێ، دڤێت هوین ل ڤێرێ بگوهۆڕن."
       }
+     ],
+     "more": [
+      {
+       "de": "Du musst viel Wasser trinken.",
+       "ku": "دڤێت تو گەلەک ئاڤێ ڤەخۆی."
+      },
+      {
+       "de": "Darf ich hier sitzen?",
+       "ku": "ئەرێ دەستوور هەیە ئەز ل ڤێرە ڕوینم؟"
+      },
+      {
+       "de": "Kinder dürfen hier nicht spielen.",
+       "ku": "یاریکرنا زارۆکان ل ڤێرە قەدەغەیە."
+      },
+      {
+       "de": "Wir müssen jetzt gehen.",
+       "ku": "دڤێت ئەم نوکە بچین."
+      }
      ]
     },
     {
@@ -2895,6 +3561,24 @@
        "cue": "mit „ß“",
        "a": "Man schreibt das mit „ß“.",
        "aku": "ئەڤە ب «ß» دهێتە نڤیسین."
+      }
+     ],
+     "more": [
+      {
+       "de": "Hier darf man fotografieren.",
+       "ku": "ل ڤێرە وێنەگرتن دەستوورە."
+      },
+      {
+       "de": "Wie sagt man das auf Deutsch?",
+       "ku": "ئەڤە ب ئەلمانی چەوا دبێژن؟"
+      },
+      {
+       "de": "Im Kino muss man leise sein.",
+       "ku": "ل سینەمایێ دڤێت مرۆڤ بێدەنگ بیت."
+      },
+      {
+       "de": "Hier darf man nicht laut sprechen.",
+       "ku": "ل ڤێرە ب دەنگێ بلند ئاخفتن قەدەغەیە."
       }
      ]
     },
@@ -2976,6 +3660,24 @@
        "a": "Nimm die Tabletten!",
        "aku": "حەبان بخۆ!"
       }
+     ],
+     "more": [
+      {
+       "de": "Komm bitte her!",
+       "ku": "ژ کەرەما خۆ وەرە ڤێرە!"
+      },
+      {
+       "de": "Sprechen Sie bitte langsam!",
+       "ku": "ژ کەرەما خۆ هێدی باخڤن!"
+      },
+      {
+       "de": "Mach das Fenster zu!",
+       "ku": "پەنجەرێ بگرە!"
+      },
+      {
+       "de": "Nehmen Sie die Tabletten!",
+       "ku": "حەبان بخۆن!"
+      }
      ]
     },
     {
@@ -3053,6 +3755,24 @@
        "cue": "ja, gern",
        "a": "Ja, gern helfe ich dir.",
        "aku": "بەلێ، ب دلخۆشی."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich helfe dir gern.",
+       "ku": "ئەز ب دلخۆشی هاریکاریا تە دکەم."
+      },
+      {
+       "de": "Wer hilft mir?",
+       "ku": "کی دێ هاریکاریا من کەت؟"
+      },
+      {
+       "de": "Sie hilft ihrem Bruder.",
+       "ku": "ئەو هاریکاریا برایێ خۆ دکەت."
+      },
+      {
+       "de": "Wir helfen unseren Nachbarn.",
+       "ku": "ئەم هاریکاریا جیرانێن خۆ دکەین."
       }
      ]
     }
@@ -3139,6 +3859,24 @@
        "a": "Unser Kind ist krank.",
        "aku": "زارۆکێ مە یێ نەساخە."
       }
+     ],
+     "more": [
+      {
+       "de": "Sein Auto ist neu.",
+       "ku": "ترومبێلا وی یا نوویە."
+      },
+      {
+       "de": "Ihre Augen tun weh.",
+       "ku": "چاڤێن وێ دئێشن."
+      },
+      {
+       "de": "Unsere Wohnung ist klein.",
+       "ku": "خانیێ مە یێ بچووکە."
+      },
+      {
+       "de": "Ist das euer Haus?",
+       "ku": "ئەرێ ئەڤە خانیێ هەوەیە؟"
+      }
      ]
     },
     {
@@ -3217,6 +3955,24 @@
        "a": "Ja, Sie sollen morgen wiederkommen.",
        "aku": "بەلێ، دڤێت هوین سوبەهی بێن."
       }
+     ],
+     "more": [
+      {
+       "de": "Sie sollen viel schlafen.",
+       "ku": "دڤێت هوین گەلەک بنڤن."
+      },
+      {
+       "de": "Was soll ich machen?",
+       "ku": "دڤێت ئەز چ بکەم؟"
+      },
+      {
+       "de": "Der Arzt sagt, er soll nicht rauchen.",
+       "ku": "دکتۆر دبێژیت دڤێت ئەو جگارێ نەکێشیت."
+      },
+      {
+       "de": "Wir sollen um acht Uhr kommen.",
+       "ku": "دڤێت ئەم دەمژمێر هەشت بێین."
+      }
      ]
     },
     {
@@ -3278,6 +4034,24 @@
        "cue": "Kopfschmerzen",
        "a": "Ich habe Kopfschmerzen.",
        "aku": "سەرێ من دئێشیت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Mein Kopf tut weh.",
+       "ku": "سەرێ من دئێشیت."
+      },
+      {
+       "de": "Tut dein Bein weh?",
+       "ku": "ئەرێ پێیێ تە دئێشیت؟"
+      },
+      {
+       "de": "Seine Ohren tun weh.",
+       "ku": "گوهێن وی دئێشن."
+      },
+      {
+       "de": "Ich habe Bauchschmerzen.",
+       "ku": "زکێ من دئێشیت."
       }
      ]
     }
@@ -3353,6 +4127,24 @@
        "cue": "die U-Bahn",
        "a": "Sie kommt mit der U-Bahn.",
        "aku": "ئەو ب مەترۆیێ دهێت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich fahre mit dem Auto.",
+       "ku": "ئەز ب ترومبێلێ دچم."
+      },
+      {
+       "de": "Sie fährt mit der U-Bahn.",
+       "ku": "ئەو ب مێترۆیێ دچیت."
+      },
+      {
+       "de": "Fährst du mit dem Fahrrad?",
+       "ku": "ئەرێ تو ب پاسکیلێ دچی؟"
+      },
+      {
+       "de": "Wir fliegen mit dem Flugzeug nach Berlin.",
+       "ku": "ئەم ب فرۆکێ دچینە بەرلینێ."
       }
      ]
     },
@@ -3432,6 +4224,24 @@
        "a": "Das Auto ist auf dem Parkplatz.",
        "aku": "ترومبێل ل سەر پارکینگێ یە."
       }
+     ],
+     "more": [
+      {
+       "de": "Die Bank ist neben dem Supermarkt.",
+       "ku": "بانک ل تەنیشت سوپەرمارکێتێ یە."
+      },
+      {
+       "de": "Der Parkplatz ist hinter dem Haus.",
+       "ku": "جهێ ترومبێلان ل پشت خانی یە."
+      },
+      {
+       "de": "Wir treffen uns vor dem Kino.",
+       "ku": "ئەم ل بەر سینەمایێ ئێکدو دبینین."
+      },
+      {
+       "de": "Das Buch liegt auf dem Tisch.",
+       "ku": "پەرتووک ل سەر مێزێ یە."
+      }
      ]
     },
     {
@@ -3502,6 +4312,24 @@
        "cue": "bei / eine Familie",
        "a": "Ich wohne bei einer Familie.",
        "aku": "ئەز ل دەڤ مالباتەکێ دژیم."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich gebe dem Kind einen Apfel.",
+       "ku": "ئەز سێڤەکێ ددەمە زارۆکی."
+      },
+      {
+       "de": "Sie wohnt bei ihrer Tante.",
+       "ku": "ئەو ل دەڤ خالەتا خۆ دژیت."
+      },
+      {
+       "de": "Ich spreche mit der Lehrerin.",
+       "ku": "ئەز دگەل مامۆستایێ دئاخڤم."
+      },
+      {
+       "de": "Wir fahren mit einem Taxi.",
+       "ku": "ئەم ب تەکسیەکێ دچین."
       }
      ]
     },
@@ -3577,6 +4405,24 @@
        "a": "Sie geht zur Post.",
        "aku": "ئەو دچیتە پۆستێ."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich gehe zur Schule.",
+       "ku": "ئەز دچمە قوتابخانێ."
+      },
+      {
+       "de": "Wir fahren nach Deutschland.",
+       "ku": "ئەم دچینە ئەلمانیا."
+      },
+      {
+       "de": "Gehst du heute zum Supermarkt?",
+       "ku": "ئەرێ تو ئەڤرۆ دچییە سوپەرمارکێتێ؟"
+      },
+      {
+       "de": "Sie geht ins Kino.",
+       "ku": "ئەو دچیتە سینەمایێ."
+      }
      ]
     }
    ]
@@ -3647,6 +4493,24 @@
        "cue": "",
        "a": "Könnten Sie das bitte wiederholen?",
        "aku": "هوین دشێن ڤێ دووبارە بکەن؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "Könnten Sie das Fenster öffnen?",
+       "ku": "هوین دشێن پەنجەرێ ڤەکەن؟"
+      },
+      {
+       "de": "Würden Sie bitte hier unterschreiben?",
+       "ku": "هوین دشێن ل ڤێرە ئیمزا بکەن، ژ کەرەما خۆ؟"
+      },
+      {
+       "de": "Ich hätte gern einen Kaffee.",
+       "ku": "ئەز قەهوەکێ دخوازم."
+      },
+      {
+       "de": "Könntest du mich morgen anrufen?",
+       "ku": "تو دشێی سوبەهی تەلەفۆنێ بۆ من بکەی؟"
       }
      ]
     },
@@ -3726,6 +4590,24 @@
        "a": "Nach der Arbeit.",
        "aku": "پشتی کاری."
       }
+     ],
+     "more": [
+      {
+       "de": "Vor dem Essen wasche ich die Hände.",
+       "ku": "بەری خوارنێ ئەز دەستێن خۆ دشۆم."
+      },
+      {
+       "de": "Ab Montag arbeite ich wieder.",
+       "ku": "ژ دووشەمبیێ ڤە ئەز دووبارە کار دکەم."
+      },
+      {
+       "de": "Beim Essen sehe ich nicht fern.",
+       "ku": "ل دەمێ خوارنێ ئەز تەلەڤزیۆنێ نابینم."
+      },
+      {
+       "de": "Bis morgen!",
+       "ku": "هەتا سوبەهی!"
+      }
      ]
     },
     {
@@ -3795,6 +4677,24 @@
        "cue": "",
        "a": "Ich mache die Tür zu.",
        "aku": "ئەز دەرگەهی دگرم."
+      }
+     ],
+     "more": [
+      {
+       "de": "Mach bitte den Computer aus.",
+       "ku": "ژ کەرەما خۆ کۆمپیوتەری ڤەمرینە."
+      },
+      {
+       "de": "Ich mache das Fenster auf.",
+       "ku": "ئەز پەنجەرێ ڤەدکەم."
+      },
+      {
+       "de": "Er macht den Fernseher an.",
+       "ku": "ئەو تەلەڤزیۆنێ هەلدکەت."
+      },
+      {
+       "de": "Mach die Tür bitte zu!",
+       "ku": "ژ کەرەما خۆ دەرگەهی بگرە!"
       }
      ]
     }
@@ -3879,6 +4779,24 @@
        "a": "Dieses Hemd ist billiger.",
        "aku": "ئەڤ کراسە هەرزانترە."
       }
+     ],
+     "more": [
+      {
+       "de": "Welches Hemd nimmst du? – Dieses.",
+       "ku": "تو کیژ کراسی دبەی؟ – ئەڤی."
+      },
+      {
+       "de": "Welche Schuhe sind neu?",
+       "ku": "کیژ پێڵاڤ د نوینە؟"
+      },
+      {
+       "de": "Dieser Rock ist zu kurz.",
+       "ku": "ئەڤ تەنوورە زێدە یا کورتە."
+      },
+      {
+       "de": "Diese Hose passt mir.",
+       "ku": "ئەڤ پانتۆڵە ب قەدەرێ منە."
+      }
      ]
     },
     {
@@ -3961,6 +4879,24 @@
        "a": "Ja, ich helfe dir.",
        "aku": "بەلێ، ئەز هاریکاریا تە دکەم."
       }
+     ],
+     "more": [
+      {
+       "de": "Gib mir bitte das Buch.",
+       "ku": "ژ کەرەما خۆ پەرتووکێ بدە من."
+      },
+      {
+       "de": "Ich gebe dir mein Handy.",
+       "ku": "ئەز مۆبایلا خۆ ددەمە تە."
+      },
+      {
+       "de": "Gefällt Ihnen das Essen?",
+       "ku": "ئەرێ خوارن ب دلێ هەوە یە؟"
+      },
+      {
+       "de": "Wie geht es Ihnen?",
+       "ku": "هوین چەوانن؟"
+      }
      ]
     },
     {
@@ -4030,6 +4966,24 @@
        "cue": "ihr",
        "a": "Die Tasche gehört ihr.",
        "aku": "جانتە یا وێیە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Die Jacke gefällt mir nicht.",
+       "ku": "جاکێت ب دلێ من نینە."
+      },
+      {
+       "de": "Passt dir die Hose?",
+       "ku": "ئەرێ پانتۆڵ ب قەدەرێ تە یە؟"
+      },
+      {
+       "de": "Rot steht ihr gut.",
+       "ku": "ڕەنگێ سۆر باش ل وێ دهێت."
+      },
+      {
+       "de": "Das Buch gehört mir.",
+       "ku": "ئەڤ پەرتووکە یا منە."
       }
      ]
     },
@@ -4111,6 +5065,24 @@
        "a": "Der blaue Mantel gefällt mir am besten.",
        "aku": "قاپوتێ شین ژ هەمییان پتر من دلچوو."
       }
+     ],
+     "more": [
+      {
+       "de": "Der Mantel ist teurer als die Jacke.",
+       "ku": "قاپوت ژ جاکێتێ گرانترە."
+      },
+      {
+       "de": "Ich trinke lieber Tee als Kaffee.",
+       "ku": "ئەز پتر حەز ژ چایێ دکەم ژ قەهوێ."
+      },
+      {
+       "de": "Mein Bruder ist größer als ich.",
+       "ku": "برایێ من ژ من درێژترە."
+      },
+      {
+       "de": "Diese Schuhe sind am bequemsten.",
+       "ku": "ئەڤ پێڵاڤە ژ هەمییان ئارامترن."
+      }
      ]
     },
     {
@@ -4188,6 +5160,24 @@
        "cue": "Blau",
        "a": "Ich mag Blau.",
        "aku": "ئەز حەز ژ شینی دکەم."
+      }
+     ],
+     "more": [
+      {
+       "de": "Wir mögen Fußball.",
+       "ku": "ئەم حەز ژ تەپا پێ دکەین."
+      },
+      {
+       "de": "Mögt ihr Pizza?",
+       "ku": "ئەرێ هوین حەز ژ پیتزایێ دکەن؟"
+      },
+      {
+       "de": "Er mag keine Tomaten.",
+       "ku": "ئەو حەز ژ تەماتان ناکەت."
+      },
+      {
+       "de": "Ich mag dich.",
+       "ku": "ئەز حەز ژ تە دکەم."
       }
      ]
     }
@@ -4278,6 +5268,24 @@
        "a": "Am dritten Oktober.",
        "aku": "د سێیێ چریا ئێکێ دا."
       }
+     ],
+     "more": [
+      {
+       "de": "Heute ist der zehnte März.",
+       "ku": "ئەڤرۆ دەهێ ئادارێ یە."
+      },
+      {
+       "de": "Am einundzwanzigsten März ist Newroz.",
+       "ku": "بیست و ئێکێ ئادارێ نەورۆزە."
+      },
+      {
+       "de": "Mein Geburtstag ist am fünften Mai.",
+       "ku": "رۆژبوونا من پێنجێ گولانێ یە."
+      },
+      {
+       "de": "Der Kurs beginnt am ersten September.",
+       "ku": "خول ئێکێ ئیلونێ دەستپێدکەت."
+      }
      ]
     },
     {
@@ -4363,6 +5371,24 @@
        "a": "Ja, ich lade sie ein.",
        "aku": "بەلێ، ئەز وێ داخواز دکەم."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich sehe dich morgen.",
+       "ku": "ئەز دێ سوبەهی تە بینم."
+      },
+      {
+       "de": "Rufst du mich an?",
+       "ku": "تو دێ تەلەفۆنێ بۆ من کەی؟"
+      },
+      {
+       "de": "Ich kenne sie gut.",
+       "ku": "ئەز وێ باش دناسم."
+      },
+      {
+       "de": "Wir besuchen ihn im Krankenhaus.",
+       "ku": "ئەم ل نەخۆشخانێ سەرا وی ددەین."
+      }
      ]
     },
     {
@@ -4427,6 +5453,24 @@
        "cue": "denn",
        "a": "Ich bin müde, denn ich habe viel gearbeitet.",
        "aku": "ئەز یێ وەستیایم، چونکی من گەلەک کار کر."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich lerne Deutsch, denn ich will in Deutschland arbeiten.",
+       "ku": "ئەز ئەلمانی فێر دبم، چونکی دخوازم ل ئەلمانیا کار بکەم."
+      },
+      {
+       "de": "Er bleibt zu Hause, denn er ist krank.",
+       "ku": "ئەو ل مال دمینیت، چونکی یێ نەساخە."
+      },
+      {
+       "de": "Ich trinke Wasser, denn ich habe Durst.",
+       "ku": "ئەز ئاڤێ ڤەدخۆم، چونکی یێ تینیمە."
+      },
+      {
+       "de": "Wir kommen später, denn der Bus ist spät.",
+       "ku": "ئەم دێ درەنگتر هێین، چونکی پاس یا درەنگ ماییە."
       }
      ]
     },
@@ -4506,6 +5550,24 @@
        "a": "Ich will Arzt werden.",
        "aku": "ئەز دخوازم ببمە دکتۆر."
       }
+     ],
+     "more": [
+      {
+       "de": "Ich werde bald dreißig.",
+       "ku": "ئەز ب زوویی دبمە سیه سالی."
+      },
+      {
+       "de": "Das Wetter wird schön.",
+       "ku": "هەوا خۆش دبیت."
+      },
+      {
+       "de": "Sie wird Ärztin.",
+       "ku": "ئەو دبیتە دکتۆر."
+      },
+      {
+       "de": "Es wird dunkel.",
+       "ku": "تاری دبیت."
+      }
      ]
     },
     {
@@ -4567,6 +5629,24 @@
        "cue": "meine Mutter",
        "a": "Der Kuchen ist für meine Mutter.",
        "aku": "کێک بۆ دایکا منە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich kaufe Blumen für meine Frau.",
+       "ku": "ئەز گولان بۆ ژنا خۆ دکڕم."
+      },
+      {
+       "de": "Trinkst du Tee ohne Zucker?",
+       "ku": "ئەرێ تو چایێ بێ شەکر ڤەدخۆی؟"
+      },
+      {
+       "de": "Das ist für meinen Vater.",
+       "ku": "ئەڤە بۆ بابێ منە."
+      },
+      {
+       "de": "Er geht nie ohne sein Handy.",
+       "ku": "ئەو قەت بێ مۆبایلا خۆ ناچیت."
       }
      ]
     }
