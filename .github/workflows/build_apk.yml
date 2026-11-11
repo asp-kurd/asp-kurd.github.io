@@ -113,7 +113,7 @@ jobs:
 
       - name: Mascot screenshots
         continue-on-error: true
-        timeout-minutes: 8
+        timeout-minutes: 22
         run: |
           pip install -q playwright || echo "::error::shots: pip"
           python3 -m playwright install --with-deps chromium > /tmp/pw.log 2>&1 || { echo "::error::shots: install $(tail -c 300 /tmp/pw.log | tr '\n' ' ')"; }
