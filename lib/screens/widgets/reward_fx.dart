@@ -666,7 +666,18 @@ class StreakFlame extends StatelessWidget {
         height: size,
         child: streak > 0
             ? RealFire(size: size, sparks: false)
-            : Opacity(opacity: 0.45, child: Image.asset('$_fx/fire.webp', width: size, height: size, color: Colors.grey, colorBlendMode: BlendMode.saturation)),
+            : Opacity(
+                opacity: 0.45,
+                child: ColorFiltered(
+                  colorFilter: const ColorFilter.matrix(<double>[
+                    0.33, 0.59, 0.11, 0, 0, //
+                    0.33, 0.59, 0.11, 0, 0, //
+                    0.33, 0.59, 0.11, 0, 0, //
+                    0, 0, 0, 1, 0,
+                  ]),
+                  child: Image.asset('$_fx/fire.webp', width: size, height: size),
+                ),
+              ),
       ),
       const SizedBox(width: 3),
       Text('$streak', style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.orange)),

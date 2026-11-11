@@ -87,7 +87,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 ChoiceChip(
                   selected: r.xpGoal == g,
                   onSelected: (_) => r.setXpGoal(r.xpGoal == g ? 0 : g),
-                  label: Text('$g XP  ·  ${_goalReward(g)}'),
+                  label: Text('$g XP  ·  ${_goalReward(g)}', textDirection: TextDirection.ltr),
                 ),
             ]),
             if (r.xpGoal > 0) ...[

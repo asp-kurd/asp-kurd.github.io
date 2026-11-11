@@ -16,7 +16,7 @@ const Map<String, String> conceptPics = {
   'abc_kr': 'sun', 'abc_kj': 'mother', 'abc_ks': 'apple', 'abc_kgh': 'garden', 'abc_kf': 'plane', 'abc_kq': 'pen',
   'abc_kk': 'book', 'abc_kg': 'rose', 'abc_kn': 'bread', 'abc_khh': 'horse', 'abc_ke': 'snow',
   'ab1': 'girl', 'ab2': 'cheese', 'ab4': 'oil', 'ab5': 'bridge', 'ab7': 'road', 'ab9': 'egg', 'ab12': 'book',
-  'ab15': 'city', 'ab16': 'ball', 'ab18': 'bird', 'ab21': 'village', 'ab22': 'horse',
+  'ab15': 'city', 'ab16': 'ball', 'ab18': 'bird', 'ab22': 'horse',
   // 👪 خێزان
   'a2_09': 'father', 'a2_10': 'mother', 'a2_11': 'parents', 'a2_12': 'boy', 'a2_13': 'girl', 'a2_14': 'siblings',
   // 🍞 خوارن
