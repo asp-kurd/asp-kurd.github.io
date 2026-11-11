@@ -85,7 +85,7 @@ SLOTS = [(18, 0), (20, 0), (22, 0), (23, 15)]
 due_slots = sum(1 for h, m in SLOTS if (now.hour, now.minute) >= (h, m))
 reminded = 0
 if due_slots:
-    start = datetime(now.year, now.month, now.day, tzinfo=TZ).astimezone(timezone.utc).isoformat()
+    start = datetime(now.year, now.month, now.day, tzinfo=TZ).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")  # بێ «+» (د URL دا دبیتە بۆشایی)
     sent_today = {}
     for m in get(f"messages?kind=eq.streak&created_at=gte.{start}&select=learner_id"):
         sent_today[m["learner_id"]] = sent_today.get(m["learner_id"], 0) + 1
