@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../data/tree.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
@@ -35,23 +36,6 @@ BoxDecoration _cardBox() => BoxDecoration(
     );
 
 // ───────── 🌳 دارا تە ─────────
-class TreeStage {
-  final int xp;
-  final String emoji, ku, de, en;
-  const TreeStage(this.xp, this.emoji, this.ku, this.de, this.en);
-}
-
-const treeStages = [
-  TreeStage(0, '🌰', 'تۆڤ', 'Samen', 'Seed'),
-  TreeStage(20, '🌱', 'شینبوون', 'Keimling', 'Sprout'),
-  TreeStage(60, '🌿', 'رووەکێ بچووک', 'Kleine Pflanze', 'Small Plant'),
-  TreeStage(150, '🪴', 'نەمام', 'Setzling', 'Sapling'),
-  TreeStage(300, '🌳', 'دارا گەنج', 'Junger Baum', 'Young Tree'),
-  TreeStage(600, '🌳', 'دار', 'Baum', 'Tree'),
-  TreeStage(1200, '🌲', 'دارا مەزن', 'Großer Baum', 'Big Tree'),
-  TreeStage(2500, '🍎', 'دارا بەردار', 'Fruchtbaum', 'Fruit Tree'),
-];
-
 class TreeCard extends StatefulWidget {
   final int xp;
   final AppLanguage lang;
@@ -88,7 +72,7 @@ class _TreeCardState extends State<TreeCard> {
         Row(children: [
           Text(tr(n, 'دارا تە', 'Dein Baum', 'Your tree'), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
           const Spacer(),
-          Text(tr(n, 'قۆناغ ${stage + 1} ژ ٨', 'Stufe ${stage + 1} von 8', 'Stage ${stage + 1} of 8'),
+          Text(tr(n, 'قۆناغ ${stage + 1} ژ ${treeStages.length}', 'Stufe ${stage + 1} von ${treeStages.length}', 'Stage ${stage + 1} of ${treeStages.length}'),
               style: TextStyle(color: AppColors.fg60)),
         ]),
         const SizedBox(height: 12),
@@ -100,7 +84,7 @@ class _TreeCardState extends State<TreeCard> {
               tween: Tween(begin: 0, end: inStage),
               duration: const Duration(milliseconds: 1200),
               curve: Curves.easeOutCubic,
-              builder: (_, g, __) => CustomPaint(painter: TreePainter(stage: stage, growth: g, night: night)),
+              builder: (_, g, __) => CustomPaint(painter: TreePainter(stage: treeStages.length <= 1 ? 0 : (stage * 7 / (treeStages.length - 1)).round(), growth: g, night: night)),
             ),
           ),
         ),
@@ -217,7 +201,7 @@ class TreePainter extends CustomPainter {
     }
 
     final base = Offset(w / 2, groundY);
-    final t = ((stage + growth) / treeStages.length).clamp(0.0, 1.0);
+    final t = ((stage + growth) / 8).clamp(0.0, 1.0);
 
     if (stage == 0) {
       // 🌰 تۆڤ
@@ -286,7 +270,7 @@ class TreePainter extends CustomPainter {
     for (final l in leaves) {
       canvas.drawCircle(l.translate(-leafR * 0.3, -leafR * 0.3), leafR, Paint()..color = _leaf);
     }
-    if (stage == treeStages.length - 1) {
+    if (stage >= 7) {
       final fruit = Paint()..color = const Color(0xFFFF4B4B);
       for (var i = 0; i < leaves.length; i += 3) {
         canvas.drawCircle(leaves[i].translate(leafR * 0.4, leafR * 0.5), leafR * 0.35, fruit);

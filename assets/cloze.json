@@ -1,0 +1,3805 @@
+{
+"version": 1,
+"units": {
+"unit_abc1": {
+"de": [
+{
+"s": "Das ___ spielt im Garten.",
+"a": "Mädchen",
+"d": [
+"Käse",
+"Öl"
+],
+"ku": "کچ ل باخچەی یاری دکەت.",
+"c": "ab1"
+},
+{
+"s": "Ich ___ Musik.",
+"a": "höre",
+"d": [
+"esse",
+"trinke"
+],
+"ku": "ئەز گوهداریا مۆسیقایێ دکەم.",
+"c": "ab3"
+},
+{
+"s": "Der Tee ist ___.",
+"a": "heiß",
+"d": [
+"müde",
+"blau"
+],
+"ku": "چایی گەلەک گەرمە.",
+"c": "ab8"
+}
+]
+},
+"unit_abc2": {
+"de": [
+{
+"s": "Ich lese ein ___.",
+"a": "Buch",
+"d": [
+"Ei",
+"Sport"
+],
+"ku": "ئەز پەرتووکەکێ دخوینم.",
+"c": "ab12"
+},
+{
+"s": "Ich ___ einen Brief.",
+"a": "schreibe",
+"d": [
+"höre",
+"schlafe"
+],
+"ku": "ئەز نامەیەکێ دنڤیسم.",
+"c": "ab14"
+},
+{
+"s": "Das ist ___ mein Auto.",
+"a": "nicht",
+"d": [
+"gern",
+"sehr"
+],
+"ku": "ئەڤە نە ترومبێلا منە.",
+"c": "ab13"
+}
+]
+},
+"unit_abc3": {
+"de": [
+{
+"s": "Der ___ singt am Morgen.",
+"a": "Vogel",
+"d": [
+"Zeit",
+"Welt"
+],
+"ku": "باڵندە سپێدێ دسترێت.",
+"c": "ab18"
+},
+{
+"s": "Ich habe keine ___.",
+"a": "Zeit",
+"d": [
+"Welt",
+"Pferd"
+],
+"ku": "دەمێ من نینە.",
+"c": "ab19"
+},
+{
+"s": "Wir ___ nach Hause.",
+"a": "gehen",
+"d": [
+"sagen",
+"jung"
+],
+"ku": "ئەم دچینە مال.",
+"c": "ab23"
+}
+]
+},
+"unit_s1a": {
+"de": [
+{
+"s": "___! Ich heiße Azad.",
+"a": "Hallo",
+"d": [
+"Danke",
+"Bitte"
+],
+"ku": "سلاڤ! ناڤێ من ئازادە.",
+"c": "a1_01"
+},
+{
+"s": "Guten ___! Es ist acht Uhr.",
+"a": "Morgen",
+"d": [
+"Abend",
+"Nacht"
+],
+"ku": "سپێدە باش! دەمژمێر هەشتە.",
+"c": "a1_02"
+},
+{
+"s": "Gute ___! Schlaf gut.",
+"a": "Nacht",
+"d": [
+"Morgen",
+"Tag"
+],
+"ku": "شەڤ باش! ب خێر بنڤە.",
+"c": "a1_05"
+},
+{
+"s": "Auf ___!",
+"a": "Wiedersehen",
+"d": [
+"Abend",
+"Morgen"
+],
+"ku": "ب خاترێ تە!",
+"c": "a1_07"
+},
+{
+"s": "Tschüs! Bis ___!",
+"a": "später",
+"d": [
+"Nacht",
+"gut"
+],
+"ku": "خاترا تە! هەتا پاشی!",
+"c": "a1_08"
+}
+],
+"en": [
+{
+"s": "___! My name is Azad.",
+"a": "Hello",
+"d": [
+"Thanks",
+"Please"
+],
+"ku": "سلاڤ! ناڤێ من ئازادە.",
+"c": "a1_01"
+},
+{
+"s": "Good ___! It is eight o'clock.",
+"a": "morning",
+"d": [
+"night",
+"evening"
+],
+"ku": "سپێدە باش! دەمژمێر هەشتە.",
+"c": "a1_02"
+},
+{
+"s": "Bye! See you ___!",
+"a": "later",
+"d": [
+"night",
+"good"
+],
+"ku": "خاترا تە! هەتا پاشی!",
+"c": "a1_08"
+}
+]
+},
+"unit_s1b": {
+"de": [
+{
+"s": "Wie ___ du?",
+"a": "heißt",
+"d": [
+"bist",
+"kommst"
+],
+"ku": "ناڤێ تە چییە؟",
+"c": "a1_10"
+},
+{
+"s": "Ich ___ Lara.",
+"a": "bin",
+"d": [
+"heißt",
+"ist"
+],
+"ku": "ئەز لارامە.",
+"c": "a1_12"
+},
+{
+"s": "Mein ___ ist Sara.",
+"a": "Name",
+"d": [
+"Mann",
+"Haus"
+],
+"ku": "ناڤێ من سارایە.",
+"c": "a1_13"
+},
+{
+"s": "___ ist das? – Das ist Herr Yilmaz.",
+"a": "Wer",
+"d": [
+"Wo",
+"Was"
+],
+"ku": "ئەڤە کییە؟ – ئەڤە کاک یلمازە.",
+"c": "a1_14"
+},
+{
+"s": "Freut ___!",
+"a": "mich",
+"d": [
+"dich",
+"gut"
+],
+"ku": "کەیفخۆش بووم!",
+"c": "a1_16"
+}
+],
+"en": [
+{
+"s": "What is your ___?",
+"a": "name",
+"d": [
+"house",
+"age"
+],
+"ku": "ناڤێ تە چییە؟",
+"c": "a1_09"
+},
+{
+"s": "I ___ Lara.",
+"a": "am",
+"d": [
+"is",
+"are"
+],
+"ku": "ئەز لارامە.",
+"c": "a1_12"
+},
+{
+"s": "___ is that? – That is Mr Yilmaz.",
+"a": "Who",
+"d": [
+"Where",
+"What"
+],
+"ku": "ئەڤە کییە؟ – ئەڤە کاک یلمازە.",
+"c": "a1_14"
+}
+]
+},
+"unit_s1c": {
+"de": [
+{
+"s": "___ kommen Sie?",
+"a": "Woher",
+"d": [
+"Wer",
+"Wie"
+],
+"ku": "هوین ژ کیڤە دهێن؟",
+"c": "a1_17"
+},
+{
+"s": "Ich komme ___ Kurdistan.",
+"a": "aus",
+"d": [
+"in",
+"nach"
+],
+"ku": "ئەز ژ کوردستانێ دهێم.",
+"c": "a1_18"
+},
+{
+"s": "Ich ___ Kurdisch und Arabisch.",
+"a": "spreche",
+"d": [
+"komme",
+"wohne"
+],
+"ku": "ئەز ب کوردی و عەرەبی دئاخڤم.",
+"c": "a1_23"
+},
+{
+"s": "Nur ein ___ Deutsch.",
+"a": "bisschen",
+"d": [
+"viel",
+"gut"
+],
+"ku": "تنێ هندەکێ ئەلمانی.",
+"c": "a1_24"
+},
+{
+"s": "Was ___ Sie?",
+"a": "sprechen",
+"d": [
+"kommen",
+"heißen"
+],
+"ku": "هوین ب چ زمانی دئاخڤن؟",
+"c": "a1_22"
+}
+],
+"en": [
+{
+"s": "Where are you ___?",
+"a": "from",
+"d": [
+"in",
+"to"
+],
+"ku": "تو ژ کیڤە یی؟",
+"c": "a1_17"
+},
+{
+"s": "I come ___ Kurdistan.",
+"a": "from",
+"d": [
+"to",
+"at"
+],
+"ku": "ئەز ژ کوردستانێ دهێم.",
+"c": "a1_18"
+},
+{
+"s": "I ___ Kurdish and Arabic.",
+"a": "speak",
+"d": [
+"come",
+"live"
+],
+"ku": "ئەز ب کوردی و عەرەبی دئاخڤم.",
+"c": "a1_23"
+}
+]
+},
+"unit_s1d": {
+"de": [
+{
+"s": "Wie ___? Ich verstehe nicht.",
+"a": "bitte",
+"d": [
+"danke",
+"gut"
+],
+"ku": "چاوا؟ ئەز تێ ناگەهم.",
+"c": "a1_27"
+},
+{
+"s": "Buchstabieren Sie, ___.",
+"a": "bitte",
+"d": [
+"danke",
+"nein"
+],
+"ku": "هیڤیە پیت ب پیت بێژە.",
+"c": "a1_26"
+},
+{
+"s": "Mein ___ ist Lara, mein Familienname ist Kurt.",
+"a": "Vorname",
+"d": [
+"Adresse",
+"Alphabet"
+],
+"ku": "ناڤێ من لارایە، پاشناڤێ من کورتە.",
+"c": "a1_29"
+},
+{
+"s": "Die ___ ist 10115.",
+"a": "Postleitzahl",
+"d": [
+"Adresse",
+"Straße"
+],
+"ku": "کۆدێ پۆستەیێ 10115 ە.",
+"c": "a1_31"
+},
+{
+"s": "Tut mir ___, sie ist nicht da.",
+"a": "leid",
+"d": [
+"gut",
+"bitte"
+],
+"ku": "ببوورە، ئەو ل ڤێرە نینە.",
+"c": "a1_32"
+}
+],
+"en": [
+{
+"s": "Please ___ it.",
+"a": "spell",
+"d": [
+"eat",
+"sleep"
+],
+"ku": "هیڤیە پیت ب پیت بێژە.",
+"c": "a1_26"
+},
+{
+"s": "My first ___ is Lara.",
+"a": "name",
+"d": [
+"address",
+"street"
+],
+"ku": "ناڤێ من یێ ئێکێ لارایە.",
+"c": "a1_29"
+},
+{
+"s": "Sorry, she is not ___.",
+"a": "here",
+"d": [
+"good",
+"old"
+],
+"ku": "ببوورە، ئەو ل ڤێرە نینە.",
+"c": "a1_32"
+}
+]
+},
+"unit_s2a": {
+"de": [
+{
+"s": "Wie ___ es Ihnen?",
+"a": "geht",
+"d": [
+"ist",
+"heißt"
+],
+"ku": "هوین چاوانن؟",
+"c": "a2_02"
+},
+{
+"s": "Danke, sehr ___!",
+"a": "gut",
+"d": [
+"schlecht",
+"alt"
+],
+"ku": "سوپاس، گەلەک باشم!",
+"c": "a2_03"
+},
+{
+"s": "Nicht so ___.",
+"a": "gut",
+"d": [
+"klein",
+"neu"
+],
+"ku": "نە ئەوقاس باش.",
+"c": "a2_05"
+},
+{
+"s": "Mir geht es gut. Und ___?",
+"a": "dir",
+"d": [
+"mich",
+"ich"
+],
+"ku": "ئەز باشم. و تو؟",
+"c": "a2_07"
+},
+{
+"s": "Auch gut, ___.",
+"a": "danke",
+"d": [
+"bitte",
+"tschüs"
+],
+"ku": "ئەز ژی باشم، سوپاس.",
+"c": "a2_08"
+}
+],
+"en": [
+{
+"s": "How ___ you?",
+"a": "are",
+"d": [
+"is",
+"am"
+],
+"ku": "تو چاوای؟",
+"c": "a2_01"
+},
+{
+"s": "Thanks, very ___!",
+"a": "good",
+"d": [
+"bad",
+"old"
+],
+"ku": "سوپاس، گەلەک باشم!",
+"c": "a2_03"
+},
+{
+"s": "I'm fine. And ___?",
+"a": "you",
+"d": [
+"me",
+"I"
+],
+"ku": "ئەز باشم. و تو؟",
+"c": "a2_07"
+}
+]
+},
+"unit_s2b": {
+"de": [
+{
+"s": "Mein ___ heißt Ali.",
+"a": "Vater",
+"d": [
+"Mutter",
+"Tochter"
+],
+"ku": "ناڤێ بابێ من عەلییە.",
+"c": "a2_09"
+},
+{
+"s": "Meine ___ kocht gern.",
+"a": "Mutter",
+"d": [
+"Vater",
+"Sohn"
+],
+"ku": "دایکا من حەز ژ چێکرنا خوارنێ دکەت.",
+"c": "a2_10"
+},
+{
+"s": "Wir haben einen ___ und eine Tochter.",
+"a": "Sohn",
+"d": [
+"Opa",
+"Vater"
+],
+"ku": "کورەک و کچەکا مە هەنە.",
+"c": "a2_12"
+},
+{
+"s": "Meine ___ ist 80 Jahre alt.",
+"a": "Oma",
+"d": [
+"Opa",
+"Sohn"
+],
+"ku": "داپیرا من ٨٠ سالییە.",
+"c": "a2_16"
+},
+{
+"s": "Hast du ___? – Ja, zwei Brüder.",
+"a": "Geschwister",
+"d": [
+"Eltern",
+"Kinder"
+],
+"ku": "خوشک و برایێن تە هەنە؟ – بەلێ، دوو برا.",
+"c": "a2_14"
+}
+],
+"en": [
+{
+"s": "My ___ is called Ali.",
+"a": "father",
+"d": [
+"mother",
+"daughter"
+],
+"ku": "ناڤێ بابێ من عەلییە.",
+"c": "a2_09"
+},
+{
+"s": "My ___ likes cooking.",
+"a": "mother",
+"d": [
+"son",
+"grandfather"
+],
+"ku": "دایکا من حەز ژ چێکرنا خوارنێ دکەت.",
+"c": "a2_10"
+},
+{
+"s": "We have a son and a ___.",
+"a": "daughter",
+"d": [
+"father",
+"grandmother"
+],
+"ku": "کورەک و کچەکا مە هەنە.",
+"c": "a2_13"
+}
+]
+},
+"unit_s2c": {
+"de": [
+{
+"s": "Wo ___ Sie?",
+"a": "wohnen",
+"d": [
+"kommen",
+"heißen"
+],
+"ku": "هوین ل کیرێ دژین؟",
+"c": "a2_17"
+},
+{
+"s": "Ich wohne ___ Duhok.",
+"a": "in",
+"d": [
+"aus",
+"nach"
+],
+"ku": "ئەز ل دهۆکێ دژیم.",
+"c": "a2_18"
+},
+{
+"s": "Ich bin ___. Meine Frau heißt Sara.",
+"a": "verheiratet",
+"d": [
+"ledig",
+"alt"
+],
+"ku": "ئەز ژن ئینایمە. ناڤێ ژنا من سارایە.",
+"c": "a2_20"
+},
+{
+"s": "Wie ___ bist du?",
+"a": "alt",
+"d": [
+"gut",
+"groß"
+],
+"ku": "تو چەند سالی؟",
+"c": "a2_23"
+},
+{
+"s": "Ich bin 25 ___ alt.",
+"a": "Jahre",
+"d": [
+"Tage",
+"Kinder"
+],
+"ku": "ئەز ٢٥ سالیمە.",
+"c": "a2_24"
+}
+],
+"en": [
+{
+"s": "Where do you ___?",
+"a": "live",
+"d": [
+"come",
+"speak"
+],
+"ku": "تو ل کیرێ دژی؟",
+"c": "a2_17"
+},
+{
+"s": "I live ___ Duhok.",
+"a": "in",
+"d": [
+"from",
+"on"
+],
+"ku": "ئەز ل دهۆکێ دژیم.",
+"c": "a2_18"
+},
+{
+"s": "I am 25 years ___.",
+"a": "old",
+"d": [
+"big",
+"long"
+],
+"ku": "ئەز ٢٥ سالیمە.",
+"c": "a2_24"
+}
+]
+},
+"unit_s3a": {
+"de": [
+{
+"s": "Ich esse ein ___ mit Käse.",
+"a": "Brot",
+"d": [
+"Wasser",
+"Ei"
+],
+"ku": "ئەز نانەکی دگەل پەنیری دخۆم.",
+"c": "a3_01"
+},
+{
+"s": "Der ___ ist rot.",
+"a": "Apfel",
+"d": [
+"Banane",
+"Fisch"
+],
+"ku": "سێڤ سۆرە.",
+"c": "a3_04"
+},
+{
+"s": "Die ___ ist gelb.",
+"a": "Banane",
+"d": [
+"Tomate",
+"Kartoffel"
+],
+"ku": "مۆز زەرە.",
+"c": "a3_05"
+},
+{
+"s": "Ich koche ___ mit Reis.",
+"a": "Fisch",
+"d": [
+"Kaffee",
+"Milch"
+],
+"ku": "ئەز ماسیێ دگەل برنجی چێدکەم.",
+"c": "a3_08"
+},
+{
+"s": "Zum Frühstück esse ich ein ___.",
+"a": "Ei",
+"d": [
+"Bett",
+"Auto"
+],
+"ku": "بۆ تێشتێ ئەز هێکەکێ دخۆم.",
+"c": "a3_03"
+}
+],
+"en": [
+{
+"s": "I eat ___ with cheese.",
+"a": "bread",
+"d": [
+"water",
+"milk"
+],
+"ku": "ئەز نانی دگەل پەنیری دخۆم.",
+"c": "a3_01"
+},
+{
+"s": "The ___ is yellow.",
+"a": "banana",
+"d": [
+"tomato",
+"apple"
+],
+"ku": "مۆز زەرە.",
+"c": "a3_05"
+},
+{
+"s": "An ___ a day is healthy.",
+"a": "apple",
+"d": [
+"fish",
+"egg"
+],
+"ku": "سێڤەک هەر رۆژ ساخلەمە.",
+"c": "a3_04"
+}
+]
+},
+"unit_s3b": {
+"de": [
+{
+"s": "Ich trinke ___ ohne Zucker.",
+"a": "Kaffee",
+"d": [
+"Brot",
+"Käse"
+],
+"ku": "ئەز قەهوێ بێ شەکر ڤەدخۆم.",
+"c": "a3_11"
+},
+{
+"s": "Das Kind trinkt ___.",
+"a": "Milch",
+"d": [
+"Kaffee",
+"Fisch"
+],
+"ku": "زارۆک شیری ڤەدخۆت.",
+"c": "a3_10"
+},
+{
+"s": "Ich möchte ein Glas ___.",
+"a": "Wasser",
+"d": [
+"Brot",
+"Apfel"
+],
+"ku": "ئەز پەرداغەکا ئاڤێ دڤێم.",
+"c": "a3_09"
+},
+{
+"s": "Was ___ das?",
+"a": "kostet",
+"d": [
+"heißt",
+"wohnt"
+],
+"ku": "ئەڤە ب چەندە؟",
+"c": "a3_16"
+},
+{
+"s": "Ein ___ Tomaten, bitte.",
+"a": "Kilo",
+"d": [
+"Liter",
+"Glas"
+],
+"ku": "کیلۆیەکا تەماتان، هیڤیە.",
+"c": "a3_14"
+}
+],
+"en": [
+{
+"s": "I drink ___ without sugar.",
+"a": "coffee",
+"d": [
+"bread",
+"cheese"
+],
+"ku": "ئەز قەهوێ بێ شەکر ڤەدخۆم.",
+"c": "a3_11"
+},
+{
+"s": "A glass of ___, please.",
+"a": "water",
+"d": [
+"bread",
+"apple"
+],
+"ku": "پەرداغەکا ئاڤێ، هیڤیە.",
+"c": "a3_09"
+},
+{
+"s": "How much ___ it?",
+"a": "is",
+"d": [
+"are",
+"am"
+],
+"ku": "ئەڤە ب چەندە؟",
+"c": "a3_16"
+}
+]
+},
+"unit_s3c": {
+"de": [
+{
+"s": "Haben Sie ___? – Ja, zehn Stück.",
+"a": "Eier",
+"d": [
+"Zucker",
+"Wasser"
+],
+"ku": "هێکێن هەوە هەنە؟ – بەلێ، دەه دانە.",
+"c": "a3_17"
+},
+{
+"s": "Ich esse gern ___.",
+"a": "Reis",
+"d": [
+"Tisch",
+"Bus"
+],
+"ku": "ئەز حەز ژ برنجی دکەم.",
+"c": "a3_21"
+},
+{
+"s": "Was ___ du gern?",
+"a": "isst",
+"d": [
+"bist",
+"heißt"
+],
+"ku": "تو حەز ژ خوارنا چ دکەی؟",
+"c": "a3_22"
+},
+{
+"s": "Mein ___ ist Dolma.",
+"a": "Lieblingsessen",
+"d": [
+"Einkaufszettel",
+"Kaffee"
+],
+"ku": "خوارنا من یا دلخواز دۆلمەیە.",
+"c": "a3_23"
+},
+{
+"s": "Das ___ 3 Euro 50.",
+"a": "macht",
+"d": [
+"ist",
+"hat"
+],
+"ku": "دبیتە ٣ یۆرۆ و ٥٠.",
+"c": "a3_20"
+}
+],
+"en": [
+{
+"s": "Do you have ___? – Yes, ten.",
+"a": "eggs",
+"d": [
+"sugar",
+"water"
+],
+"ku": "هێکێن هەوە هەنە؟ – بەلێ، دەه دانە.",
+"c": "a3_17"
+},
+{
+"s": "I like eating ___.",
+"a": "rice",
+"d": [
+"table",
+"bus"
+],
+"ku": "ئەز حەز ژ برنجی دکەم.",
+"c": "a3_21"
+},
+{
+"s": "My favourite ___ is dolma.",
+"a": "food",
+"d": [
+"house",
+"colour"
+],
+"ku": "خوارنا من یا دلخواز دۆلمەیە.",
+"c": "a3_23"
+}
+]
+},
+"unit_s4a": {
+"de": [
+{
+"s": "Ich koche in der ___.",
+"a": "Küche",
+"d": [
+"Bad",
+"Balkon"
+],
+"ku": "ئەز ل مەتبەخێ خوارنێ چێدکەم.",
+"c": "a4_02"
+},
+{
+"s": "Ich schlafe im ___.",
+"a": "Schlafzimmer",
+"d": [
+"Bad",
+"Küche"
+],
+"ku": "ئەز ل ژوورا نڤستنێ دنڤم.",
+"c": "a4_04"
+},
+{
+"s": "Wir sehen im ___ fern.",
+"a": "Wohnzimmer",
+"d": [
+"Bad",
+"Balkon"
+],
+"ku": "ئەم ل ژوورا روینشتنێ تەلەفزیۆنێ دبینین.",
+"c": "a4_05"
+},
+{
+"s": "Die ___ hat drei Zimmer.",
+"a": "Wohnung",
+"d": [
+"Küche",
+"Lampe"
+],
+"ku": "خانیێ مە سێ ژوور هەنە.",
+"c": "a4_01"
+},
+{
+"s": "Das Bad ist hier, die Küche ist ___.",
+"a": "dort",
+"d": [
+"groß",
+"neu"
+],
+"ku": "سەرشۆک ل ڤێرەیە، مەتبەخ ل وێرێیە.",
+"c": "a4_08"
+}
+],
+"en": [
+{
+"s": "I cook in the ___.",
+"a": "kitchen",
+"d": [
+"bathroom",
+"balcony"
+],
+"ku": "ئەز ل مەتبەخێ خوارنێ چێدکەم.",
+"c": "a4_02"
+},
+{
+"s": "I sleep in the ___.",
+"a": "bedroom",
+"d": [
+"kitchen",
+"bathroom"
+],
+"ku": "ئەز ل ژوورا نڤستنێ دنڤم.",
+"c": "a4_04"
+},
+{
+"s": "The flat has three ___.",
+"a": "rooms",
+"d": [
+"kitchens",
+"lamps"
+],
+"ku": "خانی سێ ژوور هەنە.",
+"c": "a4_01"
+}
+]
+},
+"unit_s4b": {
+"de": [
+{
+"s": "Die Wohnung ist nicht klein, sie ist ___.",
+"a": "groß",
+"d": [
+"alt",
+"teuer"
+],
+"ku": "خانی نە بچووکە، مەزنە.",
+"c": "a4_09"
+},
+{
+"s": "Das Auto ist nicht neu, es ist ___.",
+"a": "alt",
+"d": [
+"groß",
+"hell"
+],
+"ku": "ترومبێل نە نوویە، کەڤنە.",
+"c": "a4_14"
+},
+{
+"s": "Das Zimmer ist ___ und hat ein großes Fenster.",
+"a": "hell",
+"d": [
+"dunkel",
+"billig"
+],
+"ku": "ژوور رۆهنە و پەنجەرەکا مەزن هەیە.",
+"c": "a4_15"
+},
+{
+"s": "Die Wohnung kostet 2000 Euro. Sie ist ___.",
+"a": "teuer",
+"d": [
+"billig",
+"klein"
+],
+"ku": "خانی ٢٠٠٠ یۆرۆیە. گرانە.",
+"c": "a4_11"
+},
+{
+"s": "Das Handy kostet nur 50 Euro. Es ist ___.",
+"a": "billig",
+"d": [
+"teuer",
+"dunkel"
+],
+"ku": "مۆبایل تنێ ٥٠ یۆرۆیە. هەرزانە.",
+"c": "a4_12"
+}
+],
+"en": [
+{
+"s": "The flat is not small, it is ___.",
+"a": "big",
+"d": [
+"old",
+"cheap"
+],
+"ku": "خانی نە بچووکە، مەزنە.",
+"c": "a4_09"
+},
+{
+"s": "The phone costs only 50 euros. It is ___.",
+"a": "cheap",
+"d": [
+"expensive",
+"dark"
+],
+"ku": "مۆبایل تنێ ٥٠ یۆرۆیە. هەرزانە.",
+"c": "a4_12"
+},
+{
+"s": "The car is not new, it is ___.",
+"a": "old",
+"d": [
+"big",
+"bright"
+],
+"ku": "ترومبێل نە نوویە، کەڤنە.",
+"c": "a4_14"
+}
+]
+},
+"unit_s4c": {
+"de": [
+{
+"s": "Ich sitze auf dem ___.",
+"a": "Stuhl",
+"d": [
+"Schrank",
+"Lampe"
+],
+"ku": "ئەز ل سەر کورسیێ روینشتیمە.",
+"c": "a4_17"
+},
+{
+"s": "Die Milch ist im ___.",
+"a": "Kühlschrank",
+"d": [
+"Bett",
+"Stuhl"
+],
+"ku": "شیر د سەلاجێ دایە.",
+"c": "a4_20"
+},
+{
+"s": "Die Kleidung ist im ___.",
+"a": "Schrank",
+"d": [
+"Kühlschrank",
+"Tisch"
+],
+"ku": "جل د دۆلابێ دانە.",
+"c": "a4_19"
+},
+{
+"s": "Der Tisch ___ mir.",
+"a": "gefällt",
+"d": [
+"kostet",
+"heißt"
+],
+"ku": "مێز ب دلێ منە.",
+"c": "a4_24"
+},
+{
+"s": "Die ___ ist blau.",
+"a": "Lampe",
+"d": [
+"Tisch",
+"Stuhl"
+],
+"ku": "گلۆپ شینە.",
+"c": "a4_21"
+}
+],
+"en": [
+{
+"s": "I sit on the ___.",
+"a": "chair",
+"d": [
+"fridge",
+"lamp"
+],
+"ku": "ئەز ل سەر کورسیێ روینشتیمە.",
+"c": "a4_17"
+},
+{
+"s": "The milk is in the ___.",
+"a": "fridge",
+"d": [
+"bed",
+"chair"
+],
+"ku": "شیر د سەلاجێ دایە.",
+"c": "a4_20"
+},
+{
+"s": "I like the ___. It is red.",
+"a": "table",
+"d": [
+"milk",
+"bus"
+],
+"ku": "مێز ب دلێ منە. سۆرە.",
+"c": "a4_24"
+}
+]
+},
+"unit_s5a": {
+"de": [
+{
+"s": "Ich ___ um sieben Uhr ___.",
+"a": "stehe … auf",
+"d": [
+"gehe … aus",
+"rufe … an"
+],
+"ku": "ئەز دەمژمێر حەفت رادبم.",
+"c": "a5_01"
+},
+{
+"s": "Am Abend ___ ich ___.",
+"a": "sehe … fern",
+"d": [
+"stehe … auf",
+"kaufe … ein"
+],
+"ku": "ئێڤاری ئەز تەلەفزیۆنێ دبینم.",
+"c": "a5_06"
+},
+{
+"s": "Ich ___ dich morgen ___.",
+"a": "rufe … an",
+"d": [
+"sehe … fern",
+"räume … auf"
+],
+"ku": "ئەز سبەی تەلەفۆنێ بۆ تە دکەم.",
+"c": "a5_07"
+},
+{
+"s": "Am Samstag ___ wir im Supermarkt ___.",
+"a": "kaufen … ein",
+"d": [
+"stehen … auf",
+"rufen … an"
+],
+"ku": "شەمبیێ ئەم ل سووپەرمارکێتێ تشتان دکڕین.",
+"c": "a5_04"
+},
+{
+"s": "Ich bin müde. Ich will ___.",
+"a": "schlafen",
+"d": [
+"kochen",
+"frühstücken"
+],
+"ku": "ئەز وەستیایمە. ئەز دڤێم بنڤم.",
+"c": "a5_08"
+}
+],
+"en": [
+{
+"s": "I get ___ at seven o'clock.",
+"a": "up",
+"d": [
+"on",
+"in"
+],
+"ku": "ئەز دەمژمێر حەفت رادبم.",
+"c": "a5_01"
+},
+{
+"s": "In the evening I ___ TV.",
+"a": "watch",
+"d": [
+"look",
+"see"
+],
+"ku": "ئێڤاری ئەز تەلەفزیۆنێ دبینم.",
+"c": "a5_06"
+},
+{
+"s": "I am tired. I want to ___.",
+"a": "sleep",
+"d": [
+"cook",
+"shop"
+],
+"ku": "ئەز وەستیایمە. ئەز دڤێم بنڤم.",
+"c": "a5_08"
+}
+]
+},
+"unit_s5b": {
+"de": [
+{
+"s": "Wie ___ ist es?",
+"a": "spät",
+"d": [
+"alt",
+"viel"
+],
+"ku": "دەمژمێر چەندە؟",
+"c": "a5_09"
+},
+{
+"s": "Es ist acht ___.",
+"a": "Uhr",
+"d": [
+"Jahre",
+"Tage"
+],
+"ku": "دەمژمێر هەشتە.",
+"c": "a5_10"
+},
+{
+"s": "Es ist ___ neun. (8:30)",
+"a": "halb",
+"d": [
+"Viertel",
+"nach"
+],
+"ku": "دەمژمێر هەشت و نیڤە.",
+"c": "a5_11"
+},
+{
+"s": "Es ist Viertel ___ neun. (9:15)",
+"a": "nach",
+"d": [
+"vor",
+"halb"
+],
+"ku": "دەمژمێر نەه و چارەکە.",
+"c": "a5_12"
+},
+{
+"s": "Der Kurs beginnt ___ zwei Uhr ___ Nachmittag.",
+"a": "um … am",
+"d": [
+"am … um",
+"im … um"
+],
+"ku": "خول دەمژمێر دوو پشتی نیڤرۆ دەستپێدکەت.",
+"c": "a5_14"
+}
+],
+"en": [
+{
+"s": "What ___ is it?",
+"a": "time",
+"d": [
+"day",
+"year"
+],
+"ku": "دەمژمێر چەندە؟",
+"c": "a5_09"
+},
+{
+"s": "It is eight ___.",
+"a": "o'clock",
+"d": [
+"hours",
+"days"
+],
+"ku": "دەمژمێر هەشتە.",
+"c": "a5_10"
+},
+{
+"s": "It's quarter ___ nine. (9:15)",
+"a": "past",
+"d": [
+"to",
+"half"
+],
+"ku": "دەمژمێر نەه و چارەکە.",
+"c": "a5_12"
+}
+]
+},
+"unit_s5c": {
+"de": [
+{
+"s": "Heute ist ___, morgen ist Dienstag.",
+"a": "Montag",
+"d": [
+"Freitag",
+"Sonntag"
+],
+"ku": "ئەڤرۆ دووشەمبییە، سبەی سێشەمبییە.",
+"c": "a5_17"
+},
+{
+"s": "Am ___ gehen viele Leute in die Moschee.",
+"a": "Freitag",
+"d": [
+"Montag",
+"Mittwoch"
+],
+"ku": "رۆژا ئەینیێ گەلەک خەلک دچنە مزگەفتێ.",
+"c": "a5_21"
+},
+{
+"s": "Am Wochenende: Samstag und ___.",
+"a": "Sonntag",
+"d": [
+"Montag",
+"Dienstag"
+],
+"ku": "دویماهیا حەفتیێ: شەمبی و یەکشەمبی.",
+"c": "a5_23"
+},
+{
+"s": "Wann ___ der Kurs ___?",
+"a": "fängt … an",
+"d": [
+"steht … auf",
+"ruft … an"
+],
+"ku": "خول کەنگی دەستپێدکەت؟",
+"c": "a5_24"
+},
+{
+"s": "Am ___ habe ich frei.",
+"a": "Wochenende",
+"d": [
+"Montag",
+"Kurs"
+],
+"ku": "ل دویماهیا حەفتیێ ئەز بێکارم.",
+"c": ""
+}
+],
+"en": [
+{
+"s": "Today is ___, tomorrow is Tuesday.",
+"a": "Monday",
+"d": [
+"Friday",
+"Sunday"
+],
+"ku": "ئەڤرۆ دووشەمبییە، سبەی سێشەمبییە.",
+"c": "a5_17"
+},
+{
+"s": "The weekend is Saturday and ___.",
+"a": "Sunday",
+"d": [
+"Monday",
+"Tuesday"
+],
+"ku": "دویماهیا حەفتیێ شەمبی و یەکشەمبییە.",
+"c": "a5_23"
+},
+{
+"s": "When does the course ___?",
+"a": "start",
+"d": [
+"sleep",
+"eat"
+],
+"ku": "خول کەنگی دەستپێدکەت؟",
+"c": "a5_24"
+}
+]
+},
+"unit_s6a": {
+"de": [
+{
+"s": "Die Sonne ___.",
+"a": "scheint",
+"d": [
+"regnet",
+"schneit"
+],
+"ku": "رۆژ دبریقیت.",
+"c": "a6_01"
+},
+{
+"s": "Es ___. Nimm einen Regenschirm!",
+"a": "regnet",
+"d": [
+"scheint",
+"ist heiß"
+],
+"ku": "باران دباریت. سیوانەکێ ببە!",
+"c": "a6_02"
+},
+{
+"s": "Im Winter ___ es in Duhok manchmal.",
+"a": "schneit",
+"d": [
+"scheint",
+"kocht"
+],
+"ku": "ل زستانێ جاران بەفر ل دهۆکێ دباریت.",
+"c": "a6_03"
+},
+{
+"s": "Es ist ___. Zieh eine Jacke an!",
+"a": "kalt",
+"d": [
+"heiß",
+"warm"
+],
+"ku": "سەرمایە. چاکێتەکێ ل خۆ بکە!",
+"c": "a6_06"
+},
+{
+"s": "Es ___ heute 25 ___.",
+"a": "sind … Grad",
+"d": [
+"ist … Uhr",
+"hat … Jahre"
+],
+"ku": "ئەڤرۆ ٢٥ پلەیە.",
+"c": "a6_08"
+}
+],
+"en": [
+{
+"s": "The sun is ___.",
+"a": "shining",
+"d": [
+"raining",
+"snowing"
+],
+"ku": "رۆژ دبریقیت.",
+"c": "a6_01"
+},
+{
+"s": "It is ___. Wear a jacket!",
+"a": "cold",
+"d": [
+"hot",
+"sunny"
+],
+"ku": "سەرمایە. چاکێتەکێ ل خۆ بکە!",
+"c": "a6_06"
+},
+{
+"s": "It ___ 25 ___ today.",
+"a": "is … degrees",
+"d": [
+"are … hours",
+"has … years"
+],
+"ku": "ئەڤرۆ ٢٥ پلەیە.",
+"c": "a6_08"
+}
+]
+},
+"unit_s6b": {
+"de": [
+{
+"s": "Ich ___ einen Burger.",
+"a": "nehme",
+"d": [
+"trinke",
+"koche"
+],
+"ku": "ئەز بەرگەرەکێ دبەم.",
+"c": "a6_09"
+},
+{
+"s": "Pommes mit ___, bitte.",
+"a": "Ketchup",
+"d": [
+"Kaffee",
+"Milch"
+],
+"ku": "پەتاتە دگەل کەچەپی، هیڤیە.",
+"c": "a6_10"
+},
+{
+"s": "___ du eine Cola?",
+"a": "Möchtest",
+"d": [
+"Bist",
+"Heißt"
+],
+"ku": "تو کۆلایەکێ دڤێی؟",
+"c": "a6_12"
+},
+{
+"s": "Hast du keinen Hunger? – ___!",
+"a": "Doch",
+"d": [
+"Nein",
+"Bitte"
+],
+"ku": "تو برسی نینی؟ – بەلێ، برسیمە!",
+"c": "a6_14"
+},
+{
+"s": "___, bitte! – Das macht 12 Euro.",
+"a": "Zahlen",
+"d": [
+"Essen",
+"Trinken"
+],
+"ku": "حسێب، هیڤیە! – دبیتە ١٢ یۆرۆ.",
+"c": "a6_15"
+}
+],
+"en": [
+{
+"s": "I'll ___ a burger.",
+"a": "take",
+"d": [
+"drink",
+"sleep"
+],
+"ku": "ئەز بەرگەرەکێ دبەم.",
+"c": "a6_09"
+},
+{
+"s": "Would you like a ___?",
+"a": "cola",
+"d": [
+"chair",
+"bus"
+],
+"ku": "تو کۆلایەکێ دڤێی؟",
+"c": "a6_12"
+},
+{
+"s": "The ___, please!",
+"a": "bill",
+"d": [
+"food",
+"water"
+],
+"ku": "حسێب، هیڤیە!",
+"c": "a6_15"
+}
+]
+},
+"unit_s6c": {
+"de": [
+{
+"s": "Ich ___ gern. Musik ist super!",
+"a": "tanze",
+"d": [
+"schwimme",
+"lese"
+],
+"ku": "ئەز حەز ژ سەمایێ دکەم. مۆسیقا گەلەک خۆشە!",
+"c": "a6_17"
+},
+{
+"s": "Im Sommer gehe ich ___.",
+"a": "schwimmen",
+"d": [
+"tanzen",
+"fernsehen"
+],
+"ku": "ل هاڤینێ ئەز دچمە مەلەڤانیێ.",
+"c": "a6_18"
+},
+{
+"s": "Ich ___ Fußball toll.",
+"a": "finde",
+"d": [
+"habe",
+"heiße"
+],
+"ku": "ب بۆچوونا من تۆپێ پێ گەلەک خۆشە.",
+"c": "a6_23"
+},
+{
+"s": "Lesen finde ich ___.",
+"a": "langweilig",
+"d": [
+"lecker",
+"teuer"
+],
+"ku": "خواندن ل دەڤ من بێزارکەرە.",
+"c": "a6_24"
+},
+{
+"s": "Am Wochenende ___ wir in den Bergen ___.",
+"a": "gehen … wandern",
+"d": [
+"fahren … Rad",
+"machen … Musik"
+],
+"ku": "دویماهیا حەفتیێ ئەم دچینە چیایان بۆ گەشتێ.",
+"c": "a6_22"
+}
+],
+"en": [
+{
+"s": "I like ___. Music is great!",
+"a": "dancing",
+"d": [
+"sleeping",
+"cooking"
+],
+"ku": "ئەز حەز ژ سەمایێ دکەم. مۆسیقا خۆشە!",
+"c": "a6_17"
+},
+{
+"s": "I ___ football is great.",
+"a": "think",
+"d": [
+"have",
+"am"
+],
+"ku": "ب بۆچوونا من تۆپێ پێ خۆشە.",
+"c": "a6_23"
+},
+{
+"s": "I ___ reading ___.",
+"a": "find … boring",
+"d": [
+"am … tasty",
+"have … cold"
+],
+"ku": "خواندن ل دەڤ من بێزارکەرە.",
+"c": "a6_24"
+}
+]
+},
+"unit_s7a": {
+"de": [
+{
+"s": "Ich ___ gut Deutsch sprechen.",
+"a": "kann",
+"d": [
+"will",
+"bin"
+],
+"ku": "ئەز دشێم باش ب ئەلمانی باخڤم.",
+"c": "a7_01"
+},
+{
+"s": "___ du schwimmen?",
+"a": "Kannst",
+"d": [
+"Bist",
+"Hast"
+],
+"ku": "تو دشێی مەلەڤانیێ بکەی؟",
+"c": "a7_02"
+},
+{
+"s": "Er kann nicht Auto ___.",
+"a": "fahren",
+"d": [
+"kochen",
+"singen"
+],
+"ku": "ئەو نەشێت ترومبێلێ بهاژۆت.",
+"c": "a7_03"
+},
+{
+"s": "Meine Schwester ___ gut ___.",
+"a": "kann … singen",
+"d": [
+"will … schlafen",
+"muss … arbeiten"
+],
+"ku": "خوشکا من دشێت باش بسترێت.",
+"c": "a7_07"
+},
+{
+"s": "Ich kann gut Kuchen ___.",
+"a": "backen",
+"d": [
+"malen",
+"lesen"
+],
+"ku": "ئەز دشێم کێکێ باش چێکەم.",
+"c": "a7_05"
+}
+],
+"en": [
+{
+"s": "I ___ speak German well.",
+"a": "can",
+"d": [
+"am",
+"want"
+],
+"ku": "ئەز دشێم باش ب ئەلمانی باخڤم.",
+"c": "a7_01"
+},
+{
+"s": "___ you swim?",
+"a": "Can",
+"d": [
+"Are",
+"Have"
+],
+"ku": "تو دشێی مەلەڤانیێ بکەی؟",
+"c": "a7_02"
+},
+{
+"s": "He ___ drive a ___.",
+"a": "can't … car",
+"d": [
+"isn't … bus",
+"hasn't … bike"
+],
+"ku": "ئەو نەشێت ترومبێلێ بهاژۆت.",
+"c": "a7_03"
+}
+]
+},
+"unit_s7b": {
+"de": [
+{
+"s": "Ich ___ Deutsch lernen.",
+"a": "will",
+"d": [
+"kann",
+"bin"
+],
+"ku": "ئەز دڤێم ئەلمانی فێربم.",
+"c": "a7_09"
+},
+{
+"s": "Wir ___ nach Berlin ___.",
+"a": "wollen … fahren",
+"d": [
+"können … schlafen",
+"haben … gefahren"
+],
+"ku": "ئەم دڤێین بچینە بەرلینێ.",
+"c": "a7_10"
+},
+{
+"s": "Ich lerne jeden ___.",
+"a": "Tag",
+"d": [
+"Jahr",
+"Kurs"
+],
+"ku": "ئەز هەر رۆژ فێر دبم.",
+"c": "a7_16"
+},
+{
+"s": "Die ___ ist am Freitag.",
+"a": "Prüfung",
+"d": [
+"Tipp",
+"Kurs"
+],
+"ku": "ئەزموون رۆژا ئەینیێیە.",
+"c": "a7_12"
+},
+{
+"s": "Das finde ich ___.",
+"a": "wichtig",
+"d": [
+"lecker",
+"kalt"
+],
+"ku": "ئەڤە ل دەڤ من گرنگە.",
+"c": "a7_15"
+}
+],
+"en": [
+{
+"s": "I ___ to learn German.",
+"a": "want",
+"d": [
+"can",
+"am"
+],
+"ku": "ئەز دڤێم ئەلمانی فێربم.",
+"c": "a7_09"
+},
+{
+"s": "I study every ___.",
+"a": "day",
+"d": [
+"year",
+"course"
+],
+"ku": "ئەز هەر رۆژ دخوینم.",
+"c": "a7_16"
+},
+{
+"s": "We ___ to ___ to Berlin.",
+"a": "want … go",
+"d": [
+"can … went",
+"have … going"
+],
+"ku": "ئەم دڤێین بچینە بەرلینێ.",
+"c": "a7_10"
+}
+]
+},
+"unit_s7c": {
+"de": [
+{
+"s": "Ich ___ ein Buch ___.",
+"a": "habe … gelesen",
+"d": [
+"bin … gelesen",
+"habe … gegangen"
+],
+"ku": "من پەرتووکەک خواند.",
+"c": "a7_17"
+},
+{
+"s": "Ich ___ nach Hause ___.",
+"a": "bin … gegangen",
+"d": [
+"habe … gegangen",
+"bin … gekocht"
+],
+"ku": "ئەز چوومە مال.",
+"c": "a7_20"
+},
+{
+"s": "Wir haben ___.",
+"a": "gekocht",
+"d": [
+"gekommen",
+"gegangen"
+],
+"ku": "مە خوارن چێکر.",
+"c": "a7_18"
+},
+{
+"s": "Sie ist mit dem Bus ___.",
+"a": "gefahren",
+"d": [
+"gefahrt",
+"gefahren haben"
+],
+"ku": "ئەو ب پاسێ چوو.",
+"c": "a7_21"
+},
+{
+"s": "Was hast du gestern ___?",
+"a": "gemacht",
+"d": [
+"machen",
+"gemachen"
+],
+"ku": "تە دوهی چ کر؟",
+"c": "a7_24"
+}
+],
+"en": [
+{
+"s": "I ___ a book yesterday.",
+"a": "read",
+"d": [
+"reads",
+"reading"
+],
+"ku": "من دوهی پەرتووکەک خواند.",
+"c": "a7_17"
+},
+{
+"s": "I ___ home.",
+"a": "went",
+"d": [
+"go",
+"gone"
+],
+"ku": "ئەز چوومە مال.",
+"c": "a7_20"
+},
+{
+"s": "What ___ you ___ yesterday?",
+"a": "did … do",
+"d": [
+"do … did",
+"are … doing"
+],
+"ku": "تە دوهی چ کر؟",
+"c": "a7_24"
+}
+]
+},
+"unit_s8a": {
+"de": [
+{
+"s": "Der ___ arbeitet im Krankenhaus.",
+"a": "Arzt",
+"d": [
+"Kellner",
+"Schüler"
+],
+"ku": "نۆژدار ل نەخۆشخانێ کار دکەت.",
+"c": "a8_01"
+},
+{
+"s": "Die ___ erklärt die Grammatik.",
+"a": "Lehrerin",
+"d": [
+"Köchin",
+"Ärztin"
+],
+"ku": "مامۆستا رێزمانێ شرۆڤە دکەت.",
+"c": "a8_02"
+},
+{
+"s": "Der ___ bringt das Essen.",
+"a": "Kellner",
+"d": [
+"Lehrer",
+"Polizist"
+],
+"ku": "گارسۆن خوارنێ دئینیت.",
+"c": "a8_06"
+},
+{
+"s": "Mein Sohn ist ___ in der Klasse 5.",
+"a": "Schüler",
+"d": [
+"Arzt",
+"Chef"
+],
+"ku": "کورێ من قوتابییە ل پۆلا ٥.",
+"c": "a8_08"
+},
+{
+"s": "Der ___ kocht im Restaurant.",
+"a": "Koch",
+"d": [
+"Kellner",
+"Polizist"
+],
+"ku": "ئاشپێژ ل خوارنگەهێ خوارنێ چێدکەت.",
+"c": "a8_05"
+}
+],
+"en": [
+{
+"s": "The ___ works in a hospital.",
+"a": "doctor",
+"d": [
+"waiter",
+"pupil"
+],
+"ku": "نۆژدار ل نەخۆشخانێ کار دکەت.",
+"c": "a8_01"
+},
+{
+"s": "The ___ brings the food.",
+"a": "waiter",
+"d": [
+"teacher",
+"doctor"
+],
+"ku": "گارسۆن خوارنێ دئینیت.",
+"c": "a8_06"
+},
+{
+"s": "The ___ explains the grammar.",
+"a": "teacher",
+"d": [
+"cook",
+"police officer"
+],
+"ku": "مامۆستا رێزمانێ شرۆڤە دکەت.",
+"c": "a8_02"
+}
+]
+},
+"unit_s8b": {
+"de": [
+{
+"s": "Was sind Sie von ___?",
+"a": "Beruf",
+"d": [
+"Firma",
+"Chef"
+],
+"ku": "کارێ هەوە چییە؟",
+"c": "a8_09"
+},
+{
+"s": "Ich arbeite ___ einer Firma.",
+"a": "bei",
+"d": [
+"aus",
+"nach"
+],
+"ku": "ئەز ل کۆمپانیەکێ کار دکەم.",
+"c": "a8_10"
+},
+{
+"s": "Ich arbeite ___ zwei Jahren hier.",
+"a": "seit",
+"d": [
+"vor",
+"bis"
+],
+"ku": "دوو سالن ئەز ل ڤێرە کار دکەم.",
+"c": "a8_11"
+},
+{
+"s": "Ich habe keine Arbeit. Ich bin ___.",
+"a": "arbeitslos",
+"d": [
+"verheiratet",
+"Chef"
+],
+"ku": "کارێ من نینە. ئەز بێکارم.",
+"c": "a8_14"
+},
+{
+"s": "Ich ___ eine ___ an die Firma.",
+"a": "schreibe … Bewerbung",
+"d": [
+"lese … Praktikum",
+"habe … Kollege"
+],
+"ku": "ئەز داخوازنامەیەکێ بۆ کۆمپانیێ دنڤیسم.",
+"c": "a8_15"
+}
+],
+"en": [
+{
+"s": "What do you do for a ___?",
+"a": "living",
+"d": [
+"day",
+"job"
+],
+"ku": "کارێ تە چییە؟",
+"c": "a8_09"
+},
+{
+"s": "I work ___ a company.",
+"a": "for",
+"d": [
+"from",
+"of"
+],
+"ku": "ئەز بۆ کۆمپانیەکێ کار دکەم.",
+"c": "a8_10"
+},
+{
+"s": "I have ___ here ___ two years.",
+"a": "worked … for",
+"d": [
+"work … since",
+"working … ago"
+],
+"ku": "دوو سالن ئەز ل ڤێرە کار دکەم.",
+"c": "a8_11"
+}
+]
+},
+"unit_s8c": {
+"de": [
+{
+"s": "Ich ___ Lehrer.",
+"a": "war",
+"d": [
+"bin gewesen",
+"hatte"
+],
+"ku": "ئەز مامۆستا بووم.",
+"c": "a8_17"
+},
+{
+"s": "Er war gestern ___.",
+"a": "krank",
+"d": [
+"Lehrer",
+"Glück"
+],
+"ku": "ئەو دوهی نەخۆش بوو.",
+"c": "a8_18"
+},
+{
+"s": "Ich ___ keine Zeit.",
+"a": "hatte",
+"d": [
+"war",
+"habe gehabt"
+],
+"ku": "دەمێ من نەبوو.",
+"c": "a8_19"
+},
+{
+"s": "Wo ___ du gestern?",
+"a": "warst",
+"d": [
+"hattest",
+"bist"
+],
+"ku": "تو دوهی ل کیرێ بووی؟",
+"c": "a8_20"
+},
+{
+"s": "Ist die ___ noch ___?",
+"a": "Stelle … frei",
+"d": [
+"Firma … krank",
+"Arbeit … alt"
+],
+"ku": "ئەو کار هێشتا ڤالایە؟",
+"c": "a8_23"
+}
+],
+"en": [
+{
+"s": "I ___ a teacher.",
+"a": "was",
+"d": [
+"were",
+"am been"
+],
+"ku": "ئەز مامۆستا بووم.",
+"c": "a8_17"
+},
+{
+"s": "I ___ no time.",
+"a": "had",
+"d": [
+"have had",
+"has"
+],
+"ku": "دەمێ من نەبوو.",
+"c": "a8_19"
+},
+{
+"s": "Where ___ you yesterday?",
+"a": "were",
+"d": [
+"was",
+"did"
+],
+"ku": "تو دوهی ل کیرێ بووی؟",
+"c": "a8_20"
+}
+]
+},
+"unit_s9a": {
+"de": [
+{
+"s": "Sie ___ den Antrag ___.",
+"a": "müssen … ausfüllen",
+"d": [
+"können … anrufen",
+"wollen … aufstehen"
+],
+"ku": "دڤێت هوین فۆرمێ پڕ بکەن.",
+"c": "a9_05"
+},
+{
+"s": "Ziehen Sie eine ___.",
+"a": "Nummer",
+"d": [
+"Tür",
+"Karte"
+],
+"ku": "ژمارەکێ وەربگرن.",
+"c": "a9_06"
+},
+{
+"s": "___ Sie, bitte!",
+"a": "Warten",
+"d": [
+"Kommen",
+"Zahlen"
+],
+"ku": "هیڤیە چاڤەڕێ بن!",
+"c": "a9_07"
+},
+{
+"s": "Kann man hier mit ___ zahlen?",
+"a": "Karte",
+"d": [
+"Pass",
+"Antrag"
+],
+"ku": "ل ڤێرە دبیت ب کارتێ پارە بدەی؟",
+"c": "a9_08"
+},
+{
+"s": "Ich brauche einen neuen ___.",
+"a": "Pass",
+"d": [
+"Amt",
+"Antrag"
+],
+"ku": "من پاسپۆرتەکێ نوو دڤێت.",
+"c": "a9_03"
+}
+],
+"en": [
+{
+"s": "You must ___ in the form.",
+"a": "fill",
+"d": [
+"take",
+"wait"
+],
+"ku": "دڤێت تو فۆرمێ پڕ بکەی.",
+"c": "a9_05"
+},
+{
+"s": "Please ___!",
+"a": "wait",
+"d": [
+"park",
+"smoke"
+],
+"ku": "هیڤیە چاڤەڕێ بە!",
+"c": "a9_07"
+},
+{
+"s": "Can I pay by ___ here?",
+"a": "card",
+"d": [
+"passport",
+"form"
+],
+"ku": "دشێم ل ڤێرە ب کارتێ پارە بدەم؟",
+"c": "a9_08"
+}
+]
+},
+"unit_s9b": {
+"de": [
+{
+"s": "Hör ___!",
+"a": "zu",
+"d": [
+"an",
+"auf"
+],
+"ku": "گوهداری بکە!",
+"c": "a9_09"
+},
+{
+"s": "Komm ___!",
+"a": "mit",
+"d": [
+"zu",
+"aus"
+],
+"ku": "دگەل مە وەرە!",
+"c": "a9_10"
+},
+{
+"s": "Sei ___! Das Baby schläft.",
+"a": "leise",
+"d": [
+"laut",
+"groß"
+],
+"ku": "بێدەنگ بە! بەیبی نڤستییە.",
+"c": "a9_12"
+},
+{
+"s": "Machen Sie bitte die Tür ___.",
+"a": "zu",
+"d": [
+"mit",
+"an"
+],
+"ku": "هیڤیە دەرگەهی بگرن.",
+"c": "a9_13"
+},
+{
+"s": "Hier ___ Sie nicht ___.",
+"a": "dürfen … parken",
+"d": [
+"müssen … rauchen",
+"können … warten"
+],
+"ku": "ل ڤێرە هوین نەشێن ترومبێلێ راوەستینن.",
+"c": "a9_15"
+}
+],
+"en": [
+{
+"s": "Be ___! The baby is sleeping.",
+"a": "quiet",
+"d": [
+"loud",
+"big"
+],
+"ku": "بێدەنگ بە! بەیبی نڤستییە.",
+"c": "a9_12"
+},
+{
+"s": "Please ___ the door.",
+"a": "close",
+"d": [
+"help",
+"listen"
+],
+"ku": "هیڤیە دەرگەهی بگرە.",
+"c": "a9_13"
+},
+{
+"s": "You ___ park ___.",
+"a": "can't … here",
+"d": [
+"don't … smoking",
+"must … help"
+],
+"ku": "تو نەشێی ل ڤێرە ترومبێلێ راوەستینی.",
+"c": "a9_15"
+}
+]
+},
+"unit_s9c": {
+"de": [
+{
+"s": "Ich möchte ein ___ für eine Person.",
+"a": "Einzelzimmer",
+"d": [
+"Frühstück",
+"Aufzug"
+],
+"ku": "من ژوورەکا ئێک کەسی دڤێت.",
+"c": "a9_19"
+},
+{
+"s": "Ist das Frühstück ___?",
+"a": "inklusive",
+"d": [
+"kaputt",
+"leise"
+],
+"ku": "تێشت د ناڤ نرخی دایە؟",
+"c": "a9_21"
+},
+{
+"s": "Ich habe ein Zimmer ___.",
+"a": "reserviert",
+"d": [
+"gelesen",
+"gekocht"
+],
+"ku": "من ژوورەک حیجزکرییە.",
+"c": "a9_22"
+},
+{
+"s": "Wo ist der ___? – Dort, links.",
+"a": "Aufzug",
+"d": [
+"Schlüssel",
+"Pass"
+],
+"ku": "ئاسانسۆر ل کیرێیە؟ – ل وێرێ، چەپێ.",
+"c": "a9_23"
+},
+{
+"s": "Hier ist Ihr ___ für Zimmer 12.",
+"a": "Schlüssel",
+"d": [
+"Antrag",
+"Aufzug"
+],
+"ku": "ئەڤە کلیلا هەوەیە بۆ ژوورا ١٢.",
+"c": "a9_20"
+}
+],
+"en": [
+{
+"s": "I'd like a ___ room.",
+"a": "single",
+"d": [
+"lift",
+"breakfast"
+],
+"ku": "من ژوورەکا ئێک کەسی دڤێت.",
+"c": "a9_19"
+},
+{
+"s": "Is breakfast ___?",
+"a": "included",
+"d": [
+"broken",
+"quiet"
+],
+"ku": "تێشت د ناڤ نرخی دایە؟",
+"c": "a9_21"
+},
+{
+"s": "Where is the ___?",
+"a": "lift",
+"d": [
+"key",
+"passport"
+],
+"ku": "ئاسانسۆر ل کیرێیە؟",
+"c": "a9_23"
+}
+]
+},
+"unit_s10a": {
+"de": [
+{
+"s": "Ich sehe mit den ___.",
+"a": "Augen",
+"d": [
+"Ohren",
+"Händen"
+],
+"ku": "ئەز ب چاڤان دبینم.",
+"c": "a10_02"
+},
+{
+"s": "Ich höre mit den ___.",
+"a": "Ohren",
+"d": [
+"Augen",
+"Beinen"
+],
+"ku": "ئەز ب گوهان دگوهم.",
+"c": "a10_03"
+},
+{
+"s": "Ich putze meine ___.",
+"a": "Zähne",
+"d": [
+"Ohren",
+"Beine"
+],
+"ku": "ئەز ددانێن خۆ پاقژ دکەم.",
+"c": "a10_05"
+},
+{
+"s": "Ich schreibe mit der rechten ___.",
+"a": "Hand",
+"d": [
+"Nase",
+"Bauch"
+],
+"ku": "ئەز ب دەستێ راستێ دنڤیسم.",
+"c": "a10_06"
+},
+{
+"s": "Mein ___ tut weh. Ich habe zu viel gegessen.",
+"a": "Bauch",
+"d": [
+"Ohr",
+"Bein"
+],
+"ku": "زکێ من دئێشیت. من گەلەک خوار.",
+"c": "a10_08"
+}
+],
+"en": [
+{
+"s": "I see with my ___.",
+"a": "eyes",
+"d": [
+"ears",
+"hands"
+],
+"ku": "ئەز ب چاڤان دبینم.",
+"c": "a10_02"
+},
+{
+"s": "I brush my ___.",
+"a": "teeth",
+"d": [
+"ears",
+"legs"
+],
+"ku": "ئەز ددانێن خۆ پاقژ دکەم.",
+"c": "a10_05"
+},
+{
+"s": "I write with my right ___.",
+"a": "hand",
+"d": [
+"nose",
+"stomach"
+],
+"ku": "ئەز ب دەستێ راستێ دنڤیسم.",
+"c": "a10_06"
+}
+]
+},
+"unit_s10b": {
+"de": [
+{
+"s": "Mein Kopf tut ___.",
+"a": "weh",
+"d": [
+"gut",
+"krank"
+],
+"ku": "سەرێ من دئێشیت.",
+"c": "a10_09"
+},
+{
+"s": "Ich habe ___. 39 Grad!",
+"a": "Fieber",
+"d": [
+"Husten",
+"Hunger"
+],
+"ku": "تایا من هەیە. ٣٩ پلە!",
+"c": "a10_11"
+},
+{
+"s": "Was ___ Ihnen?",
+"a": "fehlt",
+"d": [
+"geht",
+"kostet"
+],
+"ku": "چ ب هەوە هاتییە؟",
+"c": "a10_13"
+},
+{
+"s": "Sie ___ im Bett ___.",
+"a": "sollen … bleiben",
+"d": [
+"können … tanzen",
+"wollen … arbeiten"
+],
+"ku": "دڤێت هوین د جهێ دا بمینن.",
+"c": "a10_15"
+},
+{
+"s": "Gute ___!",
+"a": "Besserung",
+"d": [
+"Nacht",
+"Reise"
+],
+"ku": "خودێ شفا بدەت!",
+"c": "a10_16"
+}
+],
+"en": [
+{
+"s": "My head ___.",
+"a": "hurts",
+"d": [
+"helps",
+"sleeps"
+],
+"ku": "سەرێ من دئێشیت.",
+"c": "a10_09"
+},
+{
+"s": "I have a ___. 39 degrees!",
+"a": "fever",
+"d": [
+"cough",
+"cold"
+],
+"ku": "تایا من هەیە. ٣٩ پلە!",
+"c": "a10_11"
+},
+{
+"s": "You should ___ in ___.",
+"a": "stay … bed",
+"d": [
+"go … school",
+"eat … bus"
+],
+"ku": "دڤێت تو د جهێ دا بمینی.",
+"c": "a10_15"
+}
+]
+},
+"unit_s10c": {
+"de": [
+{
+"s": "Ich möchte einen ___ beim Arzt.",
+"a": "Termin",
+"d": [
+"Husten",
+"Antrag"
+],
+"ku": "من ژڤانەک ل دەڤ نۆژداری دڤێت.",
+"c": "a10_17"
+},
+{
+"s": "Das ___ gut.",
+"a": "passt",
+"d": [
+"kostet",
+"heißt"
+],
+"ku": "ئەڤە باشە (دگونجیت).",
+"c": "a10_19"
+},
+{
+"s": "Ich muss den Termin ___.",
+"a": "absagen",
+"d": [
+"anrufen",
+"aufstehen"
+],
+"ku": "دڤێت ئەز ژڤانی هەلوەشینم.",
+"c": "a10_20"
+},
+{
+"s": "Kann ich den Termin ___?",
+"a": "verschieben",
+"d": [
+"verdienen",
+"bestellen"
+],
+"ku": "دشێم ژڤانی پاش بێخم؟",
+"c": "a10_21"
+},
+{
+"s": "Rufen Sie einen ___! Es ist ein Notfall.",
+"a": "Krankenwagen",
+"d": [
+"Kellner",
+"Termin"
+],
+"ku": "ئەمبولانسەکێ بانگ بکەن! حالەتەکا ب لەزە.",
+"c": "a10_24"
+}
+],
+"en": [
+{
+"s": "I'd like an ___.",
+"a": "appointment",
+"d": [
+"ambulance",
+"insurance"
+],
+"ku": "من ژڤانەک دڤێت.",
+"c": "a10_17"
+},
+{
+"s": "I have to ___ the appointment.",
+"a": "cancel",
+"d": [
+"call",
+"eat"
+],
+"ku": "دڤێت ئەز ژڤانی هەلوەشینم.",
+"c": "a10_20"
+},
+{
+"s": "Call an ___!",
+"a": "ambulance",
+"d": [
+"appointment",
+"insurance"
+],
+"ku": "ئەمبولانسەکێ بانگ بکە!",
+"c": "a10_24"
+}
+]
+},
+"unit_s11a": {
+"de": [
+{
+"s": "Gehen Sie ___, dann rechts.",
+"a": "geradeaus",
+"d": [
+"links",
+"oben"
+],
+"ku": "راست بچن، پاشان بەرەڤ راستێ.",
+"c": "a11_03"
+},
+{
+"s": "Wie komme ich ___ Bahnhof?",
+"a": "zum",
+"d": [
+"zur",
+"nach"
+],
+"ku": "ئەز چاوا دگەهمە ستەیشنا شەمەندەفەرێ؟",
+"c": "a11_04"
+},
+{
+"s": "Gehen Sie bis ___ Ampel.",
+"a": "zur",
+"d": [
+"zum",
+"nach"
+],
+"ku": "هەتا گلۆپێن هاتنوچوونێ بچن.",
+"c": "a11_05"
+},
+{
+"s": "Dann die erste Straße ___.",
+"a": "links",
+"d": [
+"oben",
+"heute"
+],
+"ku": "پاشان جادەیا ئێکێ بەرەڤ چەپێ.",
+"c": "a11_07"
+},
+{
+"s": "Das ist nicht ___. Nur fünf Minuten.",
+"a": "weit",
+"d": [
+"groß",
+"teuer"
+],
+"ku": "نە دویرە. تنێ پێنج خولەک.",
+"c": "a11_08"
+}
+],
+"en": [
+{
+"s": "Go straight ___, then turn right.",
+"a": "on",
+"d": [
+"up",
+"in"
+],
+"ku": "راست بچە، پاشان بەرەڤ راستێ.",
+"c": "a11_03"
+},
+{
+"s": "How do I get ___ the station?",
+"a": "to",
+"d": [
+"at",
+"from"
+],
+"ku": "ئەز چاوا دگەهمە ستەیشنێ؟",
+"c": "a11_04"
+},
+{
+"s": "It's not ___. Only five minutes.",
+"a": "far",
+"d": [
+"big",
+"expensive"
+],
+"ku": "نە دویرە. تنێ پێنج خولەک.",
+"c": "a11_08"
+}
+]
+},
+"unit_s11b": {
+"de": [
+{
+"s": "Ich fahre mit dem ___ zur Arbeit.",
+"a": "Bus",
+"d": [
+"Fuß",
+"Hand"
+],
+"ku": "ئەز ب پاسێ دچمە کاری.",
+"c": "a11_09"
+},
+{
+"s": "Der ___ nach Berlin hat Verspätung.",
+"a": "Zug",
+"d": [
+"Fuß",
+"Flugzeug"
+],
+"ku": "شەمەندەفەرا بەرلینێ دەرەنگ کەفتییە.",
+"c": "a11_10"
+},
+{
+"s": "Wir fliegen mit dem ___ nach Erbil.",
+"a": "Flugzeug",
+"d": [
+"Fahrrad",
+"Bus"
+],
+"ku": "ئەم ب فرۆکێ دفڕینە هەولێرێ.",
+"c": "a11_14"
+},
+{
+"s": "Ich gehe zu ___.",
+"a": "Fuß",
+"d": [
+"Bus",
+"Zug"
+],
+"ku": "ئەز ب پێیان دچم.",
+"c": "a11_16"
+},
+{
+"s": "Ich ___ mit dem Fahrrad zur Schule.",
+"a": "fahre",
+"d": [
+"gehe",
+"fliege"
+],
+"ku": "ئەز ب پاسکیلێ دچمە قوتابخانێ.",
+"c": "a11_15"
+}
+],
+"en": [
+{
+"s": "I go to work by ___.",
+"a": "bus",
+"d": [
+"foot",
+"plane"
+],
+"ku": "ئەز ب پاسێ دچمە کاری.",
+"c": "a11_09"
+},
+{
+"s": "We fly to Erbil by ___.",
+"a": "plane",
+"d": [
+"bike",
+"bus"
+],
+"ku": "ئەم ب فرۆکێ دفڕینە هەولێرێ.",
+"c": "a11_14"
+},
+{
+"s": "I go on ___.",
+"a": "foot",
+"d": [
+"bus",
+"train"
+],
+"ku": "ئەز ب پێیان دچم.",
+"c": "a11_16"
+}
+]
+},
+"unit_s11c": {
+"de": [
+{
+"s": "Ich hole Geld von der ___.",
+"a": "Bank",
+"d": [
+"Post",
+"Bäckerei"
+],
+"ku": "ئەز پارەی ژ بانکێ دئینم.",
+"c": "a11_17"
+},
+{
+"s": "Tabletten kaufe ich in der ___.",
+"a": "Apotheke",
+"d": [
+"Bäckerei",
+"Tankstelle"
+],
+"ku": "ئەز دەرمانان ژ دەرمانخانێ دکڕم.",
+"c": "a11_18"
+},
+{
+"s": "Brot kaufe ich in der ___.",
+"a": "Bäckerei",
+"d": [
+"Apotheke",
+"Bank"
+],
+"ku": "ئەز نانی ژ نانەواخانێ دکڕم.",
+"c": "a11_20"
+},
+{
+"s": "Das Auto steht ___ dem Haus.",
+"a": "vor",
+"d": [
+"unter",
+"in"
+],
+"ku": "ترومبێل ل بەر خانی راوەستیایە.",
+"c": "a11_23"
+},
+{
+"s": "Die Katze ist ___ dem Tisch.",
+"a": "unter",
+"d": [
+"vor",
+"neben"
+],
+"ku": "پشیک ل بن مێزێیە.",
+"c": "a11_24"
+}
+],
+"en": [
+{
+"s": "I buy bread at the ___.",
+"a": "bakery",
+"d": [
+"pharmacy",
+"bank"
+],
+"ku": "ئەز نانی ژ نانەواخانێ دکڕم.",
+"c": "a11_20"
+},
+{
+"s": "The car is in ___ of the house.",
+"a": "front",
+"d": [
+"under",
+"top"
+],
+"ku": "ترومبێل ل بەر خانی یە.",
+"c": "a11_23"
+},
+{
+"s": "The cat is ___ the table.",
+"a": "under",
+"d": [
+"in front",
+"from"
+],
+"ku": "پشیک ل بن مێزێیە.",
+"c": "a11_24"
+}
+]
+},
+"unit_s12a": {
+"de": [
+{
+"s": "Der Bus kommt in einer ___.",
+"a": "Stunde",
+"d": [
+"Woche",
+"Uhr"
+],
+"ku": "پاس پشتی دەمژمێرەکێ دهێت.",
+"c": "a12_01"
+},
+{
+"s": "Ich war ___ einer Woche in Berlin.",
+"a": "vor",
+"d": [
+"nach",
+"ab"
+],
+"ku": "هەفتیەک بەری نوکە ئەز ل بەرلینێ بووم.",
+"c": "a12_02"
+},
+{
+"s": "___ morgen habe ich Urlaub.",
+"a": "Ab",
+"d": [
+"Vor",
+"Seit"
+],
+"ku": "ژ سبەی ڤە ئەز ل پشوویێ مە.",
+"c": "a12_04"
+},
+{
+"s": "Ich arbeite ___ Freitag.",
+"a": "bis",
+"d": [
+"vor",
+"seit"
+],
+"ku": "ئەز هەتا ئەینیێ کار دکەم.",
+"c": "a12_05"
+},
+{
+"s": "Wann ist das Auto ___? – In vier Tagen.",
+"a": "fertig",
+"d": [
+"kaputt",
+"weit"
+],
+"ku": "ترومبێل کەنگی ئامادە دبیت؟ – پشتی چار رۆژان.",
+"c": "a12_06"
+}
+],
+"en": [
+{
+"s": "The bus comes in an ___.",
+"a": "hour",
+"d": [
+"week",
+"o'clock"
+],
+"ku": "پاس پشتی دەمژمێرەکێ دهێت.",
+"c": "a12_01"
+},
+{
+"s": "I was in Berlin a week ___.",
+"a": "ago",
+"d": [
+"before",
+"after"
+],
+"ku": "هەفتیەک بەری نوکە ئەز ل بەرلینێ بووم.",
+"c": "a12_02"
+},
+{
+"s": "I work ___ Friday.",
+"a": "until",
+"d": [
+"ago",
+"since"
+],
+"ku": "ئەز هەتا ئەینیێ کار دکەم.",
+"c": "a12_05"
+}
+]
+},
+"unit_s12b": {
+"de": [
+{
+"s": "___ Sie mir helfen?",
+"a": "Könnten",
+"d": [
+"Haben",
+"Sind"
+],
+"ku": "هوین دشێن هاریکاریا من بکەن؟",
+"c": "a12_09"
+},
+{
+"s": "Mein Handy ist ___.",
+"a": "kaputt",
+"d": [
+"fertig",
+"teuer"
+],
+"ku": "مۆبایلا من خرابە.",
+"c": "a12_11"
+},
+{
+"s": "Machen Sie bitte das Licht ___.",
+"a": "an",
+"d": [
+"zu",
+"mit"
+],
+"ku": "هیڤیە گلۆپی ڤێخن.",
+"c": "a12_14"
+},
+{
+"s": "Mach den Computer ___!",
+"a": "aus",
+"d": [
+"an",
+"zu"
+],
+"ku": "کۆمپیوتەری بتەمرینە!",
+"c": "a12_15"
+},
+{
+"s": "___ Sie das bitte ___?",
+"a": "Würden … kopieren",
+"d": [
+"Haben … gelesen",
+"Sind … gegangen"
+],
+"ku": "هوین دشێن ڤێ کۆپی بکەن؟",
+"c": "a12_10"
+}
+],
+"en": [
+{
+"s": "Could you ___ me?",
+"a": "help",
+"d": [
+"eat",
+"sleep"
+],
+"ku": "تو دشێی هاریکاریا من بکەی؟",
+"c": "a12_09"
+},
+{
+"s": "My phone is ___.",
+"a": "broken",
+"d": [
+"ready",
+"expensive"
+],
+"ku": "مۆبایلا من خرابە.",
+"c": "a12_11"
+},
+{
+"s": "Please turn ___ the light.",
+"a": "on",
+"d": [
+"in",
+"at"
+],
+"ku": "هیڤیە گلۆپی ڤێخە.",
+"c": "a12_14"
+}
+]
+},
+"unit_s12c": {
+"de": [
+{
+"s": "Hier ist die ___. Das macht 80 Euro.",
+"a": "Rechnung",
+"d": [
+"Reinigung",
+"Reparatur"
+],
+"ku": "ئەڤە حسێبە. دبیتە ٨٠ یۆرۆ.",
+"c": "a12_17"
+},
+{
+"s": "Die Hose ist zu klein. Ich möchte sie ___.",
+"a": "umtauschen",
+"d": [
+"bestellen",
+"liefern"
+],
+"ku": "پانتۆل گەلەک بچووکە. ئەز دڤێم بگوهۆڕم.",
+"c": "a12_18"
+},
+{
+"s": "Wir ___ morgen.",
+"a": "liefern",
+"d": [
+"putzen",
+"kopieren"
+],
+"ku": "ئەم سبەی دگەهینین.",
+"c": "a12_20"
+},
+{
+"s": "Ich möchte etwas ___.",
+"a": "bestellen",
+"d": [
+"umtauschen",
+"reparieren"
+],
+"ku": "من دڤێت تشتەکی داخواز بکەم.",
+"c": "a12_21"
+},
+{
+"s": "Ich ___ Sie ___.",
+"a": "rufe … zurück",
+"d": [
+"mache … an",
+"stehe … auf"
+],
+"ku": "ئەز دێ ل هەوە زڤڕینمەڤە.",
+"c": "a12_24"
+}
+],
+"en": [
+{
+"s": "Here is the ___. That's 80 euros.",
+"a": "bill",
+"d": [
+"cleaning",
+"repair"
+],
+"ku": "ئەڤە حسێبە. دبیتە ٨٠ یۆرۆ.",
+"c": "a12_17"
+},
+{
+"s": "I'd like to ___ something.",
+"a": "order",
+"d": [
+"clean",
+"deliver"
+],
+"ku": "من دڤێت تشتەکی داخواز بکەم.",
+"c": "a12_21"
+},
+{
+"s": "I'll ___ you ___.",
+"a": "call … back",
+"d": [
+"turn … on",
+"get … up"
+],
+"ku": "ئەز دێ تەلەفۆنێ بۆ تە زڤڕینم.",
+"c": "a12_24"
+}
+]
+},
+"unit_s13a": {
+"de": [
+{
+"s": "Im Sommer trage ich ein ___.",
+"a": "T-Shirt",
+"d": [
+"Pullover",
+"Jacke"
+],
+"ku": "ل هاڤینێ ئەز تیشێرتەکێ ل خۆ دکەم.",
+"c": "a13_01"
+},
+{
+"s": "Die ___ ist zu lang.",
+"a": "Hose",
+"d": [
+"Hemd",
+"Kleid"
+],
+"ku": "پانتۆل گەلەک درێژە.",
+"c": "a13_02"
+},
+{
+"s": "Im Winter brauche ich eine warme ___.",
+"a": "Jacke",
+"d": [
+"Socke",
+"T-Shirt"
+],
+"ku": "ل زستانێ چاکێتەکا گەرم دڤێت.",
+"c": "a13_04"
+},
+{
+"s": "Sie trägt ein rotes ___.",
+"a": "Kleid",
+"d": [
+"Hemd",
+"Schuh"
+],
+"ku": "ئەو کراسەکێ سۆر ل خۆ دکەت.",
+"c": "a13_03"
+},
+{
+"s": "Ich brauche neue ___ für den Sport.",
+"a": "Schuhe",
+"d": [
+"Hemden",
+"Kleider"
+],
+"ku": "من پێلاڤێن نوو بۆ وەرزشێ دڤێن.",
+"c": "a13_07"
+}
+],
+"en": [
+{
+"s": "In summer I wear a ___.",
+"a": "T-shirt",
+"d": [
+"jumper",
+"jacket"
+],
+"ku": "ل هاڤینێ ئەز تیشێرتەکێ ل خۆ دکەم.",
+"c": "a13_01"
+},
+{
+"s": "In winter I need a warm ___.",
+"a": "jacket",
+"d": [
+"sock",
+"T-shirt"
+],
+"ku": "ل زستانێ چاکێتەکا گەرم دڤێت.",
+"c": "a13_04"
+},
+{
+"s": "She is wearing a red ___.",
+"a": "dress",
+"d": [
+"shirt",
+"shoe"
+],
+"ku": "ئەو کراسەکێ سۆر ل خۆ دکەت.",
+"c": "a13_03"
+}
+]
+},
+"unit_s13b": {
+"de": [
+{
+"s": "Die Jacke ___ mir.",
+"a": "gefällt",
+"d": [
+"gehört",
+"steht"
+],
+"ku": "چاکێت ب دلێ منە.",
+"c": "a13_09"
+},
+{
+"s": "Die Hose ___ dir perfekt.",
+"a": "passt",
+"d": [
+"gefällt",
+"kostet"
+],
+"ku": "پانتۆل تەمام ل تە دهێت.",
+"c": "a13_10"
+},
+{
+"s": "___ die Tasche dir?",
+"a": "Gehört",
+"d": [
+"Gefällt",
+"Passt"
+],
+"ku": "ئەڤ چانتە یا تەیە؟",
+"c": "a13_12"
+},
+{
+"s": "Kann ich das ___?",
+"a": "anprobieren",
+"d": [
+"umtauschen",
+"bestellen"
+],
+"ku": "دشێم ل خۆ بکەم و تاقی بکەم؟",
+"c": "a13_14"
+},
+{
+"s": "Haben Sie das in ___ 40?",
+"a": "Größe",
+"d": [
+"Farbe",
+"Preis"
+],
+"ku": "ئەڤە ب قەبارێ ٤٠ هەیە؟",
+"c": "a13_13"
+}
+],
+"en": [
+{
+"s": "I ___ the jacket.",
+"a": "like",
+"d": [
+"fit",
+"belong"
+],
+"ku": "چاکێت ب دلێ منە.",
+"c": "a13_09"
+},
+{
+"s": "Can I try it ___?",
+"a": "on",
+"d": [
+"in",
+"up"
+],
+"ku": "دشێم ل خۆ بکەم و تاقی بکەم؟",
+"c": "a13_14"
+},
+{
+"s": "Do you have it in ___ 40?",
+"a": "size",
+"d": [
+"colour",
+"price"
+],
+"ku": "ئەڤە ب قەبارێ ٤٠ هەیە؟",
+"c": "a13_13"
+}
+]
+},
+"unit_s13c": {
+"de": [
+{
+"s": "Tee ist gut, aber Kaffee ist ___.",
+"a": "besser",
+"d": [
+"gut",
+"am besten"
+],
+"ku": "چا باشە، بەلێ قەهوە باشترە.",
+"c": "a13_17"
+},
+{
+"s": "Ich trinke ___ Tee als Kaffee.",
+"a": "lieber",
+"d": [
+"gern",
+"besser"
+],
+"ku": "ئەز چایێ ژ قەهوێ پتر حەز دکەم.",
+"c": "a13_18"
+},
+{
+"s": "Am ___ fahre ich ans Meer.",
+"a": "liebsten",
+"d": [
+"besten",
+"meisten"
+],
+"ku": "ژ هەمییان پتر ئەز حەز دکەم بچمە دەریایێ.",
+"c": "a13_20"
+},
+{
+"s": "Der ___ ist sehr hoch.",
+"a": "Berg",
+"d": [
+"Meer",
+"Dorf"
+],
+"ku": "چیا گەلەک بلندە.",
+"c": "a13_21"
+},
+{
+"s": "Im Sommer schwimmen wir im ___.",
+"a": "Meer",
+"d": [
+"Berg",
+"Dorf"
+],
+"ku": "ل هاڤینێ ئەم د دەریایێ دا مەلەڤانیێ دکەین.",
+"c": "a13_23"
+}
+],
+"en": [
+{
+"s": "Tea is good, but coffee is ___.",
+"a": "better",
+"d": [
+"good",
+"best"
+],
+"ku": "چا باشە، بەلێ قەهوە باشترە.",
+"c": "a13_17"
+},
+{
+"s": "The ___ is very high.",
+"a": "mountain",
+"d": [
+"sea",
+"village"
+],
+"ku": "چیا گەلەک بلندە.",
+"c": "a13_21"
+},
+{
+"s": "In summer we swim in the ___.",
+"a": "sea",
+"d": [
+"mountain",
+"village"
+],
+"ku": "ل هاڤینێ ئەم د دەریایێ دا مەلەڤانیێ دکەین.",
+"c": "a13_23"
+}
+]
+},
+"unit_s14a": {
+"de": [
+{
+"s": "Der ___ ist kalt. Es schneit.",
+"a": "Januar",
+"d": [
+"Juli",
+"April"
+],
+"ku": "کانوونا دووێ سارە. بەفر دباریت.",
+"c": "a14_01"
+},
+{
+"s": "Im ___ ist es sehr heiß.",
+"a": "Juli",
+"d": [
+"Januar",
+"Dezember"
+],
+"ku": "ل تەمووزێ گەلەک گەرمە.",
+"c": "a14_03"
+},
+{
+"s": "Der ___ ist heute?",
+"a": "Wievielte",
+"d": [
+"Wie viel",
+"Wann"
+],
+"ku": "ئەڤرۆ چەندێ هەیڤێیە؟",
+"c": "a14_06"
+},
+{
+"s": "Heute ist der ___ März.",
+"a": "erste",
+"d": [
+"eins",
+"einen"
+],
+"ku": "ئەڤرۆ ئێکێ ئادارێیە.",
+"c": "a14_07"
+},
+{
+"s": "Wann hast du ___? – Im Mai.",
+"a": "Geburtstag",
+"d": [
+"Termin",
+"Urlaub"
+],
+"ku": "رۆژبوونا تە کەنگییە؟ – ل گولانێ.",
+"c": "a14_08"
+}
+],
+"en": [
+{
+"s": "In ___ it is very hot.",
+"a": "July",
+"d": [
+"January",
+"December"
+],
+"ku": "ل تەمووزێ گەلەک گەرمە.",
+"c": "a14_03"
+},
+{
+"s": "Today is the first ___ March.",
+"a": "of",
+"d": [
+"in",
+"at"
+],
+"ku": "ئەڤرۆ ئێکێ ئادارێیە.",
+"c": "a14_07"
+},
+{
+"s": "When is your ___? – In May.",
+"a": "birthday",
+"d": [
+"appointment",
+"holiday"
+],
+"ku": "رۆژبوونا تە کەنگییە؟ – ل گولانێ.",
+"c": "a14_08"
+}
+]
+},
+"unit_s14b": {
+"de": [
+{
+"s": "Herzlichen ___!",
+"a": "Glückwunsch",
+"d": [
+"Geburtstag",
+"Abschied"
+],
+"ku": "پیرۆز بیت!",
+"c": "a14_09"
+},
+{
+"s": "Alles Gute zum ___!",
+"a": "Geburtstag",
+"d": [
+"Glückwunsch",
+"Fest"
+],
+"ku": "رۆژبوونا تە پیرۆز بیت!",
+"c": "a14_10"
+},
+{
+"s": "Newroz ist am 21. ___.",
+"a": "März",
+"d": [
+"Mai",
+"Juli"
+],
+"ku": "نەورۆز ل ٢١ـێ ئادارێیە.",
+"c": "a14_12"
+},
+{
+"s": "Frohes neues ___!",
+"a": "Jahr",
+"d": [
+"Fest",
+"Tag"
+],
+"ku": "سالا نوو پیرۆز بیت!",
+"c": "a14_13"
+},
+{
+"s": "Danke für das schöne ___!",
+"a": "Geschenk",
+"d": [
+"Hochzeit",
+"Jahr"
+],
+"ku": "سوپاس بۆ دیاریا جوان!",
+"c": "a14_11"
+}
+],
+"en": [
+{
+"s": "Happy ___!",
+"a": "birthday",
+"d": [
+"present",
+"wedding"
+],
+"ku": "رۆژبوونا تە پیرۆز بیت!",
+"c": "a14_10"
+},
+{
+"s": "Newroz is on 21 ___.",
+"a": "March",
+"d": [
+"May",
+"July"
+],
+"ku": "نەورۆز ل ٢١ـێ ئادارێیە.",
+"c": "a14_12"
+},
+{
+"s": "Thank you for the nice ___!",
+"a": "present",
+"d": [
+"wedding",
+"year"
+],
+"ku": "سوپاس بۆ دیاریا جوان!",
+"c": "a14_11"
+}
+]
+},
+"unit_s14c": {
+"de": [
+{
+"s": "Ich ___ dich zu meiner Party ___.",
+"a": "lade … ein",
+"d": [
+"rufe … an",
+"mache … zu"
+],
+"ku": "ئەز تە بۆ ئاهەنگا خۆ داخواز دکەم.",
+"c": "a14_17"
+},
+{
+"s": "Ich komme ___!",
+"a": "gern",
+"d": [
+"nicht gern",
+"leider"
+],
+"ku": "ب کەیفخۆشی دێ هێم!",
+"c": "a14_18"
+},
+{
+"s": "___ kann ich nicht kommen.",
+"a": "Leider",
+"d": [
+"Gern",
+"Doch"
+],
+"ku": "مخابن ئەز نەشێم بهێم.",
+"c": "a14_19"
+},
+{
+"s": "Ich komme nicht, ___ ich bin krank.",
+"a": "denn",
+"d": [
+"aber",
+"und"
+],
+"ku": "ئەز ناهێم، چونکی ئەز نەخۆشم.",
+"c": "a14_20"
+},
+{
+"s": "Ich ___ einen Kuchen ___.",
+"a": "bringe … mit",
+"d": [
+"lade … ein",
+"rufe … zurück"
+],
+"ku": "ئەز دێ کێکەکێ دگەل خۆ ئینم.",
+"c": "a14_23"
+}
+],
+"en": [
+{
+"s": "I ___ you to my party.",
+"a": "invite",
+"d": [
+"call",
+"bring"
+],
+"ku": "ئەز تە بۆ ئاهەنگا خۆ داخواز دکەم.",
+"c": "a14_17"
+},
+{
+"s": "I'm not coming ___ I'm ill.",
+"a": "because",
+"d": [
+"but",
+"and"
+],
+"ku": "ئەز ناهێم، چونکی ئەز نەخۆشم.",
+"c": "a14_20"
+},
+{
+"s": "I'll ___ a cake ___.",
+"a": "bring … along",
+"d": [
+"invite … in",
+"call … back"
+],
+"ku": "ئەز دێ کێکەکێ دگەل خۆ ئینم.",
+"c": "a14_23"
+}
+]
+}
+}
+}

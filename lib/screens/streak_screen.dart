@@ -8,6 +8,7 @@ import '../services/sfx.dart';
 import '../ui.dart';
 import 'widgets/combo.dart' show kuNum;
 import 'widgets/mascot.dart';
+import 'widgets/reward_fx.dart';
 
 /// 🔥 ئەگەر ستریک ئەڤرۆ زێدە بوو (بۆ نموونە ٣ ➔ ٤)، شاشا ئاهەنگێ نیشان بدە.
 /// [replace]: شاشا نوکە (ئەنجام) بگوهۆڕە، دا «بەردەوام بە» راستەوخۆ بزڤڕیتە سەرەکی.
@@ -106,10 +107,7 @@ class _StreakScreenState extends State<StreakScreen> with TickerProviderStateMix
                           scale: (0.2 + 0.8 * grow) * (1 + 0.05 * f),
                           child: Transform.rotate(
                             angle: (f - 0.5) * 0.06,
-                            child: Transform.translate(offset: const Offset(0, -40), child: Text('🔥',
-                                style: TextStyle(fontSize: 170, shadows: [
-                                  Shadow(color: const Color(0xFFFF9600).withValues(alpha: 0.9), blurRadius: 40 + 20 * f),
-                                ]))),
+                            child: Transform.translate(offset: const Offset(0, -40), child: const RealFire(size: 230)),
                           ),
                         ),
                         // ژمارە: ٣ دچیتە ژۆر، ٤ دهێت

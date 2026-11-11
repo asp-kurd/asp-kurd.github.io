@@ -196,3 +196,23 @@ GrammarCard? _grammar(dynamic g) {
     table: t is List ? t.map((r) => (r as List).map((c) => c.toString()).toList()).toList() : null,
   );
 }
+
+/// هەمی قۆناغ (بێ فلتەرا زمانی) — بۆ ئەدمینی
+List<LessonUnit> get allUnitsRaw => _allUnits;
+
+/// ئەو قۆناغا ئەڤ پەیڤە تێدا (بۆ «بابەتێن لاواز»)
+LessonUnit? unitOfConcept(String conceptId) {
+  for (final u in _allUnits) {
+    if (u.concepts.any((c) => c.id == conceptId)) return u;
+  }
+  return null;
+}
+
+WordConcept? conceptById(String id) {
+  for (final u in _allUnits) {
+    for (final c in u.concepts) {
+      if (c.id == id) return c;
+    }
+  }
+  return null;
+}

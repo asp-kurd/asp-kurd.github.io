@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../data/cloze_bank.dart';
 import '../data/curriculum.dart';
+import '../data/pics.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/sfx.dart';
@@ -10,6 +12,7 @@ import '../services/voice_service.dart';
 import '../ui.dart';
 import 'streak_screen.dart';
 import 'widgets/combo.dart';
+import 'widgets/reward_fx.dart';
 import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 import 'widgets/speak_check.dart';
@@ -28,7 +31,10 @@ class InteractiveLessonScreen extends StatefulWidget {
 
   /// بۆ تاقیکرنێ: هەمی پرسیار ژ ئێک جۆری
   final ExerciseType? onlyType;
-  const InteractiveLessonScreen({super.key, required this.unit, required this.concepts, this.onlyType});
+
+  /// 📌 بۆ کارێن مامۆستای (ئەزموونا دیاری / دووبارەکرن): ڕێژا ٪ پشتی تەمامبوونێ
+  final void Function(int percent)? onDone;
+  const InteractiveLessonScreen({super.key, required this.unit, required this.concepts, this.onlyType, this.onDone});
 
   @override
   State<InteractiveLessonScreen> createState() => _InteractiveLessonScreenState();
@@ -39,6 +45,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   final voice = VoiceService.instance;
   final _rng = Random();
   final Set<String> _recentPics = <String>{}; // وێنەیێن پرسیارێن داوی — دا دووبارە نەبن
+  final Map<String, WordConcept> _picConcepts = {};
   final _watch = Stopwatch()..start();
 
   late final AppLanguage native = progress.nativeLang;
@@ -67,8 +74,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   List<WordConcept> matchLeft = [], matchRight = [];
   String? matchSelLeft, matchSelRight;
   final Set<String> matched = {};
-  String? matchWrong;
-  bool matchHadMistake = false;
+  final Set<String> matchWrong = {}; // 'L<id>' / 'R<id>' ➔ سۆر
+  final Set<String> matchGreen = {}; // جووتێن دروست ➔ جارەکێ کەسک
+  int matchMistakes = 0; // ٣ خەلەتی ➔ پرسیار دبۆریت
+  final Set<String> matchMissed = {}; // پەیڤێن خەلەت ➔ ل دویماهیێ دزڤڕن
+  bool get matchHadMistake => matchMistakes > 0;
 
   // trueFalse
   WordConcept? tfCandidate;
@@ -95,6 +105,9 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
 
   static List<String> _words(String s) => s.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
 
+  /// ریزبەندیا قۆناغێ د لیستێ دا (بۆ «ژ قۆناغا ٢٠ ڤە ٢ جهێن ڤالا»)
+  int get _unitNo => widget.unit == null ? 99 : appCurriculum.indexWhere((u) => u.id == widget.unit!.id) + 1;
+
   List<Exercise> _buildQueue() {
     // جۆرێن جودا دا هەمی پرسیار وەکی ئێک نەبن
     const cycle = [
@@ -108,22 +121,51 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ExerciseType.speak,
     ];
     final list = <Exercise>[];
+    // 🎲 ریزبەندی بۆ هەر فێرخوازەکی و هەر جارەکێ یا جودایە (هەمان ناڤەرۆک، جهێن جودا)
     final concepts = [...widget.concepts]..shuffle(_rng);
-    if (widget.onlyType != null) return [for (final c in concepts) Exercise(c, widget.onlyType!)];
-    // دەستپێک ب یاریا جووتکرنێ
-    if (concepts.length >= 4) {
-      list.add(Exercise(concepts.first, ExerciseType.match, group: concepts.take(4).toList()));
+    if (widget.onlyType == ExerciseType.match && concepts.length >= 2) {
+      return [Exercise(concepts.first, ExerciseType.match, group: concepts.take(4).toList())];
     }
+    if (widget.onlyType == ExerciseType.cloze && widget.unit != null && clozeBankFor(widget.unit!.id, target).isNotEmpty) {
+      return [
+        for (final e in clozeBankFor(widget.unit!.id, target))
+          Exercise(concepts.firstWhere((x) => x.id == e.conceptId, orElse: () => concepts.first), ExerciseType.cloze, cloze: e.info),
+      ];
+    }
+    if (widget.onlyType != null) return [for (final c in concepts) Exercise(c, widget.onlyType!)];
+    final offset = _rng.nextInt(cycle.length);
     for (var i = 0; i < concepts.length; i++) {
       final c = concepts[i];
-      var type = cycle[i % cycle.length];
+      var type = cycle[(i + offset) % cycle.length];
       if (type == ExerciseType.listen && (!voice.canSpeak(c, target) || progress.listenPaused)) type = ExerciseType.translate;
       if (type == ExerciseType.speak && progress.speakPaused) type = ExerciseType.reverse;
-      if (type == ExerciseType.pickPicture && c.emoji.isEmpty) type = ExerciseType.reverse;
+      // 🖼️ پرسیارا وێنەیی تنێ بۆ پەیڤێن بەرچاڤ کو وێنەیێ وان هەیە
+      if (type == ExerciseType.pickPicture && !hasPic(c)) type = ExerciseType.reverse;
       if (type == ExerciseType.cloze && _clozeFor(c) == null) type = ExerciseType.translate;
       // رستەیێن ٣+ پەیڤی ➔ ئاڤاکرنا رستێ
       if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
       list.add(Exercise(c, type));
+    }
+    // ئەگەر وێنە هەبن و چ پرسیارا وێنەیی نەبیت، ئێکێ زێدە بکە
+    final withPic = concepts.where(hasPic).toList();
+    if (withPic.isNotEmpty && !list.any((e) => e.type == ExerciseType.pickPicture)) {
+      list.insert(_rng.nextInt(list.length + 1), Exercise(withPic[_rng.nextInt(withPic.length)], ExerciseType.pickPicture));
+    }
+    // 📝 رستەیێن جهێ ڤالا یێن زێدە ژ بانکێ — ژ قۆناغا ٢٠ ڤە ب ٢+ جهێن ڤالا ژی
+    if (widget.unit != null) {
+      final multiOk = _unitNo >= 20;
+      final bank = clozeBankFor(widget.unit!.id, target).where((e) => multiOk || !e.multi).toList()..shuffle(_rng);
+      if (multiOk) bank.sort((a, b) => (b.multi ? 1 : 0) - (a.multi ? 1 : 0)); // ئێک ب ٢ جهان ل پێشیێ
+      final take = bank.take(3).toList()..shuffle(_rng);
+      for (final e in take) {
+        final c = concepts.firstWhere((x) => x.id == e.conceptId, orElse: () => concepts[_rng.nextInt(concepts.length)]);
+        list.insert(1 + _rng.nextInt(list.length), Exercise(c, ExerciseType.cloze, cloze: e.info));
+      }
+    }
+    // 🔗 جووتکرن: نە هەردەم ل دەستپێکێ
+    if (concepts.length >= 4) {
+      final pos = _rng.nextInt((list.length / 2).ceil() + 1);
+      list.insert(pos, Exercise(concepts.first, ExerciseType.match, group: (concepts.toList()..shuffle(_rng)).take(4).toList()));
     }
     return list;
   }
@@ -131,6 +173,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   /// 📝 رستەکا ب جهێ ڤالا: ژ داتایێ (ئەلمانی)، یان ب خۆ ژ رستەیێن ٣+ پەیڤی
   ClozeInfo? _clozeFor(WordConcept c) {
     if (target == AppLanguage.german && c.cloze != null) return c.cloze;
+    final fromBank = clozeForConcept(c.id, target);
+    if (fromBank != null && (!fromBank.multi || _unitNo >= 20)) return fromBank.info;
     final text = c.text(target);
     final words = _words(text);
     if (words.length < 3) return null;
@@ -170,9 +214,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     if (ex.type == ExerciseType.match) {
       matchLeft = [...ex.group]..shuffle(_rng);
       matchRight = [...ex.group]..shuffle(_rng);
-      matchSelLeft = matchSelRight = matchWrong = null;
+      matchSelLeft = matchSelRight = null;
+      matchWrong.clear();
+      matchGreen.clear();
       matched.clear();
-      matchHadMistake = false;
+      matchMistakes = 0;
       options = [];
       return;
     }
@@ -191,32 +237,36 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       return;
     }
     if (ex.type == ExerciseType.pickPicture) {
-      // ٢، ٣، ٤ یان ٦ وێنە — نە هەردەم ٤
+      // ٢، ٣، ٤ یان ٦ وێنەیێن 3D — تنێ پەیڤێن بەرچاڤ؛ هەلبژارتن = id یێن پەیڤان
       const counts = [2, 3, 4, 4, 6];
       final n = counts[_rng.nextInt(counts.length)];
-      final pics = <String>{ex.concept.pic};
-      final others = [...allConcepts]..shuffle(_rng);
-      // تنێ ئێک وێنە ژ هەمان قۆناغێ (زەحمەتتر)، یێن دی ژ هەمییان —
-      // و نە ئەو وێنەیێن د پرسیارێن بەری نوکە دا هاتین (دا جۆراوجۆر بن)
-      final same = widget.concepts.where((c) => c.id != ex.concept.id && !_recentPics.contains(c.pic)).toList()
-        ..shuffle(_rng);
-      for (final d in [...same.take(1), ...others]) {
-        if (pics.length >= n) break;
-        if (d.emoji.isNotEmpty && !_recentPics.contains(d.pic)) pics.add(d.pic);
+      final usedPics = <String>{picName(ex.concept) ?? ''};
+      final ids = <String>[ex.concept.id];
+      final pool = <WordConcept>{
+        ...widget.concepts.where(hasPic).toList()..shuffle(_rng),
+        ...allConcepts.where(hasPic).toList()..shuffle(_rng),
+        ...allUnitsRaw.expand((u) => u.concepts).where(hasPic).toList()..shuffle(_rng),
+      };
+      for (final pass in [0, 1]) {
+        for (final d in pool) {
+          if (ids.length >= n) break;
+          final pn = picName(d)!;
+          if (usedPics.contains(pn) || (pass == 0 && _recentPics.contains(pn))) continue;
+          usedPics.add(pn);
+          ids.add(d.id);
+          _picConcepts[d.id] = d;
+        }
       }
-      for (final d in others) {
-        if (pics.length >= n) break;
-        if (d.emoji.isNotEmpty) pics.add(d.pic);
-      }
-      options = pics.toList()..shuffle(_rng);
-      _recentPics.addAll(pics.where((p) => p != ex.concept.pic));
+      _picConcepts[ex.concept.id] = ex.concept;
+      options = ids..shuffle(_rng);
+      _recentPics.addAll(usedPics.where((p) => p != picName(ex.concept)));
       while (_recentPics.length > 14) {
         _recentPics.remove(_recentPics.first);
       }
       return;
     }
     if (ex.type == ExerciseType.cloze) {
-      final z = _clozeFor(ex.concept) ?? ex.concept.cloze;
+      final z = ex.cloze ?? _clozeFor(ex.concept) ?? ex.concept.cloze;
       if (z == null) {
         // نابیت ئەڤ پرسیارە ب جهێ ڤالا بیت ➔ وەرگێڕان
         queue[index] = Exercise(ex.concept, ExerciseType.translate);
@@ -290,7 +340,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       );
 
   String get _correctAnswer => switch (current.type) {
-        ExerciseType.pickPicture => current.concept.pic,
+        ExerciseType.pickPicture => current.concept.id,
         ExerciseType.trueFalse => tfCandidate?.id == current.concept.id ? 'yes' : 'no',
         ExerciseType.cloze => cz?.answer ?? '',
         _ => current.concept
@@ -305,7 +355,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     _comfortText = native == AppLanguage.badini ? randomComfort() : tr(native, '', 'Fast! 💪', 'Almost! 💪');
     final ok = switch (ex.type) {
       ExerciseType.speak => true, // 🗣️ ناسینا دەنگی ١٠٠٪ نینە: دل ناچن
-      ExerciseType.match => !matchHadMistake,
+      ExerciseType.match => matched.length == ex.group.length,
       ExerciseType.wordBank => bankPicked.map((i) => bankTiles[i]).join(' ') == ex.concept.text(target),
       _ => selected == _correctAnswer,
     };
@@ -333,7 +383,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final tok = _qToken;
     bool still() => mounted && tok == _qToken;
     if (ex.type == ExerciseType.cloze && cz != null) {
-      final full = cz!.filled(cz!.answer);
+      final full = clozeSpeech(cz!);
       Future.delayed(const Duration(milliseconds: 450), () {
         if (still()) voice.speakText(full, target);
       });
@@ -344,8 +394,16 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     }
 
     if (ex.type == ExerciseType.match) {
-      // جووتکرن: تنێ XP، بێ دووبارەکرن
+      // جووتکرن: دل ناچن؛ پەیڤێن خەلەت ل دویماهیا قۆناغێ دزڤڕن (هەلبژارتن + د رستێ دا)
       if (ok) correctCount++;
+      for (final id in matchMissed) {
+        final c = ex.group.firstWhere((g) => g.id == id);
+        await progress.recordMistake(id);
+        if (_requeued.add(id)) {
+          queue.add(Exercise(c, _rng.nextBool() ? ExerciseType.translate : ExerciseType.reverse));
+          if (_clozeFor(c) != null) queue.add(Exercise(c, ExerciseType.cloze));
+        }
+      }
       return;
     }
     if (ex.type != ExerciseType.speak) await progress.recordAnswer(ex.concept.id, ok);
@@ -394,7 +452,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final xp = 10 + answerXp;
     final percent = totalInitial == 0 ? 100 : (firstCorrect * 100 / totalInitial).round().clamp(0, 100);
     final perfect = percent >= 100;
-    await progress.completeLesson(unitId: widget.unit?.id, earnedXp: xp, perfect: perfect);
+    await progress.completeLesson(unitId: widget.unit?.id, earnedXp: xp, perfect: perfect, percent: percent);
+    widget.onDone?.call(percent);
     Sfx.done();
     if (!mounted) return;
     final unit = widget.unit, concepts = widget.concepts;
@@ -422,7 +481,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final ex = current;
     final canContinue = switch (ex.type) {
       ExerciseType.speak => hasPracticeRecording,
-      ExerciseType.match => matched.length == ex.group.length,
+      ExerciseType.match => checked,
       ExerciseType.wordBank => bankPicked.isNotEmpty,
       _ => selected != null,
     };
@@ -593,8 +652,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
               Text('${c.pic}  ${c.text(target)}', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             ],
           ] else ...[
-            if (c.emoji.isNotEmpty) ...[
-              Text(c.pic, style: const TextStyle(fontSize: 64)),
+            if (c.emoji.isNotEmpty || hasPic(c)) ...[
+              ConceptPic(c, size: hasPic(c) ? 96 : 72),
               const SizedBox(height: 8),
             ],
             Text(
@@ -657,7 +716,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         border: Border.all(color: AppColors.fg12, width: 2),
       ),
       child: Column(children: [
-        if (c.emoji.isNotEmpty) Text(c.pic, style: const TextStyle(fontSize: 52)),
+        if (current.cloze == null && (c.emoji.isNotEmpty || hasPic(c))) ConceptPic(c, size: hasPic(c) ? 80 : 60),
         const SizedBox(height: 8),
         Text.rich(TextSpan(children: spans),
             textDirection: target.direction,
@@ -721,7 +780,14 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                 borderRadius: BorderRadius.circular(18),
                 border: Border.all(color: _pickColor(o), width: 3),
               ),
-              child: Center(child: Text(o, style: TextStyle(fontSize: cols == 3 ? 48 : 64))),
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Center(
+                  child: _picConcepts[o] == null
+                      ? const SizedBox()
+                      : ConceptPic(_picConcepts[o]!, size: cols == 3 ? 84 : 120),
+                ),
+              ),
             ),
           ),
       ],
@@ -820,13 +886,14 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       final id = c.id;
       final isMatched = matched.contains(id);
       final isSel = left ? matchSelLeft == id : matchSelRight == id;
-      final isWrong = matchWrong == '${left ? 'L' : 'R'}$id';
+      final isWrong = matchWrong.contains('${left ? 'L' : 'R'}$id');
+      final isGreen = matchGreen.contains(id);
       return OptionTile(
         text: c.text(lang),
         selected: isSel,
         textDirection: lang.direction,
-        stateColor: isMatched ? AppColors.fg12 : (isWrong ? AppColors.red : null),
-        onTap: isMatched || checked
+        stateColor: isGreen ? AppColors.green : (isMatched ? AppColors.fg12 : (isWrong ? AppColors.red : null)),
+        onTap: isMatched || checked || matchWrong.isNotEmpty
             ? null
             : () {
                 if (!left) voice.speak(c, target);
@@ -852,26 +919,40 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     );
   }
 
+  /// ✅ جووتێ دروست: جارەکێ کەسک دبیت · ❌ خەلەت: هەردوو سۆر دبن (١ و ٢ چ نابیت)،
+  /// جارا ٣ێ پرسیار دبۆریت و پەیڤێن خەلەت ل دویماهیا قۆناغێ دزڤڕن
   Future<void> _tryMatch() async {
     final l = matchSelLeft, r = matchSelRight;
     if (l == null || r == null) return;
     if (l == r) {
+      Sfx.correct();
       setState(() {
         matched.add(l);
+        matchGreen.add(l);
         matchSelLeft = matchSelRight = null;
+      });
+      Future.delayed(const Duration(milliseconds: 650), () {
+        if (mounted) setState(() => matchGreen.remove(l));
       });
       if (matched.length == current.group.length) await _check();
     } else {
+      Sfx.wrong();
       setState(() {
-        matchWrong = 'R$r';
-        matchHadMistake = true;
+        matchWrong
+          ..add('L$l')
+          ..add('R$r');
+        matchMistakes++;
+        matchMissed
+          ..add(l)
+          ..add(r);
       });
-      await Future.delayed(const Duration(milliseconds: 450));
+      await Future.delayed(const Duration(milliseconds: 700));
       if (!mounted) return;
       setState(() {
-        matchWrong = null;
+        matchWrong.clear();
         matchSelLeft = matchSelRight = null;
       });
+      if (matchMistakes >= 3 && !checked) await _check();
     }
   }
 
@@ -936,8 +1017,12 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final color = isCorrect ? AppColors.green : AppColors.red;
     final msg = ex.type == ExerciseType.match
         ? (isCorrect
-            ? tr(native, 'هەمی جووت دروستن! 🔗', 'Alle Paare richtig! 🔗', 'All pairs correct! 🔗')
-            : tr(native, 'تەمام بوو — جارا بێت بێ خەلەتی 💪', 'Geschafft — nächstes Mal fehlerfrei 💪', 'Done — flawless next time 💪'))
+            ? (matchHadMistake
+                ? tr(native, 'تەمام بوو! ئەو پەیڤێن تە خەلەت کرین ل دویماهیێ دێ زڤڕن 💪', 'Geschafft! Deine Fehler kommen am Ende wieder 💪',
+                    'Done! The ones you missed come back at the end 💪')
+                : tr(native, 'هەمی جووت دروستن! 🔗', 'Alle Paare richtig! 🔗', 'All pairs correct! 🔗'))
+            : tr(native, '٣ خەلەتی — ئەڤ پەیڤە ل دویماهیا قۆناغێ دێ زڤڕن دا باش فێر ببی', '3 Fehler — diese Wörter kommen am Ende wieder',
+                '3 mistakes — these words come back at the end'))
         : isCorrect
         ? (ex.type == ExerciseType.speak
             ? tr(native, 'دەستخۆش! دەنگێ خۆ دگەل نموونەیێ بەراورد بکە.', 'Super! Vergleiche mit der Vorlage.', 'Nice! Compare with the model.')
@@ -1008,6 +1093,15 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
   late final String _msg = widget.perfect
       ? (widget.lang == AppLanguage.badini ? _perfectKu[_rng.nextInt(_perfectKu.length)] : tr(widget.lang, '', 'Fehlerfrei! 🏆', 'Perfect — no mistakes! 🏆'))
       : (widget.lang == AppLanguage.badini ? _doneKu[_rng.nextInt(_doneKu.length)] : tr(widget.lang, '', 'Lektion geschafft! 🎉', 'Lesson complete! 🎉'));
+
+  @override
+  void initState() {
+    super.initState();
+    // 🪙 خەلاتێن ڤێ وانێ (پشتی ئەنیمەیشنا ئەنجامێ)
+    Future.delayed(const Duration(milliseconds: 1600), () {
+      if (mounted) showPendingRewards(context);
+    });
+  }
 
   @override
   void dispose() {
@@ -1325,7 +1419,7 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
     }
     final xp = 10 + answerXp;
     final percent = total == 0 ? 100 : (firstTry * 100 / total).round().clamp(0, 100);
-    await progress.completeLesson(unitId: widget.unit.id, earnedXp: xp, perfect: percent >= 100);
+    await progress.completeLesson(unitId: widget.unit.id, earnedXp: xp, perfect: percent >= 100, percent: percent);
     Sfx.done();
     if (!mounted) return;
     final unit = widget.unit;

@@ -188,7 +188,10 @@ class Exercise {
 
   /// بۆ match: هەمی پەیڤێن جووتکرنێ
   final List<WordConcept> group;
-  const Exercise(this.concept, this.type, {this.group = const []});
+
+  /// بۆ cloze: رستەکا تایبەت ژ «بانکا رستەیان» (null = یا پەیڤێ ب خۆ)
+  final ClozeInfo? cloze;
+  const Exercise(this.concept, this.type, {this.group = const [], this.cloze});
 }
 
 /// خەلات / دەستکەفت

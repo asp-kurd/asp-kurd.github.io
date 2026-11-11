@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../config.dart';
 import '../services/backend.dart';
+import '../services/rewards_service.dart';
 import '../services/progress_service.dart';
 import '../services/push_stub.dart' if (dart.library.js_interop) '../services/push_web.dart';
 import '../ui.dart';
 import 'character_screen.dart';
 import 'onboarding_screen.dart';
+import 'teacher_tasks.dart';
 
 // ───────────────────────── 📝 تۆمارکرن ─────────────────────────
 
@@ -316,9 +318,20 @@ class _InboxScreenState extends State<InboxScreen> {
             padding: const EdgeInsets.fromLTRB(18, 0, 18, 16),
             child: Align(
               alignment: AlignmentDirectional.centerStart,
-              child: Text(m.body, style: const TextStyle(fontSize: 16, height: 1.6)),
+              child: Text(AdminTask.strip(m.body), style: const TextStyle(fontSize: 16, height: 1.6)),
             ),
           ),
+          if (AdminTask.parse(m.body) case final t? when (t.type == 'quiz' || t.type == 'assign'))
+            Padding(
+              padding: const EdgeInsets.fromLTRB(18, 0, 18, 14),
+              child: RewardsService.instance.msgDone(m.id)
+                  ? const Text('✅ تەمام بوو')
+                  : FilledButton.icon(
+                      onPressed: () => startTeacherTask(context, m, t),
+                      icon: const Icon(Icons.play_arrow_rounded),
+                      label: Text('دەستپێبکە${t.reward > 0 ? ' · +${t.reward} 🪙' : ''}'),
+                    ),
+            ),
         ],
       ),
     );

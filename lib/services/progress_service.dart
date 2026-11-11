@@ -5,8 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/curriculum.dart';
+import '../data/tree.dart';
 import '../models.dart';
 import 'backend.dart';
+import 'rewards_service.dart';
 import 'voice_service.dart';
 
 /// پاشەکەفتکرنا پێشکەفتنێ: XP، Streak، دل، پێنگاڤێن تەمامکری، و زمان.
@@ -105,6 +107,7 @@ class ProgressService extends ChangeNotifier {
       }
     }
     await init();
+    await RewardsService.instance.reload();
     _lastCloud = jsonEncode(exportState());
     notifyListeners();
   }
@@ -220,7 +223,21 @@ class ProgressService extends ChangeNotifier {
     final lastStudy = _p.getString('last_study');
     if (lastStudy != null) {
       final diff = DateTime.parse(today).difference(DateTime.parse(lastStudy)).inDays;
-      if (diff > 1) streak = 0;
+      if (diff > 1 && streak > 0) {
+        final missed = diff - 1;
+        // 🧊 پاراستنا Streak: رۆژا نەخواندی ب قەشایێ دهێتە هژمارتن (٤ ➔ رۆژا ٥ قەشا ➔ رۆژا ٦ دبیتە ٦)
+        if (RewardsService.instance.useFreezes(missed)) {
+          streak += missed;
+          final y = _day(DateTime.now().subtract(const Duration(days: 1)));
+          _p.setString('last_study', y);
+          _p.setInt('streak', streak);
+          if (streak > bestStreak) bestStreak = streak;
+        } else {
+          RewardsService.instance.streakLost(streak);
+          streak = 0;
+          _p.setInt('streak', 0);
+        }
+      }
     }
   }
 
@@ -333,6 +350,7 @@ class ProgressService extends ChangeNotifier {
         bestCombo = combo;
         _p.setInt('best_combo', bestCombo);
       }
+      RewardsService.instance.onCombo(combo);
     } else {
       combo = 0;
     }
@@ -350,8 +368,9 @@ class ProgressService extends ChangeNotifier {
     return e;
   }
 
-  Future<void> completeLesson({required String? unitId, required int earnedXp, bool perfect = false}) async {
+  Future<void> completeLesson({required String? unitId, required int earnedXp, bool perfect = false, int? percent}) async {
     lessonsDone++;
+    await RewardsService.instance.onLesson(percent ?? (perfect ? 100 : 80));
     Backend.instance.track(lessons: 1);
     if (perfect) perfectLessons++;
     if (unitId != null) completedUnits.add(unitId);
@@ -388,6 +407,9 @@ class ProgressService extends ChangeNotifier {
   /// XP بۆ هەر چالاکیەکێ (وانە، یاری، دووبارەکرن) — Streak و ئامارێن رۆژانە ژی نوی دکەت
   Future<void> earn(int earnedXp) async {
     _refreshDaily(); // ئەگەر ئەپ ژ دوهی ڤەکری مابیت
+    // ⚡ بووست: XP ×٢ / ×٣
+    earnedXp *= RewardsService.instance.xpMultiplier;
+    final oldXp = xp;
     xp += earnedXp;
     todayXp += earnedXp;
     final today = _day(DateTime.now());
@@ -410,6 +432,8 @@ class ProgressService extends ChangeNotifier {
     await _p.setInt('perfect_lessons', perfectLessons);
     await _p.setStringList('done_$_pairKey', completedUnits.toList());
     Backend.instance.track(xp: earnedXp);
+    await RewardsService.instance
+        .onXp(todayXp: todayXp, oldTotal: oldXp, newTotal: xp, treeXp: [for (final t in treeStages) t.xp]);
     Backend.instance.syncStats(
       xp: xp,
       streak: streak,
@@ -480,6 +504,7 @@ class ProgressService extends ChangeNotifier {
     final today = _day(DateTime.now());
     daySeconds[today] = (daySeconds[today] ?? 0) + sec;
     await _p.setString('day_sec', jsonEncode(daySeconds));
+    await RewardsService.instance.onStudySeconds(daySeconds[today]!);
     Backend.instance.track(seconds: sec);
     notifyListeners();
   }

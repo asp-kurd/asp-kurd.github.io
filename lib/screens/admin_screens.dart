@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../services/backend.dart';
+import '../services/rewards_service.dart';
 import '../ui.dart';
+import 'admin_tools.dart';
 import 'account_screens.dart' show agoKu;
 
 String _initial(dynamic n) {
@@ -118,7 +120,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
   @override
   Widget build(BuildContext context) {
     return _Rtl(DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('🛡️ رێڤەبەریا ASP'),
@@ -132,16 +134,18 @@ class _AdminDashboardState extends State<AdminDashboard> {
               },
             ),
           ],
-          bottom: const TabBar(tabs: [
+          bottom: const TabBar(isScrollable: true, tabs: [
             Tab(text: '👥 فێرخواز'),
             Tab(text: '📢 نامە'),
             Tab(text: '✏️ ناڤەرۆک'),
+            Tab(text: '🌳 دار'),
           ]),
         ),
         body: TabBarView(children: [
           _learnersTab(),
           const _BroadcastTab(),
           const ContentEditor(),
+          const TreeEditor(),
         ]),
       ),
     ));
@@ -332,6 +336,9 @@ class _LearnerDetailState extends State<LearnerDetail> {
               _info('⏱️', 'دەمێ خواندنێ (٣٠ رۆژ)', '$totalMin خولەک'),
               _info('🔔', 'ئاگەهداری', l['push_sub'] == null ? 'نە ڤەکرییە' : 'ڤەکرییە ✅'),
               const SizedBox(height: 16),
+              // 🪙 دینار · 🎁 ئەزموون · 📉 بابەتێن لاواز · ❌ خەلەتی
+              LearnerInsights(learnerId: id, name: '${l['name']}', lang: '${l['target_lang'] ?? 'de'}'),
+              const SizedBox(height: 16),
               const Text('📊 خولەکێن خواندنێ (١٤ رۆژ)', style: TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(height: 10),
               SizedBox(
@@ -373,7 +380,7 @@ class _LearnerDetailState extends State<LearnerDetail> {
                 ListTile(
                   dense: true,
                   title: Text('${m['title']}'),
-                  subtitle: Text('${m['body']}'),
+                  subtitle: Text(_bodyLabel('${m['body']}')),
                   trailing: Text(m['read_at'] != null ? '👁️' : '•'),
                 ),
             ]),
@@ -429,13 +436,29 @@ class _BroadcastTabState extends State<_BroadcastTab> {
           _load();
         },
       ),
+      const SizedBox(height: 10),
+      Row(children: [
+        for (final (lang, label) in const [('de', '🎁 ئەزموون بۆ هەمییان 🇩🇪'), ('en', '🎁 ئەزموون بۆ هەمییان 🇬🇧')])
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: OutlinedButton(
+                onPressed: () async {
+                  await giftQuizDialog(context, name: 'هەمییان', lang: lang);
+                  _load();
+                },
+                child: Text(label, textAlign: TextAlign.center),
+              ),
+            ),
+          ),
+      ]),
       const SizedBox(height: 16),
       for (final m in list)
         Card(
           color: AppColors.card,
           child: ListTile(
             title: Text('${m['title']}'),
-            subtitle: Text('${m['body']}'),
+            subtitle: Text(_bodyLabel('${m['body']}')),
             trailing: IconButton(
               icon: const Icon(Icons.delete_outline, color: AppColors.red),
               onPressed: () async {
@@ -620,4 +643,18 @@ class _ContentEditorState extends State<ContentEditor> {
     }
     return false;
   }
+}
+
+/// نیشاندانا نامێ بێ JSON ـا کاری
+String _bodyLabel(String body) {
+  final t = AdminTask.parse(body);
+  final txt = AdminTask.strip(body);
+  if (t == null) return txt;
+  final tag = switch (t.type) {
+    'dinar' => '🪙 ${t.amount > 0 ? '+' : ''}${t.amount}',
+    'quiz' => '🎁 ئەزموون (${t.ids.length}) · ${t.reward}🪙',
+    'assign' => '📌 دووبارەکرن · ${t.reward}🪙',
+    _ => '',
+  };
+  return '$tag\n$txt'.trim();
 }

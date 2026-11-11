@@ -10,6 +10,9 @@ pages = [
     ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
     ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"), ("book", "demo=book"), ("letters", "demo=letters"), ("article", "demo=article"), ("conj", "demo=conj"), ("goethe", "demo=goethe"), ("backup", "demo=backup"), ("adminpage", "asp-d7k2/"), ("book_en", "demo=book&target=en"), ("gram_en", "demo=gram4&target=en"), ("games_en", "demo=games&target=en"), ("conj_en", "demo=conj&target=en"), ("home_en", "demo=home&target=en"), ("leader", "demo=leader"), ("games", "demo=games&theme=light"), ("gram4", "demo=gram4"), ("gpractice", "demo=gpractice"),
     ("streak", "demo=streak"), ("toast", "demo=toast"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
+    ("shop", "demo=shop"), ("shop_dark", "demo=shop&theme=dark"), ("fire", "demo=fire"), ("fxfreeze", "demo=fxfreeze"), ("fxshatter", "demo=fxshatter"),
+    ("fxsmoke", "demo=fxsmoke"), ("reward", "demo=reward"), ("pics", "demo=pics&theme=light"), ("pics_dark", "demo=pics&theme=dark"),
+    ("match", "demo=match&theme=light"), ("cloze2", "demo=cloze2&theme=light"), ("admintree", "demo=admintree"), ("home_hdr", "demo=home&theme=light"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -20,8 +23,14 @@ with sync_playwright() as p:
         pg.on("pageerror", lambda e: logs.append(f"[pageerror] {e}"))
         try:
             pg.goto(f"http://127.0.0.1:8080/{q}" if q.startswith("asp-") else f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
+            if name.startswith("fx"):
+                # ئەنیمەیشن: وێنە ل دەمێن جودا
+                for k in range(8):
+                    time.sleep(0.4); pg.screenshot(path=f"{out}/{name}_{k}.png")
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
+            if name == "home_hdr":
+                pg.mouse.click(214, 600); time.sleep(1.5); pg.screenshot(path=f"{out}/{name}_2.png")
             if name == "toast":
                 for k in range(16):
                     time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_{k:02d}.png")

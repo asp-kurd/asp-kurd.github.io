@@ -9,6 +9,7 @@ import '../../ui.dart';
 import '../widgets/record_button.dart';
 import 'game_kind.dart';
 import 'game_session.dart';
+import '../../data/pics.dart';
 
 typedef AnswerFn = Future<void> Function(WordConcept c, bool ok);
 typedef CompleteFn = void Function({required bool ok, String? answer});
@@ -50,6 +51,17 @@ Widget bigPic(String pic, {double size = 92}) => Container(
       decoration: BoxDecoration(color: AppColors.chip, borderRadius: BorderRadius.circular(size * 0.35)),
       child: Text(pic, style: TextStyle(fontSize: size)),
     );
+
+/// وێنەیێ 3D ئەگەر هەبیت، یان ئیمۆجی
+Widget bigConceptPic(WordConcept c, {double size = 92}) => hasPic(c)
+    ? Container(
+        width: size * 1.5,
+        height: size * 1.5,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(color: AppColors.chip, borderRadius: BorderRadius.circular(size * 0.35)),
+        child: ConceptPic(c, size: size * 1.3),
+      )
+    : bigPic(c.pic, size: size);
 
 Widget soundBtn(VoidCallback onTap, {IconData icon = Icons.volume_up_rounded, double size = 56, Color color = AppColors.blue}) =>
     InkWell(
@@ -118,7 +130,7 @@ class _PickPictureState extends State<_PickPicture> {
                     borderRadius: BorderRadius.circular(22),
                     border: Border.all(color: _border(o, c), width: 3),
                   ),
-                  child: Text(o.pic, style: const TextStyle(fontSize: 64)),
+                  child: Padding(padding: const EdgeInsets.all(10), child: ConceptPic(o, size: 100)),
                 ),
               ),
           ],
@@ -220,7 +232,7 @@ class _MatchPairsState extends State<_MatchPairs> {
               border: Border.all(color: color, width: 2.5),
             ),
             child: isLeft
-                ? Text(c.pic, style: const TextStyle(fontSize: 44))
+                ? ConceptPic(c, size: 52)
                 : Text(c.text(g.target),
                     textAlign: TextAlign.center,
                     textDirection: g.target.direction,
@@ -340,7 +352,7 @@ class _TypeWordState extends State<_TypeWord> {
           Text(tr(g.native, 'تشتێ تو دبهیسی بنڤیسە', 'Schreib, was du hörst', 'Type what you hear'),
               style: TextStyle(color: AppColors.fg60)),
         ] else ...[
-          bigPic(c.pic, size: 72),
+          bigConceptPic(c, size: 72),
           const SizedBox(height: 12),
           Text(c.text(g.native),
               textDirection: g.native.direction, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
@@ -417,7 +429,7 @@ class _FinishSentenceState extends State<_FinishSentence> {
     final right = GameSessionHelpers.clean(ws[g.item.blank]);
     return SingleChildScrollView(
       child: Column(children: [
-        bigPic(c.pic, size: 64),
+        bigConceptPic(c, size: 64),
         const SizedBox(height: 10),
         Text(c.text(g.native), textDirection: g.native.direction, style: TextStyle(fontSize: 18, color: AppColors.fg70)),
         const SizedBox(height: 22),
@@ -703,7 +715,7 @@ class _ShadowingState extends State<_Shadowing> {
     final practice = voice.practiceRecording;
     return SingleChildScrollView(
       child: Column(children: [
-        bigPic(c.pic, size: 64),
+        bigConceptPic(c, size: 64),
         const SizedBox(height: 12),
         Text(c.text(g.target),
             textDirection: g.target.direction,

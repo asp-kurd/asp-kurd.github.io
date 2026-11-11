@@ -10,6 +10,7 @@ import '../../services/voice_service.dart';
 import '../../ui.dart';
 import 'game_items.dart';
 import 'game_kind.dart';
+import '../../data/pics.dart';
 
 /// هاریکارێن دەقی بۆ یاریان
 class GameSessionHelpers {
@@ -94,13 +95,16 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
         final cycle = [GameKind.pickPicture, GameKind.typeWord, GameKind.dictation];
         var kind = cycle[i % cycle.length];
         if (kind == GameKind.dictation && !voice.canSpeak(c, target)) kind = GameKind.typeWord;
+        if (kind == GameKind.pickPicture && !hasPic(c)) kind = GameKind.typeWord; // 🖼️ تنێ پەیڤێن بەرچاڤ
         out.add(kind == GameKind.pickPicture ? _pickItem(c, cs) : GameItem(kind, [c]));
       }
       return out;
     }
     switch (k) {
       case GameKind.pickPicture:
-        return [for (final c in cs.take(10)) _pickItem(c, cs)];
+        // 🖼️ پێشی پەیڤێن ب وێنەیێن 3D (تشتێن بەرچاڤ)
+        final withPic = cs.where(hasPic).toList();
+        return [for (final c in (withPic.length >= 3 ? withPic : cs).take(10)) _pickItem(c, cs)];
       case GameKind.matchPairs:
         final pool = _distinctPics(cs);
         final out = <GameItem>[];
@@ -136,19 +140,23 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
   final Set<String> _recentPics = <String>{};
 
   GameItem _pickItem(WordConcept c, List<WordConcept> local) {
-    final pics = <String>{c.pic};
+    // ئەگەر وێنەیێ 3D هەبیت، هەمی هەلبژارتن ژی وێنەیێن 3D دبن
+    final real = hasPic(c);
+    String key(WordConcept d) => picName(d) ?? d.pic;
+    bool ok(WordConcept d) => real ? hasPic(d) : d.emoji.isNotEmpty;
+    final pics = <String>{key(c)};
     final distract = <WordConcept>[];
-    bool fresh(WordConcept d) => d.id != c.id && d.emoji.isNotEmpty && !_recentPics.contains(d.pic);
+    bool fresh(WordConcept d) => d.id != c.id && ok(d) && !_recentPics.contains(key(d));
     // تنێ ئێک ژ هەمان کۆمێ (زەحمەتتر)، یێن دی ژ هەمی پەیڤان ب شێوەیەکێ هەڕەمەکی
     final near = local.where(fresh).toList()..shuffle(rng);
     final far = [...allConcepts]..shuffle(rng);
     for (final pool in [near.take(1), far.where(fresh), far]) {
       for (final d in pool) {
         if (distract.length >= 3) break;
-        if (d.id != c.id && d.emoji.isNotEmpty && pics.add(d.pic)) distract.add(d);
+        if (d.id != c.id && ok(d) && pics.add(key(d))) distract.add(d);
       }
     }
-    _recentPics.addAll(distract.map((d) => d.pic));
+    _recentPics.addAll(distract.map(key));
     while (_recentPics.length > 15) {
       _recentPics.remove(_recentPics.first);
     }

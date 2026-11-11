@@ -2,7 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'data/book.dart';
+import 'data/cloze_bank.dart';
 import 'data/curriculum.dart';
+import 'data/tree.dart';
+import 'services/rewards_service.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
 import 'screens/admin_screens.dart';
@@ -18,6 +21,10 @@ import 'screens/grammar_screen.dart';
 import 'screens/voice_backup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
+import 'screens/admin_tools.dart' show TreeEditor;
+import 'screens/shop_screen.dart';
+import 'screens/widgets/reward_fx.dart';
+import 'data/pics.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
@@ -43,8 +50,11 @@ Future<void> main() async {
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
   await Backend.instance.init();
   await loadCurriculum(await Backend.instance.contentOverride('curriculum'));
+  await loadClozeBank();
   await loadBook();
   await Exams.load();
+  await RewardsService.instance.init();
+  Backend.instance.contentOverride('tree').then(loadTree); // 🌳 ناڤێن دارێ ژ ئەدمینی
   await ProgressService.instance.init();
   await VoiceService.instance.init();
   await CloneService.instance.load();
@@ -142,6 +152,24 @@ class ZimanProApp extends StatelessWidget {
       'cloze' => InteractiveLessonScreen(
           unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze),
       'card' => const SummaryCardScreen(start: 9),
+      'shop' => const ShopScreen(),
+      'fire' => const _FxDemo(0),
+      'fxfreeze' => const _FxDemo(1),
+      'fxshatter' => const _FxDemo(2),
+      'fxsmoke' => const _FxDemo(3),
+      'reward' => () {
+          RewardsService.instance.pending.add(RewardEvent(FxKind.reward, '⚡', '١٠ بەرسڤێن دروست ل دویف ئێک!', '10 richtig!', '10 in a row!',
+              const [Reward.dinar(10)]));
+          return const HomeScreen();
+        }(),
+      'pics' => InteractiveLessonScreen(unit: null, concepts: allConcepts.where(hasPic).skip(20).take(5).toList(), onlyType: ExerciseType.pickPicture),
+      'match' => InteractiveLessonScreen(
+          unit: null, concepts: appCurriculum.firstWhere((u) => u.id == 'unit_s3a').concepts, onlyType: ExerciseType.match),
+      'cloze2' => () {
+          final u = appCurriculum.firstWhere((u) => u.id == 'unit_s5a');
+          return InteractiveLessonScreen(unit: u, concepts: u.concepts, onlyType: ExerciseType.cloze);
+        }(),
+      'admintree' => const Scaffold(body: TreeEditor()),
       'lesson' => InteractiveLessonScreen(unit: appCurriculum[10], concepts: appCurriculum[10].concepts),
       _ => null,
     };
@@ -192,4 +220,23 @@ class _GramPracticeDemoState extends State<_GramPracticeDemo> {
     if (t == null) return const Scaffold(body: Center(child: CircularProgressIndicator()));
     return GrammarPracticeScreen(topic: t, color: const Color(0xFF00CD9C), pool: Grammar.byLektion[6]!);
   }
+}
+
+
+/// 🎬 تاقیکرنا ئەنیمەیشنان (?demo=fire|fxfreeze|fxshatter|fxsmoke)
+class _FxDemo extends StatelessWidget {
+  final int kind;
+  const _FxDemo(this.kind);
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        backgroundColor: const Color(0xFF0B1116),
+        body: Center(
+          child: switch (kind) {
+            1 => const FreezeAnim(size: 300),
+            2 => const ShatterAnim(size: 300),
+            3 => const SmokeAnim(size: 300),
+            _ => const RealFire(size: 300),
+          },
+        ),
+      );
 }

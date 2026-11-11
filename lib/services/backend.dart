@@ -536,6 +536,14 @@ class Backend extends ChangeNotifier {
   Future<List<Map<String, dynamic>>> adminMessages(String? id) => _getList(
       id == null ? 'messages?learner_id=is.null&select=*&order=created_at.desc&limit=30' : 'messages?learner_id=eq.$id&select=*&order=created_at.desc&limit=30');
 
+  /// پێشکەفتنا فێرخوازی (خەلەتی، دینار …) — پێدڤی ب SQL ـا backend/admin_tools.sql
+  Future<Map<String, dynamic>?> adminProgress(String id) async {
+    final l = await _getList('progress?user_id=eq.$id&select=data,xp,updated_at');
+    if (l.isEmpty) return null;
+    final d = l.first['data'];
+    return d is Map<String, dynamic> ? d : null;
+  }
+
   Future<String?> sendMessage({String? learnerId, required String title, required String body}) async {
     await _ensureToken();
     final r = await http.post(Uri.parse('$_base/rest/v1/messages'),

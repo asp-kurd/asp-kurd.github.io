@@ -8,7 +8,8 @@
 فایل: assets/tts/<lang>/<fnv1a32(text)>.mp3 — کلیل ژ دەقێ تەمام دهێتە دروستکرن،
 هەمان یێ VoiceService.textKey د Dart دا. تنێ فایلێن کێم دهێنە دروستکرن.
 """
-import json, os, re, subprocess, sys, tempfile, wave
+import json
+import re, os, re, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 ROOT = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
@@ -25,7 +26,7 @@ PIPER = {
 SAME_TEXT = {"de_f": "de", "en_m": "en"}  # هەمان دەق، دەنگەکێ دی
 MMS_RATE = 0.72  # بادینی: هێدیتر و ئارامتر
 # دەمێ شێوازێ دەنگی دگوهۆڕیت، ڤێ ژمارێ زێدە بکە دا هەمی دەنگ ژ نوو بهێنە دروستکرن (بۆ هەر فۆلدەرەکی ب جودا)
-VOICE_VERSION = {"de": "2-slow-clear", "en": "2-slow-clear", "ku": "3-slower", "de_f": "1", "en_m": "1"}
+VOICE_VERSION = {"de": "3-clean", "en": "3-clean", "ku": "4-clean", "de_f": "2-clean", "en_m": "2-clean"}
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 
 
@@ -176,6 +177,17 @@ def collect():
                         f = plain(quiz_filled(it["q"], it["a"]))
                         if f:
                             jobs["de"][f] = f
+    # 📝 رستەیێن جهێ ڤالا یێن زێدە (assets/cloze.json): رستا تەمام، بێ (…)
+    cz_file = ROOT / "assets/cloze.json"
+    if cz_file.exists():
+        for unit in json.loads(cz_file.read_text(encoding="utf-8"))["units"].values():
+            for lang in ("de", "en"):
+                for e in unit.get(lang, []):
+                    full = e["s"]
+                    for part in e["a"].split(" … "):
+                        full = full.replace("___", part, 1)
+                    full = re.sub(r"\s*\([^)]*\)\s*$", "", full).strip()
+                    jobs[lang][full] = full
     for k, src in SAME_TEXT.items():
         jobs[k] = {**jobs[src], **jobs[k]}
     return jobs
@@ -220,13 +232,30 @@ def clean(t: str) -> str:
     return " ".join(t.split())
 
 
+# 🎚️ پاقژکرنا دەنگی (بێ پارە): بڕینا بێدەنگیێ، لابرنا کلیک و خشخشێ، EQ بۆ ئاشکەرایێ،
+# کۆمپرێسۆرەکێ نەرم، و بلندیا وەکهەڤ (loudness) بۆ هەمی فایلان.
+CLEAN_CHAIN = ",".join([
+    "silenceremove=start_periods=1:start_threshold=-50dB",
+    "areverse", "silenceremove=start_periods=1:start_threshold=-50dB", "areverse",
+    "aresample=48000:resampler=soxr",
+    "highpass=f=75", "lowpass=f=11500",
+    "adeclick=w=55:o=75",
+    "afftdn=nf=-28:tn=1",                       # خشخشا مۆدێلێن low / MMS
+    "equalizer=f=220:t=q:w=1.0:g=-2.5",         # کێمکرنا «گڤەگڤ»
+    "equalizer=f=3200:t=q:w=1.3:g=2.5",         # ئاشکەرایا پیتان
+    "equalizer=f=7500:t=q:w=1.5:g=-1.5",        # کێمکرنا «س»ـا تیژ
+    "acompressor=threshold=-21dB:ratio=2.5:attack=6:release=90:makeup=2",
+    "loudnorm=I=-16:TP=-1.5:LRA=7",
+    # بێدەنگیەکا کورت ل دەستپێکێ دا ئێکەم پیت نەهێتە بڕین (iPhone)
+    "adelay=150:all=1", "apad=pad_dur=0.25",
+    "aresample=24000:resampler=soxr",
+])
+
+
 def to_mp3(wav_path: str, dst: Path):
     dst.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav_path,
-                    "-af", "silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
-                    # بێدەنگیەکا کورت ل دەستپێکێ دا ئێکەم پیت نەهێتە بڕین (iPhone)
-                    "loudnorm=I=-16:TP=-1.5,adelay=150:all=1,apad=pad_dur=0.25",
-                    "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "64k", str(dst)], check=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav_path, "-af", CLEAN_CHAIN,
+                    "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "80k", str(dst)], check=True)
 
 
 def piper_voice(lang):
@@ -254,12 +283,12 @@ def piper_say(voice, text, wav_path, length_scale=1.0):
         if hasattr(voice, "synthesize_wav"):  # piper-tts >= 1.3
             try:
                 from piper import SynthesisConfig
-                cfg = SynthesisConfig(length_scale=length_scale, noise_scale=0.55, noise_w_scale=0.7)
+                cfg = SynthesisConfig(length_scale=length_scale, noise_scale=0.5, noise_w_scale=0.6)
                 voice.synthesize_wav(text, wf, syn_config=cfg)
             except ImportError:
                 voice.synthesize_wav(text, wf)
         else:
-            voice.synthesize(text, wf, length_scale=length_scale, noise_scale=0.55, noise_w=0.7, sentence_silence=0.35)
+            voice.synthesize(text, wf, length_scale=length_scale, noise_scale=0.5, noise_w=0.6, sentence_silence=0.35)
 
 
 def mms_model():
@@ -268,7 +297,7 @@ def mms_model():
     name = "facebook/mms-tts-kmr-script_latin"
     m = VitsModel.from_pretrained(name)
     m.speaking_rate = MMS_RATE
-    m.noise_scale = 0.55
+    m.noise_scale = 0.5
     return AutoTokenizer.from_pretrained(name), m
 
 

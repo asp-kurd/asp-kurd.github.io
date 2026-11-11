@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../models.dart';
+import '../../services/rewards_service.dart';
 import '../../ui.dart';
 import 'mascot.dart';
 
@@ -269,7 +270,9 @@ class _XpPopState extends State<_XpPop> with SingleTickerProviderStateMixin {
                 child: Transform.scale(
                   scale: 0.6 + 0.5 * Curves.elasticOut.transform(min(1, t * 2)),
                   child: Center(
-                    child: Text('+${widget.xp} XP',
+                    child: Text(RewardsService.instance.xpMultiplier > 1
+                        ? '+${widget.xp * RewardsService.instance.xpMultiplier} XP ⚡×${RewardsService.instance.xpMultiplier}'
+                        : '+${widget.xp} XP',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w900,

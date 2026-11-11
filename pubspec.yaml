@@ -58,6 +58,11 @@ flutter:
     - assets/grammar_en.json
     - assets/kommunikation.json
     - assets/goethe.json
+    # 📝 رستەیێن جهێ ڤالا (زێدە) بۆ هەر قۆناغەکێ
+    - assets/cloze.json
+    # 🖼️ وێنەیێن 3D: پەیڤ، دینار، ئاگر/قەشا
+    - assets/img/vocab/
+    - assets/img/fx/
     # دەنگێن یاریێ (دروست، خەلەت، تەمام ...)
     - assets/sfx/
     # پاکێتا دەنگێ کلۆنکری ژ Colab (ku_g1.mp3, de_g1.mp3, en_g1.mp3 ...)

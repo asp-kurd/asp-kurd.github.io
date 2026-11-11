@@ -4,7 +4,7 @@
   ٢. بیرئینانا Streak: ئێڤاری (≥ 18:00 ل دهۆکێ)، ئەگەر ئەڤرۆ نەخواندبیت ➔ نامە + Push
 پێدڤی: SUPABASE_URL و SUPABASE_SERVICE_KEY وەکی GitHub Secrets.
 """
-import json, os, sys
+import json, os, re, sys
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -54,6 +54,8 @@ learners = {l["id"]: l for l in get("learners?select=id,name,push_sub,streak,las
 
 
 def push(learner, title, body):
+    # کارێن ئەدمینی (⟦asp:{…}⟧) د ئاگەهداریێ دا نائێنە نیشاندان
+    body = re.sub(r"⟦asp:.*?⟧", "", body or "", flags=re.S).strip() or "🎁 ASP"
     sub = learner.get("push_sub")
     if not sub or not VAPID:
         return False

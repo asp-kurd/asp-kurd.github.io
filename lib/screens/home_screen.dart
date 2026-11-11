@@ -5,6 +5,7 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
 import '../services/backend.dart';
+import '../services/rewards_service.dart';
 import 'account_screens.dart';
 import 'book_screen.dart';
 import 'character_screen.dart';
@@ -15,8 +16,10 @@ import 'widgets/combo.dart' show kuNum;
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
 import 'lesson_screen.dart';
-import 'onboarding_screen.dart';
 import 'profile_screen.dart';
+import 'shop_screen.dart';
+import 'teacher_tasks.dart';
+import 'widgets/reward_fx.dart';
 import 'voice_studio_screen.dart';
 
 /// شاشەیا سەرەکی: فێربوون + ستۆدیۆیا دەنگی + پرۆفایل
@@ -34,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: Listenable.merge([progress, Backend.instance]),
+      listenable: Listenable.merge([progress, Backend.instance, RewardsService.instance]),
       builder: (context, _) {
         final n = progress.nativeLang;
         // 🔥 ستریک زێدە بوو (بۆ نموونە ژ یاریێ) ➔ شاشا ئاهەنگێ
@@ -46,6 +49,12 @@ class _HomeScreenState extends State<HomeScreen> {
             Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen()));
           });
         }
+        // 🪙 دیاریێن ئەدمینی + خەلاتێن چاڤەڕێ (دیالۆگ و فڕینا دیناران)
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (!mounted || !(ModalRoute.of(context)?.isCurrent ?? false)) return;
+          applyAdminGifts();
+          if (RewardsService.instance.pending.isNotEmpty && progress.streakEvent == null) showPendingRewards(context);
+        });
         if (progress.streakEvent != null) {
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (mounted && (ModalRoute.of(context)?.isCurrent ?? false)) maybeShowStreak(context);
@@ -100,12 +109,12 @@ class _HomeScreenState extends State<HomeScreen> {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          // 🪙 دینار (گوهۆڕینا زمانی نوکە تنێ ل پرۆفایلێ یە)
+          DinarChip(target: true, onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ShopScreen()))),
           GestureDetector(
-            onTap: () => Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (_) => const LanguageOnboardingScreen())),
-            child: Text('${progress.nativeLang.flag} ➔ ${progress.targetLang.flag}', style: const TextStyle(fontSize: 20)),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ShopScreen())),
+            child: StreakFlame(streak: progress.streak),
           ),
-          stat(Icons.local_fire_department, '${progress.streak}', AppColors.orange),
           stat(Icons.bolt, '${progress.xp}', AppColors.gold),
           Column(mainAxisSize: MainAxisSize.min, children: [
             stat(Icons.favorite, '${progress.hearts}', AppColors.red),
@@ -193,6 +202,7 @@ class _LearnPath extends StatelessWidget {
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const InboxScreen())),
             ),
           ),
+        const TeacherTaskCards(),
         _dailyGoalCard(p),
         const SizedBox(height: 12),
         if (p.dueConcepts.isNotEmpty)
