@@ -1068,7 +1068,11 @@ class _SocialButtonsState extends State<SocialButtons> {
     final b = Backend.instance;
     if (!b.enabled) return const SizedBox.shrink();
     final g = _btn(widget.compact ? 'Google' : 'ب Google بچە ژوور', const _GLogo(), Colors.white, Colors.black87, () => _go('google'));
-    final f = _btn(widget.compact ? 'Facebook' : 'ب Facebook بچە ژوور', const Icon(Icons.facebook_rounded, color: Colors.white),
+    // 🔵 Facebook: هەتا ئەپا Meta «Live» نەبیت (Business verification) یا ڤەشارتی یە
+    const facebookLive = false;
+    final f = !facebookLive
+        ? null
+        : _btn(widget.compact ? 'Facebook' : 'ب Facebook بچە ژوور', const Icon(Icons.facebook_rounded, color: Colors.white),
         const Color(0xFF1877F2), Colors.white, () => _go('facebook'));
     final e = widget.signInOnly || !b.registered
         ? null
@@ -1078,14 +1082,12 @@ class _SocialButtonsState extends State<SocialButtons> {
       if (widget.compact)
         Row(children: [
           Expanded(child: g),
-          const SizedBox(width: 8),
-          Expanded(child: f),
+          if (f != null) ...[const SizedBox(width: 8), Expanded(child: f)],
           if (e != null) ...[const SizedBox(width: 8), Expanded(child: e)],
         ])
       else ...[
         g,
-        const SizedBox(height: 10),
-        f,
+        if (f != null) ...[const SizedBox(height: 10), f],
         if (e != null) ...[const SizedBox(height: 10), e],
       ],
       if (busy)
