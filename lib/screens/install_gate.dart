@@ -60,6 +60,27 @@ class _InstallGateScreenState extends State<InstallGateScreen> with SingleTicker
       );
 
   List<Widget> _iosSteps() => [
+        // 🎬 نیشاندانەکا کورت: چاوا ل سەر شاشێ دانی
+        const Center(child: _IosDemo()),
+        const SizedBox(height: 16),
+        if (!iosNonSafari) ...[
+          BigButton(
+            label: '📲 دانانا ل سەر شاشێ',
+            onPressed: () async {
+              final ok = await openShareSheet();
+              if (!ok && mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('ل دوگمەیا Share ل خوارێ Safari بدە ⬇️')));
+              }
+            },
+          ),
+          const SizedBox(height: 8),
+          Text('پاشان د لیستێ دا «Add to Home Screen» هەلبژێرە و ل «Add» بدە',
+              textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg60, fontSize: 13)),
+          const SizedBox(height: 18),
+          Text('یان ب دەستێ خۆ:', style: TextStyle(color: AppColors.fg54, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+        ],
         if (iosNonSafari)
           _step(0, 'باشترە ب Safari ڤەکەی', 'لینکێ کۆپی بکە و د Safari دا ڤەکە', _chip('Safari', Icons.explore_rounded)),
         _step(1, 'ل دوگمەیا «Share» بدە', 'ل خوارێ یان ل سەرێ Safari — چارگۆشەکا ب تیرێ', _chip('Share', Icons.ios_share_rounded)),
@@ -194,4 +215,193 @@ class OAuthDoneScreen extends StatelessWidget {
           ),
         ),
       );
+}
+
+
+/// 🎬 نیشاندانا ب لڤین (٥ چرکە): Share ➔ Add to Home Screen ➔ Add ➔ ئایکۆنا ASP ل سەر شاشێ
+class _IosDemo extends StatefulWidget {
+  const _IosDemo();
+  @override
+  State<_IosDemo> createState() => _IosDemoState();
+}
+
+class _IosDemoState extends State<_IosDemo> with SingleTickerProviderStateMixin {
+  late final AnimationController c = AnimationController(vsync: this, duration: const Duration(milliseconds: 6000))..repeat();
+
+  @override
+  void dispose() {
+    c.dispose();
+    super.dispose();
+  }
+
+  double _seg(double t, double a, double b) => ((t - a) / (b - a)).clamp(0.0, 1.0);
+
+  Widget _row(IconData i, String t, {bool hi = false}) => Container(
+        height: 30,
+        margin: const EdgeInsets.symmetric(vertical: 2),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        decoration: BoxDecoration(
+          color: hi ? const Color(0xFF1CB0F6).withValues(alpha: 0.35) : const Color(0xFF2C2C2E),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Row(children: [
+          Expanded(
+            child: Text(t,
+                textDirection: TextDirection.ltr, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w600)),
+          ),
+          Icon(i, size: 15, color: Colors.white),
+        ]),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: c,
+      builder: (_, __) {
+        final t = c.value;
+        final tap1 = _seg(t, 0.08, 0.18); // لێدان ل Share
+        final sheet = Curves.easeOutCubic.transform(_seg(t, 0.18, 0.32));
+        final tap2 = _seg(t, 0.40, 0.50); // Add to Home Screen
+        final addScr = _seg(t, 0.50, 0.58);
+        final tap3 = _seg(t, 0.62, 0.70); // Add
+        final home = Curves.easeOutBack.transform(_seg(t, 0.72, 0.84));
+        Widget finger(double k) => k <= 0 || k >= 1
+            ? const SizedBox()
+            : Opacity(
+                opacity: sin(k * pi),
+                child: Container(
+                  width: 34,
+                  height: 34,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white.withValues(alpha: 0.35),
+                    border: Border.all(color: Colors.white, width: 2),
+                  ),
+                ),
+              );
+        return Container(
+          width: 210,
+          height: 300,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(color: const Color(0xFF3A3A3C), width: 3),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(22),
+            child: Stack(children: [
+              // 📄 پەڕا ASP د Safari دا / یان شاشا مۆبایلێ
+              Positioned.fill(
+                child: home > 0
+                    ? Container(
+                        color: const Color(0xFF1D3557),
+                        padding: const EdgeInsets.all(14),
+                        child: Wrap(spacing: 14, runSpacing: 14, children: [
+                          for (final col in const [Color(0xFF34C759), Color(0xFFFF9500), Color(0xFF5856D6)])
+                            Container(width: 38, height: 38, decoration: BoxDecoration(color: col, borderRadius: BorderRadius.circular(10))),
+                          Transform.scale(
+                            scale: home,
+                            child: Column(mainAxisSize: MainAxisSize.min, children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset('assets/brand/logo.png', width: 38, height: 38),
+                              ),
+                              const Text('ASP', style: TextStyle(color: Colors.white, fontSize: 9)),
+                            ]),
+                          ),
+                        ]),
+                      )
+                    : Container(
+                        color: const Color(0xFF131F24),
+                        child: Column(children: [
+                          const SizedBox(height: 30),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(14),
+                            child: Image.asset('assets/brand/logo.png', width: 56, height: 56),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text('asp-poya.com', style: TextStyle(color: Colors.white54, fontSize: 10)),
+                        ]),
+                      ),
+              ),
+              // ⬇️ نیشانا Safari ل خوارێ
+              if (home <= 0)
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: Container(
+                    height: 34,
+                    color: const Color(0xFF1C1C1E),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                      const Icon(Icons.chevron_left, color: Colors.white38, size: 18),
+                      Stack(alignment: Alignment.center, clipBehavior: Clip.none, children: [
+                        const Icon(Icons.ios_share_rounded, color: Color(0xFF0A84FF), size: 18),
+                        finger(tap1),
+                      ]),
+                      const Icon(Icons.menu_book_outlined, color: Colors.white38, size: 16),
+                    ]),
+                  ),
+                ),
+              // 📋 پەنجەرا Share
+              if (sheet > 0 && addScr < 1 && home <= 0)
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: -170 * (1 - sheet),
+                  child: Container(
+                    height: 170,
+                    padding: const EdgeInsets.all(8),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF1C1C1E),
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(14)),
+                    ),
+                    child: Column(children: [
+                      _row(Icons.copy_rounded, 'Copy'),
+                      _row(Icons.bookmark_border_rounded, 'Add Bookmark'),
+                      Stack(alignment: Alignment.center, children: [
+                        _row(Icons.add_box_outlined, 'Add to Home Screen', hi: tap2 > 0),
+                        finger(tap2),
+                      ]),
+                      _row(Icons.search_rounded, 'Find on Page'),
+                    ]),
+                  ),
+                ),
+              // ➕ شاشا «Add»
+              if (addScr > 0 && home <= 0)
+                Positioned.fill(
+                  child: Opacity(
+                    opacity: addScr,
+                    child: Container(
+                      color: const Color(0xFF1C1C1E),
+                      padding: const EdgeInsets.all(10),
+                      child: Column(children: [
+                        Row(children: [
+                          const Text('Cancel', style: TextStyle(color: Color(0xFF0A84FF), fontSize: 11)),
+                          const Spacer(),
+                          Stack(alignment: Alignment.center, children: [
+                            const Text('Add', style: TextStyle(color: Color(0xFF0A84FF), fontSize: 12, fontWeight: FontWeight.bold)),
+                            finger(tap3),
+                          ]),
+                        ]),
+                        const SizedBox(height: 16),
+                        Row(children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset('assets/brand/logo.png', width: 36, height: 36),
+                          ),
+                          const SizedBox(width: 8),
+                          const Text('ASP', style: TextStyle(color: Colors.white, fontSize: 13)),
+                        ]),
+                      ]),
+                    ),
+                  ),
+                ),
+            ]),
+          ),
+        );
+      },
+    );
+  }
 }

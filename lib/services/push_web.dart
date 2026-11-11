@@ -129,3 +129,14 @@ Future<void> copyText(String t) async {
     await web.window.navigator.clipboard.writeText(t).toDart;
   } catch (_) {}
 }
+
+/// 📲 iPhone: پەنجەرا «Share» یا Safariێ ڤەدکەت (تێدا «Add to Home Screen» هەیە)
+Future<bool> openShareSheet() async {
+  try {
+    final url = '${web.window.location.origin}${web.window.location.pathname}';
+    await web.window.navigator.share(web.ShareData(title: 'ASP', url: url)).toDart;
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
