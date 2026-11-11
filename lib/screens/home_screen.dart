@@ -10,6 +10,7 @@ import 'account_screens.dart';
 import 'book_screen.dart';
 import 'character_screen.dart';
 import 'course_screens.dart';
+import 'exam_coin.dart';
 import 'grammar_screen.dart';
 import 'streak_screen.dart';
 import 'widgets/combo.dart' show kuNum;
@@ -40,6 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
       listenable: Listenable.merge([progress, Backend.instance, RewardsService.instance]),
       builder: (context, _) {
         final n = progress.nativeLang;
+        // 🔒 هەژمارا ب ناڤ تنێ پشتی ٣ رۆژان: دڤێت بهێتە پاراستن (پێشکەفتن ناچیت)
+        if (Backend.instance.isGuest && Backend.instance.guestDaysLeft <= 0) return const GuestLockScreen();
         // 🔥 ستریک زێدە بوو (بۆ نموونە ژ یاریێ) ➔ شاشا ئاهەنگێ
         // 🦸 بکارهێنەرێن کەڤن: جارەکێ کاراکتەرێ خۆ هەلبژێرن
         if (Backend.instance.registered && !Backend.instance.isAdmin && progress.mascotId == null && !Backend.instance.flag('asked_mascot')) {
@@ -122,18 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
             if (progress.nextHeartIn != null)
               Text(_mmss(progress.nextHeartIn!), style: const TextStyle(fontSize: 10, color: AppColors.red)),
           ]),
-          if (Backend.instance.registered)
-            ListenableBuilder(
-              listenable: Backend.instance,
-              builder: (_, __) => IconButton(
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const InboxScreen())),
-                icon: Badge(
-                  isLabelVisible: Backend.instance.unread > 0,
-                  label: Text('${Backend.instance.unread}'),
-                  child: const Icon(Icons.mail_rounded),
-                ),
-              ),
-            ),
         ],
       ),
     );
@@ -159,14 +150,12 @@ class _LearnPath extends StatelessWidget {
             child: Text('${tr(n, 'سلاڤ', 'Hallo', 'Hi')} ${Backend.instance.name} 👋',
                 style: const TextStyle(fontFamily: 'Sarchia', fontSize: 22, fontWeight: FontWeight.bold)),
           ),
-        // 🔒 هەژمارێن ب ناڤ تنێ: بیرئینان بۆ زێدەکرنا ئیمەیلێ (هەر رۆژ ئێک جار، دشێی بگری)
-        if (Backend.instance.registered &&
-            !Backend.instance.hasEmail &&
+        // 🔒 هەژمارێن ب ناڤ تنێ: ٣ رۆژ — پاشان دڤێت Google / Facebook / ئیمەیل گرێبدەت
+        if (Backend.instance.isGuest &&
             !Backend.instance.flag('nag_${DateTime.now().toIso8601String().substring(0, 10)}'))
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
-            child: AccountCard(
-              compact: true,
+            child: GuestBanner(
               onClose: () => Backend.instance.setFlagNotify('nag_${DateTime.now().toIso8601String().substring(0, 10)}'),
             ),
           ),
@@ -204,7 +193,6 @@ class _LearnPath extends StatelessWidget {
             ),
           ),
         const TeacherTaskCards(),
-        const QuestsCard(),
         _dailyGoalCard(p),
         const SizedBox(height: 12),
         if (p.dueConcepts.isNotEmpty)
@@ -251,7 +239,11 @@ class _LearnPath extends StatelessWidget {
           if ((i == appCurriculum.length - 1 || appCurriculum[i + 1].section != appCurriculum[i].section) &&
               lektionForSection(appCurriculum[i].section) != null &&
               p.targetLang == AppLanguage.german)
-            _lektionTestCard(context, lektionForSection(appCurriculum[i].section)!, i, n),
+            ...[
+              _lektionTestCard(context, lektionForSection(appCurriculum[i].section)!, i, n),
+              // 🪙 پشتی ئەزموونێ: پرسیارا دیاریێ (+١٠ دینار)
+              ExamCoinNode(examId: 'lek_${lektionForSection(appCurriculum[i].section)!.n}', section: appCurriculum[i].section),
+            ],
         ],
         if (p.completedUnits.length >= appCurriculum.length)
           Container(

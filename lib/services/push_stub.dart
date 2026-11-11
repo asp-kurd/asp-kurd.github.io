@@ -12,3 +12,9 @@ void prepareHomeScreenHandoff(String code) {}
 bool get isAdminPage => false;
 
 void prepareAdminHomeScreen() {}
+
+void openUrl(String url) {}
+bool get oauthOverlay => false;
+bool get inAppBrowser => false;
+bool get iosNonSafari => false;
+Future<void> copyText(String t) async {}

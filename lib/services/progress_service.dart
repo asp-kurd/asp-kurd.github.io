@@ -344,6 +344,8 @@ class ProgressService extends ChangeNotifier {
 
   /// بەرسڤەک تۆمار بکە: کۆمبۆ زێدە دبیت یان دبیتە ٠. XP ـا ڤێ بەرسڤێ ددەتە دەر.
   int registerAnswer(bool ok) {
+    // ⚡ دیاریا دوهی (XP ×٤): دەمێ ئەڤرۆ دەست ب خواندنێ دکەت چالاک دبیت
+    if (RewardsService.instance.hasNextBoost) RewardsService.instance.activateNextBoost();
     if (ok) {
       combo++;
       if (combo > bestCombo) {

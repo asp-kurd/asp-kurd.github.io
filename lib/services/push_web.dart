@@ -102,3 +102,30 @@ void prepareAdminHomeScreen() {
   final m = web.document.querySelector('meta[name="apple-mobile-web-app-title"]');
   m?.setAttribute('content', 'ASP Admin');
 }
+
+// ───────── 🔐 Google / Facebook ─────────
+
+/// ڤەکرنا لینکێ د هەمان پەنجەرێ دا (بۆ چوونا ژوور ب Google/Facebook)
+void openUrl(String url) => web.window.location.href = url;
+
+/// iPhone: Google ل پەنجەرەکا جودا ڤەبوو و زڤڕی (نە ل ناڤ ئەپێ) ➔ تنێ «Done» بکە
+bool get oauthOverlay => globalContext['__aspOAuthDone']?.dartify() == true;
+
+/// براوزەرێن ناڤ ئەپان (Instagram, Facebook, TikTok…) — نەشێن «Add to Home Screen» بکەن
+bool get inAppBrowser {
+  final ua = web.window.navigator.userAgent;
+  return RegExp(r'Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|Snapchat|Line/|Twitter|LinkedInApp|GSA/', caseSensitive: false).hasMatch(ua);
+}
+
+/// Safari یە یان نە (Chrome/Firefox ل iPhone ب CriOS/FxiOS)
+bool get iosNonSafari {
+  final ua = web.window.navigator.userAgent;
+  return RegExp(r'CriOS|FxiOS|EdgiOS|OPiOS', caseSensitive: false).hasMatch(ua);
+}
+
+/// کۆپیکرنا لینکێ ئەپێ
+Future<void> copyText(String t) async {
+  try {
+    await web.window.navigator.clipboard.writeText(t).toDart;
+  } catch (_) {}
+}

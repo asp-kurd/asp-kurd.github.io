@@ -50,6 +50,9 @@ class _ShopScreenState extends State<ShopScreen> {
           body: ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 40), children: [
             _balance(),
             const SizedBox(height: 16),
+            _section(tr(n, '🎯 ئەرکێن ئەڤرۆ', '🎯 Heutige Aufgaben', "🎯 Today's tasks")),
+            const QuestList(),
+            const SizedBox(height: 16),
             _section(tr(n, '⚡ بووستا XP', '⚡ XP-Boost', '⚡ XP boost')),
             if (r.boostActive)
               Padding(
@@ -70,9 +73,11 @@ class _ShopScreenState extends State<ShopScreen> {
             _item(
                 'freeze_cube',
                 tr(n, 'قەشایا ئاگری', 'Feuer einfrieren', 'Freeze your fire'),
-                tr(n, 'ئەگەر رۆژەکێ نەخوینی، ئاگرێ تە ناڤەمریت (تە ${r.freezes} ژ ${RewardsService.maxFreezes} هەنە)',
-                    'Ein verpasster Tag bricht die Serie nicht (${r.freezes}/${RewardsService.maxFreezes})',
-                    'Miss a day without losing your streak (${r.freezes}/${RewardsService.maxFreezes})'),
+                tr(
+                    n,
+                    'ئەگەر رۆژەکێ نەخوینی، ئاگرێ تە ناڤەمریت · تە ${r.freezes} هەنە · ئەڤ حەفتی ${r.freezesBoughtThisWeek}/${RewardsService.freezesPerWeek} کڕین',
+                    'Ein verpasster Tag bricht die Serie nicht · ${r.freezes} · Woche ${r.freezesBoughtThisWeek}/${RewardsService.freezesPerWeek}',
+                    'Miss a day without losing your streak · ${r.freezes} · week ${r.freezesBoughtThisWeek}/${RewardsService.freezesPerWeek}'),
                 RewardsService.priceFreeze,
                 () => _buy(() => r.buyFreeze(n))),
             const SizedBox(height: 10),
@@ -102,9 +107,6 @@ class _ShopScreenState extends State<ShopScreen> {
               const SizedBox(height: 4),
               Text('${ProgressService.instance.todayXp} / ${r.xpGoal} XP', style: TextStyle(color: AppColors.fg60)),
             ],
-            const SizedBox(height: 18),
-            _section(tr(n, '🎯 ئەرکێن ئەڤرۆ', '🎯 Heutige Aufgaben', "🎯 Today's tasks")),
-            const QuestList(),
             if (r.log.any((l) => l.contains(' +'))) ...[
               const SizedBox(height: 18),
               _section(tr(n, '🏅 خەلاتێن تە وەرگرتین', '🏅 Deine Belohnungen', '🏅 Rewards you got')),

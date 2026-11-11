@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../config.dart';
+import 'push_stub.dart' if (dart.library.js_interop) 'push_web.dart' show openUrl, oauthOverlay;
 
 /// پەیوەندی دگەل Supabase (REST + Auth) — بێ پاکێجێن زێدە.
 /// - فێرخواز: هەژمارا بێناڤ (anonymous) + پرۆفایل (ناڤ، تەمەن، جه)
@@ -41,6 +42,34 @@ class Backend extends ChangeNotifier {
 
   bool get hasEmail => email != null;
 
+  // ───────── 🔐 Google / Facebook ─────────
+  /// 'google' / 'facebook' (ئەگەر حساب ب وان ڤە گرێدایی بیت)
+  String? get provider => enabled ? _p.getString('sb_provider') : null;
+
+  /// خەلەتیا داوی یا Google/Facebook (بۆ نیشاندانێ)
+  String? oauthError;
+
+  /// پشتی Google/Facebook: حسابەکا دی هاتە ڤەکرن (ئانکو پێشکەفتن ژ سێرڤەری بینە)
+  bool switchedAccount = false;
+
+  /// ناڤێ ژ Google/Facebook (بۆ پڕکرنا فۆرمێ)
+  String? get oauthName => _p.getString('sb_oname');
+
+  bool get oauthPending => _p.getString('oauth_pending') != null;
+
+  // ───────── 👤 هەژمارا ب ناڤ تنێ: ٣ رۆژ ─────────
+  static const guestDays = 3;
+  bool get isGuest => enabled && registered && !isAdmin && !hasEmail;
+  int get guestDaysLeft {
+    var since = _p.getInt('sb_guest_since');
+    if (since == null) {
+      since = DateTime.now().millisecondsSinceEpoch;
+      _p.setInt('sb_guest_since', since);
+    }
+    final days = DateTime.now().difference(DateTime.fromMillisecondsSinceEpoch(since)).inHours ~/ 24;
+    return (guestDays - days).clamp(0, guestDays);
+  }
+
   String get _base => AppConfig.supabaseUrl;
   // کلیلێن نوو (sb_publishable_...) تنێ د apikey دا دهێن؛ Authorization تنێ دگەل تۆکنا بکارهێنەری
   Map<String, String> get _h => {
@@ -70,6 +99,12 @@ class Backend extends ChangeNotifier {
     _readBroadcast = (_p.getStringList('sb_read') ?? []).map(int.parse).toSet();
     final cached = _p.getString('sb_profile');
     if (cached != null) profile = jsonDecode(cached) as Map<String, dynamic>;
+    // 🔐 زڤڕین ژ Google/Facebook (index.html تۆکن پاشەکەفت کرینە)
+    final oh = _p.getString('oauth_hash');
+    if (oh != null && !oauthOverlay) {
+      await _p.remove('oauth_hash');
+      await _consumeOAuth(oh);
+    }
     try {
       await _ensureToken().timeout(const Duration(seconds: 6));
       if (userId != null && !isAdmin) {
@@ -80,6 +115,111 @@ class Backend extends ChangeNotifier {
     } catch (_) {
       // بێ ئینتەرنێت: ئەپ ب پرۆفایلا پاشەکەفتکری بەردەوام دبیت
     }
+  }
+
+  /// #access_token=…&refresh_token=… ➔ هەژمار
+  Future<void> _consumeOAuth(String frag) async {
+    await _p.remove('oauth_pending');
+    final q = Uri.splitQueryString(frag);
+    if (q['access_token'] == null) {
+      final d = q['error_description'] ?? q['error'] ?? 'error';
+      oauthError = d.contains('already') || d.contains('identity_already_exists')
+          ? 'ئەڤ هەژمارا Google/Facebook ب حسابەکێ دی یێ ASP ڤە گرێدایە. «چوونا ژوور» ب کار بینە یان یەکا دی هەلبژێرە.'
+          : 'چوونا ژوور سەرنەکەفت: $d';
+      return;
+    }
+    final oldId = userId;
+    Map<String, dynamic> claims = {};
+    try {
+      final parts = q['access_token']!.split('.');
+      claims = jsonDecode(utf8.decode(base64Url.decode(base64Url.normalize(parts[1])))) as Map<String, dynamic>;
+    } catch (_) {}
+    userId = claims['sub'] as String? ?? userId;
+    isAdmin = false;
+    await _p.setBool('sb_admin', false);
+    _saveSession({
+      'access_token': q['access_token'],
+      'refresh_token': q['refresh_token'],
+      'expires_in': int.tryParse(q['expires_in'] ?? '') ?? 3600,
+    });
+    switchedAccount = oldId != null && oldId != userId;
+    if (switchedAccount || oldId == null) {
+      profile = null;
+      await _p.remove('sb_profile');
+    }
+    // ئیمەیل و ناڤ ژ Google/Facebook
+    String? em, prov, nm;
+    try {
+      final r = await http.get(Uri.parse('$_base/auth/v1/user'), headers: _h).timeout(const Duration(seconds: 8));
+      if (r.statusCode == 200) {
+        final u = jsonDecode(r.body) as Map<String, dynamic>;
+        for (final idn in (u['identities'] as List? ?? const [])) {
+          final m = idn as Map<String, dynamic>;
+          final pv = m['provider'] as String?;
+          if (pv == 'google' || pv == 'facebook') {
+            prov = pv;
+            final d = (m['identity_data'] as Map?) ?? const {};
+            em ??= d['email'] as String?;
+            nm ??= (d['full_name'] ?? d['name']) as String?;
+          }
+        }
+        em ??= u['email'] as String?;
+      }
+    } catch (_) {}
+    em ??= claims['email'] as String?;
+    if (em != null && em.isNotEmpty && !em.endsWith('@guest.asp-poya.com')) await _p.setString('sb_email', em.toLowerCase());
+    if (prov != null) await _p.setString('sb_provider', prov);
+    if (nm != null) await _p.setString('sb_oname', nm);
+    await _p.remove('sb_gem');
+    await _p.remove('sb_gpw');
+    await _p.remove('sb_guest_since');
+  }
+
+  /// 🔐 دەستپێکرنا Google/Facebook. هەژمارا ب ناڤ تنێ ➔ گرێدان (پێشکەفتن دمینیت)
+  Future<String?> startOAuth(String provider, {bool signInOnly = false}) async {
+    if (!enabled) return 'offline';
+    oauthError = null;
+    final back = Uri.encodeComponent('${Uri.base.origin}${Uri.base.path}');
+    try {
+      String url;
+      final link = !signInOnly && userId != null && !isAdmin && registered && !hasEmail;
+      if (link) {
+        await _ensureToken();
+        final r = await http.get(
+            Uri.parse('$_base/auth/v1/user/identities/authorize?provider=$provider&redirect_to=$back&skip_http_redirect=true'),
+            headers: _h);
+        if (r.statusCode >= 300) return authError(r.body);
+        url = (jsonDecode(r.body) as Map<String, dynamic>)['url'] as String;
+      } else {
+        url = '$_base/auth/v1/authorize?provider=$provider&redirect_to=$back';
+      }
+      await _p.setString('oauth_pending', provider);
+      openUrl(url);
+      return null;
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  /// iPhone: ئەگەر Google ل پەنجەرەکا جودا ڤەبوو، تۆکن د جهێ هەڤپشک دا دهێت ➔ ل ڤێرێ بخوینە
+  Future<bool> checkOAuthReturn() async {
+    if (!enabled) return false;
+    await _p.reload();
+    final oh = _p.getString('oauth_hash');
+    if (oh != null) {
+      await _p.remove('oauth_hash');
+      await _consumeOAuth(oh);
+      if (oauthError == null) await _loadProfile().catchError((_) {});
+      notifyListeners();
+      return true;
+    }
+    final u = _p.getString('sb_user');
+    if (u != null && u != userId) {
+      await init();
+      notifyListeners();
+      return true;
+    }
+    return false;
   }
 
   void _saveSession(Map<String, dynamic> j) {
@@ -216,6 +356,7 @@ class Backend extends ChangeNotifier {
   Future<String?> handoffCode() async {
     if (!enabled || !registered || isAdmin || userId == null) return null;
     String enc(String v) => base64Url.encode(utf8.encode(v)).replaceAll('=', '');
+    if (provider != null) return 'o${enc(provider!)}';
     if (hasEmail) return 'e${enc(email!)}';
     var em = _p.getString('sb_gem'), pw = _p.getString('sb_gpw');
     if (em == null || pw == null) {
@@ -247,6 +388,7 @@ class Backend extends ChangeNotifier {
     try {
       final body = dec(code.substring(1));
       if (code[0] == 'e') return 'email:$body';
+      if (code[0] == 'o') return 'oauth:$body';
       if (code[0] != 'g') return 'bad';
       final parts = body.split('\n');
       if (parts.length != 2) return 'bad';
@@ -367,6 +509,7 @@ class Backend extends ChangeNotifier {
         'last_seen': DateTime.now().toUtc().toIso8601String(),
         if (gender != null) 'gender': gender,
         if (email != null) 'email': email.trim().toLowerCase(),
+        if (email == null && this.email != null) 'email': this.email,
       };
       Future<http.Response> send() => http.post(Uri.parse('$_base/rest/v1/learners'),
           headers: {..._h, 'Prefer': 'resolution=merge-duplicates,return=representation'}, body: jsonEncode(row));
@@ -398,7 +541,12 @@ class Backend extends ChangeNotifier {
     final r = await http.get(Uri.parse('$_base/rest/v1/learners?id=eq.$userId&select=*'), headers: _h);
     if (r.statusCode == 200) {
       final list = jsonDecode(r.body) as List;
-      if (list.isNotEmpty) _setProfile(list.first as Map<String, dynamic>);
+      if (list.isNotEmpty) {
+        _setProfile(list.first as Map<String, dynamic>);
+        // هەژمارا ب Google/Facebook هاتییە گرێدان: ئیمەیلێ ل پرۆفایلێ بنڤیسە
+        final em = _p.getString('sb_email');
+        if (em != null && (profile?['email'] == null || '${profile?['email']}'.isEmpty)) unawaited(_patchLearner({'email': em}));
+      }
     }
   }
 
@@ -463,6 +611,7 @@ class Backend extends ChangeNotifier {
       if (r.statusCode == 200) {
         messages = (jsonDecode(r.body) as List)
             .map((m) => AppMessage.fromJson(m as Map<String, dynamic>, _readBroadcast))
+            .where((m) => m.kind != 'streak') // بیرئینانێن Streak تنێ Push ن
             .toList();
         notifyListeners();
       }

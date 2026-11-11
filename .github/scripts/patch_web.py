@@ -31,6 +31,8 @@ if B.exists():
         shutil.copy(B / n, Path("web/icons") / n)
     shutil.copy(B / "favicon.png", "web/favicon.png")
     shutil.copy(B / "apple-touch-icon.png", "web/apple-touch-icon.png")
+    if (B / "privacy.html").exists():
+        shutil.copy(B / "privacy.html", "web/privacy.html")  # 🔒 بۆ Facebook/Google
     if (B / "push-sw.js").exists():
         Path("web/push").mkdir(parents=True, exist_ok=True)
         shutil.copy(B / "push-sw.js", "web/push-sw.js")
@@ -58,3 +60,17 @@ s = i.read_text(encoding="utf-8")
 s = re.sub(r'<meta name="description" content="[^"]*">',
            '<meta name="description" content="ASP — فێربوونا ئەلمانی ب کوردی بادینی · Deutsch lernen auf Kurdisch">', s)
 i.write_text(s, encoding="utf-8")
+
+# 🔐 زڤڕین ژ Google/Facebook: تۆکنان ژ #… بگرە و پاشەکەفت بکە (بەری Flutter دەستپێبکەت)
+s = i.read_text(encoding="utf-8")
+if "__aspOAuth" not in s:
+    js = ("<script>(function(){try{var h=location.hash||'';"
+          "if(h.indexOf('access_token=')>-1||h.indexOf('error_description=')>-1){"
+          "localStorage.setItem('flutter.oauth_hash',JSON.stringify(h.substring(1)));"
+          "history.replaceState(null,'',location.pathname+location.search);"
+          "var sa=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;"
+          "if(!sa&&/iphone|ipad|ipod/i.test(navigator.userAgent)&&localStorage.getItem('flutter.oauth_pending')){window.__aspOAuthDone=true;}"
+          "}}catch(e){}})();</script>\n")
+    s = s.replace("<head>", "<head>\n  " + js, 1)
+    i.write_text(s, encoding="utf-8")
+    print("oauth hash capture added")

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../config.dart';
@@ -33,6 +35,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool useEmail = true; // 📧 ب ئیمەیل یان 👤 تنێ ب ناڤ
   bool showPass = false;
 
+  /// زڤڕی ژ Google/Facebook و هێشتا پرۆفایل نینە ➔ تنێ ناڤ/جهـ/تەمەن
+  bool get oauthDone => Backend.instance.userId != null && Backend.instance.hasEmail && !Backend.instance.registered;
+
+  @override
+  void initState() {
+    super.initState();
+    if (oauthDone) name.text = Backend.instance.oauthName ?? '';
+  }
+
   @override
   void dispose() {
     name.dispose();
@@ -52,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       setState(() => error = 'تکایە ڕەگەزێ خۆ هەلبژێرە: نێر یان مێ');
       return;
     }
-    if (useEmail) {
+    if (useEmail && !oauthDone) {
       final e = validateEmailPass(email.text, pass.text);
       if (e != null) {
         setState(() => error = e);
@@ -69,8 +80,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
       age: int.tryParse(age.text.trim()),
       city: city.text,
       gender: gender,
-      email: useEmail ? email.text : null,
-      password: useEmail ? pass.text : null,
+      email: useEmail && !oauthDone ? email.text : null,
+      password: useEmail && !oauthDone ? pass.text : null,
       native: p.nativeLang.code,
       target: p.targetLang.code,
     );
@@ -146,7 +157,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Row(children: [
       opt(true, '📧', 'ب ئیمەیل', 'پێشکەفتن هەردەم پاراستی یە'),
       const SizedBox(width: 10),
-      opt(false, '👤', 'تنێ ب ناڤ', 'ب لەز — پاشان دشێی ئیمەیلێ زێدە بکەی'),
+      opt(false, '👤', 'تنێ ب ناڤ', 'تنێ ٣ رۆژان — پاشان دڤێت حسابی بپارێزی'),
     ]);
   }
 
@@ -180,9 +191,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SizedBox(height: 6),
               Text('بەری دەستپێکرنێ، خۆ بدە ناسین', textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg60)),
               const SizedBox(height: 26),
-              _modeSwitch(),
+              if (oauthDone)
+                Container(
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(color: AppColors.green.withValues(alpha: 0.14), borderRadius: BorderRadius.circular(16)),
+                  child: Text('✅ ${Backend.instance.provider == 'facebook' ? 'Facebook' : 'Google'}: ${Backend.instance.email}\nتنێ ئەڤان زانیاریان بنڤیسە و تەمام 👇',
+                      textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, height: 1.6)),
+                )
+              else ...[
+                SocialButtons(onSignedIn: () => setState(() {
+                  if (oauthDone) name.text = Backend.instance.oauthName ?? name.text;
+                })),
+                const SizedBox(height: 14),
+                Row(children: [
+                  Expanded(child: Divider(color: AppColors.fg24)),
+                  Padding(padding: const EdgeInsets.symmetric(horizontal: 10), child: Text('یان', style: TextStyle(color: AppColors.fg54))),
+                  Expanded(child: Divider(color: AppColors.fg24)),
+                ]),
+                const SizedBox(height: 14),
+                _modeSwitch(),
+              ],
               const SizedBox(height: 16),
-              if (useEmail) ...[
+              if (useEmail && !oauthDone) ...[
                 TextField(
                   controller: email,
                   keyboardType: TextInputType.emailAddress,
@@ -241,6 +271,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ? const Center(child: CircularProgressIndicator())
                   : BigButton(label: 'دەستپێبکە', icon: Icons.arrow_back_rounded, onPressed: _go),
               const SizedBox(height: 14),
+              if (!oauthDone)
               TextButton.icon(
                 onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen(next: widget.next))),
                 icon: const Icon(Icons.login_rounded),
@@ -671,11 +702,36 @@ class _LoginScreenState extends State<LoginScreen> {
         appBar: AppBar(title: const Text('🔑 چوونا ژوور')),
         body: ListView(padding: const EdgeInsets.all(24), children: [
           Text(
-              widget.prefillEmail != null
+              widget.prefillEmail == ''
+                  ? 'ب خێر بێی بۆ ئەپا ASP ل سەر شاشێ! 📲 ل هەمان دوگمێ (Google یان Facebook) بدە دا هەمی پێشکەفتنا تە بهێت.'
+                  : widget.prefillEmail != null
                   ? 'ب خێر بێی بۆ ئەپا ASP ل سەر شاشێ! 📲 پاسۆردا خۆ بنڤیسە دا هەمی پێشکەفتنا تە ل ڤێرێ ژی بهێت.'
                   : 'ب ئیمەیل و پاسۆردا خۆ بچە ژوور. هەمی پێشکەفتنا تە (XP، ستریک، قۆناغ) دێ زڤڕیت.',
               style: TextStyle(color: AppColors.fg70, fontSize: 15, height: 1.5)),
-          const SizedBox(height: 20),
+          const SizedBox(height: 16),
+          SocialButtons(
+            signInOnly: true,
+            onSignedIn: () async {
+              final b = Backend.instance;
+              if (b.registered) await ProgressService.instance.syncFromCloud(preferServer: true);
+              if (!context.mounted) return;
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => !b.registered
+                        ? RegisterScreen(next: widget.next)
+                        : (SetupScreen.needed() ? SetupScreen(next: widget.next) : widget.next)),
+                (_) => false,
+              );
+            },
+          ),
+          const SizedBox(height: 14),
+          Row(children: [
+            Expanded(child: Divider(color: AppColors.fg24)),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 10), child: Text('یان ب ئیمەیلێ', style: TextStyle(color: AppColors.fg54))),
+            Expanded(child: Divider(color: AppColors.fg24)),
+          ]),
+          const SizedBox(height: 14),
           TextField(
             controller: email,
             keyboardType: TextInputType.emailAddress,
@@ -818,7 +874,7 @@ class AccountCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(16)),
         child: Row(children: [
-          const Text('📧', style: TextStyle(fontSize: 24)),
+          Text(b.provider == 'google' ? '🟢' : b.provider == 'facebook' ? '🔵' : '📧', style: const TextStyle(fontSize: 24)),
           const SizedBox(width: 10),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -852,28 +908,206 @@ class AccountCard extends StatelessWidget {
         ]),
       );
     }
+    return GuestBanner(onClose: onClose);
+  }
+}
+
+/// 🔒 هەژمارا ب ناڤ تنێ: «X رۆژ ماینە» + Google / Facebook / ئیمەیل
+class GuestBanner extends StatelessWidget {
+  final VoidCallback? onClose;
+  const GuestBanner({super.key, this.onClose});
+
+  @override
+  Widget build(BuildContext context) {
+    final b = Backend.instance;
+    final left = b.guestDaysLeft;
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         gradient: const LinearGradient(colors: [Color(0xFFFF9600), Color(0xFFFF4B4B)]),
         borderRadius: BorderRadius.circular(18),
       ),
-      child: Row(children: [
-        const Text('🔒', style: TextStyle(fontSize: 28)),
-        const SizedBox(width: 10),
-        const Expanded(
-          child: Text('ئیمەیلێ زێدە بکە دا پێشکەفتنا تە چ جاران نەچیت',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15, height: 1.4)),
-        ),
-        FilledButton(
-          style: FilledButton.styleFrom(backgroundColor: Colors.white, foregroundColor: const Color(0xFFFF4B4B)),
-          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LinkEmailScreen())),
-          child: const Text('زێدە بکە', style: TextStyle(fontWeight: FontWeight.bold)),
-        ),
-        if (onClose != null) IconButton(onPressed: onClose, icon: const Icon(Icons.close, color: Colors.white70, size: 20)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Row(children: [
+          const Text('🔒', style: TextStyle(fontSize: 28)),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+                left <= 1
+                    ? 'ئەڤرۆ دویماهیک رۆژە! حسابێ خۆ بپارێزە دا پێشکەفتنا تە نەچیت'
+                    : '$left رۆژ ماینە — حسابێ خۆ بپارێزە دا پێشکەفتنا تە چ جاران نەچیت',
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15, height: 1.4)),
+          ),
+          if (onClose != null) IconButton(onPressed: onClose, icon: const Icon(Icons.close, color: Colors.white70, size: 20)),
+        ]),
+        const SizedBox(height: 10),
+        const SocialButtons(compact: true),
       ]),
     );
   }
+}
+
+/// ⏳ پشتی ٣ رۆژان: دڤێت هەژمار بهێتە پاراستن (هەمی پێشکەفتن دمینیت)
+class GuestLockScreen extends StatelessWidget {
+  const GuestLockScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        body: SafeArea(
+          child: ListView(padding: const EdgeInsets.all(24), children: [
+            const SizedBox(height: 20),
+            Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(26),
+                child: Image.asset('assets/brand/logo.png', width: 100, height: 100),
+              ),
+            ),
+            const SizedBox(height: 18),
+            const Text('⏳ ٣ رۆژێن تە ب دویماهی هاتن',
+                textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Sarchia', fontSize: 24, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Text('دا بەردەوام ببی، حسابێ خۆ ب Google یان Facebook یان ئیمەیلێ بپارێزە.\nهەمی پێشکەفتنا تە (XP، Streak، دینار) دێ مینیت ✅',
+                textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg70, fontSize: 15, height: 1.7)),
+            const SizedBox(height: 26),
+            const SocialButtons(),
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
+/// 🟢 Google · 🔵 Facebook · 📧 ئیمەیل — هەژمارا ب ناڤ تنێ دهێتە گرێدان (پێشکەفتن دمینیت)
+class SocialButtons extends StatefulWidget {
+  final bool compact;
+  final bool signInOnly; // ل «چوونا ژوور»: هەژمارا هەی ڤەکە
+  final VoidCallback? onSignedIn;
+  const SocialButtons({super.key, this.compact = false, this.signInOnly = false, this.onSignedIn});
+
+  @override
+  State<SocialButtons> createState() => _SocialButtonsState();
+}
+
+class _SocialButtonsState extends State<SocialButtons> {
+  bool busy = false;
+  String? error;
+  Timer? _poll;
+  AppLifecycleListener? _life;
+
+  @override
+  void initState() {
+    super.initState();
+    error = Backend.instance.oauthError;
+    // ئەگەر ل پەنجەرەکا جودا هاتبیتە کرن (iPhone)، ل ڤێرێ چاڤەڕێ بە
+    if (Backend.instance.oauthPending) _watch();
+  }
+
+  @override
+  void dispose() {
+    _poll?.cancel();
+    _life?.dispose();
+    super.dispose();
+  }
+
+  void _watch() {
+    _poll?.cancel();
+    _poll = Timer.periodic(const Duration(seconds: 2), (_) => _check());
+    _life ??= AppLifecycleListener(onResume: _check);
+  }
+
+  Future<void> _check() async {
+    if (!await Backend.instance.checkOAuthReturn()) return;
+    _poll?.cancel();
+    if (!mounted) return;
+    setState(() {
+      busy = false;
+      error = Backend.instance.oauthError;
+    });
+    if (error == null) widget.onSignedIn?.call();
+  }
+
+  Future<void> _go(String provider) async {
+    setState(() {
+      busy = true;
+      error = null;
+    });
+    final err = await Backend.instance.startOAuth(provider, signInOnly: widget.signInOnly);
+    if (!mounted) return;
+    if (err != null) {
+      setState(() {
+        busy = false;
+        error = err;
+      });
+      return;
+    }
+    _watch();
+  }
+
+  Widget _btn(String label, Widget icon, Color bg, Color fg, VoidCallback onTap) => SizedBox(
+        height: widget.compact ? 44 : 54,
+        child: FilledButton(
+          style: FilledButton.styleFrom(
+            backgroundColor: bg,
+            foregroundColor: fg,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: const BorderSide(color: Colors.black12)),
+          ),
+          onPressed: busy ? null : onTap,
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            icon,
+            const SizedBox(width: 10),
+            Flexible(child: Text(label, style: TextStyle(fontSize: widget.compact ? 14 : 17, fontWeight: FontWeight.bold))),
+          ]),
+        ),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    final b = Backend.instance;
+    if (!b.enabled) return const SizedBox.shrink();
+    final g = _btn(widget.compact ? 'Google' : 'ب Google بچە ژوور', const _GLogo(), Colors.white, Colors.black87, () => _go('google'));
+    final f = _btn(widget.compact ? 'Facebook' : 'ب Facebook بچە ژوور', const Icon(Icons.facebook_rounded, color: Colors.white),
+        const Color(0xFF1877F2), Colors.white, () => _go('facebook'));
+    final e = widget.signInOnly || !b.registered
+        ? null
+        : _btn(widget.compact ? 'ئیمەیل' : 'ب ئیمەیل و پاسۆرد', const Icon(Icons.alternate_email_rounded), AppColors.card, AppColors.fg,
+            () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LinkEmailScreen())));
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      if (widget.compact)
+        Row(children: [
+          Expanded(child: g),
+          const SizedBox(width: 8),
+          Expanded(child: f),
+          if (e != null) ...[const SizedBox(width: 8), Expanded(child: e)],
+        ])
+      else ...[
+        g,
+        const SizedBox(height: 10),
+        f,
+        if (e != null) ...[const SizedBox(height: 10), e],
+      ],
+      if (busy)
+        const Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: Text('⏳ چاڤەڕێ بە… پشتی هەلبژارتنا حسابی دێ زڤڕییە ڤێرێ', textAlign: TextAlign.center),
+        ),
+      if (error != null)
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Text(error!, textAlign: TextAlign.center, style: TextStyle(color: widget.compact ? Colors.white : AppColors.red)),
+        ),
+    ]);
+  }
+}
+
+/// لۆگۆیا G (ب رەنگێن Google)
+class _GLogo extends StatelessWidget {
+  const _GLogo();
+  @override
+  Widget build(BuildContext context) => const Text('G',
+      style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Color(0xFF4285F4), fontFamily: 'Roboto'));
 }
 
 /// پشتی دەرکەفتنێ: وەکی جارا ئێکێ (هەلبژارتنا زمانی ➔ تۆمارکرن / چوونا ژوور)

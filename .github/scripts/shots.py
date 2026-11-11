@@ -13,6 +13,7 @@ pages = [
     ("shop", "demo=shop"), ("shop_dark", "demo=shop&theme=dark"), ("fire", "demo=fire"), ("fxfreeze", "demo=fxfreeze"), ("fxshatter", "demo=fxshatter"),
     ("fxsmoke", "demo=fxsmoke"), ("reward", "demo=reward"), ("pics", "demo=pics&theme=light"), ("pics_dark", "demo=pics&theme=dark"),
     ("match", "demo=match&theme=light"), ("cloze2", "demo=cloze2&theme=light"), ("admintree", "demo=admintree"), ("home_hdr", "demo=home&theme=light"),
+    ("gate", "demo=gate"), ("register", "demo=register"), ("login", "demo=login"), ("guestlock", "demo=guestlock"), ("profile", "demo=profile"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])

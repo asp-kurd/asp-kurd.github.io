@@ -448,7 +448,7 @@ Future<void> showPendingRewards(BuildContext context) async {
       final ev = RewardsService.instance.takeEvent();
       if (ev == null) break;
       await _showEvent(context, ev);
-      final coins = ev.rewards.where((r) => r.kind == RewardKind.dinar && r.amount > 0).fold<int>(0, (s, r) => s + r.amount);
+      final coins = ev.fx != FxKind.reward ? 0 : ev.rewards.where((r) => r.kind == RewardKind.dinar && r.amount > 0).fold<int>(0, (s, r) => s + r.amount);
       if (coins > 0 && context.mounted) {
         flyCoins(context, coins);
         await Future.delayed(const Duration(milliseconds: 900));
@@ -467,7 +467,7 @@ Future<void> _showEvent(BuildContext context, RewardEvent ev) {
     FxKind.streakSaved => const ShatterAnim(),
     FxKind.streakLost => const SmokeAnim(),
     FxKind.reward => _rewardArt(ev),
-    FxKind.quests => const _Pop(child: Image(image: AssetImage('$_fx/gift.webp'), width: 130, height: 130)),
+    FxKind.quests || FxKind.bonusOffer => const _Pop(child: Image(image: AssetImage('$_fx/gift.webp'), width: 130, height: 130)),
   };
   if (ev.fx == FxKind.reward) Sfx.done();
   return showGeneralDialog(
@@ -520,7 +520,7 @@ Future<void> _showEvent(BuildContext context, RewardEvent ev) {
                     Image.asset(
                         switch (r.kind) {
                           RewardKind.dinar => '$_fx/coin_s.webp',
-                          RewardKind.boost => '$_fx/${r.amount >= 3 ? 'boost_gold' : 'boost_blue'}.webp',
+                          RewardKind.boost || RewardKind.boostNext => '$_fx/${r.amount >= 3 ? 'boost_gold' : 'boost_blue'}.webp',
                           RewardKind.freeze => '$_fx/freeze_cube.webp',
                         },
                         width: 30,
@@ -558,7 +558,7 @@ Future<void> _showEvent(BuildContext context, RewardEvent ev) {
 Widget _rewardArt(RewardEvent ev) {
   final r = ev.rewards.isEmpty ? null : ev.rewards.first;
   final img = switch (r?.kind) {
-    RewardKind.boost => (r!.amount >= 3 ? 'boost_gold' : 'boost_blue'),
+    RewardKind.boost || RewardKind.boostNext => (r!.amount >= 3 ? 'boost_gold' : 'boost_blue'),
     RewardKind.freeze => 'freeze_cube',
     _ => (r != null && r.amount >= 50) ? 'chest' : (ev.emoji == '🎁' ? 'gift' : 'coin_stack'),
   };
@@ -666,7 +666,6 @@ class StreakFlame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final r = RewardsService.instance;
     return Row(mainAxisSize: MainAxisSize.min, children: [
       SizedBox(
         width: size,
@@ -688,10 +687,6 @@ class StreakFlame extends StatelessWidget {
       ),
       const SizedBox(width: 3),
       Text('$streak', style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.orange)),
-      if (r.freezes > 0) ...[
-        const SizedBox(width: 2),
-        Image.asset('$_fx/freeze_cube.webp', width: 14, height: 14),
-      ],
     ]);
   }
 }
@@ -729,7 +724,11 @@ class QuestList extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(6),
                     child: LinearProgressIndicator(
-                      value: q.done ? 1 : (r.questValue(q.kind) / q.target).clamp(0.0, 1.0),
+                      value: q.done
+                          ? 1
+                          : q.kind == 'bmin'
+                              ? ((r.questValue('min') - (q.target - 10)) / 10).clamp(0.0, 1.0)
+                              : (r.questValue(q.kind) / q.target).clamp(0.0, 1.0),
                       minHeight: 7,
                       color: q.done ? AppColors.green : AppColors.gold,
                       backgroundColor: dark ? Colors.white12 : AppColors.fg10,
@@ -754,7 +753,7 @@ class QuestList extends StatelessWidget {
       Image.asset(
           switch (r.kind) {
             RewardKind.dinar => '$_fx/coin_s.webp',
-            RewardKind.boost => '$_fx/${r.amount >= 3 ? 'boost_gold' : 'boost_blue'}.webp',
+            RewardKind.boost || RewardKind.boostNext => '$_fx/${r.amount >= 3 ? 'boost_gold' : 'boost_blue'}.webp',
             RewardKind.freeze => '$_fx/freeze_cube.webp',
           },
           width: 28,
@@ -763,6 +762,7 @@ class QuestList extends StatelessWidget {
         switch (r.kind) {
           RewardKind.dinar => '+${r.amount}',
           RewardKind.boost => '×${r.amount} · ${r.minutes}′',
+          RewardKind.boostNext => '×${r.amount} · ${r.minutes}′ 🌅',
           RewardKind.freeze => '🧊',
         },
         textDirection: TextDirection.ltr,

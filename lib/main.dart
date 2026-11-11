@@ -8,6 +8,7 @@ import 'data/tree.dart';
 import 'services/rewards_service.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
+import 'screens/profile_screen.dart';
 import 'screens/admin_screens.dart';
 import 'services/backend.dart';
 import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web.dart';
@@ -22,6 +23,7 @@ import 'screens/voice_backup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/admin_tools.dart' show TreeEditor;
+import 'screens/install_gate.dart';
 import 'screens/shop_screen.dart';
 import 'screens/widgets/reward_fx.dart';
 import 'data/pics.dart';
@@ -47,6 +49,11 @@ final bool adminMode = Uri.base.queryParameters['admin'] == _adminKey || isAdmin
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // 🔐 iPhone: Google/Facebook ل پەنجەرەکا جودا تەمام بوو ➔ تنێ «Done» (ئەپا سەر شاشێ تۆکنێ دخوینیت)
+  if (oauthOverlay) {
+    runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: OAuthDoneScreen()));
+    return;
+  }
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
   await Backend.instance.init();
   await loadCurriculum(await Backend.instance.contentOverride('curriculum'));
@@ -69,12 +76,14 @@ Future<void> main() async {
         await ProgressService.instance.syncFromCloud(preferServer: true).timeout(const Duration(seconds: 12));
       } else if (res.startsWith('email:')) {
         handoffEmail = res.substring(6);
+      } else if (res.startsWith('oauth:')) {
+        handoffEmail = ''; // 🔐 Google/Facebook ➔ ب هەمان دوگمێ بچە ژوور
       }
     } catch (_) {}
   }
   // ☁️ پێشکەفتن: ئەگەر ل مۆبایلەکا دی پێشکەفتنەکا مەزنتر هەبیت، وێ بینە؛ یان یا ڤێرێ بپارێزە
   if (!adminMode && Backend.instance.registered && !Backend.instance.isAdmin) {
-    unawaited(ProgressService.instance.syncFromCloud().catchError((_) => false));
+    unawaited(ProgressService.instance.syncFromCloud(preferServer: Backend.instance.switchedAccount).catchError((_) => false));
   }
   if (Uri.base.queryParameters['demo'] != null) await A1Summary.load();
   // ?theme=light|dark — بۆ تاقیکرنێ
@@ -153,6 +162,11 @@ class ZimanProApp extends StatelessWidget {
           unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze),
       'card' => const SummaryCardScreen(start: 9),
       'shop' => const ShopScreen(),
+      'gate' => const InstallGateScreen(),
+      'register' => const RegisterScreen(next: HomeScreen()),
+      'login' => const LoginScreen(next: HomeScreen()),
+      'guestlock' => const GuestLockScreen(),
+      'profile' => const Scaffold(body: ProfileScreen()),
       'fire' => const _FxDemo(0),
       'fxfreeze' => const _FxDemo(1),
       'fxshatter' => const _FxDemo(2),
@@ -185,6 +199,8 @@ class ZimanProApp extends StatelessWidget {
       theme: _theme(),
       home: (adminMode ? const AdminEntry() : null) ??
           _demo() ??
+          // 📲 بەری هەر تشتەکی: ئەپ ل سەر شاشێ (Home Screen)
+          (installGateNeeded ? const InstallGateScreen() : null) ??
           (handoffEmail != null && !Backend.instance.registered
               ? LoginScreen(next: const HomeScreen(), prefillEmail: handoffEmail)
               : null) ??

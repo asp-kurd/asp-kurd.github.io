@@ -80,18 +80,44 @@ for m in get("messages?pushed_at=is.null&select=*&order=created_at.asc&limit=100
     patch(f"messages?id=eq.{m['id']}", {"pushed_at": datetime.now(timezone.utc).isoformat()})
 print(f"::notice title=notify::learners={len(learners)} with_push={sum(1 for l in learners.values() if l.get('push_sub'))} vapid={'yes' if VAPID else 'no'} messages_pushed={sent}")
 
-# ٢. بیرئینانا Streak
+# ٢. بیرئینانا Streak: ٣–٤ جاران بەری نیڤا شەڤێ (18:00 · 20:00 · 22:00 · 23:15)، هەر جار ب شێوەکێ جودا
+SLOTS = [(18, 0), (20, 0), (22, 0), (23, 15)]
+due_slots = sum(1 for h, m in SLOTS if (now.hour, now.minute) >= (h, m))
 reminded = 0
-if now.hour >= 18:
-    for l in learners.values():
-        if (l.get("streak") or 0) < 1 or l.get("last_study_date") == today or l.get("streak_reminded_on") == today:
-            continue
+if due_slots:
+    start = datetime(now.year, now.month, now.day, tzinfo=TZ).astimezone(timezone.utc).isoformat()
+    sent_today = {}
+    for m in get(f"messages?kind=eq.streak&created_at=gte.{start}&select=learner_id"):
+        sent_today[m["learner_id"]] = sent_today.get(m["learner_id"], 0) + 1
+    risk = [l for l in learners.values()
+            if (l.get("streak") or 0) >= 1 and l.get("last_study_date") != today and l.get("push_sub")
+            and sent_today.get(l["id"], 0) < due_slots]
+    freezes = {}
+    if risk:
+        ids = ",".join(l["id"] for l in risk)
+        try:
+            for r in get(f"progress?user_id=in.({ids})&select=user_id,fz:data->>freezes"):
+                freezes[r["user_id"]] = int(r.get("fz") or 0)
+        except Exception as e:
+            print("freezes lookup failed", e)
+    for l in risk:
+        k = sent_today.get(l["id"], 0)  # ئەڤە جارا چەندێ یە (0..3)
         name = l.get("name") or ""
-        title = f"🔥 {name}، Streak ـا تە دێ چیت!"
-        body = f"تە {l['streak']} رۆژ ل دویف ئێک خواندییە. دەمەکێ کێم ماوە — وانەیەکا ٥ خولەکان بکە دا Streak ـا تە نەچیت!"
-        post("messages", {"learner_id": l["id"], "title": title, "body": body, "kind": "streak",
-                          "pushed_at": datetime.now(timezone.utc).isoformat()})
-        push(l, title, body)
-        patch(f"learners?id=eq.{l['id']}", {"streak_reminded_on": today})
-        reminded += 1
-print(f"::notice title=notify::streak_reminders={reminded} hour={now.hour}")
+        st = l["streak"]
+        fz = freezes.get(l["id"], 0)
+        msgs = [
+            (f"🔥 {name}، ئاگرێ تە چاڤەڕێیا تە یە!", f"تە {st} رۆژ ل دویف ئێک خواندییە. وانەیەکا ٥ خولەکان بەسە دا ئاگر نەڤەمریت."),
+            (f"⏰ {name}، دەم دچیت…", f"هێشتا ئەڤرۆ تە نەخواندییە! Streak ـا {st} رۆژان یا تەیە — ٥ خولەکان بدە ئێک وانێ 💪"),
+            (f"😟 {name}، ئاگرێ تە بچووک دبیت!", f"تنێ دوو دەمژمێر ماینە بۆ نیڤا شەڤێ. {st} 🔥 نەهێلە بچیت!"
+             + (" (قەشا تە هەیە 🧊، بەلێ بۆچی وێ بکار بینی؟)" if fz else "")),
+            (f"🚨 {name}، دویماهیک دەرفەت!", f"ل دەمژمێر ١٢ێ شەڤێ Streak ـا {st} رۆژان دێ ڤەمریت"
+             + (" — یان قەشا تە دێ هێتە بکارئینان 🧊." if fz else "!") + " ئێک وانەیا کورت نوکە 🙏"),
+        ]
+        title, body = msgs[min(k, len(msgs) - 1)]
+        if push(l, title, body):
+            post("messages", {"learner_id": l["id"], "title": title, "body": body, "kind": "streak",
+                              "pushed_at": datetime.now(timezone.utc).isoformat(),
+                              "read_at": datetime.now(timezone.utc).isoformat()})
+            patch(f"learners?id=eq.{l['id']}", {"streak_reminded_on": today})
+            reminded += 1
+print(f"::notice title=notify::streak_reminders={reminded} hour={now.hour} slots={due_slots}")

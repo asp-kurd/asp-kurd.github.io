@@ -50,6 +50,24 @@ class ProfileScreen extends StatelessWidget {
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen())),
             ),
             const SizedBox(height: 12),
+            // 📬 نامە (ژ سەرێ ماڵێ هاتنە ڤێرێ)
+            ListenableBuilder(
+              listenable: Backend.instance,
+              builder: (_, __) => ListTile(
+                tileColor: AppColors.card,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                leading: Badge(
+                  isLabelVisible: Backend.instance.unread > 0,
+                  label: Text('${Backend.instance.unread}'),
+                  child: const Icon(Icons.mail_rounded, size: 30, color: AppColors.blue),
+                ),
+                title: const Text('📬 نامەیێن من', style: TextStyle(fontWeight: FontWeight.bold)),
+                subtitle: Text(Backend.instance.unread > 0 ? '${Backend.instance.unread} نامێن نوو' : 'هەمی نامە ژ ASP'),
+                trailing: const Icon(Icons.chevron_left_rounded),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const InboxScreen())),
+              ),
+            ),
+            const SizedBox(height: 12),
             // 🌍 زمانێن دی — زوو
             Container(
               padding: const EdgeInsets.all(16),
