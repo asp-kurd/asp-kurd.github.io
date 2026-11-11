@@ -467,6 +467,7 @@ Future<void> _showEvent(BuildContext context, RewardEvent ev) {
     FxKind.streakSaved => const ShatterAnim(),
     FxKind.streakLost => const SmokeAnim(),
     FxKind.reward => _rewardArt(ev),
+    FxKind.quests => const _Pop(child: Image(image: AssetImage('$_fx/gift.webp'), width: 130, height: 130)),
   };
   if (ev.fx == FxKind.reward) Sfx.done();
   return showGeneralDialog(
@@ -506,6 +507,12 @@ Future<void> _showEvent(BuildContext context, RewardEvent ev) {
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: Colors.white, height: 1.4)),
               const SizedBox(height: 10),
+              if (ev.fx == FxKind.quests) ...[
+                Text(tr(n, 'تەمام بکە و خەلاتێ وەربگرە 🎁', 'Schaffe sie und hol dir die Belohnung 🎁', 'Finish them to win rewards 🎁'),
+                    textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70)),
+                const SizedBox(height: 10),
+                const QuestList(dark: true),
+              ],
               for (final r in ev.rewards)
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 3),
@@ -686,5 +693,113 @@ class StreakFlame extends StatelessWidget {
         Image.asset('$_fx/freeze_cube.webp', width: 14, height: 14),
       ],
     ]);
+  }
+}
+
+
+/// 🎯 لیستا ئەرکێن ئەڤرۆ: پێشکەفتن + خەلات (یان 🎁 ? ئەگەر ڤەشارتی بیت)
+class QuestList extends StatelessWidget {
+  final bool dark;
+  const QuestList({super.key, this.dark = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final r = RewardsService.instance;
+    final n = ProgressService.instance.nativeLang;
+    return ListenableBuilder(
+      listenable: r,
+      builder: (_, __) => Column(children: [
+        for (final q in r.quests)
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(
+              color: q.done ? AppColors.green.withValues(alpha: 0.18) : (dark ? Colors.white10 : AppColors.card),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: q.done ? AppColors.green : (dark ? Colors.white24 : AppColors.fg12)),
+            ),
+            child: Row(children: [
+              Text(q.done ? '✅' : q.emoji, style: const TextStyle(fontSize: 22)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(q.title(n),
+                      style: TextStyle(fontWeight: FontWeight.bold, color: dark ? Colors.white : AppColors.fg)),
+                  const SizedBox(height: 5),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: LinearProgressIndicator(
+                      value: q.done ? 1 : (r.questValue(q.kind) / q.target).clamp(0.0, 1.0),
+                      minHeight: 7,
+                      color: q.done ? AppColors.green : AppColors.gold,
+                      backgroundColor: dark ? Colors.white12 : AppColors.fg10,
+                    ),
+                  ),
+                ]),
+              ),
+              const SizedBox(width: 10),
+              _rewardChip(q, n),
+            ]),
+          ),
+      ]),
+    );
+  }
+
+  Widget _rewardChip(DailyQuest q, AppLanguage n) {
+    if (q.surprise && !q.done) {
+      return Image.asset('$_fx/gift.webp', width: 34, height: 34);
+    }
+    final r = q.reward;
+    return Column(mainAxisSize: MainAxisSize.min, children: [
+      Image.asset(
+          switch (r.kind) {
+            RewardKind.dinar => '$_fx/coin_s.webp',
+            RewardKind.boost => '$_fx/${r.amount >= 3 ? 'boost_gold' : 'boost_blue'}.webp',
+            RewardKind.freeze => '$_fx/freeze_cube.webp',
+          },
+          width: 28,
+          height: 28),
+      Text(
+        switch (r.kind) {
+          RewardKind.dinar => '+${r.amount}',
+          RewardKind.boost => '×${r.amount} · ${r.minutes}′',
+          RewardKind.freeze => '🧊',
+        },
+        textDirection: TextDirection.ltr,
+        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: dark ? const Color(0xFFFFD54F) : AppColors.goldText),
+      ),
+    ]);
+  }
+}
+
+/// کارتا ئەرکێن ئەڤرۆ ل ماڵێ
+class QuestsCard extends StatelessWidget {
+  const QuestsCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final r = RewardsService.instance;
+    final n = ProgressService.instance.nativeLang;
+    if (r.quests.isEmpty) return const SizedBox.shrink();
+    final done = r.quests.where((q) => q.done).length;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: AppColors.gold.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.5)),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Row(children: [
+          Text('🎯 ${tr(n, 'ئەرکێن ئەڤرۆ', 'Heutige Aufgaben', "Today's tasks")}',
+              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+          const Spacer(),
+          Text('$done / ${r.quests.length}', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.goldText)),
+        ]),
+        const SizedBox(height: 6),
+        const QuestList(),
+      ]),
+    );
   }
 }

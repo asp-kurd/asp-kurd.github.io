@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
         WidgetsBinding.instance.addPostFrameCallback((_) {
           if (!mounted || !(ModalRoute.of(context)?.isCurrent ?? false)) return;
           applyAdminGifts();
+          RewardsService.instance.ensureQuests(); // 🎯 رۆژا نوو ➔ ٣ ئەرکێن نوو
           if (RewardsService.instance.pending.isNotEmpty && progress.streakEvent == null) showPendingRewards(context);
         });
         if (progress.streakEvent != null) {
@@ -203,6 +204,7 @@ class _LearnPath extends StatelessWidget {
             ),
           ),
         const TeacherTaskCards(),
+        const QuestsCard(),
         _dailyGoalCard(p),
         const SizedBox(height: 12),
         if (p.dueConcepts.isNotEmpty)

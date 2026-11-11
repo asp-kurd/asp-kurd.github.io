@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -35,7 +36,7 @@ class Reward {
 }
 
 /// رووداوەک بۆ نیشاندانێ (دیالۆگ + فڕینا دیناران / ئەنیمەیشن)
-enum FxKind { reward, freezeBought, streakSaved, streakLost }
+enum FxKind { reward, freezeBought, streakSaved, streakLost, quests }
 
 class RewardEvent {
   final FxKind fx;
@@ -43,6 +44,49 @@ class RewardEvent {
   final List<Reward> rewards;
   RewardEvent(this.fx, this.emoji, this.ku, this.de, this.en, [this.rewards = const []]);
   String title(AppLanguage n) => tr(n, ku, de, en);
+}
+
+/// 🎯 ئەرکێن رۆژانە: هەر رۆژ ٣ ئەرکێن هەڕەمەکی ب خەلاتێن هەڕەمەکی (بۆ هەر کەسەکی یێن جودا)
+class DailyQuest {
+  final String kind; // min | les | cmb | xp | acc | per
+  final int target;
+  final Reward reward;
+  final bool surprise; // خەلات ڤەشارتییە هەتا تەمام دبیت 🎁
+  bool done;
+  DailyQuest(this.kind, this.target, this.reward, this.surprise, this.done);
+
+  Map<String, dynamic> toJson() => {
+        'k': kind,
+        'n': target,
+        'rt': reward.kind.name,
+        'ra': reward.amount,
+        'rm': reward.minutes,
+        's': surprise,
+        'd': done,
+      };
+
+  static DailyQuest fromJson(Map<String, dynamic> j) {
+    final a = (j['ra'] as num?)?.toInt() ?? 5, m = (j['rm'] as num?)?.toInt() ?? 0;
+    final r = switch (j['rt']) {
+      'boost' => Reward.boost(a, m),
+      'freeze' => const Reward.freeze(),
+      _ => Reward.dinar(a),
+    };
+    return DailyQuest('${j['k']}', (j['n'] as num).toInt(), r, j['s'] == true, j['d'] == true);
+  }
+
+  String title(AppLanguage n) => switch (kind) {
+        'min' => tr(n, '$target خولەکان بخوینە', '$target Minuten lernen', 'Study $target minutes'),
+        'les' => target == 1
+            ? tr(n, 'وانەیەکێ تەمام بکە', 'Eine Lektion abschließen', 'Finish a lesson')
+            : tr(n, '$target وانەیان تەمام بکە', '$target Lektionen abschließen', 'Finish $target lessons'),
+        'cmb' => tr(n, '$target بەرسڤێن دروست ل دویف ئێک', '$target richtige am Stück', '$target correct in a row'),
+        'xp' => tr(n, '$target XP کۆم بکە', '$target XP sammeln', 'Earn $target XP'),
+        'acc' => tr(n, 'وانەیەکێ ب ٨٥٪+ تەمام بکە', 'Eine Lektion mit 85 %+', 'A lesson with 85%+'),
+        _ => tr(n, 'وانەیەکێ بێ خەلەتی (١٠٠٪)', 'Eine Lektion fehlerfrei', 'A flawless lesson'),
+      };
+
+  String get emoji => switch (kind) { 'min' => '⏱️', 'les' => '📚', 'cmb' => '⚡', 'xp' => '✨', 'acc' => '🎯', _ => '💎' };
 }
 
 class RewardsService extends ChangeNotifier {
@@ -61,6 +105,7 @@ class RewardsService extends ChangeNotifier {
   int xpGoal = 0; // 0 = نینە
   int _boostUntil = 0, _boostMult = 1;
   final List<RewardEvent> pending = [];
+  List<DailyQuest> quests = [];
 
   /// تۆمارا دویماهیێ (بۆ دووکانێ)
   List<String> log = [];
@@ -74,6 +119,8 @@ class RewardsService extends ChangeNotifier {
     _boostUntil = _p.getInt('boost_until') ?? 0;
     _boostMult = _p.getInt('boost_mult') ?? 1;
     log = _p.getStringList('dinar_log') ?? [];
+    _loadQuests();
+    ensureQuests();
     if (!(_p.getBool('dinar_init') ?? false)) {
       await _p.setBool('dinar_init', true);
       await _addDinar(welcomeGift, '🎁 دیاریا دەستپێکێ');
@@ -90,6 +137,7 @@ class RewardsService extends ChangeNotifier {
     xpGoal = _p.getInt('xp_goal') ?? xpGoal;
     _boostUntil = _p.getInt('boost_until') ?? _boostUntil;
     _boostMult = _p.getInt('boost_mult') ?? _boostMult;
+    _loadQuests();
     notifyListeners();
   }
 
@@ -120,6 +168,12 @@ class RewardsService extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> _logLine(String t) async {
+    final d = DateTime.now();
+    log = ['${d.month}/${d.day} $t', ...log].take(30).toList();
+    await _p.setStringList('dinar_log', log);
+  }
+
   Future<void> grant(List<Reward> rewards, String why) async {
     for (final r in rewards) {
       switch (r.kind) {
@@ -127,9 +181,11 @@ class RewardsService extends ChangeNotifier {
           await _addDinar(r.amount, why);
         case RewardKind.boost:
           await _startBoost(r.amount, r.minutes);
+          await _logLine('+⚡×${r.amount} ${r.minutes}′ · $why');
         case RewardKind.freeze:
           freezes = (freezes + 1).clamp(0, maxFreezes);
           await _p.setInt('freezes', freezes);
+          await _logLine('+🧊 · $why');
           notifyListeners();
       }
     }
@@ -224,6 +280,7 @@ class RewardsService extends ChangeNotifier {
 
   // ───────── 🔔 رووداو ژ ProgressService / وانەیان ─────────
   Future<void> onCombo(int combo) async {
+    await _questTick('q_cmb', combo);
     if (combo == 10) {
       await _achieve('combo10', '⚡', '١٠ بەرسڤێن دروست ل دویف ئێک!', '10 richtige Antworten am Stück!', '10 correct in a row!',
           const [Reward.dinar(5), Reward.dinar(10)]);
@@ -248,6 +305,9 @@ class RewardsService extends ChangeNotifier {
     final perfects = lastDay == day ? (_p.getInt('rw_perfect') ?? 0) + (percent >= 100 ? 1 : 0) : (percent >= 100 ? 1 : 0);
     await _p.setInt('rw_perfect', perfects);
 
+    await _questTick('q_les', today);
+    if (percent >= 85) await _questTick('q_acc', 85);
+    if (percent >= 100) await _questTick('q_per', 100);
     if (today == 3) {
       await _achieve('lessons3', '📚', '٣ وانە ئەڤرۆ!', '3 Lektionen heute!', '3 lessons today!',
           const [Reward.dinar(10), Reward.dinar(15), Reward.boost(2, 5)]);
@@ -264,6 +324,7 @@ class RewardsService extends ChangeNotifier {
   }
 
   Future<void> onStudySeconds(int todaySeconds) async {
+    await _questTick('q_sec', todaySeconds);
     if (todaySeconds >= 600) {
       await _achieve('study10', '⏱️', '١٠ خولەک خواندن ئەڤرۆ!', '10 Minuten gelernt!', '10 minutes of study!',
           const [Reward.dinar(5), Reward.dinar(10)]);
@@ -271,6 +332,7 @@ class RewardsService extends ChangeNotifier {
   }
 
   Future<void> onXp({required int todayXp, required int oldTotal, required int newTotal, required List<int> treeXp}) async {
+    await _questTick('q_xp', todayXp);
     // 🌳 دار مەزن بوو (ئێک جار بۆ هەر قۆناغەکێ)
     for (var i = 1; i < treeXp.length; i++) {
       if (oldTotal < treeXp[i] && newTotal >= treeXp[i]) {
@@ -324,6 +386,84 @@ class RewardsService extends ChangeNotifier {
       await _addDinar(n, '📌 $title');
       pending.add(RewardEvent(FxKind.reward, '🏅', title, title, title, [Reward.dinar(n)]));
     }
+    notifyListeners();
+  }
+
+  // ───────── 🎯 ئەرکێن رۆژانە ─────────
+  void _loadQuests() {
+    try {
+      final raw = _p.getString('quests');
+      quests = raw == null ? [] : [for (final e in jsonDecode(raw) as List) DailyQuest.fromJson(e as Map<String, dynamic>)];
+    } catch (_) {
+      quests = [];
+    }
+  }
+
+  Future<void> _saveQuests() => _p.setString('quests', jsonEncode([for (final q in quests) q.toJson()]));
+
+  /// هەر رۆژ جارا ئێکێ: ٣ ئەرکێن نوو (هەڕەمەکی) + دیالۆگ
+  void ensureQuests() {
+    if (!_ready || _p.getString('q_day') == _today) return;
+    final rng = Random(_seed ^ _today.hashCode);
+    const kinds = {
+      'min': [5, 10, 15, 20],
+      'les': [1, 2, 3],
+      'cmb': [5, 10, 15],
+      'xp': [50, 100, 150, 250],
+      'acc': [85],
+      'per': [100],
+    };
+    final keys = kinds.keys.toList()..shuffle(rng);
+    quests = [];
+    for (final k in keys.take(3)) {
+      final opts = kinds[k]!;
+      final lvl = rng.nextInt(opts.length);
+      final hard = (lvl + 1) / opts.length + (k == 'per' ? 0.6 : 0); // ئەرکێ زەحمەتتر ➔ خەلاتا مەزنتر
+      final roll = rng.nextDouble();
+      final Reward r;
+      if (roll < 0.55) {
+        const amounts = [5, 10, 15, 20, 25, 30];
+        r = Reward.dinar(amounts[(rng.nextInt(3) + (hard * 3).floor()).clamp(0, amounts.length - 1)]);
+      } else if (roll < 0.92) {
+        const mins = [10, 15, 20];
+        r = Reward.boost(rng.nextDouble() < 0.7 ? 2 : 3, mins[rng.nextInt(mins.length)]);
+      } else {
+        r = const Reward.freeze();
+      }
+      quests.add(DailyQuest(k, opts[lvl], r, rng.nextDouble() < 0.35, false));
+    }
+    _p.setString('q_day', _today);
+    for (final k in ['q_sec', 'q_xp', 'q_les', 'q_cmb', 'q_acc', 'q_per']) {
+      _p.setInt(k, 0);
+    }
+    _saveQuests();
+    pending.add(RewardEvent(FxKind.quests, '🎯', 'ئەرکێن ئەڤرۆ', 'Heutige Aufgaben', "Today's tasks"));
+    notifyListeners();
+  }
+
+  int questValue(String kind) => switch (kind) {
+        'min' => (_p.getInt('q_sec') ?? 0) ~/ 60,
+        'les' => _p.getInt('q_les') ?? 0,
+        'cmb' => _p.getInt('q_cmb') ?? 0,
+        'xp' => _p.getInt('q_xp') ?? 0,
+        'acc' => _p.getInt('q_acc') ?? 0,
+        _ => _p.getInt('q_per') ?? 0,
+      };
+
+  Future<void> _questTick(String key, int v, {bool max = true}) async {
+    ensureQuests();
+    final old = _p.getInt(key) ?? 0;
+    await _p.setInt(key, max ? (v > old ? v : old) : v);
+    var changed = false;
+    for (final q in quests) {
+      if (q.done || questValue(q.kind) < q.target) continue;
+      q.done = true;
+      changed = true;
+      await grant([q.reward], '🎯 ${q.title(AppLanguage.badini)}');
+      pending.add(RewardEvent(FxKind.reward, q.emoji, '✅ ${q.title(AppLanguage.badini)}', '✅ ${q.title(AppLanguage.german)}',
+          '✅ ${q.title(AppLanguage.english)}', [q.reward]));
+    }
+    if (changed) await _saveQuests();
     notifyListeners();
   }
 

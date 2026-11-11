@@ -103,40 +103,32 @@ class _ShopScreenState extends State<ShopScreen> {
               Text('${ProgressService.instance.todayXp} / ${r.xpGoal} XP', style: TextStyle(color: AppColors.fg60)),
             ],
             const SizedBox(height: 18),
-            _section(tr(n, '🏅 چاوا دینار کۆم بکەم؟', '🏅 So verdienst du Dinar', '🏅 How to earn dinars')),
-            for (final (e, ku, de, en) in const [
-              ('📚', '٣ وانە د رۆژەکێ دا', '3 Lektionen an einem Tag', '3 lessons in a day'),
-              ('⚡', '١٠ یان ١٥ بەرسڤێن دروست ل دویف ئێک', '10 oder 15 richtige am Stück', '10 or 15 correct in a row'),
-              ('⏱️', '١٠ خولەک خواندن د رۆژەکێ دا', '10 Minuten lernen', '10 minutes of study'),
-              ('🎯', '٨٥٪+ د ٢–٣ وانەیێن ل دویف ئێک دا', '85 %+ in 2–3 Lektionen', '85%+ in 2–3 lessons'),
-              ('💎', '١٠٠٪ د ٣ وانەیان دا', '100 % in 3 Lektionen', '100% in 3 lessons'),
-              ('🌳', 'مەزنبوونا دارا تە', 'Dein Baum wächst', 'Your tree grows'),
-              ('🎁', 'دیاری و ئەزموون ژ مامۆستای', 'Geschenke vom Lehrer', 'Gifts from your teacher'),
-            ])
-              ListTile(
-                dense: true,
-                contentPadding: EdgeInsets.zero,
-                leading: Text(e, style: const TextStyle(fontSize: 24)),
-                title: Text(tr(n, ku, de, en), style: const TextStyle(fontWeight: FontWeight.w600)),
-                trailing: Text(tr(n, '٥–١٥ 🪙', '5–15 🪙', '5–15 🪙'), style: TextStyle(color: AppColors.goldText)),
-              ),
-            Text(tr(n, 'خەلات بۆ هەر کەسەکی یا جودایە — جاران دینار، جاران بووست یان قەشا 🎲', 'Belohnungen sind für jeden anders 🎲',
-                'Rewards vary for each person 🎲'),
-                style: TextStyle(fontSize: 12, color: AppColors.fg54)),
-            if (r.log.isNotEmpty) ...[
+            _section(tr(n, '🎯 ئەرکێن ئەڤرۆ', '🎯 Heutige Aufgaben', "🎯 Today's tasks")),
+            const QuestList(),
+            if (r.log.any((l) => l.contains(' +'))) ...[
               const SizedBox(height: 18),
-              _section(tr(n, '🧾 دویماهیک گوهۆڕین', '🧾 Verlauf', '🧾 History')),
-              for (final l in r.log.take(12))
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 2),
-                  child: Text(l, style: TextStyle(color: AppColors.fg70)),
-                ),
+              _section(tr(n, '🏅 خەلاتێن تە وەرگرتین', '🏅 Deine Belohnungen', '🏅 Rewards you got')),
+              for (final l in r.log.where((l) => l.contains(' +')).take(12)) _logRow(l, AppColors.green),
+            ],
+            if (r.log.any((l) => l.contains(' -'))) ...[
+              const SizedBox(height: 14),
+              _section(tr(n, '🛒 تشتێن تە کڕین', '🛒 Deine Käufe', '🛒 Your purchases')),
+              for (final l in r.log.where((l) => l.contains(' -')).take(12)) _logRow(l, AppColors.red),
             ],
           ]),
         ),
       ),
     );
   }
+
+  Widget _logRow(String l, Color c) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 3),
+        child: Row(children: [
+          Container(width: 6, height: 6, decoration: BoxDecoration(color: c, shape: BoxShape.circle)),
+          const SizedBox(width: 8),
+          Expanded(child: Text(l, style: TextStyle(color: AppColors.fg70))),
+        ]),
+      );
 
   String _goalReward(int g) => switch (g) {
         >= 750 => '50🪙 + ×3',
