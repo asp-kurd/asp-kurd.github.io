@@ -1,0 +1,85 @@
+@L 22 | #5C7FC4 | دوماهیا حەفتیێ | Am Wochenende | At the weekend
+
+@U a | sun | دەمێ ڤالا | Freizeit am Wochenende | Free time
+ausschlafen | ئاوسشلافن | باش و درەنگ نڤستن | to sleep in | 😴 | Am Sonntag kann ich endlich ___. | ausschlafen | aufstehen; einschlafen | یەکشەمبیێ ب دوماهی ئەز دشێم باش بنڤم.
+der Ausflug | دێر ئاوسفلووگ | گەشت (سەیران) | the trip / outing | 🧺 | Am Samstag machen wir einen ___ in die Berge. | Ausflug | Ausgang; Anflug | شەمبیێ ئەم دچینە سەیرانەکێ بۆ چیایان.
+das Konzert | داس کۆنتسێرت | ئاهەنگا مۆسیقایێ (کۆنسێرت) | the concert | 🎵
+die Ausstellung | دی ئاوسشتێلونگ | پێشانگەه | the exhibition | 🖼️ | Im Museum gibt es eine neue ___. | Ausstellung | Ausbildung; Ausfahrt | ل مۆزەخانێ پێشانگەهەکا نوو هەیە.
+der Kurs an der Volkshochschule | دێر کورس ئان دێر فۆلکسهۆخشوولە | خول ل ناڤەندا فێربوونا گەلی | a course at the adult education centre | 🧑‍🏫
+Freunde treffen | فرۆیندە ترێفن | هەڤالان دیتن | to meet friends | 👫
+Ich gehe gern ins Kino. | ئیش گێ گێرن ئینس کینۆ | ئەز حەز دکەم بچمە سینەمایێ. | I like going to the cinema. | 🎬 | Ich gehe gern ___ Kino. | ins | im; in | ئەز حەز دکەم بچمە سینەمایێ.
+Am Wochenende habe ich nichts vor. | ئام ڤۆخنێندە هابە ئیش نیشتس فۆر | دوماهیا حەفتیێ چ پلانێن من نینن. | I have no plans at the weekend. | 🗓️
+
+@U b | chat | ژڤان دانان | Sich verabreden | Making plans
+Hast du Lust, ins Kino zu gehen? | هاست دوو لوست، ئینس کینۆ تسوو گێن | حەزا تە هەیە بچینە سینەمایێ؟ | Do you fancy going to the cinema? | 🍿 | Hast du ___, ins Kino zu gehen? | Lust | Last; Luft | حەزا تە هەیە بچینە سینەمایێ؟
+Wie wäre es mit Samstag? | ڤی ڤێرە ئێس میت زامستاگ | شەمبی چاوانە؟ | How about Saturday? | 📅 | Wie ___ es mit Samstag? | wäre | war; wird | شەمبی چاوانە؟
+Da kann ich leider nicht. | دا کان ئیش لایدەر نیشت | مخابن ئەو دەم نەشێم. | Unfortunately I can't then. | 🙁
+Treffen wir uns um acht? | ترێفن ڤیر ئونس ئوم ئاخت | ئەرێ دەمژمێر هەشت ئێک ببینین؟ | Shall we meet at eight? | 🕗
+Gute Idee! Das machen wir. | گووتە ئیدێ! داس ماخن ڤیر | بیرەکا باشە! وێ دکەین. | Good idea! Let's do that. | 👍
+der Treffpunkt | دێر ترێفپونکت | جهێ دیتنێ | the meeting point | 📍 | Unser ___ ist vor dem Rathaus. | Treffpunkt | Treppe; Termin | جهێ دیتنا مە ل بەر شارەوانیێ یە.
+Ich habe keine Zeit, ich muss arbeiten. | ئیش هابە کاینە تسایت، ئیش موس ئاربایتن | دەمێ من نینە، دڤێت کار بکەم. | I have no time, I have to work. | ⏳
+Schade! Vielleicht nächstes Mal. | شادە! فیلایشت نێکستەس مال | مخابن! بەلکی جارەکا دی. | Pity! Maybe next time. | 🤷
+
+@U c | mood | خەون و داخواز | Wünsche: hätte, wäre, würde | Wishes
+Ich hätte gern mehr Freizeit. | ئیش هێتە گێرن مێر فرایتسایت | خۆزی دەمێ من یێ ڤالا پتر با. | I'd like to have more free time. | 🕊️ | Ich ___ gern mehr Freizeit. | hätte | habe; hatte | خۆزی دەمێ من یێ ڤالا پتر با.
+Ich wäre jetzt gern am Meer. | ئیش ڤێرە یێتست گێرن ئام مێر | خۆزی ئەز نوکە ل بەر دەریایێ بام. | I'd love to be at the sea now. | 🌊 | Ich ___ jetzt gern am Meer. | wäre | war; bin | خۆزی ئەز نوکە ل بەر دەریایێ بام.
+Ich würde gern Gitarre lernen. | ئیش ڤوردە گێرن گیتارە لێرنن | من دڤیا گیتارێ فێر ببم. | I'd like to learn the guitar. | 🎸 | Ich ___ gern Gitarre lernen. | würde | werde; wurde | من دڤیا گیتارێ فێر ببم.
+Wenn ich Zeit hätte, würde ich reisen. | ڤێن ئیش تسایت هێتە، ڤوردە ئیش رایزن | ئەگەر دەمێ من هەبا، دا گەشتێ کەم. | If I had time, I would travel. | ✈️
+Könntest du mir helfen? | کۆنتەست دوو میر هێلفن | تو دشێی هاریکاریا من بکەی؟ (ب ئەدەب) | Could you help me? | 🙏 | ___ du mir bitte helfen? | Könntest | Kannst du; Konntest | تو دشێی هاریکاریا من بکەی؟
+Wir könnten am Sonntag grillen. | ڤیر کۆنتن ئام زۆنتاگ گریلن | ئەم دشێین یەکشەمبیێ گۆشتێ برژاندی چێکەین. | We could have a barbecue on Sunday. | 🍢
+An deiner Stelle würde ich früher schlafen. | ئان داینەر شتێلە ڤوردە ئیش فریوەر شلافن | ئەگەر ئەز ل جهێ تە بام، دا زووتر نڤم. | If I were you, I'd go to sleep earlier. | 🛌
+Das wäre toll! | داس ڤێرە تۆل | ئەڤە دێ زۆر خۆش بیت! | That would be great! | 🤩
+@CZ Wenn ich reich ___, ___ ich ein Haus am Meer kaufen. | wäre … würde | bin … werde; hätte … würde | ئەگەر ئەز دەولەمەند بام، دا خانیەکێ ل بەر دەریایێ کڕم.
+
+@U d | tune | دیسا ژی | trotzdem | nevertheless
+Es regnet. Trotzdem gehen wir spazieren. | ئێس رێگنەت. ترۆتسدێم گێن ڤیر شپاتسیرن | باران دباریت. دیسا ژی ئەم دچینە گەڕیانێ. | It's raining. We're going for a walk anyway. | ☔ | Es regnet. ___ gehen wir spazieren. | Trotzdem | Deshalb; Weil | باران دباریت. دیسا ژی ئەم دچینە گەڕیانێ.
+Ich bin müde, aber ich lerne trotzdem. | ئیش بین میودە، ئابەر ئیش لێرنە ترۆتسدێم | ئەز وەستیایمە، بەلێ دیسا ژی دخوینم. | I'm tired, but I'm studying anyway. | 📚 | Ich bin müde, aber ich lerne ___. | trotzdem | deshalb; denn | ئەز وەستیایمە، بەلێ دیسا ژی دخوینم.
+Das Konzert war teuer. Trotzdem war es super. | داس کۆنتسێرت ڤار تۆیەر. ترۆتسدێم ڤار ئێس زوپەر | کۆنسێرت ب بها بوو. دیسا ژی زۆر خۆش بوو. | The concert was expensive. It was great anyway. | 🎤
+Er hatte Fieber und ist trotzdem zur Arbeit gegangen. | ئێر هاتە فیبەر ئوند ئیست ترۆتسدێم تسور ئاربایت گەگانگن | تا ل وی هەبوو و دیسا ژی چوو سەر کاری. | He had a fever and still went to work. | 🤒
+Obwohl es kalt ist, trägt sie keine Jacke. | ئۆپڤۆل ئێس کالت ئیست، ترێگت زی کاینە یاکە | هەرچەندە سەرمایە، ئەو چاکێتێ ناکەتە بەر خۆ. | Although it's cold, she isn't wearing a jacket. | 🥶
+Ich habe wenig Geld, trotzdem mache ich Urlaub. | ئیش هابە ڤێنیش گێلت، ترۆتسدێم ماخە ئیش ئوورلاوپ | پارێن من کێمن، دیسا ژی ئەز دچمە بێهنڤەدانێ. | I have little money, but I'm going on holiday anyway. | 🏝️
+Der Bus kam zu spät. Trotzdem war ich pünktlich. | دێر بووس کام تسوو شپێت. ترۆتسدێم ڤار ئیش پیونکتلیش | پاس دەرەنگ هات. دیسا ژی ئەز ل دەمێ خۆ بووم. | The bus was late. I was on time anyway. | 🚌
+Na und? | نا ئوند | پا چ؟ / چ دبیت؟ | So what? | 🤷‍♂️
+@CZ Das Wetter war schlecht. ___ haben wir den Ausflug ___. | Trotzdem … gemacht | Deshalb … gemacht; Trotzdem … machen | کەش خراب بوو. دیسا ژی مە سەیران کر.
+
+@D پلانا دوماهیا حەفتیێ
+Rawand: Hey Lana, hast du am Samstag schon was vor? || هەی لانا، ئەرێ تە شەمبیێ چ پلان هەیە؟
+Lana: Noch nicht. Ich würde gern mal wieder ausschlafen. || هێشتا نە. من دڤێت جارەکا دی باش بنڤم.
+Rawand: Und am Nachmittag? Hast du Lust auf ein Konzert? || و پشتی نیڤرۆ؟ حەزا تە ل کۆنسێرتەکێ هەیە؟
+Lana: Ein Konzert? Das wäre toll! Was für Musik? || کۆنسێرت؟ دێ زۆر خۆش بیت! کیژ مۆسیقا؟
+Rawand: Kurdische Musik im Park. Der Eintritt ist frei. || مۆسیقا کوردی ل پارکێ. چوونەژوور ب بێ پارە یە.
+Lana: Super! Aber das Wetter soll schlecht werden. || زۆر باشە! بەلێ دبێژن کەش دێ خراب بیت.
+Rawand: Ich gehe trotzdem hin. Wir könnten einen Schirm mitnehmen. || ئەز دیسا ژی دچم. ئەم دشێین سیبەرەکێ دگەل خۆ ببەین.
+Lana: Okay! Treffen wir uns um vier am Parkeingang? || باشە! دەمژمێر چار ل دەرگەهێ پارکێ ئێک ببینین؟
+
+@G 🌈 | Konjunktiv II: hätte, wäre, würde, könnte | شێوەیێ خۆزیێ: hätte, wäre, würde, könnte
+E: Konjunktiv II für Wünsche, Träume und höfliche Bitten: hätte (haben), wäre (sein), würde + Infinitiv (andere Verben), könnte (können). || بۆ خۆزی، خەون و داخوازا ب ئەدەب: hätte (هەبوون)، wäre (بوون)، würde + کار، könnte (شیان).
+H: | haben | sein | werden | können
+R: ich | hätte | wäre | würde | könnte
+R: du | hättest | wärst | würdest | könntest
+R: er / sie | hätte | wäre | würde | könnte
+R: wir / sie | hätten | wären | würden | könnten
+R: ihr | hättet | wärt | würdet | könntet
+X: Ich hätte gern ein Fahrrad. || خۆزی پایسکیلەک ل نک من با.
+X: Wir wären gern in Kurdistan. || خۆزی ئەم ل کوردستانێ باین.
+X: Würdest du mir das Buch leihen? || تو دێ پەرتووکێ ب دەین دەیە من؟
+T: Höflich: Könnten Sie …? Würden Sie …? || ب ئەدەب: Könnten Sie …? Würden Sie …?
+P: Ich habe kein Auto. (Wunsch) || ترومبێلا من نینە. || hätte || Ich hätte gern ein Auto. || خۆزی ترومبێلەک ل نک من با.
+P: Er ist nicht im Urlaub. (Wunsch) || ئەو نە د بێهنڤەدانێ دایە. || wäre || Er wäre gern im Urlaub. || خۆزی ئەو د بێهنڤەدانێ دا با.
+P: Kannst du das Fenster öffnen? (höflich) || تو دشێی پەنجەرێ ڤەکەی؟ || Könntest || Könntest du bitte das Fenster öffnen? || تو دشێی هیڤییە پەنجەرێ ڤەکەی؟
+M: Ich würde gern mal nach Japan fliegen. || من دڤیا جارەکێ بفڕمە ژاپۆنێ.
+M: An deiner Stelle würde ich das nicht machen. || ئەگەر ئەز ل جهێ تە بام، من ئەڤە نەدکر.
+
+@G ↩️ | trotzdem | دیسا ژی (trotzdem)
+E: „trotzdem“ zeigt einen Gegensatz: Das Ergebnis ist anders als erwartet. Nach „trotzdem“ (Position 1) kommt das Verb. || «trotzdem» دژایەتیەکێ نیشان ددەت: ئەنجام نە وەکی چاڤەڕێکری یە. پشتی trotzdem (ل جهێ ئێکێ) کار دهێت.
+H: Satz 1 | trotzdem + Verb | …
+R: Es ist kalt. | Trotzdem gehe | ich schwimmen.
+R: Ich bin krank. | Trotzdem arbeite | ich.
+R: Er hat viel gelernt. | Trotzdem hat | er die Prüfung nicht bestanden.
+X: Das Essen war nicht gut. Trotzdem haben wir alles gegessen. || خوارن نە باش بوو. دیسا ژی مە هەمی خوار.
+X: Sie hat wenig Zeit. Trotzdem hilft sie mir. || دەمێ وێ کێمە. دیسا ژی هاریکاریا من دکەت.
+X: Der Film war lang, aber ich habe ihn trotzdem gern gesehen. || فلم درێژ بوو، بەلێ دیسا ژی ب دل من دیت.
+T: deshalb = Grund ➔ Folge; trotzdem = Grund ➔ unerwartete Folge. || deshalb = لەوما؛ trotzdem = دیسا ژی (نە وەکی چاڤەڕێکری).
+P: Es regnet. Wir spielen Fußball. || باران دباریت. ئەم تۆپا پێ دکەین. || Trotzdem || Es regnet. Trotzdem spielen wir Fußball. || باران دباریت. دیسا ژی ئەم تۆپا پێ دکەین.
+P: Ich habe Hunger. Ich esse nichts. || ئەز برسیمە. ئەز چ ناخۆم. || Trotzdem || Ich habe Hunger. Trotzdem esse ich nichts. || ئەز برسیمە. دیسا ژی ئەز چ ناخۆم.
+P: Die Wohnung ist klein. Sie ist sehr schön. || خانی بچووکە. گەلەک جوانە. || trotzdem || Die Wohnung ist klein. Trotzdem ist sie sehr schön. || خانی بچووکە. دیسا ژی گەلەک جوانە.

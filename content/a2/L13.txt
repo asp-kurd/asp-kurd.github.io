@@ -1,0 +1,83 @@
+@L 27 | #C9A227 | پارە | Geld | Money
+
+@U a | city | ل بانکێ | Auf der Bank | At the bank
+ein Konto eröffnen | ئاین کۆنتۆ ئێرئۆفنن | حسابەکێ ڤەکرن | to open an account | 🏦 | Ich möchte ein Konto ___. | eröffnen | öffnet; eröffnet | ئەز دڤێم حسابەکێ ڤەکەم.
+der Geldautomat | دێر گێلتئاوتۆمات | ئامیرێ پارە دەرێخستنێ (ATM) | the cash machine | 🏧
+Geld abheben | گێلت ئاپهێبن | پارە دەرێخستن ژ حسابێ | to withdraw money | 💵 | Ich muss am Automaten Geld ___. | abheben | aufheben; abgeben | دڤێت ئەز ژ ئامیری پارێ دەرێخم.
+Geld überweisen | گێلت ئیوبەرڤایزن | پارە ڤەگوهاستن (بۆ حسابەکا دی) | to transfer money | 💸 | Ich ___ die Miete jeden Monat. | überweise | überweisen; Überweisung | ئەز هەر هەیڤ کرێیا خانی ڤەدگوهێزم.
+die Geheimzahl / die PIN | دی گەهایمتسال / دی پین | ژمارا نهێنی | the PIN | 🔢
+der Kontoauszug | دێر کۆنتۆئاوستسووگ | کەشفا حسابێ | the bank statement | 🧾
+die Zinsen | دی تسینزن | سوو (قازانجا بانکێ) | interest | 📈
+Meine Karte ist weg! | ماینە کارتە ئیست ڤێک | کارتا من بەرزە بوو! | My card is gone! | 😱
+
+@U b | shopping | کڕین و پارەدان | Einkaufen & Bezahlen | Shopping & paying
+bar bezahlen | بار بەتسالن | ب کاش پارە دان | to pay cash | 💶 | Kann ich ___ bezahlen? – Ja, natürlich. | bar | Bar; Bart | دشێم ب کاش پارەی بدەم؟ – بەلێ، هەلبەت.
+mit Karte zahlen | میت کارتە تسالن | ب کارتێ پارە دان | to pay by card | 💳
+der Rabatt | دێر راباتت | داشکاندن | the discount | 🏷️ | Heute gibt es 20 Prozent ___. | Rabatt | Rabe; Rat | ئەڤرۆ ٢٠٪ داشکاندن هەیە.
+die Quittung | دی کڤیتونگ | پسوولە (وەسل) | the receipt | 🧾 | Kann ich bitte eine ___ haben? | Quittung | Quatsch; Kuchen | دشێم پسوولەکێ وەرگرم؟
+umtauschen | ئومتاوشن | گوهۆڕینا تشتێ کڕی | to exchange (goods) | 🔄 | Die Hose ist zu klein. Kann ich sie ___? | umtauschen | umziehen; umsteigen | پانتۆل یا بچووکە. دشێم بگوهۆڕم؟
+die Garantie | دی گارانتی | زەمانەت (گەرەنتی) | the guarantee | ✅
+Das ist mir zu teuer. | داس ئیست میر تسوو تۆیەر | ئەڤە بۆ من گەلەک ب بهایە. | That's too expensive for me. | 💰
+Ich spare für ein neues Auto. | ئیش شپارە فیور ئاین نۆیەس ئاوتۆ | ئەز پارێ بۆ ترومبێلەکا نوو کۆم دکەم. | I'm saving for a new car. | 🐷 | Ich ___ für ein neues Auto. | spare | spiele; spüre | ئەز پارێ بۆ ترومبێلەکا نوو کۆم دکەم.
+
+@U c | help | ما … ؟ ئەز نزانم کا … | Wissen Sie, ob …? | Indirect questions
+Wissen Sie, wo die Bank ist? | ڤیسن زی، ڤۆ دی بانک ئیست | هوین دزانن بانک ل کیڤەیە؟ | Do you know where the bank is? | 🏦 | Wissen Sie, wo die Bank ___? | ist | sind; ist die | هوین دزانن بانک ل کیڤەیە؟
+Können Sie mir sagen, wann die Post öffnet? | کۆنن زی میر زاگن، ڤان دی پۆست ئۆفنەت | هوین دشێن بێژنە من کا پۆستە کەنگی ڤەدبیت؟ | Can you tell me when the post office opens? | 🕘 | Können Sie mir sagen, wann die Post ___? | öffnet | öffnen; öffnet sie | هوین دشێن بێژنە من پۆستە کەنگی ڤەدبیت؟
+Ich weiß nicht, ob ich genug Geld habe. | ئیش ڤایس نیشت، ئۆپ ئیش گەنووگ گێلت هابە | ئەز نزانم کا پارێن من بەس هەنە یان نە. | I don't know if I have enough money. | 🤷 | Ich weiß nicht, ___ ich genug Geld habe. | ob | wenn; dass | ئەز نزانم کا پارێن من بەس هەنە یان نە.
+Weißt du, ob der Laden heute offen ist? | ڤایست دوو، ئۆپ دێر لادن هۆیتە ئۆفن ئیست | دزانی کا دووکان ئەڤرۆ ڤەکرییە؟ | Do you know if the shop is open today? | 🏪
+Ich frage, wie viel das kostet. | ئیش فراگە، ڤی فیل داس کۆستەت | ئەز پسیار دکەم کا ئەڤە ب چەندە. | I'm asking how much it costs. | ❓
+Kannst du mir sagen, wer das gemacht hat? | کانست دوو میر زاگن، ڤێر داس گەماخت هات | تو دشێی بێژیە من کا کێ ئەڤە کر؟ | Can you tell me who did this? | 🕵️
+Ich bin nicht sicher, ob das stimmt. | ئیش بین نیشت زیشەر، ئۆپ داس شتیمت | ئەز پشتڕاست نینم کا ئەڤە راستە. | I'm not sure if that's right. | 🤔
+Erklären Sie mir bitte, was ich tun muss. | ئێرکلێرن زی میر بیتە، ڤاس ئیش توون موس | هیڤییە بۆ من رۆهن بکەن کا دڤێت ئەز چ بکەم. | Please explain what I have to do. | 📋
+@CZ Ich möchte wissen, ___ das Konto kostenlos ___. | ob … ist | dass … ist; ob … sein | ئەز دڤێم بزانم کا حساب ب بێ پارە یە.
+
+@U d | work | دهێلم … بکەت | etwas machen lassen | Having something done
+Ich lasse mein Auto reparieren. | ئیش لاسە ماین ئاوتۆ رێپاریرن | ئەز ترومبێلا خۆ ددەمە چاککرن. | I'm having my car repaired. | 🔧 | Ich ___ mein Auto reparieren. | lasse | lässt; lassen | ئەز ترومبێلا خۆ ددەمە چاککرن.
+Sie lässt sich die Haare schneiden. | زی لێست زیش دی هارە شنایدن | ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش). | She's having her hair cut. | 💇‍♀️ | Sie ___ sich die Haare schneiden. | lässt | lasst; lasse | ئەو پرچا خۆ ددەتە کورتکرن.
+Wir lassen die Wohnung streichen. | ڤیر لاسن دی ڤۆنونگ شترایشن | ئەم خانی ددەینە بۆیاغکرن. | We're having the flat painted. | 🎨
+Lass mich in Ruhe! | لاس میش ئین رووە | من ب ئارامی بهێلە! | Leave me alone! | 🙅
+Lass uns gehen! | لاس ئونس گێن | وەرە ئەم بچین! | Let's go! | 🚶‍♂️ | ___ uns gehen! | Lass | Lasst; Lässt | وەرە ئەم بچین!
+Ich habe das Kleid reinigen lassen. | ئیش هابە داس کلایت راینیگن لاسن | من جلک دانا شویشتنا وشک. | I had the dress cleaned. | 👗
+Wo kann ich meinen Pass verlängern lassen? | ڤۆ کان ئیش ماینن پاس فێرلێنگەرن لاسن | ل کیڤە دشێم پاسپۆرتا خۆ درێژ بکەم (نوو بکەم)؟ | Where can I get my passport renewed? | 🛂
+Lassen Sie Ihr Handy bitte hier. | لاسن زی ئیر هێندی بیتە هیر | هیڤییە مۆبایلا خۆ ل ڤێرێ بهێلن. | Please leave your phone here. | 📵
+
+@D ل بانکێ
+Kundin: Guten Tag. Ich möchte ein Konto eröffnen. || رۆژ باش. ئەز دڤێم حسابەکێ ڤەکەم.
+Bankberater: Gern. Haben Sie Ihren Ausweis dabei? || ب دل. ناسناما هەوە دگەل هەوە یە؟
+Kundin: Ja, hier. Können Sie mir sagen, ob das Konto etwas kostet? || بەلێ، ئەڤە. هوین دشێن بێژنە من کا حساب پارە دڤێت؟
+Bankberater: Für Studenten ist es kostenlos. Sie bekommen auch eine Karte. || بۆ قوتابیان ب بێ پارە یە. هوین کارتەکێ ژی وەردگرن.
+Kundin: Super. Und wissen Sie, wie lange das dauert? || زۆر باشە. و دزانن چەند دەم دکێشیت؟
+Bankberater: Die Karte kommt in einer Woche per Post. Die PIN schicken wir extra. || کارت ب پۆستێ د حەفتیەکێ دا دهێت. ژمارا نهێنی ب جودا دهنێرین.
+Kundin: Kann ich damit auch Geld in den Irak überweisen? || ئەرێ دشێم پێ پارێ بۆ عیراقێ ژی ڤەگوهێزم؟
+Bankberater: Ja, das geht online. Ich zeige es Ihnen. || بەلێ، ب ئۆنلاین دبیت. ئەز دێ نیشا هەوە دەم.
+
+@G ❔ | Indirekte Fragen: ob, wo, wann, wie … | پرسیارێن نەراستەوخۆ
+E: Nach „Wissen Sie …?“, „Können Sie mir sagen …?“, „Ich weiß nicht …“: W-Wort oder „ob“ (bei Ja/Nein-Fragen), Verb am Ende. || پشتی «هوین دزانن …؟»: پەیڤا پرسیارێ (wo, wann …) یان «ob» (بۆ پرسیارا بەلێ/نە)، کار ل دوماهیێ.
+H: direkte Frage | indirekte Frage
+R: Wo ist die Bank? | Wissen Sie, wo die Bank ist?
+R: Wann kommt der Bus? | Ich weiß nicht, wann der Bus kommt.
+R: Ist das Konto kostenlos? | Ich frage, ob das Konto kostenlos ist.
+R: Hat er Zeit? | Weißt du, ob er Zeit hat?
+X: Können Sie mir sagen, wie spät es ist? || هوین دشێن بێژنە من کا دەمژمێر چەندە؟
+X: Ich weiß nicht, ob ich morgen komme. || ئەز نزانم کا سبەی دێ هێم یان نە.
+X: Weißt du, warum sie nicht da ist? || دزانی بۆچی ئەو ل ڤێرێ نینە؟
+T: Ja/Nein-Frage ➔ ob. W-Frage ➔ W-Wort. Immer: Verb am Ende! || پرسیارا بەلێ/نە ➔ ob. پرسیارا W ➔ پەیڤا W. هەردەم: کار ل دوماهیێ!
+P: Wo ist der Bahnhof? (Wissen Sie …) || وێستگەه ل کیڤەیە؟ || indirekt || Wissen Sie, wo der Bahnhof ist? || هوین دزانن وێستگەه ل کیڤەیە؟
+P: Kommt Lana heute? (Weißt du …) || ئەرێ لانا ئەڤرۆ دهێت؟ || ob || Weißt du, ob Lana heute kommt? || دزانی کا لانا ئەڤرۆ دهێت؟
+P: Was kostet das? (Ich möchte wissen …) || ئەڤە ب چەندە؟ || indirekt || Ich möchte wissen, was das kostet. || ئەز دڤێم بزانم ئەڤە ب چەندە.
+
+@G 🛠️ | lassen | lassen (هێلان / دانە کرن)
+E: lassen + Infinitiv: Jemand anders macht es für mich (Ich lasse das Auto reparieren). Auch: erlauben / nicht mitnehmen (Lass mich gehen! Ich lasse das Handy zu Hause). || lassen + کار: کەسەکێ دی بۆ من دکەت (ئەز ترومبێلێ ددەمە چاککرن). هەروەسا: هێلان (ل مال دهێلم) و رێدان.
+H: Person | lassen
+R: ich | lasse
+R: du | lässt
+R: er / sie / es | lässt
+R: wir / sie / Sie | lassen
+R: ihr | lasst
+X: Ich lasse meine Jacke reinigen. || ئەز چاکێتا خۆ ددەمە شویشتنێ.
+X: Lässt du dir die Haare schneiden? || تو پرچا خۆ ددەیە کورتکرن؟
+X: Wir lassen das Auto heute stehen und gehen zu Fuß. || ئەم ئەڤرۆ ترومبێلێ دهێلین و ب پێیان دچین.
+T: Perfekt: Ich habe das Auto reparieren lassen (nicht: gelassen). || Perfekt: Ich habe das Auto reparieren lassen.
+P: Der Friseur schneidet mir die Haare. (lassen) || سەرتراش پرچا من کورت دکەت. || lassen || Ich lasse mir die Haare schneiden. || ئەز پرچا خۆ ددەمە کورتکرن.
+P: Der Mechaniker repariert unser Auto. (lassen) || میکانیکی ترومبێلا مە چاک دکەت. || lassen || Wir lassen unser Auto reparieren. || ئەم ترومبێلا خۆ ددەینە چاککرن.
+P: Ein Maler streicht seine Wohnung. (lassen) || بۆیاغچی خانیێ وی بۆیاغ دکەت. || lassen || Er lässt seine Wohnung streichen. || ئەو خانیێ خۆ ددەتە بۆیاغکرن.

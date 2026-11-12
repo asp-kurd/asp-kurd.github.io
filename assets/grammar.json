@@ -6808,6 +6808,1724 @@
      }
     }
    ]
+  },
+  {
+   "n": 21,
+   "topics": [
+    {
+     "emoji": "🎁",
+     "title": {
+      "de": "Verben mit Dativ und Akkusativ",
+      "ku": "کار ب دوو بەرکاران (Dativ + Akkusativ)"
+     },
+     "head": [
+      "",
+      "Dativ (wem?)",
+      "Akkusativ (was?)"
+     ],
+     "rows": [
+      [
+       "Ich schenke",
+       "meinem Bruder",
+       "ein Handy."
+      ],
+      [
+       "Er zeigt",
+       "der Lehrerin",
+       "sein Heft."
+      ],
+      [
+       "Wir bringen",
+       "den Kindern",
+       "Kuchen."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich gebe dem Kellner Trinkgeld.",
+       "ku": "ئەز بەخشیشێ ددەمە گارسۆنی."
+      },
+      {
+       "de": "Zeig mir bitte deine Fotos!",
+       "ku": "هیڤییە وێنەیێن خۆ نیشا من بدە!"
+      },
+      {
+       "de": "Sie schickt ihrer Freundin eine Postkarte.",
+       "ku": "ئەو کارتەکێ بۆ هەڤالا خۆ دهنێریت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich schenke ___ Mutter Blumen. (meine)",
+       "qku": "ئەز گولان دیاری ددەمە دایکا خۆ.",
+       "cue": "Dativ",
+       "a": "Ich schenke meiner Mutter Blumen.",
+       "aku": "ئەز گولان دیاری ددەمە دایکا خۆ."
+      },
+      {
+       "q": "Er gibt ___ Kind einen Apfel. (das)",
+       "qku": "ئەو سێڤەکێ ددەتە زارۆکی.",
+       "cue": "Dativ",
+       "a": "Er gibt dem Kind einen Apfel.",
+       "aku": "ئەو سێڤەکێ ددەتە زارۆکی."
+      },
+      {
+       "q": "Wir zeigen ___ Gästen die Stadt. (die)",
+       "qku": "ئەم باژێڕی نیشا میڤانان ددەین.",
+       "cue": "Dativ",
+       "a": "Wir zeigen den Gästen die Stadt.",
+       "aku": "ئەم باژێڕی نیشا میڤانان ددەین."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "geben, schenken, bringen, zeigen, schicken: Person im Dativ (wem?), Sache im Akkusativ (was?).",
+      "ku": "geben, schenken, bringen, zeigen, schicken: مرۆڤ ب Dativ (بۆ کێ؟)، تشت ب Akkusativ (چ؟)."
+     },
+     "tip": {
+      "de": "Dativ-Artikel: dem (m/n), der (f), den + -n (Plural).",
+      "ku": "ئارتیکلێن Dativ: dem (نێر/بێلایەن)، der (مێ)، den + -n (کۆ)."
+     }
+    },
+    {
+     "emoji": "🔄",
+     "title": {
+      "de": "Stellung der Objekte",
+      "ku": "جهێ بەرکاران د رستێ دا"
+     },
+     "head": [
+      "",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "rows": [
+      [
+       "Ich schenke",
+       "meinem Bruder",
+       "das Buch."
+      ],
+      [
+       "Ich schenke",
+       "ihm",
+       "das Buch."
+      ],
+      [
+       "Ich schenke es",
+       "ihm.",
+       "—"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Gibst du mir den Schlüssel? – Ja, ich gebe ihn dir.",
+       "ku": "تو کلیلێ ددەیە من؟ – بەلێ، ئەز دێ دەمە تە."
+      },
+      {
+       "de": "Hast du Papa das Foto gezeigt? – Ja, ich habe es ihm gezeigt.",
+       "ku": "تە وێنە نیشا بابێ دا؟ – بەلێ، من نیشا وی دا."
+      },
+      {
+       "de": "Ich bringe euch die Pizza. – Bring sie uns bitte schnell!",
+       "ku": "ئەز پیتزایێ بۆ هەوە دئینم. – هیڤییە ب لەز بینە!"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich gebe meiner Schwester das Handy. (Pronomen)",
+       "qku": "ئەز مۆبایلێ ددەمە خویشکا خۆ.",
+       "cue": "es ihr",
+       "a": "Ich gebe es ihr.",
+       "aku": "ئەز وێ ددەمە وێ."
+      },
+      {
+       "q": "Er schickt seinem Freund die E-Mail. (Pronomen)",
+       "qku": "ئەو ئیمەیلێ بۆ هەڤالێ خۆ دهنێریت.",
+       "cue": "sie ihm",
+       "a": "Er schickt sie ihm.",
+       "aku": "ئەو وێ بۆ وی دهنێریت."
+      },
+      {
+       "q": "Wir schenken den Kindern die Bälle. (Pronomen)",
+       "qku": "ئەم تۆپان دیاری ددەینە زارۆکان.",
+       "cue": "sie ihnen",
+       "a": "Wir schenken sie ihnen.",
+       "aku": "ئەم وان ددەینە وان."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Zwei Nomen: Dativ vor Akkusativ. Akkusativ als Pronomen: Pronomen zuerst (Ich schenke es ihm).",
+      "ku": "دوو ناڤ: Dativ بەری Akkusativ. ئەگەر Akkusativ جهێناڤ بیت: جهێناڤ ل پێشیێ (Ich schenke es ihm)."
+     }
+    },
+    {
+     "emoji": "🏷️",
+     "title": {
+      "de": "von + Dativ",
+      "ku": "von + Dativ (یێ کێ؟ / ژ کێ؟)"
+     },
+     "head": [
+      "",
+      "von + Dativ"
+     ],
+     "rows": [
+      [
+       "der Onkel",
+       "vom (von dem) Onkel"
+      ],
+      [
+       "das Kind",
+       "vom Kind"
+      ],
+      [
+       "die Tante",
+       "von der Tante"
+      ],
+      [
+       "die Eltern",
+       "von den Eltern"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Blumen sind von meinem Mann.",
+       "ku": "گول ژ زەلامێ منن."
+      },
+      {
+       "de": "Ich habe eine Karte von meinen Eltern bekommen.",
+       "ku": "من کارتەک ژ دایک و بابێن خۆ وەرگرت."
+      },
+      {
+       "de": "Das ist das Fahrrad von meiner Nichte.",
+       "ku": "ئەڤە پایسکیلا برازایا منە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Von wem ist das Geschenk? (mein Onkel)",
+       "qku": "ئەڤ دیاریە ژ کێیە؟ (مامێ من)",
+       "cue": "von + Dativ",
+       "a": "Es ist von meinem Onkel.",
+       "aku": "ژ مامێ منە."
+      },
+      {
+       "q": "Von wem ist der Brief? (die Firma)",
+       "qku": "ئەڤ نامە ژ کێیە؟ (کۆمپانیا)",
+       "cue": "von + Dativ",
+       "a": "Er ist von der Firma.",
+       "aku": "ژ کۆمپانیایێ یە."
+      },
+      {
+       "q": "Wessen Auto ist das? (mein Nachbar)",
+       "qku": "ئەڤ ترومبێلە یا کێیە؟ (جیرانێ من)",
+       "cue": "von + Dativ",
+       "a": "Das ist das Auto von meinem Nachbarn.",
+       "aku": "ئەڤە ترومبێلا جیرانێ منە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "„von“ hat immer Dativ: Das Geschenk ist von meiner Tante. Auch für Besitz: das Auto von meinem Vater.",
+      "ku": "«von» هەردەم Dativ: دیاری ژ مەتا منە. بۆ خودانداریێ ژی: ترومبێلا بابێ من."
+     }
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "topics": [
+    {
+     "emoji": "🌈",
+     "title": {
+      "de": "Konjunktiv II: hätte, wäre, würde, könnte",
+      "ku": "شێوەیێ خۆزیێ: hätte, wäre, würde, könnte"
+     },
+     "head": [
+      "",
+      "haben",
+      "sein",
+      "werden",
+      "können"
+     ],
+     "rows": [
+      [
+       "ich",
+       "hätte",
+       "wäre",
+       "würde",
+       "könnte"
+      ],
+      [
+       "du",
+       "hättest",
+       "wärst",
+       "würdest",
+       "könntest"
+      ],
+      [
+       "er / sie",
+       "hätte",
+       "wäre",
+       "würde",
+       "könnte"
+      ],
+      [
+       "wir / sie",
+       "hätten",
+       "wären",
+       "würden",
+       "könnten"
+      ],
+      [
+       "ihr",
+       "hättet",
+       "wärt",
+       "würdet",
+       "könntet"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich hätte gern ein Fahrrad.",
+       "ku": "خۆزی پایسکیلەک ل نک من با."
+      },
+      {
+       "de": "Wir wären gern in Kurdistan.",
+       "ku": "خۆزی ئەم ل کوردستانێ باین."
+      },
+      {
+       "de": "Würdest du mir das Buch leihen?",
+       "ku": "تو دێ پەرتووکێ ب دەین دەیە من؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich habe kein Auto. (Wunsch)",
+       "qku": "ترومبێلا من نینە.",
+       "cue": "hätte",
+       "a": "Ich hätte gern ein Auto.",
+       "aku": "خۆزی ترومبێلەک ل نک من با."
+      },
+      {
+       "q": "Er ist nicht im Urlaub. (Wunsch)",
+       "qku": "ئەو نە د بێهنڤەدانێ دایە.",
+       "cue": "wäre",
+       "a": "Er wäre gern im Urlaub.",
+       "aku": "خۆزی ئەو د بێهنڤەدانێ دا با."
+      },
+      {
+       "q": "Kannst du das Fenster öffnen? (höflich)",
+       "qku": "تو دشێی پەنجەرێ ڤەکەی؟",
+       "cue": "Könntest",
+       "a": "Könntest du bitte das Fenster öffnen?",
+       "aku": "تو دشێی هیڤییە پەنجەرێ ڤەکەی؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich würde gern mal nach Japan fliegen.",
+       "ku": "من دڤیا جارەکێ بفڕمە ژاپۆنێ."
+      },
+      {
+       "de": "An deiner Stelle würde ich das nicht machen.",
+       "ku": "ئەگەر ئەز ل جهێ تە بام، من ئەڤە نەدکر."
+      }
+     ],
+     "explain": {
+      "de": "Konjunktiv II für Wünsche, Träume und höfliche Bitten: hätte (haben), wäre (sein), würde + Infinitiv (andere Verben), könnte (können).",
+      "ku": "بۆ خۆزی، خەون و داخوازا ب ئەدەب: hätte (هەبوون)، wäre (بوون)، würde + کار، könnte (شیان)."
+     },
+     "tip": {
+      "de": "Höflich: Könnten Sie …? Würden Sie …?",
+      "ku": "ب ئەدەب: Könnten Sie …? Würden Sie …?"
+     }
+    },
+    {
+     "emoji": "↩️",
+     "title": {
+      "de": "trotzdem",
+      "ku": "دیسا ژی (trotzdem)"
+     },
+     "head": [
+      "Satz 1",
+      "trotzdem + Verb",
+      "…"
+     ],
+     "rows": [
+      [
+       "Es ist kalt.",
+       "Trotzdem gehe",
+       "ich schwimmen."
+      ],
+      [
+       "Ich bin krank.",
+       "Trotzdem arbeite",
+       "ich."
+      ],
+      [
+       "Er hat viel gelernt.",
+       "Trotzdem hat",
+       "er die Prüfung nicht bestanden."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Essen war nicht gut. Trotzdem haben wir alles gegessen.",
+       "ku": "خوارن نە باش بوو. دیسا ژی مە هەمی خوار."
+      },
+      {
+       "de": "Sie hat wenig Zeit. Trotzdem hilft sie mir.",
+       "ku": "دەمێ وێ کێمە. دیسا ژی هاریکاریا من دکەت."
+      },
+      {
+       "de": "Der Film war lang, aber ich habe ihn trotzdem gern gesehen.",
+       "ku": "فلم درێژ بوو، بەلێ دیسا ژی ب دل من دیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Es regnet. Wir spielen Fußball.",
+       "qku": "باران دباریت. ئەم تۆپا پێ دکەین.",
+       "cue": "Trotzdem",
+       "a": "Es regnet. Trotzdem spielen wir Fußball.",
+       "aku": "باران دباریت. دیسا ژی ئەم تۆپا پێ دکەین."
+      },
+      {
+       "q": "Ich habe Hunger. Ich esse nichts.",
+       "qku": "ئەز برسیمە. ئەز چ ناخۆم.",
+       "cue": "Trotzdem",
+       "a": "Ich habe Hunger. Trotzdem esse ich nichts.",
+       "aku": "ئەز برسیمە. دیسا ژی ئەز چ ناخۆم."
+      },
+      {
+       "q": "Die Wohnung ist klein. Sie ist sehr schön.",
+       "qku": "خانی بچووکە. گەلەک جوانە.",
+       "cue": "trotzdem",
+       "a": "Die Wohnung ist klein. Trotzdem ist sie sehr schön.",
+       "aku": "خانی بچووکە. دیسا ژی گەلەک جوانە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "„trotzdem“ zeigt einen Gegensatz: Das Ergebnis ist anders als erwartet. Nach „trotzdem“ (Position 1) kommt das Verb.",
+      "ku": "«trotzdem» دژایەتیەکێ نیشان ددەت: ئەنجام نە وەکی چاڤەڕێکری یە. پشتی trotzdem (ل جهێ ئێکێ) کار دهێت."
+     },
+     "tip": {
+      "de": "deshalb = Grund ➔ Folge; trotzdem = Grund ➔ unerwartete Folge.",
+      "ku": "deshalb = لەوما؛ trotzdem = دیسا ژی (نە وەکی چاڤەڕێکری)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "topics": [
+    {
+     "emoji": "🎨",
+     "title": {
+      "de": "Adjektivdeklination nach ein-, kein-, mein-",
+      "ku": "سالۆخ پشتی ein / kein / mein"
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Nom.",
+       "ein neuer Rucksack",
+       "ein neues Handy",
+       "eine neue Tasche",
+       "keine neuen Schuhe"
+      ],
+      [
+       "Akk.",
+       "einen neuen Rucksack",
+       "ein neues Handy",
+       "eine neue Tasche",
+       "keine neuen Schuhe"
+      ],
+      [
+       "Dat.",
+       "einem neuen Rucksack",
+       "einem neuen Handy",
+       "einer neuen Tasche",
+       "keinen neuen Schuhen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich habe einen roten Mantel gekauft.",
+       "ku": "من بالتۆیەکێ سۆر کڕی."
+      },
+      {
+       "de": "Das ist ein schönes Foto.",
+       "ku": "ئەڤە وێنەیەکێ جوانە."
+      },
+      {
+       "de": "Sie wohnt in einer kleinen Wohnung.",
+       "ku": "ئەو د خانیەکێ بچووک دا دژیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Das ist ein ___ Auto. (neu)",
+       "qku": "ئەڤە ترومبێلەکا نوویە.",
+       "cue": "-es",
+       "a": "Das ist ein neues Auto.",
+       "aku": "ئەڤە ترومبێلەکا نوویە."
+      },
+      {
+       "q": "Ich suche einen ___ Tisch. (groß)",
+       "qku": "ئەز ل مێزەکا مەزن دگەڕێم.",
+       "cue": "-en",
+       "a": "Ich suche einen großen Tisch.",
+       "aku": "ئەز ل مێزەکا مەزن دگەڕێم."
+      },
+      {
+       "q": "Er fährt mit seinem ___ Fahrrad. (alt)",
+       "qku": "ئەو ب پایسکیلا خۆ یا کەڤن دچیت.",
+       "cue": "-en",
+       "a": "Er fährt mit seinem alten Fahrrad.",
+       "aku": "ئەو ب پایسکیلا خۆ یا کەڤن دچیت."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Nach ein-/kein-/mein- zeigt das Adjektiv das Genus: -er (m, Nom.), -es (n), -e (f). Im Akkusativ maskulin: -en. Im Dativ und Plural: -en.",
+      "ku": "پشتی ein/kein/mein، سالۆخ رەگەزێ نیشان ددەت: -er (نێر)، -es (بێلایەن)، -e (مێ). Akkusativ نێر: -en. Dativ و کۆ: -en."
+     },
+     "tip": {
+      "de": "Wenn der Artikel das Genus nicht zeigt (ein, mein), zeigt es das Adjektiv!",
+      "ku": "ئەگەر ئارتیکل رەگەزی نیشان نەدەت (ein)، سالۆخ نیشان ددەت!"
+     }
+    },
+    {
+     "emoji": "⚖️",
+     "title": {
+      "de": "Komparativ und Superlativ · als / wie",
+      "ku": "بەراوردکرن: باشتر، باشترین، وەکی"
+     },
+     "head": [
+      "Grundform",
+      "Komparativ",
+      "Superlativ"
+     ],
+     "rows": [
+      [
+       "billig",
+       "billiger",
+       "am billigsten"
+      ],
+      [
+       "alt",
+       "älter",
+       "am ältesten"
+      ],
+      [
+       "groß",
+       "größer",
+       "am größten"
+      ],
+      [
+       "gut",
+       "besser",
+       "am besten"
+      ],
+      [
+       "gern",
+       "lieber",
+       "am liebsten"
+      ],
+      [
+       "viel",
+       "mehr",
+       "am meisten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Berlin ist größer als München.",
+       "ku": "بەرلین ژ میونشنێ مەزنترە."
+      },
+      {
+       "de": "Ich bin so alt wie du.",
+       "ku": "ئەز وەکی تە ب ژی مە."
+      },
+      {
+       "de": "Im Winter ist es am kältesten.",
+       "ku": "ل زڤستانێ ژ هەمییان سارترە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Das Auto ist schnell. Das Fahrrad ist nicht so schnell.",
+       "qku": "ترومبێل زوو دچیت، پایسکیل نە ئەوقاس.",
+       "cue": "als",
+       "a": "Das Auto ist schneller als das Fahrrad.",
+       "aku": "ترومبێل ژ پایسکیلێ زووترە."
+      },
+      {
+       "q": "Tee ist gesund. Wasser ist gesund. (gleich)",
+       "qku": "چا ساخلەمە. ئاڤ ساخلەمە.",
+       "cue": "so … wie",
+       "a": "Tee ist so gesund wie Wasser.",
+       "aku": "چا وەکی ئاڤێ ساخلەمە."
+      },
+      {
+       "q": "Welcher Berg ist hoch? (der höchste)",
+       "qku": "کیژ چیا ژ هەمییان بلندترە؟",
+       "cue": "am … -sten",
+       "a": "Dieser Berg ist am höchsten.",
+       "aku": "ئەڤ چیایە ژ هەمییان بلندترە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Komparativ: Adjektiv + -er (schnell ➔ schneller) + als. Gleich: so … wie. Superlativ: am … -sten. Oft Umlaut: alt ➔ älter.",
+      "ku": "بەراورد: سالۆخ + -er + als (ژ). وەکی ئێک: so … wie. باشترین: am … -sten."
+     },
+     "tip": {
+      "de": "Komparativ + als / so … wie — nie „als wie“!",
+      "ku": "Komparativ + als؛ وەکی ئێک: so … wie."
+     }
+    },
+    {
+     "emoji": "🚫",
+     "title": {
+      "de": "Wortbildung: -los",
+      "ku": "پەیڤ چێکرن: -los (بێ …)"
+     },
+     "head": [
+      "Nomen",
+      "Adjektiv",
+      "Bedeutung"
+     ],
+     "rows": [
+      [
+       "die Arbeit",
+       "arbeitslos",
+       "ohne Arbeit"
+      ],
+      [
+       "die Kosten",
+       "kostenlos",
+       "ohne Kosten"
+      ],
+      [
+       "der Nutzen",
+       "nutzlos",
+       "ohne Nutzen"
+      ],
+      [
+       "die Sorge",
+       "sorglos",
+       "ohne Sorgen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Der Eintritt ist kostenlos.",
+       "ku": "چوونەژوور ب بێ پارە یە."
+      },
+      {
+       "de": "Mein Onkel ist seit Mai arbeitslos.",
+       "ku": "مامێ من ژ گولانێ ڤە بێکارە."
+      },
+      {
+       "de": "Ohne Akku ist das Handy nutzlos.",
+       "ku": "بێ پاتری مۆبایل بێ مفایە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Er hat keine Arbeit. Er ist ___.",
+       "qku": "کارێ وی نینە.",
+       "cue": "-los",
+       "a": "Er ist arbeitslos.",
+       "aku": "ئەو بێکارە."
+      },
+      {
+       "q": "Das kostet nichts. Es ist ___.",
+       "qku": "ئەڤە ب بێ پارە یە.",
+       "cue": "-los",
+       "a": "Es ist kostenlos.",
+       "aku": "ئەڤە ب بێ پارە یە."
+      },
+      {
+       "q": "Sie hat keine Sorgen. Sie ist ___.",
+       "qku": "وێ چ خەم نینن.",
+       "cue": "-los",
+       "a": "Sie ist sorglos.",
+       "aku": "ئەو بێ خەمە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Nomen + -los = ohne etwas: arbeitslos, kostenlos, nutzlos, hoffnungslos.",
+      "ku": "ناڤ + -los = بێ تشتەکی: arbeitslos (بێ کار)، kostenlos (ب بێ پارە)، nutzlos (بێ مفا)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "topics": [
+    {
+     "emoji": "🏭",
+     "title": {
+      "de": "Passiv Präsens",
+      "ku": "Passiv (دهێتە کرن)"
+     },
+     "head": [
+      "Person",
+      "werden",
+      "Partizip II"
+     ],
+     "rows": [
+      [
+       "ich",
+       "werde",
+       "gefragt"
+      ],
+      [
+       "du",
+       "wirst",
+       "gefragt"
+      ],
+      [
+       "er / sie / es",
+       "wird",
+       "gefragt"
+      ],
+      [
+       "wir / sie / Sie",
+       "werden",
+       "gefragt"
+      ],
+      [
+       "ihr",
+       "werdet",
+       "gefragt"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Essen wird gekocht.",
+       "ku": "خوارن دهێتە چێکرن."
+      },
+      {
+       "de": "Die Fenster werden geputzt.",
+       "ku": "پەنجەرە دهێنە پاقژکرن."
+      },
+      {
+       "de": "Ich werde oft nach meiner Heimat gefragt.",
+       "ku": "گەلەک جاران پسیار ل سەر وەلاتێ من ژ من دهێتە کرن."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Man repariert das Auto.",
+       "qku": "مرۆڤ ترومبێلێ چاک دکەت.",
+       "cue": "Passiv",
+       "a": "Das Auto wird repariert.",
+       "aku": "ترومبێل دهێتە چاککرن."
+      },
+      {
+       "q": "Man schreibt die Briefe.",
+       "qku": "مرۆڤ نامان دنڤیسیت.",
+       "cue": "Passiv",
+       "a": "Die Briefe werden geschrieben.",
+       "aku": "نامە دهێنە نڤیسین."
+      },
+      {
+       "q": "Man öffnet die Tür um acht.",
+       "qku": "مرۆڤ دەرگەهی دەمژمێر هەشت ڤەدکەت.",
+       "cue": "Passiv",
+       "a": "Die Tür wird um acht geöffnet.",
+       "aku": "دەرگەه دەمژمێر هەشت دهێتە ڤەکرن."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Passiv: werden + Partizip II. Wichtig ist die Handlung, nicht die Person.",
+      "ku": "Passiv: werden + Partizip II. کار یێ گرنگە، نە کەسێ کو دکەت."
+     },
+     "tip": {
+      "de": "Aktiv: Der Postbote bringt das Paket. Passiv: Das Paket wird gebracht.",
+      "ku": "چالاک: پۆستەچی پاکەتێ دئینیت. Passiv: پاکەت دهێتە ئینان."
+     }
+    },
+    {
+     "emoji": "🎨",
+     "title": {
+      "de": "Adjektiv nach der/die/das · Was für ein?",
+      "ku": "سالۆخ پشتی der/die/das · چ جۆرە؟"
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Nom.",
+       "der neue Laptop",
+       "das neue Handy",
+       "die neue Tasche",
+       "die neuen Schuhe"
+      ],
+      [
+       "Akk.",
+       "den neuen Laptop",
+       "das neue Handy",
+       "die neue Tasche",
+       "die neuen Schuhe"
+      ],
+      [
+       "Dat.",
+       "dem neuen Laptop",
+       "dem neuen Handy",
+       "der neuen Tasche",
+       "den neuen Schuhen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Der kleine Hund heißt Bobby.",
+       "ku": "ناڤێ سەیێ بچووک بۆبییە."
+      },
+      {
+       "de": "Ich wohne in dem gelben Haus.",
+       "ku": "ئەز د خانیێ زەر دا دژیم."
+      },
+      {
+       "de": "Was für ein Auto möchtest du? – Ein kleines.",
+       "ku": "چ جۆرە ترومبێلەک تە دڤێت؟ – ئێکا بچووک."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich kaufe ___ Jacke. (die / schwarz)",
+       "qku": "ئەز چاکێتا رەش دکڕم.",
+       "cue": "-e",
+       "a": "Ich kaufe die schwarze Jacke.",
+       "aku": "ئەز چاکێتا رەش دکڕم."
+      },
+      {
+       "q": "Er spricht mit ___ Kollegen. (der / neu)",
+       "qku": "ئەو دگەل هەڤکارێ نوو دئاخڤیت.",
+       "cue": "-en",
+       "a": "Er spricht mit dem neuen Kollegen.",
+       "aku": "ئەو دگەل هەڤکارێ نوو دئاخڤیت."
+      },
+      {
+       "q": "___ Handy hast du? (Art?)",
+       "qku": "چ جۆرە مۆبایلەک ل نک تە هەیە؟",
+       "cue": "Was für ein",
+       "a": "Was für ein Handy hast du?",
+       "aku": "چ جۆرە مۆبایلەک ل نک تە هەیە؟"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Nach dem bestimmten Artikel: Nominativ singular -e, sonst meistens -en. Frage nach der Art: Was für ein …?",
+      "ku": "پشتی der/die/das: Nominativ تاک -e، یێن دی پتر -en. پرسیار ل سەر جۆری: Was für ein …?"
+     }
+    },
+    {
+     "emoji": "🔤",
+     "title": {
+      "de": "Wortbildung: -ung, un-",
+      "ku": "پەیڤ چێکرن: -ung و un-"
+     },
+     "head": [
+      "Verb",
+      "Nomen (-ung)"
+     ],
+     "rows": [
+      [
+       "wohnen",
+       "die Wohnung"
+      ],
+      [
+       "liefern",
+       "die Lieferung"
+      ],
+      [
+       "verbinden",
+       "die Verbindung"
+      ],
+      [
+       "bestellen",
+       "die Bestellung"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Bestellung ist angekommen.",
+       "ku": "داخوازی (ئۆردەر) گەهشت."
+      },
+      {
+       "de": "Das ist unwichtig.",
+       "ku": "ئەڤە نە گرنگە."
+      },
+      {
+       "de": "Der Test war ungefährlich.",
+       "ku": "تاقیکرن بێ مەترسی بوو."
+      }
+     ],
+     "practice": [
+      {
+       "q": "einladen ➔ die ___",
+       "qku": "داخوازکرن ➔ داخوازی",
+       "cue": "-ung",
+       "a": "die Einladung",
+       "aku": "داخوازی (دەعوەت)"
+      },
+      {
+       "q": "möglich ➔ ___ (Gegenteil)",
+       "qku": "گونجای ➔ نەگونجای",
+       "cue": "un-",
+       "a": "unmöglich",
+       "aku": "نەگونجای"
+      },
+      {
+       "q": "zufrieden ➔ ___ (Gegenteil)",
+       "qku": "رازی ➔ نە رازی",
+       "cue": "un-",
+       "a": "unzufrieden",
+       "aku": "نە رازی"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Verb + -ung ➔ Nomen (immer „die“): wohnen ➔ die Wohnung. un- + Adjektiv = Gegenteil: freundlich ➔ unfreundlich.",
+      "ku": "کار + -ung ➔ ناڤ (هەردەم die). un- + سالۆخ = دژ: freundlich ➔ unfreundlich."
+     }
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "topics": [
+    {
+     "emoji": "🧭",
+     "title": {
+      "de": "Lokale Präpositionen",
+      "ku": "پێشگرێن جهی"
+     },
+     "head": [
+      "Präposition",
+      "Kasus",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "aus",
+       "Dativ",
+       "aus dem Haus"
+      ],
+      [
+       "von",
+       "Dativ",
+       "vom Bahnhof"
+      ],
+      [
+       "an … vorbei",
+       "Dativ",
+       "am Park vorbei"
+      ],
+      [
+       "bis zu",
+       "Dativ",
+       "bis zur Ampel"
+      ],
+      [
+       "gegenüber",
+       "Dativ",
+       "gegenüber vom Kino"
+      ],
+      [
+       "durch",
+       "Akkusativ",
+       "durch den Wald"
+      ],
+      [
+       "entlang",
+       "Akkusativ (danach)",
+       "den Fluss entlang"
+      ],
+      [
+       "um … herum",
+       "Akkusativ",
+       "um den See herum"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich komme gerade vom Arzt.",
+       "ku": "ئەز نوکە ژ نک نوژداری دهێم."
+      },
+      {
+       "de": "Der Bus fährt durch die Stadt.",
+       "ku": "پاس ب ناڤ باژێڕی را دچیت."
+      },
+      {
+       "de": "Wir laufen um den See herum.",
+       "ku": "ئەم ل دۆر گۆلێ دگەڕین."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Geh ___ den Park. (ب ناڤ … را)",
+       "qku": "ب ناڤ پارکێ را بچە.",
+       "cue": "durch",
+       "a": "Geh durch den Park.",
+       "aku": "ب ناڤ پارکێ را بچە."
+      },
+      {
+       "q": "Das Café ist ___ der Post. (بەرانبەر)",
+       "qku": "کافێ بەرانبەر پۆستێ یە.",
+       "cue": "gegenüber",
+       "a": "Das Café ist gegenüber der Post.",
+       "aku": "کافێ بەرانبەر پۆستێ یە."
+      },
+      {
+       "q": "Fahren Sie ___ Kreuzung. (هەتا)",
+       "qku": "هەتا چوارڕێیانێ بچن.",
+       "cue": "bis zur",
+       "a": "Fahren Sie bis zur Kreuzung.",
+       "aku": "هەتا چوارڕێیانێ بچن."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "aus, von (woher?); an … vorbei, bis zu, durch, entlang, gegenüber, über, um … herum (wo/wohin?).",
+      "ku": "aus, von = ژ (ژ کیڤە؟). an … vorbei = ژ نک … دەرباز. bis zu = هەتا. durch = ب ناڤ … را. entlang = ب درێژاهیا. gegenüber = بەرانبەر. über = ل سەر … را. um … herum = ل دۆر."
+     },
+     "tip": {
+      "de": "zu + der = zur, zu + dem = zum, von + dem = vom.",
+      "ku": "zu + der = zur، zu + dem = zum، von + dem = vom."
+     }
+    },
+    {
+     "emoji": "➡️",
+     "title": {
+      "de": "deshalb",
+      "ku": "لەوما (deshalb)"
+     },
+     "head": [
+      "Grund",
+      "deshalb + Verb",
+      "Folge"
+     ],
+     "rows": [
+      [
+       "Es regnet,",
+       "deshalb nehme",
+       "ich den Bus."
+      ],
+      [
+       "Ich bin krank,",
+       "deshalb bleibe",
+       "ich zu Hause."
+      ],
+      [
+       "Er hat keinen Führerschein,",
+       "deshalb fährt",
+       "er Rad."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich habe Hunger, deshalb koche ich jetzt.",
+       "ku": "ئەز برسیمە، لەوما نوکە خوارنێ چێدکەم."
+      },
+      {
+       "de": "Es gab einen Stau. Deshalb bin ich zu spät gekommen.",
+       "ku": "قەرەباڵغی هەبوو. لەوما ئەز دەرەنگ هاتم."
+      },
+      {
+       "de": "Sie lernt Deutsch, deshalb besucht sie einen Kurs.",
+       "ku": "ئەو ئەلمانی فێر دبیت، لەوما دچیتە خولەکێ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Der Bus kommt nicht. Ich gehe zu Fuß.",
+       "qku": "پاس نائێت. ئەز ب پێیان دچم.",
+       "cue": "deshalb",
+       "a": "Der Bus kommt nicht, deshalb gehe ich zu Fuß.",
+       "aku": "پاس نائێت، لەوما ئەز ب پێیان دچم."
+      },
+      {
+       "q": "Ich habe kein Geld. Ich kaufe nichts.",
+       "qku": "پارێن من نینن. ئەز چ ناکڕم.",
+       "cue": "deshalb",
+       "a": "Ich habe kein Geld, deshalb kaufe ich nichts.",
+       "aku": "پارێن من نینن، لەوما ئەز چ ناکڕم."
+      },
+      {
+       "q": "Es ist Glatteis. Wir fahren langsam.",
+       "qku": "قەشا ل سەر رێکێ هەیە. ئەم هێدی دچین.",
+       "cue": "deshalb",
+       "a": "Es ist Glatteis, deshalb fahren wir langsam.",
+       "aku": "قەشا هەیە، لەوما ئەم هێدی دچین."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "„deshalb“ nennt eine Folge. Es steht auf Position 1 oder 3; danach kommt das Verb.",
+      "ku": "«deshalb» = لەوما (ئەنجام). ل جهێ ئێکێ یان سێیێ، پاشی کار دهێت."
+     },
+     "tip": {
+      "de": "weil = Grund (Verb am Ende); deshalb = Folge (Verb direkt danach).",
+      "ku": "weil = چونکی (کار ل دوماهیێ)؛ deshalb = لەوما (کار دەستبەجه)."
+     }
+    },
+    {
+     "emoji": "🧱",
+     "title": {
+      "de": "Wortbildung: -bar, -ig, -isch",
+      "ku": "پەیڤ چێکرن: -bar, -ig, -isch"
+     },
+     "head": [
+      "Basis",
+      "Adjektiv"
+     ],
+     "rows": [
+      [
+       "essen",
+       "essbar"
+      ],
+      [
+       "trinken",
+       "trinkbar"
+      ],
+      [
+       "die Sonne",
+       "sonnig"
+      ],
+      [
+       "der Regen",
+       "regnerisch"
+      ],
+      [
+       "die Praxis",
+       "praktisch"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Wasser ist hier nicht trinkbar.",
+       "ku": "ئاڤا ڤێرێ بۆ ڤەخوارنێ نینە."
+      },
+      {
+       "de": "Morgen wird es sonnig.",
+       "ku": "سبەی دێ رۆژ هەبیت."
+      },
+      {
+       "de": "Das Wetter ist heute windig.",
+       "ku": "ئەڤرۆ با یا هەی."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Man kann den Pilz essen. Er ist ___.",
+       "qku": "مرۆڤ دشێت ڤێ کارکێ بخۆت.",
+       "cue": "-bar",
+       "a": "Er ist essbar.",
+       "aku": "دهێتە خوارن."
+      },
+      {
+       "q": "Heute scheint die Sonne. Es ist ___.",
+       "qku": "ئەڤرۆ رۆژ هەیە.",
+       "cue": "-ig",
+       "a": "Es ist sonnig.",
+       "aku": "رۆژ هەیە."
+      },
+      {
+       "q": "Heute gibt es viel Wind. Es ist ___.",
+       "qku": "ئەڤرۆ گەلەک با هەیە.",
+       "cue": "-ig",
+       "a": "Es ist windig.",
+       "aku": "با یا هەی."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Verb + -bar = man kann es tun (essbar). Nomen + -ig / -isch = Adjektiv (sonnig, praktisch).",
+      "ku": "کار + -bar = دشێی بکەی (essbar = دهێتە خوارن). ناڤ + -ig / -isch = سالۆخ (sonnig = رۆژ تێدا، praktisch = ب کێر هاتی)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "topics": [
+    {
+     "emoji": "🗺️",
+     "title": {
+      "de": "Wohin? an, auf, in · Wo?",
+      "ku": "بۆ کیڤە؟ / ل کیڤە؟ (an, auf, in)"
+     },
+     "head": [
+      "Ziel",
+      "Wohin?",
+      "Wo?"
+     ],
+     "rows": [
+      [
+       "das Meer",
+       "ans Meer",
+       "am Meer"
+      ],
+      [
+       "die Berge",
+       "in die Berge",
+       "in den Bergen"
+      ],
+      [
+       "die Insel",
+       "auf eine Insel",
+       "auf einer Insel"
+      ],
+      [
+       "das Land",
+       "aufs Land",
+       "auf dem Land"
+      ],
+      [
+       "der See",
+       "an den See",
+       "am See"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Wir fahren ans Meer. Am Meer schwimmen wir.",
+       "ku": "ئەم دچینە دەریایێ. ل بەر دەریایێ مەلەڤانیێ دکەین."
+      },
+      {
+       "de": "Im Winter fahren sie in die Berge.",
+       "ku": "زڤستانێ ئەو دچنە چیایان."
+      },
+      {
+       "de": "Meine Großeltern wohnen auf dem Land.",
+       "ku": "باپیر و داپیرێن من ل گوندی دژین."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wohin fahrt ihr? (der See)",
+       "qku": "هوین دچنە کیڤە؟ (گۆل)",
+       "cue": "an den",
+       "a": "Wir fahren an den See.",
+       "aku": "ئەم دچینە گۆلێ."
+      },
+      {
+       "q": "Wo seid ihr? (die Berge)",
+       "qku": "هوین ل کیڤەنە؟ (چیا)",
+       "cue": "in den",
+       "a": "Wir sind in den Bergen.",
+       "aku": "ئەم ل چیایانین."
+      },
+      {
+       "q": "Wohin fliegst du? (eine Insel)",
+       "qku": "تو دفڕییە کیڤە؟ (دوورگەه)",
+       "cue": "auf eine",
+       "a": "Ich fliege auf eine Insel.",
+       "aku": "ئەز دفڕمە دوورگەهەکێ."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Wohin? + Akkusativ: ans Meer, in die Berge, auf eine Insel. Wo? + Dativ: am Meer, in den Bergen, auf einer Insel.",
+      "ku": "بۆ کیڤە؟ + Akkusativ. ل کیڤە؟ + Dativ."
+     },
+     "tip": {
+      "de": "Wasser (Meer, See, Fluss) ➔ an. Inseln ➔ auf. Berge, Wald, Stadt ➔ in.",
+      "ku": "ئاڤ ➔ an. دوورگەه ➔ auf. چیا، دارستان، باژێڕ ➔ in."
+     }
+    },
+    {
+     "emoji": "🏷️",
+     "title": {
+      "de": "Adjektiv ohne Artikel · von … an · ohne",
+      "ku": "سالۆخ بێ ئارتیکل · ژ … ڤە · بێ"
+     },
+     "head": [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     "rows": [
+      [
+       "Nom.",
+       "frischer Kaffee",
+       "frisches Brot",
+       "frische Luft",
+       "frische Eier"
+      ],
+      [
+       "Akk.",
+       "frischen Kaffee",
+       "frisches Brot",
+       "frische Luft",
+       "frische Eier"
+      ],
+      [
+       "Dat.",
+       "frischem Kaffee",
+       "frischem Brot",
+       "frischer Luft",
+       "frischen Eiern"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Hier gibt es leckeres Essen und kaltes Wasser.",
+       "ku": "ل ڤێرێ خوارنا ب تام و ئاڤا سار هەیە."
+      },
+      {
+       "de": "Von Juni an arbeite ich in Berlin.",
+       "ku": "ژ حوزەیرانێ ڤە ئەز ل بەرلین کار دکەم."
+      },
+      {
+       "de": "Ich trinke Tee ohne Zucker.",
+       "ku": "ئەز چایێ بێ شەکر ڤەدخۆم."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich trinke gern ___ Kaffee. (stark)",
+       "qku": "ئەز حەز ژ قەهوەیا تیژ دکەم.",
+       "cue": "-en",
+       "a": "Ich trinke gern starken Kaffee.",
+       "aku": "ئەز حەز ژ قەهوەیا تیژ دکەم."
+      },
+      {
+       "q": "Ab 1. Mai wohne ich hier. (von … an)",
+       "qku": "ژ ١ی گولانێ ڤە ئەز ل ڤێرێ دژیم.",
+       "cue": "von … an",
+       "a": "Vom 1. Mai an wohne ich hier.",
+       "aku": "ژ ١ی گولانێ ڤە ئەز ل ڤێرێ دژیم."
+      },
+      {
+       "q": "Er fährt nicht mit dem Auto. (das Auto / ohne)",
+       "qku": "ئەو ب ترومبێلێ ناچیت.",
+       "cue": "ohne",
+       "a": "Er fährt ohne Auto.",
+       "aku": "ئەو بێ ترومبێل دچیت."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Ohne Artikel trägt das Adjektiv die Endung des Artikels: frische Luft, gutes Essen, mit freundlichem Gruß. „von … an“ = ab diesem Zeitpunkt. „ohne“ + Akkusativ.",
+      "ku": "بێ ئارتیکل، سالۆخ دوماهیکا ئارتیکلی وەردگریت: frische Luft. «von … an» = ژ … ڤە. «ohne» + Akkusativ = بێ."
+     }
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "topics": [
+    {
+     "emoji": "❔",
+     "title": {
+      "de": "Indirekte Fragen: ob, wo, wann, wie …",
+      "ku": "پرسیارێن نەراستەوخۆ"
+     },
+     "head": [
+      "direkte Frage",
+      "indirekte Frage"
+     ],
+     "rows": [
+      [
+       "Wo ist die Bank?",
+       "Wissen Sie, wo die Bank ist?"
+      ],
+      [
+       "Wann kommt der Bus?",
+       "Ich weiß nicht, wann der Bus kommt."
+      ],
+      [
+       "Ist das Konto kostenlos?",
+       "Ich frage, ob das Konto kostenlos ist."
+      ],
+      [
+       "Hat er Zeit?",
+       "Weißt du, ob er Zeit hat?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Können Sie mir sagen, wie spät es ist?",
+       "ku": "هوین دشێن بێژنە من کا دەمژمێر چەندە؟"
+      },
+      {
+       "de": "Ich weiß nicht, ob ich morgen komme.",
+       "ku": "ئەز نزانم کا سبەی دێ هێم یان نە."
+      },
+      {
+       "de": "Weißt du, warum sie nicht da ist?",
+       "ku": "دزانی بۆچی ئەو ل ڤێرێ نینە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wo ist der Bahnhof? (Wissen Sie …)",
+       "qku": "وێستگەه ل کیڤەیە؟",
+       "cue": "indirekt",
+       "a": "Wissen Sie, wo der Bahnhof ist?",
+       "aku": "هوین دزانن وێستگەه ل کیڤەیە؟"
+      },
+      {
+       "q": "Kommt Lana heute? (Weißt du …)",
+       "qku": "ئەرێ لانا ئەڤرۆ دهێت؟",
+       "cue": "ob",
+       "a": "Weißt du, ob Lana heute kommt?",
+       "aku": "دزانی کا لانا ئەڤرۆ دهێت؟"
+      },
+      {
+       "q": "Was kostet das? (Ich möchte wissen …)",
+       "qku": "ئەڤە ب چەندە؟",
+       "cue": "indirekt",
+       "a": "Ich möchte wissen, was das kostet.",
+       "aku": "ئەز دڤێم بزانم ئەڤە ب چەندە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Nach „Wissen Sie …?“, „Können Sie mir sagen …?“, „Ich weiß nicht …“: W-Wort oder „ob“ (bei Ja/Nein-Fragen), Verb am Ende.",
+      "ku": "پشتی «هوین دزانن …؟»: پەیڤا پرسیارێ (wo, wann …) یان «ob» (بۆ پرسیارا بەلێ/نە)، کار ل دوماهیێ."
+     },
+     "tip": {
+      "de": "Ja/Nein-Frage ➔ ob. W-Frage ➔ W-Wort. Immer: Verb am Ende!",
+      "ku": "پرسیارا بەلێ/نە ➔ ob. پرسیارا W ➔ پەیڤا W. هەردەم: کار ل دوماهیێ!"
+     }
+    },
+    {
+     "emoji": "🛠️",
+     "title": {
+      "de": "lassen",
+      "ku": "lassen (هێلان / دانە کرن)"
+     },
+     "head": [
+      "Person",
+      "lassen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "lasse"
+      ],
+      [
+       "du",
+       "lässt"
+      ],
+      [
+       "er / sie / es",
+       "lässt"
+      ],
+      [
+       "wir / sie / Sie",
+       "lassen"
+      ],
+      [
+       "ihr",
+       "lasst"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich lasse meine Jacke reinigen.",
+       "ku": "ئەز چاکێتا خۆ ددەمە شویشتنێ."
+      },
+      {
+       "de": "Lässt du dir die Haare schneiden?",
+       "ku": "تو پرچا خۆ ددەیە کورتکرن؟"
+      },
+      {
+       "de": "Wir lassen das Auto heute stehen und gehen zu Fuß.",
+       "ku": "ئەم ئەڤرۆ ترومبێلێ دهێلین و ب پێیان دچین."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Der Friseur schneidet mir die Haare. (lassen)",
+       "qku": "سەرتراش پرچا من کورت دکەت.",
+       "cue": "lassen",
+       "a": "Ich lasse mir die Haare schneiden.",
+       "aku": "ئەز پرچا خۆ ددەمە کورتکرن."
+      },
+      {
+       "q": "Der Mechaniker repariert unser Auto. (lassen)",
+       "qku": "میکانیکی ترومبێلا مە چاک دکەت.",
+       "cue": "lassen",
+       "a": "Wir lassen unser Auto reparieren.",
+       "aku": "ئەم ترومبێلا خۆ ددەینە چاککرن."
+      },
+      {
+       "q": "Ein Maler streicht seine Wohnung. (lassen)",
+       "qku": "بۆیاغچی خانیێ وی بۆیاغ دکەت.",
+       "cue": "lassen",
+       "a": "Er lässt seine Wohnung streichen.",
+       "aku": "ئەو خانیێ خۆ ددەتە بۆیاغکرن."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "lassen + Infinitiv: Jemand anders macht es für mich (Ich lasse das Auto reparieren). Auch: erlauben / nicht mitnehmen (Lass mich gehen! Ich lasse das Handy zu Hause).",
+      "ku": "lassen + کار: کەسەکێ دی بۆ من دکەت (ئەز ترومبێلێ ددەمە چاککرن). هەروەسا: هێلان (ل مال دهێلم) و رێدان."
+     },
+     "tip": {
+      "de": "Perfekt: Ich habe das Auto reparieren lassen (nicht: gelassen).",
+      "ku": "Perfekt: Ich habe das Auto reparieren lassen."
+     }
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "topics": [
+    {
+     "emoji": "📜",
+     "title": {
+      "de": "Wiederholung: Perfekt und Präteritum",
+      "ku": "دووبارەکرن: Perfekt و Präteritum"
+     },
+     "head": [
+      "Infinitiv",
+      "Präteritum",
+      "Perfekt"
+     ],
+     "rows": [
+      [
+       "sein",
+       "war",
+       "ist gewesen"
+      ],
+      [
+       "haben",
+       "hatte",
+       "hat gehabt"
+      ],
+      [
+       "wohnen",
+       "wohnte",
+       "hat gewohnt"
+      ],
+      [
+       "spielen",
+       "spielte",
+       "hat gespielt"
+      ],
+      [
+       "müssen",
+       "musste",
+       "hat gemusst"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Als Kind war ich oft krank.",
+       "ku": "دەمێ زارۆک بووم گەلەک جاران نەساخ دبووم."
+      },
+      {
+       "de": "Wir hatten einen großen Garten.",
+       "ku": "باخچەیەکێ مەزن یێ مە هەبوو."
+      },
+      {
+       "de": "Gestern habe ich meine Oma besucht.",
+       "ku": "دوهی ئەز چوومە سەرەدانا داپیرا خۆ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich bin müde. (gestern, Präteritum)",
+       "qku": "دوهی ئەز وەستیای بووم.",
+       "cue": "war",
+       "a": "Gestern war ich müde.",
+       "aku": "دوهی ئەز وەستیای بووم."
+      },
+      {
+       "q": "Wir haben keine Zeit. (früher, Präteritum)",
+       "qku": "بەرێ دەمێ مە نەبوو.",
+       "cue": "hatten",
+       "a": "Früher hatten wir keine Zeit.",
+       "aku": "بەرێ دەمێ مە نەبوو."
+      },
+      {
+       "q": "Er spielt Fußball. (gestern, Perfekt)",
+       "qku": "دوهی تۆپا پێ کر.",
+       "cue": "hat gespielt",
+       "a": "Er hat gestern Fußball gespielt.",
+       "aku": "ئەو دوهی تۆپا پێ کر."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Beim Sprechen meist Perfekt. Bei sein, haben und Modalverben meist Präteritum (war, hatte, konnte). In Geschichten auch andere Verben im Präteritum (wohnte, erzählte).",
+      "ku": "د ئاخفتنێ دا پتر Perfekt. بۆ sein, haben و کارێن یاریدەدەر پتر Präteritum (war, hatte, konnte). د چیرۆکان دا کارێن دی ژی (wohnte, erzählte)."
+     }
+    },
+    {
+     "emoji": "🔁",
+     "title": {
+      "de": "Wiederholung: Nebensätze (weil, dass, wenn, ob)",
+      "ku": "دووبارەکرن: رستەیێن لاوەکی"
+     },
+     "head": [
+      "Konnektor",
+      "Bedeutung",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "weil",
+       "چونکی",
+       "…, weil ich müde bin."
+      ],
+      [
+       "dass",
+       "کو",
+       "…, dass du kommst."
+      ],
+      [
+       "wenn",
+       "ئەگەر / دەمێ",
+       "Wenn es regnet, …"
+      ],
+      [
+       "ob",
+       "کا … یان نە",
+       "…, ob er Zeit hat."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich bleibe zu Hause, weil ich krank bin.",
+       "ku": "ئەز ل مال دمینم، چونکی نەساخم."
+      },
+      {
+       "de": "Ich glaube, dass sie recht hat.",
+       "ku": "ئەز هزر دکەم کو ئەو ل سەر حەقە."
+      },
+      {
+       "de": "Weißt du, ob der Kurs morgen stattfindet?",
+       "ku": "دزانی کا سبەی خول دێ هەبیت؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich lerne Deutsch. Ich will in Deutschland studieren. (weil)",
+       "qku": "ئەز ئەلمانی فێر دبم. دڤێم ل ئەلمانیا بخوینم.",
+       "cue": "weil",
+       "a": "Ich lerne Deutsch, weil ich in Deutschland studieren will.",
+       "aku": "ئەز ئەلمانی فێر دبم، چونکی دڤێم ل ئەلمانیا بخوینم."
+      },
+      {
+       "q": "Hast du morgen Zeit? (Ich frage dich, …)",
+       "qku": "سبەی دەمێ تە هەیە؟",
+       "cue": "ob",
+       "a": "Ich frage dich, ob du morgen Zeit hast.",
+       "aku": "ئەز ژ تە دپرسم کا سبەی دەمێ تە هەیە."
+      },
+      {
+       "q": "Das Wetter ist schön. Wir grillen. (wenn)",
+       "qku": "کەش خۆشە. ئەم گۆشتێ برژاندی چێدکەین.",
+       "cue": "wenn",
+       "a": "Wenn das Wetter schön ist, grillen wir.",
+       "aku": "ئەگەر کەش خۆش بیت، ئەم گۆشتێ برژاندی چێدکەین."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "In Nebensätzen mit weil, dass, wenn, ob und W-Wörtern steht das Verb am Ende.",
+      "ku": "د رستەیێن ب weil, dass, wenn, ob و پەیڤێن W دا، کار ل دوماهیێ یە."
+     }
+    },
+    {
+     "emoji": "🐣",
+     "title": {
+      "de": "Diminutiv: -chen",
+      "ku": "بچووککرن: -chen"
+     },
+     "head": [
+      "Nomen",
+      "Diminutiv"
+     ],
+     "rows": [
+      [
+       "das Haus",
+       "das Häuschen"
+      ],
+      [
+       "die Katze",
+       "das Kätzchen"
+      ],
+      [
+       "das Brot",
+       "das Brötchen"
+      ],
+      [
+       "der Baum",
+       "das Bäumchen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Im Garten steht ein kleines Häuschen.",
+       "ku": "د باخچەی دا خانیەکێ بچووک هەیە."
+      },
+      {
+       "de": "Das Kätzchen schläft auf dem Sofa.",
+       "ku": "پشیکا بچووک ل سەر قەنەفێ دنڤیت."
+      },
+      {
+       "de": "Ich kaufe sechs Brötchen.",
+       "ku": "ئەز شەش سەموونان دکڕم."
+      }
+     ],
+     "practice": [
+      {
+       "q": "die Katze ➔ ___",
+       "qku": "پشیک ➔ پشیکا بچووک",
+       "cue": "-chen",
+       "a": "das Kätzchen",
+       "aku": "پشیکا بچووک"
+      },
+      {
+       "q": "der Baum ➔ ___",
+       "qku": "دار ➔ دارا بچووک",
+       "cue": "-chen",
+       "a": "das Bäumchen",
+       "aku": "دارا بچووک"
+      },
+      {
+       "q": "der Hund ➔ ___",
+       "qku": "سەی ➔ سەیێ بچووک",
+       "cue": "-chen",
+       "a": "das Hündchen",
+       "aku": "سەیێ بچووک"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Mit -chen wird etwas klein oder lieb. Oft mit Umlaut (Haus ➔ Häuschen). Artikel immer „das“.",
+      "ku": "ب -chen تشت بچووک یان شیرین دبیت. گەلەک جاران ب Umlaut (Haus ➔ Häuschen). ئارتیکل هەردەم «das»."
+     }
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,93 @@
+@L 21 | #C9A227 | جەژن و دیاری | Feste und Geschenke | Celebrations and presents
+
+@U a | calendar | جەژن و ئاهەنگ | Feste feiern | Celebrating
+die Hochzeit | دی هۆختسایت | داوەت / زەماوەند | the wedding | 💍 | Meine Cousine heiratet. Die ___ ist im Juni. | Hochzeit | Hochhaus; Heizung | دۆتماما من دێ شوو کەت. داوەت ل حوزەیرانێ یە.
+die Einladung | دی ئاینلادونگ | داخوازی (دەعوەت) | the invitation | ✉️ | Vielen Dank für die ___! | Einladung | Einkaufen; Ausbildung | گەلەک سوپاس بۆ داخوازیێ!
+feiern | فایەرن | ئاهەنگ گێڕان / جەژن کرن | to celebrate | 🎉 | Wir ___ Newroz mit Freunden in der Natur. | feiern | fahren; fehlen | ئەم نەورۆزێ دگەل هەڤالان ل سروشتی جەژن دکەین.
+die Gäste | دی گێستە | میڤان | the guests | 🧑‍🤝‍🧑
+die Torte | دی تۆرتە | کێکا جەژنێ | the cake | 🎂 | Zum Geburtstag backe ich eine ___. | Torte | Tasse; Tante | بۆ رۆژبوونێ ئەز کێکەکێ چێدکەم.
+das Brautpaar | داس براوتپار | بووک و زاڤا | the bride and groom | 👰
+Am 21. März feiern wir Newroz. | ئام ئاینوندتسڤانتسیگستن مێرتس فایەرن ڤیر نەورۆز | ل ٢١ی ئادارێ ئەم نەورۆزێ جەژن دکەین. | On 21 March we celebrate Newroz. | 🔥
+Die Stimmung war super. | دی شتیمونگ ڤار زوپەر | کەشێ ئاهەنگێ گەلەک خۆش بوو. | The atmosphere was great. | 🥳 | Alle haben getanzt, die ___ war super. | Stimmung | Stimme; Stunde | هەمییان سەما کر، کەش گەلەک خۆش بوو.
+
+@U b | shopping | دیاری | Geschenke | Presents
+das Geschenk | داس گەشێنک | دیاری | the present | 🎁
+schenken | شێنکن | دیاری دان | to give (as a present) | 🎀 | Was ___ du deiner Mutter zum Geburtstag? | schenkst | schenken; Geschenk | تو بۆ رۆژبوونا دایکا خۆ چ دیاری ددەیێ؟
+die Blumen | دی بلوومن | گول | the flowers | 💐
+das Parfüm | داس پارفیوم | بێهن خۆش (عەتر) | the perfume | 🌸
+die Kette | دی کێتە | گەردەنی | the necklace | 📿
+der Gutschein | دێر گووتشاین | کارتا دیاریێ (کووپۆن) | the voucher | 🎟️ | Ich schenke ihm einen ___ für das Kino. | Gutschein | Schein; Gutschrift | ئەز کارتەکا سینەمایێ دیاری ددەمێ.
+Ich packe das Geschenk schön ein. | ئیش پاکە داس گەشێنک شۆن ئاین | ئەز دیاریێ ب جوانی دپێچم. | I'm wrapping the present nicely. | 🎁
+Das ist aber nett von dir! | داس ئیست ئابەر نێت فۆن دیر | تو گەلەک ب رێز و ئەدەبی! | That's really kind of you! | 😊
+
+@U c | people | بۆ کێ؟ (Dativ) | Wem? – Dativ | To whom?
+Ich gebe meinem Vater ein Buch. | ئیش گێبە ماینەم فاتەر ئاین بووخ | ئەز پەرتووکەکێ ددەمە بابێ خۆ. | I give my father a book. | 📘 | Ich gebe ___ Vater ein Buch. | meinem | meinen; meiner | ئەز پەرتووکەکێ ددەمە بابێ خۆ.
+Sie schenkt ihrer Schwester eine Tasche. | زی شێنکت ئیرەر شڤێستەر ئاینە تاشە | ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ. | She gives her sister a bag. | 👜 | Sie schenkt ___ Schwester eine Tasche. | ihrer | ihre; ihren | ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ.
+Ich schenke sie ihr. | ئیش شێنکە زی ئیر | ئەز وێ ددەمە وێ (دیاری). | I give it to her. | 🤲 | Die Tasche? Ich schenke ___ ihr. | sie | ihr; ihn | جانتا؟ ئەز وێ ددەمە وێ.
+Kannst du mir das Salz geben? | کانست دوو میر داس زالتس گێبن | تو دشێی خوێیێ بدەیە من؟ | Can you pass me the salt? | 🧂 | Kannst du ___ das Salz geben? | mir | mich; ich | تو دشێی خوێیێ بدەیە من؟
+Ich gratuliere dir zum Geburtstag! | ئیش گراتولیرە دیر تسووم گەبورتستاگ | پیرۆزبایا رۆژبوونا تە دکەم! | Happy birthday to you! | 🎈 | Ich gratuliere ___ zum Geburtstag! | dir | dich; du | پیرۆزبایا رۆژبوونا تە دکەم!
+Das Kleid gefällt mir sehr. | داس کلایت گەفێلت میر زێر | جلک گەلەک ب دلێ من بوو. | I like the dress a lot. | 👗
+Wir bringen den Gästen Tee. | ڤیر برینگن دێن گێستن تێ | ئەم چایێ دبەینە بۆ میڤانان. | We bring the guests tea. | 🍵
+Hilf mir bitte! | هیلف میر بیتە | هیڤییە هاریکاریا من بکە! | Please help me! | 🆘
+@CZ Ich schreibe ___ Oma eine Karte und schicke ___ morgen ab. | meiner … sie | meine … ihr; meinem … sie | ئەز کارتەکێ بۆ داپیرا خۆ دنڤیسم و سبەی دهنێرم.
+
+@U d | waving_hand | پیرۆزبایی | Glückwünsche | Best wishes
+Herzlichen Glückwunsch! | هێرتسلیشن گلیوکڤونش | پیرۆز بیت! | Congratulations! | 🎊
+Alles Gute zum Geburtstag! | ئالەس گووتە تسووم گەبورتستاگ | رۆژبوونا تە پیرۆز بیت! | Happy birthday! | 🎂 | Alles Gute ___ Geburtstag! | zum | zur; zu | رۆژبوونا تە پیرۆز بیت!
+Frohe Feiertage! | فرۆوە فایەرتاگە | جەژنێن خۆش! | Happy holidays! | ✨
+Viel Glück! | فیل گلیوک | ب سەرکەفتن! | Good luck! | 🍀
+Gute Besserung! | گووتە بێسەرونگ | ساخ ببی! | Get well soon! | 💊 | Du bist krank? Gute ___! | Besserung | Reise; Nacht | تو نەساخی؟ ساخ ببی!
+Gute Reise! | گووتە رایزە | رێکا تە ب خێر! | Have a good trip! | 🧳
+Ein glückliches neues Jahr! | ئاین گلیوکلیشەس نۆیەس یار | سالەکا نوو یا خۆش! | A happy new year! | 🎆
+Ich wünsche euch alles Gute! | ئیش ڤیونشە ئۆیش ئالەس گووتە | ئەز هەمی باشیان بۆ هەوە دخوازم! | I wish you all the best! | 💛
+
+@D ئامادەکرنا رۆژبوونێ
+Avin: Nächste Woche hat Mama Geburtstag. Was schenken wir ihr? || حەفتیا بهێت رۆژبوونا دایکێ یە. ئەم دێ چ دیاری دەینێ؟
+Sherwan: Vielleicht eine Kette? Sie trägt gern Schmuck. || بەلکی گەردەنیەکێ؟ ئەو حەز ژ خشلی دکەت.
+Avin: Gute Idee! Und ich backe ihr eine Torte. || بیرەکا باشە! و ئەز دێ کێکەکێ بۆ چێکەم.
+Sherwan: Laden wir auch Onkel Karim ein? || ئەرێ ئەم مامێ کەریم ژی داخواز بکەین؟
+Avin: Ja, natürlich. Ich schicke ihm heute eine Nachricht. || بەلێ، هەلبەت. ئەز ئەڤرۆ پەیامەکێ بۆ دهنێرم.
+Sherwan: Wer packt das Geschenk ein? || کێ دێ دیاریێ پێچیت؟
+Avin: Das mache ich. Ich kann das gut. || ئەز دێ کەم. ئەز ڤێ باش دزانم.
+Sherwan: Super. Mama freut sich bestimmt! || زۆر باشە. دایک هەلبەت دێ دلخۆش بیت!
+
+@G 🎁 | Verben mit Dativ und Akkusativ | کار ب دوو بەرکاران (Dativ + Akkusativ)
+E: geben, schenken, bringen, zeigen, schicken: Person im Dativ (wem?), Sache im Akkusativ (was?). || geben, schenken, bringen, zeigen, schicken: مرۆڤ ب Dativ (بۆ کێ؟)، تشت ب Akkusativ (چ؟).
+H: | Dativ (wem?) | Akkusativ (was?)
+R: Ich schenke | meinem Bruder | ein Handy.
+R: Er zeigt | der Lehrerin | sein Heft.
+R: Wir bringen | den Kindern | Kuchen.
+X: Ich gebe dem Kellner Trinkgeld. || ئەز بەخشیشێ ددەمە گارسۆنی.
+X: Zeig mir bitte deine Fotos! || هیڤییە وێنەیێن خۆ نیشا من بدە!
+X: Sie schickt ihrer Freundin eine Postkarte. || ئەو کارتەکێ بۆ هەڤالا خۆ دهنێریت.
+T: Dativ-Artikel: dem (m/n), der (f), den + -n (Plural). || ئارتیکلێن Dativ: dem (نێر/بێلایەن)، der (مێ)، den + -n (کۆ).
+P: Ich schenke ___ Mutter Blumen. (meine) || ئەز گولان دیاری ددەمە دایکا خۆ. || Dativ || Ich schenke meiner Mutter Blumen. || ئەز گولان دیاری ددەمە دایکا خۆ.
+P: Er gibt ___ Kind einen Apfel. (das) || ئەو سێڤەکێ ددەتە زارۆکی. || Dativ || Er gibt dem Kind einen Apfel. || ئەو سێڤەکێ ددەتە زارۆکی.
+P: Wir zeigen ___ Gästen die Stadt. (die) || ئەم باژێڕی نیشا میڤانان ددەین. || Dativ || Wir zeigen den Gästen die Stadt. || ئەم باژێڕی نیشا میڤانان ددەین.
+
+@G 🔄 | Stellung der Objekte | جهێ بەرکاران د رستێ دا
+E: Zwei Nomen: Dativ vor Akkusativ. Akkusativ als Pronomen: Pronomen zuerst (Ich schenke es ihm). || دوو ناڤ: Dativ بەری Akkusativ. ئەگەر Akkusativ جهێناڤ بیت: جهێناڤ ل پێشیێ (Ich schenke es ihm).
+H: | Dativ | Akkusativ
+R: Ich schenke | meinem Bruder | das Buch.
+R: Ich schenke | ihm | das Buch.
+R: Ich schenke es | ihm. | —
+X: Gibst du mir den Schlüssel? – Ja, ich gebe ihn dir. || تو کلیلێ ددەیە من؟ – بەلێ، ئەز دێ دەمە تە.
+X: Hast du Papa das Foto gezeigt? – Ja, ich habe es ihm gezeigt. || تە وێنە نیشا بابێ دا؟ – بەلێ، من نیشا وی دا.
+X: Ich bringe euch die Pizza. – Bring sie uns bitte schnell! || ئەز پیتزایێ بۆ هەوە دئینم. – هیڤییە ب لەز بینە!
+P: Ich gebe meiner Schwester das Handy. (Pronomen) || ئەز مۆبایلێ ددەمە خویشکا خۆ. || es ihr || Ich gebe es ihr. || ئەز وێ ددەمە وێ.
+P: Er schickt seinem Freund die E-Mail. (Pronomen) || ئەو ئیمەیلێ بۆ هەڤالێ خۆ دهنێریت. || sie ihm || Er schickt sie ihm. || ئەو وێ بۆ وی دهنێریت.
+P: Wir schenken den Kindern die Bälle. (Pronomen) || ئەم تۆپان دیاری ددەینە زارۆکان. || sie ihnen || Wir schenken sie ihnen. || ئەم وان ددەینە وان.
+
+@G 🏷️ | von + Dativ | von + Dativ (یێ کێ؟ / ژ کێ؟)
+E: „von“ hat immer Dativ: Das Geschenk ist von meiner Tante. Auch für Besitz: das Auto von meinem Vater. || «von» هەردەم Dativ: دیاری ژ مەتا منە. بۆ خودانداریێ ژی: ترومبێلا بابێ من.
+H: | von + Dativ
+R: der Onkel | vom (von dem) Onkel
+R: das Kind | vom Kind
+R: die Tante | von der Tante
+R: die Eltern | von den Eltern
+X: Die Blumen sind von meinem Mann. || گول ژ زەلامێ منن.
+X: Ich habe eine Karte von meinen Eltern bekommen. || من کارتەک ژ دایک و بابێن خۆ وەرگرت.
+X: Das ist das Fahrrad von meiner Nichte. || ئەڤە پایسکیلا برازایا منە.
+P: Von wem ist das Geschenk? (mein Onkel) || ئەڤ دیاریە ژ کێیە؟ (مامێ من) || von + Dativ || Es ist von meinem Onkel. || ژ مامێ منە.
+P: Von wem ist der Brief? (die Firma) || ئەڤ نامە ژ کێیە؟ (کۆمپانیا) || von + Dativ || Er ist von der Firma. || ژ کۆمپانیایێ یە.
+P: Wessen Auto ist das? (mein Nachbar) || ئەڤ ترومبێلە یا کێیە؟ (جیرانێ من) || von + Dativ || Das ist das Auto von meinem Nachbarn. || ئەڤە ترومبێلا جیرانێ منە.

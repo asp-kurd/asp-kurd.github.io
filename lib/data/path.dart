@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import '../models.dart';
@@ -67,10 +69,10 @@ class PathSection {
 
 /// 🎲 هەڕەمەکیا جێگیر (هەمان ژمار ل هەمی مۆبایلان)
 int seeded(String s) {
-  var h = 0x811c9dc5;
+  // ژمار هەمیشە < 2^53 ➔ ل وێب و ئەندرۆید هەمان ئەنجام
+  var h = 7;
   for (final c in s.codeUnits) {
-    h ^= c;
-    h = (h * 0x01000193) & 0xffffffff;
+    h = (h * 131 + c) % 1000000007;
   }
   return h;
 }
@@ -226,7 +228,7 @@ List<List<(LessonUnit, WordConcept)>> _split(List<(LessonUnit, WordConcept)> ite
   for (var i = 1; i < k; i++) {
     var c = (i * n / k).round();
     // نێزیکی سنوورێ unitێ؟ ➔ ل وێرێ ببڕە
-    for (var d = 0; d <= 2; d++) {
+    for (var d = 0; d <= 1; d++) {
       if (c - d > cuts.last && c - d < n && items[c - d].$1 != items[c - d - 1].$1) {
         c = c - d;
         break;
@@ -250,7 +252,9 @@ List<PathLesson> _lessonsFor(String sid, List<(LessonUnit, WordConcept)> part) {
     chunks.last.$2.add(c);
   }
   var want = 5 + seeded(sid) % 2; // ٥ یان ٦
-  want = want.clamp(chunks.length, (part.length / 2).floor().clamp(chunks.length, 99));
+  // هەر وانەیەک ب کێمی ٢ پەیڤ — بەلێ قۆناغ هەردەم ٥+ وانە (ئەگەر پەیڤ هەبن)
+  final hi = max(chunks.length, max((part.length + 1) ~/ 2, min(5, part.length)));
+  want = want.clamp(chunks.length, hi);
   // دابەشکرنا وانەیان ل سەر پشکان (ب قەدەرێ)
   final alloc = [for (final _ in chunks) 1];
   var left = want - chunks.length;

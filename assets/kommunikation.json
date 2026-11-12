@@ -1592,6 +1592,689 @@
      ]
     }
    ]
+  },
+  {
+   "n": 21,
+   "groups": [
+    {
+     "emoji": "📘",
+     "de": "Wem? – Dativ",
+     "ku": "بۆ کێ؟ (Dativ)",
+     "lines": [
+      {
+       "de": "Ich gebe meinem Vater ein Buch.",
+       "ku": "ئەز پەرتووکەکێ ددەمە بابێ خۆ."
+      },
+      {
+       "de": "Sie schenkt ihrer Schwester eine Tasche.",
+       "ku": "ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ."
+      },
+      {
+       "de": "Ich schenke sie ihr.",
+       "ku": "ئەز وێ ددەمە وێ (دیاری)."
+      },
+      {
+       "de": "Kannst du mir das Salz geben?",
+       "ku": "تو دشێی خوێیێ بدەیە من؟"
+      },
+      {
+       "de": "Ich gratuliere dir zum Geburtstag!",
+       "ku": "پیرۆزبایا رۆژبوونا تە دکەم!"
+      },
+      {
+       "de": "Das Kleid gefällt mir sehr.",
+       "ku": "جلک گەلەک ب دلێ من بوو."
+      },
+      {
+       "de": "Wir bringen den Gästen Tee.",
+       "ku": "ئەم چایێ دبەینە بۆ میڤانان."
+      }
+     ]
+    },
+    {
+     "emoji": "🎂",
+     "de": "Glückwünsche",
+     "ku": "پیرۆزبایی",
+     "lines": [
+      {
+       "de": "Alles Gute zum Geburtstag!",
+       "ku": "رۆژبوونا تە پیرۆز بیت!"
+      },
+      {
+       "de": "Ein glückliches neues Jahr!",
+       "ku": "سالەکا نوو یا خۆش!"
+      },
+      {
+       "de": "Ich wünsche euch alles Gute!",
+       "ku": "ئەز هەمی باشیان بۆ هەوە دخوازم!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "groups": [
+    {
+     "emoji": "🧑‍🏫",
+     "de": "Freizeit am Wochenende",
+     "ku": "دەمێ ڤالا",
+     "lines": [
+      {
+       "de": "der Kurs an der Volkshochschule",
+       "ku": "خول ل ناڤەندا فێربوونا گەلی"
+      },
+      {
+       "de": "Ich gehe gern ins Kino.",
+       "ku": "ئەز حەز دکەم بچمە سینەمایێ."
+      },
+      {
+       "de": "Am Wochenende habe ich nichts vor.",
+       "ku": "دوماهیا حەفتیێ چ پلانێن من نینن."
+      }
+     ]
+    },
+    {
+     "emoji": "🍿",
+     "de": "Sich verabreden",
+     "ku": "ژڤان دانان",
+     "lines": [
+      {
+       "de": "Hast du Lust, ins Kino zu gehen?",
+       "ku": "حەزا تە هەیە بچینە سینەمایێ؟"
+      },
+      {
+       "de": "Wie wäre es mit Samstag?",
+       "ku": "شەمبی چاوانە؟"
+      },
+      {
+       "de": "Da kann ich leider nicht.",
+       "ku": "مخابن ئەو دەم نەشێم."
+      },
+      {
+       "de": "Treffen wir uns um acht?",
+       "ku": "ئەرێ دەمژمێر هەشت ئێک ببینین؟"
+      },
+      {
+       "de": "Gute Idee! Das machen wir.",
+       "ku": "بیرەکا باشە! وێ دکەین."
+      },
+      {
+       "de": "Ich habe keine Zeit, ich muss arbeiten.",
+       "ku": "دەمێ من نینە، دڤێت کار بکەم."
+      },
+      {
+       "de": "Schade! Vielleicht nächstes Mal.",
+       "ku": "مخابن! بەلکی جارەکا دی."
+      }
+     ]
+    },
+    {
+     "emoji": "🕊️",
+     "de": "Wünsche: hätte, wäre, würde",
+     "ku": "خەون و داخواز",
+     "lines": [
+      {
+       "de": "Ich hätte gern mehr Freizeit.",
+       "ku": "خۆزی دەمێ من یێ ڤالا پتر با."
+      },
+      {
+       "de": "Ich wäre jetzt gern am Meer.",
+       "ku": "خۆزی ئەز نوکە ل بەر دەریایێ بام."
+      },
+      {
+       "de": "Ich würde gern Gitarre lernen.",
+       "ku": "من دڤیا گیتارێ فێر ببم."
+      },
+      {
+       "de": "Wenn ich Zeit hätte, würde ich reisen.",
+       "ku": "ئەگەر دەمێ من هەبا، دا گەشتێ کەم."
+      },
+      {
+       "de": "Könntest du mir helfen?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟ (ب ئەدەب)"
+      },
+      {
+       "de": "Wir könnten am Sonntag grillen.",
+       "ku": "ئەم دشێین یەکشەمبیێ گۆشتێ برژاندی چێکەین."
+      },
+      {
+       "de": "An deiner Stelle würde ich früher schlafen.",
+       "ku": "ئەگەر ئەز ل جهێ تە بام، دا زووتر نڤم."
+      }
+     ]
+    },
+    {
+     "emoji": "☔",
+     "de": "trotzdem",
+     "ku": "دیسا ژی",
+     "lines": [
+      {
+       "de": "Es regnet. Trotzdem gehen wir spazieren.",
+       "ku": "باران دباریت. دیسا ژی ئەم دچینە گەڕیانێ."
+      },
+      {
+       "de": "Ich bin müde, aber ich lerne trotzdem.",
+       "ku": "ئەز وەستیایمە، بەلێ دیسا ژی دخوینم."
+      },
+      {
+       "de": "Das Konzert war teuer. Trotzdem war es super.",
+       "ku": "کۆنسێرت ب بها بوو. دیسا ژی زۆر خۆش بوو."
+      },
+      {
+       "de": "Er hatte Fieber und ist trotzdem zur Arbeit gegangen.",
+       "ku": "تا ل وی هەبوو و دیسا ژی چوو سەر کاری."
+      },
+      {
+       "de": "Obwohl es kalt ist, trägt sie keine Jacke.",
+       "ku": "هەرچەندە سەرمایە، ئەو چاکێتێ ناکەتە بەر خۆ."
+      },
+      {
+       "de": "Ich habe wenig Geld, trotzdem mache ich Urlaub.",
+       "ku": "پارێن من کێمن، دیسا ژی ئەز دچمە بێهنڤەدانێ."
+      },
+      {
+       "de": "Der Bus kam zu spät. Trotzdem war ich pünktlich.",
+       "ku": "پاس دەرەنگ هات. دیسا ژی ئەز ل دەمێ خۆ بووم."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "groups": [
+    {
+     "emoji": "🎒",
+     "de": "ein neuer Rucksack",
+     "ku": "ئێکێ نوو، ئێکا جوان",
+     "lines": [
+      {
+       "de": "Ich suche einen neuen Rucksack.",
+       "ku": "ئەز ل جانتایەکا پشتێ یا نوو دگەڕێم."
+      },
+      {
+       "de": "Das ist ein schönes Geschenk.",
+       "ku": "ئەڤە دیاریەکا جوانە."
+      },
+      {
+       "de": "Sie hat eine kleine Tasche.",
+       "ku": "جانتایەکا بچووک ل نک وێ هەیە."
+      },
+      {
+       "de": "Er trägt einen alten Mantel.",
+       "ku": "ئەو بالتۆیەکێ کەڤن دکەتە بەر خۆ."
+      },
+      {
+       "de": "Ich wünsche mir ein großes Zimmer.",
+       "ku": "من ژوورەکا مەزن دڤێت."
+      },
+      {
+       "de": "Das ist ein guter Tipp.",
+       "ku": "ئەڤە ئامۆژگاریەکا باشە."
+      },
+      {
+       "de": "mit einem neuen Handy",
+       "ku": "ب مۆبایلەکا نوو"
+      }
+     ]
+    },
+    {
+     "emoji": "📱",
+     "de": "besser als …",
+     "ku": "باشتر ژ …",
+     "lines": [
+      {
+       "de": "Mein Handy ist neuer als dein Handy.",
+       "ku": "مۆبایلا من ژ یا تە نووترە."
+      },
+      {
+       "de": "Die Tasche ist so teuer wie die Schuhe.",
+       "ku": "جانتا وەکی پێلاڤان ب بهایە."
+      },
+      {
+       "de": "Leder ist teurer als Plastik.",
+       "ku": "چەرم ژ پلاستیکێ گرانترە."
+      },
+      {
+       "de": "Was gefällt dir besser?",
+       "ku": "کیژ پتر ب دلێ تە یە؟"
+      },
+      {
+       "de": "Am liebsten trinke ich Tee.",
+       "ku": "ژ هەمییان پتر حەز ژ چایێ دکەم."
+      },
+      {
+       "de": "Dieses Handy ist am billigsten.",
+       "ku": "ئەڤ مۆبایلە ژ هەمییان ئەرزانترە."
+      },
+      {
+       "de": "Mein Bruder ist größer als ich.",
+       "ku": "برایێ من ژ من درێژترە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "groups": [
+    {
+     "emoji": "🔋",
+     "de": "Handy & Internet",
+     "ku": "مۆبایل و ئینتەرنێت",
+     "lines": [
+      {
+       "de": "das Handy aufladen",
+       "ku": "مۆبایلێ شەحن کرن"
+      },
+      {
+       "de": "Ich habe kein Netz.",
+       "ku": "تۆڕ (نێتوۆرک) ل نک من نینە."
+      },
+      {
+       "de": "die App herunterladen",
+       "ku": "ئەپی داگرتن"
+      },
+      {
+       "de": "eine Nachricht schicken",
+       "ku": "پەیامەکێ هنارتن"
+      },
+      {
+       "de": "Ich rufe dich per Video an.",
+       "ku": "ئەز ب ڤیدیۆیێ تەلەفۆنێ بۆ تە دکەم."
+      },
+      {
+       "de": "Der Bildschirm ist kaputt.",
+       "ku": "شاشە یا شکەستییە."
+      }
+     ]
+    },
+    {
+     "emoji": "🚚",
+     "de": "Das wird gemacht.",
+     "ku": "دهێتە کرن (Passiv)",
+     "lines": [
+      {
+       "de": "Das Paket wird morgen gebracht.",
+       "ku": "پاکەت دێ سبەی هێتە ئینان."
+      },
+      {
+       "de": "Die Briefe werden um zehn Uhr abgeholt.",
+       "ku": "نامە دەمژمێر دەهـ دهێنە برن."
+      },
+      {
+       "de": "Hier wird Deutsch gesprochen.",
+       "ku": "ل ڤێرێ ب ئەلمانی دهێتە ئاخفتن."
+      },
+      {
+       "de": "Das Handy wird repariert.",
+       "ku": "مۆبایل دهێتە چاککرن."
+      },
+      {
+       "de": "Wie wird das Wort geschrieben?",
+       "ku": "ئەڤ پەیڤە چاوا دهێتە نڤیسین؟"
+      },
+      {
+       "de": "Die Daten werden gespeichert.",
+       "ku": "زانیاری دهێنە پاراستن (سەیڤکرن)."
+      },
+      {
+       "de": "In Kurdistan wird viel Tee getrunken.",
+       "ku": "ل کوردستانێ گەلەک چا دهێتە ڤەخوارن."
+      }
+     ]
+    },
+    {
+     "emoji": "🤩",
+     "de": "der neue, die alte",
+     "ku": "یێ نوو، یا جوان",
+     "lines": [
+      {
+       "de": "Das neue Handy ist toll.",
+       "ku": "مۆبایلا نوو زۆر باشە."
+      },
+      {
+       "de": "Ich nehme den blauen Pullover.",
+       "ku": "ئەز بلووزا شین دبەم."
+      },
+      {
+       "de": "Wie findest du die rote Jacke?",
+       "ku": "چاکێتا سۆر ب دیتنا تە چاوانە؟"
+      },
+      {
+       "de": "Mit dem alten Laptop arbeite ich nicht mehr.",
+       "ku": "ئەز ب لاپتۆپا کەڤن ئیدی کار ناکەم."
+      },
+      {
+       "de": "Was für ein Handy hast du?",
+       "ku": "چ جۆرە مۆبایلەک ل نک تە هەیە؟"
+      },
+      {
+       "de": "Das ist unmöglich!",
+       "ku": "ئەڤە نەگونجایە!"
+      },
+      {
+       "de": "Die Verbindung ist schlecht.",
+       "ku": "پەیوەندی یا خرابە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "groups": [
+    {
+     "emoji": "🌉",
+     "de": "Den Weg beschreiben",
+     "ku": "رێک نیشاندان",
+     "lines": [
+      {
+       "de": "über die Brücke",
+       "ku": "ل سەر پرێ را"
+      },
+      {
+       "de": "durch den Park",
+       "ku": "ب ناڤ پارکێ را"
+      },
+      {
+       "de": "am Fluss entlang",
+       "ku": "ب درێژاهیا رووباری"
+      },
+      {
+       "de": "um den Platz herum",
+       "ku": "ل دۆر گۆڕەپانێ"
+      },
+      {
+       "de": "gegenüber vom Bahnhof",
+       "ku": "بەرانبەر وێستگەها شەمەندەفەرێ"
+      },
+      {
+       "de": "bis zur Ampel",
+       "ku": "هەتا گلۆپا ترافیکێ"
+      },
+      {
+       "de": "an der Kirche vorbei",
+       "ku": "ژ نک کەنیسێ دەرباز ببە"
+      }
+     ]
+    },
+    {
+     "emoji": "🥵",
+     "de": "Wetter unterwegs",
+     "ku": "کەش ل سەر رێکێ",
+     "lines": [
+      {
+       "de": "Es ist sehr heiß, deshalb trinke ich viel.",
+       "ku": "گەلەک گەرمە، لەوما ئەز گەلەک ڤەدخۆم."
+      },
+      {
+       "de": "Der Zug hat Verspätung, deshalb komme ich später.",
+       "ku": "شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم."
+      },
+      {
+       "de": "Die Straße ist gesperrt.",
+       "ku": "رێک یا گرتییە."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "groups": [
+    {
+     "emoji": "🏔️",
+     "de": "Reiseziele",
+     "ku": "بۆ کیڤە دچی؟",
+     "lines": [
+      {
+       "de": "in die Berge",
+       "ku": "بۆ چیایان"
+      },
+      {
+       "de": "an den See",
+       "ku": "بۆ گۆلێ"
+      },
+      {
+       "de": "auf eine Insel",
+       "ku": "بۆ دوورگەهەکێ"
+      },
+      {
+       "de": "in die Wüste",
+       "ku": "بۆ بیابانێ"
+      },
+      {
+       "de": "Ich war noch nie in Wien.",
+       "ku": "هەتا نوکە ئەز نەچوویمە ڤیەننا."
+      },
+      {
+       "de": "Am liebsten mache ich Urlaub am Meer.",
+       "ku": "ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم."
+      }
+     ]
+    },
+    {
+     "emoji": "🧳",
+     "de": "Probleme auf Reisen",
+     "ku": "کێشە ل گەشتێ",
+     "lines": [
+      {
+       "de": "Mein Koffer ist nicht angekommen.",
+       "ku": "جانتایا من نەگەهشت."
+      },
+      {
+       "de": "Ich bin ohne Pass zum Flughafen gefahren.",
+       "ku": "ئەز بێ پاسپۆرت چوومە فڕۆکەخانێ."
+      },
+      {
+       "de": "Die Heizung funktioniert nicht.",
+       "ku": "گەرمکەر کار ناکەت."
+      },
+      {
+       "de": "Das Zimmer ist schmutzig.",
+       "ku": "ژوور یا پیسە."
+      },
+      {
+       "de": "Ich möchte mich beschweren.",
+       "ku": "ئەز دڤێم گازندێ بکەم."
+      },
+      {
+       "de": "frische Luft und gutes Essen",
+       "ku": "هەوایا پاقژ و خوارنا باش"
+      },
+      {
+       "de": "Wir haben den Zug verpasst.",
+       "ku": "شەمەندەفەر ل مە چوو."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "groups": [
+    {
+     "emoji": "🏦",
+     "de": "Auf der Bank",
+     "ku": "ل بانکێ",
+     "lines": [
+      {
+       "de": "ein Konto eröffnen",
+       "ku": "حسابەکێ ڤەکرن"
+      },
+      {
+       "de": "die Geheimzahl / die PIN",
+       "ku": "ژمارا نهێنی"
+      },
+      {
+       "de": "Meine Karte ist weg!",
+       "ku": "کارتا من بەرزە بوو!"
+      }
+     ]
+    },
+    {
+     "emoji": "💳",
+     "de": "Einkaufen & Bezahlen",
+     "ku": "کڕین و پارەدان",
+     "lines": [
+      {
+       "de": "mit Karte zahlen",
+       "ku": "ب کارتێ پارە دان"
+      },
+      {
+       "de": "Das ist mir zu teuer.",
+       "ku": "ئەڤە بۆ من گەلەک ب بهایە."
+      },
+      {
+       "de": "Ich spare für ein neues Auto.",
+       "ku": "ئەز پارێ بۆ ترومبێلەکا نوو کۆم دکەم."
+      }
+     ]
+    },
+    {
+     "emoji": "🏦",
+     "de": "Wissen Sie, ob …?",
+     "ku": "ما … ؟ ئەز نزانم کا …",
+     "lines": [
+      {
+       "de": "Wissen Sie, wo die Bank ist?",
+       "ku": "هوین دزانن بانک ل کیڤەیە؟"
+      },
+      {
+       "de": "Können Sie mir sagen, wann die Post öffnet?",
+       "ku": "هوین دشێن بێژنە من کا پۆستە کەنگی ڤەدبیت؟"
+      },
+      {
+       "de": "Ich weiß nicht, ob ich genug Geld habe.",
+       "ku": "ئەز نزانم کا پارێن من بەس هەنە یان نە."
+      },
+      {
+       "de": "Weißt du, ob der Laden heute offen ist?",
+       "ku": "دزانی کا دووکان ئەڤرۆ ڤەکرییە؟"
+      },
+      {
+       "de": "Ich frage, wie viel das kostet.",
+       "ku": "ئەز پسیار دکەم کا ئەڤە ب چەندە."
+      },
+      {
+       "de": "Kannst du mir sagen, wer das gemacht hat?",
+       "ku": "تو دشێی بێژیە من کا کێ ئەڤە کر؟"
+      },
+      {
+       "de": "Ich bin nicht sicher, ob das stimmt.",
+       "ku": "ئەز پشتڕاست نینم کا ئەڤە راستە."
+      }
+     ]
+    },
+    {
+     "emoji": "🔧",
+     "de": "etwas machen lassen",
+     "ku": "دهێلم … بکەت",
+     "lines": [
+      {
+       "de": "Ich lasse mein Auto reparieren.",
+       "ku": "ئەز ترومبێلا خۆ ددەمە چاککرن."
+      },
+      {
+       "de": "Sie lässt sich die Haare schneiden.",
+       "ku": "ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش)."
+      },
+      {
+       "de": "Wir lassen die Wohnung streichen.",
+       "ku": "ئەم خانی ددەینە بۆیاغکرن."
+      },
+      {
+       "de": "Lass mich in Ruhe!",
+       "ku": "من ب ئارامی بهێلە!"
+      },
+      {
+       "de": "Lass uns gehen!",
+       "ku": "وەرە ئەم بچین!"
+      },
+      {
+       "de": "Ich habe das Kleid reinigen lassen.",
+       "ku": "من جلک دانا شویشتنا وشک."
+      },
+      {
+       "de": "Wo kann ich meinen Pass verlängern lassen?",
+       "ku": "ل کیڤە دشێم پاسپۆرتا خۆ درێژ بکەم (نوو بکەم)؟"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "groups": [
+    {
+     "emoji": "👵",
+     "de": "Erinnerungen",
+     "ku": "بیرهاتن",
+     "lines": [
+      {
+       "de": "Als Kind wohnte ich bei meinen Großeltern.",
+       "ku": "دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام."
+      },
+      {
+       "de": "Früher hatten wir keinen Fernseher.",
+       "ku": "بەرێ تەلەفزیۆن ل نک مە نەبوو."
+      },
+      {
+       "de": "Damals war alles anders.",
+       "ku": "وی دەمی هەمی تشت جودا بوون."
+      },
+      {
+       "de": "Ich erinnere mich gern an meine Schulzeit.",
+       "ku": "ب دل ئەز بیرا دەمێ قوتابخانێ دکەم."
+      },
+      {
+       "de": "Mit 18 habe ich den Führerschein gemacht.",
+       "ku": "ل ١٨ سالیێ من مۆلەتا لێخوڕینێ وەرگرت."
+      },
+      {
+       "de": "Wir spielten jeden Tag draußen.",
+       "ku": "ئەم هەر رۆژ ل دەرڤە یاری دکرن."
+      },
+      {
+       "de": "Meine Oma erzählte uns Märchen.",
+       "ku": "داپیرا من چیرۆکێن کەڤن بۆ مە دگۆتن."
+      }
+     ]
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "de": "Zukunftspläne",
+     "ku": "پلانێن پاشەڕۆژێ",
+     "lines": [
+      {
+       "de": "Ich möchte später eine Familie gründen.",
+       "ku": "پاشی ئەز دڤێم مالباتەکێ پێکبینم."
+      },
+      {
+       "de": "Ich hoffe, dass ich die B1-Prüfung schaffe.",
+       "ku": "هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم."
+      },
+      {
+       "de": "In fünf Jahren würde ich gern ein eigenes Geschäft haben.",
+       "ku": "پشتی پێنج سالان من دڤێت دووکانەکا خۆ هەبیت."
+      },
+      {
+       "de": "Ich plane, nächstes Jahr nach Hause zu fliegen.",
+       "ku": "من پلان هەیە سالا بهێت بفڕمە وەلات."
+      },
+      {
+       "de": "Mein Traum ist ein Haus mit Garten.",
+       "ku": "خەونا من خانیەکە دگەل باخچەی."
+      },
+      {
+       "de": "Alles wird gut!",
+       "ku": "هەمی تشت دێ باش بیت!"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

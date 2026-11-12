@@ -3950,6 +3950,104 @@
 "c": ""
 }
 ]
+},
+"unit_a2_7c": {
+"de": [
+{
+"s": "Ich schreibe ___ Oma eine Karte und schicke ___ morgen ab.",
+"a": "meiner … sie",
+"d": [
+"meine … ihr",
+"meinem … sie"
+],
+"ku": "ئەز کارتەکێ بۆ داپیرا خۆ دنڤیسم و سبەی دهنێرم.",
+"c": ""
+}
+]
+},
+"unit_a2_8c": {
+"de": [
+{
+"s": "Wenn ich reich ___, ___ ich ein Haus am Meer kaufen.",
+"a": "wäre … würde",
+"d": [
+"bin … werde",
+"hätte … würde"
+],
+"ku": "ئەگەر ئەز دەولەمەند بام، دا خانیەکێ ل بەر دەریایێ کڕم.",
+"c": ""
+}
+]
+},
+"unit_a2_8d": {
+"de": [
+{
+"s": "Das Wetter war schlecht. ___ haben wir den Ausflug ___.",
+"a": "Trotzdem … gemacht",
+"d": [
+"Deshalb … gemacht",
+"Trotzdem … machen"
+],
+"ku": "کەش خراب بوو. دیسا ژی مە سەیران کر.",
+"c": ""
+}
+]
+},
+"unit_a2_9d": {
+"de": [
+{
+"s": "Der Zug ist schneller ___ der Bus, aber nicht so schnell ___ das Flugzeug.",
+"a": "als … wie",
+"d": [
+"wie … als",
+"als … als"
+],
+"ku": "شەمەندەفەر ژ پاسێ زووترە، بەلێ نە وەکی فرۆکێ زوو.",
+"c": ""
+}
+]
+},
+"unit_a2_10c": {
+"de": [
+{
+"s": "Zuerst ___ das Formular ausgefüllt, dann ___ es unterschrieben.",
+"a": "wird … wird",
+"d": [
+"ist … wird",
+"wird … werden"
+],
+"ku": "پێشی فۆرم دهێتە پڕکرن، پاشی دهێتە ئیمزاکرن.",
+"c": ""
+}
+]
+},
+"unit_a2_12d": {
+"de": [
+{
+"s": "Ich fahre ___ Wochen in Urlaub, ___ meinen Laptop.",
+"a": "für zwei … ohne",
+"d": [
+"in zwei … mit",
+"für zwei … mit"
+],
+"ku": "ئەز دوو حەفتییان دچمە بێهنڤەدانێ، بێ لاپتۆپا خۆ.",
+"c": ""
+}
+]
+},
+"unit_a2_13c": {
+"de": [
+{
+"s": "Ich möchte wissen, ___ das Konto kostenlos ___.",
+"a": "ob … ist",
+"d": [
+"dass … ist",
+"ob … sein"
+],
+"ku": "ئەز دڤێم بزانم کا حساب ب بێ پارە یە.",
+"c": ""
+}
+]
 }
 }
 }

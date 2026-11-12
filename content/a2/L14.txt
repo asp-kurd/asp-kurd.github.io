@@ -1,0 +1,94 @@
+@L 28 | #8E6CC8 | قۆناغێن ژیانێ | Lebensstationen | Stages of life
+
+@U a | person | قۆناغێن ژیانێ | Lebensphasen | Stages of life
+die Kindheit | دی کیندهایت | زارۆکینی | childhood | 🧸 | In meiner ___ habe ich auf dem Dorf gewohnt. | Kindheit | Krankheit; Kinder | د زارۆکینیا خۆ دا ئەز ل گوندی دژیام.
+die Jugend | دی یووگنت | گەنجینی | youth | 🧑
+erwachsen | ئێرڤاکسن | مەزن بووی (پێگەهشتی) | grown-up | 🧑‍💼
+geboren | گەبۆرن | ژ دایک بووی | born | 👶 | Ich bin 1998 in Zakho ___. | geboren | gebaut; gebracht | ئەز ل ساڵا ١٩٩٨ ل زاخۆ ژ دایک بوویمە.
+heiraten | هایراتن | زەواج کرن | to get married | 💒 | Meine Schwester und ihr Freund wollen nächstes Jahr ___. | heiraten | heißen; heizen | خویشکا من و هەڤالێ وێ دڤێن سالا بهێت زەواج بکەن.
+in Rente gehen | ئین رێنتە گێن | چوونە خانەنشینیێ | to retire | 👴 | Mein Vater geht nächstes Jahr in ___. | Rente | Rennen; Rinde | بابێ من سالا بهێت دچیتە خانەنشینیێ.
+die Schulzeit | دی شوولتسایت | دەمێ قوتابخانێ | school days | 🏫
+das Baby | داس بێبی | ساڤا / بەیبی | the baby | 🍼
+
+@U b | history | بیرهاتن | Erinnerungen | Memories
+Als Kind wohnte ich bei meinen Großeltern. | ئالس کیند ڤۆنتە ئیش بای ماینن گرۆسئێلتەرن | دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام. | As a child I lived with my grandparents. | 👵 | Als Kind ___ ich bei meinen Großeltern. | wohnte | wohne; gewohnt | دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام.
+Früher hatten wir keinen Fernseher. | فریوەر هاتن ڤیر کاینن فێرنزێەر | بەرێ تەلەفزیۆن ل نک مە نەبوو. | In the past we didn't have a TV. | 📻 | Früher ___ wir keinen Fernseher. | hatten | haben; hätten | بەرێ تەلەفزیۆن ل نک مە نەبوو.
+Damals war alles anders. | دامالس ڤار ئالەس ئاندەرس | وی دەمی هەمی تشت جودا بوون. | Back then everything was different. | 🕰️ | ___ war alles anders. | Damals | Morgen; Bald | وی دەمی هەمی تشت جودا بوون.
+Ich erinnere mich gern an meine Schulzeit. | ئیش ئێرینەرە میش گێرن ئان ماینە شوولتسایت | ب دل ئەز بیرا دەمێ قوتابخانێ دکەم. | I like remembering my school days. | 💭 | Ich erinnere mich gern ___ meine Schulzeit. | an | auf; über | ب دل ئەز بیرا دەمێ قوتابخانێ دکەم.
+Mit 18 habe ich den Führerschein gemacht. | میت ئاختسێن هابە ئیش دێن فیورەرشاین گەماخت | ل ١٨ سالیێ من مۆلەتا لێخوڕینێ وەرگرت. | I got my driving licence at 18. | 🚗
+Wir spielten jeden Tag draußen. | ڤیر شپیلتن یێدن تاگ دراوسن | ئەم هەر رۆژ ل دەرڤە یاری دکرن. | We played outside every day. | ⚽
+Meine Oma erzählte uns Märchen. | ماینە ئۆما ئێرتسێلتە ئونس مێرشن | داپیرا من چیرۆکێن کەڤن بۆ مە دگۆتن. | My grandma told us fairy tales. | 📖
+Weißt du noch? | ڤایست دوو نۆخ | ما تە ل بیرە؟ | Do you remember? | 🤔
+
+@U c | flag | پلانێن پاشەڕۆژێ | Zukunftspläne | Plans for the future
+Ich möchte später eine Familie gründen. | ئیش مۆشتە شپێتەر ئاینە فامیلیە گریوندن | پاشی ئەز دڤێم مالباتەکێ پێکبینم. | Later I want to start a family. | 👨‍👩‍👧 | Ich möchte später eine Familie ___. | gründen | grünen; gründet | پاشی ئەز دڤێم مالباتەکێ پێکبینم.
+Ich hoffe, dass ich die B1-Prüfung schaffe. | ئیش هۆفە، داس ئیش دی بێ-ئاینس-پریوفونگ شافە | هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم. | I hope I pass the B1 exam. | 🎓 | Ich hoffe, dass ich die B1-Prüfung ___. | schaffe | schaffen; geschafft | هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم.
+In fünf Jahren würde ich gern ein eigenes Geschäft haben. | ئین فیونف یارن ڤوردە ئیش گێرن ئاین ئایگنەس گەشێفت هابن | پشتی پێنج سالان من دڤێت دووکانەکا خۆ هەبیت. | In five years I'd like to have my own business. | 🏪
+Ich plane, nächstes Jahr nach Hause zu fliegen. | ئیش پلانە، نێکستەس یار ناخ هاوزە تسوو فلیگن | من پلان هەیە سالا بهێت بفڕمە وەلات. | I'm planning to fly home next year. | ✈️
+Mein Traum ist ein Haus mit Garten. | ماین تراوم ئیست ئاین هاوس میت گارتن | خەونا من خانیەکە دگەل باخچەی. | My dream is a house with a garden. | 🏡 | Mein ___ ist ein Haus mit Garten. | Traum | Raum; Turm | خەونا من خانیەکە دگەل باخچەی.
+das Ziel | داس تسیل | ئارمانج | the goal | 🎯
+die Zukunft | دی تسووکونفت | پاشەڕۆژ | the future | 🔮
+Alles wird gut! | ئالەس ڤیرت گووت | هەمی تشت دێ باش بیت! | Everything will be fine! | 🌈
+
+@U d | palette | بچووک و شیرین (-chen) | Klein und süß: -chen | Diminutives
+das Häuschen | داس هۆیسشن | خانیێ بچووک | the little house | 🛖 | Ein kleines Haus ist ein ___. | Häuschen | Hauschen; Häuslein | خانیەکێ بچووک «Häuschen» ـە.
+das Kätzchen | داس کێتسشن | پشیکا بچووک | the kitten | 🐱
+das Brötchen | داس برۆتشن | نانێ بچووک (سەموون) | the bread roll | 🥖 | Zum Frühstück esse ich ein ___ mit Käse. | Brötchen | Brot; Bröt | بۆ تێشتێ ئەز سەموونەکێ دگەل پەنیری دخۆم.
+das Mädchen | داس مێدشن | کچ | the girl | 👧
+das Märchen | داس مێرشن | چیرۆکا کەڤن (حەکایەت) | the fairy tale | 🧚 | Meine Oma hat mir jeden Abend ein ___ erzählt. | Märchen | Mädchen; Marmelade | داپیرا من هەر ئێڤار چیرۆکەک بۆ من دگۆت.
+das Bäumchen | داس بۆیمشن | دارا بچووک | the little tree | 🌱
+Alle Wörter mit -chen haben den Artikel „das“. | ئالە ڤۆرتەر میت -شن هابن دێن ئارتیکل «داس» | هەمی پەیڤێن ب -chen ئارتیکلێ «das» هەیە. | All words with -chen take "das". | 📌
+Herzlichen Glückwunsch, du hast A2 geschafft! | هێرتسلیشن گلیوکڤونش، دوو هاست ئا-تسڤای گەشافت | پیرۆز بیت، تە ئاستێ A2 تەمام کر! | Congratulations, you've completed A2! | 🏆
+
+@D ئەلبوما وێنەیان
+Oma: Schau mal, das bin ich mit sechs Jahren. || سەحکە، ئەڤە ئەزم ل شەش سالیێ.
+Lana: Wirklich? Wo hast du damals gewohnt? || ب راستی؟ وی دەمی تو ل کیڤە دژیای؟
+Oma: In einem kleinen Dorf in den Bergen. Wir hatten viele Tiere. || د گوندەکێ بچووک دا ل چیایان. گەلەک تەرشێن مە هەبوون.
+Lana: Musstest du viel arbeiten? || ئەرێ دڤیا تو گەلەک کار بکەی؟
+Oma: Ja, ich musste jeden Morgen Wasser holen. Trotzdem war es eine schöne Zeit. || بەلێ، دڤیا ئەز هەر سپێدە ئاڤێ بینم. دیسا ژی دەمەکێ خۆش بوو.
+Lana: Und wann hast du Opa kennengelernt? || و تە کەنگی باپیر ناسکر؟
+Oma: Mit zwanzig, auf einer Hochzeit. Ein Jahr später haben wir geheiratet. || ل بیست سالیێ، ل داوەتەکێ. سالەک پاشی مە زەواج کر.
+Lana: Wie schön! Ich hoffe, dass ich auch so eine Geschichte erlebe. || چەند جوانە! هیڤیدارم کو چیرۆکەکا وەسا ب سەرێ من ژی بهێت.
+
+@G 📜 | Wiederholung: Perfekt und Präteritum | دووبارەکرن: Perfekt و Präteritum
+E: Beim Sprechen meist Perfekt. Bei sein, haben und Modalverben meist Präteritum (war, hatte, konnte). In Geschichten auch andere Verben im Präteritum (wohnte, erzählte). || د ئاخفتنێ دا پتر Perfekt. بۆ sein, haben و کارێن یاریدەدەر پتر Präteritum (war, hatte, konnte). د چیرۆکان دا کارێن دی ژی (wohnte, erzählte).
+H: Infinitiv | Präteritum | Perfekt
+R: sein | war | ist gewesen
+R: haben | hatte | hat gehabt
+R: wohnen | wohnte | hat gewohnt
+R: spielen | spielte | hat gespielt
+R: müssen | musste | hat gemusst
+X: Als Kind war ich oft krank. || دەمێ زارۆک بووم گەلەک جاران نەساخ دبووم.
+X: Wir hatten einen großen Garten. || باخچەیەکێ مەزن یێ مە هەبوو.
+X: Gestern habe ich meine Oma besucht. || دوهی ئەز چوومە سەرەدانا داپیرا خۆ.
+P: Ich bin müde. (gestern, Präteritum) || دوهی ئەز وەستیای بووم. || war || Gestern war ich müde. || دوهی ئەز وەستیای بووم.
+P: Wir haben keine Zeit. (früher, Präteritum) || بەرێ دەمێ مە نەبوو. || hatten || Früher hatten wir keine Zeit. || بەرێ دەمێ مە نەبوو.
+P: Er spielt Fußball. (gestern, Perfekt) || دوهی تۆپا پێ کر. || hat gespielt || Er hat gestern Fußball gespielt. || ئەو دوهی تۆپا پێ کر.
+
+@G 🔁 | Wiederholung: Nebensätze (weil, dass, wenn, ob) | دووبارەکرن: رستەیێن لاوەکی
+E: In Nebensätzen mit weil, dass, wenn, ob und W-Wörtern steht das Verb am Ende. || د رستەیێن ب weil, dass, wenn, ob و پەیڤێن W دا، کار ل دوماهیێ یە.
+H: Konnektor | Bedeutung | Beispiel
+R: weil | چونکی | …, weil ich müde bin.
+R: dass | کو | …, dass du kommst.
+R: wenn | ئەگەر / دەمێ | Wenn es regnet, …
+R: ob | کا … یان نە | …, ob er Zeit hat.
+X: Ich bleibe zu Hause, weil ich krank bin. || ئەز ل مال دمینم، چونکی نەساخم.
+X: Ich glaube, dass sie recht hat. || ئەز هزر دکەم کو ئەو ل سەر حەقە.
+X: Weißt du, ob der Kurs morgen stattfindet? || دزانی کا سبەی خول دێ هەبیت؟
+P: Ich lerne Deutsch. Ich will in Deutschland studieren. (weil) || ئەز ئەلمانی فێر دبم. دڤێم ل ئەلمانیا بخوینم. || weil || Ich lerne Deutsch, weil ich in Deutschland studieren will. || ئەز ئەلمانی فێر دبم، چونکی دڤێم ل ئەلمانیا بخوینم.
+P: Hast du morgen Zeit? (Ich frage dich, …) || سبەی دەمێ تە هەیە؟ || ob || Ich frage dich, ob du morgen Zeit hast. || ئەز ژ تە دپرسم کا سبەی دەمێ تە هەیە.
+P: Das Wetter ist schön. Wir grillen. (wenn) || کەش خۆشە. ئەم گۆشتێ برژاندی چێدکەین. || wenn || Wenn das Wetter schön ist, grillen wir. || ئەگەر کەش خۆش بیت، ئەم گۆشتێ برژاندی چێدکەین.
+
+@G 🐣 | Diminutiv: -chen | بچووککرن: -chen
+E: Mit -chen wird etwas klein oder lieb. Oft mit Umlaut (Haus ➔ Häuschen). Artikel immer „das“. || ب -chen تشت بچووک یان شیرین دبیت. گەلەک جاران ب Umlaut (Haus ➔ Häuschen). ئارتیکل هەردەم «das».
+H: Nomen | Diminutiv
+R: das Haus | das Häuschen
+R: die Katze | das Kätzchen
+R: das Brot | das Brötchen
+R: der Baum | das Bäumchen
+X: Im Garten steht ein kleines Häuschen. || د باخچەی دا خانیەکێ بچووک هەیە.
+X: Das Kätzchen schläft auf dem Sofa. || پشیکا بچووک ل سەر قەنەفێ دنڤیت.
+X: Ich kaufe sechs Brötchen. || ئەز شەش سەموونان دکڕم.
+P: die Katze ➔ ___ || پشیک ➔ پشیکا بچووک || -chen || das Kätzchen || پشیکا بچووک
+P: der Baum ➔ ___ || دار ➔ دارا بچووک || -chen || das Bäumchen || دارا بچووک
+P: der Hund ➔ ___ || سەی ➔ سەیێ بچووک || -chen || das Hündchen || سەیێ بچووک

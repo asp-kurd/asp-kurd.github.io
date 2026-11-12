@@ -1,0 +1,99 @@
+@L 25 | #4F9FC0 | ل سەر رێکێ | Unterwegs | On the move
+
+@U a | directions | رێک نیشاندان | Den Weg beschreiben | Giving directions
+über die Brücke | ئیوبەر دی بریوکە | ل سەر پرێ را | over the bridge | 🌉 | Gehen Sie ___ die Brücke. | über | unter; durch | ل سەر پرێ را بچن.
+durch den Park | دورش دێن پارک | ب ناڤ پارکێ را | through the park | 🌳 | Wir gehen ___ den Park. | durch | über; um | ئەم ب ناڤ پارکێ را دچین.
+am Fluss entlang | ئام فلوس ئێنتلانگ | ب درێژاهیا رووباری | along the river | 🏞️
+um den Platz herum | ئوم دێن پلاتس هێروم | ل دۆر گۆڕەپانێ | around the square | 🔄
+gegenüber vom Bahnhof | گێگنیوبەر فۆم بانهۆف | بەرانبەر وێستگەها شەمەندەفەرێ | opposite the station | 🚉 | Das Hotel ist ___ vom Bahnhof. | gegenüber | gegen; über | هۆتێل بەرانبەر وێستگەهێ یە.
+bis zur Ampel | بیس تسور ئامپل | هەتا گلۆپا ترافیکێ | as far as the traffic lights | 🚦 | Fahren Sie ___ zur Ampel und dann links. | bis | von; ab | هەتا گلۆپا ترافیکێ بچن و پاشی بۆ چەپێ.
+an der Kirche vorbei | ئان دێر کیرشە فۆربای | ژ نک کەنیسێ دەرباز ببە | past the church | ⛪
+aus dem Haus | ئاوس دێم هاوس | ژ خانی دەر | out of the house | 🏠
+
+@U b | transport | هاتن و چوون | Im Verkehr | In traffic
+der Stau | دێر شتاو | قەرەباڵغیا ترومبێلان | the traffic jam | 🚗 | Auf der Autobahn war ein langer ___. | Stau | Staub; Stuhl | ل سەر رێکا ئۆتۆبانێ قەرەباڵغیەکا درێژ هەبوو.
+der Unfall | دێر ئونفال | رووداو (تێکدان) | the accident | 💥 | Es gab einen ___ an der Kreuzung. | Unfall | Umfall; Anfall | ل چوارڕێیانێ رووداوەک هەبوو.
+die Kreuzung | دی کرۆیتسونگ | چوارڕێیان | the crossroads | ✖️
+tanken | تانکن | بەنزین تێکرن | to fill up (fuel) | ⛽ | Ich muss noch ___, der Tank ist fast leer. | tanken | tanzen; danken | دڤێت بەنزین تێکەم، تەنکی نێزیکی ڤالا بوو.
+der Führerschein | دێر فیورەرشاین | مۆلەتا لێخوڕینێ | the driving licence | 🪪
+bremsen | برێمزن | راگرتن (فرێن) | to brake | 🛑
+Er ist zu schnell gefahren. | ئێر ئیست تسوو شنێل گەفارن | ئەو گەلەک ب لەز لێخوڕی. | He drove too fast. | 🏎️
+Ich habe einen Strafzettel bekommen. | ئیش هابە ئاینن شترافتسێتل بەکۆمن | من پسوولەیا سزایێ (غەرامە) وەرگرت. | I got a ticket (fine). | 🧾
+
+@U c | weather | کەش ل سەر رێکێ | Wetter unterwegs | Weather on the road
+der Nebel | دێر نێبل | مژ | the fog | 🌫️ | Bei ___ muss man langsam fahren. | Nebel | Nabel; Nagel | دەمێ مژ هەبیت، دڤێت مرۆڤ هێدی لێبخوڕیت.
+das Gewitter | داس گەڤیتەر | باران و برووسک | the thunderstorm | ⛈️
+der Sturm | دێر شتورم | بڕووبا | the storm | 🌪️
+Glatteis | گلاتئایس | قەشا ل سەر رێکێ | black ice | 🧊 | Vorsicht, die Straße ist glatt! Es gibt ___. | Glatteis | Glas; Eiscreme | ئاگەهدار بە، رێک یا شەمتۆکە! قەشا هەیە.
+Es ist sehr heiß, deshalb trinke ich viel. | ئێس ئیست زێر هایس، دێسهالب ترینکە ئیش فیل | گەلەک گەرمە، لەوما ئەز گەلەک ڤەدخۆم. | It's very hot, so I drink a lot. | 🥵 | Es ist sehr heiß, ___ trinke ich viel. | deshalb | trotzdem; weil | گەلەک گەرمە، لەوما ئەز گەلەک ڤەدخۆم.
+Der Zug hat Verspätung, deshalb komme ich später. | دێر تسووگ هات فێرشپێتونگ، دێسهالب کۆمە ئیش شپێتەر | شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم. | The train is late, so I'll come later. | 🚆 | Der Zug hat Verspätung, deshalb ___ ich später. | komme | kommen; ich komme | شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم.
+Die Straße ist gesperrt. | دی شتراسە ئیست گەشپێرت | رێک یا گرتییە. | The road is closed. | 🚧
+Fahr vorsichtig! | فار فۆرزیشتیش | ب هشیاری لێبخوڕە! | Drive carefully! | ⚠️
+
+@U d | city | ئامرازێن هاتن و چوونێ | Verkehrsmittel | Means of transport
+das Flugzeug | داس فلووگتسۆیگ | فرۆکە | the plane | ✈️
+der Abflug | دێر ئاپفلووگ | فڕین (دەرکەفتن) | the departure | 🛫 | Der ___ ist um 14 Uhr. | Abflug | Ausflug; Abfall | فڕین دەمژمێر ١٤ یە.
+die Landung | دی لاندونگ | نیشتن | the landing | 🛬
+das Moped | داس مۆپێت | ماتۆرسکیلا بچووک | the moped | 🛵
+die Fahrkarte | دی فارکارتە | بلیتا هاتن و چوونێ | the ticket | 🎫 | Ich kaufe eine ___ am Automaten. | Fahrkarte | Fahrplan; Landkarte | ئەز بلیتەکێ ژ ئامیرێ دکڕم.
+umsteigen | ئومشتایگن | گوهۆڕینا پاسێ / شەمەندەفەرێ | to change (trains) | 🔁 | In Frankfurt muss ich ___. | umsteigen | aussteigen; einsteigen | ل فرانکفۆرتێ دڤێت ئەز شەمەندەفەرێ بگوهۆڕم.
+Fahren Sie mit der U-Bahn bis zur Endstation. | فارن زی میت دێر ئوو-بان بیس تسور ئێنتشتاتسیۆن | ب مێترۆیێ هەتا وێستگەها دوماهیێ بچن. | Take the underground to the last stop. | 🚇
+Ich fahre lieber mit dem Rad als mit dem Auto. | ئیش فارە لیبەر میت دێم رات ئالس میت دێم ئاوتۆ | ئەز پتر حەز دکەم ب پایسکیلێ بچم نەک ب ترومبێلێ. | I prefer cycling to driving. | 🚲
+
+@D رێک بەرزەکر
+Tourist: Entschuldigung, wie komme ich zum Museum? || ببوورە، ئەز چاوا دگەهمە مۆزەخانێ؟
+Frau: Das ist nicht weit. Gehen Sie hier geradeaus bis zur Ampel. || نە دویرە. ل ڤێرێ راست بچن هەتا گلۆپا ترافیکێ.
+Tourist: Und dann? || و پاشی؟
+Frau: Dann links und über die Brücke. Danach immer am Fluss entlang. || پاشی بۆ چەپێ و ل سەر پرێ را. پاشی هەردەم ب درێژاهیا رووباری.
+Tourist: Muss ich durch den Park gehen? || دڤێت ب ناڤ پارکێ را بچم؟
+Frau: Ja, das ist der kürzeste Weg. Das Museum ist gegenüber vom Rathaus. || بەلێ، ئەڤە رێکا هەری کورتە. مۆزەخانە بەرانبەر شارەوانیێ یە.
+Tourist: Vielen Dank! Ich habe mich total verlaufen, deshalb frage ich. || گەلەک سوپاس! من رێک بەرزە کربوو، لەوما من پسیار کر.
+Frau: Kein Problem. Viel Spaß im Museum! || چ کێشە نینە. ل مۆزەخانێ خۆش ببیت!
+
+@G 🧭 | Lokale Präpositionen | پێشگرێن جهی
+E: aus, von (woher?); an … vorbei, bis zu, durch, entlang, gegenüber, über, um … herum (wo/wohin?). || aus, von = ژ (ژ کیڤە؟). an … vorbei = ژ نک … دەرباز. bis zu = هەتا. durch = ب ناڤ … را. entlang = ب درێژاهیا. gegenüber = بەرانبەر. über = ل سەر … را. um … herum = ل دۆر.
+H: Präposition | Kasus | Beispiel
+R: aus | Dativ | aus dem Haus
+R: von | Dativ | vom Bahnhof
+R: an … vorbei | Dativ | am Park vorbei
+R: bis zu | Dativ | bis zur Ampel
+R: gegenüber | Dativ | gegenüber vom Kino
+R: durch | Akkusativ | durch den Wald
+R: entlang | Akkusativ (danach) | den Fluss entlang
+R: um … herum | Akkusativ | um den See herum
+X: Ich komme gerade vom Arzt. || ئەز نوکە ژ نک نوژداری دهێم.
+X: Der Bus fährt durch die Stadt. || پاس ب ناڤ باژێڕی را دچیت.
+X: Wir laufen um den See herum. || ئەم ل دۆر گۆلێ دگەڕین.
+T: zu + der = zur, zu + dem = zum, von + dem = vom. || zu + der = zur، zu + dem = zum، von + dem = vom.
+P: Geh ___ den Park. (ب ناڤ … را) || ب ناڤ پارکێ را بچە. || durch || Geh durch den Park. || ب ناڤ پارکێ را بچە.
+P: Das Café ist ___ der Post. (بەرانبەر) || کافێ بەرانبەر پۆستێ یە. || gegenüber || Das Café ist gegenüber der Post. || کافێ بەرانبەر پۆستێ یە.
+P: Fahren Sie ___ Kreuzung. (هەتا) || هەتا چوارڕێیانێ بچن. || bis zur || Fahren Sie bis zur Kreuzung. || هەتا چوارڕێیانێ بچن.
+
+@G ➡️ | deshalb | لەوما (deshalb)
+E: „deshalb“ nennt eine Folge. Es steht auf Position 1 oder 3; danach kommt das Verb. || «deshalb» = لەوما (ئەنجام). ل جهێ ئێکێ یان سێیێ، پاشی کار دهێت.
+H: Grund | deshalb + Verb | Folge
+R: Es regnet, | deshalb nehme | ich den Bus.
+R: Ich bin krank, | deshalb bleibe | ich zu Hause.
+R: Er hat keinen Führerschein, | deshalb fährt | er Rad.
+X: Ich habe Hunger, deshalb koche ich jetzt. || ئەز برسیمە، لەوما نوکە خوارنێ چێدکەم.
+X: Es gab einen Stau. Deshalb bin ich zu spät gekommen. || قەرەباڵغی هەبوو. لەوما ئەز دەرەنگ هاتم.
+X: Sie lernt Deutsch, deshalb besucht sie einen Kurs. || ئەو ئەلمانی فێر دبیت، لەوما دچیتە خولەکێ.
+T: weil = Grund (Verb am Ende); deshalb = Folge (Verb direkt danach). || weil = چونکی (کار ل دوماهیێ)؛ deshalb = لەوما (کار دەستبەجه).
+P: Der Bus kommt nicht. Ich gehe zu Fuß. || پاس نائێت. ئەز ب پێیان دچم. || deshalb || Der Bus kommt nicht, deshalb gehe ich zu Fuß. || پاس نائێت، لەوما ئەز ب پێیان دچم.
+P: Ich habe kein Geld. Ich kaufe nichts. || پارێن من نینن. ئەز چ ناکڕم. || deshalb || Ich habe kein Geld, deshalb kaufe ich nichts. || پارێن من نینن، لەوما ئەز چ ناکڕم.
+P: Es ist Glatteis. Wir fahren langsam. || قەشا ل سەر رێکێ هەیە. ئەم هێدی دچین. || deshalb || Es ist Glatteis, deshalb fahren wir langsam. || قەشا هەیە، لەوما ئەم هێدی دچین.
+
+@G 🧱 | Wortbildung: -bar, -ig, -isch | پەیڤ چێکرن: -bar, -ig, -isch
+E: Verb + -bar = man kann es tun (essbar). Nomen + -ig / -isch = Adjektiv (sonnig, praktisch). || کار + -bar = دشێی بکەی (essbar = دهێتە خوارن). ناڤ + -ig / -isch = سالۆخ (sonnig = رۆژ تێدا، praktisch = ب کێر هاتی).
+H: Basis | Adjektiv
+R: essen | essbar
+R: trinken | trinkbar
+R: die Sonne | sonnig
+R: der Regen | regnerisch
+R: die Praxis | praktisch
+X: Das Wasser ist hier nicht trinkbar. || ئاڤا ڤێرێ بۆ ڤەخوارنێ نینە.
+X: Morgen wird es sonnig. || سبەی دێ رۆژ هەبیت.
+X: Das Wetter ist heute windig. || ئەڤرۆ با یا هەی.
+P: Man kann den Pilz essen. Er ist ___. || مرۆڤ دشێت ڤێ کارکێ بخۆت. || -bar || Er ist essbar. || دهێتە خوارن.
+P: Heute scheint die Sonne. Es ist ___. || ئەڤرۆ رۆژ هەیە. || -ig || Es ist sonnig. || رۆژ هەیە.
+P: Heute gibt es viel Wind. Es ist ___. || ئەڤرۆ گەلەک با هەیە. || -ig || Es ist windig. || با یا هەی.

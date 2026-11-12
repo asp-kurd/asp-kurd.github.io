@@ -3153,6 +3153,1190 @@
     "answer": 0,
     "explain": "ئەز پشتڕاستم کو تو دێ شێی."
    }
+  ],
+  "21": [
+   {
+    "type": "choice",
+    "q": "Ich schenke ihm einen ___ für das Kino.",
+    "options": [
+     "Gutschrift",
+     "Schein",
+     "Gutschein"
+    ],
+    "answer": 2,
+    "explain": "ئەز کارتەکا سینەمایێ دیاری ددەمێ."
+   },
+   {
+    "type": "choice",
+    "q": "Was ___ du deiner Mutter zum Geburtstag?",
+    "options": [
+     "schenkst",
+     "schenken",
+     "Geschenk"
+    ],
+    "answer": 0,
+    "explain": "تو بۆ رۆژبوونا دایکا خۆ چ دیاری ددەیێ؟"
+   },
+   {
+    "type": "order",
+    "q": "aber | Das | nett | dir | ist | von",
+    "options": null,
+    "answer": "Das ist aber nett von dir",
+    "explain": "تو گەلەک ب رێز و ئەدەبی!"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەز پەرتووکەکێ ددەمە بابێ خۆ.",
+     "ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ.",
+     "ل ٢١ی ئادارێ ئەم نەورۆزێ جەژن دکەین.",
+     "کەشێ ئاهەنگێ گەلەک خۆش بوو."
+    ],
+    "answer": 0,
+    "explain": "Ich gebe meinem Vater ein Buch.",
+    "audio": "Ich gebe meinem Vater ein Buch."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Ich packe das Geschenk schön ein.» = ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "ئەز دیاریێ ب جوانی دپێچم."
+   },
+   {
+    "type": "type",
+    "q": "داخوازی (دەعوەت)",
+    "options": null,
+    "answer": "die Einladung",
+    "explain": "دی ئاینلادونگ",
+    "pic": "✉️"
+   },
+   {
+    "type": "order",
+    "q": "geben | mir | Salz | Kannst | du | das",
+    "options": null,
+    "answer": "Kannst du mir das Salz geben",
+    "explain": "تو دشێی خوێیێ بدەیە من؟"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Am 21. März feiern wir Newroz.» = ل ٢١ی ئادارێ ئەم نەورۆزێ جەژن دکەین.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "ل ٢١ی ئادارێ ئەم نەورۆزێ جەژن دکەین."
+   },
+   {
+    "type": "picture",
+    "q": "Gute Reise!",
+    "options": [
+     "💐",
+     "📿",
+     "✨",
+     "🧳"
+    ],
+    "answer": 3,
+    "explain": "رێکا تە ب خێر!",
+    "audio": "Gute Reise!"
+   },
+   {
+    "type": "type",
+    "q": "پیرۆز بیت!",
+    "options": null,
+    "answer": "Herzlichen Glückwunsch!",
+    "explain": "هێرتسلیشن گلیوکڤونش",
+    "pic": "🎊"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "میڤان",
+     "سالەکا نوو یا خۆش!",
+     "رێکا تە ب خێر!",
+     "داخوازی (دەعوەت)"
+    ],
+    "answer": 1,
+    "explain": "Ein glückliches neues Jahr!",
+    "audio": "Ein glückliches neues Jahr!"
+   },
+   {
+    "type": "choice",
+    "q": "Zum Geburtstag backe ich eine ___.",
+    "options": [
+     "Torte",
+     "Tasse",
+     "Tante"
+    ],
+    "answer": 0,
+    "explain": "بۆ رۆژبوونێ ئەز کێکەکێ چێدکەم."
+   },
+   {
+    "type": "choice",
+    "q": "Die Tasche? Ich schenke ___ ihr.",
+    "options": [
+     "sie",
+     "ihn",
+     "ihr"
+    ],
+    "answer": 0,
+    "explain": "جانتا؟ ئەز وێ ددەمە وێ."
+   },
+   {
+    "type": "picture",
+    "q": "schenken",
+    "options": [
+     "🎀",
+     "🎁",
+     "👰",
+     "🎊"
+    ],
+    "answer": 0,
+    "explain": "دیاری دان",
+    "audio": "schenken"
+   }
+  ],
+  "22": [
+   {
+    "type": "choice",
+    "q": "Ich ___ gern mehr Freizeit.",
+    "options": [
+     "hätte",
+     "hatte",
+     "habe"
+    ],
+    "answer": 0,
+    "explain": "خۆزی دەمێ من یێ ڤالا پتر با."
+   },
+   {
+    "type": "picture",
+    "q": "der Ausflug",
+    "options": [
+     "🎵",
+     "🧺",
+     "😴",
+     "🤩"
+    ],
+    "answer": 1,
+    "explain": "گەشت (سەیران)",
+    "audio": "der Ausflug"
+   },
+   {
+    "type": "order",
+    "q": "gern | hätte | mehr | Ich | Freizeit",
+    "options": null,
+    "answer": "Ich hätte gern mehr Freizeit",
+    "explain": "خۆزی دەمێ من یێ ڤالا پتر با."
+   },
+   {
+    "type": "picture",
+    "q": "das Konzert",
+    "options": [
+     "🖼️",
+     "🎵",
+     "🧺",
+     "🤩"
+    ],
+    "answer": 1,
+    "explain": "ئاهەنگا مۆسیقایێ (کۆنسێرت)",
+    "audio": "das Konzert"
+   },
+   {
+    "type": "choice",
+    "q": "___ du mir bitte helfen?",
+    "options": [
+     "Kannst du",
+     "Könntest",
+     "Konntest"
+    ],
+    "answer": 1,
+    "explain": "تو دشێی هاریکاریا من بکەی؟"
+   },
+   {
+    "type": "type",
+    "q": "جهێ دیتنێ",
+    "options": null,
+    "answer": "der Treffpunkt",
+    "explain": "دێر ترێفپونکت",
+    "pic": "📍"
+   },
+   {
+    "type": "order",
+    "q": "Volkshochschule | an | der | der | Kurs",
+    "options": null,
+    "answer": "der Kurs an der Volkshochschule",
+    "explain": "خول ل ناڤەندا فێربوونا گەلی"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Gute Idee! Das machen wir.» = شەمبی چاوانە؟",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "بیرەکا باشە! وێ دکەین."
+   },
+   {
+    "type": "choice",
+    "q": "Ich ___ jetzt gern am Meer.",
+    "options": [
+     "bin",
+     "war",
+     "wäre"
+    ],
+    "answer": 2,
+    "explain": "خۆزی ئەز نوکە ل بەر دەریایێ بام."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "باش و درەنگ نڤستن",
+     "حەزا تە هەیە بچینە سینەمایێ؟",
+     "گەشت (سەیران)",
+     "پاس دەرەنگ هات. دیسا ژی ئەز ل دەمێ خۆ بووم."
+    ],
+    "answer": 1,
+    "explain": "Hast du Lust, ins Kino zu gehen?",
+    "audio": "Hast du Lust, ins Kino zu gehen?"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Ich hätte gern mehr Freizeit.» = خۆزی دەمێ من یێ ڤالا پتر با.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "خۆزی دەمێ من یێ ڤالا پتر با."
+   },
+   {
+    "type": "choice",
+    "q": "Hast du ___, ins Kino zu gehen?",
+    "options": [
+     "Lust",
+     "Last",
+     "Luft"
+    ],
+    "answer": 0,
+    "explain": "حەزا تە هەیە بچینە سینەمایێ؟"
+   },
+   {
+    "type": "type",
+    "q": "تو دشێی هاریکاریا من بکەی؟ (ب ئەدەب)",
+    "options": null,
+    "answer": "Könntest du mir helfen?",
+    "explain": "کۆنتەست دوو میر هێلفن",
+    "pic": "🙏"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "هەرچەندە سەرمایە، ئەو چاکێتێ ناکەتە بەر خۆ.",
+     "تا ل وی هەبوو و دیسا ژی چوو سەر کاری.",
+     "پێشانگەه",
+     "کۆنسێرت ب بها بوو. دیسا ژی زۆر خۆش بوو."
+    ],
+    "answer": 0,
+    "explain": "Obwohl es kalt ist, trägt sie keine Jacke.",
+    "audio": "Obwohl es kalt ist, trägt sie keine Jacke."
+   }
+  ],
+  "23": [
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەڤە دیاریەکا جوانە.",
+     "جانتا وەکی پێلاڤان ب بهایە.",
+     "ئەو بالتۆیەکێ کەڤن دکەتە بەر خۆ.",
+     "جانتایا پشتێ"
+    ],
+    "answer": 2,
+    "explain": "Er trägt einen alten Mantel.",
+    "audio": "Er trägt einen alten Mantel."
+   },
+   {
+    "type": "picture",
+    "q": "aus Leder",
+    "options": [
+     "🧰",
+     "🔌",
+     "👞",
+     "👛"
+    ],
+    "answer": 2,
+    "explain": "ژ چەرمی",
+    "audio": "aus Leder"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "جانتایەکا بچووک ل نک وێ هەیە.",
+     "ب کێر هاتی / ئاسان",
+     "ئەڤ مۆبایلە ژ هەمییان ئەرزانترە.",
+     "مۆبایلا من ژ یا تە نووترە."
+    ],
+    "answer": 3,
+    "explain": "Mein Handy ist neuer als dein Handy.",
+    "audio": "Mein Handy ist neuer als dein Handy."
+   },
+   {
+    "type": "choice",
+    "q": "Mein Geld ist in der ___.",
+    "options": [
+     "Briefmarke",
+     "Brieftasche",
+     "Bratpfanne"
+    ],
+    "answer": 1,
+    "explain": "پارێن من د جزدانی دانە."
+   },
+   {
+    "type": "choice",
+    "q": "Der Tisch ist ___ Holz.",
+    "options": [
+     "aus",
+     "mit",
+     "von"
+    ],
+    "answer": 0,
+    "explain": "مێز ژ دارێ یە."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Was gefällt dir besser?» = کیژ پتر ب دلێ تە یە؟",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "کیژ پتر ب دلێ تە یە؟"
+   },
+   {
+    "type": "picture",
+    "q": "der Rucksack",
+    "options": [
+     "🎒",
+     "🪵",
+     "🛋️",
+     "🔌"
+    ],
+    "answer": 0,
+    "explain": "جانتایا پشتێ",
+    "audio": "der Rucksack"
+   },
+   {
+    "type": "type",
+    "q": "شەحن کەر",
+    "options": null,
+    "answer": "das Ladegerät",
+    "explain": "داس لادەگەرێت",
+    "pic": "🔌"
+   },
+   {
+    "type": "order",
+    "q": "kleine | eine | Sie | Tasche | hat",
+    "options": null,
+    "answer": "Sie hat eine kleine Tasche",
+    "explain": "جانتایەکا بچووک ل نک وێ هەیە."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Dieses Handy ist am billigsten.» = ئەڤە دیاریەکا جوانە.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "ئەڤ مۆبایلە ژ هەمییان ئەرزانترە."
+   },
+   {
+    "type": "choice",
+    "q": "Ich trinke gern Kaffee, aber am ___ trinke ich Tee.",
+    "options": [
+     "lieber",
+     "gerne",
+     "liebsten"
+    ],
+    "answer": 2,
+    "explain": "ئەز حەز ژ قەهوێ دکەم، بەلێ ژ هەمییان پتر چایێ."
+   },
+   {
+    "type": "order",
+    "q": "gefällt | dir | Was | besser",
+    "options": null,
+    "answer": "Was gefällt dir besser",
+    "explain": "کیژ پتر ب دلێ تە یە؟"
+   },
+   {
+    "type": "choice",
+    "q": "Die Tasche ist klein und sehr ___.",
+    "options": [
+     "praktiziert",
+     "Praxis",
+     "praktisch"
+    ],
+    "answer": 2,
+    "explain": "جانتا بچووکە و گەلەک ب کێر دهێت."
+   },
+   {
+    "type": "type",
+    "q": "کۆما کلیلان",
+    "options": null,
+    "answer": "der Schlüsselbund",
+    "explain": "دێر شلیوسلبونت",
+    "pic": "🔑"
+   }
+  ],
+  "24": [
+   {
+    "type": "order",
+    "q": "Der | ist | Bildschirm | kaputt",
+    "options": null,
+    "answer": "Der Bildschirm ist kaputt",
+    "explain": "شاشە یا شکەستییە."
+   },
+   {
+    "type": "choice",
+    "q": "Das ___ Handy ist toll.",
+    "options": [
+     "neuen",
+     "neue",
+     "neues"
+    ],
+    "answer": 1,
+    "explain": "مۆبایلا نوو زۆر باشە."
+   },
+   {
+    "type": "picture",
+    "q": "die Adresse",
+    "options": [
+     "🏠",
+     "📦",
+     "📮",
+     "📤"
+    ],
+    "answer": 0,
+    "explain": "ناڤنیشان",
+    "audio": "die Adresse"
+   },
+   {
+    "type": "order",
+    "q": "Handy | Das | wird | repariert",
+    "options": null,
+    "answer": "Das Handy wird repariert",
+    "explain": "مۆبایل دهێتە چاککرن."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Wie lange dauert ein Brief in den Irak?» = نامەیەک چەند دەم دکێشیت هەتا دگەهیتە عیراقێ؟",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "نامەیەک چەند دەم دکێشیت هەتا دگەهیتە عیراقێ؟"
+   },
+   {
+    "type": "type",
+    "q": "نامە",
+    "options": null,
+    "answer": "der Brief",
+    "explain": "دێر بریف",
+    "pic": "✉️"
+   },
+   {
+    "type": "picture",
+    "q": "Das ist unmöglich!",
+    "options": [
+     "📤",
+     "😱",
+     "📦",
+     "📮"
+    ],
+    "answer": 1,
+    "explain": "ئەڤە نەگونجایە!",
+    "audio": "Das ist unmöglich!"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "نامەیەک چەند دەم دکێشیت هەتا دگەهیتە عیراقێ؟",
+     "وشەیا نهێنی",
+     "پاکەت دێ سبەی هێتە ئینان.",
+     "تۆڕ (نێتوۆرک) ل نک من نینە."
+    ],
+    "answer": 2,
+    "explain": "Das Paket wird morgen gebracht.",
+    "audio": "Das Paket wird morgen gebracht."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Die Briefe werden um zehn Uhr abgeholt.» = مۆبایلێ شەحن کرن",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "نامە دەمژمێر دەهـ دهێنە برن."
+   },
+   {
+    "type": "choice",
+    "q": "Für eine Postkarte brauchst du eine ___.",
+    "options": [
+     "Marke",
+     "Briefmarke",
+     "Brieftasche"
+    ],
+    "answer": 1,
+    "explain": "بۆ کارتەکا پۆستێ پوولەک پێدڤی تە یە."
+   },
+   {
+    "type": "type",
+    "q": "ئەو گەلەک بێ رێزە.",
+    "options": null,
+    "answer": "Er ist sehr unfreundlich.",
+    "explain": "ئێر ئیست زێر ئونفرۆیندلیش",
+    "pic": "😒"
+   },
+   {
+    "type": "choice",
+    "q": "Die Briefe ___ um zehn Uhr abgeholt.",
+    "options": [
+     "worden",
+     "wird",
+     "werden"
+    ],
+    "answer": 2,
+    "explain": "نامە دەمژمێر دەهـ دهێنە برن."
+   },
+   {
+    "type": "choice",
+    "q": "Das Paket ___ morgen gebracht.",
+    "options": [
+     "wird",
+     "werden",
+     "ist"
+    ],
+    "answer": 0,
+    "explain": "پاکەت دێ سبەی هێتە ئینان."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "وشەیا نهێنی",
+     "شاشە یا شکەستییە.",
+     "پەیامەکێ هنارتن",
+     "پاتری"
+    ],
+    "answer": 2,
+    "explain": "eine Nachricht schicken",
+    "audio": "eine Nachricht schicken"
+   }
+  ],
+  "25": [
+   {
+    "type": "picture",
+    "q": "der Unfall",
+    "options": [
+     "✖️",
+     "🌫️",
+     "🌉",
+     "💥"
+    ],
+    "answer": 3,
+    "explain": "رووداو (تێکدان)",
+    "audio": "der Unfall"
+   },
+   {
+    "type": "choice",
+    "q": "Der ___ ist um 14 Uhr.",
+    "options": [
+     "Abfall",
+     "Ausflug",
+     "Abflug"
+    ],
+    "answer": 2,
+    "explain": "فڕین دەمژمێر ١٤ یە."
+   },
+   {
+    "type": "type",
+    "q": "ماتۆرسکیلا بچووک",
+    "options": null,
+    "answer": "das Moped",
+    "explain": "داس مۆپێت",
+    "pic": "🛵"
+   },
+   {
+    "type": "picture",
+    "q": "Fahr vorsichtig!",
+    "options": [
+     "🛬",
+     "🏠",
+     "⛽",
+     "⚠️"
+    ],
+    "answer": 3,
+    "explain": "ب هشیاری لێبخوڕە!",
+    "audio": "Fahr vorsichtig!"
+   },
+   {
+    "type": "choice",
+    "q": "Der Zug hat Verspätung, deshalb ___ ich später.",
+    "options": [
+     "ich komme",
+     "kommen",
+     "komme"
+    ],
+    "answer": 2,
+    "explain": "شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "فڕین (دەرکەفتن)",
+     "ژ خانی دەر",
+     "راگرتن (فرێن)",
+     "ب ناڤ پارکێ را"
+    ],
+    "answer": 3,
+    "explain": "durch den Park",
+    "audio": "durch den Park"
+   },
+   {
+    "type": "order",
+    "q": "später | Der | Verspätung, | deshalb | Zug | komme | ich | hat",
+    "options": null,
+    "answer": "Der Zug hat Verspätung, deshalb komme ich später",
+    "explain": "شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم."
+   },
+   {
+    "type": "choice",
+    "q": "Fahren Sie ___ zur Ampel und dann links.",
+    "options": [
+     "ab",
+     "bis",
+     "von"
+    ],
+    "answer": 1,
+    "explain": "هەتا گلۆپا ترافیکێ بچن و پاشی بۆ چەپێ."
+   },
+   {
+    "type": "truefalse",
+    "q": "«über die Brücke» = ل سەر پرێ را",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "ل سەر پرێ را"
+   },
+   {
+    "type": "order",
+    "q": "bis | Endstation | der | mit | zur | U-Bahn | Fahren | Sie",
+    "options": null,
+    "answer": "Fahren Sie mit der U-Bahn bis zur Endstation",
+    "explain": "ب مێترۆیێ هەتا وێستگەها دوماهیێ بچن."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Ich fahre lieber mit dem Rad als mit dem Auto.» = ل دۆر گۆڕەپانێ",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "ئەز پتر حەز دکەم ب پایسکیلێ بچم نەک ب ترومبێلێ."
+   },
+   {
+    "type": "type",
+    "q": "باران و برووسک",
+    "options": null,
+    "answer": "das Gewitter",
+    "explain": "داس گەڤیتەر",
+    "pic": "⛈️"
+   },
+   {
+    "type": "choice",
+    "q": "Ich muss noch ___, der Tank ist fast leer.",
+    "options": [
+     "tanken",
+     "danken",
+     "tanzen"
+    ],
+    "answer": 0,
+    "explain": "دڤێت بەنزین تێکەم، تەنکی نێزیکی ڤالا بوو."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ل دۆر گۆڕەپانێ",
+     "رێک یا گرتییە.",
+     "ژ نک کەنیسێ دەرباز ببە",
+     "ژ خانی دەر"
+    ],
+    "answer": 2,
+    "explain": "an der Kirche vorbei",
+    "audio": "an der Kirche vorbei"
+   }
+  ],
+  "26": [
+   {
+    "type": "truefalse",
+    "q": "«in die Wüste» = ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "بۆ بیابانێ"
+   },
+   {
+    "type": "choice",
+    "q": "Auf dem Land gibt es ___ Luft.",
+    "options": [
+     "frischen",
+     "frische",
+     "frischer"
+    ],
+    "answer": 1,
+    "explain": "ل گوندی هەوایا پاقژ هەیە."
+   },
+   {
+    "type": "type",
+    "q": "فڕۆکەخانە",
+    "options": null,
+    "answer": "der Flughafen",
+    "explain": "دێر فلووگهافن",
+    "pic": "🛫"
+   },
+   {
+    "type": "order",
+    "q": "liebsten | am | mache | Am | ich | Meer | Urlaub",
+    "options": null,
+    "answer": "Am liebsten mache ich Urlaub am Meer",
+    "explain": "ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم."
+   },
+   {
+    "type": "choice",
+    "q": "Eine ___ kostet 60 Euro.",
+    "options": [
+     "Übernachtung",
+     "Übersetzung",
+     "Überweisung"
+    ],
+    "answer": 0,
+    "explain": "شەڤەک ب ٦٠ یۆرۆیانە."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "بۆ گۆلێ",
+     "ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم.",
+     "ئەز دڤێم گازندێ بکەم.",
+     "هەوایا پاقژ و خوارنا باش"
+    ],
+    "answer": 0,
+    "explain": "an den See",
+    "audio": "an den See"
+   },
+   {
+    "type": "choice",
+    "q": "Im Sommer fahren wir ___ Meer.",
+    "options": [
+     "im",
+     "ans",
+     "am"
+    ],
+    "answer": 1,
+    "explain": "هاڤینێ ئەم دچینە لێڤا دەریایێ."
+   },
+   {
+    "type": "choice",
+    "q": "Wir fliegen ___ eine Insel im Mittelmeer.",
+    "options": [
+     "an",
+     "in",
+     "auf"
+    ],
+    "answer": 2,
+    "explain": "ئەم دفڕینە دوورگەهەکێ ل دەریایا ناڤەراست."
+   },
+   {
+    "type": "order",
+    "q": "haben | verpasst | den | Wir | Zug",
+    "options": null,
+    "answer": "Wir haben den Zug verpasst",
+    "explain": "شەمەندەفەر ل مە چوو."
+   },
+   {
+    "type": "type",
+    "q": "دگەل تێشتێ",
+    "options": null,
+    "answer": "mit Frühstück",
+    "explain": "میت فریوشتیوک",
+    "pic": "🥐"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Die Heizung funktioniert nicht.» = گەرمکەر کار ناکەت.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "گەرمکەر کار ناکەت."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ژوورەکێ گرتن (حجزکرن)",
+     "هەتا نوکە ئەز نەچوویمە ڤیەننا.",
+     "هەوایا پاقژ و خوارنا باش",
+     "دەرەنگ کەفتن"
+    ],
+    "answer": 1,
+    "explain": "Ich war noch nie in Wien.",
+    "audio": "Ich war noch nie in Wien."
+   },
+   {
+    "type": "picture",
+    "q": "die Pension",
+    "options": [
+     "🏡",
+     "🏜️",
+     "⏰",
+     "🌾"
+    ],
+    "answer": 0,
+    "explain": "مێڤانخانەیا بچووک",
+    "audio": "die Pension"
+   },
+   {
+    "type": "picture",
+    "q": "das Gleis",
+    "options": [
+     "🏜️",
+     "🚉",
+     "🛤️",
+     "🛏️"
+    ],
+    "answer": 2,
+    "explain": "هێلا شەمەندەفەرێ (پلاتفۆرم)",
+    "audio": "das Gleis"
+   }
+  ],
+  "27": [
+   {
+    "type": "truefalse",
+    "q": "«Sie lässt sich die Haare schneiden.» = ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش).",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش)."
+   },
+   {
+    "type": "type",
+    "q": "ب کارتێ پارە دان",
+    "options": null,
+    "answer": "mit Karte zahlen",
+    "explain": "میت کارتە تسالن",
+    "pic": "💳"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Erklären Sie mir bitte, was ich tun muss.» = دزانی کا دووکان ئەڤرۆ ڤەکرییە؟",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "هیڤییە بۆ من رۆهن بکەن کا دڤێت ئەز چ بکەم."
+   },
+   {
+    "type": "choice",
+    "q": "Sie ___ sich die Haare schneiden.",
+    "options": [
+     "lasse",
+     "lässt",
+     "lasst"
+    ],
+    "answer": 1,
+    "explain": "ئەو پرچا خۆ ددەتە کورتکرن."
+   },
+   {
+    "type": "order",
+    "q": "die | die | Geheimzahl | PIN | /",
+    "options": null,
+    "answer": "die Geheimzahl / die PIN",
+    "explain": "ژمارا نهێنی"
+   },
+   {
+    "type": "order",
+    "q": "habe | weiß | Geld | ich | ob | Ich | nicht, | genug",
+    "options": null,
+    "answer": "Ich weiß nicht, ob ich genug Geld habe",
+    "explain": "ئەز نزانم کا پارێن من بەس هەنە یان نە."
+   },
+   {
+    "type": "picture",
+    "q": "umtauschen",
+    "options": [
+     "💵",
+     "🔄",
+     "📈",
+     "💶"
+    ],
+    "answer": 1,
+    "explain": "گوهۆڕینا تشتێ کڕی",
+    "audio": "umtauschen"
+   },
+   {
+    "type": "choice",
+    "q": "Ich ___ mein Auto reparieren.",
+    "options": [
+     "lasse",
+     "lässt",
+     "lassen"
+    ],
+    "answer": 0,
+    "explain": "ئەز ترومبێلا خۆ ددەمە چاککرن."
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەز پشتڕاست نینم کا ئەڤە راستە.",
+     "ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش).",
+     "هوین دشێن بێژنە من کا پۆستە کەنگی ڤەدبیت؟",
+     "ئەڤە بۆ من گەلەک ب بهایە."
+    ],
+    "answer": 3,
+    "explain": "Das ist mir zu teuer.",
+    "audio": "Das ist mir zu teuer."
+   },
+   {
+    "type": "choice",
+    "q": "Kann ich ___ bezahlen? – Ja, natürlich.",
+    "options": [
+     "Bar",
+     "bar",
+     "Bart"
+    ],
+    "answer": 1,
+    "explain": "دشێم ب کاش پارەی بدەم؟ – بەلێ، هەلبەت."
+   },
+   {
+    "type": "choice",
+    "q": "Kann ich bitte eine ___ haben?",
+    "options": [
+     "Quatsch",
+     "Quittung",
+     "Kuchen"
+    ],
+    "answer": 1,
+    "explain": "دشێم پسوولەکێ وەرگرم؟"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "ئەم خانی ددەینە بۆیاغکرن.",
+     "ئامیرێ پارە دەرێخستنێ (ATM)",
+     "هوین دشێن بێژنە من کا پۆستە کەنگی ڤەدبیت؟",
+     "وەرە ئەم بچین!"
+    ],
+    "answer": 0,
+    "explain": "Wir lassen die Wohnung streichen.",
+    "audio": "Wir lassen die Wohnung streichen."
+   },
+   {
+    "type": "type",
+    "q": "کارتا من بەرزە بوو!",
+    "options": null,
+    "answer": "Meine Karte ist weg!",
+    "explain": "ماینە کارتە ئیست ڤێک",
+    "pic": "😱"
+   },
+   {
+    "type": "picture",
+    "q": "mit Karte zahlen",
+    "options": [
+     "💵",
+     "🚶‍♂️",
+     "🧾",
+     "💳"
+    ],
+    "answer": 3,
+    "explain": "ب کارتێ پارە دان",
+    "audio": "mit Karte zahlen"
+   }
+  ],
+  "28": [
+   {
+    "type": "choice",
+    "q": "Ich hoffe, dass ich die B1-Prüfung ___.",
+    "options": [
+     "schaffe",
+     "schaffen",
+     "geschafft"
+    ],
+    "answer": 0,
+    "explain": "هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم."
+   },
+   {
+    "type": "type",
+    "q": "کچ",
+    "options": null,
+    "answer": "das Mädchen",
+    "explain": "داس مێدشن",
+    "pic": "👧"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "چوونە خانەنشینیێ",
+     "کچ",
+     "چیرۆکا کەڤن (حەکایەت)",
+     "وی دەمی هەمی تشت جودا بوون."
+    ],
+    "answer": 3,
+    "explain": "Damals war alles anders.",
+    "audio": "Damals war alles anders."
+   },
+   {
+    "type": "order",
+    "q": "fliegen | Ich | nach | zu | nächstes | plane, | Jahr | Hause",
+    "options": null,
+    "answer": "Ich plane, nächstes Jahr nach Hause zu fliegen",
+    "explain": "من پلان هەیە سالا بهێت بفڕمە وەلات."
+   },
+   {
+    "type": "picture",
+    "q": "das Bäumchen",
+    "options": [
+     "🌱",
+     "🤔",
+     "🛖",
+     "👶"
+    ],
+    "answer": 0,
+    "explain": "دارا بچووک",
+    "audio": "das Bäumchen"
+   },
+   {
+    "type": "listen",
+    "q": "🎧",
+    "options": [
+     "دەمێ قوتابخانێ",
+     "هەمی تشت دێ باش بیت!",
+     "بەرێ تەلەفزیۆن ل نک مە نەبوو.",
+     "ب دل ئەز بیرا دەمێ قوتابخانێ دکەم."
+    ],
+    "answer": 1,
+    "explain": "Alles wird gut!",
+    "audio": "Alles wird gut!"
+   },
+   {
+    "type": "type",
+    "q": "پشیکا بچووک",
+    "options": null,
+    "answer": "das Kätzchen",
+    "explain": "داس کێتسشن",
+    "pic": "🐱"
+   },
+   {
+    "type": "choice",
+    "q": "Meine Oma hat mir jeden Abend ein ___ erzählt.",
+    "options": [
+     "Märchen",
+     "Mädchen",
+     "Marmelade"
+    ],
+    "answer": 0,
+    "explain": "داپیرا من هەر ئێڤار چیرۆکەک بۆ من دگۆت."
+   },
+   {
+    "type": "choice",
+    "q": "Früher ___ wir keinen Fernseher.",
+    "options": [
+     "haben",
+     "hatten",
+     "hätten"
+    ],
+    "answer": 1,
+    "explain": "بەرێ تەلەفزیۆن ل نک مە نەبوو."
+   },
+   {
+    "type": "choice",
+    "q": "Ein kleines Haus ist ein ___.",
+    "options": [
+     "Häuslein",
+     "Hauschen",
+     "Häuschen"
+    ],
+    "answer": 2,
+    "explain": "خانیەکێ بچووک «Häuschen» ـە."
+   },
+   {
+    "type": "picture",
+    "q": "Weißt du noch?",
+    "options": [
+     "🌱",
+     "🤔",
+     "🎯",
+     "👧"
+    ],
+    "answer": 1,
+    "explain": "ما تە ل بیرە؟",
+    "audio": "Weißt du noch?"
+   },
+   {
+    "type": "truefalse",
+    "q": "«Als Kind wohnte ich bei meinen Großeltern.» = دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 0,
+    "explain": "دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام."
+   },
+   {
+    "type": "truefalse",
+    "q": "«Früher hatten wir keinen Fernseher.» = پشتی پێنج سالان من دڤێت دووکانەکا خۆ هەبیت.",
+    "options": [
+     "Richtig",
+     "Falsch"
+    ],
+    "answer": 1,
+    "explain": "بەرێ تەلەفزیۆن ل نک مە نەبوو."
+   },
+   {
+    "type": "order",
+    "q": "meinen | bei | wohnte | Großeltern | Kind | Als | ich",
+    "options": null,
+    "answer": "Als Kind wohnte ich bei meinen Großeltern",
+    "explain": "دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام."
+   }
   ]
  },
  "final": {

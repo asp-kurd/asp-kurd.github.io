@@ -105,6 +105,46 @@
    "ku": "A2 · وانە ٦ · خواندن و پیشە",
    "de": "A2 · Lektion 6 · Ausbildung und Karriere",
    "en": "A2 · Lesson 6 · Education and career"
+  },
+  {
+   "ku": "A2 · وانە ٧ · جەژن و دیاری",
+   "de": "A2 · Lektion 7 · Feste und Geschenke",
+   "en": "A2 · Lesson 7 · Celebrations and presents"
+  },
+  {
+   "ku": "A2 · وانە ٨ · دوماهیا حەفتیێ",
+   "de": "A2 · Lektion 8 · Am Wochenende",
+   "en": "A2 · Lesson 8 · At the weekend"
+  },
+  {
+   "ku": "A2 · وانە ٩ · تشتێن من",
+   "de": "A2 · Lektion 9 · Meine Sachen",
+   "en": "A2 · Lesson 9 · My things"
+  },
+  {
+   "ku": "A2 · وانە ١٠ · پەیوەندی",
+   "de": "A2 · Lektion 10 · Kommunikation",
+   "en": "A2 · Lesson 10 · Communication"
+  },
+  {
+   "ku": "A2 · وانە ١١ · ل سەر رێکێ",
+   "de": "A2 · Lektion 11 · Unterwegs",
+   "en": "A2 · Lesson 11 · On the move"
+  },
+  {
+   "ku": "A2 · وانە ١٢ · گەشت",
+   "de": "A2 · Lektion 12 · Reisen",
+   "en": "A2 · Lesson 12 · Travelling"
+  },
+  {
+   "ku": "A2 · وانە ١٣ · پارە",
+   "de": "A2 · Lektion 13 · Geld",
+   "en": "A2 · Lesson 13 · Money"
+  },
+  {
+   "ku": "A2 · وانە ١٤ · قۆناغێن ژیانێ",
+   "de": "A2 · Lektion 14 · Lebensstationen",
+   "en": "A2 · Lesson 14 · Stages of life"
   }
  ],
  "units": [
@@ -11410,6 +11450,4734 @@
      "emoji": "💪"
     }
    ]
+  },
+  {
+   "id": "unit_a2_7a",
+   "section": 22,
+   "only": "de",
+   "icon": "calendar",
+   "color": "#C9A227",
+   "titleKu": "جەژن و ئاهەنگ",
+   "titleDe": "Feste feiern",
+   "titleEn": "Celebrating",
+   "concepts": [
+    {
+     "id": "b7_01",
+     "ku": "داوەت / زەماوەند",
+     "kuLat": "Dawet / zemawend",
+     "de": "die Hochzeit",
+     "deHint": "دی هۆختسایت",
+     "en": "the wedding",
+     "enHint": "",
+     "emoji": "💍",
+     "cloze": {
+      "de": "Meine Cousine heiratet. Die ___ ist im Juni.",
+      "a": "Hochzeit",
+      "d": [
+       "Hochhaus",
+       "Heizung"
+      ],
+      "ku": "دۆتماما من دێ شوو کەت. داوەت ل حوزەیرانێ یە."
+     }
+    },
+    {
+     "id": "b7_02",
+     "ku": "داخوازی (دەعوەت)",
+     "kuLat": "Daxwazî (de'wet)",
+     "de": "die Einladung",
+     "deHint": "دی ئاینلادونگ",
+     "en": "the invitation",
+     "enHint": "",
+     "emoji": "✉️",
+     "cloze": {
+      "de": "Vielen Dank für die ___!",
+      "a": "Einladung",
+      "d": [
+       "Einkaufen",
+       "Ausbildung"
+      ],
+      "ku": "گەلەک سوپاس بۆ داخوازیێ!"
+     }
+    },
+    {
+     "id": "b7_03",
+     "ku": "ئاهەنگ گێڕان / جەژن کرن",
+     "kuLat": "Aheng gêran / cejn krn",
+     "de": "feiern",
+     "deHint": "فایەرن",
+     "en": "to celebrate",
+     "enHint": "",
+     "emoji": "🎉",
+     "cloze": {
+      "de": "Wir ___ Newroz mit Freunden in der Natur.",
+      "a": "feiern",
+      "d": [
+       "fahren",
+       "fehlen"
+      ],
+      "ku": "ئەم نەورۆزێ دگەل هەڤالان ل سروشتی جەژن دکەین."
+     }
+    },
+    {
+     "id": "b7_04",
+     "ku": "میڤان",
+     "kuLat": "Mîvan",
+     "de": "die Gäste",
+     "deHint": "دی گێستە",
+     "en": "the guests",
+     "enHint": "",
+     "emoji": "🧑‍🤝‍🧑"
+    },
+    {
+     "id": "b7_05",
+     "ku": "کێکا جەژنێ",
+     "kuLat": "Kêka cejnê",
+     "de": "die Torte",
+     "deHint": "دی تۆرتە",
+     "en": "the cake",
+     "enHint": "",
+     "emoji": "🎂",
+     "cloze": {
+      "de": "Zum Geburtstag backe ich eine ___.",
+      "a": "Torte",
+      "d": [
+       "Tasse",
+       "Tante"
+      ],
+      "ku": "بۆ رۆژبوونێ ئەز کێکەکێ چێدکەم."
+     }
+    },
+    {
+     "id": "b7_06",
+     "ku": "بووک و زاڤا",
+     "kuLat": "Bûk w zava",
+     "de": "das Brautpaar",
+     "deHint": "داس براوتپار",
+     "en": "the bride and groom",
+     "enHint": "",
+     "emoji": "👰"
+    },
+    {
+     "id": "b7_07",
+     "ku": "ل ٢١ی ئادارێ ئەم نەورۆزێ جەژن دکەین.",
+     "kuLat": "L ٢١î adarê em newrozê cejn dkeyn.",
+     "de": "Am 21. März feiern wir Newroz.",
+     "deHint": "ئام ئاینوندتسڤانتسیگستن مێرتس فایەرن ڤیر نەورۆز",
+     "en": "On 21 March we celebrate Newroz.",
+     "enHint": "",
+     "emoji": "🔥"
+    },
+    {
+     "id": "b7_08",
+     "ku": "کەشێ ئاهەنگێ گەلەک خۆش بوو.",
+     "kuLat": "Keşê ahengê gelek xoş bû.",
+     "de": "Die Stimmung war super.",
+     "deHint": "دی شتیمونگ ڤار زوپەر",
+     "en": "The atmosphere was great.",
+     "enHint": "",
+     "emoji": "🥳",
+     "cloze": {
+      "de": "Alle haben getanzt, die ___ war super.",
+      "a": "Stimmung",
+      "d": [
+       "Stimme",
+       "Stunde"
+      ],
+      "ku": "هەمییان سەما کر، کەش گەلەک خۆش بوو."
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "کار ب دوو بەرکاران (Dativ + Akkusativ)",
+    "titleDe": "Verben mit Dativ und Akkusativ",
+    "lines": [
+     "geben, schenken, bringen, zeigen, schicken: مرۆڤ ب Dativ (بۆ کێ؟)، تشت ب Akkusativ (چ؟).",
+     "Ich gebe dem Kellner Trinkgeld. — ئەز بەخشیشێ ددەمە گارسۆنی.",
+     "Zeig mir bitte deine Fotos! — هیڤییە وێنەیێن خۆ نیشا من بدە!"
+    ],
+    "table": [
+     [
+      "",
+      "Dativ (wem?)",
+      "Akkusativ (was?)"
+     ],
+     [
+      "Ich schenke",
+      "meinem Bruder",
+      "ein Handy."
+     ],
+     [
+      "Er zeigt",
+      "der Lehrerin",
+      "sein Heft."
+     ],
+     [
+      "Wir bringen",
+      "den Kindern",
+      "Kuchen."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_7b",
+   "section": 22,
+   "only": "de",
+   "icon": "shopping",
+   "color": "#C9A227",
+   "titleKu": "دیاری",
+   "titleDe": "Geschenke",
+   "titleEn": "Presents",
+   "concepts": [
+    {
+     "id": "b7_09",
+     "ku": "دیاری",
+     "kuLat": "Dyarî",
+     "de": "das Geschenk",
+     "deHint": "داس گەشێنک",
+     "en": "the present",
+     "enHint": "",
+     "emoji": "🎁"
+    },
+    {
+     "id": "b7_10",
+     "ku": "دیاری دان",
+     "kuLat": "Dyarî dan",
+     "de": "schenken",
+     "deHint": "شێنکن",
+     "en": "to give (as a present)",
+     "enHint": "",
+     "emoji": "🎀",
+     "cloze": {
+      "de": "Was ___ du deiner Mutter zum Geburtstag?",
+      "a": "schenkst",
+      "d": [
+       "schenken",
+       "Geschenk"
+      ],
+      "ku": "تو بۆ رۆژبوونا دایکا خۆ چ دیاری ددەیێ؟"
+     }
+    },
+    {
+     "id": "b7_11",
+     "ku": "گول",
+     "kuLat": "Gul",
+     "de": "die Blumen",
+     "deHint": "دی بلوومن",
+     "en": "the flowers",
+     "enHint": "",
+     "emoji": "💐"
+    },
+    {
+     "id": "b7_12",
+     "ku": "بێهن خۆش (عەتر)",
+     "kuLat": "Bêhn xoş ('etr)",
+     "de": "das Parfüm",
+     "deHint": "داس پارفیوم",
+     "en": "the perfume",
+     "enHint": "",
+     "emoji": "🌸"
+    },
+    {
+     "id": "b7_13",
+     "ku": "گەردەنی",
+     "kuLat": "Gerdenî",
+     "de": "die Kette",
+     "deHint": "دی کێتە",
+     "en": "the necklace",
+     "enHint": "",
+     "emoji": "📿"
+    },
+    {
+     "id": "b7_14",
+     "ku": "کارتا دیاریێ (کووپۆن)",
+     "kuLat": "Karta dyaryê (kûpon)",
+     "de": "der Gutschein",
+     "deHint": "دێر گووتشاین",
+     "en": "the voucher",
+     "enHint": "",
+     "emoji": "🎟️",
+     "cloze": {
+      "de": "Ich schenke ihm einen ___ für das Kino.",
+      "a": "Gutschein",
+      "d": [
+       "Schein",
+       "Gutschrift"
+      ],
+      "ku": "ئەز کارتەکا سینەمایێ دیاری ددەمێ."
+     }
+    },
+    {
+     "id": "b7_15",
+     "ku": "ئەز دیاریێ ب جوانی دپێچم.",
+     "kuLat": "Ez dyaryê b cwanî dpêçm.",
+     "de": "Ich packe das Geschenk schön ein.",
+     "deHint": "ئیش پاکە داس گەشێنک شۆن ئاین",
+     "en": "I'm wrapping the present nicely.",
+     "enHint": "",
+     "emoji": "🎁"
+    },
+    {
+     "id": "b7_16",
+     "ku": "تو گەلەک ب رێز و ئەدەبی!",
+     "kuLat": "Tu gelek b rêz w edebî!",
+     "de": "Das ist aber nett von dir!",
+     "deHint": "داس ئیست ئابەر نێت فۆن دیر",
+     "en": "That's really kind of you!",
+     "enHint": "",
+     "emoji": "😊"
+    }
+   ],
+   "grammar": {
+    "titleKu": "جهێ بەرکاران د رستێ دا",
+    "titleDe": "Stellung der Objekte",
+    "lines": [
+     "دوو ناڤ: Dativ بەری Akkusativ. ئەگەر Akkusativ جهێناڤ بیت: جهێناڤ ل پێشیێ (Ich schenke es ihm).",
+     "Gibst du mir den Schlüssel? – Ja, ich gebe ihn dir. — تو کلیلێ ددەیە من؟ – بەلێ، ئەز دێ دەمە تە.",
+     "Hast du Papa das Foto gezeigt? – Ja, ich habe es ihm gezeigt. — تە وێنە نیشا بابێ دا؟ – بەلێ، من نیشا وی دا."
+    ],
+    "table": [
+     [
+      "",
+      "Dativ",
+      "Akkusativ"
+     ],
+     [
+      "Ich schenke",
+      "meinem Bruder",
+      "das Buch."
+     ],
+     [
+      "Ich schenke",
+      "ihm",
+      "das Buch."
+     ],
+     [
+      "Ich schenke es",
+      "ihm.",
+      "—"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_7c",
+   "section": 22,
+   "only": "de",
+   "icon": "people",
+   "color": "#C9A227",
+   "titleKu": "بۆ کێ؟ (Dativ)",
+   "titleDe": "Wem? – Dativ",
+   "titleEn": "To whom?",
+   "concepts": [
+    {
+     "id": "b7_17",
+     "ku": "ئەز پەرتووکەکێ ددەمە بابێ خۆ.",
+     "kuLat": "Ez pertûkekê ddeme babê xo.",
+     "de": "Ich gebe meinem Vater ein Buch.",
+     "deHint": "ئیش گێبە ماینەم فاتەر ئاین بووخ",
+     "en": "I give my father a book.",
+     "enHint": "",
+     "emoji": "📘",
+     "cloze": {
+      "de": "Ich gebe ___ Vater ein Buch.",
+      "a": "meinem",
+      "d": [
+       "meinen",
+       "meiner"
+      ],
+      "ku": "ئەز پەرتووکەکێ ددەمە بابێ خۆ."
+     }
+    },
+    {
+     "id": "b7_18",
+     "ku": "ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ.",
+     "kuLat": "Ew cantayekê dyarî ddete xuîşka xo.",
+     "de": "Sie schenkt ihrer Schwester eine Tasche.",
+     "deHint": "زی شێنکت ئیرەر شڤێستەر ئاینە تاشە",
+     "en": "She gives her sister a bag.",
+     "enHint": "",
+     "emoji": "👜",
+     "cloze": {
+      "de": "Sie schenkt ___ Schwester eine Tasche.",
+      "a": "ihrer",
+      "d": [
+       "ihre",
+       "ihren"
+      ],
+      "ku": "ئەو جانتایەکێ دیاری ددەتە خویشکا خۆ."
+     }
+    },
+    {
+     "id": "b7_19",
+     "ku": "ئەز وێ ددەمە وێ (دیاری).",
+     "kuLat": "Ez wê ddeme wê (dyarî).",
+     "de": "Ich schenke sie ihr.",
+     "deHint": "ئیش شێنکە زی ئیر",
+     "en": "I give it to her.",
+     "enHint": "",
+     "emoji": "🤲",
+     "cloze": {
+      "de": "Die Tasche? Ich schenke ___ ihr.",
+      "a": "sie",
+      "d": [
+       "ihr",
+       "ihn"
+      ],
+      "ku": "جانتا؟ ئەز وێ ددەمە وێ."
+     }
+    },
+    {
+     "id": "b7_20",
+     "ku": "تو دشێی خوێیێ بدەیە من؟",
+     "kuLat": "Tu dşêy xwêyê bdeye mn?",
+     "de": "Kannst du mir das Salz geben?",
+     "deHint": "کانست دوو میر داس زالتس گێبن",
+     "en": "Can you pass me the salt?",
+     "enHint": "",
+     "emoji": "🧂",
+     "cloze": {
+      "de": "Kannst du ___ das Salz geben?",
+      "a": "mir",
+      "d": [
+       "mich",
+       "ich"
+      ],
+      "ku": "تو دشێی خوێیێ بدەیە من؟"
+     }
+    },
+    {
+     "id": "b7_21",
+     "ku": "پیرۆزبایا رۆژبوونا تە دکەم!",
+     "kuLat": "Pîrozbaya rojbûna te dkem!",
+     "de": "Ich gratuliere dir zum Geburtstag!",
+     "deHint": "ئیش گراتولیرە دیر تسووم گەبورتستاگ",
+     "en": "Happy birthday to you!",
+     "enHint": "",
+     "emoji": "🎈",
+     "cloze": {
+      "de": "Ich gratuliere ___ zum Geburtstag!",
+      "a": "dir",
+      "d": [
+       "dich",
+       "du"
+      ],
+      "ku": "پیرۆزبایا رۆژبوونا تە دکەم!"
+     }
+    },
+    {
+     "id": "b7_22",
+     "ku": "جلک گەلەک ب دلێ من بوو.",
+     "kuLat": "Clk gelek b dlê mn bû.",
+     "de": "Das Kleid gefällt mir sehr.",
+     "deHint": "داس کلایت گەفێلت میر زێر",
+     "en": "I like the dress a lot.",
+     "enHint": "",
+     "emoji": "👗"
+    },
+    {
+     "id": "b7_23",
+     "ku": "ئەم چایێ دبەینە بۆ میڤانان.",
+     "kuLat": "Em çayê dbeyne bo mîvanan.",
+     "de": "Wir bringen den Gästen Tee.",
+     "deHint": "ڤیر برینگن دێن گێستن تێ",
+     "en": "We bring the guests tea.",
+     "enHint": "",
+     "emoji": "🍵"
+    },
+    {
+     "id": "b7_24",
+     "ku": "هیڤییە هاریکاریا من بکە!",
+     "kuLat": "Hîvîye harîkarya mn bke!",
+     "de": "Hilf mir bitte!",
+     "deHint": "هیلف میر بیتە",
+     "en": "Please help me!",
+     "enHint": "",
+     "emoji": "🆘"
+    }
+   ],
+   "grammar": {
+    "titleKu": "von + Dativ (یێ کێ؟ / ژ کێ؟)",
+    "titleDe": "von + Dativ",
+    "lines": [
+     "«von» هەردەم Dativ: دیاری ژ مەتا منە. بۆ خودانداریێ ژی: ترومبێلا بابێ من.",
+     "Die Blumen sind von meinem Mann. — گول ژ زەلامێ منن.",
+     "Ich habe eine Karte von meinen Eltern bekommen. — من کارتەک ژ دایک و بابێن خۆ وەرگرت."
+    ],
+    "table": [
+     [
+      "",
+      "von + Dativ"
+     ],
+     [
+      "der Onkel",
+      "vom (von dem) Onkel"
+     ],
+     [
+      "das Kind",
+      "vom Kind"
+     ],
+     [
+      "die Tante",
+      "von der Tante"
+     ],
+     [
+      "die Eltern",
+      "von den Eltern"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_7d",
+   "section": 22,
+   "only": "de",
+   "icon": "waving_hand",
+   "color": "#C9A227",
+   "titleKu": "پیرۆزبایی",
+   "titleDe": "Glückwünsche",
+   "titleEn": "Best wishes",
+   "concepts": [
+    {
+     "id": "b7_25",
+     "ku": "پیرۆز بیت!",
+     "kuLat": "Pîroz bît!",
+     "de": "Herzlichen Glückwunsch!",
+     "deHint": "هێرتسلیشن گلیوکڤونش",
+     "en": "Congratulations!",
+     "enHint": "",
+     "emoji": "🎊"
+    },
+    {
+     "id": "b7_26",
+     "ku": "رۆژبوونا تە پیرۆز بیت!",
+     "kuLat": "Rojbûna te pîroz bît!",
+     "de": "Alles Gute zum Geburtstag!",
+     "deHint": "ئالەس گووتە تسووم گەبورتستاگ",
+     "en": "Happy birthday!",
+     "enHint": "",
+     "emoji": "🎂",
+     "cloze": {
+      "de": "Alles Gute ___ Geburtstag!",
+      "a": "zum",
+      "d": [
+       "zur",
+       "zu"
+      ],
+      "ku": "رۆژبوونا تە پیرۆز بیت!"
+     }
+    },
+    {
+     "id": "b7_27",
+     "ku": "جەژنێن خۆش!",
+     "kuLat": "Cejnên xoş!",
+     "de": "Frohe Feiertage!",
+     "deHint": "فرۆوە فایەرتاگە",
+     "en": "Happy holidays!",
+     "enHint": "",
+     "emoji": "✨"
+    },
+    {
+     "id": "b7_28",
+     "ku": "ب سەرکەفتن!",
+     "kuLat": "B serkeftn!",
+     "de": "Viel Glück!",
+     "deHint": "فیل گلیوک",
+     "en": "Good luck!",
+     "enHint": "",
+     "emoji": "🍀"
+    },
+    {
+     "id": "b7_29",
+     "ku": "ساخ ببی!",
+     "kuLat": "Sax bbî!",
+     "de": "Gute Besserung!",
+     "deHint": "گووتە بێسەرونگ",
+     "en": "Get well soon!",
+     "enHint": "",
+     "emoji": "💊",
+     "cloze": {
+      "de": "Du bist krank? Gute ___!",
+      "a": "Besserung",
+      "d": [
+       "Reise",
+       "Nacht"
+      ],
+      "ku": "تو نەساخی؟ ساخ ببی!"
+     }
+    },
+    {
+     "id": "b7_30",
+     "ku": "رێکا تە ب خێر!",
+     "kuLat": "Rêka te b xêr!",
+     "de": "Gute Reise!",
+     "deHint": "گووتە رایزە",
+     "en": "Have a good trip!",
+     "enHint": "",
+     "emoji": "🧳"
+    },
+    {
+     "id": "b7_31",
+     "ku": "سالەکا نوو یا خۆش!",
+     "kuLat": "Saleka nû ya xoş!",
+     "de": "Ein glückliches neues Jahr!",
+     "deHint": "ئاین گلیوکلیشەس نۆیەس یار",
+     "en": "A happy new year!",
+     "enHint": "",
+     "emoji": "🎆"
+    },
+    {
+     "id": "b7_32",
+     "ku": "ئەز هەمی باشیان بۆ هەوە دخوازم!",
+     "kuLat": "Ez hemî başyan bo hewe dxwazm!",
+     "de": "Ich wünsche euch alles Gute!",
+     "deHint": "ئیش ڤیونشە ئۆیش ئالەس گووتە",
+     "en": "I wish you all the best!",
+     "enHint": "",
+     "emoji": "💛"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_8a",
+   "section": 23,
+   "only": "de",
+   "icon": "sun",
+   "color": "#5C7FC4",
+   "titleKu": "دەمێ ڤالا",
+   "titleDe": "Freizeit am Wochenende",
+   "titleEn": "Free time",
+   "concepts": [
+    {
+     "id": "b8_01",
+     "ku": "باش و درەنگ نڤستن",
+     "kuLat": "Baş w dreng nvstn",
+     "de": "ausschlafen",
+     "deHint": "ئاوسشلافن",
+     "en": "to sleep in",
+     "enHint": "",
+     "emoji": "😴",
+     "cloze": {
+      "de": "Am Sonntag kann ich endlich ___.",
+      "a": "ausschlafen",
+      "d": [
+       "aufstehen",
+       "einschlafen"
+      ],
+      "ku": "یەکشەمبیێ ب دوماهی ئەز دشێم باش بنڤم."
+     }
+    },
+    {
+     "id": "b8_02",
+     "ku": "گەشت (سەیران)",
+     "kuLat": "Geşt (seyran)",
+     "de": "der Ausflug",
+     "deHint": "دێر ئاوسفلووگ",
+     "en": "the trip / outing",
+     "enHint": "",
+     "emoji": "🧺",
+     "cloze": {
+      "de": "Am Samstag machen wir einen ___ in die Berge.",
+      "a": "Ausflug",
+      "d": [
+       "Ausgang",
+       "Anflug"
+      ],
+      "ku": "شەمبیێ ئەم دچینە سەیرانەکێ بۆ چیایان."
+     }
+    },
+    {
+     "id": "b8_03",
+     "ku": "ئاهەنگا مۆسیقایێ (کۆنسێرت)",
+     "kuLat": "Ahenga mosîqayê (konsêrt)",
+     "de": "das Konzert",
+     "deHint": "داس کۆنتسێرت",
+     "en": "the concert",
+     "enHint": "",
+     "emoji": "🎵"
+    },
+    {
+     "id": "b8_04",
+     "ku": "پێشانگەه",
+     "kuLat": "Pêşangeh",
+     "de": "die Ausstellung",
+     "deHint": "دی ئاوسشتێلونگ",
+     "en": "the exhibition",
+     "enHint": "",
+     "emoji": "🖼️",
+     "cloze": {
+      "de": "Im Museum gibt es eine neue ___.",
+      "a": "Ausstellung",
+      "d": [
+       "Ausbildung",
+       "Ausfahrt"
+      ],
+      "ku": "ل مۆزەخانێ پێشانگەهەکا نوو هەیە."
+     }
+    },
+    {
+     "id": "b8_05",
+     "ku": "خول ل ناڤەندا فێربوونا گەلی",
+     "kuLat": "Xul l navenda fêrbûna gelî",
+     "de": "der Kurs an der Volkshochschule",
+     "deHint": "دێر کورس ئان دێر فۆلکسهۆخشوولە",
+     "en": "a course at the adult education centre",
+     "enHint": "",
+     "emoji": "🧑‍🏫"
+    },
+    {
+     "id": "b8_06",
+     "ku": "هەڤالان دیتن",
+     "kuLat": "Hevalan dîtn",
+     "de": "Freunde treffen",
+     "deHint": "فرۆیندە ترێفن",
+     "en": "to meet friends",
+     "enHint": "",
+     "emoji": "👫"
+    },
+    {
+     "id": "b8_07",
+     "ku": "ئەز حەز دکەم بچمە سینەمایێ.",
+     "kuLat": "Ez hez dkem bçme sînemayê.",
+     "de": "Ich gehe gern ins Kino.",
+     "deHint": "ئیش گێ گێرن ئینس کینۆ",
+     "en": "I like going to the cinema.",
+     "enHint": "",
+     "emoji": "🎬",
+     "cloze": {
+      "de": "Ich gehe gern ___ Kino.",
+      "a": "ins",
+      "d": [
+       "im",
+       "in"
+      ],
+      "ku": "ئەز حەز دکەم بچمە سینەمایێ."
+     }
+    },
+    {
+     "id": "b8_08",
+     "ku": "دوماهیا حەفتیێ چ پلانێن من نینن.",
+     "kuLat": "Dumahya heftyê ç planên mn nînn.",
+     "de": "Am Wochenende habe ich nichts vor.",
+     "deHint": "ئام ڤۆخنێندە هابە ئیش نیشتس فۆر",
+     "en": "I have no plans at the weekend.",
+     "enHint": "",
+     "emoji": "🗓️"
+    }
+   ],
+   "grammar": {
+    "titleKu": "شێوەیێ خۆزیێ: hätte, wäre, würde, könnte",
+    "titleDe": "Konjunktiv II: hätte, wäre, würde, könnte",
+    "lines": [
+     "بۆ خۆزی، خەون و داخوازا ب ئەدەب: hätte (هەبوون)، wäre (بوون)، würde + کار، könnte (شیان).",
+     "Ich hätte gern ein Fahrrad. — خۆزی پایسکیلەک ل نک من با.",
+     "Wir wären gern in Kurdistan. — خۆزی ئەم ل کوردستانێ باین."
+    ],
+    "table": [
+     [
+      "",
+      "haben",
+      "sein",
+      "werden",
+      "können"
+     ],
+     [
+      "ich",
+      "hätte",
+      "wäre",
+      "würde",
+      "könnte"
+     ],
+     [
+      "du",
+      "hättest",
+      "wärst",
+      "würdest",
+      "könntest"
+     ],
+     [
+      "er / sie",
+      "hätte",
+      "wäre",
+      "würde",
+      "könnte"
+     ],
+     [
+      "wir / sie",
+      "hätten",
+      "wären",
+      "würden",
+      "könnten"
+     ],
+     [
+      "ihr",
+      "hättet",
+      "wärt",
+      "würdet",
+      "könntet"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_8b",
+   "section": 23,
+   "only": "de",
+   "icon": "chat",
+   "color": "#5C7FC4",
+   "titleKu": "ژڤان دانان",
+   "titleDe": "Sich verabreden",
+   "titleEn": "Making plans",
+   "concepts": [
+    {
+     "id": "b8_09",
+     "ku": "حەزا تە هەیە بچینە سینەمایێ؟",
+     "kuLat": "Heza te heye bçîne sînemayê?",
+     "de": "Hast du Lust, ins Kino zu gehen?",
+     "deHint": "هاست دوو لوست، ئینس کینۆ تسوو گێن",
+     "en": "Do you fancy going to the cinema?",
+     "enHint": "",
+     "emoji": "🍿",
+     "cloze": {
+      "de": "Hast du ___, ins Kino zu gehen?",
+      "a": "Lust",
+      "d": [
+       "Last",
+       "Luft"
+      ],
+      "ku": "حەزا تە هەیە بچینە سینەمایێ؟"
+     }
+    },
+    {
+     "id": "b8_10",
+     "ku": "شەمبی چاوانە؟",
+     "kuLat": "Şembî çawane?",
+     "de": "Wie wäre es mit Samstag?",
+     "deHint": "ڤی ڤێرە ئێس میت زامستاگ",
+     "en": "How about Saturday?",
+     "enHint": "",
+     "emoji": "📅",
+     "cloze": {
+      "de": "Wie ___ es mit Samstag?",
+      "a": "wäre",
+      "d": [
+       "war",
+       "wird"
+      ],
+      "ku": "شەمبی چاوانە؟"
+     }
+    },
+    {
+     "id": "b8_11",
+     "ku": "مخابن ئەو دەم نەشێم.",
+     "kuLat": "Mxabn ew dem neşêm.",
+     "de": "Da kann ich leider nicht.",
+     "deHint": "دا کان ئیش لایدەر نیشت",
+     "en": "Unfortunately I can't then.",
+     "enHint": "",
+     "emoji": "🙁"
+    },
+    {
+     "id": "b8_12",
+     "ku": "ئەرێ دەمژمێر هەشت ئێک ببینین؟",
+     "kuLat": "Erê demjmêr heşt êk bbînîn?",
+     "de": "Treffen wir uns um acht?",
+     "deHint": "ترێفن ڤیر ئونس ئوم ئاخت",
+     "en": "Shall we meet at eight?",
+     "enHint": "",
+     "emoji": "🕗"
+    },
+    {
+     "id": "b8_13",
+     "ku": "بیرەکا باشە! وێ دکەین.",
+     "kuLat": "Bîreka başe! wê dkeyn.",
+     "de": "Gute Idee! Das machen wir.",
+     "deHint": "گووتە ئیدێ! داس ماخن ڤیر",
+     "en": "Good idea! Let's do that.",
+     "enHint": "",
+     "emoji": "👍"
+    },
+    {
+     "id": "b8_14",
+     "ku": "جهێ دیتنێ",
+     "kuLat": "Chê dîtnê",
+     "de": "der Treffpunkt",
+     "deHint": "دێر ترێفپونکت",
+     "en": "the meeting point",
+     "enHint": "",
+     "emoji": "📍",
+     "cloze": {
+      "de": "Unser ___ ist vor dem Rathaus.",
+      "a": "Treffpunkt",
+      "d": [
+       "Treppe",
+       "Termin"
+      ],
+      "ku": "جهێ دیتنا مە ل بەر شارەوانیێ یە."
+     }
+    },
+    {
+     "id": "b8_15",
+     "ku": "دەمێ من نینە، دڤێت کار بکەم.",
+     "kuLat": "Demê mn nîne, dvêt kar bkem.",
+     "de": "Ich habe keine Zeit, ich muss arbeiten.",
+     "deHint": "ئیش هابە کاینە تسایت، ئیش موس ئاربایتن",
+     "en": "I have no time, I have to work.",
+     "enHint": "",
+     "emoji": "⏳"
+    },
+    {
+     "id": "b8_16",
+     "ku": "مخابن! بەلکی جارەکا دی.",
+     "kuLat": "Mxabn! belkî careka dî.",
+     "de": "Schade! Vielleicht nächstes Mal.",
+     "deHint": "شادە! فیلایشت نێکستەس مال",
+     "en": "Pity! Maybe next time.",
+     "enHint": "",
+     "emoji": "🤷"
+    }
+   ],
+   "grammar": {
+    "titleKu": "دیسا ژی (trotzdem)",
+    "titleDe": "trotzdem",
+    "lines": [
+     "«trotzdem» دژایەتیەکێ نیشان ددەت: ئەنجام نە وەکی چاڤەڕێکری یە. پشتی trotzdem (ل جهێ ئێکێ) کار دهێت.",
+     "Das Essen war nicht gut. Trotzdem haben wir alles gegessen. — خوارن نە باش بوو. دیسا ژی مە هەمی خوار.",
+     "Sie hat wenig Zeit. Trotzdem hilft sie mir. — دەمێ وێ کێمە. دیسا ژی هاریکاریا من دکەت."
+    ],
+    "table": [
+     [
+      "Satz 1",
+      "trotzdem + Verb",
+      "…"
+     ],
+     [
+      "Es ist kalt.",
+      "Trotzdem gehe",
+      "ich schwimmen."
+     ],
+     [
+      "Ich bin krank.",
+      "Trotzdem arbeite",
+      "ich."
+     ],
+     [
+      "Er hat viel gelernt.",
+      "Trotzdem hat",
+      "er die Prüfung nicht bestanden."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_8c",
+   "section": 23,
+   "only": "de",
+   "icon": "mood",
+   "color": "#5C7FC4",
+   "titleKu": "خەون و داخواز",
+   "titleDe": "Wünsche: hätte, wäre, würde",
+   "titleEn": "Wishes",
+   "concepts": [
+    {
+     "id": "b8_17",
+     "ku": "خۆزی دەمێ من یێ ڤالا پتر با.",
+     "kuLat": "Xozî demê mn yê vala ptr ba.",
+     "de": "Ich hätte gern mehr Freizeit.",
+     "deHint": "ئیش هێتە گێرن مێر فرایتسایت",
+     "en": "I'd like to have more free time.",
+     "enHint": "",
+     "emoji": "🕊️",
+     "cloze": {
+      "de": "Ich ___ gern mehr Freizeit.",
+      "a": "hätte",
+      "d": [
+       "habe",
+       "hatte"
+      ],
+      "ku": "خۆزی دەمێ من یێ ڤالا پتر با."
+     }
+    },
+    {
+     "id": "b8_18",
+     "ku": "خۆزی ئەز نوکە ل بەر دەریایێ بام.",
+     "kuLat": "Xozî ez nuke l ber deryayê bam.",
+     "de": "Ich wäre jetzt gern am Meer.",
+     "deHint": "ئیش ڤێرە یێتست گێرن ئام مێر",
+     "en": "I'd love to be at the sea now.",
+     "enHint": "",
+     "emoji": "🌊",
+     "cloze": {
+      "de": "Ich ___ jetzt gern am Meer.",
+      "a": "wäre",
+      "d": [
+       "war",
+       "bin"
+      ],
+      "ku": "خۆزی ئەز نوکە ل بەر دەریایێ بام."
+     }
+    },
+    {
+     "id": "b8_19",
+     "ku": "من دڤیا گیتارێ فێر ببم.",
+     "kuLat": "Mn dvya gîtarê fêr bbm.",
+     "de": "Ich würde gern Gitarre lernen.",
+     "deHint": "ئیش ڤوردە گێرن گیتارە لێرنن",
+     "en": "I'd like to learn the guitar.",
+     "enHint": "",
+     "emoji": "🎸",
+     "cloze": {
+      "de": "Ich ___ gern Gitarre lernen.",
+      "a": "würde",
+      "d": [
+       "werde",
+       "wurde"
+      ],
+      "ku": "من دڤیا گیتارێ فێر ببم."
+     }
+    },
+    {
+     "id": "b8_20",
+     "ku": "ئەگەر دەمێ من هەبا، دا گەشتێ کەم.",
+     "kuLat": "Eger demê mn heba, da geştê kem.",
+     "de": "Wenn ich Zeit hätte, würde ich reisen.",
+     "deHint": "ڤێن ئیش تسایت هێتە، ڤوردە ئیش رایزن",
+     "en": "If I had time, I would travel.",
+     "enHint": "",
+     "emoji": "✈️"
+    },
+    {
+     "id": "b8_21",
+     "ku": "تو دشێی هاریکاریا من بکەی؟ (ب ئەدەب)",
+     "kuLat": "Tu dşêy harîkarya mn bkey? (b edeb)",
+     "de": "Könntest du mir helfen?",
+     "deHint": "کۆنتەست دوو میر هێلفن",
+     "en": "Could you help me?",
+     "enHint": "",
+     "emoji": "🙏",
+     "cloze": {
+      "de": "___ du mir bitte helfen?",
+      "a": "Könntest",
+      "d": [
+       "Kannst du",
+       "Konntest"
+      ],
+      "ku": "تو دشێی هاریکاریا من بکەی؟"
+     }
+    },
+    {
+     "id": "b8_22",
+     "ku": "ئەم دشێین یەکشەمبیێ گۆشتێ برژاندی چێکەین.",
+     "kuLat": "Em dşêyn yekşembyê goştê brjandî çêkeyn.",
+     "de": "Wir könnten am Sonntag grillen.",
+     "deHint": "ڤیر کۆنتن ئام زۆنتاگ گریلن",
+     "en": "We could have a barbecue on Sunday.",
+     "enHint": "",
+     "emoji": "🍢"
+    },
+    {
+     "id": "b8_23",
+     "ku": "ئەگەر ئەز ل جهێ تە بام، دا زووتر نڤم.",
+     "kuLat": "Eger ez l chê te bam, da zûtr nvm.",
+     "de": "An deiner Stelle würde ich früher schlafen.",
+     "deHint": "ئان داینەر شتێلە ڤوردە ئیش فریوەر شلافن",
+     "en": "If I were you, I'd go to sleep earlier.",
+     "enHint": "",
+     "emoji": "🛌"
+    },
+    {
+     "id": "b8_24",
+     "ku": "ئەڤە دێ زۆر خۆش بیت!",
+     "kuLat": "Eve dê zor xoş bît!",
+     "de": "Das wäre toll!",
+     "deHint": "داس ڤێرە تۆل",
+     "en": "That would be great!",
+     "enHint": "",
+     "emoji": "🤩"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_8d",
+   "section": 23,
+   "only": "de",
+   "icon": "tune",
+   "color": "#5C7FC4",
+   "titleKu": "دیسا ژی",
+   "titleDe": "trotzdem",
+   "titleEn": "nevertheless",
+   "concepts": [
+    {
+     "id": "b8_25",
+     "ku": "باران دباریت. دیسا ژی ئەم دچینە گەڕیانێ.",
+     "kuLat": "Baran dbarît. dîsa jî em dçîne geryanê.",
+     "de": "Es regnet. Trotzdem gehen wir spazieren.",
+     "deHint": "ئێس رێگنەت. ترۆتسدێم گێن ڤیر شپاتسیرن",
+     "en": "It's raining. We're going for a walk anyway.",
+     "enHint": "",
+     "emoji": "☔",
+     "cloze": {
+      "de": "Es regnet. ___ gehen wir spazieren.",
+      "a": "Trotzdem",
+      "d": [
+       "Deshalb",
+       "Weil"
+      ],
+      "ku": "باران دباریت. دیسا ژی ئەم دچینە گەڕیانێ."
+     }
+    },
+    {
+     "id": "b8_26",
+     "ku": "ئەز وەستیایمە، بەلێ دیسا ژی دخوینم.",
+     "kuLat": "Ez westyayme, belê dîsa jî dxuînm.",
+     "de": "Ich bin müde, aber ich lerne trotzdem.",
+     "deHint": "ئیش بین میودە، ئابەر ئیش لێرنە ترۆتسدێم",
+     "en": "I'm tired, but I'm studying anyway.",
+     "enHint": "",
+     "emoji": "📚",
+     "cloze": {
+      "de": "Ich bin müde, aber ich lerne ___.",
+      "a": "trotzdem",
+      "d": [
+       "deshalb",
+       "denn"
+      ],
+      "ku": "ئەز وەستیایمە، بەلێ دیسا ژی دخوینم."
+     }
+    },
+    {
+     "id": "b8_27",
+     "ku": "کۆنسێرت ب بها بوو. دیسا ژی زۆر خۆش بوو.",
+     "kuLat": "Konsêrt b bha bû. dîsa jî zor xoş bû.",
+     "de": "Das Konzert war teuer. Trotzdem war es super.",
+     "deHint": "داس کۆنتسێرت ڤار تۆیەر. ترۆتسدێم ڤار ئێس زوپەر",
+     "en": "The concert was expensive. It was great anyway.",
+     "enHint": "",
+     "emoji": "🎤"
+    },
+    {
+     "id": "b8_28",
+     "ku": "تا ل وی هەبوو و دیسا ژی چوو سەر کاری.",
+     "kuLat": "Ta l wî hebû w dîsa jî çû ser karî.",
+     "de": "Er hatte Fieber und ist trotzdem zur Arbeit gegangen.",
+     "deHint": "ئێر هاتە فیبەر ئوند ئیست ترۆتسدێم تسور ئاربایت گەگانگن",
+     "en": "He had a fever and still went to work.",
+     "enHint": "",
+     "emoji": "🤒"
+    },
+    {
+     "id": "b8_29",
+     "ku": "هەرچەندە سەرمایە، ئەو چاکێتێ ناکەتە بەر خۆ.",
+     "kuLat": "Herçende sermaye, ew çakêtê nakete ber xo.",
+     "de": "Obwohl es kalt ist, trägt sie keine Jacke.",
+     "deHint": "ئۆپڤۆل ئێس کالت ئیست، ترێگت زی کاینە یاکە",
+     "en": "Although it's cold, she isn't wearing a jacket.",
+     "enHint": "",
+     "emoji": "🥶"
+    },
+    {
+     "id": "b8_30",
+     "ku": "پارێن من کێمن، دیسا ژی ئەز دچمە بێهنڤەدانێ.",
+     "kuLat": "Parên mn kêmn, dîsa jî ez dçme bêhnvedanê.",
+     "de": "Ich habe wenig Geld, trotzdem mache ich Urlaub.",
+     "deHint": "ئیش هابە ڤێنیش گێلت، ترۆتسدێم ماخە ئیش ئوورلاوپ",
+     "en": "I have little money, but I'm going on holiday anyway.",
+     "enHint": "",
+     "emoji": "🏝️"
+    },
+    {
+     "id": "b8_31",
+     "ku": "پاس دەرەنگ هات. دیسا ژی ئەز ل دەمێ خۆ بووم.",
+     "kuLat": "Pas dereng hat. dîsa jî ez l demê xo bûm.",
+     "de": "Der Bus kam zu spät. Trotzdem war ich pünktlich.",
+     "deHint": "دێر بووس کام تسوو شپێت. ترۆتسدێم ڤار ئیش پیونکتلیش",
+     "en": "The bus was late. I was on time anyway.",
+     "enHint": "",
+     "emoji": "🚌"
+    },
+    {
+     "id": "b8_32",
+     "ku": "پا چ؟ / چ دبیت؟",
+     "kuLat": "Pa ç? / ç dbît?",
+     "de": "Na und?",
+     "deHint": "نا ئوند",
+     "en": "So what?",
+     "enHint": "",
+     "emoji": "🤷‍♂️"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_9a",
+   "section": 24,
+   "only": "de",
+   "icon": "backpack",
+   "color": "#7FA650",
+   "titleKu": "تشتێن رۆژانە",
+   "titleDe": "Alltagsgegenstände",
+   "titleEn": "Everyday things",
+   "concepts": [
+    {
+     "id": "b9_01",
+     "ku": "جانتایا پشتێ",
+     "kuLat": "Cantaya pştê",
+     "de": "der Rucksack",
+     "deHint": "دێر روکزاک",
+     "en": "the backpack",
+     "enHint": "",
+     "emoji": "🎒"
+    },
+    {
+     "id": "b9_02",
+     "ku": "جزدان",
+     "kuLat": "Czdan",
+     "de": "die Brieftasche",
+     "deHint": "دی بریفتاشە",
+     "en": "the wallet",
+     "enHint": "",
+     "emoji": "👛",
+     "cloze": {
+      "de": "Mein Geld ist in der ___.",
+      "a": "Brieftasche",
+      "d": [
+       "Briefmarke",
+       "Bratpfanne"
+      ],
+      "ku": "پارێن من د جزدانی دانە."
+     }
+    },
+    {
+     "id": "b9_03",
+     "ku": "کۆما کلیلان",
+     "kuLat": "Koma klîlan",
+     "de": "der Schlüsselbund",
+     "deHint": "دێر شلیوسلبونت",
+     "en": "the bunch of keys",
+     "enHint": "",
+     "emoji": "🔑"
+    },
+    {
+     "id": "b9_04",
+     "ku": "شەحن کەر",
+     "kuLat": "Şehn ker",
+     "de": "das Ladegerät",
+     "deHint": "داس لادەگەرێت",
+     "en": "the charger",
+     "enHint": "",
+     "emoji": "🔌",
+     "cloze": {
+      "de": "Mein Handy ist leer. Hast du ein ___?",
+      "a": "Ladegerät",
+      "d": [
+       "Lagerhaus",
+       "Laufband"
+      ],
+      "ku": "مۆبایلا من ڤالا بوو. شەحنکەرەک ل نک تە هەیە؟"
+     }
+    },
+    {
+     "id": "b9_05",
+     "ku": "کامێرا",
+     "kuLat": "Kamêra",
+     "de": "die Kamera",
+     "deHint": "دی کامێرا",
+     "en": "the camera",
+     "enHint": "",
+     "emoji": "📷"
+    },
+    {
+     "id": "b9_06",
+     "ku": "سیبەر (یا بارانێ)",
+     "kuLat": "Sîber (ya baranê)",
+     "de": "der Regenschirm",
+     "deHint": "دێر رێگنشیرم",
+     "en": "the umbrella",
+     "enHint": "",
+     "emoji": "☂️",
+     "cloze": {
+      "de": "Es regnet. Nimm einen ___ mit!",
+      "a": "Regenschirm",
+      "d": [
+       "Regenbogen",
+       "Sonnenbrille"
+      ],
+      "ku": "باران دباریت. سیبەرەکێ دگەل خۆ ببە!"
+     }
+    },
+    {
+     "id": "b9_07",
+     "ku": "بەرچاڤکا رۆژێ",
+     "kuLat": "Berçavka rojê",
+     "de": "die Sonnenbrille",
+     "deHint": "دی زۆننبریلە",
+     "en": "the sunglasses",
+     "enHint": "",
+     "emoji": "🕶️"
+    },
+    {
+     "id": "b9_08",
+     "ku": "بێ مۆبایلا خۆ ئەز ژ مال دەرناکەڤم.",
+     "kuLat": "Bê mobayla xo ez j mal dernakevm.",
+     "de": "Ohne mein Handy gehe ich nicht aus dem Haus.",
+     "deHint": "ئۆنە ماین هێندی گێ ئیش نیشت ئاوس دێم هاوس",
+     "en": "I don't leave the house without my phone.",
+     "enHint": "",
+     "emoji": "📱"
+    }
+   ],
+   "grammar": {
+    "titleKu": "سالۆخ پشتی ein / kein / mein",
+    "titleDe": "Adjektivdeklination nach ein-, kein-, mein-",
+    "lines": [
+     "پشتی ein/kein/mein، سالۆخ رەگەزێ نیشان ددەت: -er (نێر)، -es (بێلایەن)، -e (مێ). Akkusativ نێر: -en. Dativ و کۆ: -en.",
+     "Ich habe einen roten Mantel gekauft. — من بالتۆیەکێ سۆر کڕی.",
+     "Das ist ein schönes Foto. — ئەڤە وێنەیەکێ جوانە."
+    ],
+    "table": [
+     [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     [
+      "Nom.",
+      "ein neuer Rucksack",
+      "ein neues Handy",
+      "eine neue Tasche",
+      "keine neuen Schuhe"
+     ],
+     [
+      "Akk.",
+      "einen neuen Rucksack",
+      "ein neues Handy",
+      "eine neue Tasche",
+      "keine neuen Schuhe"
+     ],
+     [
+      "Dat.",
+      "einem neuen Rucksack",
+      "einem neuen Handy",
+      "einer neuen Tasche",
+      "keinen neuen Schuhen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_9b",
+   "section": 24,
+   "only": "de",
+   "icon": "palette",
+   "color": "#7FA650",
+   "titleKu": "ژ چ هاتییە چێکرن؟",
+   "titleDe": "Material & Eigenschaften",
+   "titleEn": "Materials & qualities",
+   "concepts": [
+    {
+     "id": "b9_09",
+     "ku": "ژ دارێ",
+     "kuLat": "J darê",
+     "de": "aus Holz",
+     "deHint": "ئاوس هۆلتس",
+     "en": "made of wood",
+     "enHint": "",
+     "emoji": "🪵",
+     "cloze": {
+      "de": "Der Tisch ist ___ Holz.",
+      "a": "aus",
+      "d": [
+       "von",
+       "mit"
+      ],
+      "ku": "مێز ژ دارێ یە."
+     }
+    },
+    {
+     "id": "b9_10",
+     "ku": "ژ ئاسنی / مەعدەنی",
+     "kuLat": "J asnî / me'denî",
+     "de": "aus Metall",
+     "deHint": "ئاوس مێتال",
+     "en": "made of metal",
+     "enHint": "",
+     "emoji": "🔩"
+    },
+    {
+     "id": "b9_11",
+     "ku": "ژ پلاستیکێ",
+     "kuLat": "J plastîkê",
+     "de": "aus Plastik",
+     "deHint": "ئاوس پلاستیک",
+     "en": "made of plastic",
+     "enHint": "",
+     "emoji": "🧴"
+    },
+    {
+     "id": "b9_12",
+     "ku": "ژ چەرمی",
+     "kuLat": "J çermî",
+     "de": "aus Leder",
+     "deHint": "ئاوس لێدەر",
+     "en": "made of leather",
+     "enHint": "",
+     "emoji": "👞"
+    },
+    {
+     "id": "b9_13",
+     "ku": "ب کێر هاتی / ئاسان",
+     "kuLat": "B kêr hatî / asan",
+     "de": "praktisch",
+     "deHint": "پراکتیش",
+     "en": "practical",
+     "enHint": "",
+     "emoji": "🧰",
+     "cloze": {
+      "de": "Die Tasche ist klein und sehr ___.",
+      "a": "praktisch",
+      "d": [
+       "praktiziert",
+       "Praxis"
+      ],
+      "ku": "جانتا بچووکە و گەلەک ب کێر دهێت."
+     }
+    },
+    {
+     "id": "b9_14",
+     "ku": "راحەت / ئاسوودە",
+     "kuLat": "Rahet / asûde",
+     "de": "bequem",
+     "deHint": "بەکڤێم",
+     "en": "comfortable",
+     "enHint": "",
+     "emoji": "🛋️",
+     "cloze": {
+      "de": "Die Schuhe sind sehr ___.",
+      "a": "bequem",
+      "d": [
+       "bekommen",
+       "bequemt"
+      ],
+      "ku": "پێلاڤ گەلەک راحەتن."
+     }
+    },
+    {
+     "id": "b9_15",
+     "ku": "ئەڤە گەلەک ئەرزانە.",
+     "kuLat": "Eve gelek erzane.",
+     "de": "Das ist ganz billig.",
+     "deHint": "داس ئیست گانتس بیلیش",
+     "en": "That's really cheap.",
+     "enHint": "",
+     "emoji": "🏷️"
+    },
+    {
+     "id": "b9_16",
+     "ku": "پایسکیلا من یا خرابە، چ کێر نائێت.",
+     "kuLat": "Payskîla mn ya xrabe, ç kêr naêt.",
+     "de": "Mein Fahrrad ist kaputt, es ist nutzlos.",
+     "deHint": "ماین فارات ئیست کاپووت، ئێس ئیست نوتسلۆس",
+     "en": "My bike is broken, it's useless.",
+     "enHint": "",
+     "emoji": "🚲",
+     "cloze": {
+      "de": "Das Handy funktioniert nicht, es ist nutz___.",
+      "a": "los",
+      "d": [
+       "voll",
+       "bar"
+      ],
+      "ku": "مۆبایل کار ناکەت، چ کێر نائێت."
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "بەراوردکرن: باشتر، باشترین، وەکی",
+    "titleDe": "Komparativ und Superlativ · als / wie",
+    "lines": [
+     "بەراورد: سالۆخ + -er + als (ژ). وەکی ئێک: so … wie. باشترین: am … -sten.",
+     "Berlin ist größer als München. — بەرلین ژ میونشنێ مەزنترە.",
+     "Ich bin so alt wie du. — ئەز وەکی تە ب ژی مە."
+    ],
+    "table": [
+     [
+      "Grundform",
+      "Komparativ",
+      "Superlativ"
+     ],
+     [
+      "billig",
+      "billiger",
+      "am billigsten"
+     ],
+     [
+      "alt",
+      "älter",
+      "am ältesten"
+     ],
+     [
+      "groß",
+      "größer",
+      "am größten"
+     ],
+     [
+      "gut",
+      "besser",
+      "am besten"
+     ],
+     [
+      "gern",
+      "lieber",
+      "am liebsten"
+     ],
+     [
+      "viel",
+      "mehr",
+      "am meisten"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_9c",
+   "section": 24,
+   "only": "de",
+   "icon": "shopping",
+   "color": "#7FA650",
+   "titleKu": "ئێکێ نوو، ئێکا جوان",
+   "titleDe": "ein neuer Rucksack",
+   "titleEn": "Adjectives with ein-",
+   "concepts": [
+    {
+     "id": "b9_17",
+     "ku": "ئەز ل جانتایەکا پشتێ یا نوو دگەڕێم.",
+     "kuLat": "Ez l cantayeka pştê ya nû dgerêm.",
+     "de": "Ich suche einen neuen Rucksack.",
+     "deHint": "ئیش زووخە ئاینن نۆیەن روکزاک",
+     "en": "I'm looking for a new backpack.",
+     "enHint": "",
+     "emoji": "🎒",
+     "cloze": {
+      "de": "Ich suche einen ___ Rucksack.",
+      "a": "neuen",
+      "d": [
+       "neuer",
+       "neue"
+      ],
+      "ku": "ئەز ل جانتایەکا پشتێ یا نوو دگەڕێم."
+     }
+    },
+    {
+     "id": "b9_18",
+     "ku": "ئەڤە دیاریەکا جوانە.",
+     "kuLat": "Eve dyaryeka cwane.",
+     "de": "Das ist ein schönes Geschenk.",
+     "deHint": "داس ئیست ئاین شۆنەس گەشێنک",
+     "en": "That's a nice present.",
+     "enHint": "",
+     "emoji": "🎁",
+     "cloze": {
+      "de": "Das ist ein ___ Geschenk.",
+      "a": "schönes",
+      "d": [
+       "schöner",
+       "schönen"
+      ],
+      "ku": "ئەڤە دیاریەکا جوانە."
+     }
+    },
+    {
+     "id": "b9_19",
+     "ku": "جانتایەکا بچووک ل نک وێ هەیە.",
+     "kuLat": "Cantayeka bçûk l nk wê heye.",
+     "de": "Sie hat eine kleine Tasche.",
+     "deHint": "زی هات ئاینە کلاینە تاشە",
+     "en": "She has a small bag.",
+     "enHint": "",
+     "emoji": "👜",
+     "cloze": {
+      "de": "Sie hat eine ___ Tasche.",
+      "a": "kleine",
+      "d": [
+       "kleinen",
+       "kleiner"
+      ],
+      "ku": "جانتایەکا بچووک ل نک وێ هەیە."
+     }
+    },
+    {
+     "id": "b9_20",
+     "ku": "ئەو بالتۆیەکێ کەڤن دکەتە بەر خۆ.",
+     "kuLat": "Ew baltoyekê kevn dkete ber xo.",
+     "de": "Er trägt einen alten Mantel.",
+     "deHint": "ئێر ترێگت ئاینن ئالتن مانتل",
+     "en": "He is wearing an old coat.",
+     "enHint": "",
+     "emoji": "🧥"
+    },
+    {
+     "id": "b9_21",
+     "ku": "من ژوورەکا مەزن دڤێت.",
+     "kuLat": "Mn jûreka mezn dvêt.",
+     "de": "Ich wünsche mir ein großes Zimmer.",
+     "deHint": "ئیش ڤیونشە میر ئاین گرۆسەس تسیمەر",
+     "en": "I'd like a big room.",
+     "enHint": "",
+     "emoji": "🛏️"
+    },
+    {
+     "id": "b9_22",
+     "ku": "ئەڤە ئامۆژگاریەکا باشە.",
+     "kuLat": "Eve amojgaryeka başe.",
+     "de": "Das ist ein guter Tipp.",
+     "deHint": "داس ئیست ئاین گووتەر تیپ",
+     "en": "That's a good tip.",
+     "enHint": "",
+     "emoji": "💡",
+     "cloze": {
+      "de": "Das ist ein ___ Tipp.",
+      "a": "guter",
+      "d": [
+       "gute",
+       "gutes"
+      ],
+      "ku": "ئەڤە ئامۆژگاریەکا باشە."
+     }
+    },
+    {
+     "id": "b9_23",
+     "ku": "ب مۆبایلەکا نوو",
+     "kuLat": "B mobayleka nû",
+     "de": "mit einem neuen Handy",
+     "deHint": "میت ئاینەم نۆیەن هێندی",
+     "en": "with a new phone",
+     "enHint": "",
+     "emoji": "📱"
+    },
+    {
+     "id": "b9_24",
+     "ku": "ئەرێ پێلاڤێن راحەت ل نک تە نینن؟",
+     "kuLat": "Erê pêlavên rahet l nk te nînn?",
+     "de": "Hast du keine bequemen Schuhe?",
+     "deHint": "هاست دوو کاینە بەکڤێمەن شوە",
+     "en": "Don't you have any comfortable shoes?",
+     "enHint": "",
+     "emoji": "👟"
+    }
+   ],
+   "grammar": {
+    "titleKu": "پەیڤ چێکرن: -los (بێ …)",
+    "titleDe": "Wortbildung: -los",
+    "lines": [
+     "ناڤ + -los = بێ تشتەکی: arbeitslos (بێ کار)، kostenlos (ب بێ پارە)، nutzlos (بێ مفا).",
+     "Der Eintritt ist kostenlos. — چوونەژوور ب بێ پارە یە.",
+     "Mein Onkel ist seit Mai arbeitslos. — مامێ من ژ گولانێ ڤە بێکارە."
+    ],
+    "table": [
+     [
+      "Nomen",
+      "Adjektiv",
+      "Bedeutung"
+     ],
+     [
+      "die Arbeit",
+      "arbeitslos",
+      "ohne Arbeit"
+     ],
+     [
+      "die Kosten",
+      "kostenlos",
+      "ohne Kosten"
+     ],
+     [
+      "der Nutzen",
+      "nutzlos",
+      "ohne Nutzen"
+     ],
+     [
+      "die Sorge",
+      "sorglos",
+      "ohne Sorgen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_9d",
+   "section": 24,
+   "only": "de",
+   "icon": "tune",
+   "color": "#7FA650",
+   "titleKu": "باشتر ژ …",
+   "titleDe": "besser als …",
+   "titleEn": "Comparison",
+   "concepts": [
+    {
+     "id": "b9_25",
+     "ku": "مۆبایلا من ژ یا تە نووترە.",
+     "kuLat": "Mobayla mn j ya te nûtre.",
+     "de": "Mein Handy ist neuer als dein Handy.",
+     "deHint": "ماین هێندی ئیست نۆیەر ئالس داین هێندی",
+     "en": "My phone is newer than yours.",
+     "enHint": "",
+     "emoji": "📱",
+     "cloze": {
+      "de": "Mein Handy ist neuer ___ dein Handy.",
+      "a": "als",
+      "d": [
+       "wie",
+       "dann"
+      ],
+      "ku": "مۆبایلا من ژ یا تە نووترە."
+     }
+    },
+    {
+     "id": "b9_26",
+     "ku": "جانتا وەکی پێلاڤان ب بهایە.",
+     "kuLat": "Canta wekî pêlavan b bhaye.",
+     "de": "Die Tasche ist so teuer wie die Schuhe.",
+     "deHint": "دی تاشە ئیست زۆ تۆیەر ڤی دی شوە",
+     "en": "The bag is as expensive as the shoes.",
+     "enHint": "",
+     "emoji": "💶",
+     "cloze": {
+      "de": "Die Tasche ist so teuer ___ die Schuhe.",
+      "a": "wie",
+      "d": [
+       "als",
+       "so"
+      ],
+      "ku": "جانتا وەکی پێلاڤان ب بهایە."
+     }
+    },
+    {
+     "id": "b9_27",
+     "ku": "چەرم ژ پلاستیکێ گرانترە.",
+     "kuLat": "Çerm j plastîkê grantre.",
+     "de": "Leder ist teurer als Plastik.",
+     "deHint": "لێدەر ئیست تۆیرەر ئالس پلاستیک",
+     "en": "Leather is more expensive than plastic.",
+     "enHint": "",
+     "emoji": "👜"
+    },
+    {
+     "id": "b9_28",
+     "ku": "کیژ پتر ب دلێ تە یە؟",
+     "kuLat": "Kîj ptr b dlê te ye?",
+     "de": "Was gefällt dir besser?",
+     "deHint": "ڤاس گەفێلت دیر بێسەر",
+     "en": "Which do you like better?",
+     "enHint": "",
+     "emoji": "🤔"
+    },
+    {
+     "id": "b9_29",
+     "ku": "ژ هەمییان پتر حەز ژ چایێ دکەم.",
+     "kuLat": "J hemîyan ptr hez j çayê dkem.",
+     "de": "Am liebsten trinke ich Tee.",
+     "deHint": "ئام لیبستن ترینکە ئیش تێ",
+     "en": "I like drinking tea best.",
+     "enHint": "",
+     "emoji": "🍵",
+     "cloze": {
+      "de": "Ich trinke gern Kaffee, aber am ___ trinke ich Tee.",
+      "a": "liebsten",
+      "d": [
+       "lieber",
+       "gerne"
+      ],
+      "ku": "ئەز حەز ژ قەهوێ دکەم، بەلێ ژ هەمییان پتر چایێ."
+     }
+    },
+    {
+     "id": "b9_30",
+     "ku": "ئەڤ مۆبایلە ژ هەمییان ئەرزانترە.",
+     "kuLat": "Ev mobayle j hemîyan erzantre.",
+     "de": "Dieses Handy ist am billigsten.",
+     "deHint": "دیزەس هێندی ئیست ئام بیلیگستن",
+     "en": "This phone is the cheapest.",
+     "enHint": "",
+     "emoji": "🏷️"
+    },
+    {
+     "id": "b9_31",
+     "ku": "برایێ من ژ من درێژترە.",
+     "kuLat": "Brayê mn j mn drêjtre.",
+     "de": "Mein Bruder ist größer als ich.",
+     "deHint": "ماین برودەر ئیست گرۆسەر ئالس ئیش",
+     "en": "My brother is taller than me.",
+     "enHint": "",
+     "emoji": "🧍‍♂️"
+    },
+    {
+     "id": "b9_32",
+     "ku": "قەنەفا کەڤن وەکی یا نوو راحەت بوو.",
+     "kuLat": "Qenefa kevn wekî ya nû rahet bû.",
+     "de": "Das alte Sofa war genauso bequem wie das neue.",
+     "deHint": "داس ئالتە زۆفا ڤار گەناوزۆ بەکڤێم ڤی داس نۆیە",
+     "en": "The old sofa was just as comfortable as the new one.",
+     "enHint": "",
+     "emoji": "🛋️"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_10a",
+   "section": 25,
+   "only": "de",
+   "icon": "chat",
+   "color": "#CB6F9E",
+   "titleKu": "مۆبایل و ئینتەرنێت",
+   "titleDe": "Handy & Internet",
+   "titleEn": "Phone & internet",
+   "concepts": [
+    {
+     "id": "b10_01",
+     "ku": "مۆبایلێ شەحن کرن",
+     "kuLat": "Mobaylê şehn krn",
+     "de": "das Handy aufladen",
+     "deHint": "داس هێندی ئاوفلادن",
+     "en": "to charge the phone",
+     "enHint": "",
+     "emoji": "🔋",
+     "cloze": {
+      "de": "Mein Akku ist leer. Ich muss das Handy ___.",
+      "a": "aufladen",
+      "d": [
+       "ausladen",
+       "einladen"
+      ],
+      "ku": "پاتریا من ڤالا بوو. دڤێت مۆبایلێ شەحن بکەم."
+     }
+    },
+    {
+     "id": "b10_02",
+     "ku": "پاتری",
+     "kuLat": "Patrî",
+     "de": "der Akku",
+     "deHint": "دێر ئاکوو",
+     "en": "the battery",
+     "enHint": "",
+     "emoji": "🪫"
+    },
+    {
+     "id": "b10_03",
+     "ku": "تۆڕ (نێتوۆرک) ل نک من نینە.",
+     "kuLat": "Tor (nêtwork) l nk mn nîne.",
+     "de": "Ich habe kein Netz.",
+     "deHint": "ئیش هابە کاین نێتس",
+     "en": "I have no signal.",
+     "enHint": "",
+     "emoji": "📶",
+     "cloze": {
+      "de": "Ich kann nicht telefonieren, ich habe kein ___.",
+      "a": "Netz",
+      "d": [
+       "Nest",
+       "Nichts"
+      ],
+      "ku": "ئەز نەشێم تەلەفۆنێ بکەم، تۆڕ نینە."
+     }
+    },
+    {
+     "id": "b10_04",
+     "ku": "ئەپی داگرتن",
+     "kuLat": "Epî dagrtn",
+     "de": "die App herunterladen",
+     "deHint": "دی ئێپ هێرونتەرلادن",
+     "en": "to download the app",
+     "enHint": "",
+     "emoji": "⬇️",
+     "cloze": {
+      "de": "Du musst die App zuerst ___.",
+      "a": "herunterladen",
+      "d": [
+       "hinaufladen",
+       "einladen"
+      ],
+      "ku": "پێشی دڤێت تو ئەپی دابگری."
+     }
+    },
+    {
+     "id": "b10_05",
+     "ku": "وشەیا نهێنی",
+     "kuLat": "Wşeya nhênî",
+     "de": "das Passwort",
+     "deHint": "داس پاسڤۆرت",
+     "en": "the password",
+     "enHint": "",
+     "emoji": "🔒",
+     "cloze": {
+      "de": "Ich habe mein ___ vergessen.",
+      "a": "Passwort",
+      "d": [
+       "Postwort",
+       "Pass"
+      ],
+      "ku": "من وشەیا خۆ یا نهێنی ژبیرکر."
+     }
+    },
+    {
+     "id": "b10_06",
+     "ku": "پەیامەکێ هنارتن",
+     "kuLat": "Peyamekê hnartn",
+     "de": "eine Nachricht schicken",
+     "deHint": "ئاینە ناخریشت شیکن",
+     "en": "to send a message",
+     "enHint": "",
+     "emoji": "💬"
+    },
+    {
+     "id": "b10_07",
+     "ku": "ئەز ب ڤیدیۆیێ تەلەفۆنێ بۆ تە دکەم.",
+     "kuLat": "Ez b vîdyoyê telefonê bo te dkem.",
+     "de": "Ich rufe dich per Video an.",
+     "deHint": "ئیش رووفە دیش پێر ڤیدێۆ ئان",
+     "en": "I'll video-call you.",
+     "enHint": "",
+     "emoji": "📹"
+    },
+    {
+     "id": "b10_08",
+     "ku": "شاشە یا شکەستییە.",
+     "kuLat": "Şaşe ya şkestîye.",
+     "de": "Der Bildschirm ist kaputt.",
+     "deHint": "دێر بیلتشیرم ئیست کاپووت",
+     "en": "The screen is broken.",
+     "enHint": "",
+     "emoji": "📱"
+    }
+   ],
+   "grammar": {
+    "titleKu": "Passiv (دهێتە کرن)",
+    "titleDe": "Passiv Präsens",
+    "lines": [
+     "Passiv: werden + Partizip II. کار یێ گرنگە، نە کەسێ کو دکەت.",
+     "Das Essen wird gekocht. — خوارن دهێتە چێکرن.",
+     "Die Fenster werden geputzt. — پەنجەرە دهێنە پاقژکرن."
+    ],
+    "table": [
+     [
+      "Person",
+      "werden",
+      "Partizip II"
+     ],
+     [
+      "ich",
+      "werde",
+      "gefragt"
+     ],
+     [
+      "du",
+      "wirst",
+      "gefragt"
+     ],
+     [
+      "er / sie / es",
+      "wird",
+      "gefragt"
+     ],
+     [
+      "wir / sie / Sie",
+      "werden",
+      "gefragt"
+     ],
+     [
+      "ihr",
+      "werdet",
+      "gefragt"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_10b",
+   "section": 25,
+   "only": "de",
+   "icon": "home",
+   "color": "#CB6F9E",
+   "titleKu": "ل پۆستەخانێ",
+   "titleDe": "Bei der Post",
+   "titleEn": "At the post office",
+   "concepts": [
+    {
+     "id": "b10_09",
+     "ku": "نامە",
+     "kuLat": "Name",
+     "de": "der Brief",
+     "deHint": "دێر بریف",
+     "en": "the letter",
+     "enHint": "",
+     "emoji": "✉️"
+    },
+    {
+     "id": "b10_10",
+     "ku": "پاکەت",
+     "kuLat": "Paket",
+     "de": "das Paket",
+     "deHint": "داس پاکێت",
+     "en": "the parcel",
+     "enHint": "",
+     "emoji": "📦",
+     "cloze": {
+      "de": "Ich möchte dieses ___ nach Erbil schicken.",
+      "a": "Paket",
+      "d": [
+       "Paar",
+       "Pakete"
+      ],
+      "ku": "ئەز دڤێم ڤێ پاکەتێ بۆ هەولێرێ بهنێرم."
+     }
+    },
+    {
+     "id": "b10_11",
+     "ku": "پوولا پۆستێ",
+     "kuLat": "Pûla postê",
+     "de": "die Briefmarke",
+     "deHint": "دی بریفمارکە",
+     "en": "the stamp",
+     "enHint": "",
+     "emoji": "📮",
+     "cloze": {
+      "de": "Für eine Postkarte brauchst du eine ___.",
+      "a": "Briefmarke",
+      "d": [
+       "Brieftasche",
+       "Marke"
+      ],
+      "ku": "بۆ کارتەکا پۆستێ پوولەک پێدڤی تە یە."
+     }
+    },
+    {
+     "id": "b10_12",
+     "ku": "هنێرەر",
+     "kuLat": "Hnêrer",
+     "de": "der Absender",
+     "deHint": "دێر ئاپزێندەر",
+     "en": "the sender",
+     "enHint": "",
+     "emoji": "📤"
+    },
+    {
+     "id": "b10_13",
+     "ku": "وەرگر",
+     "kuLat": "Wergr",
+     "de": "der Empfänger",
+     "deHint": "دێر ئێمپفێنگەر",
+     "en": "the recipient",
+     "enHint": "",
+     "emoji": "📥"
+    },
+    {
+     "id": "b10_14",
+     "ku": "ناڤنیشان",
+     "kuLat": "Navnîşan",
+     "de": "die Adresse",
+     "deHint": "دی ئادرێسە",
+     "en": "the address",
+     "enHint": "",
+     "emoji": "🏠"
+    },
+    {
+     "id": "b10_15",
+     "ku": "نامەیەک چەند دەم دکێشیت هەتا دگەهیتە عیراقێ؟",
+     "kuLat": "Nameyek çend dem dkêşît heta dgehîte 'îraqê?",
+     "de": "Wie lange dauert ein Brief in den Irak?",
+     "deHint": "ڤی لانگە داوەرت ئاین بریف ئین دێن ئیراک",
+     "en": "How long does a letter take to Iraq?",
+     "enHint": "",
+     "emoji": "⏳",
+     "cloze": {
+      "de": "Wie lange ___ ein Brief in den Irak?",
+      "a": "dauert",
+      "d": [
+       "dauern",
+       "Dauer"
+      ],
+      "ku": "نامەیەک چەند دەم دکێشیت بۆ عیراقێ؟"
+     }
+    },
+    {
+     "id": "b10_16",
+     "ku": "ئەز پاکەتەکێ وەردگرم (دئینم).",
+     "kuLat": "Ez paketekê werdgrm (dynm).",
+     "de": "Ich hole ein Paket ab.",
+     "deHint": "ئیش هۆلە ئاین پاکێت ئاپ",
+     "en": "I'm picking up a parcel.",
+     "enHint": "",
+     "emoji": "🏤"
+    }
+   ],
+   "grammar": {
+    "titleKu": "سالۆخ پشتی der/die/das · چ جۆرە؟",
+    "titleDe": "Adjektiv nach der/die/das · Was für ein?",
+    "lines": [
+     "پشتی der/die/das: Nominativ تاک -e، یێن دی پتر -en. پرسیار ل سەر جۆری: Was für ein …?",
+     "Der kleine Hund heißt Bobby. — ناڤێ سەیێ بچووک بۆبییە.",
+     "Ich wohne in dem gelben Haus. — ئەز د خانیێ زەر دا دژیم."
+    ],
+    "table": [
+     [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     [
+      "Nom.",
+      "der neue Laptop",
+      "das neue Handy",
+      "die neue Tasche",
+      "die neuen Schuhe"
+     ],
+     [
+      "Akk.",
+      "den neuen Laptop",
+      "das neue Handy",
+      "die neue Tasche",
+      "die neuen Schuhe"
+     ],
+     [
+      "Dat.",
+      "dem neuen Laptop",
+      "dem neuen Handy",
+      "der neuen Tasche",
+      "den neuen Schuhen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_10c",
+   "section": 25,
+   "only": "de",
+   "icon": "work",
+   "color": "#CB6F9E",
+   "titleKu": "دهێتە کرن (Passiv)",
+   "titleDe": "Das wird gemacht.",
+   "titleEn": "Passive",
+   "concepts": [
+    {
+     "id": "b10_17",
+     "ku": "پاکەت دێ سبەی هێتە ئینان.",
+     "kuLat": "Paket dê sbey hête ynan.",
+     "de": "Das Paket wird morgen gebracht.",
+     "deHint": "داس پاکێت ڤیرت مۆرگن گەبراخت",
+     "en": "The parcel will be delivered tomorrow.",
+     "enHint": "",
+     "emoji": "🚚",
+     "cloze": {
+      "de": "Das Paket ___ morgen gebracht.",
+      "a": "wird",
+      "d": [
+       "werden",
+       "ist"
+      ],
+      "ku": "پاکەت دێ سبەی هێتە ئینان."
+     }
+    },
+    {
+     "id": "b10_18",
+     "ku": "نامە دەمژمێر دەهـ دهێنە برن.",
+     "kuLat": "Name demjmêr dehـ dhêne brn.",
+     "de": "Die Briefe werden um zehn Uhr abgeholt.",
+     "deHint": "دی بریفە ڤێردن ئوم تسێن ئوور ئاپگەهۆلت",
+     "en": "The letters are collected at ten.",
+     "enHint": "",
+     "emoji": "📬",
+     "cloze": {
+      "de": "Die Briefe ___ um zehn Uhr abgeholt.",
+      "a": "werden",
+      "d": [
+       "wird",
+       "worden"
+      ],
+      "ku": "نامە دەمژمێر دەهـ دهێنە برن."
+     }
+    },
+    {
+     "id": "b10_19",
+     "ku": "ل ڤێرێ ب ئەلمانی دهێتە ئاخفتن.",
+     "kuLat": "L vêrê b elmanî dhête axftn.",
+     "de": "Hier wird Deutsch gesprochen.",
+     "deHint": "هیر ڤیرت دۆیچ گەشپرۆخن",
+     "en": "German is spoken here.",
+     "enHint": "",
+     "emoji": "🗣️"
+    },
+    {
+     "id": "b10_20",
+     "ku": "مۆبایل دهێتە چاککرن.",
+     "kuLat": "Mobayl dhête çakkrn.",
+     "de": "Das Handy wird repariert.",
+     "deHint": "داس هێندی ڤیرت رێپاریرت",
+     "en": "The phone is being repaired.",
+     "enHint": "",
+     "emoji": "🔧",
+     "cloze": {
+      "de": "Das Handy wird ___.",
+      "a": "repariert",
+      "d": [
+       "reparieren",
+       "gerepariert"
+      ],
+      "ku": "مۆبایل دهێتە چاککرن."
+     }
+    },
+    {
+     "id": "b10_21",
+     "ku": "ئەڤ پەیڤە چاوا دهێتە نڤیسین؟",
+     "kuLat": "Ev peyve çawa dhête nvîsîn?",
+     "de": "Wie wird das Wort geschrieben?",
+     "deHint": "ڤی ڤیرت داس ڤۆرت گەشریبن",
+     "en": "How is the word spelled?",
+     "enHint": "",
+     "emoji": "✍️"
+    },
+    {
+     "id": "b10_22",
+     "ku": "زانیاری دهێنە پاراستن (سەیڤکرن).",
+     "kuLat": "Zanyarî dhêne parastn (seyvkrn).",
+     "de": "Die Daten werden gespeichert.",
+     "deHint": "دی داتن ڤێردن گەشپایشەرت",
+     "en": "The data is saved.",
+     "enHint": "",
+     "emoji": "💾"
+    },
+    {
+     "id": "b10_23",
+     "ku": "ل کوردستانێ گەلەک چا دهێتە ڤەخوارن.",
+     "kuLat": "L kurdstanê gelek ça dhête vexwarn.",
+     "de": "In Kurdistan wird viel Tee getrunken.",
+     "deHint": "ئین کوردیستان ڤیرت فیل تێ گەترونکن",
+     "en": "A lot of tea is drunk in Kurdistan.",
+     "enHint": "",
+     "emoji": "🫖"
+    },
+    {
+     "id": "b10_24",
+     "ku": "گەهاندن",
+     "kuLat": "Gehandn",
+     "de": "die Lieferung",
+     "deHint": "دی لیفەرونگ",
+     "en": "the delivery",
+     "enHint": "",
+     "emoji": "📦"
+    }
+   ],
+   "grammar": {
+    "titleKu": "پەیڤ چێکرن: -ung و un-",
+    "titleDe": "Wortbildung: -ung, un-",
+    "lines": [
+     "کار + -ung ➔ ناڤ (هەردەم die). un- + سالۆخ = دژ: freundlich ➔ unfreundlich.",
+     "Die Bestellung ist angekommen. — داخوازی (ئۆردەر) گەهشت.",
+     "Das ist unwichtig. — ئەڤە نە گرنگە."
+    ],
+    "table": [
+     [
+      "Verb",
+      "Nomen (-ung)"
+     ],
+     [
+      "wohnen",
+      "die Wohnung"
+     ],
+     [
+      "liefern",
+      "die Lieferung"
+     ],
+     [
+      "verbinden",
+      "die Verbindung"
+     ],
+     [
+      "bestellen",
+      "die Bestellung"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_10d",
+   "section": 25,
+   "only": "de",
+   "icon": "palette",
+   "color": "#CB6F9E",
+   "titleKu": "یێ نوو، یا جوان",
+   "titleDe": "der neue, die alte",
+   "titleEn": "Adjectives with der/die/das",
+   "concepts": [
+    {
+     "id": "b10_25",
+     "ku": "مۆبایلا نوو زۆر باشە.",
+     "kuLat": "Mobayla nû zor başe.",
+     "de": "Das neue Handy ist toll.",
+     "deHint": "داس نۆیە هێندی ئیست تۆل",
+     "en": "The new phone is great.",
+     "enHint": "",
+     "emoji": "🤩",
+     "cloze": {
+      "de": "Das ___ Handy ist toll.",
+      "a": "neue",
+      "d": [
+       "neues",
+       "neuen"
+      ],
+      "ku": "مۆبایلا نوو زۆر باشە."
+     }
+    },
+    {
+     "id": "b10_26",
+     "ku": "ئەز بلووزا شین دبەم.",
+     "kuLat": "Ez blûza şîn dbem.",
+     "de": "Ich nehme den blauen Pullover.",
+     "deHint": "ئیش نێمە دێن بلاوەن پولۆڤەر",
+     "en": "I'll take the blue jumper.",
+     "enHint": "",
+     "emoji": "🧶",
+     "cloze": {
+      "de": "Ich nehme den ___ Pullover.",
+      "a": "blauen",
+      "d": [
+       "blaue",
+       "blauer"
+      ],
+      "ku": "ئەز بلووزا شین دبەم."
+     }
+    },
+    {
+     "id": "b10_27",
+     "ku": "چاکێتا سۆر ب دیتنا تە چاوانە؟",
+     "kuLat": "Çakêta sor b dîtna te çawane?",
+     "de": "Wie findest du die rote Jacke?",
+     "deHint": "ڤی فیندەست دوو دی رۆتە یاکە",
+     "en": "What do you think of the red jacket?",
+     "enHint": "",
+     "emoji": "🧥"
+    },
+    {
+     "id": "b10_28",
+     "ku": "ئەز ب لاپتۆپا کەڤن ئیدی کار ناکەم.",
+     "kuLat": "Ez b laptopa kevn ydî kar nakem.",
+     "de": "Mit dem alten Laptop arbeite ich nicht mehr.",
+     "deHint": "میت دێم ئالتن لێپتۆپ ئاربایتە ئیش نیشت مێر",
+     "en": "I don't work with the old laptop any more.",
+     "enHint": "",
+     "emoji": "💻",
+     "cloze": {
+      "de": "Mit dem ___ Laptop arbeite ich nicht mehr.",
+      "a": "alten",
+      "d": [
+       "alte",
+       "alter"
+      ],
+      "ku": "ئەز ب لاپتۆپا کەڤن ئیدی کار ناکەم."
+     }
+    },
+    {
+     "id": "b10_29",
+     "ku": "چ جۆرە مۆبایلەک ل نک تە هەیە؟",
+     "kuLat": "Ç core mobaylek l nk te heye?",
+     "de": "Was für ein Handy hast du?",
+     "deHint": "ڤاس فیور ئاین هێندی هاست دوو",
+     "en": "What kind of phone do you have?",
+     "enHint": "",
+     "emoji": "❓",
+     "cloze": {
+      "de": "Was ___ ein Handy hast du?",
+      "a": "für",
+      "d": [
+       "von",
+       "mit"
+      ],
+      "ku": "چ جۆرە مۆبایلەک ل نک تە هەیە؟"
+     }
+    },
+    {
+     "id": "b10_30",
+     "ku": "ئەڤە نەگونجایە!",
+     "kuLat": "Eve neguncaye!",
+     "de": "Das ist unmöglich!",
+     "deHint": "داس ئیست ئونمۆگلیش",
+     "en": "That's impossible!",
+     "enHint": "",
+     "emoji": "😱"
+    },
+    {
+     "id": "b10_31",
+     "ku": "پەیوەندی یا خرابە.",
+     "kuLat": "Peywendî ya xrabe.",
+     "de": "Die Verbindung ist schlecht.",
+     "deHint": "دی فێربیندونگ ئیست شلێشت",
+     "en": "The connection is bad.",
+     "enHint": "",
+     "emoji": "📡"
+    },
+    {
+     "id": "b10_32",
+     "ku": "ئەو گەلەک بێ رێزە.",
+     "kuLat": "Ew gelek bê rêze.",
+     "de": "Er ist sehr unfreundlich.",
+     "deHint": "ئێر ئیست زێر ئونفرۆیندلیش",
+     "en": "He is very unfriendly.",
+     "enHint": "",
+     "emoji": "😒"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_11a",
+   "section": 26,
+   "only": "de",
+   "icon": "directions",
+   "color": "#4F9FC0",
+   "titleKu": "رێک نیشاندان",
+   "titleDe": "Den Weg beschreiben",
+   "titleEn": "Giving directions",
+   "concepts": [
+    {
+     "id": "b11_01",
+     "ku": "ل سەر پرێ را",
+     "kuLat": "L ser prê ra",
+     "de": "über die Brücke",
+     "deHint": "ئیوبەر دی بریوکە",
+     "en": "over the bridge",
+     "enHint": "",
+     "emoji": "🌉",
+     "cloze": {
+      "de": "Gehen Sie ___ die Brücke.",
+      "a": "über",
+      "d": [
+       "unter",
+       "durch"
+      ],
+      "ku": "ل سەر پرێ را بچن."
+     }
+    },
+    {
+     "id": "b11_02",
+     "ku": "ب ناڤ پارکێ را",
+     "kuLat": "B nav parkê ra",
+     "de": "durch den Park",
+     "deHint": "دورش دێن پارک",
+     "en": "through the park",
+     "enHint": "",
+     "emoji": "🌳",
+     "cloze": {
+      "de": "Wir gehen ___ den Park.",
+      "a": "durch",
+      "d": [
+       "über",
+       "um"
+      ],
+      "ku": "ئەم ب ناڤ پارکێ را دچین."
+     }
+    },
+    {
+     "id": "b11_03",
+     "ku": "ب درێژاهیا رووباری",
+     "kuLat": "B drêjahya rûbarî",
+     "de": "am Fluss entlang",
+     "deHint": "ئام فلوس ئێنتلانگ",
+     "en": "along the river",
+     "enHint": "",
+     "emoji": "🏞️"
+    },
+    {
+     "id": "b11_04",
+     "ku": "ل دۆر گۆڕەپانێ",
+     "kuLat": "L dor gorepanê",
+     "de": "um den Platz herum",
+     "deHint": "ئوم دێن پلاتس هێروم",
+     "en": "around the square",
+     "enHint": "",
+     "emoji": "🔄"
+    },
+    {
+     "id": "b11_05",
+     "ku": "بەرانبەر وێستگەها شەمەندەفەرێ",
+     "kuLat": "Beranber wêstgeha şemendeferê",
+     "de": "gegenüber vom Bahnhof",
+     "deHint": "گێگنیوبەر فۆم بانهۆف",
+     "en": "opposite the station",
+     "enHint": "",
+     "emoji": "🚉",
+     "cloze": {
+      "de": "Das Hotel ist ___ vom Bahnhof.",
+      "a": "gegenüber",
+      "d": [
+       "gegen",
+       "über"
+      ],
+      "ku": "هۆتێل بەرانبەر وێستگەهێ یە."
+     }
+    },
+    {
+     "id": "b11_06",
+     "ku": "هەتا گلۆپا ترافیکێ",
+     "kuLat": "Heta glopa trafîkê",
+     "de": "bis zur Ampel",
+     "deHint": "بیس تسور ئامپل",
+     "en": "as far as the traffic lights",
+     "enHint": "",
+     "emoji": "🚦",
+     "cloze": {
+      "de": "Fahren Sie ___ zur Ampel und dann links.",
+      "a": "bis",
+      "d": [
+       "von",
+       "ab"
+      ],
+      "ku": "هەتا گلۆپا ترافیکێ بچن و پاشی بۆ چەپێ."
+     }
+    },
+    {
+     "id": "b11_07",
+     "ku": "ژ نک کەنیسێ دەرباز ببە",
+     "kuLat": "J nk kenîsê derbaz bbe",
+     "de": "an der Kirche vorbei",
+     "deHint": "ئان دێر کیرشە فۆربای",
+     "en": "past the church",
+     "enHint": "",
+     "emoji": "⛪"
+    },
+    {
+     "id": "b11_08",
+     "ku": "ژ خانی دەر",
+     "kuLat": "J xanî der",
+     "de": "aus dem Haus",
+     "deHint": "ئاوس دێم هاوس",
+     "en": "out of the house",
+     "enHint": "",
+     "emoji": "🏠"
+    }
+   ],
+   "grammar": {
+    "titleKu": "پێشگرێن جهی",
+    "titleDe": "Lokale Präpositionen",
+    "lines": [
+     "aus, von = ژ (ژ کیڤە؟). an … vorbei = ژ نک … دەرباز. bis zu = هەتا. durch = ب ناڤ … را. entlang = ب درێژاهیا. gegenüber = بەرانبەر. über = ل سەر … را. um … herum = ل دۆر.",
+     "Ich komme gerade vom Arzt. — ئەز نوکە ژ نک نوژداری دهێم.",
+     "Der Bus fährt durch die Stadt. — پاس ب ناڤ باژێڕی را دچیت."
+    ],
+    "table": [
+     [
+      "Präposition",
+      "Kasus",
+      "Beispiel"
+     ],
+     [
+      "aus",
+      "Dativ",
+      "aus dem Haus"
+     ],
+     [
+      "von",
+      "Dativ",
+      "vom Bahnhof"
+     ],
+     [
+      "an … vorbei",
+      "Dativ",
+      "am Park vorbei"
+     ],
+     [
+      "bis zu",
+      "Dativ",
+      "bis zur Ampel"
+     ],
+     [
+      "gegenüber",
+      "Dativ",
+      "gegenüber vom Kino"
+     ],
+     [
+      "durch",
+      "Akkusativ",
+      "durch den Wald"
+     ],
+     [
+      "entlang",
+      "Akkusativ (danach)",
+      "den Fluss entlang"
+     ],
+     [
+      "um … herum",
+      "Akkusativ",
+      "um den See herum"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_11b",
+   "section": 26,
+   "only": "de",
+   "icon": "transport",
+   "color": "#4F9FC0",
+   "titleKu": "هاتن و چوون",
+   "titleDe": "Im Verkehr",
+   "titleEn": "In traffic",
+   "concepts": [
+    {
+     "id": "b11_09",
+     "ku": "قەرەباڵغیا ترومبێلان",
+     "kuLat": "Qerebalxya trumbêlan",
+     "de": "der Stau",
+     "deHint": "دێر شتاو",
+     "en": "the traffic jam",
+     "enHint": "",
+     "emoji": "🚗",
+     "cloze": {
+      "de": "Auf der Autobahn war ein langer ___.",
+      "a": "Stau",
+      "d": [
+       "Staub",
+       "Stuhl"
+      ],
+      "ku": "ل سەر رێکا ئۆتۆبانێ قەرەباڵغیەکا درێژ هەبوو."
+     }
+    },
+    {
+     "id": "b11_10",
+     "ku": "رووداو (تێکدان)",
+     "kuLat": "Rûdaw (têkdan)",
+     "de": "der Unfall",
+     "deHint": "دێر ئونفال",
+     "en": "the accident",
+     "enHint": "",
+     "emoji": "💥",
+     "cloze": {
+      "de": "Es gab einen ___ an der Kreuzung.",
+      "a": "Unfall",
+      "d": [
+       "Umfall",
+       "Anfall"
+      ],
+      "ku": "ل چوارڕێیانێ رووداوەک هەبوو."
+     }
+    },
+    {
+     "id": "b11_11",
+     "ku": "چوارڕێیان",
+     "kuLat": "Çwarrêyan",
+     "de": "die Kreuzung",
+     "deHint": "دی کرۆیتسونگ",
+     "en": "the crossroads",
+     "enHint": "",
+     "emoji": "✖️"
+    },
+    {
+     "id": "b11_12",
+     "ku": "بەنزین تێکرن",
+     "kuLat": "Benzîn têkrn",
+     "de": "tanken",
+     "deHint": "تانکن",
+     "en": "to fill up (fuel)",
+     "enHint": "",
+     "emoji": "⛽",
+     "cloze": {
+      "de": "Ich muss noch ___, der Tank ist fast leer.",
+      "a": "tanken",
+      "d": [
+       "tanzen",
+       "danken"
+      ],
+      "ku": "دڤێت بەنزین تێکەم، تەنکی نێزیکی ڤالا بوو."
+     }
+    },
+    {
+     "id": "b11_13",
+     "ku": "مۆلەتا لێخوڕینێ",
+     "kuLat": "Moleta lêxurînê",
+     "de": "der Führerschein",
+     "deHint": "دێر فیورەرشاین",
+     "en": "the driving licence",
+     "enHint": "",
+     "emoji": "🪪"
+    },
+    {
+     "id": "b11_14",
+     "ku": "راگرتن (فرێن)",
+     "kuLat": "Ragrtn (frên)",
+     "de": "bremsen",
+     "deHint": "برێمزن",
+     "en": "to brake",
+     "enHint": "",
+     "emoji": "🛑"
+    },
+    {
+     "id": "b11_15",
+     "ku": "ئەو گەلەک ب لەز لێخوڕی.",
+     "kuLat": "Ew gelek b lez lêxurî.",
+     "de": "Er ist zu schnell gefahren.",
+     "deHint": "ئێر ئیست تسوو شنێل گەفارن",
+     "en": "He drove too fast.",
+     "enHint": "",
+     "emoji": "🏎️"
+    },
+    {
+     "id": "b11_16",
+     "ku": "من پسوولەیا سزایێ (غەرامە) وەرگرت.",
+     "kuLat": "Mn psûleya szayê (xerame) wergrt.",
+     "de": "Ich habe einen Strafzettel bekommen.",
+     "deHint": "ئیش هابە ئاینن شترافتسێتل بەکۆمن",
+     "en": "I got a ticket (fine).",
+     "enHint": "",
+     "emoji": "🧾"
+    }
+   ],
+   "grammar": {
+    "titleKu": "لەوما (deshalb)",
+    "titleDe": "deshalb",
+    "lines": [
+     "«deshalb» = لەوما (ئەنجام). ل جهێ ئێکێ یان سێیێ، پاشی کار دهێت.",
+     "Ich habe Hunger, deshalb koche ich jetzt. — ئەز برسیمە، لەوما نوکە خوارنێ چێدکەم.",
+     "Es gab einen Stau. Deshalb bin ich zu spät gekommen. — قەرەباڵغی هەبوو. لەوما ئەز دەرەنگ هاتم."
+    ],
+    "table": [
+     [
+      "Grund",
+      "deshalb + Verb",
+      "Folge"
+     ],
+     [
+      "Es regnet,",
+      "deshalb nehme",
+      "ich den Bus."
+     ],
+     [
+      "Ich bin krank,",
+      "deshalb bleibe",
+      "ich zu Hause."
+     ],
+     [
+      "Er hat keinen Führerschein,",
+      "deshalb fährt",
+      "er Rad."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_11c",
+   "section": 26,
+   "only": "de",
+   "icon": "weather",
+   "color": "#4F9FC0",
+   "titleKu": "کەش ل سەر رێکێ",
+   "titleDe": "Wetter unterwegs",
+   "titleEn": "Weather on the road",
+   "concepts": [
+    {
+     "id": "b11_17",
+     "ku": "مژ",
+     "kuLat": "Mj",
+     "de": "der Nebel",
+     "deHint": "دێر نێبل",
+     "en": "the fog",
+     "enHint": "",
+     "emoji": "🌫️",
+     "cloze": {
+      "de": "Bei ___ muss man langsam fahren.",
+      "a": "Nebel",
+      "d": [
+       "Nabel",
+       "Nagel"
+      ],
+      "ku": "دەمێ مژ هەبیت، دڤێت مرۆڤ هێدی لێبخوڕیت."
+     }
+    },
+    {
+     "id": "b11_18",
+     "ku": "باران و برووسک",
+     "kuLat": "Baran w brûsk",
+     "de": "das Gewitter",
+     "deHint": "داس گەڤیتەر",
+     "en": "the thunderstorm",
+     "enHint": "",
+     "emoji": "⛈️"
+    },
+    {
+     "id": "b11_19",
+     "ku": "بڕووبا",
+     "kuLat": "Brûba",
+     "de": "der Sturm",
+     "deHint": "دێر شتورم",
+     "en": "the storm",
+     "enHint": "",
+     "emoji": "🌪️"
+    },
+    {
+     "id": "b11_20",
+     "ku": "قەشا ل سەر رێکێ",
+     "kuLat": "Qeşa l ser rêkê",
+     "de": "Glatteis",
+     "deHint": "گلاتئایس",
+     "en": "black ice",
+     "enHint": "",
+     "emoji": "🧊",
+     "cloze": {
+      "de": "Vorsicht, die Straße ist glatt! Es gibt ___.",
+      "a": "Glatteis",
+      "d": [
+       "Glas",
+       "Eiscreme"
+      ],
+      "ku": "ئاگەهدار بە، رێک یا شەمتۆکە! قەشا هەیە."
+     }
+    },
+    {
+     "id": "b11_21",
+     "ku": "گەلەک گەرمە، لەوما ئەز گەلەک ڤەدخۆم.",
+     "kuLat": "Gelek germe, lewma ez gelek vedxom.",
+     "de": "Es ist sehr heiß, deshalb trinke ich viel.",
+     "deHint": "ئێس ئیست زێر هایس، دێسهالب ترینکە ئیش فیل",
+     "en": "It's very hot, so I drink a lot.",
+     "enHint": "",
+     "emoji": "🥵",
+     "cloze": {
+      "de": "Es ist sehr heiß, ___ trinke ich viel.",
+      "a": "deshalb",
+      "d": [
+       "trotzdem",
+       "weil"
+      ],
+      "ku": "گەلەک گەرمە، لەوما ئەز گەلەک ڤەدخۆم."
+     }
+    },
+    {
+     "id": "b11_22",
+     "ku": "شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم.",
+     "kuLat": "Şemendefer dereng keftîye, lewma ez dê paşî hêm.",
+     "de": "Der Zug hat Verspätung, deshalb komme ich später.",
+     "deHint": "دێر تسووگ هات فێرشپێتونگ، دێسهالب کۆمە ئیش شپێتەر",
+     "en": "The train is late, so I'll come later.",
+     "enHint": "",
+     "emoji": "🚆",
+     "cloze": {
+      "de": "Der Zug hat Verspätung, deshalb ___ ich später.",
+      "a": "komme",
+      "d": [
+       "kommen",
+       "ich komme"
+      ],
+      "ku": "شەمەندەفەر دەرەنگ کەفتییە، لەوما ئەز دێ پاشی هێم."
+     }
+    },
+    {
+     "id": "b11_23",
+     "ku": "رێک یا گرتییە.",
+     "kuLat": "Rêk ya grtîye.",
+     "de": "Die Straße ist gesperrt.",
+     "deHint": "دی شتراسە ئیست گەشپێرت",
+     "en": "The road is closed.",
+     "enHint": "",
+     "emoji": "🚧"
+    },
+    {
+     "id": "b11_24",
+     "ku": "ب هشیاری لێبخوڕە!",
+     "kuLat": "B hşyarî lêbxure!",
+     "de": "Fahr vorsichtig!",
+     "deHint": "فار فۆرزیشتیش",
+     "en": "Drive carefully!",
+     "enHint": "",
+     "emoji": "⚠️"
+    }
+   ],
+   "grammar": {
+    "titleKu": "پەیڤ چێکرن: -bar, -ig, -isch",
+    "titleDe": "Wortbildung: -bar, -ig, -isch",
+    "lines": [
+     "کار + -bar = دشێی بکەی (essbar = دهێتە خوارن). ناڤ + -ig / -isch = سالۆخ (sonnig = رۆژ تێدا، praktisch = ب کێر هاتی).",
+     "Das Wasser ist hier nicht trinkbar. — ئاڤا ڤێرێ بۆ ڤەخوارنێ نینە.",
+     "Morgen wird es sonnig. — سبەی دێ رۆژ هەبیت."
+    ],
+    "table": [
+     [
+      "Basis",
+      "Adjektiv"
+     ],
+     [
+      "essen",
+      "essbar"
+     ],
+     [
+      "trinken",
+      "trinkbar"
+     ],
+     [
+      "die Sonne",
+      "sonnig"
+     ],
+     [
+      "der Regen",
+      "regnerisch"
+     ],
+     [
+      "die Praxis",
+      "praktisch"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_11d",
+   "section": 26,
+   "only": "de",
+   "icon": "city",
+   "color": "#4F9FC0",
+   "titleKu": "ئامرازێن هاتن و چوونێ",
+   "titleDe": "Verkehrsmittel",
+   "titleEn": "Means of transport",
+   "concepts": [
+    {
+     "id": "b11_25",
+     "ku": "فرۆکە",
+     "kuLat": "Froke",
+     "de": "das Flugzeug",
+     "deHint": "داس فلووگتسۆیگ",
+     "en": "the plane",
+     "enHint": "",
+     "emoji": "✈️"
+    },
+    {
+     "id": "b11_26",
+     "ku": "فڕین (دەرکەفتن)",
+     "kuLat": "Frîn (derkeftn)",
+     "de": "der Abflug",
+     "deHint": "دێر ئاپفلووگ",
+     "en": "the departure",
+     "enHint": "",
+     "emoji": "🛫",
+     "cloze": {
+      "de": "Der ___ ist um 14 Uhr.",
+      "a": "Abflug",
+      "d": [
+       "Ausflug",
+       "Abfall"
+      ],
+      "ku": "فڕین دەمژمێر ١٤ یە."
+     }
+    },
+    {
+     "id": "b11_27",
+     "ku": "نیشتن",
+     "kuLat": "Nîştn",
+     "de": "die Landung",
+     "deHint": "دی لاندونگ",
+     "en": "the landing",
+     "enHint": "",
+     "emoji": "🛬"
+    },
+    {
+     "id": "b11_28",
+     "ku": "ماتۆرسکیلا بچووک",
+     "kuLat": "Matorskîla bçûk",
+     "de": "das Moped",
+     "deHint": "داس مۆپێت",
+     "en": "the moped",
+     "enHint": "",
+     "emoji": "🛵"
+    },
+    {
+     "id": "b11_29",
+     "ku": "بلیتا هاتن و چوونێ",
+     "kuLat": "Blîta hatn w çûnê",
+     "de": "die Fahrkarte",
+     "deHint": "دی فارکارتە",
+     "en": "the ticket",
+     "enHint": "",
+     "emoji": "🎫",
+     "cloze": {
+      "de": "Ich kaufe eine ___ am Automaten.",
+      "a": "Fahrkarte",
+      "d": [
+       "Fahrplan",
+       "Landkarte"
+      ],
+      "ku": "ئەز بلیتەکێ ژ ئامیرێ دکڕم."
+     }
+    },
+    {
+     "id": "b11_30",
+     "ku": "گوهۆڕینا پاسێ / شەمەندەفەرێ",
+     "kuLat": "Guhorîna pasê / şemendeferê",
+     "de": "umsteigen",
+     "deHint": "ئومشتایگن",
+     "en": "to change (trains)",
+     "enHint": "",
+     "emoji": "🔁",
+     "cloze": {
+      "de": "In Frankfurt muss ich ___.",
+      "a": "umsteigen",
+      "d": [
+       "aussteigen",
+       "einsteigen"
+      ],
+      "ku": "ل فرانکفۆرتێ دڤێت ئەز شەمەندەفەرێ بگوهۆڕم."
+     }
+    },
+    {
+     "id": "b11_31",
+     "ku": "ب مێترۆیێ هەتا وێستگەها دوماهیێ بچن.",
+     "kuLat": "B mêtroyê heta wêstgeha dumahyê bçn.",
+     "de": "Fahren Sie mit der U-Bahn bis zur Endstation.",
+     "deHint": "فارن زی میت دێر ئوو-بان بیس تسور ئێنتشتاتسیۆن",
+     "en": "Take the underground to the last stop.",
+     "enHint": "",
+     "emoji": "🚇"
+    },
+    {
+     "id": "b11_32",
+     "ku": "ئەز پتر حەز دکەم ب پایسکیلێ بچم نەک ب ترومبێلێ.",
+     "kuLat": "Ez ptr hez dkem b payskîlê bçm nek b trumbêlê.",
+     "de": "Ich fahre lieber mit dem Rad als mit dem Auto.",
+     "deHint": "ئیش فارە لیبەر میت دێم رات ئالس میت دێم ئاوتۆ",
+     "en": "I prefer cycling to driving.",
+     "enHint": "",
+     "emoji": "🚲"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_12a",
+   "section": 27,
+   "only": "de",
+   "icon": "flag",
+   "color": "#B7794A",
+   "titleKu": "بۆ کیڤە دچی؟",
+   "titleDe": "Reiseziele",
+   "titleEn": "Destinations",
+   "concepts": [
+    {
+     "id": "b12_01",
+     "ku": "بۆ لێڤا دەریایێ",
+     "kuLat": "Bo lêva deryayê",
+     "de": "ans Meer",
+     "deHint": "ئانس مێر",
+     "en": "to the seaside",
+     "enHint": "",
+     "emoji": "🏖️",
+     "cloze": {
+      "de": "Im Sommer fahren wir ___ Meer.",
+      "a": "ans",
+      "d": [
+       "am",
+       "im"
+      ],
+      "ku": "هاڤینێ ئەم دچینە لێڤا دەریایێ."
+     }
+    },
+    {
+     "id": "b12_02",
+     "ku": "بۆ چیایان",
+     "kuLat": "Bo çyayan",
+     "de": "in die Berge",
+     "deHint": "ئین دی بێرگە",
+     "en": "to the mountains",
+     "enHint": "",
+     "emoji": "🏔️",
+     "cloze": {
+      "de": "Wir wandern gern, deshalb fahren wir ___ die Berge.",
+      "a": "in",
+      "d": [
+       "an",
+       "auf"
+      ],
+      "ku": "ئەم حەز ژ گەڕیانێ دکەین، لەوما دچینە چیایان."
+     }
+    },
+    {
+     "id": "b12_03",
+     "ku": "بۆ گۆلێ",
+     "kuLat": "Bo golê",
+     "de": "an den See",
+     "deHint": "ئان دێن زێ",
+     "en": "to the lake",
+     "enHint": "",
+     "emoji": "🏞️"
+    },
+    {
+     "id": "b12_04",
+     "ku": "بۆ دوورگەهەکێ",
+     "kuLat": "Bo dûrgehekê",
+     "de": "auf eine Insel",
+     "deHint": "ئاوف ئاینە ئینزل",
+     "en": "to an island",
+     "enHint": "",
+     "emoji": "🏝️",
+     "cloze": {
+      "de": "Wir fliegen ___ eine Insel im Mittelmeer.",
+      "a": "auf",
+      "d": [
+       "in",
+       "an"
+      ],
+      "ku": "ئەم دفڕینە دوورگەهەکێ ل دەریایا ناڤەراست."
+     }
+    },
+    {
+     "id": "b12_05",
+     "ku": "بۆ گوندی (دەرڤەیی باژێڕی)",
+     "kuLat": "Bo gundî (derveyî bajêrî)",
+     "de": "aufs Land",
+     "deHint": "ئاوفس لاند",
+     "en": "to the countryside",
+     "enHint": "",
+     "emoji": "🌾"
+    },
+    {
+     "id": "b12_06",
+     "ku": "بۆ بیابانێ",
+     "kuLat": "Bo byabanê",
+     "de": "in die Wüste",
+     "deHint": "ئین دی ڤیوستە",
+     "en": "to the desert",
+     "enHint": "",
+     "emoji": "🏜️"
+    },
+    {
+     "id": "b12_07",
+     "ku": "هەتا نوکە ئەز نەچوویمە ڤیەننا.",
+     "kuLat": "Heta nuke ez neçûîme vyenna.",
+     "de": "Ich war noch nie in Wien.",
+     "deHint": "ئیش ڤار نۆخ نی ئین ڤین",
+     "en": "I've never been to Vienna.",
+     "enHint": "",
+     "emoji": "🏰"
+    },
+    {
+     "id": "b12_08",
+     "ku": "ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم.",
+     "kuLat": "J hemîyan ptr hez dkem l ber deryayê bêhnvedanê bkem.",
+     "de": "Am liebsten mache ich Urlaub am Meer.",
+     "deHint": "ئام لیبستن ماخە ئیش ئوورلاوپ ئام مێر",
+     "en": "I like holidaying by the sea best.",
+     "enHint": "",
+     "emoji": "🌊"
+    }
+   ],
+   "grammar": {
+    "titleKu": "بۆ کیڤە؟ / ل کیڤە؟ (an, auf, in)",
+    "titleDe": "Wohin? an, auf, in · Wo?",
+    "lines": [
+     "بۆ کیڤە؟ + Akkusativ. ل کیڤە؟ + Dativ.",
+     "Wir fahren ans Meer. Am Meer schwimmen wir. — ئەم دچینە دەریایێ. ل بەر دەریایێ مەلەڤانیێ دکەین.",
+     "Im Winter fahren sie in die Berge. — زڤستانێ ئەو دچنە چیایان."
+    ],
+    "table": [
+     [
+      "Ziel",
+      "Wohin?",
+      "Wo?"
+     ],
+     [
+      "das Meer",
+      "ans Meer",
+      "am Meer"
+     ],
+     [
+      "die Berge",
+      "in die Berge",
+      "in den Bergen"
+     ],
+     [
+      "die Insel",
+      "auf eine Insel",
+      "auf einer Insel"
+     ],
+     [
+      "das Land",
+      "aufs Land",
+      "auf dem Land"
+     ],
+     [
+      "der See",
+      "an den See",
+      "am See"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_12b",
+   "section": 27,
+   "only": "de",
+   "icon": "home",
+   "color": "#B7794A",
+   "titleKu": "جهێ مانێ",
+   "titleDe": "Unterkunft",
+   "titleEn": "Accommodation",
+   "concepts": [
+    {
+     "id": "b12_09",
+     "ku": "مێڤانخانەیا بچووک",
+     "kuLat": "Mêvanxaneya bçûk",
+     "de": "die Pension",
+     "deHint": "دی پانزیۆن",
+     "en": "the guesthouse",
+     "enHint": "",
+     "emoji": "🏡"
+    },
+    {
+     "id": "b12_10",
+     "ku": "مێڤانخانەیا گەنجان",
+     "kuLat": "Mêvanxaneya gencan",
+     "de": "die Jugendherberge",
+     "deHint": "دی یووگنتهێربێرگە",
+     "en": "the youth hostel",
+     "enHint": "",
+     "emoji": "🛏️"
+    },
+    {
+     "id": "b12_11",
+     "ku": "جهێ خێڤەتان",
+     "kuLat": "Chê xêvetan",
+     "de": "der Campingplatz",
+     "deHint": "دێر کێمپینگپلاتس",
+     "en": "the campsite",
+     "enHint": "",
+     "emoji": "⛺",
+     "cloze": {
+      "de": "Wir schlafen im Zelt auf dem ___.",
+      "a": "Campingplatz",
+      "d": [
+       "Marktplatz",
+       "Parkplatz"
+      ],
+      "ku": "ئەم ل جهێ خێڤەتان د خێڤەتێ دا دنڤین."
+     }
+    },
+    {
+     "id": "b12_12",
+     "ku": "شەڤەک مان",
+     "kuLat": "Şevek man",
+     "de": "die Übernachtung",
+     "deHint": "دی ئیوبەرناختونگ",
+     "en": "the overnight stay",
+     "enHint": "",
+     "emoji": "🌙",
+     "cloze": {
+      "de": "Eine ___ kostet 60 Euro.",
+      "a": "Übernachtung",
+      "d": [
+       "Übersetzung",
+       "Überweisung"
+      ],
+      "ku": "شەڤەک ب ٦٠ یۆرۆیانە."
+     }
+    },
+    {
+     "id": "b12_13",
+     "ku": "ژوورەکێ گرتن (حجزکرن)",
+     "kuLat": "Jûrekê grtn (hczkrn)",
+     "de": "ein Zimmer reservieren",
+     "deHint": "ئاین تسیمەر رێزێرڤیرن",
+     "en": "to book a room",
+     "enHint": "",
+     "emoji": "🗓️",
+     "cloze": {
+      "de": "Ich möchte ein Doppelzimmer ___.",
+      "a": "reservieren",
+      "d": [
+       "reserviert",
+       "Reserve"
+      ],
+      "ku": "ئەز دڤێم ژوورەکا دوو کەسی بگرم."
+     }
+    },
+    {
+     "id": "b12_14",
+     "ku": "دگەل تێشتێ",
+     "kuLat": "Dgel têştê",
+     "de": "mit Frühstück",
+     "deHint": "میت فریوشتیوک",
+     "en": "with breakfast",
+     "enHint": "",
+     "emoji": "🥐"
+    },
+    {
+     "id": "b12_15",
+     "ku": "تێشت و خوارنا ئێڤارێ",
+     "kuLat": "Têşt w xwarna êvarê",
+     "de": "Halbpension",
+     "deHint": "هالبپانزیۆن",
+     "en": "half board",
+     "enHint": "",
+     "emoji": "🍽️"
+    },
+    {
+     "id": "b12_16",
+     "ku": "ئەرێ ژوور ئارامە (بێ دەنگە)؟",
+     "kuLat": "Erê jûr arame (bê denge)?",
+     "de": "Ist das Zimmer ruhig?",
+     "deHint": "ئیست داس تسیمەر رووئیش",
+     "en": "Is the room quiet?",
+     "enHint": "",
+     "emoji": "🤫"
+    }
+   ],
+   "grammar": {
+    "titleKu": "سالۆخ بێ ئارتیکل · ژ … ڤە · بێ",
+    "titleDe": "Adjektiv ohne Artikel · von … an · ohne",
+    "lines": [
+     "بێ ئارتیکل، سالۆخ دوماهیکا ئارتیکلی وەردگریت: frische Luft. «von … an» = ژ … ڤە. «ohne» + Akkusativ = بێ.",
+     "Hier gibt es leckeres Essen und kaltes Wasser. — ل ڤێرێ خوارنا ب تام و ئاڤا سار هەیە.",
+     "Von Juni an arbeite ich in Berlin. — ژ حوزەیرانێ ڤە ئەز ل بەرلین کار دکەم."
+    ],
+    "table": [
+     [
+      "",
+      "maskulin",
+      "neutral",
+      "feminin",
+      "Plural"
+     ],
+     [
+      "Nom.",
+      "frischer Kaffee",
+      "frisches Brot",
+      "frische Luft",
+      "frische Eier"
+     ],
+     [
+      "Akk.",
+      "frischen Kaffee",
+      "frisches Brot",
+      "frische Luft",
+      "frische Eier"
+     ],
+     [
+      "Dat.",
+      "frischem Kaffee",
+      "frischem Brot",
+      "frischer Luft",
+      "frischen Eiern"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_12c",
+   "section": 27,
+   "only": "de",
+   "icon": "transport",
+   "color": "#B7794A",
+   "titleKu": "ل فڕۆکەخانێ و وێستگەهێ",
+   "titleDe": "Am Flughafen & Bahnhof",
+   "titleEn": "At the airport & station",
+   "concepts": [
+    {
+     "id": "b12_17",
+     "ku": "جانتایا گەشتێ",
+     "kuLat": "Cantaya geştê",
+     "de": "der Koffer",
+     "deHint": "دێر کۆفەر",
+     "en": "the suitcase",
+     "enHint": "",
+     "emoji": "🧳"
+    },
+    {
+     "id": "b12_18",
+     "ku": "جانتایا دەستی",
+     "kuLat": "Cantaya destî",
+     "de": "das Handgepäck",
+     "deHint": "داس هانتگەپێک",
+     "en": "hand luggage",
+     "enHint": "",
+     "emoji": "👜",
+     "cloze": {
+      "de": "Flüssigkeiten im ___ sind nicht erlaubt.",
+      "a": "Handgepäck",
+      "d": [
+       "Handschuh",
+       "Handtuch"
+      ],
+      "ku": "شلەمەنی د جانتایا دەستی دا رێپێدای نینن."
+     }
+    },
+    {
+     "id": "b12_19",
+     "ku": "دەرەنگ کەفتن",
+     "kuLat": "Dereng keftn",
+     "de": "die Verspätung",
+     "deHint": "دی فێرشپێتونگ",
+     "en": "the delay",
+     "enHint": "",
+     "emoji": "⏰",
+     "cloze": {
+      "de": "Der Flug hat zwei Stunden ___.",
+      "a": "Verspätung",
+      "d": [
+       "Verletzung",
+       "Vorspeise"
+      ],
+      "ku": "فڕین دوو دەمژمێران دەرەنگ کەفتییە."
+     }
+    },
+    {
+     "id": "b12_20",
+     "ku": "هێلا شەمەندەفەرێ (پلاتفۆرم)",
+     "kuLat": "Hêla şemendeferê (platform)",
+     "de": "das Gleis",
+     "deHint": "داس گلایس",
+     "en": "the platform",
+     "enHint": "",
+     "emoji": "🛤️",
+     "cloze": {
+      "de": "Der Zug fährt von ___ 5 ab.",
+      "a": "Gleis",
+      "d": [
+       "Gleich",
+       "Glas"
+      ],
+      "ku": "شەمەندەفەر ژ هێلا ٥ دچیت."
+     }
+    },
+    {
+     "id": "b12_21",
+     "ku": "فڕۆکەخانە",
+     "kuLat": "Frokexane",
+     "de": "der Flughafen",
+     "deHint": "دێر فلووگهافن",
+     "en": "the airport",
+     "enHint": "",
+     "emoji": "🛫"
+    },
+    {
+     "id": "b12_22",
+     "ku": "چوون (دەرکەفتن)",
+     "kuLat": "Çûn (derkeftn)",
+     "de": "die Abfahrt",
+     "deHint": "دی ئاپفارت",
+     "en": "the departure (train/bus)",
+     "enHint": "",
+     "emoji": "🚉"
+    },
+    {
+     "id": "b12_23",
+     "ku": "گەهشتن",
+     "kuLat": "Gehştn",
+     "de": "die Ankunft",
+     "deHint": "دی ئانکونفت",
+     "en": "the arrival",
+     "enHint": "",
+     "emoji": "🏁"
+    },
+    {
+     "id": "b12_24",
+     "ku": "ژ دووشەمبیێ ڤە ئەز د بێهنڤەدانێ دامە.",
+     "kuLat": "J dûşembyê ve ez d bêhnvedanê dame.",
+     "de": "Von Montag an bin ich im Urlaub.",
+     "deHint": "فۆن مۆنتاگ ئان بین ئیش ئیم ئوورلاوپ",
+     "en": "From Monday on I'm on holiday.",
+     "enHint": "",
+     "emoji": "📆",
+     "cloze": {
+      "de": "___ Montag an bin ich im Urlaub.",
+      "a": "Von",
+      "d": [
+       "Bis",
+       "Seit"
+      ],
+      "ku": "ژ دووشەمبیێ ڤە ئەز د بێهنڤەدانێ دامە."
+     }
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_12d",
+   "section": 27,
+   "only": "de",
+   "icon": "help",
+   "color": "#B7794A",
+   "titleKu": "کێشە ل گەشتێ",
+   "titleDe": "Probleme auf Reisen",
+   "titleEn": "Travel problems",
+   "concepts": [
+    {
+     "id": "b12_25",
+     "ku": "جانتایا من نەگەهشت.",
+     "kuLat": "Cantaya mn negehşt.",
+     "de": "Mein Koffer ist nicht angekommen.",
+     "deHint": "ماین کۆفەر ئیست نیشت ئانگەکۆمن",
+     "en": "My suitcase didn't arrive.",
+     "enHint": "",
+     "emoji": "🧳"
+    },
+    {
+     "id": "b12_26",
+     "ku": "ئەز بێ پاسپۆرت چوومە فڕۆکەخانێ.",
+     "kuLat": "Ez bê pasport çûme frokexanê.",
+     "de": "Ich bin ohne Pass zum Flughafen gefahren.",
+     "deHint": "ئیش بین ئۆنە پاس تسووم فلووگهافن گەفارن",
+     "en": "I went to the airport without my passport.",
+     "enHint": "",
+     "emoji": "🛂",
+     "cloze": {
+      "de": "Ich bin ___ Pass zum Flughafen gefahren.",
+      "a": "ohne",
+      "d": [
+       "mit",
+       "für"
+      ],
+      "ku": "ئەز بێ پاسپۆرت چوومە فڕۆکەخانێ."
+     }
+    },
+    {
+     "id": "b12_27",
+     "ku": "گەرمکەر کار ناکەت.",
+     "kuLat": "Germker kar naket.",
+     "de": "Die Heizung funktioniert nicht.",
+     "deHint": "دی هایتسونگ فونکتسیۆنیرت نیشت",
+     "en": "The heating doesn't work.",
+     "enHint": "",
+     "emoji": "🌡️"
+    },
+    {
+     "id": "b12_28",
+     "ku": "ژوور یا پیسە.",
+     "kuLat": "Jûr ya pîse.",
+     "de": "Das Zimmer ist schmutzig.",
+     "deHint": "داس تسیمەر ئیست شموتسیش",
+     "en": "The room is dirty.",
+     "enHint": "",
+     "emoji": "🧹",
+     "cloze": {
+      "de": "Das Zimmer ist nicht sauber, es ist ___.",
+      "a": "schmutzig",
+      "d": [
+       "schmal",
+       "schnell"
+      ],
+      "ku": "ژوور نە پاقژە، یا پیسە."
+     }
+    },
+    {
+     "id": "b12_29",
+     "ku": "ئەز دڤێم گازندێ بکەم.",
+     "kuLat": "Ez dvêm gazndê bkem.",
+     "de": "Ich möchte mich beschweren.",
+     "deHint": "ئیش مۆشتە میش بەشڤێرن",
+     "en": "I'd like to complain.",
+     "enHint": "",
+     "emoji": "😤"
+    },
+    {
+     "id": "b12_30",
+     "ku": "هەوایا پاقژ و خوارنا باش",
+     "kuLat": "Hewaya paqj w xwarna baş",
+     "de": "frische Luft und gutes Essen",
+     "deHint": "فریشە لوفت ئوند گووتەس ئێسن",
+     "en": "fresh air and good food",
+     "enHint": "",
+     "emoji": "🍃",
+     "cloze": {
+      "de": "Auf dem Land gibt es ___ Luft.",
+      "a": "frische",
+      "d": [
+       "frischer",
+       "frischen"
+      ],
+      "ku": "ل گوندی هەوایا پاقژ هەیە."
+     }
+    },
+    {
+     "id": "b12_31",
+     "ku": "شەمەندەفەر ل مە چوو.",
+     "kuLat": "Şemendefer l me çû.",
+     "de": "Wir haben den Zug verpasst.",
+     "deHint": "ڤیر هابن دێن تسووگ فێرپاست",
+     "en": "We missed the train.",
+     "enHint": "",
+     "emoji": "🚆",
+     "cloze": {
+      "de": "Wir haben den Zug ___.",
+      "a": "verpasst",
+      "d": [
+       "verpassen",
+       "passiert"
+      ],
+      "ku": "شەمەندەفەر ل مە چوو."
+     }
+    },
+    {
+     "id": "b12_32",
+     "ku": "بێهنڤەدانەکا خۆش!",
+     "kuLat": "Bêhnvedaneka xoş!",
+     "de": "Gute Erholung!",
+     "deHint": "گووتە ئێرهۆلونگ",
+     "en": "Have a good rest!",
+     "enHint": "",
+     "emoji": "🌴"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_13a",
+   "section": 28,
+   "only": "de",
+   "icon": "city",
+   "color": "#C9A227",
+   "titleKu": "ل بانکێ",
+   "titleDe": "Auf der Bank",
+   "titleEn": "At the bank",
+   "concepts": [
+    {
+     "id": "b13_01",
+     "ku": "حسابەکێ ڤەکرن",
+     "kuLat": "Hsabekê vekrn",
+     "de": "ein Konto eröffnen",
+     "deHint": "ئاین کۆنتۆ ئێرئۆفنن",
+     "en": "to open an account",
+     "enHint": "",
+     "emoji": "🏦",
+     "cloze": {
+      "de": "Ich möchte ein Konto ___.",
+      "a": "eröffnen",
+      "d": [
+       "öffnet",
+       "eröffnet"
+      ],
+      "ku": "ئەز دڤێم حسابەکێ ڤەکەم."
+     }
+    },
+    {
+     "id": "b13_02",
+     "ku": "ئامیرێ پارە دەرێخستنێ (ATM)",
+     "kuLat": "Amîrê pare derêxstnê (ATM)",
+     "de": "der Geldautomat",
+     "deHint": "دێر گێلتئاوتۆمات",
+     "en": "the cash machine",
+     "enHint": "",
+     "emoji": "🏧"
+    },
+    {
+     "id": "b13_03",
+     "ku": "پارە دەرێخستن ژ حسابێ",
+     "kuLat": "Pare derêxstn j hsabê",
+     "de": "Geld abheben",
+     "deHint": "گێلت ئاپهێبن",
+     "en": "to withdraw money",
+     "enHint": "",
+     "emoji": "💵",
+     "cloze": {
+      "de": "Ich muss am Automaten Geld ___.",
+      "a": "abheben",
+      "d": [
+       "aufheben",
+       "abgeben"
+      ],
+      "ku": "دڤێت ئەز ژ ئامیری پارێ دەرێخم."
+     }
+    },
+    {
+     "id": "b13_04",
+     "ku": "پارە ڤەگوهاستن (بۆ حسابەکا دی)",
+     "kuLat": "Pare veguhastn (bo hsabeka dî)",
+     "de": "Geld überweisen",
+     "deHint": "گێلت ئیوبەرڤایزن",
+     "en": "to transfer money",
+     "enHint": "",
+     "emoji": "💸",
+     "cloze": {
+      "de": "Ich ___ die Miete jeden Monat.",
+      "a": "überweise",
+      "d": [
+       "überweisen",
+       "Überweisung"
+      ],
+      "ku": "ئەز هەر هەیڤ کرێیا خانی ڤەدگوهێزم."
+     }
+    },
+    {
+     "id": "b13_05",
+     "ku": "ژمارا نهێنی",
+     "kuLat": "Jmara nhênî",
+     "de": "die Geheimzahl / die PIN",
+     "deHint": "دی گەهایمتسال / دی پین",
+     "en": "the PIN",
+     "enHint": "",
+     "emoji": "🔢"
+    },
+    {
+     "id": "b13_06",
+     "ku": "کەشفا حسابێ",
+     "kuLat": "Keşfa hsabê",
+     "de": "der Kontoauszug",
+     "deHint": "دێر کۆنتۆئاوستسووگ",
+     "en": "the bank statement",
+     "enHint": "",
+     "emoji": "🧾"
+    },
+    {
+     "id": "b13_07",
+     "ku": "سوو (قازانجا بانکێ)",
+     "kuLat": "Sû (qazanca bankê)",
+     "de": "die Zinsen",
+     "deHint": "دی تسینزن",
+     "en": "interest",
+     "enHint": "",
+     "emoji": "📈"
+    },
+    {
+     "id": "b13_08",
+     "ku": "کارتا من بەرزە بوو!",
+     "kuLat": "Karta mn berze bû!",
+     "de": "Meine Karte ist weg!",
+     "deHint": "ماینە کارتە ئیست ڤێک",
+     "en": "My card is gone!",
+     "enHint": "",
+     "emoji": "😱"
+    }
+   ],
+   "grammar": {
+    "titleKu": "پرسیارێن نەراستەوخۆ",
+    "titleDe": "Indirekte Fragen: ob, wo, wann, wie …",
+    "lines": [
+     "پشتی «هوین دزانن …؟»: پەیڤا پرسیارێ (wo, wann …) یان «ob» (بۆ پرسیارا بەلێ/نە)، کار ل دوماهیێ.",
+     "Können Sie mir sagen, wie spät es ist? — هوین دشێن بێژنە من کا دەمژمێر چەندە؟",
+     "Ich weiß nicht, ob ich morgen komme. — ئەز نزانم کا سبەی دێ هێم یان نە."
+    ],
+    "table": [
+     [
+      "direkte Frage",
+      "indirekte Frage"
+     ],
+     [
+      "Wo ist die Bank?",
+      "Wissen Sie, wo die Bank ist?"
+     ],
+     [
+      "Wann kommt der Bus?",
+      "Ich weiß nicht, wann der Bus kommt."
+     ],
+     [
+      "Ist das Konto kostenlos?",
+      "Ich frage, ob das Konto kostenlos ist."
+     ],
+     [
+      "Hat er Zeit?",
+      "Weißt du, ob er Zeit hat?"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_13b",
+   "section": 28,
+   "only": "de",
+   "icon": "shopping",
+   "color": "#C9A227",
+   "titleKu": "کڕین و پارەدان",
+   "titleDe": "Einkaufen & Bezahlen",
+   "titleEn": "Shopping & paying",
+   "concepts": [
+    {
+     "id": "b13_09",
+     "ku": "ب کاش پارە دان",
+     "kuLat": "B kaş pare dan",
+     "de": "bar bezahlen",
+     "deHint": "بار بەتسالن",
+     "en": "to pay cash",
+     "enHint": "",
+     "emoji": "💶",
+     "cloze": {
+      "de": "Kann ich ___ bezahlen? – Ja, natürlich.",
+      "a": "bar",
+      "d": [
+       "Bar",
+       "Bart"
+      ],
+      "ku": "دشێم ب کاش پارەی بدەم؟ – بەلێ، هەلبەت."
+     }
+    },
+    {
+     "id": "b13_10",
+     "ku": "ب کارتێ پارە دان",
+     "kuLat": "B kartê pare dan",
+     "de": "mit Karte zahlen",
+     "deHint": "میت کارتە تسالن",
+     "en": "to pay by card",
+     "enHint": "",
+     "emoji": "💳"
+    },
+    {
+     "id": "b13_11",
+     "ku": "داشکاندن",
+     "kuLat": "Daşkandn",
+     "de": "der Rabatt",
+     "deHint": "دێر راباتت",
+     "en": "the discount",
+     "enHint": "",
+     "emoji": "🏷️",
+     "cloze": {
+      "de": "Heute gibt es 20 Prozent ___.",
+      "a": "Rabatt",
+      "d": [
+       "Rabe",
+       "Rat"
+      ],
+      "ku": "ئەڤرۆ ٢٠٪ داشکاندن هەیە."
+     }
+    },
+    {
+     "id": "b13_12",
+     "ku": "پسوولە (وەسل)",
+     "kuLat": "Psûle (wesl)",
+     "de": "die Quittung",
+     "deHint": "دی کڤیتونگ",
+     "en": "the receipt",
+     "enHint": "",
+     "emoji": "🧾",
+     "cloze": {
+      "de": "Kann ich bitte eine ___ haben?",
+      "a": "Quittung",
+      "d": [
+       "Quatsch",
+       "Kuchen"
+      ],
+      "ku": "دشێم پسوولەکێ وەرگرم؟"
+     }
+    },
+    {
+     "id": "b13_13",
+     "ku": "گوهۆڕینا تشتێ کڕی",
+     "kuLat": "Guhorîna tştê krî",
+     "de": "umtauschen",
+     "deHint": "ئومتاوشن",
+     "en": "to exchange (goods)",
+     "enHint": "",
+     "emoji": "🔄",
+     "cloze": {
+      "de": "Die Hose ist zu klein. Kann ich sie ___?",
+      "a": "umtauschen",
+      "d": [
+       "umziehen",
+       "umsteigen"
+      ],
+      "ku": "پانتۆل یا بچووکە. دشێم بگوهۆڕم؟"
+     }
+    },
+    {
+     "id": "b13_14",
+     "ku": "زەمانەت (گەرەنتی)",
+     "kuLat": "Zemanet (gerentî)",
+     "de": "die Garantie",
+     "deHint": "دی گارانتی",
+     "en": "the guarantee",
+     "enHint": "",
+     "emoji": "✅"
+    },
+    {
+     "id": "b13_15",
+     "ku": "ئەڤە بۆ من گەلەک ب بهایە.",
+     "kuLat": "Eve bo mn gelek b bhaye.",
+     "de": "Das ist mir zu teuer.",
+     "deHint": "داس ئیست میر تسوو تۆیەر",
+     "en": "That's too expensive for me.",
+     "enHint": "",
+     "emoji": "💰"
+    },
+    {
+     "id": "b13_16",
+     "ku": "ئەز پارێ بۆ ترومبێلەکا نوو کۆم دکەم.",
+     "kuLat": "Ez parê bo trumbêleka nû kom dkem.",
+     "de": "Ich spare für ein neues Auto.",
+     "deHint": "ئیش شپارە فیور ئاین نۆیەس ئاوتۆ",
+     "en": "I'm saving for a new car.",
+     "enHint": "",
+     "emoji": "🐷",
+     "cloze": {
+      "de": "Ich ___ für ein neues Auto.",
+      "a": "spare",
+      "d": [
+       "spiele",
+       "spüre"
+      ],
+      "ku": "ئەز پارێ بۆ ترومبێلەکا نوو کۆم دکەم."
+     }
+    }
+   ],
+   "grammar": {
+    "titleKu": "lassen (هێلان / دانە کرن)",
+    "titleDe": "lassen",
+    "lines": [
+     "lassen + کار: کەسەکێ دی بۆ من دکەت (ئەز ترومبێلێ ددەمە چاککرن). هەروەسا: هێلان (ل مال دهێلم) و رێدان.",
+     "Ich lasse meine Jacke reinigen. — ئەز چاکێتا خۆ ددەمە شویشتنێ.",
+     "Lässt du dir die Haare schneiden? — تو پرچا خۆ ددەیە کورتکرن؟"
+    ],
+    "table": [
+     [
+      "Person",
+      "lassen"
+     ],
+     [
+      "ich",
+      "lasse"
+     ],
+     [
+      "du",
+      "lässt"
+     ],
+     [
+      "er / sie / es",
+      "lässt"
+     ],
+     [
+      "wir / sie / Sie",
+      "lassen"
+     ],
+     [
+      "ihr",
+      "lasst"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_13c",
+   "section": 28,
+   "only": "de",
+   "icon": "help",
+   "color": "#C9A227",
+   "titleKu": "ما … ؟ ئەز نزانم کا …",
+   "titleDe": "Wissen Sie, ob …?",
+   "titleEn": "Indirect questions",
+   "concepts": [
+    {
+     "id": "b13_17",
+     "ku": "هوین دزانن بانک ل کیڤەیە؟",
+     "kuLat": "Huîn dzann bank l kîveye?",
+     "de": "Wissen Sie, wo die Bank ist?",
+     "deHint": "ڤیسن زی، ڤۆ دی بانک ئیست",
+     "en": "Do you know where the bank is?",
+     "enHint": "",
+     "emoji": "🏦",
+     "cloze": {
+      "de": "Wissen Sie, wo die Bank ___?",
+      "a": "ist",
+      "d": [
+       "sind",
+       "ist die"
+      ],
+      "ku": "هوین دزانن بانک ل کیڤەیە؟"
+     }
+    },
+    {
+     "id": "b13_18",
+     "ku": "هوین دشێن بێژنە من کا پۆستە کەنگی ڤەدبیت؟",
+     "kuLat": "Huîn dşên bêjne mn ka poste kengî vedbît?",
+     "de": "Können Sie mir sagen, wann die Post öffnet?",
+     "deHint": "کۆنن زی میر زاگن، ڤان دی پۆست ئۆفنەت",
+     "en": "Can you tell me when the post office opens?",
+     "enHint": "",
+     "emoji": "🕘",
+     "cloze": {
+      "de": "Können Sie mir sagen, wann die Post ___?",
+      "a": "öffnet",
+      "d": [
+       "öffnen",
+       "öffnet sie"
+      ],
+      "ku": "هوین دشێن بێژنە من پۆستە کەنگی ڤەدبیت؟"
+     }
+    },
+    {
+     "id": "b13_19",
+     "ku": "ئەز نزانم کا پارێن من بەس هەنە یان نە.",
+     "kuLat": "Ez nzanm ka parên mn bes hene yan ne.",
+     "de": "Ich weiß nicht, ob ich genug Geld habe.",
+     "deHint": "ئیش ڤایس نیشت، ئۆپ ئیش گەنووگ گێلت هابە",
+     "en": "I don't know if I have enough money.",
+     "enHint": "",
+     "emoji": "🤷",
+     "cloze": {
+      "de": "Ich weiß nicht, ___ ich genug Geld habe.",
+      "a": "ob",
+      "d": [
+       "wenn",
+       "dass"
+      ],
+      "ku": "ئەز نزانم کا پارێن من بەس هەنە یان نە."
+     }
+    },
+    {
+     "id": "b13_20",
+     "ku": "دزانی کا دووکان ئەڤرۆ ڤەکرییە؟",
+     "kuLat": "Dzanî ka dûkan evro vekrîye?",
+     "de": "Weißt du, ob der Laden heute offen ist?",
+     "deHint": "ڤایست دوو، ئۆپ دێر لادن هۆیتە ئۆفن ئیست",
+     "en": "Do you know if the shop is open today?",
+     "enHint": "",
+     "emoji": "🏪"
+    },
+    {
+     "id": "b13_21",
+     "ku": "ئەز پسیار دکەم کا ئەڤە ب چەندە.",
+     "kuLat": "Ez psyar dkem ka eve b çende.",
+     "de": "Ich frage, wie viel das kostet.",
+     "deHint": "ئیش فراگە، ڤی فیل داس کۆستەت",
+     "en": "I'm asking how much it costs.",
+     "enHint": "",
+     "emoji": "❓"
+    },
+    {
+     "id": "b13_22",
+     "ku": "تو دشێی بێژیە من کا کێ ئەڤە کر؟",
+     "kuLat": "Tu dşêy bêjye mn ka kê eve kr?",
+     "de": "Kannst du mir sagen, wer das gemacht hat?",
+     "deHint": "کانست دوو میر زاگن، ڤێر داس گەماخت هات",
+     "en": "Can you tell me who did this?",
+     "enHint": "",
+     "emoji": "🕵️"
+    },
+    {
+     "id": "b13_23",
+     "ku": "ئەز پشتڕاست نینم کا ئەڤە راستە.",
+     "kuLat": "Ez pştrast nînm ka eve raste.",
+     "de": "Ich bin nicht sicher, ob das stimmt.",
+     "deHint": "ئیش بین نیشت زیشەر، ئۆپ داس شتیمت",
+     "en": "I'm not sure if that's right.",
+     "enHint": "",
+     "emoji": "🤔"
+    },
+    {
+     "id": "b13_24",
+     "ku": "هیڤییە بۆ من رۆهن بکەن کا دڤێت ئەز چ بکەم.",
+     "kuLat": "Hîvîye bo mn rohn bken ka dvêt ez ç bkem.",
+     "de": "Erklären Sie mir bitte, was ich tun muss.",
+     "deHint": "ئێرکلێرن زی میر بیتە، ڤاس ئیش توون موس",
+     "en": "Please explain what I have to do.",
+     "enHint": "",
+     "emoji": "📋"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_13d",
+   "section": 28,
+   "only": "de",
+   "icon": "work",
+   "color": "#C9A227",
+   "titleKu": "دهێلم … بکەت",
+   "titleDe": "etwas machen lassen",
+   "titleEn": "Having something done",
+   "concepts": [
+    {
+     "id": "b13_25",
+     "ku": "ئەز ترومبێلا خۆ ددەمە چاککرن.",
+     "kuLat": "Ez trumbêla xo ddeme çakkrn.",
+     "de": "Ich lasse mein Auto reparieren.",
+     "deHint": "ئیش لاسە ماین ئاوتۆ رێپاریرن",
+     "en": "I'm having my car repaired.",
+     "enHint": "",
+     "emoji": "🔧",
+     "cloze": {
+      "de": "Ich ___ mein Auto reparieren.",
+      "a": "lasse",
+      "d": [
+       "lässt",
+       "lassen"
+      ],
+      "ku": "ئەز ترومبێلا خۆ ددەمە چاککرن."
+     }
+    },
+    {
+     "id": "b13_26",
+     "ku": "ئەو پرچا خۆ ددەتە کورتکرن (ل نک سەرتراش).",
+     "kuLat": "Ew prça xo ddete kurtkrn (l nk sertraş).",
+     "de": "Sie lässt sich die Haare schneiden.",
+     "deHint": "زی لێست زیش دی هارە شنایدن",
+     "en": "She's having her hair cut.",
+     "enHint": "",
+     "emoji": "💇‍♀️",
+     "cloze": {
+      "de": "Sie ___ sich die Haare schneiden.",
+      "a": "lässt",
+      "d": [
+       "lasst",
+       "lasse"
+      ],
+      "ku": "ئەو پرچا خۆ ددەتە کورتکرن."
+     }
+    },
+    {
+     "id": "b13_27",
+     "ku": "ئەم خانی ددەینە بۆیاغکرن.",
+     "kuLat": "Em xanî ddeyne boyaxkrn.",
+     "de": "Wir lassen die Wohnung streichen.",
+     "deHint": "ڤیر لاسن دی ڤۆنونگ شترایشن",
+     "en": "We're having the flat painted.",
+     "enHint": "",
+     "emoji": "🎨"
+    },
+    {
+     "id": "b13_28",
+     "ku": "من ب ئارامی بهێلە!",
+     "kuLat": "Mn b aramî bhêle!",
+     "de": "Lass mich in Ruhe!",
+     "deHint": "لاس میش ئین رووە",
+     "en": "Leave me alone!",
+     "enHint": "",
+     "emoji": "🙅"
+    },
+    {
+     "id": "b13_29",
+     "ku": "وەرە ئەم بچین!",
+     "kuLat": "Were em bçîn!",
+     "de": "Lass uns gehen!",
+     "deHint": "لاس ئونس گێن",
+     "en": "Let's go!",
+     "enHint": "",
+     "emoji": "🚶‍♂️",
+     "cloze": {
+      "de": "___ uns gehen!",
+      "a": "Lass",
+      "d": [
+       "Lasst",
+       "Lässt"
+      ],
+      "ku": "وەرە ئەم بچین!"
+     }
+    },
+    {
+     "id": "b13_30",
+     "ku": "من جلک دانا شویشتنا وشک.",
+     "kuLat": "Mn clk dana şuîştna wşk.",
+     "de": "Ich habe das Kleid reinigen lassen.",
+     "deHint": "ئیش هابە داس کلایت راینیگن لاسن",
+     "en": "I had the dress cleaned.",
+     "enHint": "",
+     "emoji": "👗"
+    },
+    {
+     "id": "b13_31",
+     "ku": "ل کیڤە دشێم پاسپۆرتا خۆ درێژ بکەم (نوو بکەم)؟",
+     "kuLat": "L kîve dşêm pasporta xo drêj bkem (nû bkem)?",
+     "de": "Wo kann ich meinen Pass verlängern lassen?",
+     "deHint": "ڤۆ کان ئیش ماینن پاس فێرلێنگەرن لاسن",
+     "en": "Where can I get my passport renewed?",
+     "enHint": "",
+     "emoji": "🛂"
+    },
+    {
+     "id": "b13_32",
+     "ku": "هیڤییە مۆبایلا خۆ ل ڤێرێ بهێلن.",
+     "kuLat": "Hîvîye mobayla xo l vêrê bhêln.",
+     "de": "Lassen Sie Ihr Handy bitte hier.",
+     "deHint": "لاسن زی ئیر هێندی بیتە هیر",
+     "en": "Please leave your phone here.",
+     "enHint": "",
+     "emoji": "📵"
+    }
+   ]
+  },
+  {
+   "id": "unit_a2_14a",
+   "section": 29,
+   "only": "de",
+   "icon": "person",
+   "color": "#8E6CC8",
+   "titleKu": "قۆناغێن ژیانێ",
+   "titleDe": "Lebensphasen",
+   "titleEn": "Stages of life",
+   "concepts": [
+    {
+     "id": "b14_01",
+     "ku": "زارۆکینی",
+     "kuLat": "Zarokînî",
+     "de": "die Kindheit",
+     "deHint": "دی کیندهایت",
+     "en": "childhood",
+     "enHint": "",
+     "emoji": "🧸",
+     "cloze": {
+      "de": "In meiner ___ habe ich auf dem Dorf gewohnt.",
+      "a": "Kindheit",
+      "d": [
+       "Krankheit",
+       "Kinder"
+      ],
+      "ku": "د زارۆکینیا خۆ دا ئەز ل گوندی دژیام."
+     }
+    },
+    {
+     "id": "b14_02",
+     "ku": "گەنجینی",
+     "kuLat": "Gencînî",
+     "de": "die Jugend",
+     "deHint": "دی یووگنت",
+     "en": "youth",
+     "enHint": "",
+     "emoji": "🧑"
+    },
+    {
+     "id": "b14_03",
+     "ku": "مەزن بووی (پێگەهشتی)",
+     "kuLat": "Mezn bûî (pêgehştî)",
+     "de": "erwachsen",
+     "deHint": "ئێرڤاکسن",
+     "en": "grown-up",
+     "enHint": "",
+     "emoji": "🧑‍💼"
+    },
+    {
+     "id": "b14_04",
+     "ku": "ژ دایک بووی",
+     "kuLat": "J dayk bûî",
+     "de": "geboren",
+     "deHint": "گەبۆرن",
+     "en": "born",
+     "enHint": "",
+     "emoji": "👶",
+     "cloze": {
+      "de": "Ich bin 1998 in Zakho ___.",
+      "a": "geboren",
+      "d": [
+       "gebaut",
+       "gebracht"
+      ],
+      "ku": "ئەز ل ساڵا ١٩٩٨ ل زاخۆ ژ دایک بوویمە."
+     }
+    },
+    {
+     "id": "b14_05",
+     "ku": "زەواج کرن",
+     "kuLat": "Zewac krn",
+     "de": "heiraten",
+     "deHint": "هایراتن",
+     "en": "to get married",
+     "enHint": "",
+     "emoji": "💒",
+     "cloze": {
+      "de": "Meine Schwester und ihr Freund wollen nächstes Jahr ___.",
+      "a": "heiraten",
+      "d": [
+       "heißen",
+       "heizen"
+      ],
+      "ku": "خویشکا من و هەڤالێ وێ دڤێن سالا بهێت زەواج بکەن."
+     }
+    },
+    {
+     "id": "b14_06",
+     "ku": "چوونە خانەنشینیێ",
+     "kuLat": "Çûne xanenşînyê",
+     "de": "in Rente gehen",
+     "deHint": "ئین رێنتە گێن",
+     "en": "to retire",
+     "enHint": "",
+     "emoji": "👴",
+     "cloze": {
+      "de": "Mein Vater geht nächstes Jahr in ___.",
+      "a": "Rente",
+      "d": [
+       "Rennen",
+       "Rinde"
+      ],
+      "ku": "بابێ من سالا بهێت دچیتە خانەنشینیێ."
+     }
+    },
+    {
+     "id": "b14_07",
+     "ku": "دەمێ قوتابخانێ",
+     "kuLat": "Demê qutabxanê",
+     "de": "die Schulzeit",
+     "deHint": "دی شوولتسایت",
+     "en": "school days",
+     "enHint": "",
+     "emoji": "🏫"
+    },
+    {
+     "id": "b14_08",
+     "ku": "ساڤا / بەیبی",
+     "kuLat": "Sava / beybî",
+     "de": "das Baby",
+     "deHint": "داس بێبی",
+     "en": "the baby",
+     "enHint": "",
+     "emoji": "🍼"
+    }
+   ],
+   "grammar": {
+    "titleKu": "دووبارەکرن: Perfekt و Präteritum",
+    "titleDe": "Wiederholung: Perfekt und Präteritum",
+    "lines": [
+     "د ئاخفتنێ دا پتر Perfekt. بۆ sein, haben و کارێن یاریدەدەر پتر Präteritum (war, hatte, konnte). د چیرۆکان دا کارێن دی ژی (wohnte, erzählte).",
+     "Als Kind war ich oft krank. — دەمێ زارۆک بووم گەلەک جاران نەساخ دبووم.",
+     "Wir hatten einen großen Garten. — باخچەیەکێ مەزن یێ مە هەبوو."
+    ],
+    "table": [
+     [
+      "Infinitiv",
+      "Präteritum",
+      "Perfekt"
+     ],
+     [
+      "sein",
+      "war",
+      "ist gewesen"
+     ],
+     [
+      "haben",
+      "hatte",
+      "hat gehabt"
+     ],
+     [
+      "wohnen",
+      "wohnte",
+      "hat gewohnt"
+     ],
+     [
+      "spielen",
+      "spielte",
+      "hat gespielt"
+     ],
+     [
+      "müssen",
+      "musste",
+      "hat gemusst"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_14b",
+   "section": 29,
+   "only": "de",
+   "icon": "history",
+   "color": "#8E6CC8",
+   "titleKu": "بیرهاتن",
+   "titleDe": "Erinnerungen",
+   "titleEn": "Memories",
+   "concepts": [
+    {
+     "id": "b14_09",
+     "ku": "دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام.",
+     "kuLat": "Demê zarok bûm ez l nk bapîr w dapîrên xo djyam.",
+     "de": "Als Kind wohnte ich bei meinen Großeltern.",
+     "deHint": "ئالس کیند ڤۆنتە ئیش بای ماینن گرۆسئێلتەرن",
+     "en": "As a child I lived with my grandparents.",
+     "enHint": "",
+     "emoji": "👵",
+     "cloze": {
+      "de": "Als Kind ___ ich bei meinen Großeltern.",
+      "a": "wohnte",
+      "d": [
+       "wohne",
+       "gewohnt"
+      ],
+      "ku": "دەمێ زارۆک بووم ئەز ل نک باپیر و داپیرێن خۆ دژیام."
+     }
+    },
+    {
+     "id": "b14_10",
+     "ku": "بەرێ تەلەفزیۆن ل نک مە نەبوو.",
+     "kuLat": "Berê telefzyon l nk me nebû.",
+     "de": "Früher hatten wir keinen Fernseher.",
+     "deHint": "فریوەر هاتن ڤیر کاینن فێرنزێەر",
+     "en": "In the past we didn't have a TV.",
+     "enHint": "",
+     "emoji": "📻",
+     "cloze": {
+      "de": "Früher ___ wir keinen Fernseher.",
+      "a": "hatten",
+      "d": [
+       "haben",
+       "hätten"
+      ],
+      "ku": "بەرێ تەلەفزیۆن ل نک مە نەبوو."
+     }
+    },
+    {
+     "id": "b14_11",
+     "ku": "وی دەمی هەمی تشت جودا بوون.",
+     "kuLat": "Wî demî hemî tşt cuda bûn.",
+     "de": "Damals war alles anders.",
+     "deHint": "دامالس ڤار ئالەس ئاندەرس",
+     "en": "Back then everything was different.",
+     "enHint": "",
+     "emoji": "🕰️",
+     "cloze": {
+      "de": "___ war alles anders.",
+      "a": "Damals",
+      "d": [
+       "Morgen",
+       "Bald"
+      ],
+      "ku": "وی دەمی هەمی تشت جودا بوون."
+     }
+    },
+    {
+     "id": "b14_12",
+     "ku": "ب دل ئەز بیرا دەمێ قوتابخانێ دکەم.",
+     "kuLat": "B dl ez bîra demê qutabxanê dkem.",
+     "de": "Ich erinnere mich gern an meine Schulzeit.",
+     "deHint": "ئیش ئێرینەرە میش گێرن ئان ماینە شوولتسایت",
+     "en": "I like remembering my school days.",
+     "enHint": "",
+     "emoji": "💭",
+     "cloze": {
+      "de": "Ich erinnere mich gern ___ meine Schulzeit.",
+      "a": "an",
+      "d": [
+       "auf",
+       "über"
+      ],
+      "ku": "ب دل ئەز بیرا دەمێ قوتابخانێ دکەم."
+     }
+    },
+    {
+     "id": "b14_13",
+     "ku": "ل ١٨ سالیێ من مۆلەتا لێخوڕینێ وەرگرت.",
+     "kuLat": "L ١٨ salyê mn moleta lêxurînê wergrt.",
+     "de": "Mit 18 habe ich den Führerschein gemacht.",
+     "deHint": "میت ئاختسێن هابە ئیش دێن فیورەرشاین گەماخت",
+     "en": "I got my driving licence at 18.",
+     "enHint": "",
+     "emoji": "🚗"
+    },
+    {
+     "id": "b14_14",
+     "ku": "ئەم هەر رۆژ ل دەرڤە یاری دکرن.",
+     "kuLat": "Em her roj l derve yarî dkrn.",
+     "de": "Wir spielten jeden Tag draußen.",
+     "deHint": "ڤیر شپیلتن یێدن تاگ دراوسن",
+     "en": "We played outside every day.",
+     "enHint": "",
+     "emoji": "⚽"
+    },
+    {
+     "id": "b14_15",
+     "ku": "داپیرا من چیرۆکێن کەڤن بۆ مە دگۆتن.",
+     "kuLat": "Dapîra mn çîrokên kevn bo me dgotn.",
+     "de": "Meine Oma erzählte uns Märchen.",
+     "deHint": "ماینە ئۆما ئێرتسێلتە ئونس مێرشن",
+     "en": "My grandma told us fairy tales.",
+     "enHint": "",
+     "emoji": "📖"
+    },
+    {
+     "id": "b14_16",
+     "ku": "ما تە ل بیرە؟",
+     "kuLat": "Ma te l bîre?",
+     "de": "Weißt du noch?",
+     "deHint": "ڤایست دوو نۆخ",
+     "en": "Do you remember?",
+     "enHint": "",
+     "emoji": "🤔"
+    }
+   ],
+   "grammar": {
+    "titleKu": "دووبارەکرن: رستەیێن لاوەکی",
+    "titleDe": "Wiederholung: Nebensätze (weil, dass, wenn, ob)",
+    "lines": [
+     "د رستەیێن ب weil, dass, wenn, ob و پەیڤێن W دا، کار ل دوماهیێ یە.",
+     "Ich bleibe zu Hause, weil ich krank bin. — ئەز ل مال دمینم، چونکی نەساخم.",
+     "Ich glaube, dass sie recht hat. — ئەز هزر دکەم کو ئەو ل سەر حەقە."
+    ],
+    "table": [
+     [
+      "Konnektor",
+      "Bedeutung",
+      "Beispiel"
+     ],
+     [
+      "weil",
+      "چونکی",
+      "…, weil ich müde bin."
+     ],
+     [
+      "dass",
+      "کو",
+      "…, dass du kommst."
+     ],
+     [
+      "wenn",
+      "ئەگەر / دەمێ",
+      "Wenn es regnet, …"
+     ],
+     [
+      "ob",
+      "کا … یان نە",
+      "…, ob er Zeit hat."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_14c",
+   "section": 29,
+   "only": "de",
+   "icon": "flag",
+   "color": "#8E6CC8",
+   "titleKu": "پلانێن پاشەڕۆژێ",
+   "titleDe": "Zukunftspläne",
+   "titleEn": "Plans for the future",
+   "concepts": [
+    {
+     "id": "b14_17",
+     "ku": "پاشی ئەز دڤێم مالباتەکێ پێکبینم.",
+     "kuLat": "Paşî ez dvêm malbatekê pêkbînm.",
+     "de": "Ich möchte später eine Familie gründen.",
+     "deHint": "ئیش مۆشتە شپێتەر ئاینە فامیلیە گریوندن",
+     "en": "Later I want to start a family.",
+     "enHint": "",
+     "emoji": "👨‍👩‍👧",
+     "cloze": {
+      "de": "Ich möchte später eine Familie ___.",
+      "a": "gründen",
+      "d": [
+       "grünen",
+       "gründet"
+      ],
+      "ku": "پاشی ئەز دڤێم مالباتەکێ پێکبینم."
+     }
+    },
+    {
+     "id": "b14_18",
+     "ku": "هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم.",
+     "kuLat": "Hîvîdarm ku ez ezmûna B1 derbaz bkem.",
+     "de": "Ich hoffe, dass ich die B1-Prüfung schaffe.",
+     "deHint": "ئیش هۆفە، داس ئیش دی بێ-ئاینس-پریوفونگ شافە",
+     "en": "I hope I pass the B1 exam.",
+     "enHint": "",
+     "emoji": "🎓",
+     "cloze": {
+      "de": "Ich hoffe, dass ich die B1-Prüfung ___.",
+      "a": "schaffe",
+      "d": [
+       "schaffen",
+       "geschafft"
+      ],
+      "ku": "هیڤیدارم کو ئەز ئەزموونا B1 دەرباز بکەم."
+     }
+    },
+    {
+     "id": "b14_19",
+     "ku": "پشتی پێنج سالان من دڤێت دووکانەکا خۆ هەبیت.",
+     "kuLat": "Pştî pênc salan mn dvêt dûkaneka xo hebît.",
+     "de": "In fünf Jahren würde ich gern ein eigenes Geschäft haben.",
+     "deHint": "ئین فیونف یارن ڤوردە ئیش گێرن ئاین ئایگنەس گەشێفت هابن",
+     "en": "In five years I'd like to have my own business.",
+     "enHint": "",
+     "emoji": "🏪"
+    },
+    {
+     "id": "b14_20",
+     "ku": "من پلان هەیە سالا بهێت بفڕمە وەلات.",
+     "kuLat": "Mn plan heye sala bhêt bfrme welat.",
+     "de": "Ich plane, nächstes Jahr nach Hause zu fliegen.",
+     "deHint": "ئیش پلانە، نێکستەس یار ناخ هاوزە تسوو فلیگن",
+     "en": "I'm planning to fly home next year.",
+     "enHint": "",
+     "emoji": "✈️"
+    },
+    {
+     "id": "b14_21",
+     "ku": "خەونا من خانیەکە دگەل باخچەی.",
+     "kuLat": "Xewna mn xanyeke dgel baxçey.",
+     "de": "Mein Traum ist ein Haus mit Garten.",
+     "deHint": "ماین تراوم ئیست ئاین هاوس میت گارتن",
+     "en": "My dream is a house with a garden.",
+     "enHint": "",
+     "emoji": "🏡",
+     "cloze": {
+      "de": "Mein ___ ist ein Haus mit Garten.",
+      "a": "Traum",
+      "d": [
+       "Raum",
+       "Turm"
+      ],
+      "ku": "خەونا من خانیەکە دگەل باخچەی."
+     }
+    },
+    {
+     "id": "b14_22",
+     "ku": "ئارمانج",
+     "kuLat": "Armanc",
+     "de": "das Ziel",
+     "deHint": "داس تسیل",
+     "en": "the goal",
+     "enHint": "",
+     "emoji": "🎯"
+    },
+    {
+     "id": "b14_23",
+     "ku": "پاشەڕۆژ",
+     "kuLat": "Paşeroj",
+     "de": "die Zukunft",
+     "deHint": "دی تسووکونفت",
+     "en": "the future",
+     "enHint": "",
+     "emoji": "🔮"
+    },
+    {
+     "id": "b14_24",
+     "ku": "هەمی تشت دێ باش بیت!",
+     "kuLat": "Hemî tşt dê baş bît!",
+     "de": "Alles wird gut!",
+     "deHint": "ئالەس ڤیرت گووت",
+     "en": "Everything will be fine!",
+     "enHint": "",
+     "emoji": "🌈"
+    }
+   ],
+   "grammar": {
+    "titleKu": "بچووککرن: -chen",
+    "titleDe": "Diminutiv: -chen",
+    "lines": [
+     "ب -chen تشت بچووک یان شیرین دبیت. گەلەک جاران ب Umlaut (Haus ➔ Häuschen). ئارتیکل هەردەم «das».",
+     "Im Garten steht ein kleines Häuschen. — د باخچەی دا خانیەکێ بچووک هەیە.",
+     "Das Kätzchen schläft auf dem Sofa. — پشیکا بچووک ل سەر قەنەفێ دنڤیت."
+    ],
+    "table": [
+     [
+      "Nomen",
+      "Diminutiv"
+     ],
+     [
+      "das Haus",
+      "das Häuschen"
+     ],
+     [
+      "die Katze",
+      "das Kätzchen"
+     ],
+     [
+      "das Brot",
+      "das Brötchen"
+     ],
+     [
+      "der Baum",
+      "das Bäumchen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "unit_a2_14d",
+   "section": 29,
+   "only": "de",
+   "icon": "palette",
+   "color": "#8E6CC8",
+   "titleKu": "بچووک و شیرین (-chen)",
+   "titleDe": "Klein und süß: -chen",
+   "titleEn": "Diminutives",
+   "concepts": [
+    {
+     "id": "b14_25",
+     "ku": "خانیێ بچووک",
+     "kuLat": "Xanyê bçûk",
+     "de": "das Häuschen",
+     "deHint": "داس هۆیسشن",
+     "en": "the little house",
+     "enHint": "",
+     "emoji": "🛖",
+     "cloze": {
+      "de": "Ein kleines Haus ist ein ___.",
+      "a": "Häuschen",
+      "d": [
+       "Hauschen",
+       "Häuslein"
+      ],
+      "ku": "خانیەکێ بچووک «Häuschen» ـە."
+     }
+    },
+    {
+     "id": "b14_26",
+     "ku": "پشیکا بچووک",
+     "kuLat": "Pşîka bçûk",
+     "de": "das Kätzchen",
+     "deHint": "داس کێتسشن",
+     "en": "the kitten",
+     "enHint": "",
+     "emoji": "🐱"
+    },
+    {
+     "id": "b14_27",
+     "ku": "نانێ بچووک (سەموون)",
+     "kuLat": "Nanê bçûk (semûn)",
+     "de": "das Brötchen",
+     "deHint": "داس برۆتشن",
+     "en": "the bread roll",
+     "enHint": "",
+     "emoji": "🥖",
+     "cloze": {
+      "de": "Zum Frühstück esse ich ein ___ mit Käse.",
+      "a": "Brötchen",
+      "d": [
+       "Brot",
+       "Bröt"
+      ],
+      "ku": "بۆ تێشتێ ئەز سەموونەکێ دگەل پەنیری دخۆم."
+     }
+    },
+    {
+     "id": "b14_28",
+     "ku": "کچ",
+     "kuLat": "Kç",
+     "de": "das Mädchen",
+     "deHint": "داس مێدشن",
+     "en": "the girl",
+     "enHint": "",
+     "emoji": "👧"
+    },
+    {
+     "id": "b14_29",
+     "ku": "چیرۆکا کەڤن (حەکایەت)",
+     "kuLat": "Çîroka kevn (hekayet)",
+     "de": "das Märchen",
+     "deHint": "داس مێرشن",
+     "en": "the fairy tale",
+     "enHint": "",
+     "emoji": "🧚",
+     "cloze": {
+      "de": "Meine Oma hat mir jeden Abend ein ___ erzählt.",
+      "a": "Märchen",
+      "d": [
+       "Mädchen",
+       "Marmelade"
+      ],
+      "ku": "داپیرا من هەر ئێڤار چیرۆکەک بۆ من دگۆت."
+     }
+    },
+    {
+     "id": "b14_30",
+     "ku": "دارا بچووک",
+     "kuLat": "Dara bçûk",
+     "de": "das Bäumchen",
+     "deHint": "داس بۆیمشن",
+     "en": "the little tree",
+     "enHint": "",
+     "emoji": "🌱"
+    },
+    {
+     "id": "b14_31",
+     "ku": "هەمی پەیڤێن ب -chen ئارتیکلێ «das» هەیە.",
+     "kuLat": "Hemî peyvên b -chen artîklê «das» heye.",
+     "de": "Alle Wörter mit -chen haben den Artikel „das“.",
+     "deHint": "ئالە ڤۆرتەر میت -شن هابن دێن ئارتیکل «داس»",
+     "en": "All words with -chen take \"das\".",
+     "enHint": "",
+     "emoji": "📌"
+    },
+    {
+     "id": "b14_32",
+     "ku": "پیرۆز بیت، تە ئاستێ A2 تەمام کر!",
+     "kuLat": "Pîroz bît, te astê A2 temam kr!",
+     "de": "Herzlichen Glückwunsch, du hast A2 geschafft!",
+     "deHint": "هێرتسلیشن گلیوکڤونش، دوو هاست ئا-تسڤای گەشافت",
+     "en": "Congratulations, you've completed A2!",
+     "enHint": "",
+     "emoji": "🏆"
+    }
+   ]
   }
  ],
  "lektionen": [
@@ -12447,6 +17215,486 @@
       "who": "Shilan",
       "de": "Ja, gern!",
       "ku": "بەلێ، ب دل!"
+     }
+    ]
+   }
+  },
+  {
+   "n": 21,
+   "titleKu": "جەژن و دیاری",
+   "titleDe": "Feste und Geschenke",
+   "titleEn": "Celebrations and presents",
+   "color": "#C9A227",
+   "dialog": {
+    "titleKu": "ئامادەکرنا رۆژبوونێ",
+    "lines": [
+     {
+      "id": "dl21_1",
+      "who": "Avin",
+      "de": "Nächste Woche hat Mama Geburtstag. Was schenken wir ihr?",
+      "ku": "حەفتیا بهێت رۆژبوونا دایکێ یە. ئەم دێ چ دیاری دەینێ؟"
+     },
+     {
+      "id": "dl21_2",
+      "who": "Sherwan",
+      "de": "Vielleicht eine Kette? Sie trägt gern Schmuck.",
+      "ku": "بەلکی گەردەنیەکێ؟ ئەو حەز ژ خشلی دکەت."
+     },
+     {
+      "id": "dl21_3",
+      "who": "Avin",
+      "de": "Gute Idee! Und ich backe ihr eine Torte.",
+      "ku": "بیرەکا باشە! و ئەز دێ کێکەکێ بۆ چێکەم."
+     },
+     {
+      "id": "dl21_4",
+      "who": "Sherwan",
+      "de": "Laden wir auch Onkel Karim ein?",
+      "ku": "ئەرێ ئەم مامێ کەریم ژی داخواز بکەین؟"
+     },
+     {
+      "id": "dl21_5",
+      "who": "Avin",
+      "de": "Ja, natürlich. Ich schicke ihm heute eine Nachricht.",
+      "ku": "بەلێ، هەلبەت. ئەز ئەڤرۆ پەیامەکێ بۆ دهنێرم."
+     },
+     {
+      "id": "dl21_6",
+      "who": "Sherwan",
+      "de": "Wer packt das Geschenk ein?",
+      "ku": "کێ دێ دیاریێ پێچیت؟"
+     },
+     {
+      "id": "dl21_7",
+      "who": "Avin",
+      "de": "Das mache ich. Ich kann das gut.",
+      "ku": "ئەز دێ کەم. ئەز ڤێ باش دزانم."
+     },
+     {
+      "id": "dl21_8",
+      "who": "Sherwan",
+      "de": "Super. Mama freut sich bestimmt!",
+      "ku": "زۆر باشە. دایک هەلبەت دێ دلخۆش بیت!"
+     }
+    ]
+   }
+  },
+  {
+   "n": 22,
+   "titleKu": "دوماهیا حەفتیێ",
+   "titleDe": "Am Wochenende",
+   "titleEn": "At the weekend",
+   "color": "#5C7FC4",
+   "dialog": {
+    "titleKu": "پلانا دوماهیا حەفتیێ",
+    "lines": [
+     {
+      "id": "dl22_1",
+      "who": "Rawand",
+      "de": "Hey Lana, hast du am Samstag schon was vor?",
+      "ku": "هەی لانا، ئەرێ تە شەمبیێ چ پلان هەیە؟"
+     },
+     {
+      "id": "dl22_2",
+      "who": "Lana",
+      "de": "Noch nicht. Ich würde gern mal wieder ausschlafen.",
+      "ku": "هێشتا نە. من دڤێت جارەکا دی باش بنڤم."
+     },
+     {
+      "id": "dl22_3",
+      "who": "Rawand",
+      "de": "Und am Nachmittag? Hast du Lust auf ein Konzert?",
+      "ku": "و پشتی نیڤرۆ؟ حەزا تە ل کۆنسێرتەکێ هەیە؟"
+     },
+     {
+      "id": "dl22_4",
+      "who": "Lana",
+      "de": "Ein Konzert? Das wäre toll! Was für Musik?",
+      "ku": "کۆنسێرت؟ دێ زۆر خۆش بیت! کیژ مۆسیقا؟"
+     },
+     {
+      "id": "dl22_5",
+      "who": "Rawand",
+      "de": "Kurdische Musik im Park. Der Eintritt ist frei.",
+      "ku": "مۆسیقا کوردی ل پارکێ. چوونەژوور ب بێ پارە یە."
+     },
+     {
+      "id": "dl22_6",
+      "who": "Lana",
+      "de": "Super! Aber das Wetter soll schlecht werden.",
+      "ku": "زۆر باشە! بەلێ دبێژن کەش دێ خراب بیت."
+     },
+     {
+      "id": "dl22_7",
+      "who": "Rawand",
+      "de": "Ich gehe trotzdem hin. Wir könnten einen Schirm mitnehmen.",
+      "ku": "ئەز دیسا ژی دچم. ئەم دشێین سیبەرەکێ دگەل خۆ ببەین."
+     },
+     {
+      "id": "dl22_8",
+      "who": "Lana",
+      "de": "Okay! Treffen wir uns um vier am Parkeingang?",
+      "ku": "باشە! دەمژمێر چار ل دەرگەهێ پارکێ ئێک ببینین؟"
+     }
+    ]
+   }
+  },
+  {
+   "n": 23,
+   "titleKu": "تشتێن من",
+   "titleDe": "Meine Sachen",
+   "titleEn": "My things",
+   "color": "#7FA650",
+   "dialog": {
+    "titleKu": "ل فرۆشگەها ئەلێکترۆنیکێ",
+    "lines": [
+     {
+      "id": "dl23_1",
+      "who": "Verkäufer",
+      "de": "Kann ich Ihnen helfen?",
+      "ku": "دشێم هاریکاریا هەوە بکەم؟"
+     },
+     {
+      "id": "dl23_2",
+      "who": "Dilan",
+      "de": "Ja, ich suche eine neue Kamera. Meine alte ist kaputt.",
+      "ku": "بەلێ، ئەز ل کامێرایەکا نوو دگەڕێم. یا من یا کەڤن خراب بوو."
+     },
+     {
+      "id": "dl23_3",
+      "who": "Verkäufer",
+      "de": "Diese hier ist sehr gut und leicht.",
+      "ku": "ئەڤە گەلەک باشە و سڤکە."
+     },
+     {
+      "id": "dl23_4",
+      "who": "Dilan",
+      "de": "Und die andere? Ist sie besser?",
+      "ku": "و یا دی؟ ئەرێ باشترە؟"
+     },
+     {
+      "id": "dl23_5",
+      "who": "Verkäufer",
+      "de": "Sie macht schärfere Fotos, aber sie ist auch teurer.",
+      "ku": "وێنەیێن رۆهنتر دگریت، بەلێ ب بهاترە ژی."
+     },
+     {
+      "id": "dl23_6",
+      "who": "Dilan",
+      "de": "Hm. Ich möchte eine praktische Kamera für die Reise.",
+      "ku": "هم. من کامێرایەکا ب کێر هاتی بۆ گەشتێ دڤێت."
+     },
+     {
+      "id": "dl23_7",
+      "who": "Verkäufer",
+      "de": "Dann nehmen Sie die kleine. Sie ist fast so gut wie die große.",
+      "ku": "هنگی یا بچووک ببەن. هۆسا وەکی یا مەزن باشە."
+     },
+     {
+      "id": "dl23_8",
+      "who": "Dilan",
+      "de": "Gut, die nehme ich. Kann ich mit Karte zahlen?",
+      "ku": "باشە، ئەز وێ دبەم. دشێم ب کارتێ پارەی بدەم؟"
+     }
+    ]
+   }
+  },
+  {
+   "n": 24,
+   "titleKu": "پەیوەندی",
+   "titleDe": "Kommunikation",
+   "titleEn": "Communication",
+   "color": "#CB6F9E",
+   "dialog": {
+    "titleKu": "مۆبایلا خراب",
+    "lines": [
+     {
+      "id": "dl24_1",
+      "who": "Azad",
+      "de": "Entschuldigung, mein Handy ist kaputt. Können Sie es reparieren?",
+      "ku": "ببوورە، مۆبایلا من یا خرابە. هوین دشێن چاک بکەن؟"
+     },
+     {
+      "id": "dl24_2",
+      "who": "Mitarbeiterin",
+      "de": "Was für ein Problem hat es denn?",
+      "ku": "چ کێشە پێڤە هەیە؟"
+     },
+     {
+      "id": "dl24_3",
+      "who": "Azad",
+      "de": "Der Akku lädt nicht mehr, und der Bildschirm bleibt schwarz.",
+      "ku": "پاتری ئیدی شەحن نابیت، و شاشە رەش دمینیت."
+     },
+     {
+      "id": "dl24_4",
+      "who": "Mitarbeiterin",
+      "de": "Das Handy wird zuerst getestet. Das dauert zwei Tage.",
+      "ku": "پێشی مۆبایل دهێتە تاقیکرن. دوو رۆژان دکێشیت."
+     },
+     {
+      "id": "dl24_5",
+      "who": "Azad",
+      "de": "Und meine Fotos? Werden die gelöscht?",
+      "ku": "و وێنەیێن من؟ ئەرێ دێ هێنە ژێبرن؟"
+     },
+     {
+      "id": "dl24_6",
+      "who": "Mitarbeiterin",
+      "de": "Nein, keine Sorge. Ihre Daten werden gespeichert.",
+      "ku": "نەخێر، نە ترسە. زانیاریێن هەوە دهێنە پاراستن."
+     },
+     {
+      "id": "dl24_7",
+      "who": "Azad",
+      "de": "Super. Und was kostet die Reparatur?",
+      "ku": "زۆر باشە. و چاککرن ب چەندە؟"
+     },
+     {
+      "id": "dl24_8",
+      "who": "Mitarbeiterin",
+      "de": "Das sagen wir Ihnen, wenn das Handy getestet ist. Wir rufen Sie an.",
+      "ku": "دەمێ مۆبایل هاتە تاقیکرن، ئەم دێ بێژینە هەوە. ئەم دێ تەلەفۆنێ بۆ هەوە کەین."
+     }
+    ]
+   }
+  },
+  {
+   "n": 25,
+   "titleKu": "ل سەر رێکێ",
+   "titleDe": "Unterwegs",
+   "titleEn": "On the move",
+   "color": "#4F9FC0",
+   "dialog": {
+    "titleKu": "رێک بەرزەکر",
+    "lines": [
+     {
+      "id": "dl25_1",
+      "who": "Tourist",
+      "de": "Entschuldigung, wie komme ich zum Museum?",
+      "ku": "ببوورە، ئەز چاوا دگەهمە مۆزەخانێ؟"
+     },
+     {
+      "id": "dl25_2",
+      "who": "Frau",
+      "de": "Das ist nicht weit. Gehen Sie hier geradeaus bis zur Ampel.",
+      "ku": "نە دویرە. ل ڤێرێ راست بچن هەتا گلۆپا ترافیکێ."
+     },
+     {
+      "id": "dl25_3",
+      "who": "Tourist",
+      "de": "Und dann?",
+      "ku": "و پاشی؟"
+     },
+     {
+      "id": "dl25_4",
+      "who": "Frau",
+      "de": "Dann links und über die Brücke. Danach immer am Fluss entlang.",
+      "ku": "پاشی بۆ چەپێ و ل سەر پرێ را. پاشی هەردەم ب درێژاهیا رووباری."
+     },
+     {
+      "id": "dl25_5",
+      "who": "Tourist",
+      "de": "Muss ich durch den Park gehen?",
+      "ku": "دڤێت ب ناڤ پارکێ را بچم؟"
+     },
+     {
+      "id": "dl25_6",
+      "who": "Frau",
+      "de": "Ja, das ist der kürzeste Weg. Das Museum ist gegenüber vom Rathaus.",
+      "ku": "بەلێ، ئەڤە رێکا هەری کورتە. مۆزەخانە بەرانبەر شارەوانیێ یە."
+     },
+     {
+      "id": "dl25_7",
+      "who": "Tourist",
+      "de": "Vielen Dank! Ich habe mich total verlaufen, deshalb frage ich.",
+      "ku": "گەلەک سوپاس! من رێک بەرزە کربوو، لەوما من پسیار کر."
+     },
+     {
+      "id": "dl25_8",
+      "who": "Frau",
+      "de": "Kein Problem. Viel Spaß im Museum!",
+      "ku": "چ کێشە نینە. ل مۆزەخانێ خۆش ببیت!"
+     }
+    ]
+   }
+  },
+  {
+   "n": 26,
+   "titleKu": "گەشت",
+   "titleDe": "Reisen",
+   "titleEn": "Travelling",
+   "color": "#B7794A",
+   "dialog": {
+    "titleKu": "ل رێسەپشنا هۆتێلێ",
+    "lines": [
+     {
+      "id": "dl26_1",
+      "who": "Gast",
+      "de": "Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Ahmed.",
+      "ku": "ئێڤار باش. من ژوورەک گرتییە. ناڤێ من ئەحمەدە."
+     },
+     {
+      "id": "dl26_2",
+      "who": "Rezeption",
+      "de": "Herzlich willkommen! Ein Einzelzimmer mit Frühstück für drei Nächte, richtig?",
+      "ku": "ب خێر بێن! ژوورەکا ئێک کەسی دگەل تێشتێ بۆ سێ شەڤان، راستە؟"
+     },
+     {
+      "id": "dl26_3",
+      "who": "Gast",
+      "de": "Ja, genau. Ab wann gibt es Frühstück?",
+      "ku": "بەلێ، تەمام. تێشت ژ دەمژمێر چەند هەیە؟"
+     },
+     {
+      "id": "dl26_4",
+      "who": "Rezeption",
+      "de": "Von sieben Uhr an, im Erdgeschoss.",
+      "ku": "ژ دەمژمێر حەفت ڤە، ل قاتا ئێکێ."
+     },
+     {
+      "id": "dl26_5",
+      "who": "Gast",
+      "de": "Gut. Und gibt es kostenloses WLAN?",
+      "ku": "باشە. و ئەرێ وایفایا ب بێ پارە هەیە؟"
+     },
+     {
+      "id": "dl26_6",
+      "who": "Rezeption",
+      "de": "Ja, das Passwort steht auf Ihrer Karte. Hier ist Ihr Schlüssel: Zimmer 312.",
+      "ku": "بەلێ، وشەیا نهێنی ل سەر کارتا هەوە یە. ئەڤە کلیلا هەوە: ژوورا ٣١٢."
+     },
+     {
+      "id": "dl26_7",
+      "who": "Gast",
+      "de": "Danke. Ach, mein Koffer ist leider noch am Flughafen.",
+      "ku": "سوپاس. ئاخ، مخابن جانتایا من هێشتا ل فڕۆکەخانێ یە."
+     },
+     {
+      "id": "dl26_8",
+      "who": "Rezeption",
+      "de": "Kein Problem, wir helfen Ihnen gern. Wir rufen die Fluggesellschaft an.",
+      "ku": "چ کێشە نینە، ب دل هاریکاریا هەوە دکەین. ئەم دێ تەلەفۆنێ بۆ کۆمپانیا فڕینێ کەین."
+     }
+    ]
+   }
+  },
+  {
+   "n": 27,
+   "titleKu": "پارە",
+   "titleDe": "Geld",
+   "titleEn": "Money",
+   "color": "#C9A227",
+   "dialog": {
+    "titleKu": "ل بانکێ",
+    "lines": [
+     {
+      "id": "dl27_1",
+      "who": "Kundin",
+      "de": "Guten Tag. Ich möchte ein Konto eröffnen.",
+      "ku": "رۆژ باش. ئەز دڤێم حسابەکێ ڤەکەم."
+     },
+     {
+      "id": "dl27_2",
+      "who": "Bankberater",
+      "de": "Gern. Haben Sie Ihren Ausweis dabei?",
+      "ku": "ب دل. ناسناما هەوە دگەل هەوە یە؟"
+     },
+     {
+      "id": "dl27_3",
+      "who": "Kundin",
+      "de": "Ja, hier. Können Sie mir sagen, ob das Konto etwas kostet?",
+      "ku": "بەلێ، ئەڤە. هوین دشێن بێژنە من کا حساب پارە دڤێت؟"
+     },
+     {
+      "id": "dl27_4",
+      "who": "Bankberater",
+      "de": "Für Studenten ist es kostenlos. Sie bekommen auch eine Karte.",
+      "ku": "بۆ قوتابیان ب بێ پارە یە. هوین کارتەکێ ژی وەردگرن."
+     },
+     {
+      "id": "dl27_5",
+      "who": "Kundin",
+      "de": "Super. Und wissen Sie, wie lange das dauert?",
+      "ku": "زۆر باشە. و دزانن چەند دەم دکێشیت؟"
+     },
+     {
+      "id": "dl27_6",
+      "who": "Bankberater",
+      "de": "Die Karte kommt in einer Woche per Post. Die PIN schicken wir extra.",
+      "ku": "کارت ب پۆستێ د حەفتیەکێ دا دهێت. ژمارا نهێنی ب جودا دهنێرین."
+     },
+     {
+      "id": "dl27_7",
+      "who": "Kundin",
+      "de": "Kann ich damit auch Geld in den Irak überweisen?",
+      "ku": "ئەرێ دشێم پێ پارێ بۆ عیراقێ ژی ڤەگوهێزم؟"
+     },
+     {
+      "id": "dl27_8",
+      "who": "Bankberater",
+      "de": "Ja, das geht online. Ich zeige es Ihnen.",
+      "ku": "بەلێ، ب ئۆنلاین دبیت. ئەز دێ نیشا هەوە دەم."
+     }
+    ]
+   }
+  },
+  {
+   "n": 28,
+   "titleKu": "قۆناغێن ژیانێ",
+   "titleDe": "Lebensstationen",
+   "titleEn": "Stages of life",
+   "color": "#8E6CC8",
+   "dialog": {
+    "titleKu": "ئەلبوما وێنەیان",
+    "lines": [
+     {
+      "id": "dl28_1",
+      "who": "Oma",
+      "de": "Schau mal, das bin ich mit sechs Jahren.",
+      "ku": "سەحکە، ئەڤە ئەزم ل شەش سالیێ."
+     },
+     {
+      "id": "dl28_2",
+      "who": "Lana",
+      "de": "Wirklich? Wo hast du damals gewohnt?",
+      "ku": "ب راستی؟ وی دەمی تو ل کیڤە دژیای؟"
+     },
+     {
+      "id": "dl28_3",
+      "who": "Oma",
+      "de": "In einem kleinen Dorf in den Bergen. Wir hatten viele Tiere.",
+      "ku": "د گوندەکێ بچووک دا ل چیایان. گەلەک تەرشێن مە هەبوون."
+     },
+     {
+      "id": "dl28_4",
+      "who": "Lana",
+      "de": "Musstest du viel arbeiten?",
+      "ku": "ئەرێ دڤیا تو گەلەک کار بکەی؟"
+     },
+     {
+      "id": "dl28_5",
+      "who": "Oma",
+      "de": "Ja, ich musste jeden Morgen Wasser holen. Trotzdem war es eine schöne Zeit.",
+      "ku": "بەلێ، دڤیا ئەز هەر سپێدە ئاڤێ بینم. دیسا ژی دەمەکێ خۆش بوو."
+     },
+     {
+      "id": "dl28_6",
+      "who": "Lana",
+      "de": "Und wann hast du Opa kennengelernt?",
+      "ku": "و تە کەنگی باپیر ناسکر؟"
+     },
+     {
+      "id": "dl28_7",
+      "who": "Oma",
+      "de": "Mit zwanzig, auf einer Hochzeit. Ein Jahr später haben wir geheiratet.",
+      "ku": "ل بیست سالیێ، ل داوەتەکێ. سالەک پاشی مە زەواج کر."
+     },
+     {
+      "id": "dl28_8",
+      "who": "Lana",
+      "de": "Wie schön! Ich hoffe, dass ich auch so eine Geschichte erlebe.",
+      "ku": "چەند جوانە! هیڤیدارم کو چیرۆکەکا وەسا ب سەرێ من ژی بهێت."
      }
     ]
    }

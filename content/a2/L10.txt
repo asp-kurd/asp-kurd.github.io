@@ -1,0 +1,95 @@
+@L 24 | #CB6F9E | پەیوەندی | Kommunikation | Communication
+
+@U a | chat | مۆبایل و ئینتەرنێت | Handy & Internet | Phone & internet
+das Handy aufladen | داس هێندی ئاوفلادن | مۆبایلێ شەحن کرن | to charge the phone | 🔋 | Mein Akku ist leer. Ich muss das Handy ___. | aufladen | ausladen; einladen | پاتریا من ڤالا بوو. دڤێت مۆبایلێ شەحن بکەم.
+der Akku | دێر ئاکوو | پاتری | the battery | 🪫
+Ich habe kein Netz. | ئیش هابە کاین نێتس | تۆڕ (نێتوۆرک) ل نک من نینە. | I have no signal. | 📶 | Ich kann nicht telefonieren, ich habe kein ___. | Netz | Nest; Nichts | ئەز نەشێم تەلەفۆنێ بکەم، تۆڕ نینە.
+die App herunterladen | دی ئێپ هێرونتەرلادن | ئەپی داگرتن | to download the app | ⬇️ | Du musst die App zuerst ___. | herunterladen | hinaufladen; einladen | پێشی دڤێت تو ئەپی دابگری.
+das Passwort | داس پاسڤۆرت | وشەیا نهێنی | the password | 🔒 | Ich habe mein ___ vergessen. | Passwort | Postwort; Pass | من وشەیا خۆ یا نهێنی ژبیرکر.
+eine Nachricht schicken | ئاینە ناخریشت شیکن | پەیامەکێ هنارتن | to send a message | 💬
+Ich rufe dich per Video an. | ئیش رووفە دیش پێر ڤیدێۆ ئان | ئەز ب ڤیدیۆیێ تەلەفۆنێ بۆ تە دکەم. | I'll video-call you. | 📹
+Der Bildschirm ist kaputt. | دێر بیلتشیرم ئیست کاپووت | شاشە یا شکەستییە. | The screen is broken. | 📱
+
+@U b | home | ل پۆستەخانێ | Bei der Post | At the post office
+der Brief | دێر بریف | نامە | the letter | ✉️
+das Paket | داس پاکێت | پاکەت | the parcel | 📦 | Ich möchte dieses ___ nach Erbil schicken. | Paket | Paar; Pakete | ئەز دڤێم ڤێ پاکەتێ بۆ هەولێرێ بهنێرم.
+die Briefmarke | دی بریفمارکە | پوولا پۆستێ | the stamp | 📮 | Für eine Postkarte brauchst du eine ___. | Briefmarke | Brieftasche; Marke | بۆ کارتەکا پۆستێ پوولەک پێدڤی تە یە.
+der Absender | دێر ئاپزێندەر | هنێرەر | the sender | 📤
+der Empfänger | دێر ئێمپفێنگەر | وەرگر | the recipient | 📥
+die Adresse | دی ئادرێسە | ناڤنیشان | the address | 🏠
+Wie lange dauert ein Brief in den Irak? | ڤی لانگە داوەرت ئاین بریف ئین دێن ئیراک | نامەیەک چەند دەم دکێشیت هەتا دگەهیتە عیراقێ؟ | How long does a letter take to Iraq? | ⏳ | Wie lange ___ ein Brief in den Irak? | dauert | dauern; Dauer | نامەیەک چەند دەم دکێشیت بۆ عیراقێ؟
+Ich hole ein Paket ab. | ئیش هۆلە ئاین پاکێت ئاپ | ئەز پاکەتەکێ وەردگرم (دئینم). | I'm picking up a parcel. | 🏤
+
+@U c | work | دهێتە کرن (Passiv) | Das wird gemacht. | Passive
+Das Paket wird morgen gebracht. | داس پاکێت ڤیرت مۆرگن گەبراخت | پاکەت دێ سبەی هێتە ئینان. | The parcel will be delivered tomorrow. | 🚚 | Das Paket ___ morgen gebracht. | wird | werden; ist | پاکەت دێ سبەی هێتە ئینان.
+Die Briefe werden um zehn Uhr abgeholt. | دی بریفە ڤێردن ئوم تسێن ئوور ئاپگەهۆلت | نامە دەمژمێر دەهـ دهێنە برن. | The letters are collected at ten. | 📬 | Die Briefe ___ um zehn Uhr abgeholt. | werden | wird; worden | نامە دەمژمێر دەهـ دهێنە برن.
+Hier wird Deutsch gesprochen. | هیر ڤیرت دۆیچ گەشپرۆخن | ل ڤێرێ ب ئەلمانی دهێتە ئاخفتن. | German is spoken here. | 🗣️
+Das Handy wird repariert. | داس هێندی ڤیرت رێپاریرت | مۆبایل دهێتە چاککرن. | The phone is being repaired. | 🔧 | Das Handy wird ___. | repariert | reparieren; gerepariert | مۆبایل دهێتە چاککرن.
+Wie wird das Wort geschrieben? | ڤی ڤیرت داس ڤۆرت گەشریبن | ئەڤ پەیڤە چاوا دهێتە نڤیسین؟ | How is the word spelled? | ✍️
+Die Daten werden gespeichert. | دی داتن ڤێردن گەشپایشەرت | زانیاری دهێنە پاراستن (سەیڤکرن). | The data is saved. | 💾
+In Kurdistan wird viel Tee getrunken. | ئین کوردیستان ڤیرت فیل تێ گەترونکن | ل کوردستانێ گەلەک چا دهێتە ڤەخوارن. | A lot of tea is drunk in Kurdistan. | 🫖
+die Lieferung | دی لیفەرونگ | گەهاندن | the delivery | 📦
+@CZ Zuerst ___ das Formular ausgefüllt, dann ___ es unterschrieben. | wird … wird | ist … wird; wird … werden | پێشی فۆرم دهێتە پڕکرن، پاشی دهێتە ئیمزاکرن.
+
+@U d | palette | یێ نوو، یا جوان | der neue, die alte | Adjectives with der/die/das
+Das neue Handy ist toll. | داس نۆیە هێندی ئیست تۆل | مۆبایلا نوو زۆر باشە. | The new phone is great. | 🤩 | Das ___ Handy ist toll. | neue | neues; neuen | مۆبایلا نوو زۆر باشە.
+Ich nehme den blauen Pullover. | ئیش نێمە دێن بلاوەن پولۆڤەر | ئەز بلووزا شین دبەم. | I'll take the blue jumper. | 🧶 | Ich nehme den ___ Pullover. | blauen | blaue; blauer | ئەز بلووزا شین دبەم.
+Wie findest du die rote Jacke? | ڤی فیندەست دوو دی رۆتە یاکە | چاکێتا سۆر ب دیتنا تە چاوانە؟ | What do you think of the red jacket? | 🧥
+Mit dem alten Laptop arbeite ich nicht mehr. | میت دێم ئالتن لێپتۆپ ئاربایتە ئیش نیشت مێر | ئەز ب لاپتۆپا کەڤن ئیدی کار ناکەم. | I don't work with the old laptop any more. | 💻 | Mit dem ___ Laptop arbeite ich nicht mehr. | alten | alte; alter | ئەز ب لاپتۆپا کەڤن ئیدی کار ناکەم.
+Was für ein Handy hast du? | ڤاس فیور ئاین هێندی هاست دوو | چ جۆرە مۆبایلەک ل نک تە هەیە؟ | What kind of phone do you have? | ❓ | Was ___ ein Handy hast du? | für | von; mit | چ جۆرە مۆبایلەک ل نک تە هەیە؟
+Das ist unmöglich! | داس ئیست ئونمۆگلیش | ئەڤە نەگونجایە! | That's impossible! | 😱
+Die Verbindung ist schlecht. | دی فێربیندونگ ئیست شلێشت | پەیوەندی یا خرابە. | The connection is bad. | 📡
+Er ist sehr unfreundlich. | ئێر ئیست زێر ئونفرۆیندلیش | ئەو گەلەک بێ رێزە. | He is very unfriendly. | 😒
+
+@D مۆبایلا خراب
+Azad: Entschuldigung, mein Handy ist kaputt. Können Sie es reparieren? || ببوورە، مۆبایلا من یا خرابە. هوین دشێن چاک بکەن؟
+Mitarbeiterin: Was für ein Problem hat es denn? || چ کێشە پێڤە هەیە؟
+Azad: Der Akku lädt nicht mehr, und der Bildschirm bleibt schwarz. || پاتری ئیدی شەحن نابیت، و شاشە رەش دمینیت.
+Mitarbeiterin: Das Handy wird zuerst getestet. Das dauert zwei Tage. || پێشی مۆبایل دهێتە تاقیکرن. دوو رۆژان دکێشیت.
+Azad: Und meine Fotos? Werden die gelöscht? || و وێنەیێن من؟ ئەرێ دێ هێنە ژێبرن؟
+Mitarbeiterin: Nein, keine Sorge. Ihre Daten werden gespeichert. || نەخێر، نە ترسە. زانیاریێن هەوە دهێنە پاراستن.
+Azad: Super. Und was kostet die Reparatur? || زۆر باشە. و چاککرن ب چەندە؟
+Mitarbeiterin: Das sagen wir Ihnen, wenn das Handy getestet ist. Wir rufen Sie an. || دەمێ مۆبایل هاتە تاقیکرن، ئەم دێ بێژینە هەوە. ئەم دێ تەلەفۆنێ بۆ هەوە کەین.
+
+@G 🏭 | Passiv Präsens | Passiv (دهێتە کرن)
+E: Passiv: werden + Partizip II. Wichtig ist die Handlung, nicht die Person. || Passiv: werden + Partizip II. کار یێ گرنگە، نە کەسێ کو دکەت.
+H: Person | werden | Partizip II
+R: ich | werde | gefragt
+R: du | wirst | gefragt
+R: er / sie / es | wird | gefragt
+R: wir / sie / Sie | werden | gefragt
+R: ihr | werdet | gefragt
+X: Das Essen wird gekocht. || خوارن دهێتە چێکرن.
+X: Die Fenster werden geputzt. || پەنجەرە دهێنە پاقژکرن.
+X: Ich werde oft nach meiner Heimat gefragt. || گەلەک جاران پسیار ل سەر وەلاتێ من ژ من دهێتە کرن.
+T: Aktiv: Der Postbote bringt das Paket. Passiv: Das Paket wird gebracht. || چالاک: پۆستەچی پاکەتێ دئینیت. Passiv: پاکەت دهێتە ئینان.
+P: Man repariert das Auto. || مرۆڤ ترومبێلێ چاک دکەت. || Passiv || Das Auto wird repariert. || ترومبێل دهێتە چاککرن.
+P: Man schreibt die Briefe. || مرۆڤ نامان دنڤیسیت. || Passiv || Die Briefe werden geschrieben. || نامە دهێنە نڤیسین.
+P: Man öffnet die Tür um acht. || مرۆڤ دەرگەهی دەمژمێر هەشت ڤەدکەت. || Passiv || Die Tür wird um acht geöffnet. || دەرگەه دەمژمێر هەشت دهێتە ڤەکرن.
+
+@G 🎨 | Adjektiv nach der/die/das · Was für ein? | سالۆخ پشتی der/die/das · چ جۆرە؟
+E: Nach dem bestimmten Artikel: Nominativ singular -e, sonst meistens -en. Frage nach der Art: Was für ein …? || پشتی der/die/das: Nominativ تاک -e، یێن دی پتر -en. پرسیار ل سەر جۆری: Was für ein …?
+H: | maskulin | neutral | feminin | Plural
+R: Nom. | der neue Laptop | das neue Handy | die neue Tasche | die neuen Schuhe
+R: Akk. | den neuen Laptop | das neue Handy | die neue Tasche | die neuen Schuhe
+R: Dat. | dem neuen Laptop | dem neuen Handy | der neuen Tasche | den neuen Schuhen
+X: Der kleine Hund heißt Bobby. || ناڤێ سەیێ بچووک بۆبییە.
+X: Ich wohne in dem gelben Haus. || ئەز د خانیێ زەر دا دژیم.
+X: Was für ein Auto möchtest du? – Ein kleines. || چ جۆرە ترومبێلەک تە دڤێت؟ – ئێکا بچووک.
+P: Ich kaufe ___ Jacke. (die / schwarz) || ئەز چاکێتا رەش دکڕم. || -e || Ich kaufe die schwarze Jacke. || ئەز چاکێتا رەش دکڕم.
+P: Er spricht mit ___ Kollegen. (der / neu) || ئەو دگەل هەڤکارێ نوو دئاخڤیت. || -en || Er spricht mit dem neuen Kollegen. || ئەو دگەل هەڤکارێ نوو دئاخڤیت.
+P: ___ Handy hast du? (Art?) || چ جۆرە مۆبایلەک ل نک تە هەیە؟ || Was für ein || Was für ein Handy hast du? || چ جۆرە مۆبایلەک ل نک تە هەیە؟
+
+@G 🔤 | Wortbildung: -ung, un- | پەیڤ چێکرن: -ung و un-
+E: Verb + -ung ➔ Nomen (immer „die“): wohnen ➔ die Wohnung. un- + Adjektiv = Gegenteil: freundlich ➔ unfreundlich. || کار + -ung ➔ ناڤ (هەردەم die). un- + سالۆخ = دژ: freundlich ➔ unfreundlich.
+H: Verb | Nomen (-ung)
+R: wohnen | die Wohnung
+R: liefern | die Lieferung
+R: verbinden | die Verbindung
+R: bestellen | die Bestellung
+X: Die Bestellung ist angekommen. || داخوازی (ئۆردەر) گەهشت.
+X: Das ist unwichtig. || ئەڤە نە گرنگە.
+X: Der Test war ungefährlich. || تاقیکرن بێ مەترسی بوو.
+P: einladen ➔ die ___ || داخوازکرن ➔ داخوازی || -ung || die Einladung || داخوازی (دەعوەت)
+P: möglich ➔ ___ (Gegenteil) || گونجای ➔ نەگونجای || un- || unmöglich || نەگونجای
+P: zufrieden ➔ ___ (Gegenteil) || رازی ➔ نە رازی || un- || unzufrieden || نە رازی

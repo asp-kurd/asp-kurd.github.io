@@ -1,0 +1,81 @@
+@L 26 | #B7794A | گەشت | Reisen | Travelling
+
+@U a | flag | بۆ کیڤە دچی؟ | Reiseziele | Destinations
+ans Meer | ئانس مێر | بۆ لێڤا دەریایێ | to the seaside | 🏖️ | Im Sommer fahren wir ___ Meer. | ans | am; im | هاڤینێ ئەم دچینە لێڤا دەریایێ.
+in die Berge | ئین دی بێرگە | بۆ چیایان | to the mountains | 🏔️ | Wir wandern gern, deshalb fahren wir ___ die Berge. | in | an; auf | ئەم حەز ژ گەڕیانێ دکەین، لەوما دچینە چیایان.
+an den See | ئان دێن زێ | بۆ گۆلێ | to the lake | 🏞️
+auf eine Insel | ئاوف ئاینە ئینزل | بۆ دوورگەهەکێ | to an island | 🏝️ | Wir fliegen ___ eine Insel im Mittelmeer. | auf | in; an | ئەم دفڕینە دوورگەهەکێ ل دەریایا ناڤەراست.
+aufs Land | ئاوفس لاند | بۆ گوندی (دەرڤەیی باژێڕی) | to the countryside | 🌾
+in die Wüste | ئین دی ڤیوستە | بۆ بیابانێ | to the desert | 🏜️
+Ich war noch nie in Wien. | ئیش ڤار نۆخ نی ئین ڤین | هەتا نوکە ئەز نەچوویمە ڤیەننا. | I've never been to Vienna. | 🏰
+Am liebsten mache ich Urlaub am Meer. | ئام لیبستن ماخە ئیش ئوورلاوپ ئام مێر | ژ هەمییان پتر حەز دکەم ل بەر دەریایێ بێهنڤەدانێ بکەم. | I like holidaying by the sea best. | 🌊
+
+@U b | home | جهێ مانێ | Unterkunft | Accommodation
+die Pension | دی پانزیۆن | مێڤانخانەیا بچووک | the guesthouse | 🏡
+die Jugendherberge | دی یووگنتهێربێرگە | مێڤانخانەیا گەنجان | the youth hostel | 🛏️
+der Campingplatz | دێر کێمپینگپلاتس | جهێ خێڤەتان | the campsite | ⛺ | Wir schlafen im Zelt auf dem ___. | Campingplatz | Marktplatz; Parkplatz | ئەم ل جهێ خێڤەتان د خێڤەتێ دا دنڤین.
+die Übernachtung | دی ئیوبەرناختونگ | شەڤەک مان | the overnight stay | 🌙 | Eine ___ kostet 60 Euro. | Übernachtung | Übersetzung; Überweisung | شەڤەک ب ٦٠ یۆرۆیانە.
+ein Zimmer reservieren | ئاین تسیمەر رێزێرڤیرن | ژوورەکێ گرتن (حجزکرن) | to book a room | 🗓️ | Ich möchte ein Doppelzimmer ___. | reservieren | reserviert; Reserve | ئەز دڤێم ژوورەکا دوو کەسی بگرم.
+mit Frühstück | میت فریوشتیوک | دگەل تێشتێ | with breakfast | 🥐
+Halbpension | هالبپانزیۆن | تێشت و خوارنا ئێڤارێ | half board | 🍽️
+Ist das Zimmer ruhig? | ئیست داس تسیمەر رووئیش | ئەرێ ژوور ئارامە (بێ دەنگە)؟ | Is the room quiet? | 🤫
+
+@U c | transport | ل فڕۆکەخانێ و وێستگەهێ | Am Flughafen & Bahnhof | At the airport & station
+der Koffer | دێر کۆفەر | جانتایا گەشتێ | the suitcase | 🧳
+das Handgepäck | داس هانتگەپێک | جانتایا دەستی | hand luggage | 👜 | Flüssigkeiten im ___ sind nicht erlaubt. | Handgepäck | Handschuh; Handtuch | شلەمەنی د جانتایا دەستی دا رێپێدای نینن.
+die Verspätung | دی فێرشپێتونگ | دەرەنگ کەفتن | the delay | ⏰ | Der Flug hat zwei Stunden ___. | Verspätung | Verletzung; Vorspeise | فڕین دوو دەمژمێران دەرەنگ کەفتییە.
+das Gleis | داس گلایس | هێلا شەمەندەفەرێ (پلاتفۆرم) | the platform | 🛤️ | Der Zug fährt von ___ 5 ab. | Gleis | Gleich; Glas | شەمەندەفەر ژ هێلا ٥ دچیت.
+der Flughafen | دێر فلووگهافن | فڕۆکەخانە | the airport | 🛫
+die Abfahrt | دی ئاپفارت | چوون (دەرکەفتن) | the departure (train/bus) | 🚉
+die Ankunft | دی ئانکونفت | گەهشتن | the arrival | 🏁
+Von Montag an bin ich im Urlaub. | فۆن مۆنتاگ ئان بین ئیش ئیم ئوورلاوپ | ژ دووشەمبیێ ڤە ئەز د بێهنڤەدانێ دامە. | From Monday on I'm on holiday. | 📆 | ___ Montag an bin ich im Urlaub. | Von | Bis; Seit | ژ دووشەمبیێ ڤە ئەز د بێهنڤەدانێ دامە.
+
+@U d | help | کێشە ل گەشتێ | Probleme auf Reisen | Travel problems
+Mein Koffer ist nicht angekommen. | ماین کۆفەر ئیست نیشت ئانگەکۆمن | جانتایا من نەگەهشت. | My suitcase didn't arrive. | 🧳
+Ich bin ohne Pass zum Flughafen gefahren. | ئیش بین ئۆنە پاس تسووم فلووگهافن گەفارن | ئەز بێ پاسپۆرت چوومە فڕۆکەخانێ. | I went to the airport without my passport. | 🛂 | Ich bin ___ Pass zum Flughafen gefahren. | ohne | mit; für | ئەز بێ پاسپۆرت چوومە فڕۆکەخانێ.
+Die Heizung funktioniert nicht. | دی هایتسونگ فونکتسیۆنیرت نیشت | گەرمکەر کار ناکەت. | The heating doesn't work. | 🌡️
+Das Zimmer ist schmutzig. | داس تسیمەر ئیست شموتسیش | ژوور یا پیسە. | The room is dirty. | 🧹 | Das Zimmer ist nicht sauber, es ist ___. | schmutzig | schmal; schnell | ژوور نە پاقژە، یا پیسە.
+Ich möchte mich beschweren. | ئیش مۆشتە میش بەشڤێرن | ئەز دڤێم گازندێ بکەم. | I'd like to complain. | 😤
+frische Luft und gutes Essen | فریشە لوفت ئوند گووتەس ئێسن | هەوایا پاقژ و خوارنا باش | fresh air and good food | 🍃 | Auf dem Land gibt es ___ Luft. | frische | frischer; frischen | ل گوندی هەوایا پاقژ هەیە.
+Wir haben den Zug verpasst. | ڤیر هابن دێن تسووگ فێرپاست | شەمەندەفەر ل مە چوو. | We missed the train. | 🚆 | Wir haben den Zug ___. | verpasst | verpassen; passiert | شەمەندەفەر ل مە چوو.
+Gute Erholung! | گووتە ئێرهۆلونگ | بێهنڤەدانەکا خۆش! | Have a good rest! | 🌴
+@CZ Ich fahre ___ Wochen in Urlaub, ___ meinen Laptop. | für zwei … ohne | in zwei … mit; für zwei … mit | ئەز دوو حەفتییان دچمە بێهنڤەدانێ، بێ لاپتۆپا خۆ.
+
+@D ل رێسەپشنا هۆتێلێ
+Gast: Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Ahmed. || ئێڤار باش. من ژوورەک گرتییە. ناڤێ من ئەحمەدە.
+Rezeption: Herzlich willkommen! Ein Einzelzimmer mit Frühstück für drei Nächte, richtig? || ب خێر بێن! ژوورەکا ئێک کەسی دگەل تێشتێ بۆ سێ شەڤان، راستە؟
+Gast: Ja, genau. Ab wann gibt es Frühstück? || بەلێ، تەمام. تێشت ژ دەمژمێر چەند هەیە؟
+Rezeption: Von sieben Uhr an, im Erdgeschoss. || ژ دەمژمێر حەفت ڤە، ل قاتا ئێکێ.
+Gast: Gut. Und gibt es kostenloses WLAN? || باشە. و ئەرێ وایفایا ب بێ پارە هەیە؟
+Rezeption: Ja, das Passwort steht auf Ihrer Karte. Hier ist Ihr Schlüssel: Zimmer 312. || بەلێ، وشەیا نهێنی ل سەر کارتا هەوە یە. ئەڤە کلیلا هەوە: ژوورا ٣١٢.
+Gast: Danke. Ach, mein Koffer ist leider noch am Flughafen. || سوپاس. ئاخ، مخابن جانتایا من هێشتا ل فڕۆکەخانێ یە.
+Rezeption: Kein Problem, wir helfen Ihnen gern. Wir rufen die Fluggesellschaft an. || چ کێشە نینە، ب دل هاریکاریا هەوە دکەین. ئەم دێ تەلەفۆنێ بۆ کۆمپانیا فڕینێ کەین.
+
+@G 🗺️ | Wohin? an, auf, in · Wo? | بۆ کیڤە؟ / ل کیڤە؟ (an, auf, in)
+E: Wohin? + Akkusativ: ans Meer, in die Berge, auf eine Insel. Wo? + Dativ: am Meer, in den Bergen, auf einer Insel. || بۆ کیڤە؟ + Akkusativ. ل کیڤە؟ + Dativ.
+H: Ziel | Wohin? | Wo?
+R: das Meer | ans Meer | am Meer
+R: die Berge | in die Berge | in den Bergen
+R: die Insel | auf eine Insel | auf einer Insel
+R: das Land | aufs Land | auf dem Land
+R: der See | an den See | am See
+X: Wir fahren ans Meer. Am Meer schwimmen wir. || ئەم دچینە دەریایێ. ل بەر دەریایێ مەلەڤانیێ دکەین.
+X: Im Winter fahren sie in die Berge. || زڤستانێ ئەو دچنە چیایان.
+X: Meine Großeltern wohnen auf dem Land. || باپیر و داپیرێن من ل گوندی دژین.
+T: Wasser (Meer, See, Fluss) ➔ an. Inseln ➔ auf. Berge, Wald, Stadt ➔ in. || ئاڤ ➔ an. دوورگەه ➔ auf. چیا، دارستان، باژێڕ ➔ in.
+P: Wohin fahrt ihr? (der See) || هوین دچنە کیڤە؟ (گۆل) || an den || Wir fahren an den See. || ئەم دچینە گۆلێ.
+P: Wo seid ihr? (die Berge) || هوین ل کیڤەنە؟ (چیا) || in den || Wir sind in den Bergen. || ئەم ل چیایانین.
+P: Wohin fliegst du? (eine Insel) || تو دفڕییە کیڤە؟ (دوورگەه) || auf eine || Ich fliege auf eine Insel. || ئەز دفڕمە دوورگەهەکێ.
+
+@G 🏷️ | Adjektiv ohne Artikel · von … an · ohne | سالۆخ بێ ئارتیکل · ژ … ڤە · بێ
+E: Ohne Artikel trägt das Adjektiv die Endung des Artikels: frische Luft, gutes Essen, mit freundlichem Gruß. „von … an“ = ab diesem Zeitpunkt. „ohne“ + Akkusativ. || بێ ئارتیکل، سالۆخ دوماهیکا ئارتیکلی وەردگریت: frische Luft. «von … an» = ژ … ڤە. «ohne» + Akkusativ = بێ.
+H: | maskulin | neutral | feminin | Plural
+R: Nom. | frischer Kaffee | frisches Brot | frische Luft | frische Eier
+R: Akk. | frischen Kaffee | frisches Brot | frische Luft | frische Eier
+R: Dat. | frischem Kaffee | frischem Brot | frischer Luft | frischen Eiern
+X: Hier gibt es leckeres Essen und kaltes Wasser. || ل ڤێرێ خوارنا ب تام و ئاڤا سار هەیە.
+X: Von Juni an arbeite ich in Berlin. || ژ حوزەیرانێ ڤە ئەز ل بەرلین کار دکەم.
+X: Ich trinke Tee ohne Zucker. || ئەز چایێ بێ شەکر ڤەدخۆم.
+P: Ich trinke gern ___ Kaffee. (stark) || ئەز حەز ژ قەهوەیا تیژ دکەم. || -en || Ich trinke gern starken Kaffee. || ئەز حەز ژ قەهوەیا تیژ دکەم.
+P: Ab 1. Mai wohne ich hier. (von … an) || ژ ١ی گولانێ ڤە ئەز ل ڤێرێ دژیم. || von … an || Vom 1. Mai an wohne ich hier. || ژ ١ی گولانێ ڤە ئەز ل ڤێرێ دژیم.
+P: Er fährt nicht mit dem Auto. (das Auto / ohne) || ئەو ب ترومبێلێ ناچیت. || ohne || Er fährt ohne Auto. || ئەو بێ ترومبێل دچیت.

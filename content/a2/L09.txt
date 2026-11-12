@@ -1,0 +1,97 @@
+@L 23 | #7FA650 | تشتێن من | Meine Sachen | My things
+
+@U a | backpack | تشتێن رۆژانە | Alltagsgegenstände | Everyday things
+der Rucksack | دێر روکزاک | جانتایا پشتێ | the backpack | 🎒
+die Brieftasche | دی بریفتاشە | جزدان | the wallet | 👛 | Mein Geld ist in der ___. | Brieftasche | Briefmarke; Bratpfanne | پارێن من د جزدانی دانە.
+der Schlüsselbund | دێر شلیوسلبونت | کۆما کلیلان | the bunch of keys | 🔑
+das Ladegerät | داس لادەگەرێت | شەحن کەر | the charger | 🔌 | Mein Handy ist leer. Hast du ein ___? | Ladegerät | Lagerhaus; Laufband | مۆبایلا من ڤالا بوو. شەحنکەرەک ل نک تە هەیە؟
+die Kamera | دی کامێرا | کامێرا | the camera | 📷
+der Regenschirm | دێر رێگنشیرم | سیبەر (یا بارانێ) | the umbrella | ☂️ | Es regnet. Nimm einen ___ mit! | Regenschirm | Regenbogen; Sonnenbrille | باران دباریت. سیبەرەکێ دگەل خۆ ببە!
+die Sonnenbrille | دی زۆننبریلە | بەرچاڤکا رۆژێ | the sunglasses | 🕶️
+Ohne mein Handy gehe ich nicht aus dem Haus. | ئۆنە ماین هێندی گێ ئیش نیشت ئاوس دێم هاوس | بێ مۆبایلا خۆ ئەز ژ مال دەرناکەڤم. | I don't leave the house without my phone. | 📱
+
+@U b | palette | ژ چ هاتییە چێکرن؟ | Material & Eigenschaften | Materials & qualities
+aus Holz | ئاوس هۆلتس | ژ دارێ | made of wood | 🪵 | Der Tisch ist ___ Holz. | aus | von; mit | مێز ژ دارێ یە.
+aus Metall | ئاوس مێتال | ژ ئاسنی / مەعدەنی | made of metal | 🔩
+aus Plastik | ئاوس پلاستیک | ژ پلاستیکێ | made of plastic | 🧴
+aus Leder | ئاوس لێدەر | ژ چەرمی | made of leather | 👞
+praktisch | پراکتیش | ب کێر هاتی / ئاسان | practical | 🧰 | Die Tasche ist klein und sehr ___. | praktisch | praktiziert; Praxis | جانتا بچووکە و گەلەک ب کێر دهێت.
+bequem | بەکڤێم | راحەت / ئاسوودە | comfortable | 🛋️ | Die Schuhe sind sehr ___. | bequem | bekommen; bequemt | پێلاڤ گەلەک راحەتن.
+Das ist ganz billig. | داس ئیست گانتس بیلیش | ئەڤە گەلەک ئەرزانە. | That's really cheap. | 🏷️
+Mein Fahrrad ist kaputt, es ist nutzlos. | ماین فارات ئیست کاپووت، ئێس ئیست نوتسلۆس | پایسکیلا من یا خرابە، چ کێر نائێت. | My bike is broken, it's useless. | 🚲 | Das Handy funktioniert nicht, es ist nutz___. | los | voll; bar | مۆبایل کار ناکەت، چ کێر نائێت.
+
+@U c | shopping | ئێکێ نوو، ئێکا جوان | ein neuer Rucksack | Adjectives with ein-
+Ich suche einen neuen Rucksack. | ئیش زووخە ئاینن نۆیەن روکزاک | ئەز ل جانتایەکا پشتێ یا نوو دگەڕێم. | I'm looking for a new backpack. | 🎒 | Ich suche einen ___ Rucksack. | neuen | neuer; neue | ئەز ل جانتایەکا پشتێ یا نوو دگەڕێم.
+Das ist ein schönes Geschenk. | داس ئیست ئاین شۆنەس گەشێنک | ئەڤە دیاریەکا جوانە. | That's a nice present. | 🎁 | Das ist ein ___ Geschenk. | schönes | schöner; schönen | ئەڤە دیاریەکا جوانە.
+Sie hat eine kleine Tasche. | زی هات ئاینە کلاینە تاشە | جانتایەکا بچووک ل نک وێ هەیە. | She has a small bag. | 👜 | Sie hat eine ___ Tasche. | kleine | kleinen; kleiner | جانتایەکا بچووک ل نک وێ هەیە.
+Er trägt einen alten Mantel. | ئێر ترێگت ئاینن ئالتن مانتل | ئەو بالتۆیەکێ کەڤن دکەتە بەر خۆ. | He is wearing an old coat. | 🧥
+Ich wünsche mir ein großes Zimmer. | ئیش ڤیونشە میر ئاین گرۆسەس تسیمەر | من ژوورەکا مەزن دڤێت. | I'd like a big room. | 🛏️
+Das ist ein guter Tipp. | داس ئیست ئاین گووتەر تیپ | ئەڤە ئامۆژگاریەکا باشە. | That's a good tip. | 💡 | Das ist ein ___ Tipp. | guter | gute; gutes | ئەڤە ئامۆژگاریەکا باشە.
+mit einem neuen Handy | میت ئاینەم نۆیەن هێندی | ب مۆبایلەکا نوو | with a new phone | 📱
+Hast du keine bequemen Schuhe? | هاست دوو کاینە بەکڤێمەن شوە | ئەرێ پێلاڤێن راحەت ل نک تە نینن؟ | Don't you have any comfortable shoes? | 👟
+
+@U d | tune | باشتر ژ … | besser als … | Comparison
+Mein Handy ist neuer als dein Handy. | ماین هێندی ئیست نۆیەر ئالس داین هێندی | مۆبایلا من ژ یا تە نووترە. | My phone is newer than yours. | 📱 | Mein Handy ist neuer ___ dein Handy. | als | wie; dann | مۆبایلا من ژ یا تە نووترە.
+Die Tasche ist so teuer wie die Schuhe. | دی تاشە ئیست زۆ تۆیەر ڤی دی شوە | جانتا وەکی پێلاڤان ب بهایە. | The bag is as expensive as the shoes. | 💶 | Die Tasche ist so teuer ___ die Schuhe. | wie | als; so | جانتا وەکی پێلاڤان ب بهایە.
+Leder ist teurer als Plastik. | لێدەر ئیست تۆیرەر ئالس پلاستیک | چەرم ژ پلاستیکێ گرانترە. | Leather is more expensive than plastic. | 👜
+Was gefällt dir besser? | ڤاس گەفێلت دیر بێسەر | کیژ پتر ب دلێ تە یە؟ | Which do you like better? | 🤔
+Am liebsten trinke ich Tee. | ئام لیبستن ترینکە ئیش تێ | ژ هەمییان پتر حەز ژ چایێ دکەم. | I like drinking tea best. | 🍵 | Ich trinke gern Kaffee, aber am ___ trinke ich Tee. | liebsten | lieber; gerne | ئەز حەز ژ قەهوێ دکەم، بەلێ ژ هەمییان پتر چایێ.
+Dieses Handy ist am billigsten. | دیزەس هێندی ئیست ئام بیلیگستن | ئەڤ مۆبایلە ژ هەمییان ئەرزانترە. | This phone is the cheapest. | 🏷️
+Mein Bruder ist größer als ich. | ماین برودەر ئیست گرۆسەر ئالس ئیش | برایێ من ژ من درێژترە. | My brother is taller than me. | 🧍‍♂️
+Das alte Sofa war genauso bequem wie das neue. | داس ئالتە زۆفا ڤار گەناوزۆ بەکڤێم ڤی داس نۆیە | قەنەفا کەڤن وەکی یا نوو راحەت بوو. | The old sofa was just as comfortable as the new one. | 🛋️
+@CZ Der Zug ist schneller ___ der Bus, aber nicht so schnell ___ das Flugzeug. | als … wie | wie … als; als … als | شەمەندەفەر ژ پاسێ زووترە، بەلێ نە وەکی فرۆکێ زوو.
+
+@D ل فرۆشگەها ئەلێکترۆنیکێ
+Verkäufer: Kann ich Ihnen helfen? || دشێم هاریکاریا هەوە بکەم؟
+Dilan: Ja, ich suche eine neue Kamera. Meine alte ist kaputt. || بەلێ، ئەز ل کامێرایەکا نوو دگەڕێم. یا من یا کەڤن خراب بوو.
+Verkäufer: Diese hier ist sehr gut und leicht. || ئەڤە گەلەک باشە و سڤکە.
+Dilan: Und die andere? Ist sie besser? || و یا دی؟ ئەرێ باشترە؟
+Verkäufer: Sie macht schärfere Fotos, aber sie ist auch teurer. || وێنەیێن رۆهنتر دگریت، بەلێ ب بهاترە ژی.
+Dilan: Hm. Ich möchte eine praktische Kamera für die Reise. || هم. من کامێرایەکا ب کێر هاتی بۆ گەشتێ دڤێت.
+Verkäufer: Dann nehmen Sie die kleine. Sie ist fast so gut wie die große. || هنگی یا بچووک ببەن. هۆسا وەکی یا مەزن باشە.
+Dilan: Gut, die nehme ich. Kann ich mit Karte zahlen? || باشە، ئەز وێ دبەم. دشێم ب کارتێ پارەی بدەم؟
+
+@G 🎨 | Adjektivdeklination nach ein-, kein-, mein- | سالۆخ پشتی ein / kein / mein
+E: Nach ein-/kein-/mein- zeigt das Adjektiv das Genus: -er (m, Nom.), -es (n), -e (f). Im Akkusativ maskulin: -en. Im Dativ und Plural: -en. || پشتی ein/kein/mein، سالۆخ رەگەزێ نیشان ددەت: -er (نێر)، -es (بێلایەن)، -e (مێ). Akkusativ نێر: -en. Dativ و کۆ: -en.
+H: | maskulin | neutral | feminin | Plural
+R: Nom. | ein neuer Rucksack | ein neues Handy | eine neue Tasche | keine neuen Schuhe
+R: Akk. | einen neuen Rucksack | ein neues Handy | eine neue Tasche | keine neuen Schuhe
+R: Dat. | einem neuen Rucksack | einem neuen Handy | einer neuen Tasche | keinen neuen Schuhen
+X: Ich habe einen roten Mantel gekauft. || من بالتۆیەکێ سۆر کڕی.
+X: Das ist ein schönes Foto. || ئەڤە وێنەیەکێ جوانە.
+X: Sie wohnt in einer kleinen Wohnung. || ئەو د خانیەکێ بچووک دا دژیت.
+T: Wenn der Artikel das Genus nicht zeigt (ein, mein), zeigt es das Adjektiv! || ئەگەر ئارتیکل رەگەزی نیشان نەدەت (ein)، سالۆخ نیشان ددەت!
+P: Das ist ein ___ Auto. (neu) || ئەڤە ترومبێلەکا نوویە. || -es || Das ist ein neues Auto. || ئەڤە ترومبێلەکا نوویە.
+P: Ich suche einen ___ Tisch. (groß) || ئەز ل مێزەکا مەزن دگەڕێم. || -en || Ich suche einen großen Tisch. || ئەز ل مێزەکا مەزن دگەڕێم.
+P: Er fährt mit seinem ___ Fahrrad. (alt) || ئەو ب پایسکیلا خۆ یا کەڤن دچیت. || -en || Er fährt mit seinem alten Fahrrad. || ئەو ب پایسکیلا خۆ یا کەڤن دچیت.
+
+@G ⚖️ | Komparativ und Superlativ · als / wie | بەراوردکرن: باشتر، باشترین، وەکی
+E: Komparativ: Adjektiv + -er (schnell ➔ schneller) + als. Gleich: so … wie. Superlativ: am … -sten. Oft Umlaut: alt ➔ älter. || بەراورد: سالۆخ + -er + als (ژ). وەکی ئێک: so … wie. باشترین: am … -sten.
+H: Grundform | Komparativ | Superlativ
+R: billig | billiger | am billigsten
+R: alt | älter | am ältesten
+R: groß | größer | am größten
+R: gut | besser | am besten
+R: gern | lieber | am liebsten
+R: viel | mehr | am meisten
+X: Berlin ist größer als München. || بەرلین ژ میونشنێ مەزنترە.
+X: Ich bin so alt wie du. || ئەز وەکی تە ب ژی مە.
+X: Im Winter ist es am kältesten. || ل زڤستانێ ژ هەمییان سارترە.
+T: Komparativ + als / so … wie — nie „als wie“! || Komparativ + als؛ وەکی ئێک: so … wie.
+P: Das Auto ist schnell. Das Fahrrad ist nicht so schnell. || ترومبێل زوو دچیت، پایسکیل نە ئەوقاس. || als || Das Auto ist schneller als das Fahrrad. || ترومبێل ژ پایسکیلێ زووترە.
+P: Tee ist gesund. Wasser ist gesund. (gleich) || چا ساخلەمە. ئاڤ ساخلەمە. || so … wie || Tee ist so gesund wie Wasser. || چا وەکی ئاڤێ ساخلەمە.
+P: Welcher Berg ist hoch? (der höchste) || کیژ چیا ژ هەمییان بلندترە؟ || am … -sten || Dieser Berg ist am höchsten. || ئەڤ چیایە ژ هەمییان بلندترە.
+
+@G 🚫 | Wortbildung: -los | پەیڤ چێکرن: -los (بێ …)
+E: Nomen + -los = ohne etwas: arbeitslos, kostenlos, nutzlos, hoffnungslos. || ناڤ + -los = بێ تشتەکی: arbeitslos (بێ کار)، kostenlos (ب بێ پارە)، nutzlos (بێ مفا).
+H: Nomen | Adjektiv | Bedeutung
+R: die Arbeit | arbeitslos | ohne Arbeit
+R: die Kosten | kostenlos | ohne Kosten
+R: der Nutzen | nutzlos | ohne Nutzen
+R: die Sorge | sorglos | ohne Sorgen
+X: Der Eintritt ist kostenlos. || چوونەژوور ب بێ پارە یە.
+X: Mein Onkel ist seit Mai arbeitslos. || مامێ من ژ گولانێ ڤە بێکارە.
+X: Ohne Akku ist das Handy nutzlos. || بێ پاتری مۆبایل بێ مفایە.
+P: Er hat keine Arbeit. Er ist ___. || کارێ وی نینە. || -los || Er ist arbeitslos. || ئەو بێکارە.
+P: Das kostet nichts. Es ist ___. || ئەڤە ب بێ پارە یە. || -los || Es ist kostenlos. || ئەڤە ب بێ پارە یە.
+P: Sie hat keine Sorgen. Sie ist ___. || وێ چ خەم نینن. || -los || Sie ist sorglos. || ئەو بێ خەمە.
