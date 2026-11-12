@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../data/cloze_bank.dart';
 import '../data/curriculum.dart';
 import '../data/pics.dart';
+import '../data/pronouns.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/sfx.dart';
@@ -43,6 +44,9 @@ class InteractiveLessonScreen extends StatefulWidget {
 
   /// 🔁 وانەیەکا تەمامکری دووبارە دبیت ➔ XP ١ بۆ هەر بەرسڤەکا دروست
   final bool redo;
+
+  /// 👤 پرسیارێن جهێناڤان (ئاست ٠–٥) و چەند پرسیار
+  final int pronounTier, pronounCount;
   const InteractiveLessonScreen({
     super.key,
     required this.unit,
@@ -52,6 +56,8 @@ class InteractiveLessonScreen extends StatefulWidget {
     this.countUnit = true,
     this.hard = false,
     this.redo = false,
+    this.pronounTier = -1,
+    this.pronounCount = 0,
   });
 
   @override
@@ -107,6 +113,12 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   void initState() {
     super.initState();
     queue = _buildQueue();
+    // 👤 جهێناڤ: د ناڤ کۆرسێ دا بەلاڤ دبن (نە هەمی ل دوماهیێ)
+    if (widget.pronounTier >= 0 && widget.pronounCount > 0 && widget.onlyType == null) {
+      for (final q in pronounQuestions(target, widget.pronounTier, widget.pronounCount)) {
+        queue.insert(1 + _rng.nextInt(queue.length), Exercise(q.concept, ExerciseType.cloze, cloze: q.cloze));
+      }
+    }
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) MascotChar.precache(context, MascotChar.forUser());
     });
@@ -535,6 +547,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                       countUnit: widget.countUnit,
                       hard: widget.hard,
                       redo: widget.redo || !widget.countUnit, // 🛤️ دووبارەکرنا هەمان کۆرسێ ➔ XP ١
+                      pronounTier: widget.pronounTier,
+                      pronounCount: widget.pronounCount,
                       onDone: widget.countUnit ? widget.onDone : null))),
         ),
       ),

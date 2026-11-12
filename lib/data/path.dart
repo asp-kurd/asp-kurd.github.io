@@ -288,6 +288,12 @@ List<PathLesson> _lessonsFor(String sid, List<(LessonUnit, WordConcept)> part) {
   return out;
 }
 
+/// ژمارا قۆناغێ (١ = قۆناغا ئێکێ یا بەشا ١؛ ئەلفوبێ = ٠)
+int stageNumber(PathStage s) => s.section == 0 ? 0 : pathStages.where((x) => x.section > 0 && x.gIndex <= s.gIndex).length;
+
+/// 👤 کۆرسا تایبەت یا جهێناڤان: کۆرسا سێیێ د وانێن ٤+ کۆرسی دا
+bool isPronounCourse(PathLesson l, int c) => !l.isAlphabet && l.courses >= 4 && c == 2;
+
 /// پەیڤێن کۆرسێ [c] ژ وانەیا [l]: کۆرسا ئێکێ = پەیڤێن نوو؛ پاشان تێکەل دگەل دووبارەکرنێ
 List<WordConcept> courseConcepts(PathLesson l, int c, {bool hard = false}) {
   final review = <WordConcept>[

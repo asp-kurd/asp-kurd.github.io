@@ -10,6 +10,7 @@ import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/rewards_service.dart';
 import '../ui.dart';
+import '../data/pronouns.dart';
 import 'course_screens.dart';
 import 'exam_coin.dart';
 import 'grammar_screen.dart';
@@ -531,7 +532,9 @@ void _openLessonSheet(BuildContext context, PathLesson l) {
                       ? tr(n, '🏅 زێڕ — دووبارەکرن: XP ١ بۆ هەر بەرسڤەکێ', '🏅 Gold – Wiederholen: 1 XP pro Antwort', '🏅 Gold – replay: 1 XP per answer')
                       : done
                           ? tr(n, '✅ تەمام — دووبارە بکە دا ببیتە زێڕ 🏅', '✅ Fertig – wiederhole für Gold 🏅', '✅ Done – replay for gold 🏅')
-                          : tr(n, 'کۆرس ${kuNum(c + 1)} ژ ${kuNum(l.courses)}', 'Kurs ${c + 1} von ${l.courses}', 'Course ${c + 1} of ${l.courses}'),
+                          : tr(n, 'کۆرس ${kuNum(c + 1)} ژ ${kuNum(l.courses)}${isPronounCourse(l, c) ? ' · 👤 جهێناڤ' : ''}',
+                              'Kurs ${c + 1} von ${l.courses}${isPronounCourse(l, c) ? ' · 👤 Pronomen' : ''}',
+                              'Course ${c + 1} of ${l.courses}${isPronounCourse(l, c) ? ' · 👤 Pronouns' : ''}'),
                   style: TextStyle(color: gold || done ? AppColors.goldText : AppColors.fg70, fontWeight: FontWeight.bold),
                 ),
               ]),
@@ -605,13 +608,18 @@ void startPathLesson(BuildContext context, PathLesson l) {
   if (l.isAlphabet && !done && c == 0) {
     screen = LetterLessonScreen(unit: l.unit, countUnit: false, onDone: after);
   } else {
+    final pron = !done && isPronounCourse(l, c);
+    final cs = courseConcepts(l, c, hard: done);
     screen = InteractiveLessonScreen(
       unit: l.unit,
-      concepts: courseConcepts(l, c, hard: done),
+      concepts: pron ? cs.take(3).toList() : cs,
       countUnit: false,
       hard: done,
       redo: done,
       onDone: after,
+      // 👤 جهێناڤ د هەمی کۆرسان دا؛ کۆرسا جهێناڤان پتر
+      pronounTier: l.isAlphabet ? -1 : pronounTier(max(1, stageNumber(l.stage))),
+      pronounCount: pron ? 7 : (done ? 3 : 2),
     );
   }
   void go() => Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
@@ -889,6 +897,8 @@ void _openReview(BuildContext context, PathStage st) {
         countUnit: false,
         redo: p.reviewDone(st),
         onDone: (_) => p.markReview(st),
+        pronounTier: pronounTier(max(1, stageNumber(st))),
+        pronounCount: 3,
       ),
     ),
   );
@@ -916,6 +926,8 @@ void _openExam(BuildContext context, PathStage st, LektionInfo? lek) {
         hard: true,
         redo: p.examBest('st_${st.id}') != null,
         onDone: (pct) => p.saveExam('st_${st.id}', pct),
+        pronounTier: pronounTier(max(1, stageNumber(st))),
+        pronounCount: 3,
       ),
     ),
   );
