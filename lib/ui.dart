@@ -4,15 +4,31 @@ import 'models.dart';
 /// رەنگێن ئەپی — 🌙 تاری / ☀️ رۆهن
 /// [dark] ژ لایێ ThemeController ڤە دهێتە گوهۆڕین.
 class AppColors {
-  static bool dark = true;
-  static const _ink = Color(0xFF1E2B32); // نڤیسین ل سەر رۆهنی
+  /// ڕووکار: dark · light · red (ل سەر سۆری) · pink (ل سەر سپی)
+  static String mode = 'dark';
+  static bool get dark => mode == 'dark' || mode == 'red';
+  static set dark(bool d) => mode = d ? 'dark' : 'light';
+  static bool get isRed => mode == 'red';
+  static bool get isPink => mode == 'pink';
 
-  static Color get bg => dark ? const Color(0xFF131F24) : const Color(0xFFF4F7F8);
-  static Color get card => dark ? const Color(0xFF202F36) : Colors.white;
-  static Color get cardAlt => dark ? const Color(0xFF1A282E) : const Color(0xFFF0F4F6);
-  static Color get chip => dark ? const Color(0xFF253740) : const Color(0xFFE7EDF0);
-  static Color get tint => dark ? const Color(0xFF1B3A4B) : const Color(0xFFE2F3FC);
-  static Color get germanText => dark ? const Color(0xFFBEE9FF) : const Color(0xFF0B6E99);
+  static T _m<T>(T d, T l, T r, T p) => switch (mode) { 'light' => l, 'red' => r, 'pink' => p, _ => d };
+
+  static Color get _ink => isPink ? const Color(0xFF3A1F2B) : const Color(0xFF1E2B32); // نڤیسین ل سەر رۆهنی
+
+  static Color get bg => _m(const Color(0xFF131F24), const Color(0xFFF4F7F8), const Color(0xFF1C080C), const Color(0xFFFFF6F9));
+  static Color get card => _m(const Color(0xFF202F36), Colors.white, const Color(0xFF2E1016), Colors.white);
+  static Color get cardAlt => _m(const Color(0xFF1A282E), const Color(0xFFF0F4F6), const Color(0xFF260C11), const Color(0xFFFFEDF3));
+  static Color get chip => _m(const Color(0xFF253740), const Color(0xFFE7EDF0), const Color(0xFF42161F), const Color(0xFFFFDFEA));
+  static Color get tint => _m(const Color(0xFF1B3A4B), const Color(0xFFE2F3FC), const Color(0xFF4A1420), const Color(0xFFFFE4EE));
+  static Color get germanText => _m(const Color(0xFFBEE9FF), const Color(0xFF0B6E99), const Color(0xFFFFD3D8), const Color(0xFFB81862));
+
+  /// 🎨 رەنگێ سەرەکی یێ ڕووکاری (دوگمەیێن دەنگی، هەلبژارتن، لینک …)
+  static Color get accent => _m(blue, blue, const Color(0xFFFF7088), const Color(0xFFEC4899));
+
+  /// شێوەیێن گرتی ل رێکێ (ڕوو / لێڤ) و هێلا دناڤبەرا وان
+  static Color get lockFace => _m(const Color(0xFF37464F), const Color(0xFFE5E8EA), const Color(0xFF4A2129), const Color(0xFFF6DDE6));
+  static Color get lockLip => _m(const Color(0xFF26333A), const Color(0xFFC9CED1), const Color(0xFF34141A), const Color(0xFFE6BFCD));
+  static Color get lockIcon => _m(const Color(0xFF52656D), const Color(0xFFAFB6BA), const Color(0xFF7A4650), const Color(0xFFD59BB1));
 
   /// رەنگێ نڤیسینێ (سپی ل تاری، رەش ل رۆهنی) و ئاستێن وێ
   static Color get fg => dark ? Colors.white : _ink;

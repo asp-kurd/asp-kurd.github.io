@@ -58,7 +58,7 @@ class _SpeakCheckState extends State<SpeakCheck> {
   @override
   Widget build(BuildContext context) {
     final s = score;
-    final color = s == null ? AppColors.blue : (s.percent >= 80 ? AppColors.green : (s.percent >= 50 ? AppColors.gold : AppColors.red));
+    final color = s == null ? AppColors.accent : (s.percent >= 80 ? AppColors.green : (s.percent >= 50 ? AppColors.gold : AppColors.red));
     return Column(children: [
       GestureDetector(
         onTap: _go,
@@ -67,7 +67,7 @@ class _SpeakCheckState extends State<SpeakCheck> {
           width: listening ? 112 : 96,
           height: listening ? 112 : 96,
           decoration: BoxDecoration(
-            color: listening ? AppColors.red : AppColors.blue,
+            color: listening ? AppColors.red : AppColors.accent,
             shape: BoxShape.circle,
             boxShadow: [if (listening) BoxShadow(color: AppColors.red.withValues(alpha: 0.5), blurRadius: 24, spreadRadius: 4)],
           ),

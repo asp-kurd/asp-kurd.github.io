@@ -194,7 +194,7 @@ class _VoiceStudioScreenState extends State<VoiceStudioScreen> {
           ),
           if (has) ...[
             IconButton(
-              icon: const Icon(Icons.play_circle_fill_rounded, color: AppColors.blue),
+              icon: Icon(Icons.play_circle_fill_rounded, color: AppColors.accent),
               onPressed: () => voice.playFile(voice.pathFor(lang, c.id)),
             ),
             IconButton(
@@ -271,7 +271,7 @@ class _QuickRecordScreenState extends State<QuickRecordScreen> {
               Text(c.text(lang), textAlign: TextAlign.center, textDirection: lang.direction,
                   style: const TextStyle(fontSize: 34, fontWeight: FontWeight.bold)),
               const SizedBox(height: 10),
-              Text(c.hint(lang), textAlign: TextAlign.center, style: const TextStyle(color: AppColors.blue, fontSize: 16)),
+              Text(c.hint(lang), textAlign: TextAlign.center, style: TextStyle(color: AppColors.accent, fontSize: 16)),
               if (lang != ui) ...[
                 const SizedBox(height: 6),
                 Text(c.text(ui), textAlign: TextAlign.center, style: TextStyle(color: AppColors.fg54)),

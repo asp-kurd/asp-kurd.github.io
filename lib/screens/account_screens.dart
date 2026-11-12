@@ -111,9 +111,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
           duration: const Duration(milliseconds: 160),
           padding: const EdgeInsets.symmetric(vertical: 14),
           decoration: BoxDecoration(
-            color: sel ? AppColors.blue.withValues(alpha: 0.2) : AppColors.card,
+            color: sel ? AppColors.accent.withValues(alpha: 0.2) : AppColors.card,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: sel ? AppColors.blue : AppColors.fg24, width: sel ? 3 : 1.5),
+            border: Border.all(color: sel ? AppColors.accent : AppColors.fg24, width: sel ? 3 : 1.5),
           ),
           child: Column(children: [
             Text(emoji, style: const TextStyle(fontSize: 32)),

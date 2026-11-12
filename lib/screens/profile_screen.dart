@@ -13,6 +13,8 @@ import 'character_screen.dart';
 import 'widgets/mascot.dart';
 import 'onboarding_screen.dart';
 import 'settings_screen.dart';
+import 'social_links.dart';
+import 'path_view.dart' show FinishedSectionScreen;
 import 'stats_section.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -92,6 +94,8 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
+            // 🔗 لینکێن ASP (Facebook، TikTok … — ئەدمین ددانیت)
+            const SocialLinksRow(),
             const SizedBox(height: 12),
             ListTile(
               tileColor: AppColors.card,
@@ -106,6 +110,26 @@ class ProfileScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_left_rounded),
               onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const CharacterPickerScreen())),
             ),
+            // 📚 بەشێن تەمامکری (ژ رێکێ هاتنە ڤێرێ)
+            ListenableBuilder(
+              listenable: ProgressService.instance,
+              builder: (_, __) => Column(children: [
+                for (final sec in ProgressService.instance.finishedSections)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: ListTile(
+                      tileColor: AppColors.card,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16), side: BorderSide(color: AppColors.green.withValues(alpha: 0.6), width: 1.5)),
+                      leading: Text(switch (sec.n) { 1 => '🌱', 2 => '🌿', _ => '🌳' }, style: const TextStyle(fontSize: 30)),
+                      title: Text('✅ ${sec.title(ProgressService.instance.nativeLang)}', style: const TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: const Text('تەمام بوو — دووبارە بکە و زێڕ بکە 🥇'),
+                      trailing: const Icon(Icons.chevron_left_rounded),
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => FinishedSectionScreen(sec))),
+                    ),
+                  ),
+              ]),
+            ),
             const SizedBox(height: 12),
             // 📬 نامە (ژ سەرێ ماڵێ هاتنە ڤێرێ)
             ListenableBuilder(
@@ -116,7 +140,7 @@ class ProfileScreen extends StatelessWidget {
                 leading: Badge(
                   isLabelVisible: Backend.instance.unread > 0,
                   label: Text('${Backend.instance.unread}'),
-                  child: const Icon(Icons.mail_rounded, size: 30, color: AppColors.blue),
+                  child: Icon(Icons.mail_rounded, size: 30, color: AppColors.accent),
                 ),
                 title: const Text('📬 نامەیێن من', style: TextStyle(fontWeight: FontWeight.bold)),
                 subtitle: Text(Backend.instance.unread > 0 ? '${Backend.instance.unread} نامێن نوو' : 'هەمی نامە ژ ASP'),
@@ -129,9 +153,9 @@ class ProfileScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [AppColors.blue.withValues(alpha: 0.18), AppColors.green.withValues(alpha: 0.18)]),
+                gradient: LinearGradient(colors: [AppColors.accent.withValues(alpha: 0.18), AppColors.green.withValues(alpha: 0.18)]),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppColors.blue.withValues(alpha: 0.5)),
+                border: Border.all(color: AppColors.accent.withValues(alpha: 0.5)),
               ),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 const Row(children: [

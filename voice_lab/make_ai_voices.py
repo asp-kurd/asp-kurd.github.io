@@ -26,7 +26,7 @@ PIPER = {
 SAME_TEXT = {"de_f": "de", "en_m": "en"}  # هەمان دەق، دەنگەکێ دی
 MMS_RATE = 0.72  # بادینی: هێدیتر و ئارامتر
 # دەمێ شێوازێ دەنگی دگوهۆڕیت، ڤێ ژمارێ زێدە بکە دا هەمی دەنگ ژ نوو بهێنە دروستکرن (بۆ هەر فۆلدەرەکی ب جودا)
-VOICE_VERSION = {"de": "3-clean", "en": "3-clean", "ku": "4-clean", "de_f": "2-clean", "en_m": "2-clean"}
+VOICE_VERSION = {"de": "3-clean", "en": "3-clean", "ku": "4-clean", "de_f": "3-fem", "en_m": "2-clean"}
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
 
 
@@ -252,10 +252,33 @@ CLEAN_CHAIN = ",".join([
 ])
 
 
-def to_mp3(wav_path: str, dst: Path):
+# 👩 دەنگێ ئافرەتێ (kerstin) ب سروشتی نزمە (~167Hz) ➔ بلندتر و نازکتر (~196Hz):
+#    ١) قەبارێ دەنگی ٦٪ بچووکتر (فۆرمانت)  ٢) ١٠٪ بلندتر ب rubberband (فۆرمانت پاراستی)
+#    ئەگەر rubberband نەبیت: تنێ ١٠٪ ب asetrate.
+FEMININE = {
+    "de_f": ("asetrate={sr}*1.06,aresample={sr},atempo=1/1.06,rubberband=pitch=1.10:formant=preserved:pitchq=quality",
+             "asetrate={sr}*1.10,aresample={sr},atempo=1/1.10"),
+}
+
+
+def _wav_rate(path):
+    with wave.open(path, "rb") as w:
+        return w.getframerate()
+
+
+def to_mp3(wav_path: str, dst: Path, lang: str = ""):
     dst.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav_path, "-af", CLEAN_CHAIN,
-                    "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "80k", str(dst)], check=True)
+    chains = [CLEAN_CHAIN]
+    if lang in FEMININE:
+        sr = _wav_rate(wav_path)
+        chains = [c.format(sr=sr) + "," + CLEAN_CHAIN for c in FEMININE[lang]] + [CLEAN_CHAIN]
+    for k, chain in enumerate(chains):
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav_path, "-af", chain,
+                            "-ac", "1", "-ar", "24000", "-codec:a", "libmp3lame", "-b:a", "80k", str(dst)])
+        if r.returncode == 0:
+            return
+        if k == len(chains) - 1:
+            raise RuntimeError("ffmpeg failed")
 
 
 def piper_voice(lang):
@@ -334,7 +357,7 @@ def main():
                 tmp = t.name
             try:
                 say(engine, clean(text), tmp, scale)
-                to_mp3(tmp, OUT / lang / f"{fnv(key)}.mp3")
+                to_mp3(tmp, OUT / lang / f"{fnv(key)}.mp3", lang)
                 total_new += 1
             except Exception as e:  # ئێک دەنگ سەرنەکەفت: بەردەوام بە
                 print(f"  ! {lang} {text[:40]!r}: {e}", flush=True)

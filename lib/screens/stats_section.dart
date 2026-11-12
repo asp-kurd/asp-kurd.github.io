@@ -101,7 +101,7 @@ class _TreeCardState extends State<TreeCard> {
             value: total,
             minHeight: 12,
             backgroundColor: AppColors.fg10,
-            valueColor: const AlwaysStoppedAnimation(AppColors.blue),
+            valueColor: AlwaysStoppedAnimation(AppColors.accent),
           ),
         ),
         const SizedBox(height: 8),
@@ -346,7 +346,7 @@ class StudyChart extends StatelessWidget {
                         height: 4 + 96 * v,
                         margin: const EdgeInsets.symmetric(horizontal: 6),
                         decoration: BoxDecoration(
-                          color: mins[i] > 0 ? AppColors.blue : AppColors.fg12,
+                          color: mins[i] > 0 ? AppColors.accent : AppColors.fg12,
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -373,10 +373,10 @@ class PracticeHeatmap extends StatelessWidget {
 
   Color _level(int xp) {
     if (xp <= 0) return AppColors.fg.withValues(alpha: 0.06);
-    if (xp < 15) return AppColors.blue.withValues(alpha: 0.35);
-    if (xp < 35) return AppColors.blue.withValues(alpha: 0.55);
-    if (xp < 70) return AppColors.blue.withValues(alpha: 0.8);
-    return AppColors.blue;
+    if (xp < 15) return AppColors.accent.withValues(alpha: 0.35);
+    if (xp < 35) return AppColors.accent.withValues(alpha: 0.55);
+    if (xp < 70) return AppColors.accent.withValues(alpha: 0.8);
+    return AppColors.accent;
   }
 
   @override

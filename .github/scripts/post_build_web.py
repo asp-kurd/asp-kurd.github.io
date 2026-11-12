@@ -18,6 +18,7 @@ idx = web / "index.html"
 s = idx.read_text(encoding="utf-8")
 s = re.sub(r'src="flutter_bootstrap\.js(\?v=[^"]*)?"', f'src="flutter_bootstrap.js?v={bid}"', s)
 s = re.sub(r'src="main\.dart\.js(\?v=[^"]*)?"', f'src="main.dart.js?v={bid}"', s)
+s = re.sub(r'href="main\.dart\.js(\?v=[^"]*)?"', f'href="main.dart.js?v={bid}"', s)  # ⚡ preload
 idx.write_text(s, encoding="utf-8")
 print("build id:", bid)
 

@@ -186,7 +186,7 @@ class _QuizScreenState extends State<QuizScreen> {
               if (checked) _feedback(),
               BigButton(
                 label: checked ? tr(ui, 'بەردەوام بە', 'Weiter', 'Continue') : tr(ui, 'پشکنین', 'Prüfen', 'Check'),
-                color: checked ? (ok ? AppColors.green : AppColors.red) : AppColors.blue,
+                color: checked ? (ok ? AppColors.green : AppColors.red) : AppColors.accent,
                 onPressed: checked ? _next : (_canCheck ? _check : null),
               ),
             ]),
@@ -229,7 +229,7 @@ class _QuizScreenState extends State<QuizScreen> {
         child: Container(
           width: size,
           height: size,
-          decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+          decoration: BoxDecoration(color: AppColors.accent, shape: BoxShape.circle),
           child: Icon(icon, color: Colors.white, size: size * 0.55),
         ),
       );
@@ -271,9 +271,9 @@ class _QuizScreenState extends State<QuizScreen> {
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 160),
                     decoration: BoxDecoration(
-                      color: (_state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24)).withValues(alpha: picked == k || _state(k) != null ? 0.2 : 0.06),
+                      color: (_state(k) ?? (picked == k ? AppColors.accent : AppColors.fg24)).withValues(alpha: picked == k || _state(k) != null ? 0.2 : 0.06),
                       borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24), width: 3),
+                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.accent : AppColors.fg24), width: 3),
                     ),
                     child: Center(child: Text(q.options[k], style: TextStyle(fontSize: cols == 3 ? 46 : 60))),
                   ),
@@ -296,9 +296,9 @@ class _QuizScreenState extends State<QuizScreen> {
                     duration: const Duration(milliseconds: 160),
                     padding: const EdgeInsets.symmetric(vertical: 22),
                     decoration: BoxDecoration(
-                      color: (_state(k) ?? (picked == k ? AppColors.blue : AppColors.card)).withValues(alpha: picked == k || _state(k) != null ? 0.25 : 1),
+                      color: (_state(k) ?? (picked == k ? AppColors.accent : AppColors.card)).withValues(alpha: picked == k || _state(k) != null ? 0.25 : 1),
                       borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.blue : AppColors.fg24), width: 3),
+                      border: Border.all(color: _state(k) ?? (picked == k ? AppColors.accent : AppColors.fg24), width: 3),
                     ),
                     child: Column(children: [
                       Text(k == 0 ? '✅' : '❌', style: const TextStyle(fontSize: 34)),

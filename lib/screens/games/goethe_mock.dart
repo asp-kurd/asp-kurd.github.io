@@ -325,7 +325,7 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
       child: Padding(
         padding: const EdgeInsets.only(bottom: 14),
         child: FilledButton.icon(
-          style: FilledButton.styleFrom(backgroundColor: AppColors.blue, padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14)),
+          style: FilledButton.styleFrom(backgroundColor: AppColors.accent, padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14)),
           onPressed: playing || left <= 0 ? null : () => _play(f),
           icon: Icon(playing ? Icons.graphic_eq_rounded : Icons.play_arrow_rounded),
           label: Text(playing ? 'گوهداری بکە…' : (left > 0 ? 'گوهداری (${_ku(left)} جار ماینە)' : 'تە گوهداری کر ✔')),
@@ -362,9 +362,9 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
         margin: const EdgeInsets.only(bottom: 10),
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: sel ? AppColors.blue.withValues(alpha: 0.15) : AppColors.card,
+          color: sel ? AppColors.accent.withValues(alpha: 0.15) : AppColors.card,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: sel ? AppColors.blue : AppColors.fg24, width: 2),
+          border: Border.all(color: sel ? AppColors.accent : AppColors.fg24, width: 2),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Text(label, textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -731,7 +731,7 @@ class _SpeakTaskState extends State<_SpeakTask> {
         child: Container(
           width: size,
           height: size,
-          decoration: BoxDecoration(color: active ? AppColors.red : AppColors.blue, shape: BoxShape.circle),
+          decoration: BoxDecoration(color: active ? AppColors.red : AppColors.accent, shape: BoxShape.circle),
           child: Center(child: SoundWave(active: active, size: size * 0.56)),
         ),
       ),
@@ -748,7 +748,7 @@ class _SpeakTaskState extends State<_SpeakTask> {
         padding: const EdgeInsets.only(top: 8),
         child: InkWell(
           onTap: () => VoiceService.instance.speakText(ex, AppLanguage.german),
-          child: Text('💡 نموونە: $ex 🔊', textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.blue, fontSize: 14)),
+          child: Text('💡 نموونە: $ex 🔊', textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.accent, fontSize: 14)),
         ),
       );
 }

@@ -35,7 +35,7 @@ class _InstallGateScreenState extends State<InstallGateScreen> with SingleTicker
         child: Row(children: [
           CircleAvatar(
             radius: 16,
-            backgroundColor: AppColors.blue,
+            backgroundColor: AppColors.accent,
             child: Text('$n', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900)),
           ),
           const SizedBox(width: 12),
@@ -52,9 +52,9 @@ class _InstallGateScreenState extends State<InstallGateScreen> with SingleTicker
 
   Widget _chip(String t, IconData i) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-        decoration: BoxDecoration(color: AppColors.blue.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(color: AppColors.accent.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(10)),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
-          Icon(i, size: 20, color: AppColors.blue),
+          Icon(i, size: 20, color: AppColors.accent),
           const SizedBox(width: 4),
           Text(t, textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
         ]),
@@ -185,7 +185,7 @@ class _InstallGateScreenState extends State<InstallGateScreen> with SingleTicker
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 3),
                           child: Row(children: [
-                            CircleAvatar(radius: 13, backgroundColor: AppColors.blue,
+                            CircleAvatar(radius: 13, backgroundColor: AppColors.accent,
                                 child: Text(n, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
                             const SizedBox(width: 10),
                             Expanded(child: Text(t, style: const TextStyle(color: Colors.white, fontSize: 15))),
@@ -471,7 +471,7 @@ class _Arrow extends StatelessWidget {
           child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.end, children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              decoration: BoxDecoration(color: AppColors.blue, borderRadius: BorderRadius.circular(14)),
+              decoration: BoxDecoration(color: AppColors.accent, borderRadius: BorderRadius.circular(14)),
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 const Icon(Icons.more_horiz_rounded, color: Colors.white),
                 const SizedBox(width: 6),

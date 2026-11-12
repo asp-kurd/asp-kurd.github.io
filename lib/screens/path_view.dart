@@ -130,7 +130,7 @@ class ShapePainter extends CustomPainter {
         ..strokeWidth = 8
         ..strokeCap = StrokeCap.round
         ..strokeJoin = StrokeJoin.round
-        ..color = AppColors.dark ? const Color(0xFF37464F) : const Color(0xFFE2E6E8);
+        ..color = AppColors.lockFace;
       canvas.drawPath(rp, track);
       if (ring > 0) {
         final prog = Paint()
@@ -165,8 +165,8 @@ class ShapePainter extends CustomPainter {
     final rect = Rect.fromCircle(center: c + Offset(0, dy), radius: r);
     switch (state) {
       case NodeState.locked:
-        lipC = AppColors.dark ? const Color(0xFF26333A) : const Color(0xFFC9CED1);
-        faceP = Paint()..color = AppColors.dark ? const Color(0xFF37464F) : const Color(0xFFE5E8EA);
+        lipC = AppColors.lockLip;
+        faceP = Paint()..color = AppColors.lockFace;
       case NodeState.gold:
         lipC = _goldLip;
         faceP = Paint()
@@ -435,7 +435,7 @@ class _PathNodeViewState extends State<PathNodeView> with SingleTickerProviderSt
     Widget body(double t) {
       final pulse = w.current ? 1 + 0.035 * sin(t * 2 * pi * 2) : 1.0;
       final iconColor = switch (w.state) {
-        NodeState.locked => AppColors.dark ? const Color(0xFF52656D) : const Color(0xFFAFB6BA),
+        NodeState.locked => AppColors.lockIcon,
         _ => Colors.white,
       };
       final (cc, rr) = _fit(w.sides, Offset(s / 2, s / 2 - ShapePainter.lipH / 2), s * 0.30);
@@ -672,13 +672,16 @@ void startPathLesson(BuildContext context, PathLesson l) {
 
 // ═══════════════════════ رێک ═══════════════════════
 /// هەمی رێک وەکی لیستا ویجێتان (د ناڤ ListView ـا سەرەکی دا)
-List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey}) {
+/// [only] = تنێ ئەڤ بەشە (بۆ بەشێن تەمامکری د پرۆفایلێ دا)؛ null = بەشێ نوکە
+List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey, List<PathSection>? only}) {
   final p = ProgressService.instance;
   final boost = RewardsService.instance.boostActive && RewardsService.instance.xpMultiplier >= 2;
   final german = p.targetLang == AppLanguage.german;
   final out = <Widget>[];
   if (boost) out.add(const _BoostBanner());
-  for (final sec in pathSections) {
+  final finished = only == null ? p.finishedSections : const <PathSection>[];
+  if (finished.isNotEmpty) out.add(_FinishedChip(finished));
+  for (final sec in only ?? p.visibleSections) {
     out.add(_SectionHeader(sec));
     if (sec.comingSoon) {
       out.add(const _SoonTeaser());
@@ -697,7 +700,151 @@ List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey
       out.add(const SizedBox(height: 12));
     }
   }
+  // 🔒 بەشێ داهاتی: دیار نابیت هەتا بەشێ نوکە ب دوماهی بهێت — تنێ ئەڤ کارتە
+  if (only == null) {
+    final a = p.activeSection, nx = p.nextSection;
+    if (a != null && nx != null) out.add(_NextSectionCard(a, nx));
+  }
   return out;
+}
+
+/// ✅ «بەشێن تەمامکری د پرۆفایلێ دا نە»
+class _FinishedChip extends StatelessWidget {
+  final List<PathSection> secs;
+  const _FinishedChip(this.secs);
+  @override
+  Widget build(BuildContext context) {
+    final n = ProgressService.instance.nativeLang;
+    return Padding(
+      padding: const EdgeInsets.only(top: 6),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => FinishedSectionScreen(secs.last))),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          decoration: BoxDecoration(
+            color: AppColors.green.withValues(alpha: 0.14),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppColors.green.withValues(alpha: 0.5)),
+          ),
+          child: Row(children: [
+            const Text('✅', style: TextStyle(fontSize: 20)),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                tr(n, '«${secs.last.title(n)}» تەمام بوو 🎉 — نوکە د پرۆفایلا تە دایە', '„${secs.last.title(n)}“ geschafft 🎉 — jetzt in deinem Profil',
+                    '“${secs.last.title(n)}” done 🎉 — now in your profile'),
+                style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.fg, fontSize: 14),
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded, color: AppColors.fg54),
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
+/// 🔒 کارتا بەشێ داهاتی ل دوماهیا بەشێ نوکە
+class _NextSectionCard extends StatelessWidget {
+  final PathSection cur, next;
+  const _NextSectionCard(this.cur, this.next);
+  @override
+  Widget build(BuildContext context) {
+    final p = ProgressService.instance;
+    final n = p.nativeLang;
+    final total = cur.stages.length;
+    final done = cur.stages.where(p.stageDone).length;
+    final left = total - done;
+    return Container(
+      margin: const EdgeInsets.only(top: 10, bottom: 8),
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: AppColors.card,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.7), width: 2),
+      ),
+      child: Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(switch (cur.n) { 1 => '🌱', 2 => '🌿', _ => '🌳' }, style: const TextStyle(fontSize: 34)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Icon(n.direction == TextDirection.rtl ? Icons.arrow_back_rounded : Icons.arrow_forward_rounded, color: AppColors.goldText, size: 28),
+          ),
+          Stack(alignment: Alignment.bottomRight, children: [
+            Opacity(opacity: 0.55, child: Text(switch (next.n) { 2 => '🌿', _ => '🌳' }, style: const TextStyle(fontSize: 34))),
+            const Text('🔒', style: TextStyle(fontSize: 16)),
+          ]),
+        ]),
+        const SizedBox(height: 10),
+        Text(next.title(n), textAlign: TextAlign.center, style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: AppColors.fg)),
+        const SizedBox(height: 6),
+        Text(
+          next.comingSoon
+              ? tr(n, '🔒 زوو دێ ئێت', '🔒 Bald verfügbar', '🔒 Coming soon')
+              : tr(
+                  n,
+                  'دەمێ تو هەمی قۆناغێن «${cur.title(n)}» ب دوماهی بینی، «${next.title(n)}» بۆ تە ڤەدبیت و «${cur.title(n)}» دچیتە د پرۆفایلا تە دا.',
+                  'Wenn du alle Stufen von „${cur.title(n)}“ geschafft hast, öffnet sich „${next.title(n)}“ und „${cur.title(n)}“ wandert in dein Profil.',
+                  'Finish every stage of “${cur.title(n)}” to open “${next.title(n)}”. “${cur.title(n)}” then moves to your profile.'),
+          textAlign: TextAlign.center,
+          style: TextStyle(color: AppColors.fg70, height: 1.6, fontSize: 14),
+        ),
+        const SizedBox(height: 12),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(6),
+          child: LinearProgressIndicator(
+            value: total == 0 ? 0 : done / total,
+            minHeight: 10,
+            color: AppColors.gold,
+            backgroundColor: AppColors.chip,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          left <= 0
+              ? tr(n, 'تەمام! 🎉', 'Geschafft! 🎉', 'Done! 🎉')
+              : tr(n, '${kuNum(left)} قۆناغ ماینە', 'Noch $left Stufen', '$left stages to go'),
+          style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.goldText),
+        ),
+      ]),
+    );
+  }
+}
+
+/// 📚 بەشەکێ تەمامکری (ژ پرۆفایلێ): هەمی وانە بۆ دووبارەکرن و زێڕکرنێ
+class FinishedSectionScreen extends StatefulWidget {
+  final PathSection sec;
+  const FinishedSectionScreen(this.sec, {super.key});
+  @override
+  State<FinishedSectionScreen> createState() => _FinishedSectionScreenState();
+}
+
+class _FinishedSectionScreenState extends State<FinishedSectionScreen> {
+  final _key = GlobalKey();
+  @override
+  Widget build(BuildContext context) {
+    final p = ProgressService.instance;
+    final n = p.nativeLang;
+    final first = pathSections.where((s) => s.n > 0).firstOrNull;
+    final secs = [
+      if (widget.sec == first) ...pathSections.where((s) => s.n == 0),
+      widget.sec,
+    ];
+    return Directionality(
+      textDirection: n.direction,
+      child: Scaffold(
+        appBar: AppBar(title: Text(widget.sec.title(n))),
+        body: ListenableBuilder(
+          listenable: p,
+          builder: (ctx, _) => ListView(
+            padding: const EdgeInsets.fromLTRB(20, 4, 20, 40),
+            children: buildPathItems(ctx, currentKey: _key, only: secs),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 // ═══════════════════════ قۆناغ: دوو ستوون (وەکی خشتێن دیواری) ═══════════════════════
@@ -1058,13 +1205,13 @@ class _StartBubbleState extends State<_StartBubble> with SingleTickerProviderSta
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
           decoration: BoxDecoration(
-            color: AppColors.dark ? const Color(0xFF253740) : Colors.white,
+            color: AppColors.dark ? AppColors.chip : Colors.white,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.fg12, width: 2),
           ),
           child: Text(widget.label, style: TextStyle(color: widget.color, fontWeight: FontWeight.w900, fontSize: 14)),
         ),
-        CustomPaint(size: const Size(14, 7), painter: _Tri(AppColors.dark ? const Color(0xFF253740) : Colors.white)),
+        CustomPaint(size: const Size(14, 7), painter: _Tri(AppColors.dark ? AppColors.chip : Colors.white)),
       ]),
     );
   }

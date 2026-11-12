@@ -250,22 +250,67 @@ class ProgressService extends ChangeNotifier {
   /// قۆناغەکا دەستپێکری و تەمام نەکری (ژ بلی ئەلفوبێ) — دڤێت پێشی ئەو بهێتە تەمامکرن
   PathStage? openStageExcept(PathStage s) {
     for (final x in pathStages) {
-      if (x.section > 0 && x != s && stageOpen(x)) return x;
+      if (x.section > 0 && x != s && _onPath(x) && stageOpen(x)) return x;
     }
     return null;
   }
 
+  // ───────── 📚 بەش: تنێ بەشێ نوکە ل رێکێ دیارە ─────────
+
+  /// بەش تەمام بوو؟ (هەمی قۆناغێن وی)
+  bool sectionDone(PathSection s) => s.stages.isNotEmpty && s.stages.every(stageDone);
+
+  List<PathSection> get _realSections => pathSections.where((s) => s.n > 0 && !s.comingSoon && s.stages.isNotEmpty).toList();
+
+  /// 📍 بەشێ نوکە: ئێکەم بەش کو هێشتا تەمام نەبوویە (بەشێن پشتی وی دیار نابن)
+  PathSection? get activeSection {
+    final secs = _realSections;
+    if (secs.isEmpty) return null;
+    for (final s in secs) {
+      if (!sectionDone(s)) return s;
+    }
+    return secs.last;
+  }
+
+  /// بەشێن ل سەر رێکا سەرەکی: بەشێ نوکە (+ ئەلفوبێ هەتا بەشێ ئێکێ تەمام دبیت)
+  List<PathSection> get visibleSections {
+    final a = activeSection;
+    if (a == null) return pathSections;
+    final first = _realSections.first;
+    return [
+      if (a == first) ...pathSections.where((s) => s.n == 0),
+      a,
+    ];
+  }
+
+  /// بەشێن تەمامکری (دچنە د پرۆفایلێ دا)
+  List<PathSection> get finishedSections {
+    final a = activeSection;
+    if (a == null) return const [];
+    return _realSections.where((s) => s.n < a.n && sectionDone(s)).toList();
+  }
+
+  /// بەشێ پشتی بەشێ نوکە (بۆ «پشتی تەمامکرنێ دێ چییە …»)
+  PathSection? get nextSection {
+    final a = activeSection;
+    if (a == null) return null;
+    return pathSections.where((s) => s.n > a.n).firstOrNull;
+  }
+
+  bool _onPath(PathStage st) => visibleSections.any((s) => s.n == st.section);
+
   /// وانەیا نوکە (بالۆنا «دەستپێبکە» + ئەلقەیا پێشکەفتنێ)
   PathLesson? get currentLesson {
+    final vis = visibleSections.map((s) => s.n).toSet();
     for (final st in pathStages) {
-      if (st.section > 0 && stageOpen(st)) {
+      if (st.section > 0 && vis.contains(st.section) && stageOpen(st)) {
         for (final l in st.lessons) {
           if (!lessonDone(l)) return l;
         }
       }
     }
     for (final l in pathLessons) {
-      if (!lessonDone(l) && lessonUnlocked(l)) return l;
+      if (vis.contains(l.stage.section) && !lessonDone(l) && lessonUnlocked(l)) return l;
     }
     return null;
   }

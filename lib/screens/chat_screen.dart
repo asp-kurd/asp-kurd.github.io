@@ -243,7 +243,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 const SizedBox(width: 8),
                 FloatingActionButton.small(
                   heroTag: 'send',
-                  backgroundColor: AppColors.blue,
+                  backgroundColor: AppColors.accent,
                   foregroundColor: Colors.white,
                   onPressed: sending ? null : _send,
                   child: sending
@@ -260,7 +260,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Widget _bubble(_Msg m) {
     final mine = widget.admin ? !m.fromLearner : m.fromLearner;
-    final color = mine ? AppColors.blue : AppColors.card;
+    final color = mine ? AppColors.accent : AppColors.card;
     return Align(
       // RTL: یێن من ل لایێ راستێ
       alignment: mine ? AlignmentDirectional.centerStart : AlignmentDirectional.centerEnd,

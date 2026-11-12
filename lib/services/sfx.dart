@@ -26,4 +26,9 @@ class Sfx {
   static void star() {
     if (_p.gameSounds) VoiceService.instance.playFx('star');
   }
+
+  /// 🔔 ئاوازا تایبەت یا ASP بۆ نامە و ئاگەهداریان
+  static void notify() {
+    if (_p.gameSounds) VoiceService.instance.playFx('notify');
+  }
 }

@@ -95,3 +95,14 @@ if SP.exists():
         s = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + (SP / "splash.html").read_text(encoding="utf-8"), s, count=1)
         i.write_text(s, encoding="utf-8")
         print("splash added")
+
+# ⚡ زووتر ڤەبوون: فایلێن مەزن ژ دەستپێکێ پێکڤە دهێنە داگرتن
+s = i.read_text(encoding="utf-8")
+if "asp-preload" not in s:
+    pre = ('  <!-- asp-preload -->\n'
+           '  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>\n'
+           '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+           '  <link rel="preload" href="main.dart.js" as="script">\n')
+    s = s.replace("</head>", pre + "</head>", 1)
+    i.write_text(s, encoding="utf-8")
+    print("preload hints added")

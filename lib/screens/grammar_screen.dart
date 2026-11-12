@@ -227,7 +227,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
 
   Widget _tile(int n) {
     final info = Grammar.unitInfo(n);
-    final color = info?.$3 ?? AppColors.blue;
+    final color = info?.$3 ?? AppColors.accent;
     final topics = Grammar.byLektion[n]!;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -289,7 +289,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
   @override
   Widget build(BuildContext context) {
     final lek = Grammar.unitInfo(widget.n);
-    final color = lek?.$3 ?? AppColors.blue;
+    final color = lek?.$3 ?? AppColors.accent;
     final topics = Grammar.byLektion[widget.n] ?? const [];
     final ku = Grammar.kurdish;
     return Directionality(
@@ -383,7 +383,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
             padding: const EdgeInsets.symmetric(vertical: 10),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: sel ? AppColors.blue : Colors.transparent,
+              color: sel ? AppColors.accent : Colors.transparent,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(label,
@@ -725,7 +725,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
                 child: Text(de, textDirection: TextDirection.ltr,
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: AppColors.germanText)),
               ),
-              if (onTap != null) Icon(Icons.volume_up_rounded, color: AppColors.blue, size: 22),
+              if (onTap != null) Icon(Icons.volume_up_rounded, color: AppColors.accent, size: 22),
             ]),
             if (ku.isNotEmpty) ...[
               const SizedBox(height: 4),
@@ -841,7 +841,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
                 Expanded(
                   child: BigButton(
                     label: 'پشکنین',
-                    color: AppColors.blue,
+                    color: AppColors.accent,
                     onPressed: _answerText.trim().isEmpty ? null : _check,
                   ),
                 ),
@@ -859,7 +859,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
         padding: const EdgeInsets.symmetric(vertical: 10),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: sel ? AppColors.blue : AppColors.card,
+          color: sel ? AppColors.accent : AppColors.card,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Text(label, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? Colors.white : AppColors.fg70)),

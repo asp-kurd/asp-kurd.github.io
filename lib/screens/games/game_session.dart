@@ -448,7 +448,7 @@ class _GameResultScreenState extends State<GameResultScreen> {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 _pill(Icons.bolt, AppColors.gold, '+${widget.xp} XP'),
                 const SizedBox(width: 10),
-                _pill(Icons.gps_fixed_rounded, AppColors.blue, '$pct%'),
+                _pill(Icons.gps_fixed_rounded, AppColors.accent, '$pct%'),
                 const SizedBox(width: 10),
                 _pill(Icons.check_circle, AppColors.green, '${widget.correct}'),
                 const SizedBox(width: 10),
@@ -459,7 +459,7 @@ class _GameResultScreenState extends State<GameResultScreen> {
                 width: double.infinity,
                 child: BigButton(
                   label: tr(n, 'دیسا یاری بکە', 'Nochmal', 'Play again'),
-                  color: AppColors.blue,
+                  color: AppColors.accent,
                   icon: Icons.replay_rounded,
                   onPressed: () => Navigator.pushReplacement(
                     context,

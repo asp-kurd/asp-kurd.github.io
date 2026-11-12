@@ -31,7 +31,7 @@ class GamesHubScreen extends StatelessWidget {
               Row(children: [
                 Expanded(
                   child: Text(tr(n, 'کێمەکێ ڤێبوون، هەر رۆژ', 'Ein bisschen Übung, jeden Tag', 'A little practice, every day'),
-                      style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.w600)),
+                      style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.w600)),
                 ),
                 IconButton(
                   icon: Icon(Icons.settings_rounded, color: AppColors.fg70),
@@ -122,7 +122,7 @@ class GamesHubScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.card,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: AppColors.blue.withValues(alpha: 0.5), width: 1.5),
+          border: Border.all(color: AppColors.accent.withValues(alpha: 0.5), width: 1.5),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
@@ -133,7 +133,7 @@ class GamesHubScreen extends StatelessWidget {
           ]),
           const SizedBox(height: 10),
           Text(tr(n, 'جهەکێ باش بۆ دەستپێکێ', 'Ein guter Anfang', 'A good place to start'),
-              style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.w600)),
+              style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.w600)),
           Text(tr(n, 'ئاسانترین رێک', 'Einfachster Modus', 'Easiest Mode'),
               style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
           const SizedBox(height: 6),
@@ -183,9 +183,9 @@ class GamesHubScreen extends StatelessWidget {
   }
 
   Widget _chip(IconData i, String t) => Row(mainAxisSize: MainAxisSize.min, children: [
-        Icon(i, size: 18, color: AppColors.blue),
+        Icon(i, size: 18, color: AppColors.accent),
         const SizedBox(width: 4),
-        Text(t, style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.w600)),
+        Text(t, style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.w600)),
       ]);
 
   Widget _practiceTile(BuildContext context,

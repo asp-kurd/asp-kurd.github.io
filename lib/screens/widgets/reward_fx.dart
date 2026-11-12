@@ -650,7 +650,7 @@ class DinarChip extends StatelessWidget {
             Text('${r.dinar}', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.goldText)),
             if (r.boostActive) ...[
               const SizedBox(width: 4),
-              Text('⚡×${r.xpMultiplier}', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.blue)),
+              Text('⚡×${r.xpMultiplier}', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.accent)),
             ],
           ]),
         ),

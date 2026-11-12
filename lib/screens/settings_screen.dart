@@ -79,14 +79,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
             duration: const Duration(milliseconds: 180),
             padding: const EdgeInsets.symmetric(vertical: 14),
             decoration: BoxDecoration(
-              color: sel ? AppColors.blue.withValues(alpha: 0.15) : AppColors.card,
+              color: sel ? AppColors.accent.withValues(alpha: 0.15) : AppColors.card,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: sel ? AppColors.blue : AppColors.fg12, width: sel ? 2.5 : 1.5),
+              border: Border.all(color: sel ? AppColors.accent : AppColors.fg12, width: sel ? 2.5 : 1.5),
             ),
             child: Column(children: [
               Text(emoji, style: const TextStyle(fontSize: 34)),
               const SizedBox(height: 4),
-              Text(label, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.blue : AppColors.fg)),
+              Text(label, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.accent : AppColors.fg)),
               if (!ok)
                 Text(tr(n, 'زوو دێ هێت', 'bald verfügbar', 'coming soon'), style: TextStyle(fontSize: 11, color: AppColors.fg54)),
             ]),
@@ -102,7 +102,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     ]);
   }
 
-  /// 🌙 تاری · ☀️ رۆهن · 📱 وەکی مۆبایلێ
+  /// 🌙 تاری · ☀️ رۆهن · 📱 وەکی مۆبایلێ · 🌹 سۆر · 🌸 پەمبەیی
   Widget _themePicker(AppLanguage n) {
     final tc = ThemeController.instance;
     Widget opt(String m, String emoji, String label) {
@@ -118,24 +118,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
             margin: const EdgeInsets.symmetric(horizontal: 4),
             padding: const EdgeInsets.symmetric(vertical: 14),
             decoration: BoxDecoration(
-              color: sel ? AppColors.blue.withValues(alpha: 0.18) : AppColors.card,
+              color: sel ? AppColors.accent.withValues(alpha: 0.18) : AppColors.card,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: sel ? AppColors.blue : AppColors.fg12, width: sel ? 2.5 : 1.5),
+              border: Border.all(color: sel ? AppColors.accent : AppColors.fg12, width: sel ? 2.5 : 1.5),
             ),
             child: Column(children: [
               Text(emoji, style: const TextStyle(fontSize: 28)),
               const SizedBox(height: 4),
-              Text(label, textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.blue : AppColors.fg)),
+              Text(label, textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, color: sel ? AppColors.accent : AppColors.fg)),
             ]),
           ),
         ),
       );
     }
 
-    return Row(children: [
-      opt('dark', '🌙', tr(n, 'تاری', 'Dunkel', 'Dark')),
-      opt('light', '☀️', tr(n, 'رۆهن', 'Hell', 'Light')),
-      opt('system', '📱', tr(n, 'وەکی مۆبایلێ', 'Wie Gerät', 'System')),
+    return Column(children: [
+      Row(children: [
+        opt('dark', '🌙', tr(n, 'تاری', 'Dunkel', 'Dark')),
+        opt('light', '☀️', tr(n, 'رۆهن', 'Hell', 'Light')),
+        opt('system', '📱', tr(n, 'وەکی مۆبایلێ', 'Wie Gerät', 'System')),
+      ]),
+      const SizedBox(height: 8),
+      Row(children: [
+        opt('red', '🌹', tr(n, 'سۆر', 'Rot', 'Red')),
+        opt('pink', '🌸', tr(n, 'پەمبەیی', 'Rosa', 'Pink')),
+      ]),
     ]);
   }
 
@@ -225,7 +232,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(color: AppColors.blue.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(14)),
+                decoration: BoxDecoration(color: AppColors.accent.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(14)),
                 child: Text(
                     tr(n, '💡 بۆ دەنگەکێ هەرە زەلال ل iPhone: Settings ➔ Accessibility ➔ Spoken Content ➔ Voices ➔ German ➔ «Anna (Premium)» یان «Helena (Enhanced)» دابەزینە، پاشان ل ڤێرە هەلبژێرە.',
                         '💡 Für die klarste Stimme auf dem iPhone eine Premium-/Enhanced-Stimme herunterladen und hier wählen.',
@@ -255,7 +262,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(16)),
       child: SwitchListTile(
         secondary: Text(emoji, style: const TextStyle(fontSize: 28)),
-        title: Text(title, style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.bold, fontSize: 17)),
+        title: Text(title, style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.bold, fontSize: 17)),
         subtitle: Text(sub, style: TextStyle(color: AppColors.fg60)),
         value: value,
         onChanged: onChanged,
@@ -271,11 +278,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
       margin: const EdgeInsets.only(bottom: 8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
-        side: BorderSide(color: selected ? AppColors.blue : Colors.transparent, width: 1.5),
+        side: BorderSide(color: selected ? AppColors.accent : Colors.transparent, width: 1.5),
       ),
       child: ListTile(
         leading: Icon(selected ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
-            color: selected ? AppColors.blue : AppColors.fg38),
+            color: selected ? AppColors.accent : AppColors.fg38),
         title: Text(title, textDirection: name == null ? null : TextDirection.ltr),
         subtitle: locale.isEmpty ? null : Text(locale, textDirection: TextDirection.ltr, style: TextStyle(color: AppColors.fg54)),
         onTap: () async {

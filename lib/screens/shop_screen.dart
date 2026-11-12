@@ -60,7 +60,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 child: Text(
                     tr(n, 'نوکە ×${r.xpMultiplier} یا چالاکە — ${r.boostLeft.inMinutes}:${(r.boostLeft.inSeconds % 60).toString().padLeft(2, '0')} ماوە',
                         'Aktiv ×${r.xpMultiplier} — noch ${r.boostLeft.inMinutes} Min.', 'Active ×${r.xpMultiplier} — ${r.boostLeft.inMinutes} min left'),
-                    style: const TextStyle(color: AppColors.blue, fontWeight: FontWeight.bold)),
+                    style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.bold)),
               ),
             _item('boost_blue', tr(n, 'XP ×٢ بۆ ٥ خولەکان', 'XP ×2 für 5 Min.', 'XP ×2 for 5 min'),
                 tr(n, 'هەر XPیەک دووجار دبیت', 'Jedes XP zählt doppelt', 'Every XP counts double'), RewardsService.priceBoost5,

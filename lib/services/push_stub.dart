@@ -2,6 +2,7 @@
 bool get pushSupported => false;
 String get pushPermission => 'unsupported';
 Future<Map<String, dynamic>?> subscribePush(String vapidPublicKey) async => null;
+void listenPush(void Function() onPush) {}
 String get platformKind => 'other';
 bool get isStandalone => true;
 bool get canPromptInstall => false;
@@ -14,6 +15,7 @@ bool get isAdminPage => false;
 void prepareAdminHomeScreen() {}
 
 void openUrl(String url) {}
+void openExternal(String url) {}
 bool get oauthOverlay => false;
 bool get inAppBrowser => false;
 bool get iosNonSafari => false;

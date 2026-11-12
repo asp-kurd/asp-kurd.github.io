@@ -52,7 +52,7 @@ class ArticleGameScreen extends StatefulWidget {
 
 class _ArticleGameScreenState extends State<ArticleGameScreen> {
   static final _re = RegExp(r'^(der|die|das) ([A-ZÄÖÜ][^\s,.;·]*)$');
-  static const _colors = {'der': AppColors.blue, 'die': AppColors.red, 'das': AppColors.green};
+  static const _colors = {'der': AppColors.accent, 'die': AppColors.red, 'das': AppColors.green};
   final _rng = Random();
   late List<WordConcept> round;
   int i = 0, correct = 0, xp = 0, streak = 0;
@@ -497,7 +497,7 @@ class MistakesNotebookScreen extends StatelessWidget {
                               decoration: BoxDecoration(color: AppColors.red.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(10)),
                               child: Text('×${_ku(p.mistakes[c.id] ?? 0)}', style: const TextStyle(color: AppColors.red, fontWeight: FontWeight.bold)),
                             ),
-                            IconButton(icon: const Icon(Icons.volume_up_rounded, color: AppColors.blue), onPressed: () => VoiceService.instance.speak(c, t)),
+                            IconButton(icon: Icon(Icons.volume_up_rounded, color: AppColors.accent), onPressed: () => VoiceService.instance.speak(c, t)),
                           ]),
                         ),
                       ),
@@ -807,7 +807,7 @@ class _ColorGameScreenState extends State<ColorGameScreen> {
           onTap: () => _say(word),
           child: Container(
             padding: const EdgeInsets.all(26),
-            decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+            decoration: BoxDecoration(color: AppColors.accent, shape: BoxShape.circle),
             child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 54),
           ),
         ),

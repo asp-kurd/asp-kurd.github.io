@@ -365,7 +365,7 @@ class MascotSays extends StatelessWidget {
   Color get _bubble => switch (mood) {
         MascotMood.happy => AppColors.dark ? const Color(0xFF1F4D1A) : const Color(0xFFE5F7D6),
         MascotMood.sad => AppColors.dark ? const Color(0xFF4D1F23) : const Color(0xFFFFE4E4),
-        _ => AppColors.dark ? const Color(0xFF233640) : Colors.white,
+        _ => AppColors.dark ? AppColors.chip : Colors.white,
       };
   Color get _border => switch (mood) {
         MascotMood.happy => const Color(0xFF58CC02),

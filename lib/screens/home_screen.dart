@@ -379,7 +379,7 @@ class _LearnPathState extends State<_LearnPath> {
       color: AppColors.card,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: ListTile(
-        leading: const Icon(Icons.all_inclusive_rounded, color: AppColors.blue),
+        leading: Icon(Icons.all_inclusive_rounded, color: AppColors.accent),
         title: Text(tr(n, 'ڕاهێنانا ئازاد', 'Freies Training', 'Free practice'),
             style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(tr(n, '٨ پەیڤێن هەڕەمەکی ژ وانەیێن تە', '8 zufällige Wörter', '8 random words from your lessons')),
@@ -405,7 +405,12 @@ class _LearnPathState extends State<_LearnPath> {
         gradient: LinearGradient(
           colors: p.dailyGoalMet
               ? const [Color(0xFFFFC800), Color(0xFFFF9600)]
-              : (AppColors.dark ? const [Color(0xFF202F36), Color(0xFF1A3A4A)] : const [Color(0xFF1CB0F6), Color(0xFF2B70C9)]),
+              : switch (AppColors.mode) {
+                  'light' => const [Color(0xFF1CB0F6), Color(0xFF2B70C9)],
+                  'red' => const [Color(0xFF3A1219), Color(0xFF6A1826)],
+                  'pink' => const [Color(0xFFF472B6), Color(0xFFDB2777)],
+                  _ => const [Color(0xFF202F36), Color(0xFF1A3A4A)],
+                },
         ),
         borderRadius: BorderRadius.circular(20),
       ),

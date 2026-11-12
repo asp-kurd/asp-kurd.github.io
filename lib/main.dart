@@ -33,9 +33,15 @@ import 'screens/path_view.dart' show PathFx;
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
+import 'services/sfx.dart';
+import 'data/glossary.dart';
+import 'data/links.dart';
 import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
+import 'screens/settings_screen.dart';
+import 'screens/social_links.dart';
+import 'screens/widgets/tap_words.dart';
 import 'screens/summary_screen.dart';
 import 'screens/streak_screen.dart';
 import 'screens/widgets/combo.dart' show ToastDemo;
@@ -59,16 +65,21 @@ Future<void> main() async {
   }
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
   await Backend.instance.init();
-  await loadCurriculum(await Backend.instance.contentOverride('curriculum'));
-  await loadClozeBank();
-  await loadBook();
-  await Exams.load();
-  await RewardsService.instance.init();
-  Backend.instance.contentOverride('tree').then(loadTree); // 🌳 ناڤێن دارێ ژ ئەدمینی
+  // ⚡ هەمی پێکڤە (نە ل دویڤ ئێک) ➔ ئەپ زووتر ڤەدبیت
+  await Future.wait<void>([
+    Backend.instance.contentOverride('curriculum', fresh: false).then(loadCurriculum),
+    loadClozeBank(),
+    loadBook(),
+    Exams.load(),
+    RewardsService.instance.init(),
+    VoiceService.instance.init(),
+    CloneService.instance.load(),
+    ThemeController.instance.load(),
+    Glossary.load(),
+    SocialLinks.load(),
+  ]);
+  Backend.instance.contentOverride('tree', fresh: false).then(loadTree); // 🌳 ناڤێن دارێ ژ ئەدمینی
   await ProgressService.instance.init();
-  await VoiceService.instance.init();
-  await CloneService.instance.load();
-  await ThemeController.instance.load();
   // 📲 iPhone: ئەپا سەر شاشێ ب کۆدێ لینکی هەمان هەژمار بەردەوام دکەت (نە ژ نوی)
   final handoff = Uri.base.queryParameters['h'];
   if (adminMode && !isAdminPage) prepareAdminHomeScreen();
@@ -95,9 +106,12 @@ Future<void> main() async {
     ProgressService.instance.targetLang = AppLanguage.english;
   }
   final qt = Uri.base.queryParameters['theme'];
-  if (qt == 'light' || qt == 'dark') AppColors.dark = qt == 'dark';
+  if (qt == 'light' || qt == 'dark' || qt == 'red' || qt == 'pink') AppColors.mode = qt!;
   runApp(const ZimanProApp());
   ThemeController.instance.markStarted();
+  // 🔔 نامەکا نوو ➔ ئاوازا ASP
+  Backend.onIncoming = Sfx.notify;
+  listenPush(() => Backend.instance.loadMessages());
   // Safari ل iPhone: لینکێ ئامادە بکە دا «Add to Home Screen» هەژمارێ دگەل خۆ ببەت
   if (!adminMode && platformKind == 'ios' && !isStandalone && Backend.instance.registered && !Backend.instance.isAdmin) {
     unawaited(Backend.instance.handoffCode().then((c) {
@@ -111,7 +125,7 @@ class ZimanProApp extends StatelessWidget {
 
   static ThemeData _theme() {
     final dark = AppColors.dark;
-    final scheme = ColorScheme.fromSeed(seedColor: AppColors.blue, brightness: dark ? Brightness.dark : Brightness.light);
+    final scheme = ColorScheme.fromSeed(seedColor: AppColors.accent, brightness: dark ? Brightness.dark : Brightness.light);
     return ThemeData(
       useMaterial3: true,
       brightness: dark ? Brightness.dark : Brightness.light,
@@ -188,6 +202,19 @@ class ZimanProApp extends StatelessWidget {
         }(),
       'admintree' => const Scaffold(body: TreeEditor()),
       'chat' => const ChatScreen(),
+      'settings' => const SettingsScreen(),
+      'links' => const SocialLinksEditor(),
+      'gloss' => const _GlossDemo(),
+      'pathdone' => () {
+          // بەشێ ١ تەمام ➔ تنێ بەشێ ٢ ل رێکێ + «بەشێ ١ د پرۆفایلێ دایە»
+          final p = ProgressService.instance;
+          for (final st in pathStages.where((x) => x.section == 1)) {
+            for (final l in st.lessons) {
+              p.pathProg[l.id] = [l.courses, 0];
+            }
+          }
+          return const HomeScreen();
+        }(),
       'path' || 'pathboost' || 'pathcele' => () {
           final p = ProgressService.instance;
           final ls = pathLessons;
@@ -270,4 +297,27 @@ class _FxDemo extends StatelessWidget {
           },
         ),
       );
+}
+
+
+/// 🧪 ?demo=gloss — بالۆنا رامانا پەیڤێ ل سەر وانەکێ
+class _GlossDemo extends StatefulWidget {
+  const _GlossDemo();
+  @override
+  State<_GlossDemo> createState() => _GlossDemoState();
+}
+
+class _GlossDemoState extends State<_GlossDemo> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 8), () {
+      final g = Glossary.lookup('Tisch', AppLanguage.german);
+      if (mounted && g != null) TapWords.showGloss(context, 'Tisch', g, const Offset(214, 300));
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => InteractiveLessonScreen(
+      unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze);
 }

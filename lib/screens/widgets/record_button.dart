@@ -119,7 +119,7 @@ class _RecordButtonState extends State<RecordButton> {
                   width: s,
                   height: s,
                   decoration: BoxDecoration(
-                    color: recording ? AppColors.red : AppColors.blue,
+                    color: recording ? AppColors.red : AppColors.accent,
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white, width: 3),
                   ),

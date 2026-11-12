@@ -722,7 +722,7 @@ class _ShadowingState extends State<_Shadowing> {
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
         const SizedBox(height: 4),
-        Text('💡 ${c.hint(g.target)}', textAlign: TextAlign.center, style: const TextStyle(color: AppColors.blue)),
+        Text('💡 ${c.hint(g.target)}', textAlign: TextAlign.center, style: TextStyle(color: AppColors.accent)),
         Text(c.text(g.native), textDirection: g.native.direction, style: TextStyle(color: AppColors.fg60)),
         const SizedBox(height: 16),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [

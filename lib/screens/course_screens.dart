@@ -88,7 +88,7 @@ class _GrammarLine extends StatelessWidget {
         if (hasLatin)
           IconButton(
             visualDensity: VisualDensity.compact,
-            icon: const Icon(Icons.volume_up_rounded, color: AppColors.blue),
+            icon: Icon(Icons.volume_up_rounded, color: AppColors.accent),
             onPressed: () {
               final de = RegExp(r'[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß ,.!?\-|/…]+').allMatches(text).map((m) => m.group(0)!.trim()).where((s) => s.length > 2).join('. ');
               VoiceService.instance.speakText(de.replaceAll('|', ' '), AppLanguage.german, rate: 0.9);
@@ -225,7 +225,7 @@ class _DialogScreenState extends State<DialogScreen> {
           char: _cast[d.who] ?? MascotChar.forSpeaker(d.who),
           talking: active,
           size: 52,
-          ring: active ? AppColors.gold : (left ? AppColors.blue : AppColors.green),
+          ring: active ? AppColors.gold : (left ? AppColors.accent : AppColors.green),
         ),
       ),
     );
@@ -259,7 +259,7 @@ class _DialogScreenState extends State<DialogScreen> {
             border: Border.all(color: active ? AppColors.gold : AppColors.fg12, width: active ? 2.5 : 1),
           ),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(d.who, textDirection: TextDirection.ltr, style: TextStyle(color: left ? AppColors.blue : AppColors.green, fontWeight: FontWeight.bold)),
+            Text(d.who, textDirection: TextDirection.ltr, style: TextStyle(color: left ? AppColors.accent : AppColors.green, fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
             Text(d.de, textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
             if (showKu) ...[
@@ -550,7 +550,7 @@ class _LetterCardsScreenState extends State<LetterCardsScreen> {
         const SizedBox(height: 14),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           FilledButton.icon(
-            style: FilledButton.styleFrom(backgroundColor: AppColors.blue, padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14)),
+            style: FilledButton.styleFrom(backgroundColor: AppColors.accent, padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14)),
             onPressed: _say,
             icon: const Icon(Icons.volume_up_rounded),
             label: Text(c.text(target), textDirection: TextDirection.ltr),

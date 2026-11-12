@@ -9,6 +9,7 @@ import '../services/backend.dart';
 import '../services/rewards_service.dart';
 import '../ui.dart';
 import 'admin_tools.dart';
+import 'social_links.dart';
 import 'account_screens.dart' show agoKu;
 
 String _initial(dynamic n) {
@@ -127,6 +128,11 @@ class _AdminDashboardState extends State<AdminDashboard> {
         appBar: AppBar(
           title: const Text('🛡️ رێڤەبەریا ASP'),
           actions: [
+            IconButton(
+              tooltip: 'لینکێن پەیوەندیێ',
+              icon: const Icon(Icons.link_rounded),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SocialLinksEditor())),
+            ),
             IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _load),
             IconButton(
               icon: const Icon(Icons.logout_rounded),
@@ -179,7 +185,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
       onRefresh: _load,
       child: ListView(padding: const EdgeInsets.all(14), children: [
         Row(children: [
-          stat('${learners.length}', 'هەمی', AppColors.blue),
+          stat('${learners.length}', 'هەمی', AppColors.accent),
           const SizedBox(width: 8),
           stat('$activeToday', 'ئەڤرۆ', AppColors.green),
           const SizedBox(width: 8),
@@ -219,7 +225,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         },
         leading: Stack(children: [
           CircleAvatar(
-            backgroundColor: AppColors.blue,
+            backgroundColor: AppColors.accent,
             child: Text(_initial(l['name']), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           ),
           if (online)

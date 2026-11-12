@@ -39,6 +39,29 @@ Future<Map<String, dynamic>?> subscribePush(String vapidPublicKey) async {
   return jsonDecode(_stringify(sub).toDart) as Map<String, dynamic>;
 }
 
+/// 🔔 دەمێ Push دگەهیت و ئەپ ڤەکرییە ➔ [onPush] (ئاواز + نویکرنا نامەیان)
+void listenPush(void Function() onPush) {
+  if (!pushSupported) return;
+  try {
+    final c = web.window.navigator.serviceWorker;
+    c.addEventListener('message', ((web.MessageEvent e) {
+      try {
+        final d = e.data as JSObject?;
+        if (d != null && d['asp']?.dartify() == 'push') onPush();
+      } catch (_) {}
+    }).toJS);
+    // push-sw.js یا نوو بینە (بۆ کەسێن بەری نوکە تۆمارکرین)
+    if (web.Notification.permission == 'granted') {
+      () async {
+        try {
+          final r = await c.getRegistration('./push/').toDart;
+          (r as JSObject?)?.callMethod('update'.toJS);
+        } catch (_) {}
+      }();
+    }
+  } catch (_) {}
+}
+
 
 // ───────── 📲 دامەزراندن ل سەر مۆبایلێ (PWA) ─────────
 
@@ -107,6 +130,17 @@ void prepareAdminHomeScreen() {
 
 /// ڤەکرنا لینکێ د هەمان پەنجەرێ دا (بۆ چوونا ژوور ب Google/Facebook)
 void openUrl(String url) => web.window.location.href = url;
+
+/// 🔗 لینکەکێ دەرەکی (Facebook، TikTok …) د پەنجەرەکا نوو دا؛ mailto:/tel: ئێکسەر
+void openExternal(String url) {
+  try {
+    if (url.startsWith('mailto:') || url.startsWith('tel:')) {
+      web.window.location.href = url;
+    } else {
+      web.window.open(url, '_blank');
+    }
+  } catch (_) {}
+}
 
 /// iPhone: Google ل پەنجەرەکا جودا ڤەبوو و زڤڕی (نە ل ناڤ ئەپێ) ➔ تنێ «Done» بکە
 bool get oauthOverlay => globalContext['__aspOAuthDone']?.dartify() == true;

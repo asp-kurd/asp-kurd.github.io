@@ -109,17 +109,30 @@ class Backend extends ChangeNotifier {
       await _p.remove('oauth_hash');
       await _consumeOAuth(oh);
     }
+    // ⚡ بکارهێنەرێ هەی: ئەپ ئێکسەر ب پرۆفایلا پاشەکەفتکری ڤەدبیت؛ تۆڕ ل پشتێ کار دکەت
+    if (profile != null || userId == null) {
+      unawaited(_online().then((_) => notifyListeners()));
+    } else {
+      await _online();
+    }
+  }
+
+  Future<void> _online() async {
     try {
       await _ensureToken().timeout(const Duration(seconds: 6));
       if (userId != null && !isAdmin) {
         await _loadProfile().timeout(const Duration(seconds: 6));
         unawaited(track(open: true));
         unawaited(loadMessages());
+        // 🔔 هەر ٩٠ چرکان: نامەیێن نوو (ئاوازا ASP)
+        _msgPoll ??= Timer.periodic(const Duration(seconds: 90), (_) => loadMessages());
       }
     } catch (_) {
       // بێ ئینتەرنێت: ئەپ ب پرۆفایلا پاشەکەفتکری بەردەوام دبیت
     }
   }
+
+  Timer? _msgPoll;
 
   /// #access_token=…&refresh_token=… ➔ هەژمار
   Future<void> _consumeOAuth(String frag) async {
@@ -238,9 +251,16 @@ class Backend extends ChangeNotifier {
     _p.setInt('sb_exp', _expires.millisecondsSinceEpoch);
   }
 
-  Future<void> _ensureToken() async {
-    if (_refresh == null || _refresh!.isEmpty) return;
-    if (DateTime.now().isBefore(_expires)) return;
+  Future<void>? _refreshing;
+
+  /// نویکرنا تۆکنێ — ئێک داخواز د ئێک دەمی دا (چەند جهـ پێکڤە داخواز بکەن ژی)
+  Future<void> _ensureToken() {
+    if (_refresh == null || _refresh!.isEmpty) return Future.value();
+    if (DateTime.now().isBefore(_expires)) return Future.value();
+    return _refreshing ??= _doRefresh().whenComplete(() => _refreshing = null);
+  }
+
+  Future<void> _doRefresh() async {
     final r = await http.post(Uri.parse('$_base/auth/v1/token?grant_type=refresh_token'),
         headers: {'apikey': AppConfig.supabaseAnonKey, 'Content-Type': 'application/json'},
         body: jsonEncode({'refresh_token': _refresh}));
@@ -618,9 +638,26 @@ class Backend extends ChangeNotifier {
             .map((m) => AppMessage.fromJson(m as Map<String, dynamic>, _readBroadcast))
             .where((m) => m.kind != 'streak') // بیرئینانێن Streak تنێ Push ن
             .toList();
+        _checkIncoming();
         notifyListeners();
       }
     } catch (_) {}
+  }
+
+  /// 🔔 نامەکا نوو گەهشت (نە یا من) ➔ ئاوازا ASP لێ ددەت (main.dart ڤێ دادنیت)
+  static void Function()? onIncoming;
+
+  void _checkIncoming() {
+    var newest = 0;
+    for (final m in [...messages, ...chat]) {
+      if (!m.fromLearner && m.id > newest) newest = m.id;
+    }
+    final seen = _p.getInt('sb_last_in');
+    if (newest == 0 || (seen != null && newest <= seen)) return;
+    _p.setInt('sb_last_in', newest);
+    // جارا ئێکێ (seen == null): تنێ ئەگەر نامەکا نەخواندی هەبیت
+    final unread = [...messages, ...chat].any((m) => !m.fromLearner && !m.read);
+    if (seen != null || unread) onIncoming?.call();
   }
 
   /// 💬 نامێن گفتوگۆیێ (یێن من و ئەدمینی)
@@ -633,6 +670,7 @@ class Backend extends ChangeNotifier {
           headers: _h);
       if (r.statusCode == 200) {
         chat = (jsonDecode(r.body) as List).map((m) => AppMessage.fromJson(m as Map<String, dynamic>, _readBroadcast)).toList();
+        _checkIncoming();
         notifyListeners();
       }
     } catch (_) {}
@@ -833,8 +871,18 @@ class Backend extends ChangeNotifier {
     }
   }
 
-  Future<String?> contentOverride(String key) async {
+  Future<String?> contentOverride(String key, {bool fresh = true}) async {
     if (!enabled) return null;
+    final cached = _p.getString('content_$key');
+    // ⚡ جارا ئێکێ نەبیت: ئێکسەر یا پاشەکەفتکری بدە و ل پشتێ نوی بکە (بۆ جارا دی)
+    if (!fresh && _p.getBool('content_seen_$key') == true) {
+      unawaited(_fetchContent(key));
+      return cached;
+    }
+    return await _fetchContent(key) ?? cached;
+  }
+
+  Future<String?> _fetchContent(String key) async {
     final cached = _p.getString('content_$key');
     try {
       final r = await http
@@ -843,6 +891,7 @@ class Backend extends ChangeNotifier {
           .timeout(const Duration(seconds: 4));
       if (r.statusCode == 200) {
         final list = jsonDecode(r.body) as List;
+        await _p.setBool('content_seen_$key', true);
         if (list.isEmpty) {
           await _p.remove('content_$key');
           return null;

@@ -60,6 +60,7 @@ flutter:
     - assets/goethe.json
     # 📝 رستەیێن جهێ ڤالا (زێدە) بۆ هەر قۆناغەکێ
     - assets/cloze.json
+    - assets/glossary.json
     # 🖼️ وێنەیێن 3D: پەیڤ، دینار، ئاگر/قەشا
     - assets/img/vocab/
     - assets/img/fx/

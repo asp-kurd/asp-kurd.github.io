@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../data/cloze_bank.dart';
@@ -17,6 +18,7 @@ import 'widgets/reward_fx.dart';
 import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 import 'widgets/speak_check.dart';
+import 'widgets/tap_words.dart';
 
 /// شاشەیا وانەیێ: ٤ جۆرێن ڕاهێنانان
 /// - وەرگێڕان (دایک ➔ فێربوون)
@@ -90,6 +92,16 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   bool hasPracticeRecording = false;
   late List<String> options;
 
+  /// 👁️ رامانا رستێ: یا گرتییە هەتا فێرخواز چاڤی ڤەدکەت (یان بەرسڤێ ددەت)
+  bool _showMeaning = false;
+  final List<GestureRecognizer> _tapRec = [];
+  void _clearTaps() {
+    for (final r in _tapRec) {
+      r.dispose();
+    }
+    _tapRec.clear();
+  }
+
   // wordBank
   List<String> bankTiles = [];
   List<int> bankPicked = [];
@@ -130,6 +142,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   void dispose() {
     voice.stopPlayback();
     progress.addStudyTime(_watch.elapsed);
+    _clearTaps();
+    TapWords.hide();
     super.dispose();
   }
 
@@ -274,6 +288,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   void _prepare() {
     _qToken++;
     voice.stopPlayback();
+    TapWords.hide();
+    _showMeaning = false;
     selected = null;
     cz = null;
     checked = false;
@@ -643,7 +659,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                   label: !checked
                       ? tr(native, 'پشکنین', 'Prüfen', 'CHECK')
                       : tr(native, 'بەردەوام بە', 'Weiter', 'CONTINUE'),
-                  color: !checked ? AppColors.blue : (isCorrect ? AppColors.green : AppColors.red),
+                  color: !checked ? AppColors.accent : (isCorrect ? AppColors.green : AppColors.red),
                   onPressed: !canContinue ? null : (checked ? _continue : _check),
                 ),
               ],
@@ -699,7 +715,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             child: Container(
               width: 46,
               height: 46,
-              decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+              decoration: BoxDecoration(color: AppColors.accent, shape: BoxShape.circle),
               child: const Icon(Icons.volume_up_rounded, color: Colors.white, size: 26),
             ),
           ),
@@ -737,19 +753,23 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
               ConceptPic(c, size: hasPic(c) ? 96 : 72),
               const SizedBox(height: 8),
             ],
-            Text(
-              c.text(mainLang),
-              textDirection: mainLang.direction,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg),
-            ),
+            if (mainLang == target)
+              // 👆 پەیڤێن زمانێ فێربوونێ دهێنە تبلکرن ➔ رامان + ئارتیکل
+              TapWords(c.text(mainLang), lang: target, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg))
+            else
+              Text(
+                c.text(mainLang),
+                textDirection: mainLang.direction,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg),
+              ),
             const SizedBox(height: 10),
             if (ex.type == ExerciseType.speak) ...[
               Text(c.text(native), textDirection: native.direction, style: TextStyle(color: AppColors.fg60)),
               const SizedBox(height: 6),
             ],
             if (ex.type != ExerciseType.wordBank || checked)
-              Text('💡 ${c.hint(target)}', textAlign: TextAlign.center, style: const TextStyle(fontSize: 14, color: AppColors.blue)),
+              Text('💡 ${c.hint(target)}', textAlign: TextAlign.center, style: TextStyle(fontSize: 14, color: AppColors.accent)),
             if (!showNative && voice.canSpeak(c, target)) ...[
               const SizedBox(height: 10),
               _soundButton(c, Icons.volume_up_rounded, 1.0, 44),
@@ -766,11 +786,14 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final parts = z.sentence.split('___');
     final fills = (fill ?? '').split(' … ');
     final spans = <InlineSpan>[];
+    _clearTaps();
+    final open = checked || _showMeaning;
     for (var k = 0; k < parts.length; k++) {
-      spans.add(TextSpan(text: parts[k]));
+      // 👆 هەر پەیڤەک دهێتە تبلکرن ➔ رامان + ئارتیکل
+      spans.addAll(TapWords.spans(context, parts[k], target, _tapRec));
       if (k < parts.length - 1) {
         final word = fill == null ? null : (k < fills.length ? fills[k] : fills.last);
-        final color = !checked ? AppColors.blue : (isCorrect ? AppColors.green : AppColors.red);
+        final color = !checked ? AppColors.accent : (isCorrect ? AppColors.green : AppColors.red);
         spans.add(WidgetSpan(
           alignment: PlaceholderAlignment.middle,
           child: AnimatedContainer(
@@ -803,9 +826,52 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             textDirection: target.direction,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, height: 1.7, color: AppColors.fg)),
-        const SizedBox(height: 10),
-        Text('💬 ${z.ku}', textDirection: native.direction, textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 16, color: AppColors.fg60)),
+        const SizedBox(height: 6),
+        // 👁️ چاڤێ گرتی ل زاویێ: ڤەکە ➔ رامانا هەمی رستێ ل بنی دیار دبیت
+        if (!checked)
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: Row(children: [
+              InkWell(
+                borderRadius: BorderRadius.circular(20),
+                onTap: () => setState(() => _showMeaning = !_showMeaning),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: _showMeaning ? AppColors.accent.withValues(alpha: 0.16) : AppColors.cardAlt,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: _showMeaning ? AppColors.accent : AppColors.fg12, width: 1.5),
+                  ),
+                  child: Icon(_showMeaning ? Icons.visibility_rounded : Icons.visibility_off_rounded,
+                      size: 22, color: _showMeaning ? AppColors.accent : AppColors.fg54),
+                ),
+              ),
+              const Spacer(),
+              Text(tr(native, '👆 تبلا خۆ ل پەیڤێ بدە', '👆 Wort antippen', '👆 Tap a word'),
+                  textDirection: native.direction, style: TextStyle(fontSize: 12.5, color: AppColors.fg38)),
+            ]),
+          ),
+        AnimatedSize(
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOut,
+          alignment: Alignment.topCenter,
+          child: !open
+              ? const SizedBox(width: double.infinity)
+              : Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: AppColors.cardAlt,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppColors.accent.withValues(alpha: 0.4), width: 1.5),
+                  ),
+                  child: Text('💬 ${z.ku}',
+                      textDirection: native.direction,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w600, height: 1.6, color: AppColors.fg)),
+                ),
+        ),
       ]),
     );
   }
@@ -817,7 +883,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       child: Container(
         width: size,
         height: size,
-        decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+        decoration: BoxDecoration(color: AppColors.accent, shape: BoxShape.circle),
         child: Icon(icon, color: Colors.white, size: size * 0.55),
       ),
     );
@@ -878,7 +944,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   Color _pickColor(String o) {
     if (checked && o == _correctAnswer) return AppColors.green;
     if (checked && o == selected) return AppColors.red;
-    return selected == o ? AppColors.blue : AppColors.fg24;
+    return selected == o ? AppColors.accent : AppColors.fg24;
   }
 
   /// ✅ / ❌
@@ -1280,8 +1346,8 @@ class _ResultScreenState extends State<_ResultScreen> with SingleTickerProviderS
                     child: OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        side: const BorderSide(color: AppColors.blue, width: 2),
-                        foregroundColor: AppColors.blue,
+                        side: BorderSide(color: AppColors.accent, width: 2),
+                        foregroundColor: AppColors.accent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       ),
                       onPressed: () => widget.onRetry(context),
@@ -1583,7 +1649,7 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
                         onTap: () => _sayLetter(c, 0.7),
                         child: Container(
                           width: 52, height: 52,
-                          decoration: BoxDecoration(color: AppColors.blue.withValues(alpha: 0.2), shape: BoxShape.circle),
+                          decoration: BoxDecoration(color: AppColors.accent.withValues(alpha: 0.2), shape: BoxShape.circle),
                           child: const Center(child: Text('🐢', style: TextStyle(fontSize: 24))),
                         ),
                       ),
@@ -1630,7 +1696,7 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
         child: Container(
           width: size,
           height: size,
-          decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+          decoration: BoxDecoration(color: AppColors.accent, shape: BoxShape.circle),
           child: Icon(Icons.volume_up_rounded, color: Colors.white, size: size * 0.55),
         ),
       );

@@ -97,9 +97,9 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
         margin: const EdgeInsets.only(bottom: 10),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.blue.withValues(alpha: 0.15) : AppColors.card,
+          color: isSelected ? AppColors.accent.withValues(alpha: 0.15) : AppColors.card,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: isSelected ? AppColors.blue : AppColors.fg12, width: 2),
+          border: Border.all(color: isSelected ? AppColors.accent : AppColors.fg12, width: 2),
         ),
         child: Row(
           children: [
@@ -110,11 +110,11 @@ class _LanguageOnboardingScreenState extends State<LanguageOnboardingScreen> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                color: isSelected ? AppColors.blue : AppColors.fg,
+                color: isSelected ? AppColors.accent : AppColors.fg,
               ),
             ),
             const Spacer(),
-            if (isSelected) const Icon(Icons.check_circle, color: AppColors.blue),
+            if (isSelected) Icon(Icons.check_circle, color: AppColors.accent),
           ],
         ),
       ),

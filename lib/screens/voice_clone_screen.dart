@@ -129,7 +129,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
             Text(
               tr(ui, '💡 ل جهەکێ بێدەنگ، مۆبایلێ ١٥ سم دوور بگرە، ب دەنگەکێ ئاسایی بخوینە.',
                   '💡 Ruhiger Ort, Handy 15 cm entfernt, natürlich sprechen.', '💡 Quiet room, phone ~15 cm away, speak naturally.'),
-              style: const TextStyle(color: AppColors.blue, fontSize: 13),
+              style: TextStyle(color: AppColors.accent, fontSize: 13),
             ),
             const SizedBox(height: 10),
             for (final lang in AppLanguage.values) _referenceCard(lang),
@@ -219,7 +219,7 @@ class _VoiceCloneScreenState extends State<VoiceCloneScreen> {
                 if (has)
                   IconButton(
                     tooltip: 'Play',
-                    icon: const Icon(Icons.play_circle_fill_rounded, color: AppColors.blue, size: 36),
+                    icon: Icon(Icons.play_circle_fill_rounded, color: AppColors.accent, size: 36),
                     onPressed: () => voice.playFile(voice.referencePath(lang)),
                   ),
                 RecordButton(
