@@ -441,7 +441,8 @@ bool _showing = false;
 
 /// هەمی خەلاتێن چاڤەڕێ نیشان بدە (پشتی وانێ، ل ماڵێ، پشتی کڕینێ)
 Future<void> showPendingRewards(BuildContext context) async {
-  if (_showing) return;
+  if (_showing || Uri.base.queryParameters['quiet'] == '1') return; // 📸 وێنەیێن تاقیکرنێ
+
   _showing = true;
   try {
     while (context.mounted) {

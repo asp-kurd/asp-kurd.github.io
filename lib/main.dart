@@ -24,6 +24,7 @@ import 'screens/home_screen.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/admin_tools.dart' show TreeEditor;
 import 'screens/install_gate.dart';
+import 'screens/chat_screen.dart';
 import 'screens/shop_screen.dart';
 import 'screens/widgets/reward_fx.dart';
 import 'data/pics.dart';
@@ -186,6 +187,7 @@ class ZimanProApp extends StatelessWidget {
           return InteractiveLessonScreen(unit: u, concepts: u.concepts, onlyType: ExerciseType.cloze);
         }(),
       'admintree' => const Scaffold(body: TreeEditor()),
+      'chat' => const ChatScreen(),
       'path' || 'pathboost' || 'pathcele' => () {
           final p = ProgressService.instance;
           final ls = pathLessons;

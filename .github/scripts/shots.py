@@ -5,10 +5,10 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("splash", "demo=home"), ("path", "demo=path&theme=dark"), ("path_light", "demo=path&theme=light"), ("pathboost", "demo=pathboost&theme=dark"),
-    ("pathcele", "demo=pathcele&theme=dark"), ("home_new", "demo=home&theme=dark"), ("home_en", "demo=home&target=en"),
+    ("splash", "demo=home"), ("path", "demo=path&theme=dark&quiet=1"), ("path_light", "demo=path&theme=light&quiet=1"), ("pathboost", "demo=pathboost&theme=dark&quiet=1"),
+    ("pathcele", "demo=pathcele&theme=dark&quiet=1"), ("home_new", "demo=home&theme=dark"), ("home_en", "demo=home&target=en"),
     ("profile", "demo=profile"), ("lesson_light", "demo=cloze&theme=light"), ("grammar_list", "demo=grammarlist"),
-    ("shop", "demo=shop"), ("gram4", "demo=gram4"), ("home_hdr", "demo=path&theme=light"),
+    ("shop", "demo=shop"), ("gram4", "demo=gram4"), ("home_hdr", "demo=path&theme=light&quiet=1"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -37,7 +37,7 @@ with sync_playwright() as p:
                 for y in range(300, 800, 60):
                     pg.mouse.wheel(0, 0)
                 pg.screenshot(path=f"{out}/{name}_1.png")
-            if name.startswith("path") or name.startswith("home"):
+            if name.startswith("home_"):
                 pg.mouse.click(214, 708); time.sleep(1.2)  # 🎁 دیالۆگا ئەرکان بگرە
                 pg.screenshot(path=f"{out}/{name}.png")
             if name.startswith("path"):

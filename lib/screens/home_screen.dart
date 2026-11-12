@@ -172,20 +172,39 @@ class _LearnPathState extends State<_LearnPath> {
   }
 
   /// 🎯 بچە سەر وانەیا نوکە (ListView تنێ یێن نێزیک ئاڤا دکەت ➔ گاڤ ب گاڤ)
-  void _toCurrent({int tries = 0, bool animate = false}) {
-    if (!mounted || !_scroll.hasClients) return;
-    final ctx = _curKey.currentContext;
-    if (ctx != null) {
-      Scrollable.ensureVisible(ctx, alignment: 0.45, duration: Duration(milliseconds: animate ? 450 : 1));
-      _scrolled = true;
-      return;
+  bool _seeking = false;
+
+  /// تنێ ئێک گەڕیان د ئێک دەم دا (نە ئەو ژ ڤێ ڕێکێ دەرباز ببیت)
+  void _toCurrent({bool animate = false}) {
+    if (_seeking || !mounted || !_scroll.hasClients) return;
+    _seeking = true;
+    final ctx0 = _curKey.currentContext;
+    // دووری ژ سەری ڤە: ئەگەر وانەیا نوکە یا ل خوارێ بیت، ژ سەری دەستپێبکە
+    if (ctx0 == null && _scroll.position.pixels > 0) _scroll.jumpTo(0);
+    void step(int tries) {
+      if (!mounted || !_scroll.hasClients) {
+        _seeking = false;
+        return;
+      }
+      final ctx = _curKey.currentContext;
+      if (ctx != null) {
+        _seeking = false;
+        _scrolled = true;
+        Scrollable.ensureVisible(ctx, alignment: 0.45, duration: Duration(milliseconds: animate ? 450 : 1));
+        return;
+      }
+      final pos = _scroll.position;
+      final next = min(pos.pixels + pos.viewportDimension * 0.8, pos.maxScrollExtent);
+      if (tries > 120 || next <= pos.pixels) {
+        _seeking = false;
+        _scrolled = true;
+        return;
+      }
+      _scroll.jumpTo(next);
+      WidgetsBinding.instance.addPostFrameCallback((_) => step(tries + 1));
     }
-    if (tries > 60) return;
-    final pos = _scroll.position;
-    final next = min(pos.pixels + pos.viewportDimension, pos.maxScrollExtent);
-    if (next <= pos.pixels) return;
-    _scroll.jumpTo(next);
-    WidgetsBinding.instance.addPostFrameCallback((_) => _toCurrent(tries: tries + 1, animate: animate));
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => step(0));
   }
 
   @override
