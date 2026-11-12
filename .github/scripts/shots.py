@@ -5,15 +5,10 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("home_light", "demo=home&theme=light"), ("home_dark", "demo=home&theme=dark"),
-    ("lesson_light", "demo=cloze&theme=light"), ("lesson_dark", "demo=cloze&theme=dark"), ("summary_light", "demo=summary&theme=light"),
-    ("card_light", "demo=card&theme=light"), ("card_dark", "demo=card&theme=dark"),
-    ("pick_light", "demo=pick&theme=light"), ("pick_dark", "demo=pick&theme=dark"), ("mascot", "demo=mascot"), ("grammar_light", "demo=grammar&theme=light"), ("grammar_dark", "demo=grammar&theme=dark"), ("grammar_list", "demo=grammarlist"), ("book", "demo=book"), ("letters", "demo=letters"), ("article", "demo=article"), ("conj", "demo=conj"), ("goethe", "demo=goethe"), ("backup", "demo=backup"), ("adminpage", "asp-d7k2/"), ("book_en", "demo=book&target=en"), ("gram_en", "demo=gram4&target=en"), ("games_en", "demo=games&target=en"), ("conj_en", "demo=conj&target=en"), ("home_en", "demo=home&target=en"), ("leader", "demo=leader"), ("games", "demo=games&theme=light"), ("gram4", "demo=gram4"), ("gpractice", "demo=gpractice"),
-    ("streak", "demo=streak"), ("toast", "demo=toast"), ("combo15", "demo=combo"), ("combo10", "demo=combo10"),
-    ("shop", "demo=shop"), ("shop_dark", "demo=shop&theme=dark"), ("fire", "demo=fire"), ("fxfreeze", "demo=fxfreeze"), ("fxshatter", "demo=fxshatter"),
-    ("fxsmoke", "demo=fxsmoke"), ("reward", "demo=reward"), ("pics", "demo=pics&theme=light"), ("pics_dark", "demo=pics&theme=dark"),
-    ("match", "demo=match&theme=light"), ("cloze2", "demo=cloze2&theme=light"), ("admintree", "demo=admintree"), ("home_hdr", "demo=home&theme=light"),
-    ("gate", "demo=gate"), ("register", "demo=register"), ("login", "demo=login"), ("guestlock", "demo=guestlock"), ("profile", "demo=profile"),
+    ("splash", "demo=home"), ("path", "demo=path&theme=dark"), ("path_light", "demo=path&theme=light"), ("pathboost", "demo=pathboost&theme=dark"),
+    ("pathcele", "demo=pathcele&theme=dark"), ("home_new", "demo=home&theme=dark"), ("home_en", "demo=home&target=en"),
+    ("profile", "demo=profile"), ("lesson_light", "demo=cloze&theme=light"), ("grammar_list", "demo=grammarlist"),
+    ("shop", "demo=shop"), ("gram4", "demo=gram4"), ("home_hdr", "demo=path&theme=light"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -23,7 +18,14 @@ with sync_playwright() as p:
         pg.on("console", lambda m: logs.append(f"[{m.type}] {m.text}"))
         pg.on("pageerror", lambda e: logs.append(f"[pageerror] {e}"))
         try:
-            pg.goto(f"http://127.0.0.1:8080/{q}" if q.startswith("asp-") else f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
+            if name == "splash":
+                # ✨ شاشا دەستپێکێ: وێنە ل دەمێن جودا
+                pg.goto(f"http://127.0.0.1:8080/?{q}", wait_until="domcontentloaded", timeout=60000)
+                for k, t in enumerate((0.35, 0.5, 0.5, 0.6, 0.8)):
+                    time.sleep(t); pg.screenshot(path=f"{out}/{name}_{k}.png")
+                pg.wait_for_load_state("networkidle")
+            else:
+                pg.goto(f"http://127.0.0.1:8080/{q}" if q.startswith("asp-") else f"http://127.0.0.1:8080/?{q}", wait_until="networkidle", timeout=60000)
             if name.startswith("fx"):
                 # ئەنیمەیشن: وێنە ل دەمێن جودا
                 for k in range(8):
@@ -31,7 +33,15 @@ with sync_playwright() as p:
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
             if name == "home_hdr":
-                pg.mouse.click(214, 600); time.sleep(1.5); pg.screenshot(path=f"{out}/{name}_2.png")
+                # بچە سەر وانەیا نوکە و بکە تپ ➔ پەڕێ وانێ
+                for y in range(300, 800, 60):
+                    pg.mouse.wheel(0, 0)
+                pg.screenshot(path=f"{out}/{name}_1.png")
+            if name.startswith("path"):
+                for k in range(3):
+                    time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_a{k}.png")
+                pg.mouse.wheel(0, 900); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_down.png")
+                pg.mouse.wheel(0, 2400); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_down2.png")
             if name == "toast":
                 for k in range(16):
                     time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_{k:02d}.png")

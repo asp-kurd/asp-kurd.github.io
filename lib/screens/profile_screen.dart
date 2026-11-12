@@ -205,6 +205,16 @@ class ProfileScreen extends StatelessWidget {
               if (ok == true) await p.resetAll();
             },
           ),
+          const SizedBox(height: 26),
+          // 🏷️ ڤێرژنا ئەپێ
+          Center(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              decoration: BoxDecoration(color: AppColors.chip, borderRadius: BorderRadius.circular(20)),
+              child: Text('asp 2.22', textDirection: TextDirection.ltr,
+                  style: TextStyle(color: AppColors.fg60, fontWeight: FontWeight.bold, letterSpacing: 0.5)),
+            ),
+          ),
           const SizedBox(height: 18),
           // 🛡️ ئەدمین ل ڤێرە نینە: تنێ ب لینکێ تایبەت (?admin=...) ڤەدبیت
         ],

@@ -74,3 +74,16 @@ if "__aspOAuth" not in s:
     s = s.replace("<head>", "<head>\n  " + js, 1)
     i.write_text(s, encoding="utf-8")
     print("oauth hash capture added")
+
+# ✨ شاشا دەستپێکێ (ASP-POYA): هەر جارا ئەپ ڤەدبیت، هەتا Flutter ئامادە دبیت (کێمتر نە ژ ~٣ چرکان)
+SP = Path("branding/web/splash")
+if SP.exists():
+    Path("web/splash").mkdir(parents=True, exist_ok=True)
+    for f in SP.iterdir():
+        if f.name != "splash.html":
+            shutil.copy(f, Path("web/splash") / f.name)
+    s = i.read_text(encoding="utf-8")
+    if "asp-splash" not in s:
+        s = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + (SP / "splash.html").read_text(encoding="utf-8"), s, count=1)
+        i.write_text(s, encoding="utf-8")
+        print("splash added")

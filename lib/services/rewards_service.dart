@@ -112,6 +112,12 @@ class RewardsService extends ChangeNotifier {
   int freezes = 0;
   int xpGoal = 0; // 0 = نینە
   int _boostUntil = 0, _boostMult = 1;
+
+  /// تنێ بۆ وێنەیێن تاقیکرنێ (?demo=pathboost)
+  void demoBoost() {
+    _boostUntil = DateTime.now().add(const Duration(minutes: 7)).millisecondsSinceEpoch;
+    _boostMult = 2;
+  }
   final List<RewardEvent> pending = [];
   AppLifecycleListener? _life;
   List<DailyQuest> quests = [];

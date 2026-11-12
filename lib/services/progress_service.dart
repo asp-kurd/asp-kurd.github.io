@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/path.dart';
+
 import '../data/curriculum.dart';
 import '../data/tree.dart';
 import '../models.dart';
@@ -38,6 +40,13 @@ class ProgressService extends ChangeNotifier {
   int dailyGoal = 30; // XP
   int todayXp = 0;
   int lessonsDone = 0;
+
+  // ───────── 🛤️ رێکا نوو (asp 2.22) ─────────
+  /// وانە ➔ [کۆرسێن تەمامکری، زێڕ ٠/١]
+  Map<String, List<int>> pathProg = {};
+
+  /// قۆناغێن فێرخواز بازدایە سەر (Jump)
+  Set<String> pathJumped = {};
   int perfectLessons = 0;
   int bestStreak = 0;
 

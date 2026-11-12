@@ -34,7 +34,25 @@ class InteractiveLessonScreen extends StatefulWidget {
 
   /// 📌 بۆ کارێن مامۆستای (ئەزموونا دیاری / دووبارەکرن): ڕێژا ٪ پشتی تەمامبوونێ
   final void Function(int percent)? onDone;
-  const InteractiveLessonScreen({super.key, required this.unit, required this.concepts, this.onlyType, this.onDone});
+
+  /// 🛤️ رێکا نوو: false ➔ قۆناغا کەڤن ب خۆ تەمام نابیت (وانە ب کۆرسان دهێتە هەژمارتن)
+  final bool countUnit;
+
+  /// 🏅 دووبارەکرنا زێڕ: پرسیارێن ب زەحمەتتر و تێکەل
+  final bool hard;
+
+  /// 🔁 وانەیەکا تەمامکری دووبارە دبیت ➔ XP ١ بۆ هەر بەرسڤەکا دروست
+  final bool redo;
+  const InteractiveLessonScreen({
+    super.key,
+    required this.unit,
+    required this.concepts,
+    this.onlyType,
+    this.onDone,
+    this.countUnit = true,
+    this.hard = false,
+    this.redo = false,
+  });
 
   @override
   State<InteractiveLessonScreen> createState() => _InteractiveLessonScreenState();
@@ -133,6 +151,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ];
     }
     if (widget.onlyType != null) return [for (final c in concepts) Exercise(c, widget.onlyType!)];
+    if (widget.hard) return _hardQueue(concepts);
     final offset = _rng.nextInt(cycle.length);
     for (var i = 0; i < concepts.length; i++) {
       final c = concepts[i];
@@ -166,6 +185,45 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     if (concepts.length >= 4) {
       final pos = _rng.nextInt((list.length / 2).ceil() + 1);
       list.insert(pos, Exercise(concepts.first, ExerciseType.match, group: (concepts.toList()..shuffle(_rng)).take(4).toList()));
+    }
+    return list;
+  }
+
+  /// 🏅 زێڕ: هەر پەیڤەک دوو جاران ب شێوازێن ب زەحمەت (ئاڤاکرنا رستێ، گوهداری، جهێ ڤالا، ئاخفتن)
+  List<Exercise> _hardQueue(List<WordConcept> concepts) {
+    const hardCycle = [
+      ExerciseType.translate,
+      ExerciseType.listen,
+      ExerciseType.cloze,
+      ExerciseType.reverse,
+      ExerciseType.translate,
+      ExerciseType.speak,
+      ExerciseType.cloze,
+    ];
+    final list = <Exercise>[];
+    final off = _rng.nextInt(hardCycle.length);
+    for (var pass = 0; pass < 2; pass++) {
+      final cs = [...concepts]..shuffle(_rng);
+      for (var i = 0; i < cs.length; i++) {
+        final c = cs[i];
+        var type = hardCycle[(i + off + pass * 3) % hardCycle.length];
+        if (type == ExerciseType.listen && (!voice.canSpeak(c, target) || progress.listenPaused)) type = ExerciseType.translate;
+        if (type == ExerciseType.speak && progress.speakPaused) type = ExerciseType.translate;
+        if (type == ExerciseType.cloze && _clozeFor(c) == null) type = ExerciseType.translate;
+        if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
+        list.add(Exercise(c, type));
+      }
+    }
+    if (widget.unit != null) {
+      final bank = clozeBankFor(widget.unit!.id, target).toList()..shuffle(_rng);
+      bank.sort((a, b) => (b.multi ? 1 : 0) - (a.multi ? 1 : 0)); // ٢ جهێن ڤالا ل پێشیێ
+      for (final e in bank.take(3)) {
+        final c = concepts.firstWhere((x) => x.id == e.conceptId, orElse: () => concepts[_rng.nextInt(concepts.length)]);
+        list.insert(1 + _rng.nextInt(list.length), Exercise(c, ExerciseType.cloze, cloze: e.info));
+      }
+    }
+    if (concepts.length >= 4) {
+      list.insert(list.length ~/ 2, Exercise(concepts.first, ExerciseType.match, group: (concepts.toList()..shuffle(_rng)).take(5).toList()));
     }
     return list;
   }
@@ -369,7 +427,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       Sfx.wrong();
     }
     // ⚡ کۆمبۆ + XP بۆ ڤێ بەرسڤێ
-    final gained = ex.type == ExerciseType.speak ? ((_speechPct ?? 100) >= 50 ? 2 : 0) : progress.registerAnswer(ok);
+    var gained = ex.type == ExerciseType.speak ? ((_speechPct ?? 100) >= 50 ? 2 : 0) : progress.registerAnswer(ok);
+    if (widget.redo && gained > 0) gained = 1; // 🔁 دووبارەکرن: XP ١ بۆ هەر بەرسڤەکێ
     answerXp += gained;
     if (gained > 0) showXpPop(context, gained, combo: progress.combo);
     if (ok && ex.type != ExerciseType.speak && progress.combo > 0 && progress.combo % 5 == 0) {
@@ -449,10 +508,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   }
 
   Future<void> _finish() async {
-    final xp = 10 + answerXp;
+    final xp = (widget.redo ? 0 : 10) + answerXp;
     final percent = totalInitial == 0 ? 100 : (firstCorrect * 100 / totalInitial).round().clamp(0, 100);
     final perfect = percent >= 100;
-    await progress.completeLesson(unitId: widget.unit?.id, earnedXp: xp, perfect: perfect, percent: percent);
+    await progress.completeLesson(unitId: widget.countUnit ? widget.unit?.id : null, earnedXp: xp, perfect: perfect, percent: percent);
     widget.onDone?.call(percent);
     Sfx.done();
     if (!mounted) return;
@@ -468,7 +527,15 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
           correct: firstCorrect.clamp(0, totalInitial),
           total: totalInitial,
           onRetry: (ctx) => Navigator.pushReplacement(
-              ctx, MaterialPageRoute(builder: (_) => InteractiveLessonScreen(unit: unit, concepts: concepts))),
+              ctx,
+              MaterialPageRoute(
+                  builder: (_) => InteractiveLessonScreen(
+                      unit: unit,
+                      concepts: concepts,
+                      countUnit: widget.countUnit,
+                      hard: widget.hard,
+                      redo: widget.redo || !widget.countUnit, // 🛤️ دووبارەکرنا هەمان کۆرسێ ➔ XP ١
+                      onDone: widget.countUnit ? widget.onDone : null))),
         ),
       ),
     );
@@ -1287,7 +1354,9 @@ enum _LetterQ { nameToLetter, listenToLetter, letterToName, wordToLetter }
 
 class LetterLessonScreen extends StatefulWidget {
   final LessonUnit unit;
-  const LetterLessonScreen({super.key, required this.unit});
+  final bool countUnit;
+  final void Function(int percent)? onDone;
+  const LetterLessonScreen({super.key, required this.unit, this.countUnit = true, this.onDone});
 
   @override
   State<LetterLessonScreen> createState() => _LetterLessonScreenState();
@@ -1419,7 +1488,8 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
     }
     final xp = 10 + answerXp;
     final percent = total == 0 ? 100 : (firstTry * 100 / total).round().clamp(0, 100);
-    await progress.completeLesson(unitId: widget.unit.id, earnedXp: xp, perfect: percent >= 100, percent: percent);
+    await progress.completeLesson(unitId: widget.countUnit ? widget.unit.id : null, earnedXp: xp, perfect: percent >= 100, percent: percent);
+    widget.onDone?.call(percent);
     Sfx.done();
     if (!mounted) return;
     final unit = widget.unit;
@@ -1433,7 +1503,8 @@ class _LetterLessonScreenState extends State<LetterLessonScreen> {
           percent: percent,
           correct: firstTry.clamp(0, total),
           total: total,
-          onRetry: (ctx) => Navigator.pushReplacement(ctx, MaterialPageRoute(builder: (_) => LetterLessonScreen(unit: unit))),
+          onRetry: (ctx) => Navigator.pushReplacement(
+              ctx, MaterialPageRoute(builder: (_) => LetterLessonScreen(unit: unit, countUnit: widget.countUnit))),
         ),
       ),
     );

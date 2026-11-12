@@ -283,7 +283,9 @@ void openLektionTest(BuildContext context, LektionInfo l) {
     MaterialPageRoute(
       builder: (_) => QuizScreen(
         examId: 'lek_${l.n}',
-        title: tr(_ui, 'ئەزموونا وانا ${l.n}', 'Test Lektion ${l.n}', 'Lesson ${l.n} test'),
+        title: l.n > 14
+            ? tr(_ui, 'ئەزموونا A2 · وانا ${l.n - 14}', 'Test A2 · Lektion ${l.n - 14}', 'A2 lesson ${l.n - 14} test')
+            : tr(_ui, 'ئەزموونا وانا ${l.n}', 'Test Lektion ${l.n}', 'Lesson ${l.n} test'),
         questions: qs,
       ),
     ),

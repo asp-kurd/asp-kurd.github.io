@@ -27,6 +27,8 @@ import 'screens/install_gate.dart';
 import 'screens/shop_screen.dart';
 import 'screens/widgets/reward_fx.dart';
 import 'data/pics.dart';
+import 'data/path.dart';
+import 'screens/path_view.dart' show PathFx;
 import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
@@ -184,6 +186,17 @@ class ZimanProApp extends StatelessWidget {
           return InteractiveLessonScreen(unit: u, concepts: u.concepts, onlyType: ExerciseType.cloze);
         }(),
       'admintree' => const Scaffold(body: TreeEditor()),
+      'path' || 'pathboost' || 'pathcele' => () {
+          final p = ProgressService.instance;
+          final ls = pathLessons;
+          for (var i = 0; i < 11 && i < ls.length; i++) {
+            p.pathProg[ls[i].id] = [ls[i].courses, (i == 2 || i == 4 || i == 7 || i == 8) ? 1 : 0];
+          }
+          if (ls.length > 11) p.pathProg[ls[11].id] = [2, 0];
+          if (d == 'pathboost') RewardsService.instance.demoBoost();
+          if (d == 'pathcele') PathFx.pendingGold = ls[7].id;
+          return const HomeScreen();
+        }(),
       'lesson' => InteractiveLessonScreen(unit: appCurriculum[10], concepts: appCurriculum[10].concepts),
       _ => null,
     };

@@ -17,6 +17,9 @@ import 'widgets/combo.dart' show kuNum;
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
 import 'lesson_screen.dart';
+import 'path_view.dart';
+import 'dart:math' show min;
+import '../data/path.dart';
 import 'profile_screen.dart';
 import 'shop_screen.dart';
 import 'teacher_tasks.dart';
@@ -131,18 +134,83 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// رێکا وانەیان (Skill path)
-class _LearnPath extends StatelessWidget {
+/// رێکا وانەیان (Skill path) — asp 2.22: بەش ➔ قۆناغ ➔ وانە (شێوە) ➔ کۆرس
+class _LearnPath extends StatefulWidget {
   const _LearnPath();
+
+  @override
+  State<_LearnPath> createState() => _LearnPathState();
+}
+
+class _LearnPathState extends State<_LearnPath> {
+  final _scroll = ScrollController();
+  final _curKey = GlobalKey();
+  bool _scrolled = false;
+  bool _showJump = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_onScroll);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _toCurrent());
+  }
+
+  @override
+  void dispose() {
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  void _onScroll() {
+    final ctx = _curKey.currentContext;
+    var off = true;
+    if (ctx != null) {
+      final box = ctx.findRenderObject() as RenderBox?;
+      if (box != null && box.attached) {
+        final y = box.localToGlobal(Offset.zero).dy;
+        final h = MediaQuery.of(context).size.height;
+        off = y < 60 || y > h - 120;
+      }
+    }
+    if (off != _showJump) setState(() => _showJump = off);
+  }
+
+  /// 🎯 بچە سەر وانەیا نوکە (ListView تنێ یێن نێزیک ئاڤا دکەت ➔ گاڤ ب گاڤ)
+  void _toCurrent({int tries = 0, bool animate = false}) {
+    if (!mounted || !_scroll.hasClients) return;
+    final ctx = _curKey.currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(ctx, alignment: 0.45, duration: Duration(milliseconds: animate ? 450 : 1));
+      _scrolled = true;
+      return;
+    }
+    if (tries > 60) return;
+    final pos = _scroll.position;
+    final next = min(pos.pixels + pos.viewportDimension, pos.maxScrollExtent);
+    if (next <= pos.pixels) return;
+    _scroll.jumpTo(next);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _toCurrent(tries: tries + 1, animate: animate));
+  }
 
   @override
   Widget build(BuildContext context) {
     final p = ProgressService.instance;
     final n = p.nativeLang;
     final weak = p.weakConcepts;
+    // 🏅 ئاهەنگا زێڕ / قۆناغ تەمام (پشتی زڤڕینێ ژ وانێ)
+    if (PathFx.pendingGold != null || PathFx.pendingStage != null || PathFx.goldFailed) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && (ModalRoute.of(context)?.isCurrent ?? false)) maybeCelebratePath(context);
+      });
+    }
+    if (!_scrolled) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => _toCurrent());
+    }
 
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 8, 20, 40),
+    return Stack(children: [
+      ListView(
+      controller: _scroll,
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 90),
       children: [
         if (Backend.instance.registered)
           Padding(
@@ -232,33 +300,27 @@ class _LearnPath extends StatelessWidget {
         const SizedBox(height: 8),
         // 🇩🇪 تاقیکرنا ئاستی و ئەزموونا A1 یێن ئەلمانینە
         if (p.targetLang == AppLanguage.german) ...[_examCards(context, p), const SizedBox(height: 12)],
-        for (var i = 0; i < appCurriculum.length; i++) ...[
-          if (i == 0 || appCurriculum[i].section != appCurriculum[i - 1].section) _sectionHeader(appCurriculum[i].section, n),
-          _unitBlock(context, i),
-          // 📝 ئەزموونا وانێ: پشتی دویماهیک قۆناغا وێ (هەر کەسێ بڤێت)
-          if ((i == appCurriculum.length - 1 || appCurriculum[i + 1].section != appCurriculum[i].section) &&
-              lektionForSection(appCurriculum[i].section) != null &&
-              p.targetLang == AppLanguage.german)
-            ...[
-              _lektionTestCard(context, lektionForSection(appCurriculum[i].section)!, i, n),
-              // 🪙 پشتی ئەزموونێ: پرسیارا دیاریێ (+١٠ دینار)
-              ExamCoinNode(examId: 'lek_${lektionForSection(appCurriculum[i].section)!.n}', section: appCurriculum[i].section),
-            ],
-        ],
-        if (p.completedUnits.length >= appCurriculum.length)
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(18)),
-            child: Text(
-              tr(n, '👑 تە هەمی قۆناغ تەمام کرن! ب «ڕاهێنانا ئازاد» بەردەوام بە دا ژ بیر نەکەی.',
-                  '👑 Alle Einheiten geschafft! Übe weiter mit „Freies Training“.',
-                  '👑 All units done! Keep practising with Free practice.'),
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ),
+        ...buildPathItems(context, currentKey: _curKey),
+        Padding(
+          padding: const EdgeInsets.only(top: 18),
+          child: Center(child: Text('asp 2.22', style: TextStyle(color: AppColors.fg30, fontSize: 12))),
+        ),
       ],
-    );
+    ),
+      if (_showJump && p.currentLesson != null)
+        Positioned(
+          bottom: 16,
+          left: n.direction == TextDirection.rtl ? 16 : null,
+          right: n.direction == TextDirection.rtl ? null : 16,
+          child: FloatingActionButton.small(
+            heroTag: 'toCurrent',
+            backgroundColor: p.currentLesson!.stage.color,
+            foregroundColor: Colors.white,
+            onPressed: () => _toCurrent(animate: true),
+            child: const Icon(Icons.my_location_rounded),
+          ),
+        ),
+    ]);
   }
 
   /// 🎯 تاقیکرنا ئاستی + 🏆 ئەزموونا A1
@@ -292,118 +354,6 @@ class _LearnPath extends StatelessWidget {
     ]);
   }
 
-  Widget _sectionHeader(int section, AppLanguage n) {
-    final title = section - 1 < appSections.length ? appSections[section - 1].title(n) : '';
-    final lek = lektionForSection(section);
-    // Lektion (دیالۆگ + رێزمان) ژ پەرتووکا ئەلمانی نە — بۆ ئینگلیزی سەرناڤەکێ ئاسایی
-    if (lek != null && ProgressService.instance.targetLang == AppLanguage.german) return _lektionHeader(lek, title, n);
-    return Padding(
-      padding: const EdgeInsets.only(top: 8, bottom: 16),
-      child: Row(children: [
-        Expanded(child: Divider(color: AppColors.fg24)),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(title, style: TextStyle(color: AppColors.fg70, fontWeight: FontWeight.bold)),
-        ),
-        Expanded(child: Divider(color: AppColors.fg24)),
-      ]),
-    );
-  }
-
-  /// سەرێ وانەیەکا پەرتووکێ: ناڤ + 💬 دیالۆگ + 📝 ئەزموون
-  Widget _lektionHeader(LektionInfo lek, String title, AppLanguage n) {
-    return Builder(builder: (context) {
-      return Container(
-        margin: const EdgeInsets.only(top: 12, bottom: 18),
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: lek.color.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: lek.color.withValues(alpha: 0.6), width: 1.5),
-        ),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Text(title, style: TextStyle(fontFamily: 'Sarchia', fontSize: 19, color: lek.color, fontWeight: FontWeight.bold)),
-          Text(lek.titleDe, textDirection: TextDirection.ltr, textAlign: TextAlign.end,
-              style: TextStyle(color: AppColors.fg60, fontSize: 13)),
-          const SizedBox(height: 10),
-          Row(children: [
-            Expanded(
-              child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DialogScreen(lektion: lek))),
-                icon: const Text('💬'),
-                label: Text(tr(n, 'دیالۆگ', 'Dialog', 'Dialogue')),
-              ),
-            ),
-            const SizedBox(width: 8),
-            Expanded(
-              child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: AppColors.fg, side: BorderSide(color: AppColors.fg30)),
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => GrammarLektionScreen(n: lek.n))),
-                icon: const Text('📘'),
-                label: Text(tr(n, 'رێزمان', 'Grammatik', 'Grammar')),
-              ),
-            ),
-          ]),
-        ]),
-      );
-    });
-  }
-
-  /// 🏁 ئەزموونا وانێ — پشتی قۆناغێن وێ (نە بەری)
-  Widget _lektionTestCard(BuildContext context, LektionInfo lek, int lastIndex, AppLanguage n) {
-    final p = ProgressService.instance;
-    final best = p.examBest('lek_${lek.n}');
-    final units = appCurriculum.where((u) => u.section == appCurriculum[lastIndex].section);
-    final ready = units.every((u) => p.completedUnits.contains(u.id));
-    final passed = best != null && best >= 60;
-    return Padding(
-      padding: const EdgeInsets.only(top: 4, bottom: 22),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () {
-          if (!ready) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text(tr(n, 'پێشی قۆناغێن ڤێ وانێ تەمام بکە، پاشان ئەزموون ڤەدبیت 🔒',
-                    'Schließe zuerst die Einheiten ab 🔒', 'Finish this lesson’s units first 🔒'))));
-            return;
-          }
-          openLektionTest(context, lek);
-        },
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            gradient: ready
-                ? LinearGradient(colors: passed ? const [Color(0xFF58CC02), Color(0xFF2E9E00)] : [lek.color, lek.color.withValues(alpha: 0.7)])
-                : null,
-            color: ready ? null : AppColors.card,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: ready ? Colors.transparent : AppColors.fg12, width: 1.5),
-          ),
-          child: Row(children: [
-            Text(passed ? '🏆' : (ready ? '📝' : '🔒'), style: const TextStyle(fontSize: 34)),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(tr(n, 'ئەزموونا وانا ${kuNum(lek.n)}', 'Test Lektion ${lek.n}', 'Lesson ${lek.n} test'),
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: ready ? Colors.white : AppColors.fg)),
-                Text(
-                  best != null
-                      ? '${tr(n, 'باشترین ئەنجام', 'Bestes Ergebnis', 'Best')}: $best%'
-                      : (ready
-                          ? tr(n, 'ئەگەر تە بڤێت خۆ تاقی بکە ✨', 'Teste dich, wenn du willst ✨', 'Test yourself if you like ✨')
-                          : tr(n, 'پشتی تەمامکرنا قۆناغێن سەری ڤەدبیت', 'Nach den Einheiten oben', 'Unlocks after the units above')),
-                  style: TextStyle(fontSize: 13, color: ready ? Colors.white70 : AppColors.fg60),
-                ),
-              ]),
-            ),
-            if (ready) const Icon(Icons.play_circle_fill_rounded, color: Colors.white, size: 34),
-          ]),
-        ),
-      ),
-    );
-  }
-
   /// 🔁 ڕاهێنانا ئازاد — ٨ پەیڤێن هەڕەمەکی ژ قۆناغێن تە دیتین (هەرگیز ب دویماهی نائێت)
   Widget _practiceCard(BuildContext context, ProgressService p) {
     final n = p.nativeLang;
@@ -418,9 +368,10 @@ class _LearnPath extends StatelessWidget {
         trailing: const Icon(Icons.play_arrow_rounded),
         onTap: () {
           final pool = [
-            for (var i = 0; i < appCurriculum.length; i++)
-              if (p.isUnlocked(i)) ...appCurriculum[i].concepts,
+            for (final l in pathLessons)
+              if (p.lessonDone(l) || p.coursesDone(l) > 0) ...l.concepts,
           ]..shuffle();
+          if (pool.length < 4) pool.addAll(pathLessons.take(3).expand((l) => l.concepts));
           _open(context, null, pool.take(8).toList());
         },
       ),
@@ -468,97 +419,6 @@ class _LearnPath extends StatelessWidget {
           ]),
         ),
       ]),
-    );
-  }
-
-  Widget _unitBlock(BuildContext context, int i) {
-    final p = ProgressService.instance;
-    final unit = appCurriculum[i];
-    final unlocked = p.isUnlocked(i);
-    final done = p.completedUnits.contains(unit.id);
-    final color = unlocked ? unit.color : Colors.grey.shade700;
-    // شێوازێ زیگزاگ وەکی Duolingo
-    const offsets = [0.0, 60.0, 0.0, -60.0];
-    final dx = offsets[i % offsets.length];
-
-    return Column(
-      children: [
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(18),
-          decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(18)),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(children: [
-                Expanded(
-                  child: Text(unit.title(p.nativeLang),
-                      style: const TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: Colors.white)),
-                ),
-                if (unit.isAlphabet && unlocked)
-                  InkWell(
-                    borderRadius: BorderRadius.circular(12),
-                    onTap: () => LetterCardsScreen.open(context, unit),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(color: Colors.black26, borderRadius: BorderRadius.circular(12)),
-                      child: Text('🔤 ${tr(p.nativeLang, 'پیت', 'Buchstaben', 'Letters')}',
-                          style: const TextStyle(color: Colors.white, fontSize: 13)),
-                    ),
-                  )
-                else if (unit.grammar != null && unlocked)
-                  InkWell(
-                    borderRadius: BorderRadius.circular(12),
-                    onTap: () => showGrammarCard(context, unit),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(color: Colors.black26, borderRadius: BorderRadius.circular(12)),
-                      child: Text('📘 ${tr(p.nativeLang, 'رێزمان', 'Grammatik', 'Grammar')}',
-                          style: const TextStyle(color: Colors.white, fontSize: 13)),
-                    ),
-                  ),
-              ]),
-              const SizedBox(height: 4),
-              Text(unit.title(p.targetLang), style: TextStyle(color: AppColors.fg70)),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Transform.translate(
-          offset: Offset(dx, 0),
-          child: GestureDetector(
-            onTap: unlocked
-                ? () {
-                    if (unit.isAlphabet && !p.grammarSeen('${unit.id}_letters')) {
-                      LetterCardsScreen.open(context, unit, onStart: () => _open(context, unit, unit.concepts));
-                    } else if (unit.grammar != null && !p.grammarSeen(unit.id)) {
-                      showGrammarCard(context, unit, onStart: () => _open(context, unit, unit.concepts));
-                    } else {
-                      _open(context, unit, unit.concepts);
-                    }
-                  }
-                : () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text(tr(p.nativeLang, 'پێنگاڤا بەری ڤێ تەمام بکە 🔒', 'Schließe zuerst die vorherige Einheit ab 🔒',
-                        'Finish the previous unit first 🔒')))),
-            child: Container(
-              width: 88,
-              height: 88,
-              decoration: BoxDecoration(
-                color: color,
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.white, width: 4),
-                boxShadow: [BoxShadow(color: color.withValues(alpha: 0.45), blurRadius: 16, offset: const Offset(0, 6))],
-              ),
-              child: Icon(
-                done ? Icons.check_rounded : (unlocked ? unit.icon : Icons.lock_rounded),
-                size: 42,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(height: 32),
-      ],
     );
   }
 
