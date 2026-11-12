@@ -1,0 +1,83 @@
+@L 17 | #E08A3C | خوارن و ڤەخوارن | Essen und Trinken | Food and drink
+
+@U a | food | ل سەر سفرێ | Auf dem Tisch | On the table
+der Teller | دێر تێلەر | تەبەق / دەوری | the plate | 🍽️ | Das Essen ist schon auf dem ___. | Teller | Topf; Tasse | خوارن بەرێ ل سەر تەبەقێ یە.
+das Messer | داس مێسەر | کێر | the knife | 🔪 | Ich schneide das Brot mit dem ___. | Messer | Löffel; Glas | ئەز نانی ب کێرێ دبڕم.
+die Gabel | دی گابەل | چەتال | the fork | 🍴
+der Löffel | دێر لۆفل | کەڤچک | the spoon | 🥄 | Die Suppe isst man mit dem ___. | Löffel | Messer; Teller | مرۆڤ شۆربێ ب کەڤچکێ دخوت.
+das Glas | داس گلاس | پەرداخ / گلاس | the glass | 🥛
+der Topf | دێر تۆپف | مەنجەل / قازان | the pot | 🍲 | Die Suppe kocht im ___. | Topf | Teller; Löffel | شۆربە د مەنجەلێ دا دکەلیت.
+die Pfanne | دی پفانە | تاوە | the pan | 🍳
+Kannst du bitte den Tisch decken? | کانست دوو بیتە دێن تیش دێکن | تو دشێی سفرێ دانی؟ | Can you set the table, please? | 🧑‍🍳 | Kannst du bitte den Tisch ___? | decken | decke; Decke | تو دشێی سفرێ دانی؟
+
+@U b | restaurant | ل خوارنگەهێ | Im Restaurant | At the restaurant
+die Speisekarte | دی شپایزەکارتە | لیستا خوارنێ (مێنیو) | the menu | 📜 | Können wir bitte die ___ haben? | Speisekarte | Rechnung; Gabel | ئەم دشێین مێنیوێ ببینین؟
+die Vorspeise | دی فۆرشپایزە | خوارنا دەستپێکێ | the starter | 🥗
+das Hauptgericht | داس هاوپتگەریشت | خوارنا سەرەکی | the main course | 🍖
+der Nachtisch | دێر ناختیش | شیرینی پشتی خوارنێ | the dessert | 🍮 | Als ___ nehme ich ein Eis. | Nachtisch | Vorspeise; Teller | وەکی شیرینیێ ئەز بەستەنیێ دخوازم.
+Ich hätte gern eine Gemüsesuppe. | ئیش هێتە گێرن ئاینە گەمیوزەزوپە | ئەز شۆربەکا سەوزەیان دخوازم. | I'd like a vegetable soup. | 🥣 | Ich ___ gern eine Gemüsesuppe. | hätte | habe; hatte | ئەز شۆربەکا سەوزەیان دخوازم.
+Zusammen oder getrennt? | تسووزامن ئۆدەر گەترێنت | پێکڤە یان جودا (دێ پارەی دەن)؟ | Together or separately? | 💳
+Das Essen war sehr lecker. | داس ئێسن ڤار زێر لێکەر | خوارن گەلەک ب تام بوو. | The food was very tasty. | 😋 | Das Essen ___ sehr lecker. | war | ist gewesen; wird | خوارن گەلەک ب تام بوو.
+das Trinkgeld | داس ترینکگێلت | بەخشیش | the tip | 💶 | Wir geben fünf Euro ___. | Trinkgeld | Trinkglas; Taschengeld | ئەم پێنج یۆرۆیان بەخشیش ددەین.
+@CZ Wir möchten ___, bitte. – Gern, ___ oder getrennt? | zahlen … zusammen | bezahlt … zusammen; zahlen … zuerst | ئەم دڤێین پارەی بدەین. – ب دل، پێکڤە یان جودا؟
+
+@U c | mood | خوارنا من | Essgewohnheiten | Eating habits
+Ich frühstücke jeden Morgen. | ئیش فریوشتیوکە یێدن مۆرگن | ئەز هەر سپێدە تێشتێ دخۆم. | I have breakfast every morning. | 🥐 | Ich ___ jeden Morgen. | frühstücke | Frühstück; frühstückt | ئەز هەر سپێدە تێشتێ دخۆم.
+Ich esse kein Fleisch. Ich bin Vegetarier. | ئیش ئێسە کاین فلایش. ئیش بین ڤێگەتاریەر | ئەز گۆشتی ناخۆم. ئەز گیاخۆرم. | I don't eat meat. I'm a vegetarian. | 🥦 | Ich esse kein Fleisch. Ich bin ___. | Vegetarier | Fleischer; Verkäufer | ئەز گۆشتی ناخۆم. ئەز گیاخۆرم.
+Ich habe Hunger. | ئیش هابە هونگەر | ئەز برسیمە. | I'm hungry. | 🍽️
+Ich habe Durst. | ئیش هابە دورست | ئەز تێهنیمە. | I'm thirsty. | 💧 | Gib mir bitte Wasser, ich habe ___. | Durst | Hunger; Dusche | هیڤییە ئاڤێ بدە من، ئەز تێهنیمە.
+Danke, ich bin satt. | دانکە، ئیش بین زات | سوپاس، ئەز تێربووم. | Thanks, I'm full. | 🙏 | Noch etwas Reis? – Nein danke, ich bin ___. | satt | hungrig; durstig | هێشتا برنج دڤێت؟ – نەخێر سوپاس، ئەز تێرم.
+gesund essen | گەزوند ئێسن | خوارنا ساخلەم خوارن | to eat healthily | 🥗
+Zum Mittagessen gibt es Reis mit Hähnchen. | تسووم میتاگئێسن گیپت ئێس رایس میت هێنشن | بۆ خوارنا نیڤرۆ برنج و مریشک هەیە. | For lunch there is rice with chicken. | 🍗
+In meiner Heimat isst man viel Brot und Joghurt. | ئین ماینەر هایمات ئیست مان فیل برۆت ئوند یۆگورت | ل وەلاتێ من مرۆڤ گەلەک نان و ماستی دخوت. | In my country people eat a lot of bread and yoghurt. | 🫓
+
+@U d | help | ئێک، چ، کەس | einer, keiner, welche | one, none, some
+Hast du einen Löffel? – Ja, ich habe einen. | هاست دوو ئاینن لۆفل؟ – یا، ئیش هابە ئاینن | کەڤچکەک ل نک تە هەیە؟ – بەلێ، ئێک ل نک من هەیە. | Do you have a spoon? – Yes, I have one. | 🥄 | Hast du einen Löffel? – Ja, ich habe ___. | einen | eins; eine | کەڤچکەک ل نک تە هەیە؟ – بەلێ، ئێک هەیە.
+Brauchst du ein Messer? – Nein, ich habe schon eins. | براوخست دوو ئاین مێسەر؟ – نەین، ئیش هابە شۆن ئاینس | کێرەک پێدڤی تە یە؟ – نەخێر، ئێک ل نک من هەیە. | Do you need a knife? – No, I already have one. | 🔪 | Brauchst du ein Messer? – Nein, ich habe schon ___. | eins | einen; eine | کێرەک پێدڤی تە یە؟ – نەخێر، ئێک ل نک من هەیە.
+Gibt es noch Tassen? – Nein, es gibt keine mehr. | گیپت ئێس نۆخ تاسن؟ – نەین، ئێس گیپت کاینە مێر | هێشتا پەرداخ هەنە؟ – نەخێر، چ نەماینە. | Are there any more cups? – No, there are none left. | ☕ | Gibt es noch Tassen? – Nein, es gibt ___ mehr. | keine | keinen; kein | هێشتا پەرداخ هەنە؟ – نەخێر، چ نەماینە.
+Ich brauche Eier. Haben wir noch welche? | ئیش براوخە ئایەر. هابن ڤیر نۆخ ڤێلشە | هێک پێدڤی منن. هێشتا هندەک ل نک مە هەنە؟ | I need eggs. Do we still have some? | 🥚 | Ich brauche Eier. Haben wir noch ___? | welche | einen; eins | هێک پێدڤی منن. هێشتا هندەک هەنە؟
+Ist noch Kaffee da? – Ja, es ist noch welcher da. | ئیست نۆخ کافێ دا؟ – یا، ئێس ئیست نۆخ ڤێلشەر دا | هێشتا قەهوە ماییە؟ – بەلێ، هندەک ماییە. | Is there still coffee? – Yes, there's some left. | ☕
+Ich habe keinen Teller. – Hier ist einer. | ئیش هابە کاینن تێلەر. – هیر ئیست ئاینەر | تەبەقەکا من نینە. – ئەڤە ئێک. | I don't have a plate. – Here's one. | 🍽️ | Ich habe keinen Teller. – Hier ist ___. | einer | einen; eins | تەبەقەکا من نینە. – ئەڤە ئێک.
+Niemand hat angerufen. | نیمانت هات ئانگەرووفن | کەسی تەلەفۆن نەکر. | Nobody called. | 📵
+Alles war lecker! | ئالەس ڤار لێکەر | هەمی تشت ب تام بوون! | Everything was delicious! | 🌟
+@CZ Möchtest du noch ___ Stück Kuchen? – Nein danke, ich hatte schon ___. | ein … zwei | eins … zwei; einen … eins | پارچەکا دی کێک دڤێت؟ – نەخێر سوپاس، من دوو خوارن.
+
+@D ل خوارنگەهێ
+Kellner: Guten Abend! Haben Sie schon gewählt? || ئێڤار باش! هەوە هەلبژارت؟
+Avin: Ja. Als Vorspeise hätte ich gern einen Salat. || بەلێ. وەکی خوارنا دەستپێکێ ئەز سەلاتەکێ دخوازم.
+Rawand: Und ich nehme die Linsensuppe. || و ئەز شۆربا نیسکێ دبەم.
+Kellner: Gern. Und als Hauptgericht? || ب دل. و خوارنا سەرەکی؟
+Avin: Das Gemüse mit Reis, bitte. Ich esse kein Fleisch. || سەوزە دگەل برنجی، هیڤییە. ئەز گۆشتی ناخۆم.
+Rawand: Für mich das Hähnchen. Haben Sie auch scharfe Soße? || بۆ من مریشک. سۆسا تیژ ژی ل نک هەوە هەیە؟
+Kellner: Ja, natürlich. Und zu trinken? || بەلێ، هەلبەت. و بۆ ڤەخوارنێ؟
+Avin: Zwei Gläser Wasser, bitte. Und später zahlen wir zusammen. || دوو پەرداخێن ئاڤێ، هیڤییە. و پاشی ئەم پێکڤە پارەی ددەین.
+
+@G 🧩 | Indefinitpronomen: einer, eins, eine, welche, keiner | جهێناڤێن نەدیار: ئێک، هندەک، چ
+E: Statt Nomen: einer/eins/eine (ein-), keiner/keins/keine (kein-), welche (Plural ohne Artikel). || ل جهێ ناڤی: einer/eins/eine = ئێک، keiner = چ … نینە، welche = هندەک (کۆ).
+H: | Nominativ | Akkusativ
+R: der Löffel | einer / keiner | einen / keinen
+R: das Messer | eins / keins | eins / keins
+R: die Tasse | eine / keine | eine / keine
+R: Eier (Plural) | welche / keine | welche / keine
+X: Ich suche einen Topf. – Da steht einer. || ئەز ل مەنجەلەکێ دگەڕێم. – ئێک ل وێرێ یە.
+X: Hast du Äpfel? – Ja, ich habe welche. || سێڤ ل نک تە هەنە؟ – بەلێ، هندەک هەنە.
+X: Ich habe kein Glas. – Dort ist eins. || پەرداخەکا من نینە. – ئێک ل وێرێ یە.
+T: Achtung: ein Messer ➔ eins! || ئاگەهدار بە: ein Messer ➔ eins!
+P: Hast du einen Kuli? – Ja, ich habe ___. || پێنووسەک ل نک تە هەیە؟ – بەلێ، ئێک هەیە. || einen || Ja, ich habe einen. || بەلێ، ئێک ل نک من هەیە.
+P: Gibt es hier ein Café? – Ja, da vorne ist ___. || ل ڤێرێ کافێیەک هەیە؟ – بەلێ، ئێک ل پێش هەیە. || eins || Ja, da vorne ist eins. || بەلێ، ئێک ل پێش هەیە.
+P: Hast du Tomaten? – Nein, ich habe ___. || تەماتە ل نک تە هەنە؟ – نەخێر، چ نینن. || keine || Nein, ich habe keine. || نەخێر، چ ل نک من نینن.
+M: Brauchst du eine Tüte? – Nein, ich habe eine. || تووڕەکەک پێدڤی تە یە؟ – نەخێر، ئێک ل نک من هەیە.
+M: Wir brauchen Gläser. – Im Schrank sind noch welche. || پەرداخ پێدڤی مەنە. – هێشتا هندەک د دۆلابێ دانە.
+
+@G 🍽️ | jemand, niemand, alles, nichts | کەسەک، کەس، هەمی تشت، چ تشت
+E: jemand = eine Person; niemand = keine Person; alles = jedes Ding; nichts = kein Ding. || jemand = کەسەک؛ niemand = کەس … نە؛ alles = هەمی تشت؛ nichts = چ تشت … نە.
+H: positiv | negativ
+R: jemand | niemand
+R: etwas | nichts
+R: alles | nichts
+X: Ist jemand zu Hause? – Nein, niemand. || کەسەک ل مال هەیە؟ – نەخێر، کەس نینە.
+X: Möchtest du etwas trinken? – Nein, danke, nichts. || تە چ ڤەخوارن دڤێت؟ – نەخێر سوپاس، چ نە.
+X: Ich habe alles gegessen. || من هەمی تشت خوار.
+P: Hat ___ meine Brille gesehen? (eine Person?) || کەسەکی بەرچاڤکا من دیتییە؟ || jemand || Hat jemand meine Brille gesehen? || کەسەکی بەرچاڤکا من دیتییە؟
+P: Ich habe Hunger, aber im Kühlschrank ist ___. || ئەز برسیمە، بەلێ د سەلاجێ دا چ تشت نینە. || nichts || Im Kühlschrank ist nichts. || د سەلاجێ دا چ تشت نینە.
+P: Die Party war toll, ___ hat getanzt. (jede Person) || ئاهەنگ گەلەک خۆش بوو، هەمییان سەما کر. || alle || Alle haben getanzt. || هەمییان سەما کر.

@@ -3800,6 +3800,156 @@
 "c": "a14_23"
 }
 ]
+},
+"unit_a2_1c": {
+"de": [
+{
+"s": "Ich bin spät, ___ der Bus nicht gekommen ___.",
+"a": "weil … ist",
+"d": [
+"weil … hat",
+"dass … war"
+],
+"ku": "من دەرەنگ کر، چونکی پاس نەهات.",
+"c": ""
+},
+{
+"s": "___ du heute keine Zeit, ___ du so viel arbeitest?",
+"a": "Hast … weil",
+"d": [
+"Bist … weil",
+"Hast … dass"
+],
+"ku": "ئەرێ ئەڤرۆ تە دەم نینە، چونکی تو گەلەک کار دکەی؟",
+"c": ""
+}
+]
+},
+"unit_a2_1d": {
+"de": [
+{
+"s": "Ich ___ heute früh ___ und habe den Bus verpasst.",
+"a": "habe … verschlafen",
+"d": [
+"bin … verschlafen",
+"habe … geschlafen"
+],
+"ku": "ئەڤرۆ سپێدێ ئەز مامە نڤستی و پاس ل من چوو.",
+"c": ""
+}
+]
+},
+"unit_a2_2b": {
+"de": [
+{
+"s": "Wo ___ das Handy? – Ich habe es auf das Sofa ___.",
+"a": "liegt … gelegt",
+"d": [
+"legt … gelegen",
+"liegt … gestellt"
+],
+"ku": "مۆبایل ل کیڤەیە؟ – من دانا سەر قەنەفێ.",
+"c": ""
+}
+]
+},
+"unit_a2_2d": {
+"de": [
+{
+"s": "Kannst du mir helfen? Ich trage den Tisch nach ___ und du die Stühle nach ___.",
+"a": "oben … unten",
+"d": [
+"unten … oben",
+"draußen … drinnen"
+],
+"ku": "تو دشێی هاریکاریا من بکەی؟ ئەز مێزێ دبەمە سەرێ و تو کورسیان دبەیە خوارێ.",
+"c": ""
+}
+]
+},
+"unit_a2_3b": {
+"de": [
+{
+"s": "Wir möchten ___, bitte. – Gern, ___ oder getrennt?",
+"a": "zahlen … zusammen",
+"d": [
+"bezahlt … zusammen",
+"zahlen … zuerst"
+],
+"ku": "ئەم دڤێین پارەی بدەین. – ب دل، پێکڤە یان جودا؟",
+"c": ""
+}
+]
+},
+"unit_a2_3d": {
+"de": [
+{
+"s": "Möchtest du noch ___ Stück Kuchen? – Nein danke, ich hatte schon ___.",
+"a": "ein … zwei",
+"d": [
+"eins … zwei",
+"einen … eins"
+],
+"ku": "پارچەکا دی کێک دڤێت؟ – نەخێر سوپاس، من دوو خوارن.",
+"c": ""
+}
+]
+},
+"unit_a2_4c": {
+"de": [
+{
+"s": "___ du Fragen hast, ___ du mich anrufen.",
+"a": "Wenn … kannst",
+"d": [
+"Weil … kannst",
+"Wenn … kann"
+],
+"ku": "ئەگەر پرسیارێن تە هەبن، دشێی تەلەفۆنێ بۆ من بکەی.",
+"c": ""
+}
+]
+},
+"unit_a2_4d": {
+"de": [
+{
+"s": "Du hustest so viel. Du ___ zum Arzt gehen und weniger ___.",
+"a": "solltest … rauchen",
+"d": [
+"sollst … rauchst",
+"solltest … geraucht"
+],
+"ku": "تو گەلەک دکۆخی. باشترە بچییە نک نوژداری و کێمتر جگارە بکێشی.",
+"c": ""
+}
+]
+},
+"unit_a2_5d": {
+"de": [
+{
+"s": "Ich ärgere mich ___ meinen Kollegen, denn er wartet nie ___ mich.",
+"a": "über … auf",
+"d": [
+"auf … über",
+"für … an"
+],
+"ku": "ئەز ژ هەڤکارێ خۆ عێجز دبم، چونکی ئەو چ جاران ل هیڤیا من نامینیت.",
+"c": ""
+}
+]
+},
+"unit_a2_6c": {
+"de": [
+{
+"s": "Gestern ___ ich nicht kommen, weil ich arbeiten ___.",
+"a": "konnte … musste",
+"d": [
+"kann … muss",
+"konnten … mussten"
+],
+"ku": "دوهی من نەشیا بهێم، چونکی دڤیا کار بکەم.",
+"c": ""
+}
+]
 }
 }
 }

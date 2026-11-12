@@ -1,0 +1,83 @@
+@L 18 | #8E6CC8 | جیهانا کاری | Arbeitswelt | The world of work
+
+@U a | work | ل نڤیسینگەهێ | Im Büro | At the office
+der Drucker | دێر دروکەر | چاپکەر / پرینتەر | the printer | 🖨️ | Der ___ hat kein Papier mehr. | Drucker | Drücker; Fahrer | پرینتەر کاغەز تێدا نەماینە.
+der Kopierer | دێر کۆپیرەر | ئامیرێ کۆپیێ | the copier | 📠
+die Besprechung | دی بەشپرێشونگ | کۆبوون | the meeting | 👥 | Um zehn Uhr haben wir eine ___. | Besprechung | Bestellung; Bewerbung | دەمژمێر دەهـ کۆبوونەک مە هەیە.
+der Kollege / die Kollegin | دێر کۆلێگە / دی کۆلێگین | هەڤکار | the colleague | 🧑‍💼
+der Chef / die Chefin | دێر شێف / دی شێفین | سەرۆکێ کاری | the boss | 👔
+die Mittagspause | دی میتاگسپاوزە | بێهنڤەدانا نیڤرۆ | the lunch break | 🥪
+der Feierabend | دێر فایەرئابنت | دوماهیا کاری یا رۆژێ | end of the working day | 🌇 | Um fünf Uhr habe ich ___. | Feierabend | Feiertag; Abendessen | دەمژمێر پێنج کارێ من ب دوماهی دهێت.
+Ich arbeite Teilzeit. | ئیش ئاربایتە تایلتسایت | ئەز نیڤ دەمژمێر کار دکەم. | I work part-time. | ⏳ | Ich arbeite nur 20 Stunden, also ___. | Teilzeit | Vollzeit; Freizeit | ئەز تنێ ٢٠ دەمژمێران کار دکەم، واتە نیڤ دەم.
+
+@U b | chat | ل سەر تەلەفۆنێ | Am Telefon | On the phone
+Firma Weigand, Sie sprechen mit Frau Kaya. | فیرما ڤایگانت، زی شپرێشن میت فراو کایا | کۆمپانیا ڤایگاند، هوین دگەل خاتوو کایا دئاخڤن. | Weigand company, you're speaking to Ms Kaya. | ☎️
+Kann ich bitte mit Herrn Schulz sprechen? | کان ئیش بیتە میت هێرن شولتس شپرێشن | دشێم دگەل کاک شولتس باخڤم؟ | Can I speak to Mr Schulz, please? | 🗣️ | Kann ich bitte mit Herrn Schulz ___? | sprechen | spreche; gesprochen | دشێم دگەل کاک شولتس باخڤم؟
+Einen Moment, ich verbinde Sie. | ئاینن مۆمێنت، ئیش فێربیندە زی | ب دەمەکێ کێم، ئەز هەوە دگەهینمە وی. | One moment, I'll put you through. | 🔌 | Einen Moment, ich ___ Sie. | verbinde | verbunden; finde | ب دەمەکێ کێم، ئەز هەوە دگەهینمە وی.
+Er ist gerade nicht da. | ئێر ئیست گەرادە نیشت دا | ئەو نوکە ل ڤێرێ نینە. | He isn't here right now. | 🚫
+Kann ich etwas ausrichten? | کان ئیش ئێتڤاس ئاوسریشتن | دشێم پەیامەکێ بگەهینمێ؟ | Can I take a message? | 📝 | Kann ich etwas ___? | ausrichten | ausrufen; ausziehen | دشێم پەیامەکێ بگەهینمێ؟
+Er ruft Sie später zurück. | ئێر رووفت زی شپێتەر تسوروک | ئەو دێ پاشی تەلەفۆنێ بۆ هەوە کەتەڤە. | He'll call you back later. | 🔁 | Er ruft Sie später ___. | zurück | an; zusammen | ئەو دێ پاشی تەلەفۆنێ بۆ هەوە کەتەڤە.
+Wie ist Ihre Telefonnummer? | ڤی ئیست ئیرە تێلێفۆننومەر | ژمارا تەلەفۆنا هەوە چەندە؟ | What's your phone number? | 🔢
+Ich habe mich verwählt. | ئیش هابە میش فێرڤێلت | من ژمارە شاش لێدا. | I dialled the wrong number. | 🙈
+
+@U c | schedule | ئەگەر … | Wenn …, dann … | If / when …
+Wenn ich Zeit habe, helfe ich dir. | ڤێن ئیش تسایت هابە، هێلفە ئیش دیر | ئەگەر دەمێ من هەبیت، ئەز دێ هاریکاریا تە کەم. | If I have time, I'll help you. | 🤝 | Wenn ich Zeit ___, helfe ich dir. | habe | hast; hatte | ئەگەر دەمێ من هەبیت، ئەز هاریکاریا تە دکەم.
+Wenn der Drucker kaputt ist, ruf den Techniker an. | ڤێن دێر دروکەر کاپووت ئیست، رووف دێن تێشنیکەر ئان | ئەگەر پرینتەر خراب بوو، تەلەفۆنێ بۆ تەکنیکاری بکە. | If the printer is broken, call the technician. | 🛠️
+Wenn es regnet, fahre ich mit dem Bus. | ڤێن ئێس رێگنەت، فارە ئیش میت دێم بووس | ئەگەر باران باری، ئەز ب پاسێ دچم. | If it rains, I take the bus. | ☔ | Wenn es ___, fahre ich mit dem Bus. | regnet | regnen; Regen | ئەگەر باران باری، ئەز ب پاسێ دچم.
+Wenn du krank bist, musst du zu Hause bleiben. | ڤێن دوو کرانک بیست، موست دوو تسوو هاوزە بلایبن | ئەگەر تو نەساخ بی، دڤێت ل مال بمینی. | If you are ill, you must stay at home. | 🤒
+Was machst du, wenn du Feierabend hast? | ڤاس ماخست دوو، ڤێن دوو فایەرئابنت هاست | تو چ دکەی دەمێ کارێ تە ب دوماهی دهێت؟ | What do you do when you finish work? | 🌆
+Wenn ich müde bin, trinke ich einen Tee. | ڤێن ئیش میودە بین، ترینکە ئیش ئاینن تێ | دەمێ ئەز وەستیای دبم، ئەز چایەکێ ڤەدخۆم. | When I'm tired, I drink tea. | 🍵 | Wenn ich müde ___, trinke ich einen Tee. | bin | habe; sein | دەمێ ئەز وەستیای دبم، چایەکێ ڤەدخۆم.
+die Überstunde | دی ئیوبەرشتوندە | دەمژمێرا زێدە یا کاری | the overtime hour | ⏰
+der Urlaub | دێر ئوورلاوپ | بێهنڤەدان / مۆلەت | the holiday / leave | 🏖️ | Im August habe ich drei Wochen ___. | Urlaub | Unterricht; Umzug | ل هەیڤا تەباخێ سێ حەفتییان مۆلەتا من هەیە.
+@CZ ___ du Fragen hast, ___ du mich anrufen. | Wenn … kannst | Weil … kannst; Wenn … kann | ئەگەر پرسیارێن تە هەبن، دشێی تەلەفۆنێ بۆ من بکەی.
+
+@U d | help | ئامۆژگاری: دڤێت … | Ratschläge: Du solltest … | Advice: you should …
+Du solltest mehr schlafen. | دوو زۆلتەست مێر شلافن | باشترە تو پتر بنڤی. | You should sleep more. | 😴 | Du ___ mehr schlafen. | solltest | sollst; sollte | باشترە تو پتر بنڤی.
+Sie sollten einen Termin machen. | زی زۆلتن ئاینن تێرمین ماخن | باشترە هوین ژڤانەکێ بگرن. | You should make an appointment. | 📅 | Sie ___ einen Termin machen. | sollten | solltet; sollen | باشترە هوین ژڤانەکێ بگرن.
+Er sollte pünktlich sein. | ئێر زۆلتە پیونکتلیش زاین | باشترە ئەو ل دەمێ خۆ بیت. | He should be on time. | ⏱️
+Ihr solltet die E-Mail sofort beantworten. | ئیر زۆلتەت دی ئیمەیل زۆفۆرت بەئانتڤۆرتن | باشترە هوین بەرسڤا ئیمەیلێ دەستبەجه بدەن. | You should answer the email immediately. | 📧
+Was soll ich machen? | ڤاس زۆل ئیش ماخن | دڤێت ئەز چ بکەم؟ | What should I do? | 🤔
+die Bewerbung | دی بەڤێربونگ | داخوازنامەیا کاری | the job application | 📄
+der Lohn | دێر لۆن | مووچە / کرێ | the wage | 💰 | Der ___ kommt am Monatsende. | Lohn | Löffel; Lärm | مووچە ل دوماهیا هەیڤێ دهێت.
+die Weiterbildung | دی ڤایتەربیلدونگ | خولا پێشکەفتنێ (پیشەیی) | further training | 🎓
+@CZ Du hustest so viel. Du ___ zum Arzt gehen und weniger ___. | solltest … rauchen | sollst … rauchst; solltest … geraucht | تو گەلەک دکۆخی. باشترە بچییە نک نوژداری و کێمتر جگارە بکێشی.
+
+@D تەلەفۆنەک بۆ نڤیسینگەهێ
+Frau Kaya: Firma Weigand, guten Tag. Sie sprechen mit Frau Kaya. || کۆمپانیا ڤایگاند، رۆژ باش. هوین دگەل خاتوو کایا دئاخڤن.
+Herr Ahmadi: Guten Tag, hier ist Ahmadi. Kann ich bitte mit Herrn Schulz sprechen? || رۆژ باش، ئەز ئەحمەدیمە. دشێم دگەل کاک شولتس باخڤم؟
+Frau Kaya: Herr Schulz ist leider in einer Besprechung. Kann ich etwas ausrichten? || مخابن کاک شولتس د کۆبوونێ دایە. دشێم پەیامەکێ بگەهینمێ؟
+Herr Ahmadi: Ja, bitte. Mein Paket ist noch nicht angekommen. || بەلێ، هیڤییە. پاکەتا من هێشتا نەگەهشتییە.
+Frau Kaya: Das tut mir leid. Wenn Sie mir Ihre Nummer geben, ruft er Sie zurück. || ببوورە. ئەگەر ژمارا خۆ بدەنە من، ئەو دێ تەلەفۆنێ بۆ هەوە کەتەڤە.
+Herr Ahmadi: Gern: null-eins-sieben-sechs, drei-vier-fünf-zwei-acht. || ب دل: ٠١٧٦، ٣٤٥٢٨.
+Frau Kaya: Danke. Wenn er fertig ist, sage ich ihm Bescheid. || سوپاس. دەمێ ئەو خلاس دبیت، ئەز دێ بێژمێ.
+Herr Ahmadi: Vielen Dank! Auf Wiederhören! || گەلەک سوپاس! ب خاترا هەوە!
+
+@G 🔀 | Nebensatz mit „wenn“ | رستەیا ئەگەرێ ب «wenn»
+E: „wenn“ = Bedingung oder Zeit (immer wenn). Im wenn-Satz steht das Verb am Ende. Beginnt der Satz mit „wenn“, steht danach Verb + Subjekt. || «wenn» = ئەگەر یان دەمێ (هەر جارا). کار د رستەیا wenn دا دچیتە دوماهیێ. ئەگەر رستە ب wenn دەستپێبکەت، پاشی کار + کارا.
+H: wenn-Satz | Hauptsatz
+R: Wenn ich Zeit habe, | helfe ich dir.
+R: Wenn es regnet, | bleiben wir zu Hause.
+R: Ich helfe dir, | wenn ich Zeit habe.
+X: Wenn du willst, können wir zusammen lernen. || ئەگەر تە بڤێت، ئەم دشێین پێکڤە بخوینین.
+X: Ruf mich an, wenn du angekommen bist. || تەلەفۆنێ بۆ من بکە دەمێ تو گەهشتی.
+X: Wenn ich Urlaub habe, besuche ich meine Eltern. || دەمێ مۆلەتا من هەبیت، ئەز دچمە سەرەدانا دایک و بابێن خۆ.
+T: Nach dem wenn-Satz: Komma, dann sofort das Verb! || پشتی رستەیا wenn: کۆما، پاشی کار دەستبەجه!
+P: Ich habe Hunger. Ich koche. || ئەز برسیمە. ئەز خوارنێ چێدکەم. || Wenn … || Wenn ich Hunger habe, koche ich. || ئەگەر ئەز برسی بم، خوارنێ چێدکەم.
+P: Das Wetter ist schön. Wir gehen spazieren. || کەش خۆشە. ئەم دچینە گەڕیانێ. || Wenn … || Wenn das Wetter schön ist, gehen wir spazieren. || ئەگەر کەش خۆش بیت، ئەم دچینە گەڕیانێ.
+P: Du bist fertig. Du kannst gehen. || تو خلاس بووی. تو دشێی بچی. || Wenn … || Wenn du fertig bist, kannst du gehen. || ئەگەر تو خلاس بووی، دشێی بچی.
+M: Wenn der Chef kommt, beginnt die Besprechung. || دەمێ سەرۆک دهێت، کۆبوون دەستپێدکەت.
+
+@G 💡 | Konjunktiv II: sollte (Ratschlag) | ئامۆژگاری ب «sollte»
+E: Mit „sollte“ geben wir höflich einen Rat. || ب «sollte» ئەم ب ئەدەب ئامۆژگاریێ ددەین (باشترە …).
+H: Person | sollen (Konj. II)
+R: ich | sollte
+R: du | solltest
+R: er / sie / es | sollte
+R: wir / sie / Sie | sollten
+R: ihr | solltet
+X: Du solltest mehr Wasser trinken. || باشترە تو پتر ئاڤێ ڤەخۆی.
+X: Wir sollten früher losfahren. || باشترە ئەم زووتر بچین.
+X: Sie sollten nicht so viel arbeiten. || باشترە هوین ئەڤقاس کار نەکەن.
+P: Ich bin immer müde. (früher ins Bett gehen) || ئەز هەردەم وەستیایمە. || sollte || Du solltest früher ins Bett gehen. || باشترە تو زووتر بچییە د جهێ خەوێ.
+P: Mein Deutsch ist nicht gut. (jeden Tag üben) || ئەلمانیا من نە باشە. || sollte || Du solltest jeden Tag üben. || باشترە تو هەر رۆژ راهێنانێ بکەی.
+P: Wir haben Kopfschmerzen. (eine Pause machen) || سەرێ مە دئێشیت. || sollte || Ihr solltet eine Pause machen. || باشترە هوین بێهنڤەدانەکێ بدەن.

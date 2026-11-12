@@ -5651,6 +5651,1163 @@
      ]
     }
    ]
+  },
+  {
+   "n": 15,
+   "topics": [
+    {
+     "emoji": "🔗",
+     "title": {
+      "de": "weil",
+      "ku": "weil (چونکی)"
+     },
+     "head": [
+      "Hauptsatz",
+      "weil",
+      "… Verb (Ende)"
+     ],
+     "rows": [
+      [
+       "Ich lerne Deutsch,",
+       "weil",
+       "ich hier arbeiten möchte."
+      ],
+      [
+       "Er kommt nicht,",
+       "weil",
+       "er krank ist."
+      ],
+      [
+       "Wir bleiben zu Hause,",
+       "weil",
+       "es regnet."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Warum bist du müde? – Weil ich spät geschlafen habe.",
+       "ku": "بۆچی تو وەستیایی؟ – چونکی ئەز دەرەنگ نڤستم."
+      },
+      {
+       "de": "Ich bin froh, weil die Sonne scheint.",
+       "ku": "ئەز دلخۆشم، چونکی رۆژ دەردکەڤیت."
+      },
+      {
+       "de": "Sie lernt viel, weil sie eine Prüfung hat.",
+       "ku": "ئەو گەلەک دخوینیت، چونکی ئەزموونەکا وێ هەیە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich gehe zum Arzt. (Ich bin krank.)",
+       "qku": "ئەز دچمە نک نوژداری. (ئەز نەساخم.)",
+       "cue": "weil",
+       "a": "Ich gehe zum Arzt, weil ich krank bin.",
+       "aku": "ئەز دچمە نک نوژداری، چونکی ئەز نەساخم."
+      },
+      {
+       "q": "Er trinkt Kaffee. (Er ist müde.)",
+       "qku": "ئەو قەهوێ ڤەدخوت. (ئەو وەستیایە.)",
+       "cue": "weil",
+       "a": "Er trinkt Kaffee, weil er müde ist.",
+       "aku": "ئەو قەهوێ ڤەدخوت، چونکی ئەو وەستیایە."
+      },
+      {
+       "q": "Wir fahren nicht. (Das Auto ist kaputt.)",
+       "qku": "ئەم ناچین. (ترومبێل یا خرابە.)",
+       "cue": "weil",
+       "a": "Wir fahren nicht, weil das Auto kaputt ist.",
+       "aku": "ئەم ناچین، چونکی ترومبێل یا خرابە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Ich lerne jeden Tag, weil ich die Prüfung schaffen will.",
+       "ku": "ئەز هەر رۆژ دخوینم، چونکی دڤێم ئەزموونێ دەرباز بکەم."
+      },
+      {
+       "de": "Sie ruft an, weil sie Hilfe braucht.",
+       "ku": "ئەو تەلەفۆنێ دکەت، چونکی هاریکاری پێدڤی یە."
+      }
+     ],
+     "explain": {
+      "de": "Mit „weil“ nennen wir einen Grund. Im Nebensatz steht das Verb am Ende.",
+      "ku": "ب «weil» ئەم ئەگەرەکێ دبێژین. د رستەیا لاوەکی دا کار دچیتە دوماهیێ."
+     },
+     "tip": {
+      "de": "Nach „weil“ immer ein Komma davor, Verb ans Ende!",
+      "ku": "بەری «weil» هەردەم کۆما، و کار ل دوماهیێ!"
+     }
+    },
+    {
+     "emoji": "🕰️",
+     "title": {
+      "de": "Perfekt: trennbare, untrennbare Verben, -ieren",
+      "ku": "دەمێ بۆری (Perfekt) ب کارێن جودا"
+     },
+     "head": [
+      "Typ",
+      "Infinitiv",
+      "Perfekt"
+     ],
+     "rows": [
+      [
+       "trennbar",
+       "ankommen",
+       "ist angekommen"
+      ],
+      [
+       "trennbar",
+       "umziehen",
+       "ist umgezogen"
+      ],
+      [
+       "untrennbar",
+       "verlieren",
+       "hat verloren"
+      ],
+      [
+       "untrennbar",
+       "erleben",
+       "hat erlebt"
+      ],
+      [
+       "-ieren",
+       "telefonieren",
+       "hat telefoniert"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich habe gestern eingekauft.",
+       "ku": "من دوهی بازار کر."
+      },
+      {
+       "de": "Wir haben viel erlebt.",
+       "ku": "گەلەک تشت ب سەرێ مە هاتن."
+      },
+      {
+       "de": "Hast du schon studiert?",
+       "ku": "تە بەرێ ل زانکۆیێ خواندییە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich verliere meinen Pass. (gestern)",
+       "qku": "من پاسپۆرتا خۆ بەرزە کر.",
+       "cue": "Perfekt",
+       "a": "Ich habe gestern meinen Pass verloren.",
+       "aku": "من دوهی پاسپۆرتا خۆ بەرزە کر."
+      },
+      {
+       "q": "Sie kommt um 9 Uhr an.",
+       "qku": "ئەو دەمژمێر ٩ دگەهیت.",
+       "cue": "Perfekt",
+       "a": "Sie ist um 9 Uhr angekommen.",
+       "aku": "ئەو دەمژمێر ٩ گەهشت."
+      },
+      {
+       "q": "Wir reparieren das Fahrrad.",
+       "qku": "ئەم پایسکیلێ چاک دکەین.",
+       "cue": "Perfekt",
+       "a": "Wir haben das Fahrrad repariert.",
+       "aku": "مە پایسکیل چاک کر."
+      }
+     ],
+     "more": [
+      {
+       "de": "Er hat seine Tante besucht.",
+       "ku": "ئەو چوو سەرەدانا مەتا خۆ."
+      },
+      {
+       "de": "Ich habe den Film nicht verstanden.",
+       "ku": "من فلم تێنەگەهشت."
+      }
+     ],
+     "explain": {
+      "de": "Trennbar: ge- steht in der Mitte (angekommen). Untrennbar (be-, ver-, er-…) und -ieren: kein ge- (verloren, telefoniert).",
+      "ku": "کارێن لێکڤەبوو: ge- د ناڤەراستێ دا (angekommen). کارێن ب be-, ver-, er- و -ieren: بێ ge- (verloren, telefoniert)."
+     },
+     "tip": {
+      "de": "Bewegung (gehen, fahren, kommen, umziehen) ➔ meist „sein“.",
+      "ku": "کارێن لڤینێ (چوون، هاتن، ڤەگوهاستن) ➔ پتر ب «sein»."
+     }
+    },
+    {
+     "emoji": "👨‍👩‍👧",
+     "title": {
+      "de": "Genitiv bei Namen · von + Dativ",
+      "ku": "خودانداری: Peters / von Peter"
+     },
+     "head": [
+      "Genitiv (Name)",
+      "von + Dativ"
+     ],
+     "rows": [
+      [
+       "Peters Bruder",
+       "der Bruder von Peter"
+      ],
+      [
+       "Lanas Tante",
+       "die Tante von Lana"
+      ],
+      [
+       "—",
+       "das Auto von meinem Vater"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist Annas Neffe.",
+       "ku": "ئەڤە برازایێ ئانایە."
+      },
+      {
+       "de": "Die Schwester von meinem Mann heißt Dilan.",
+       "ku": "ناڤێ خویشکا زەلامێ من دیلانە."
+      },
+      {
+       "de": "Azads Cousine wohnt in Erbil.",
+       "ku": "دۆتماما ئازادی ل هەولێرێ دژیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "die Mutter / Maria",
+       "qku": "دایکا ماریایێ",
+       "cue": "Genitiv",
+       "a": "Marias Mutter",
+       "aku": "دایکا ماریایێ"
+      },
+      {
+       "q": "das Haus / mein Onkel",
+       "qku": "خانیێ مامێ من",
+       "cue": "von + Dativ",
+       "a": "das Haus von meinem Onkel",
+       "aku": "خانیێ مامێ من"
+      },
+      {
+       "q": "der Hund / Jonas",
+       "qku": "سەیێ یۆناسی",
+       "cue": "Genitiv",
+       "a": "Jonas’ Hund",
+       "aku": "سەیێ یۆناسی"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Bei Namen: Name + s (Peters Bruder). Sonst oft: von + Dativ (der Bruder von meiner Frau).",
+      "ku": "ب ناڤان: ناڤ + s (Peters Bruder = برایێ پێتەری). یان: von + Dativ (der Bruder von meiner Frau)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "topics": [
+    {
+     "emoji": "📍",
+     "title": {
+      "de": "Wechselpräpositionen: Wo? (Dativ) – Wohin? (Akkusativ)",
+      "ku": "پێشگرێن دوو رەنگ: ل کیڤە؟ / بۆ کیڤە؟"
+     },
+     "head": [
+      "",
+      "Wo? (Dativ)",
+      "Wohin? (Akkusativ)"
+     ],
+     "rows": [
+      [
+       "der Tisch",
+       "auf dem Tisch",
+       "auf den Tisch"
+      ],
+      [
+       "das Regal",
+       "im (in dem) Regal",
+       "ins (in das) Regal"
+      ],
+      [
+       "die Wand",
+       "an der Wand",
+       "an die Wand"
+      ],
+      [
+       "die Stühle",
+       "zwischen den Stühlen",
+       "zwischen die Stühle"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das Buch liegt auf dem Tisch.",
+       "ku": "پەرتووک ل سەر مێزێ یە."
+      },
+      {
+       "de": "Ich lege das Buch auf den Tisch.",
+       "ku": "ئەز پەرتووکێ ددانمە سەر مێزێ."
+      },
+      {
+       "de": "Die Katze schläft unter dem Bett.",
+       "ku": "پشیک ل بن تەختێ دنڤیت."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Die Tasse steht ___ Tisch. (auf)",
+       "qku": "پەرداخ ل سەر مێزێ یە.",
+       "cue": "Wo?",
+       "a": "Die Tasse steht auf dem Tisch.",
+       "aku": "پەرداخ ل سەر مێزێ یە."
+      },
+      {
+       "q": "Ich stelle die Tasse ___ Tisch. (auf)",
+       "qku": "ئەز پەرداخێ ددانمە سەر مێزێ.",
+       "cue": "Wohin?",
+       "a": "Ich stelle die Tasse auf den Tisch.",
+       "aku": "ئەز پەرداخێ ددانمە سەر مێزێ."
+      },
+      {
+       "q": "Er hängt die Uhr ___ Wand. (an)",
+       "qku": "ئەو دەمژمێرێ ب دیواری ڤە هەلدئاویسیت.",
+       "cue": "Wohin?",
+       "a": "Er hängt die Uhr an die Wand.",
+       "aku": "ئەو دەمژمێرێ ب دیواری ڤە هەلدئاویسیت."
+      }
+     ],
+     "more": [
+      {
+       "de": "Das Auto steht vor dem Haus.",
+       "ku": "ترومبێل ل بەر خانی یە."
+      },
+      {
+       "de": "Ich fahre das Auto vor das Haus.",
+       "ku": "ئەز ترومبێلێ دبەمە بەر خانی."
+      }
+     ],
+     "explain": {
+      "de": "in, an, auf, unter, über, vor, hinter, neben, zwischen: Wo? ➔ Dativ (liegen, stehen, hängen). Wohin? ➔ Akkusativ (legen, stellen, hängen).",
+      "ku": "ئەڤ ٩ پێشگرە: ل کیڤە؟ (جهـ) ➔ Dativ. بۆ کیڤە؟ (لڤین) ➔ Akkusativ."
+     },
+     "tip": {
+      "de": "Wo? = Ruhe ➔ dem/der/dem. Wohin? = Bewegung ➔ den/die/das.",
+      "ku": "جهـ ➔ dem/der. لڤین ➔ den/die/das."
+     }
+    },
+    {
+     "emoji": "🧱",
+     "title": {
+      "de": "stellen/stehen · legen/liegen · hängen",
+      "ku": "دانان و هەبوون ل جهەکی"
+     },
+     "head": [
+      "Bewegung (Wohin?)",
+      "Position (Wo?)"
+     ],
+     "rows": [
+      [
+       "stellen – hat gestellt",
+       "stehen – hat gestanden"
+      ],
+      [
+       "legen – hat gelegt",
+       "liegen – hat gelegen"
+      ],
+      [
+       "hängen – hat gehängt",
+       "hängen – hat gehangen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich habe die Vase auf den Tisch gestellt.",
+       "ku": "من گۆلدان دانا سەر مێزێ."
+      },
+      {
+       "de": "Die Vase steht auf dem Tisch.",
+       "ku": "گۆلدان ل سەر مێزێ یە."
+      },
+      {
+       "de": "Wo hast du die Brille hingelegt?",
+       "ku": "تە بەرچاڤک دانا کیڤە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Das Handy ___ auf dem Sofa. (liegen)",
+       "qku": "مۆبایل ل سەر قەنەفێ یە.",
+       "cue": "liegen",
+       "a": "Das Handy liegt auf dem Sofa.",
+       "aku": "مۆبایل ل سەر قەنەفێ یە."
+      },
+      {
+       "q": "Ich ___ das Handy auf das Sofa. (legen)",
+       "qku": "ئەز مۆبایلێ ددانمە سەر قەنەفێ.",
+       "cue": "legen",
+       "a": "Ich lege das Handy auf das Sofa.",
+       "aku": "ئەز مۆبایلێ ددانمە سەر قەنەفێ."
+      },
+      {
+       "q": "Die Flaschen ___ im Kühlschrank. (stehen)",
+       "qku": "شووشە د سەلاجێ دانە.",
+       "cue": "stehen",
+       "a": "Die Flaschen stehen im Kühlschrank.",
+       "aku": "شووشە د سەلاجێ دانە."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "stellen, legen, hängen (Akkusativ) = Bewegung. stehen, liegen, hängen (Dativ) = Position.",
+      "ku": "stellen/legen = تو تشتەکی ددانی (لڤین). stehen/liegen = تشت ل جهەکی یە."
+     }
+    },
+    {
+     "emoji": "↕️",
+     "title": {
+      "de": "Direktionaladverbien: rein, raus, rauf, runter",
+      "ku": "ئاراستە: ژوور، دەر، سەر، خوار"
+     },
+     "head": [
+      "Wo?",
+      "Wohin?"
+     ],
+     "rows": [
+      [
+       "drinnen",
+       "rein"
+      ],
+      [
+       "draußen",
+       "raus"
+      ],
+      [
+       "oben",
+       "rauf / nach oben"
+      ],
+      [
+       "unten",
+       "runter / nach unten"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Die Kinder spielen draußen.",
+       "ku": "زارۆک ل دەرڤە یاری دکەن."
+      },
+      {
+       "de": "Kommt rein, es regnet!",
+       "ku": "وەرنە ژوور، باران دباریت!"
+      },
+      {
+       "de": "Die Wohnung ist oben, im vierten Stock.",
+       "ku": "خانی ل سەرێ یە، ل قاتا چارێ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Es ist kalt. Wir gehen ___. (Wohin?)",
+       "qku": "سەرمایە. ئەم دچینە ژوور.",
+       "cue": "rein",
+       "a": "Es ist kalt. Wir gehen rein.",
+       "aku": "سەرمایە. ئەم دچینە ژوور."
+      },
+      {
+       "q": "Wo ist Papa? – Er ist ___ im Keller. (Wo?)",
+       "qku": "بابێ ل کیڤەیە؟ – ل خوارێ د ژێرزەمینێ دا.",
+       "cue": "unten",
+       "a": "Er ist unten im Keller.",
+       "aku": "ئەو ل خوارێ د ژێرزەمینێ دا یە."
+      },
+      {
+       "q": "Bring den Müll ___! (Wohin?)",
+       "qku": "زبلی ببە دەرڤە!",
+       "cue": "raus",
+       "a": "Bring den Müll raus!",
+       "aku": "زبلی ببە دەرڤە!"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Mit Bewegung: rein (hinein/herein), raus, rauf, runter, rüber. Ohne Bewegung: drinnen, draußen, oben, unten.",
+      "ku": "ب لڤین: rein (بۆ ژوور)، raus (بۆ دەرڤە)، rauf (بۆ سەرێ)، runter (بۆ خوارێ). بێ لڤین: drinnen, draußen, oben, unten."
+     }
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "topics": [
+    {
+     "emoji": "🧩",
+     "title": {
+      "de": "Indefinitpronomen: einer, eins, eine, welche, keiner",
+      "ku": "جهێناڤێن نەدیار: ئێک، هندەک، چ"
+     },
+     "head": [
+      "",
+      "Nominativ",
+      "Akkusativ"
+     ],
+     "rows": [
+      [
+       "der Löffel",
+       "einer / keiner",
+       "einen / keinen"
+      ],
+      [
+       "das Messer",
+       "eins / keins",
+       "eins / keins"
+      ],
+      [
+       "die Tasse",
+       "eine / keine",
+       "eine / keine"
+      ],
+      [
+       "Eier (Plural)",
+       "welche / keine",
+       "welche / keine"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich suche einen Topf. – Da steht einer.",
+       "ku": "ئەز ل مەنجەلەکێ دگەڕێم. – ئێک ل وێرێ یە."
+      },
+      {
+       "de": "Hast du Äpfel? – Ja, ich habe welche.",
+       "ku": "سێڤ ل نک تە هەنە؟ – بەلێ، هندەک هەنە."
+      },
+      {
+       "de": "Ich habe kein Glas. – Dort ist eins.",
+       "ku": "پەرداخەکا من نینە. – ئێک ل وێرێ یە."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Hast du einen Kuli? – Ja, ich habe ___.",
+       "qku": "پێنووسەک ل نک تە هەیە؟ – بەلێ، ئێک هەیە.",
+       "cue": "einen",
+       "a": "Ja, ich habe einen.",
+       "aku": "بەلێ، ئێک ل نک من هەیە."
+      },
+      {
+       "q": "Gibt es hier ein Café? – Ja, da vorne ist ___.",
+       "qku": "ل ڤێرێ کافێیەک هەیە؟ – بەلێ، ئێک ل پێش هەیە.",
+       "cue": "eins",
+       "a": "Ja, da vorne ist eins.",
+       "aku": "بەلێ، ئێک ل پێش هەیە."
+      },
+      {
+       "q": "Hast du Tomaten? – Nein, ich habe ___.",
+       "qku": "تەماتە ل نک تە هەنە؟ – نەخێر، چ نینن.",
+       "cue": "keine",
+       "a": "Nein, ich habe keine.",
+       "aku": "نەخێر، چ ل نک من نینن."
+      }
+     ],
+     "more": [
+      {
+       "de": "Brauchst du eine Tüte? – Nein, ich habe eine.",
+       "ku": "تووڕەکەک پێدڤی تە یە؟ – نەخێر، ئێک ل نک من هەیە."
+      },
+      {
+       "de": "Wir brauchen Gläser. – Im Schrank sind noch welche.",
+       "ku": "پەرداخ پێدڤی مەنە. – هێشتا هندەک د دۆلابێ دانە."
+      }
+     ],
+     "explain": {
+      "de": "Statt Nomen: einer/eins/eine (ein-), keiner/keins/keine (kein-), welche (Plural ohne Artikel).",
+      "ku": "ل جهێ ناڤی: einer/eins/eine = ئێک، keiner = چ … نینە، welche = هندەک (کۆ)."
+     },
+     "tip": {
+      "de": "Achtung: ein Messer ➔ eins!",
+      "ku": "ئاگەهدار بە: ein Messer ➔ eins!"
+     }
+    },
+    {
+     "emoji": "🍽️",
+     "title": {
+      "de": "jemand, niemand, alles, nichts",
+      "ku": "کەسەک، کەس، هەمی تشت، چ تشت"
+     },
+     "head": [
+      "positiv",
+      "negativ"
+     ],
+     "rows": [
+      [
+       "jemand",
+       "niemand"
+      ],
+      [
+       "etwas",
+       "nichts"
+      ],
+      [
+       "alles",
+       "nichts"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ist jemand zu Hause? – Nein, niemand.",
+       "ku": "کەسەک ل مال هەیە؟ – نەخێر، کەس نینە."
+      },
+      {
+       "de": "Möchtest du etwas trinken? – Nein, danke, nichts.",
+       "ku": "تە چ ڤەخوارن دڤێت؟ – نەخێر سوپاس، چ نە."
+      },
+      {
+       "de": "Ich habe alles gegessen.",
+       "ku": "من هەمی تشت خوار."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Hat ___ meine Brille gesehen? (eine Person?)",
+       "qku": "کەسەکی بەرچاڤکا من دیتییە؟",
+       "cue": "jemand",
+       "a": "Hat jemand meine Brille gesehen?",
+       "aku": "کەسەکی بەرچاڤکا من دیتییە؟"
+      },
+      {
+       "q": "Ich habe Hunger, aber im Kühlschrank ist ___.",
+       "qku": "ئەز برسیمە، بەلێ د سەلاجێ دا چ تشت نینە.",
+       "cue": "nichts",
+       "a": "Im Kühlschrank ist nichts.",
+       "aku": "د سەلاجێ دا چ تشت نینە."
+      },
+      {
+       "q": "Die Party war toll, ___ hat getanzt. (jede Person)",
+       "qku": "ئاهەنگ گەلەک خۆش بوو، هەمییان سەما کر.",
+       "cue": "alle",
+       "a": "Alle haben getanzt.",
+       "aku": "هەمییان سەما کر."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "jemand = eine Person; niemand = keine Person; alles = jedes Ding; nichts = kein Ding.",
+      "ku": "jemand = کەسەک؛ niemand = کەس … نە؛ alles = هەمی تشت؛ nichts = چ تشت … نە."
+     }
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "topics": [
+    {
+     "emoji": "🔀",
+     "title": {
+      "de": "Nebensatz mit „wenn“",
+      "ku": "رستەیا ئەگەرێ ب «wenn»"
+     },
+     "head": [
+      "wenn-Satz",
+      "Hauptsatz"
+     ],
+     "rows": [
+      [
+       "Wenn ich Zeit habe,",
+       "helfe ich dir."
+      ],
+      [
+       "Wenn es regnet,",
+       "bleiben wir zu Hause."
+      ],
+      [
+       "Ich helfe dir,",
+       "wenn ich Zeit habe."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Wenn du willst, können wir zusammen lernen.",
+       "ku": "ئەگەر تە بڤێت، ئەم دشێین پێکڤە بخوینین."
+      },
+      {
+       "de": "Ruf mich an, wenn du angekommen bist.",
+       "ku": "تەلەفۆنێ بۆ من بکە دەمێ تو گەهشتی."
+      },
+      {
+       "de": "Wenn ich Urlaub habe, besuche ich meine Eltern.",
+       "ku": "دەمێ مۆلەتا من هەبیت، ئەز دچمە سەرەدانا دایک و بابێن خۆ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich habe Hunger. Ich koche.",
+       "qku": "ئەز برسیمە. ئەز خوارنێ چێدکەم.",
+       "cue": "Wenn …",
+       "a": "Wenn ich Hunger habe, koche ich.",
+       "aku": "ئەگەر ئەز برسی بم، خوارنێ چێدکەم."
+      },
+      {
+       "q": "Das Wetter ist schön. Wir gehen spazieren.",
+       "qku": "کەش خۆشە. ئەم دچینە گەڕیانێ.",
+       "cue": "Wenn …",
+       "a": "Wenn das Wetter schön ist, gehen wir spazieren.",
+       "aku": "ئەگەر کەش خۆش بیت، ئەم دچینە گەڕیانێ."
+      },
+      {
+       "q": "Du bist fertig. Du kannst gehen.",
+       "qku": "تو خلاس بووی. تو دشێی بچی.",
+       "cue": "Wenn …",
+       "a": "Wenn du fertig bist, kannst du gehen.",
+       "aku": "ئەگەر تو خلاس بووی، دشێی بچی."
+      }
+     ],
+     "more": [
+      {
+       "de": "Wenn der Chef kommt, beginnt die Besprechung.",
+       "ku": "دەمێ سەرۆک دهێت، کۆبوون دەستپێدکەت."
+      }
+     ],
+     "explain": {
+      "de": "„wenn“ = Bedingung oder Zeit (immer wenn). Im wenn-Satz steht das Verb am Ende. Beginnt der Satz mit „wenn“, steht danach Verb + Subjekt.",
+      "ku": "«wenn» = ئەگەر یان دەمێ (هەر جارا). کار د رستەیا wenn دا دچیتە دوماهیێ. ئەگەر رستە ب wenn دەستپێبکەت، پاشی کار + کارا."
+     },
+     "tip": {
+      "de": "Nach dem wenn-Satz: Komma, dann sofort das Verb!",
+      "ku": "پشتی رستەیا wenn: کۆما، پاشی کار دەستبەجه!"
+     }
+    },
+    {
+     "emoji": "💡",
+     "title": {
+      "de": "Konjunktiv II: sollte (Ratschlag)",
+      "ku": "ئامۆژگاری ب «sollte»"
+     },
+     "head": [
+      "Person",
+      "sollen (Konj. II)"
+     ],
+     "rows": [
+      [
+       "ich",
+       "sollte"
+      ],
+      [
+       "du",
+       "solltest"
+      ],
+      [
+       "er / sie / es",
+       "sollte"
+      ],
+      [
+       "wir / sie / Sie",
+       "sollten"
+      ],
+      [
+       "ihr",
+       "solltet"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Du solltest mehr Wasser trinken.",
+       "ku": "باشترە تو پتر ئاڤێ ڤەخۆی."
+      },
+      {
+       "de": "Wir sollten früher losfahren.",
+       "ku": "باشترە ئەم زووتر بچین."
+      },
+      {
+       "de": "Sie sollten nicht so viel arbeiten.",
+       "ku": "باشترە هوین ئەڤقاس کار نەکەن."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich bin immer müde. (früher ins Bett gehen)",
+       "qku": "ئەز هەردەم وەستیایمە.",
+       "cue": "sollte",
+       "a": "Du solltest früher ins Bett gehen.",
+       "aku": "باشترە تو زووتر بچییە د جهێ خەوێ."
+      },
+      {
+       "q": "Mein Deutsch ist nicht gut. (jeden Tag üben)",
+       "qku": "ئەلمانیا من نە باشە.",
+       "cue": "sollte",
+       "a": "Du solltest jeden Tag üben.",
+       "aku": "باشترە تو هەر رۆژ راهێنانێ بکەی."
+      },
+      {
+       "q": "Wir haben Kopfschmerzen. (eine Pause machen)",
+       "qku": "سەرێ مە دئێشیت.",
+       "cue": "sollte",
+       "a": "Ihr solltet eine Pause machen.",
+       "aku": "باشترە هوین بێهنڤەدانەکێ بدەن."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Mit „sollte“ geben wir höflich einen Rat.",
+      "ku": "ب «sollte» ئەم ب ئەدەب ئامۆژگاریێ ددەین (باشترە …)."
+     }
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "topics": [
+    {
+     "emoji": "🪞",
+     "title": {
+      "de": "Reflexive Verben",
+      "ku": "کارێن ڤەگەڕ (sich …)"
+     },
+     "head": [
+      "Person",
+      "Akkusativ",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "Ich freue mich."
+      ],
+      [
+       "du",
+       "dich",
+       "Du freust dich."
+      ],
+      [
+       "er / sie / es",
+       "sich",
+       "Sie freut sich."
+      ],
+      [
+       "wir",
+       "uns",
+       "Wir freuen uns."
+      ],
+      [
+       "ihr",
+       "euch",
+       "Ihr freut euch."
+      ],
+      [
+       "sie / Sie",
+       "sich",
+       "Sie freuen sich."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich muss mich beeilen.",
+       "ku": "دڤێت ئەز لەز بکەم."
+      },
+      {
+       "de": "Wir haben uns im Kurs kennengelernt.",
+       "ku": "مە ئێک د خولێ دا ناسکر."
+      },
+      {
+       "de": "Erholt euch gut!",
+       "ku": "باش بێهنا خۆ ڤەدەن!"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Wir ___ morgen am Bahnhof. (sich treffen)",
+       "qku": "ئەم سبەی ل وێستگەهێ ئێک دبینین.",
+       "cue": "uns",
+       "a": "Wir treffen uns morgen am Bahnhof.",
+       "aku": "ئەم سبەی ل وێستگەهێ ئێک دبینین."
+      },
+      {
+       "q": "Er ___ nach der Arbeit. (sich ausruhen)",
+       "qku": "ئەو پشتی کاری بێهنا خۆ ڤەددەت.",
+       "cue": "sich",
+       "a": "Er ruht sich nach der Arbeit aus.",
+       "aku": "ئەو پشتی کاری بێهنا خۆ ڤەددەت."
+      },
+      {
+       "q": "___ du dich nicht wohl? (sich fühlen)",
+       "qku": "تو خۆ باش هەست ناکەی؟",
+       "cue": "Fühlst",
+       "a": "Fühlst du dich nicht wohl?",
+       "aku": "ئەرێ تو خۆ باش هەست ناکەی؟"
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Bei reflexiven Verben bezieht sich das Pronomen auf das Subjekt: ich wasche mich.",
+      "ku": "د کارێن ڤەگەڕ دا جهێناڤ دزڤڕیتە سەر کارای: ich wasche mich = ئەز خۆ دشۆم."
+     },
+     "tip": {
+      "de": "Wichtige Verben: sich freuen, sich ärgern, sich ausruhen, sich bewegen, sich setzen, sich treffen, sich beeilen.",
+      "ku": "کارێن گرنگ: sich freuen, sich ärgern, sich ausruhen, sich bewegen, sich setzen, sich treffen, sich beeilen."
+     }
+    },
+    {
+     "emoji": "🔗",
+     "title": {
+      "de": "Verben mit Präposition · worauf? darauf",
+      "ku": "کار + پێشگر: ب هیڤیا چ؟ / ب هیڤیا وێ"
+     },
+     "head": [
+      "Verb",
+      "Frage",
+      "Antwort"
+     ],
+     "rows": [
+      [
+       "warten auf",
+       "Worauf wartest du?",
+       "Ich warte darauf."
+      ],
+      [
+       "sich interessieren für",
+       "Wofür interessierst du dich?",
+       "Ich interessiere mich dafür."
+      ],
+      [
+       "denken an",
+       "Woran denkst du?",
+       "Ich denke daran."
+      ],
+      [
+       "sich ärgern über",
+       "Worüber ärgerst du dich?",
+       "Ich ärgere mich darüber."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Worauf wartest du? – Auf meine Freundin.",
+       "ku": "تو ل هیڤیا چ ی؟ – ل هیڤیا هەڤالا خۆ."
+      },
+      {
+       "de": "Denkst du an den Termin? – Ja, ich denke daran.",
+       "ku": "تو بیرا ژڤانێ دکەی؟ – بەلێ، ئەز بیرا وێ دکەم."
+      },
+      {
+       "de": "Ich interessiere mich für Musik. Und du? – Ich auch dafür.",
+       "ku": "ئەز حەز ژ مۆسیقایێ دکەم. و تو؟ – ئەز ژی."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich freue mich auf den Urlaub. (Frage)",
+       "qku": "ئەز ب هیڤیا بێهنڤەدانێ مە.",
+       "cue": "Wo(r)…",
+       "a": "Worauf freust du dich?",
+       "aku": "تو ب هیڤیا چ ی؟"
+      },
+      {
+       "q": "Interessierst du dich für Politik? – Ja, ich interessiere mich ___.",
+       "qku": "تو حەز ژ سیاسەتێ دکەی؟",
+       "cue": "da(r)…",
+       "a": "Ja, ich interessiere mich dafür.",
+       "aku": "بەلێ، ئەز حەز ژێ دکەم."
+      },
+      {
+       "q": "Ärgerst du dich über das Wetter? – Ja, ich ärgere mich ___.",
+       "qku": "تو ژ کەشێ عێجزی؟",
+       "cue": "da(r)…",
+       "a": "Ja, ich ärgere mich darüber.",
+       "aku": "بەلێ، ئەز ژێ عێجزم."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Viele Verben haben eine feste Präposition: warten auf, sich freuen auf/über, sich interessieren für, denken an, träumen von. Frage: wo(r) + Präposition (worauf, wofür). Antwort: da(r) + Präposition (darauf, dafür).",
+      "ku": "گەلەک کار پێشگرەکا جێگیر هەنە. پرسیار: worauf, wofür … بەرسڤ: darauf, dafür …"
+     },
+     "tip": {
+      "de": "Bei Personen: auf wen? / auf ihn (nicht: worauf / darauf).",
+      "ku": "بۆ مرۆڤان: auf wen? / auf ihn."
+     }
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "topics": [
+    {
+     "emoji": "⏮️",
+     "title": {
+      "de": "Präteritum der Modalverben",
+      "ku": "دەمێ بۆری یێ کارێن یاریدەدەر"
+     },
+     "head": [
+      "",
+      "wollen",
+      "können",
+      "müssen",
+      "dürfen",
+      "sollen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "wollte",
+       "konnte",
+       "musste",
+       "durfte",
+       "sollte"
+      ],
+      [
+       "du",
+       "wolltest",
+       "konntest",
+       "musstest",
+       "durftest",
+       "solltest"
+      ],
+      [
+       "er/sie",
+       "wollte",
+       "konnte",
+       "musste",
+       "durfte",
+       "sollte"
+      ],
+      [
+       "wir/sie",
+       "wollten",
+       "konnten",
+       "mussten",
+       "durften",
+       "sollten"
+      ],
+      [
+       "ihr",
+       "wolltet",
+       "konntet",
+       "musstet",
+       "durftet",
+       "solltet"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Früher konnte ich nicht schwimmen.",
+       "ku": "بەرێ من نەدشیا مەلەڤانیێ بکەم."
+      },
+      {
+       "de": "Wir mussten lange warten.",
+       "ku": "دڤیا ئەم گەلەک چاڤەڕێ ببین."
+      },
+      {
+       "de": "Als Kind durfte ich nicht allein in die Stadt.",
+       "ku": "دەمێ زارۆک بووم رێ ب من نەددا ب تنێ بچمە باژێڕی."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich kann gestern nicht kommen.",
+       "qku": "من نەشیا دوهی بهێم.",
+       "cue": "Präteritum",
+       "a": "Ich konnte gestern nicht kommen.",
+       "aku": "من نەشیا دوهی بهێم."
+      },
+      {
+       "q": "Wir müssen viel lernen. (früher)",
+       "qku": "بەرێ دڤیا ئەم گەلەک بخوینین.",
+       "cue": "Präteritum",
+       "a": "Früher mussten wir viel lernen.",
+       "aku": "بەرێ دڤیا ئەم گەلەک بخوینین."
+      },
+      {
+       "q": "Er will Arzt werden. (als Kind)",
+       "qku": "دەمێ زارۆک بوو دڤیا ببیتە نوژدار.",
+       "cue": "Präteritum",
+       "a": "Als Kind wollte er Arzt werden.",
+       "aku": "دەمێ زارۆک بوو، دڤیا ببیتە نوژدار."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Im Präteritum haben Modalverben kein Umlaut und die Endung -te: können ➔ konnte.",
+      "ku": "د دەمێ بۆری دا: Umlaut نامینیت و -te زێدە دبیت: können ➔ konnte."
+     },
+     "tip": {
+      "de": "ich und er/sie haben die gleiche Form: ich wollte – er wollte.",
+      "ku": "ich و er هەمان شێوە: ich wollte – er wollte."
+     }
+    },
+    {
+     "emoji": "💬",
+     "title": {
+      "de": "Nebensatz mit „dass“",
+      "ku": "رستەیا لاوەکی ب «dass» (کو)"
+     },
+     "head": [
+      "Hauptsatz",
+      "dass",
+      "… Verb (Ende)"
+     ],
+     "rows": [
+      [
+       "Ich glaube,",
+       "dass",
+       "er recht hat."
+      ],
+      [
+       "Es ist wichtig,",
+       "dass",
+       "du pünktlich bist."
+      ],
+      [
+       "Ich hoffe,",
+       "dass",
+       "ich die Stelle bekomme."
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich finde, dass Deutsch schön ist.",
+       "ku": "ب دیتنا من ئەلمانی جوانە."
+      },
+      {
+       "de": "Er sagt, dass er später kommt.",
+       "ku": "ئەو دبێژیت کو دێ پاشی ئێت."
+      },
+      {
+       "de": "Weißt du, dass morgen kein Unterricht ist?",
+       "ku": "دزانی کو سبەی وانە نینە؟"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Ich glaube: Das Wetter wird morgen gut.",
+       "qku": "ئەز هزر دکەم کو سبەی کەش دێ باش بیت.",
+       "cue": "dass",
+       "a": "Ich glaube, dass das Wetter morgen gut wird.",
+       "aku": "ئەز هزر دکەم کو سبەی کەش دێ باش بیت."
+      },
+      {
+       "q": "Er hofft: Er findet eine Wohnung.",
+       "qku": "ئەو هیڤیدارە کو خانیەکێ ببینیت.",
+       "cue": "dass",
+       "a": "Er hofft, dass er eine Wohnung findet.",
+       "aku": "ئەو هیڤیدارە کو خانیەکێ ببینیت."
+      },
+      {
+       "q": "Es ist schade: Du kannst nicht kommen.",
+       "qku": "مخابنە کو تو نەشێی بهێی.",
+       "cue": "dass",
+       "a": "Es ist schade, dass du nicht kommen kannst.",
+       "aku": "مخابنە کو تو نەشێی بهێی."
+      }
+     ],
+     "more": [],
+     "explain": {
+      "de": "Nach Verben wie glauben, denken, finden, wissen, hoffen, sagen kommt oft ein dass-Satz. Das Verb steht am Ende.",
+      "ku": "پشتی کارێن وەکی glauben, finden, wissen, hoffen, sagen گەلەک جاران رستەیا dass دهێت. کار دچیتە دوماهیێ."
+     },
+     "tip": {
+      "de": "das (Artikel) ≠ dass (Konjunktion)!",
+      "ku": "das (ئارتیکل) ≠ dass (کو)!"
+     }
+    }
+   ]
   }
  ]
 }

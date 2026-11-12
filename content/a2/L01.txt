@@ -1,0 +1,100 @@
+@L 15 | #2FA39A | گەهشتن و دەستپێکەکا نوو | Ankommen | Arriving
+
+@U a | flag | ل باژێڕەکێ نوو | Neu in der Stadt | New in town
+der Umzug | دێر ئومتسووگ | ڤەگوهاستنا خانی | the move | 📦
+umziehen | ئومتسیێن | ماڵ ڤەگوهاستن | to move house | 🚚 | Wir ___ nächste Woche nach Berlin ___. | ziehen … um | kommen … an; rufen … an | ئەم حەفتیا بهێت دێ چینە بەرلینێ (ماڵا خۆ ڤەگوهێزین).
+ankommen | ئانکۆمن | گەهشتن | to arrive | 🛬 | Der Zug ___ um acht Uhr in Hamburg ___. | kommt … an | zieht … um; steht … auf | شەمەندەفەر دەمژمێر هەشت دگەهیتە هامبۆرگێ.
+die Heimat | دی هایمات | وەلات / جهێ ژێهاتی | homeland | 🏔️ | Ich vermisse meine ___ sehr. | Heimat | Küche; Brille | ئەز گەلەک بیرا وەلاتێ خۆ دکەم.
+vermissen | فێرمیسن | بیرا … کرن | to miss | 💭 | Ich ___ meine Familie. | vermisse | verliere; verdiene | ئەز بیرا مالباتا خۆ دکەم.
+Ich fühle mich hier noch fremd. | ئیش فیولە میش هیر نۆخ فرێمت | ئەز ل ڤێرێ هێشتا خۆ ب نامۆ دزانم. | I still feel like a stranger here. | 🧳
+Am Anfang war alles neu für mich. | ئام ئانفانگ ڤار ئالەس نۆی فیور میش | ل دەستپێکێ هەمی تشت بۆ من نوو بوون. | At the beginning everything was new to me. | 🌱
+Ich habe schon viele Leute kennengelernt. | ئیش هابە شۆن فیلە لۆیتە کێنەنگەلێرنت | من بەرێ گەلەک خەلک ناسکرینە. | I have already met many people. | 🤝 | Ich habe meine Nachbarn schon ___. | kennengelernt | angekommen; umgezogen | من جیرانێن خۆ بەرێ ناسکرینە.
+
+@U b | family | مالباتا مەزن | Die Verwandten | Relatives
+der Onkel | دێر ئۆنکێل | مام / خال | the uncle | 👨
+die Tante | دی تانتە | مەت / خالت | the aunt | 👩
+der Cousin / die Cousine | دێر کووزێن / دی کووزینە | پسمام / دۆتمام | the cousin | 🧑‍🤝‍🧑
+der Neffe | دێر نێفە | برازا / خوارزا (کوڕ) | the nephew | 👦 | Der Sohn von meinem Bruder ist mein ___. | Neffe | Onkel; Schwager | کوڕێ برایێ من، برازایێ منە.
+die Nichte | دی نیشتە | برازا / خوارزا (کچ) | the niece | 👧
+die Schwiegermutter | دی شڤیگەرموتەر | خەسوو | the mother-in-law | 👵 | Die Mutter von meinem Mann ist meine ___. | Schwiegermutter | Tante; Nichte | دایکا زەلامێ من، خەسوویا منە.
+der Schwager | دێر شڤاگەر | برایێ ژنێ یان یێ زەلامی | the brother-in-law | 🧔
+Peters Schwester wohnt in Köln. | پێتەرس شڤێستەر ڤۆنت ئین کۆلن | خویشکا پێتەری ل کۆلنێ دژیت. | Peter's sister lives in Cologne. | 🏙️ | ___ Schwester wohnt in Köln. | Peters | Peter; Peterin | خویشکا پێتەری ل کۆلنێ دژیت.
+
+@U c | help | بۆچی؟ چونکی … | Warum? – Weil … | Why? – Because …
+Warum lernst du Deutsch? | ڤارووم لێرنست دوو دۆیچ | تو بۆچی ئەلمانی فێر دبی؟ | Why are you learning German? | ❓
+Weil ich in Deutschland arbeiten möchte. | ڤایل ئیش ئین دۆیچلاند ئاربایتن مۆشتە | چونکی ئەز دڤێم ل ئەلمانیا کار بکەم. | Because I want to work in Germany. | 💼 | Ich lerne Deutsch, weil ich in Deutschland arbeiten ___. | möchte | möchten; mag | ئەز ئەلمانی فێر دبم، چونکی ئەز دڤێم ل ئەلمانیا کار بکەم.
+Ich bin müde, weil ich wenig geschlafen habe. | ئیش بین میودە، ڤایل ئیش ڤێنیش گەشلافن هابە | ئەز وەستیایمە، چونکی من کێم نڤستییە. | I'm tired because I slept little. | 😴 | Ich bin müde, weil ich wenig geschlafen ___. | habe | bin; hatte | ئەز وەستیایمە، چونکی من کێم نڤستییە.
+Er kommt nicht, weil er krank ist. | ئێر کۆمت نیشت، ڤایل ئێر کرانک ئیست | ئەو نائێت، چونکی ئەو نەساخە. | He isn't coming because he is ill. | 🤒 | Er kommt nicht, weil er krank ___. | ist | sind; hat | ئەو نائێت، چونکی ئەو نەساخە.
+Sie ist glücklich, weil ihre Familie zu Besuch kommt. | زی ئیست گلیوکلیش، ڤایل ئیرە فامیلیە تسوو بەزووخ کۆمت | ئەو یا دلخۆشە، چونکی مالباتا وێ دێ بۆ سەرەدانێ ئێن. | She is happy because her family is coming to visit. | 😊
+Wir bleiben zu Hause, weil es regnet. | ڤیر بلایبن تسوو هاوزە، ڤایل ئێس رێگنەت | ئەم ل مال دمینین، چونکی باران دباریت. | We stay at home because it is raining. | 🌧️ | Wir bleiben zu Hause, weil es ___. | regnet | regnen; Regen | ئەم ل مال دمینین، چونکی باران دباریت.
+Ich nehme den Bus, weil mein Auto kaputt ist. | ئیش نێمە دێن بووس، ڤایل ماین ئاوتۆ کاپووت ئیست | ئەز پاسێ دگرم، چونکی ترومبێلا من یا خرابە. | I take the bus because my car is broken. | 🚌
+@CZ Ich bin spät, ___ der Bus nicht gekommen ___. | weil … ist | weil … hat; dass … war | من دەرەنگ کر، چونکی پاس نەهات.
+@CZ ___ du heute keine Zeit, ___ du so viel arbeitest? | Hast … weil | Bist … weil; Hast … dass | ئەرێ ئەڤرۆ تە دەم نینە، چونکی تو گەلەک کار دکەی؟
+
+@U d | history | چ قەومی؟ (Perfekt) | Was ist passiert? | What happened?
+Ich habe meinen Schlüssel verloren. | ئیش هابە ماینن شلیوسل فێرلۆرن | من کلیلا خۆ بەرزە کر. | I lost my key. | 🔑 | Ich habe meinen Schlüssel ___. | verloren | verlieren; verliert | من کلیلا خۆ بەرزە کر.
+Wann bist du in Deutschland angekommen? | ڤان بیست دوو ئین دۆیچلاند ئانگەکۆمن | تو کەنگی گەهشتییە ئەلمانیا؟ | When did you arrive in Germany? | 🛬 | Wann ___ du in Deutschland angekommen? | bist | hast; warst | تو کەنگی گەهشتییە ئەلمانیا؟
+Wir sind letztes Jahr umgezogen. | ڤیر زیند لێتستەس یار ئومگەتسۆگن | ئەم پار ماڵا خۆ ڤەگوهاستین. | We moved last year. | 🚚 | Wir sind letztes Jahr ___. | umgezogen | umziehen; gezogenum | ئەم پار ماڵا خۆ ڤەگوهاستین.
+Ich habe gestern mit meiner Mutter telefoniert. | ئیش هابە گێستەرن میت ماینەر موتەر تێلێفۆنیرت | من دوهی دگەل دایکا خۆ ب تەلەفۆنێ ئاخفت. | I phoned my mother yesterday. | 📞 | Ich habe gestern mit meiner Mutter ___. | telefoniert | getelefoniert; telefoniere | من دوهی دگەل دایکا خۆ ب تەلەفۆنێ ئاخفت.
+Das Paket ist nicht angekommen. | داس پاکێت ئیست نیشت ئانگەکۆمن | پاکەت نەگەهشت. | The parcel did not arrive. | 📦
+Was hast du am Wochenende erlebt? | ڤاس هاست دوو ئام ڤۆخنێندە ئێرلێپت | تە دوماهیا حەفتیێ چ دیت / چ ب سەرێ تە هات؟ | What did you experience at the weekend? | 🎉
+Ich habe mein Handy im Zug vergessen. | ئیش هابە ماین هێندی ئیم تسووگ فێرگێسن | من مۆبایلا خۆ د شەمەندەفەرێ دا ژبیرکر. | I forgot my phone on the train. | 📱 | Ich habe mein Handy im Zug ___. | vergessen | vergesst; gevergessen | من مۆبایلا خۆ د شەمەندەفەرێ دا ژبیرکر.
+Was für ein Pech! | ڤاس فیور ئاین پێش | چ بەختەکێ رەشە! | What bad luck! | 😩
+@CZ Ich ___ heute früh ___ und habe den Bus verpasst. | habe … verschlafen | bin … verschlafen; habe … geschlafen | ئەڤرۆ سپێدێ ئەز مامە نڤستی و پاس ل من چوو.
+
+@D ل باژێڕێ نوو
+Lana: Hallo Azad! Wie lange wohnst du schon in Leipzig? || سلاڤ ئازاد! چەند دەمە تو ل لایپزیگێ دژی؟
+Azad: Seit drei Monaten. Ich bin im Sommer umgezogen. || ژ سێ هەیڤان ڤە. ئەز هاڤینێ هاتمە ڤێرێ.
+Lana: Und? Gefällt es dir hier? || ئەرێ؟ ل ڤێرێ ب دلێ تە یە؟
+Azad: Ja, aber am Anfang war es schwer, weil ich niemanden kannte. || بەلێ، بەلێ ل دەستپێکێ ب زەحمەت بوو، چونکی من کەس نەدناسی.
+Lana: Das kenne ich. Vermisst du deine Familie? || ئەز ڤێ دزانم. ئەرێ تو بیرا مالباتا خۆ دکەی؟
+Azad: Sehr! Ich telefoniere jeden Abend mit meiner Mutter. || گەلەک! هەر ئێڤار ئەز دگەل دایکا خۆ تەلەفۆنێ دکەم.
+Lana: Komm doch am Samstag zu uns. Meine Cousine kocht. || شەمبیێ وەرە نک مە. دۆتماما من خوارنێ چێدکەت.
+Azad: Gern! Vielen Dank für die Einladung. || ب دل! گەلەک سوپاس بۆ داخوازیێ.
+
+@G 🔗 | weil | weil (چونکی)
+E: Mit „weil“ nennen wir einen Grund. Im Nebensatz steht das Verb am Ende. || ب «weil» ئەم ئەگەرەکێ دبێژین. د رستەیا لاوەکی دا کار دچیتە دوماهیێ.
+H: Hauptsatz | weil | … Verb (Ende)
+R: Ich lerne Deutsch, | weil | ich hier arbeiten möchte.
+R: Er kommt nicht, | weil | er krank ist.
+R: Wir bleiben zu Hause, | weil | es regnet.
+X: Warum bist du müde? – Weil ich spät geschlafen habe. || بۆچی تو وەستیایی؟ – چونکی ئەز دەرەنگ نڤستم.
+X: Ich bin froh, weil die Sonne scheint. || ئەز دلخۆشم، چونکی رۆژ دەردکەڤیت.
+X: Sie lernt viel, weil sie eine Prüfung hat. || ئەو گەلەک دخوینیت، چونکی ئەزموونەکا وێ هەیە.
+T: Nach „weil“ immer ein Komma davor, Verb ans Ende! || بەری «weil» هەردەم کۆما، و کار ل دوماهیێ!
+P: Ich gehe zum Arzt. (Ich bin krank.) || ئەز دچمە نک نوژداری. (ئەز نەساخم.) || weil || Ich gehe zum Arzt, weil ich krank bin. || ئەز دچمە نک نوژداری، چونکی ئەز نەساخم.
+P: Er trinkt Kaffee. (Er ist müde.) || ئەو قەهوێ ڤەدخوت. (ئەو وەستیایە.) || weil || Er trinkt Kaffee, weil er müde ist. || ئەو قەهوێ ڤەدخوت، چونکی ئەو وەستیایە.
+P: Wir fahren nicht. (Das Auto ist kaputt.) || ئەم ناچین. (ترومبێل یا خرابە.) || weil || Wir fahren nicht, weil das Auto kaputt ist. || ئەم ناچین، چونکی ترومبێل یا خرابە.
+M: Ich lerne jeden Tag, weil ich die Prüfung schaffen will. || ئەز هەر رۆژ دخوینم، چونکی دڤێم ئەزموونێ دەرباز بکەم.
+M: Sie ruft an, weil sie Hilfe braucht. || ئەو تەلەفۆنێ دکەت، چونکی هاریکاری پێدڤی یە.
+
+@G 🕰️ | Perfekt: trennbare, untrennbare Verben, -ieren | دەمێ بۆری (Perfekt) ب کارێن جودا
+E: Trennbar: ge- steht in der Mitte (angekommen). Untrennbar (be-, ver-, er-…) und -ieren: kein ge- (verloren, telefoniert). || کارێن لێکڤەبوو: ge- د ناڤەراستێ دا (angekommen). کارێن ب be-, ver-, er- و -ieren: بێ ge- (verloren, telefoniert).
+H: Typ | Infinitiv | Perfekt
+R: trennbar | ankommen | ist angekommen
+R: trennbar | umziehen | ist umgezogen
+R: untrennbar | verlieren | hat verloren
+R: untrennbar | erleben | hat erlebt
+R: -ieren | telefonieren | hat telefoniert
+X: Ich habe gestern eingekauft. || من دوهی بازار کر.
+X: Wir haben viel erlebt. || گەلەک تشت ب سەرێ مە هاتن.
+X: Hast du schon studiert? || تە بەرێ ل زانکۆیێ خواندییە؟
+T: Bewegung (gehen, fahren, kommen, umziehen) ➔ meist „sein“. || کارێن لڤینێ (چوون، هاتن، ڤەگوهاستن) ➔ پتر ب «sein».
+P: Ich verliere meinen Pass. (gestern) || من پاسپۆرتا خۆ بەرزە کر. || Perfekt || Ich habe gestern meinen Pass verloren. || من دوهی پاسپۆرتا خۆ بەرزە کر.
+P: Sie kommt um 9 Uhr an. || ئەو دەمژمێر ٩ دگەهیت. || Perfekt || Sie ist um 9 Uhr angekommen. || ئەو دەمژمێر ٩ گەهشت.
+P: Wir reparieren das Fahrrad. || ئەم پایسکیلێ چاک دکەین. || Perfekt || Wir haben das Fahrrad repariert. || مە پایسکیل چاک کر.
+M: Er hat seine Tante besucht. || ئەو چوو سەرەدانا مەتا خۆ.
+M: Ich habe den Film nicht verstanden. || من فلم تێنەگەهشت.
+
+@G 👨‍👩‍👧 | Genitiv bei Namen · von + Dativ | خودانداری: Peters / von Peter
+E: Bei Namen: Name + s (Peters Bruder). Sonst oft: von + Dativ (der Bruder von meiner Frau). || ب ناڤان: ناڤ + s (Peters Bruder = برایێ پێتەری). یان: von + Dativ (der Bruder von meiner Frau).
+H: Genitiv (Name) | von + Dativ
+R: Peters Bruder | der Bruder von Peter
+R: Lanas Tante | die Tante von Lana
+R: — | das Auto von meinem Vater
+X: Das ist Annas Neffe. || ئەڤە برازایێ ئانایە.
+X: Die Schwester von meinem Mann heißt Dilan. || ناڤێ خویشکا زەلامێ من دیلانە.
+X: Azads Cousine wohnt in Erbil. || دۆتماما ئازادی ل هەولێرێ دژیت.
+P: die Mutter / Maria || دایکا ماریایێ || Genitiv || Marias Mutter || دایکا ماریایێ
+P: das Haus / mein Onkel || خانیێ مامێ من || von + Dativ || das Haus von meinem Onkel || خانیێ مامێ من
+P: der Hund / Jonas || سەیێ یۆناسی || Genitiv || Jonas’ Hund || سەیێ یۆناسی

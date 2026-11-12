@@ -37,6 +37,9 @@ with sync_playwright() as p:
                 for y in range(300, 800, 60):
                     pg.mouse.wheel(0, 0)
                 pg.screenshot(path=f"{out}/{name}_1.png")
+            if name.startswith("path") or name.startswith("home"):
+                pg.mouse.click(214, 708); time.sleep(1.2)  # 🎁 دیالۆگا ئەرکان بگرە
+                pg.screenshot(path=f"{out}/{name}.png")
             if name.startswith("path"):
                 for k in range(3):
                     time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_a{k}.png")

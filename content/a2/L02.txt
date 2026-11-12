@@ -1,0 +1,96 @@
+@L 16 | #3E8EDE | ل مال | Zu Hause | At home
+
+@U a | home | ل کیڤەیە؟ | Wo ist …? | Where is …?
+an der Wand | ئان دێر ڤاند | ل سەر دیواری | on the wall | 🖼️ | Das Bild hängt an der ___. | Wand | Tisch; Boden | وێنە ب دیواری ڤە هەلاویستییە.
+auf dem Tisch | ئاوف دێم تیش | ل سەر مێزێ | on the table | 🍽️ | Die Tasse steht auf ___ Tisch. | dem | den; der | پەرداخ ل سەر مێزێ یە.
+unter dem Bett | ئونتەر دێم بێت | ل بن تەختێ | under the bed | 🛏️
+neben dem Sofa | نێبن دێم زۆفا | ل نک قەنەفێ | next to the sofa | 🛋️
+zwischen den Stühlen | تسڤیشن دێن شتیولن | د ناڤبەرا کورسیان دا | between the chairs | 🪑
+hinter der Tür | هینتەر دێر تیور | ل پشت دەرگەهی | behind the door | 🚪 | Der Besen steht hinter der ___. | Tür | Tisch; Bett | گێسک ل پشت دەرگەهی یە.
+Die Lampe hängt über dem Tisch. | دی لامپە هێنگت ئیوبەر دێم تیش | گلۆپ ل سەر مێزێ هەلاویستییە. | The lamp hangs above the table. | 💡 | Die Lampe hängt ___ dem Tisch. | über | unter; zwischen | گلۆپ ل سەر مێزێ هەلاویستییە.
+Der Schlüssel liegt in der Schublade. | دێر شلیوسل لیگت ئین دێر شووبلادە | کلیل د چەکمەجێ دا یە. | The key is in the drawer. | 🗝️ | Der Schlüssel ___ in der Schublade. | liegt | legt; stellt | کلیل د چەکمەجێ دا یە.
+
+@U b | home | بدانە کیڤە؟ | Wohin? | Where to?
+stellen | شتێلن | دانان (راوەستیای) | to put (upright) | 📚 | Ich ___ die Flasche in den Kühlschrank. | stelle | stehe; liege | ئەز شووشێ دکەمە د سەلاجێ دا.
+legen | لێگن | دانان (درێژکری) | to lay | 📖 | ___ das Buch bitte auf den Tisch! | Leg | Lieg; Steh | هیڤییە پەرتووکێ دانە سەر مێزێ!
+hängen | هێنگن | هەلاویستن | to hang | 🧥 | Ich hänge die Jacke an den ___. | Haken | Boden; Tisch | ئەز چاکێتێ ب چەنگالێ ڤە هەلدئاویسم.
+Wohin stellst du den Fernseher? | ڤۆهین شتێلست دوو دێن فێرنزێەر | تو تەلەفزیۆنێ دێ دانییە کیڤە؟ | Where are you putting the TV? | 📺
+Ich stelle ihn neben das Regal. | ئیش شتێلە ئین نێبن داس رێگال | ئەز دێ دانمە نک رەفکێ. | I'm putting it next to the shelf. | 🗄️ | Ich stelle den Fernseher neben ___ Regal. | das | dem; der | ئەز تەلەفزیۆنێ دانمە نک رەفکێ.
+Leg die Zeitung bitte auf den Boden. | لێگ دی تسایتونگ بیتە ئاوف دێن بۆدن | هیڤییە رۆژنامێ دانە سەر ئەردی. | Please put the newspaper on the floor. | 📰
+Wo steht die Pflanze? – Sie steht am Fenster. | ڤۆ شتێت دی پفلانتسە؟ – زی شتێت ئام فێنستەر | گۆلدان ل کیڤەیە؟ – ل نک پەنجەرێ یە. | Where is the plant? – By the window. | 🪴
+Häng das Bild an die Wand! | هێنگ داس بیلت ئان دی ڤاند | وێنەی ب دیواری ڤە هەلاویسە! | Hang the picture on the wall! | 🖼️ | Häng das Bild an ___ Wand! | die | der; den | وێنەی ب دیواری ڤە هەلاویسە!
+@CZ Wo ___ das Handy? – Ich habe es auf das Sofa ___. | liegt … gelegt | legt … gelegen; liegt … gestellt | مۆبایل ل کیڤەیە؟ – من دانا سەر قەنەفێ.
+
+@U c | people | جیران و یاسایێن خانی | Nachbarn & Hausordnung | Neighbours & house rules
+der Nachbar / die Nachbarin | دێر ناخبار / دی ناخبارین | جیران | the neighbour | 🏠
+der Hausmeister | دێر هاوسمایستەر | سەرپەرشتێ ئاڤاهی | the caretaker | 🧰
+der Müll | دێر میول | گەمار / زبل | the rubbish | 🗑️ | Bring bitte den ___ raus! | Müll | Mull; Mittag | هیڤییە زبلی ببە دەرڤە!
+die Mülltonne | دی میولتۆنە | سەتلا زبلی | the bin | 🚮
+den Müll trennen | دێن میول ترێنن | زبلی جودا کرن | to sort the rubbish | ♻️ | In Deutschland muss man den Müll ___. | trennen | trinken; treffen | ل ئەلمانیا دڤێت مرۆڤ زبلی جودا بکەت.
+Nach 22 Uhr ist Ruhe im Haus. | ناخ تسڤایئوندتسڤانتسیش ئوور ئیست رووە ئیم هاوس | پشتی دەمژمێر ٢٢ ئارامی د خانی دا. | After 10 p.m. the house must be quiet. | 🤫
+Die Musik ist zu laut! | دی مووزیک ئیست تسوو لاوت | مۆسیقا گەلەک ب دەنگە! | The music is too loud! | 🔊 | Die Musik ist zu ___! | laut | Leute; leise | مۆسیقا گەلەک ب دەنگە!
+Können Sie bitte ein Paket für mich annehmen? | کۆنن زی بیتە ئاین پاکێت فیور میش ئاننێمن | هوین دشێن پاکەتەکێ بۆ من وەربگرن؟ | Could you take in a parcel for me? | 📦
+
+@U d | directions | ژوور، دەر، سەر، خوار | rein, raus, rauf, runter | in, out, up, down
+Komm rein! | کۆم راین | وەرە ژوور! | Come in! | 🚪
+Geh raus! | گێ راوس | هەرە دەرڤە! | Go out! | 🏃 | Es ist schön draußen. Geh doch ___! | raus | rein; runter | دەرڤە خۆشە. هەرە دەرڤە!
+Komm runter, das Essen ist fertig! | کۆم رونتەر، داس ئێسن ئیست فێرتیش | وەرە خوارێ، خوارن ئامادەیە! | Come down, dinner is ready! | 🍲 | Komm ___, das Essen ist fertig! | runter | rauf; rein | وەرە خوارێ، خوارن ئامادەیە!
+Ich bringe die Kisten rauf. | ئیش برینگە دی کیستن راوف | ئەز سندووقان دبەمە سەرێ. | I'm bringing the boxes up. | ⬆️ | Ich bringe die Kisten in den dritten Stock ___. | rauf | runter; raus | ئەز سندووقان دبەمە قاتا سێیێ.
+Der Aufzug ist kaputt. | دێر ئاوفتسووگ ئیست کاپووت | ئاسانسۆر یێ خرابە. | The lift is broken. | 🛗
+die Treppe | دی ترێپە | پەیژە | the stairs | 🪜
+der Keller | دێر کێلەر | ژێرزەمین | the cellar | 🏚️ | Die Fahrräder stehen im ___. | Keller | Kühlschrank; Kalender | پایسکیل د ژێرزەمینێ دانە.
+@CZ Kannst du mir helfen? Ich trage den Tisch nach ___ und du die Stühle nach ___. | oben … unten | unten … oben; draußen … drinnen | تو دشێی هاریکاریا من بکەی؟ ئەز مێزێ دبەمە سەرێ و تو کورسیان دبەیە خوارێ.
+
+@D جیرانێ نوو
+Frau Berger: Guten Tag! Sind Sie der neue Nachbar? || رۆژ باش! ئەرێ هوین جیرانێ نوونە؟
+Sherwan: Ja, ich wohne seit Montag im zweiten Stock. || بەلێ، ژ دووشەمبیێ ڤە ئەز ل قاتا دووێ دژیم.
+Frau Berger: Herzlich willkommen! Wohin stellen Sie denn die vielen Kisten? || ب خێر بێی! هوین ڤان سندووقێن زۆر دێ دانن کیڤە؟
+Sherwan: Erst mal in den Keller. Ist das okay? || پێشی د ژێرزەمینێ دا. ئەرێ باشە؟
+Frau Berger: Ja, kein Problem. Aber den Müll bitte trennen: Papier kommt in die blaue Tonne. || بەلێ، چ کێشە نینە. بەلێ هیڤییە زبلی جودا بکەن: کاغەز دچیتە د سەتلا شین دا.
+Sherwan: Gut, danke für den Tipp! || باشە، سوپاس بۆ ئامۆژگاریێ!
+Frau Berger: Und nach zehn Uhr ist hier Ruhe. || و پشتی دەمژمێر دەهـ ل ڤێرێ ئارامی یە.
+Sherwan: Natürlich. Ich mache keine laute Musik. || هەلبەت. ئەز مۆسیقایا ب دەنگ لێنادەم.
+
+@G 📍 | Wechselpräpositionen: Wo? (Dativ) – Wohin? (Akkusativ) | پێشگرێن دوو رەنگ: ل کیڤە؟ / بۆ کیڤە؟
+E: in, an, auf, unter, über, vor, hinter, neben, zwischen: Wo? ➔ Dativ (liegen, stehen, hängen). Wohin? ➔ Akkusativ (legen, stellen, hängen). || ئەڤ ٩ پێشگرە: ل کیڤە؟ (جهـ) ➔ Dativ. بۆ کیڤە؟ (لڤین) ➔ Akkusativ.
+H: | Wo? (Dativ) | Wohin? (Akkusativ)
+R: der Tisch | auf dem Tisch | auf den Tisch
+R: das Regal | im (in dem) Regal | ins (in das) Regal
+R: die Wand | an der Wand | an die Wand
+R: die Stühle | zwischen den Stühlen | zwischen die Stühle
+X: Das Buch liegt auf dem Tisch. || پەرتووک ل سەر مێزێ یە.
+X: Ich lege das Buch auf den Tisch. || ئەز پەرتووکێ ددانمە سەر مێزێ.
+X: Die Katze schläft unter dem Bett. || پشیک ل بن تەختێ دنڤیت.
+T: Wo? = Ruhe ➔ dem/der/dem. Wohin? = Bewegung ➔ den/die/das. || جهـ ➔ dem/der. لڤین ➔ den/die/das.
+P: Die Tasse steht ___ Tisch. (auf) || پەرداخ ل سەر مێزێ یە. || Wo? || Die Tasse steht auf dem Tisch. || پەرداخ ل سەر مێزێ یە.
+P: Ich stelle die Tasse ___ Tisch. (auf) || ئەز پەرداخێ ددانمە سەر مێزێ. || Wohin? || Ich stelle die Tasse auf den Tisch. || ئەز پەرداخێ ددانمە سەر مێزێ.
+P: Er hängt die Uhr ___ Wand. (an) || ئەو دەمژمێرێ ب دیواری ڤە هەلدئاویسیت. || Wohin? || Er hängt die Uhr an die Wand. || ئەو دەمژمێرێ ب دیواری ڤە هەلدئاویسیت.
+M: Das Auto steht vor dem Haus. || ترومبێل ل بەر خانی یە.
+M: Ich fahre das Auto vor das Haus. || ئەز ترومبێلێ دبەمە بەر خانی.
+
+@G 🧱 | stellen/stehen · legen/liegen · hängen | دانان و هەبوون ل جهەکی
+E: stellen, legen, hängen (Akkusativ) = Bewegung. stehen, liegen, hängen (Dativ) = Position. || stellen/legen = تو تشتەکی ددانی (لڤین). stehen/liegen = تشت ل جهەکی یە.
+H: Bewegung (Wohin?) | Position (Wo?)
+R: stellen – hat gestellt | stehen – hat gestanden
+R: legen – hat gelegt | liegen – hat gelegen
+R: hängen – hat gehängt | hängen – hat gehangen
+X: Ich habe die Vase auf den Tisch gestellt. || من گۆلدان دانا سەر مێزێ.
+X: Die Vase steht auf dem Tisch. || گۆلدان ل سەر مێزێ یە.
+X: Wo hast du die Brille hingelegt? || تە بەرچاڤک دانا کیڤە؟
+P: Das Handy ___ auf dem Sofa. (liegen) || مۆبایل ل سەر قەنەفێ یە. || liegen || Das Handy liegt auf dem Sofa. || مۆبایل ل سەر قەنەفێ یە.
+P: Ich ___ das Handy auf das Sofa. (legen) || ئەز مۆبایلێ ددانمە سەر قەنەفێ. || legen || Ich lege das Handy auf das Sofa. || ئەز مۆبایلێ ددانمە سەر قەنەفێ.
+P: Die Flaschen ___ im Kühlschrank. (stehen) || شووشە د سەلاجێ دانە. || stehen || Die Flaschen stehen im Kühlschrank. || شووشە د سەلاجێ دانە.
+
+@G ↕️ | Direktionaladverbien: rein, raus, rauf, runter | ئاراستە: ژوور، دەر، سەر، خوار
+E: Mit Bewegung: rein (hinein/herein), raus, rauf, runter, rüber. Ohne Bewegung: drinnen, draußen, oben, unten. || ب لڤین: rein (بۆ ژوور)، raus (بۆ دەرڤە)، rauf (بۆ سەرێ)، runter (بۆ خوارێ). بێ لڤین: drinnen, draußen, oben, unten.
+H: Wo? | Wohin?
+R: drinnen | rein
+R: draußen | raus
+R: oben | rauf / nach oben
+R: unten | runter / nach unten
+X: Die Kinder spielen draußen. || زارۆک ل دەرڤە یاری دکەن.
+X: Kommt rein, es regnet! || وەرنە ژوور، باران دباریت!
+X: Die Wohnung ist oben, im vierten Stock. || خانی ل سەرێ یە، ل قاتا چارێ.
+P: Es ist kalt. Wir gehen ___. (Wohin?) || سەرمایە. ئەم دچینە ژوور. || rein || Es ist kalt. Wir gehen rein. || سەرمایە. ئەم دچینە ژوور.
+P: Wo ist Papa? – Er ist ___ im Keller. (Wo?) || بابێ ل کیڤەیە؟ – ل خوارێ د ژێرزەمینێ دا. || unten || Er ist unten im Keller. || ئەو ل خوارێ د ژێرزەمینێ دا یە.
+P: Bring den Müll ___! (Wohin?) || زبلی ببە دەرڤە! || raus || Bring den Müll raus! || زبلی ببە دەرڤە!

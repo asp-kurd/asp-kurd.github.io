@@ -34,9 +34,12 @@
   var el=document.getElementById('asp-splash');if(!el)return;
   if(window.__aspOAuthDone){el.remove();return;}
   var t0=Date.now(),MIN=2900,ready=false,gone=false;
-  function hide(){if(gone)return;gone=true;el.classList.add('out');setTimeout(function(){el.remove();},600);}
+  // Flutter دشێت ناڤەرۆکا body بگوهۆڕیت ➔ شاشێ دکەینە د <html> دا و ئەگەر هاتە لادان، دزڤڕینین
+  try{document.documentElement.appendChild(el);}catch(e){}
+  try{new MutationObserver(function(){if(!gone&&!el.isConnected){document.documentElement.appendChild(el);}}).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
+  function hide(){if(gone)return;gone=true;console.log('[splash] hide '+(Date.now()-t0));el.classList.add('out');setTimeout(function(){el.remove();},600);}
   function check(){if(ready&&Date.now()-t0>=MIN)hide();else if(ready)setTimeout(hide,MIN-(Date.now()-t0));}
-  window.addEventListener('flutter-first-frame',function(){ready=true;check();});
+  window.addEventListener('flutter-first-frame',function(){console.log('[splash] first frame '+(Date.now()-t0));ready=true;check();});
   setTimeout(function(){ready=true;check();},14000);
   // 🎵 ئاوازا دەستپێکێ (هندەک وێبگەڕ بێی دەستلێدانێ دەنگی رێناکەن — هنگێ ب بێدەنگی بەردەوام دبیت)
   try{

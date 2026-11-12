@@ -1,0 +1,82 @@
+@L 20 | #D9625B | خواندن و پیشە | Ausbildung und Karriere | Education and career
+
+@U a | backpack | قوتابخانە | Die Schule | School
+die Grundschule | دی گروندشوولە | قوتابخانا سەرەتایی | primary school | 🏫 | Mit sechs Jahren gehen Kinder in die ___. | Grundschule | Hochschule; Berufsschule | ل شەش سالیێ زارۆک دچنە قوتابخانا سەرەتایی.
+das Gymnasium | داس گیمنازیوم | ئامادەیی (قوتابخانا بلند) | grammar school | 🎒
+das Fach | داس فاخ | بابەت (وانە) | the subject | 📚 | Mein Lieblings___ war Mathematik. | fach | fall; fest | بابەتێ من یێ دلخواز بیرکاری بوو.
+die Note | دی نۆتە | نمرە | the mark / grade | 💯 | In Deutsch hatte ich eine gute ___. | Note | Nase; Notiz | د ئەلمانی دا من نمرەکا باش هەبوو.
+das Zeugnis | داس تسۆیگنیس | بڕوانامە / کارنامە | the school report | 📃
+die Prüfung | دی پریوفونگ | ئەزموون / تاقیکرن | the exam | 📝 | Ich habe die ___ bestanden! | Prüfung | Prüfer; Pause | من ئەزموون دەرباز کر!
+der Schulabschluss | دێر شوولئابشلوس | بڕوانامەیا قوتابخانێ | school-leaving qualification | 🎓
+Mathe war nicht mein Lieblingsfach. | ماتێ ڤار نیشت ماین لیبلینگسفاخ | بیرکاری نە بابەتێ من یێ دلخواز بوو. | Maths wasn't my favourite subject. | ➗
+
+@U b | badge | فێربوونا پیشەیەکێ | Ausbildung & Beruf | Training & job
+die Ausbildung | دی ئاوسبیلدونگ | فێربوونا پیشەیی | vocational training | 🧰 | Er macht eine ___ als Mechaniker. | Ausbildung | Ausstellung; Ausfahrt | ئەو وەکی میکانیکی پیشەیێ فێر دبیت.
+das Studium | داس شتوودیوم | خواندنا زانکۆیێ | university studies | 🏛️
+das Praktikum | داس پراکتیکوم | راهێنانا کاری (پراکتیک) | the internship | 🧪 | Im Sommer mache ich ein ___ in einer Firma. | Praktikum | Produkt; Problem | هاڤینێ ئەز ل کۆمپانیەکێ راهێنانا کاری دکەم.
+der Lebenslauf | دێر لێبنسلاوف | ژیاننامە (CV) | the CV | 📄 | Bitte schicken Sie Ihren ___ und Ihr Zeugnis. | Lebenslauf | Lebensmittel; Lauf | هیڤییە ژیاننامە و بڕوانامەیا خۆ بهنێرن.
+das Vorstellungsgespräch | داس فۆرشتێلونگسگەشپرێش | دیدارا کاری (چاڤپێکەفتن) | the job interview | 🤝
+die Erfahrung | دی ئێرفارونگ | ئەزموون (شارەزایی) | the experience | 🧠 | Haben Sie ___ mit Computern? | Erfahrung | Erfahrungen; Erfahren | ئەرێ ئەزموونا هەوە دگەل کۆمپیوتەران هەیە؟
+Ich möchte Krankenpfleger werden. | ئیش مۆشتە کرانکنپفلێگەر ڤێردن | ئەز دڤێم ببمە پەرستیار. | I want to become a nurse. | 🩺 | Ich möchte Krankenpfleger ___. | werden | wird; worden | ئەز دڤێم ببمە پەرستیار.
+Ich habe mich bei einer Firma beworben. | ئیش هابە میش بای ئاینەر فیرما بەڤۆربن | من داخوازنامە بۆ کۆمپانیەکێ هنارت. | I applied to a company. | 📨
+
+@U c | history | دڤیا، دشیا، نەچار بوو | wollte, konnte, musste | Past of modal verbs
+Als Kind wollte ich Pilot werden. | ئالس کیند ڤۆلتە ئیش پیلۆت ڤێردن | دەمێ زارۆک بووم من دڤیا ببمە فرۆکەڤان. | As a child I wanted to be a pilot. | ✈️ | Als Kind ___ ich Pilot werden. | wollte | will; wolle | دەمێ زارۆک بووم من دڤیا ببمە فرۆکەڤان.
+Ich musste jeden Tag früh aufstehen. | ئیش موستە یێدن تاگ فریو ئاوفشتێن | دڤیا ئەز هەر رۆژ زوو رابم. | I had to get up early every day. | ⏰ | Ich ___ jeden Tag früh aufstehen. | musste | muss; müsste | دڤیا ئەز هەر رۆژ زوو رابم.
+Wir konnten nicht kommen. | ڤیر کۆنتن نیشت کۆمن | مە نەشیا بهێین. | We couldn't come. | 🚫 | Wir ___ leider nicht kommen. | konnten | können; könnten | مخابن مە نەشیا بهێین.
+Durftest du als Kind lange fernsehen? | دورفتەست دوو ئالس کیند لانگە فێرنزێن | دەمێ زارۆک بووی، رێ ب تە ددا گەلەک تەلەفزیۆنێ ببینی؟ | Were you allowed to watch TV for long as a child? | 📺
+Sie sollte um acht Uhr zu Hause sein. | زی زۆلتە ئوم ئاخت ئوور تسوو هاوزە زاین | دڤیا ئەو دەمژمێر هەشت ل مال بیت. | She was supposed to be home at eight. | 🏠
+Ich konnte schon mit fünf Jahren lesen. | ئیش کۆنتە شۆن میت فیونف یارن لێزن | ل پێنج سالیێ من دشیا بخوینم. | I could already read at five. | 📖
+Früher musste man viel zu Fuß gehen. | فریوەر موستە مان فیل تسوو فووس گێن | بەرێ دڤیا مرۆڤ گەلەک ب پێیان بچیت. | In the past people had to walk a lot. | 🚶
+Warum wolltest du Lehrerin werden? | ڤارووم ڤۆلتەست دوو لێرەرین ڤێردن | بۆچی تە دڤیا ببییە مامۆستا؟ | Why did you want to be a teacher? | 👩‍🏫
+@CZ Gestern ___ ich nicht kommen, weil ich arbeiten ___. | konnte … musste | kann … muss; konnten … mussten | دوهی من نەشیا بهێم، چونکی دڤیا کار بکەم.
+
+@U d | chat | دبێژم کو … | Ich glaube, dass … | I think that …
+Ich glaube, dass er recht hat. | ئیش گلاوبە، داس ئێر رێشت هات | ئەز هزر دکەم کو ئەو ل سەر حەقە. | I think he is right. | 👍 | Ich glaube, ___ er recht hat. | dass | das; weil | ئەز هزر دکەم کو ئەو ل سەر حەقە.
+Ich finde, dass Lernen Spaß macht. | ئیش فیندە، داس لێرنن شپاس ماخت | ب دیتنا من فێربوون خۆشە. | I find that learning is fun. | 😄 | Ich finde, dass Lernen Spaß ___. | macht | machen; gemacht | ب دیتنا من فێربوون خۆشە.
+Es ist wichtig, dass du pünktlich bist. | ئێس ئیست ڤیشتیش، داس دوو پیونکتلیش بیست | گرنگە کو تو ل دەمێ خۆ بی. | It's important that you're on time. | ⏱️
+Ich weiß, dass die Prüfung schwer ist. | ئیش ڤایس، داس دی پریوفونگ شڤێر ئیست | ئەز دزانم کو ئەزموون ب زەحمەتە. | I know that the exam is hard. | 📚 | Ich weiß, dass die Prüfung schwer ___. | ist | sind; sein | ئەز دزانم کو ئەزموون ب زەحمەتە.
+Schön, dass du da bist! | شۆن، داس دوو دا بیست | خۆشە کو تو ل ڤێرێ ی! | Nice that you're here! | 🤗
+Ich hoffe, dass ich die Stelle bekomme. | ئیش هۆفە، داس ئیش دی شتێلە بەکۆمە | هیڤیدارم کو ئەز ڤی کاری وەرگرم. | I hope I get the job. | 🤞 | Ich hoffe, dass ich die Stelle ___. | bekomme | bekommen; bekommt | هیڤیدارم کو ئەز ڤی کاری وەرگرم.
+Meine Eltern sagen, dass ich mehr lernen soll. | ماینە ئێلتەرن زاگن، داس ئیش مێر لێرنن زۆل | دایک و بابێن من دبێژن کو دڤێت ئەز پتر بخوینم. | My parents say I should study more. | 👨‍👩‍👦
+Ich bin sicher, dass du es schaffst. | ئیش بین زیشەر، داس دوو ئێس شافست | ئەز پشتڕاستم کو تو دێ شێی. | I'm sure you'll make it. | 💪
+
+@D دیدارا کاری
+Frau Neumann: Guten Tag, Frau Barzani. Bitte setzen Sie sich. || رۆژ باش، خاتوو بارزانی. هیڤییە روینن.
+Shilan: Danke. Ich freue mich, dass ich hier sein darf. || سوپاس. ئەز دلخۆشم کو ئەز دشێم ل ڤێرێ بم.
+Frau Neumann: Erzählen Sie doch etwas über Ihre Ausbildung. || تشتەکی ل سەر خواندنا خۆ یا پیشەیی بێژن.
+Shilan: In Duhok habe ich Informatik studiert. Danach musste ich zwei Jahre arbeiten. || ل دهۆکێ من کۆمپیوتەر خواند. پاشی دڤیا دوو سالان کار بکەم.
+Frau Neumann: Und warum wollten Sie nach Deutschland kommen? || و بۆچی هەوە دڤیا بهێنە ئەلمانیا؟
+Shilan: Ich wollte neue Erfahrungen sammeln. Ich glaube, dass ich hier viel lernen kann. || من دڤیا ئەزموونێن نوو کۆم بکەم. ئەز هزر دکەم کو ئەز دشێم ل ڤێرێ گەلەک فێر ببم.
+Frau Neumann: Sehr gut. Können Sie schon im Mai anfangen? || گەلەک باشە. هوین دشێن ژ گولانێ دەستپێبکەن؟
+Shilan: Ja, gern! || بەلێ، ب دل!
+
+@G ⏮️ | Präteritum der Modalverben | دەمێ بۆری یێ کارێن یاریدەدەر
+E: Im Präteritum haben Modalverben kein Umlaut und die Endung -te: können ➔ konnte. || د دەمێ بۆری دا: Umlaut نامینیت و -te زێدە دبیت: können ➔ konnte.
+H: | wollen | können | müssen | dürfen | sollen
+R: ich | wollte | konnte | musste | durfte | sollte
+R: du | wolltest | konntest | musstest | durftest | solltest
+R: er/sie | wollte | konnte | musste | durfte | sollte
+R: wir/sie | wollten | konnten | mussten | durften | sollten
+R: ihr | wolltet | konntet | musstet | durftet | solltet
+X: Früher konnte ich nicht schwimmen. || بەرێ من نەدشیا مەلەڤانیێ بکەم.
+X: Wir mussten lange warten. || دڤیا ئەم گەلەک چاڤەڕێ ببین.
+X: Als Kind durfte ich nicht allein in die Stadt. || دەمێ زارۆک بووم رێ ب من نەددا ب تنێ بچمە باژێڕی.
+T: ich und er/sie haben die gleiche Form: ich wollte – er wollte. || ich و er هەمان شێوە: ich wollte – er wollte.
+P: Ich kann gestern nicht kommen. || من نەشیا دوهی بهێم. || Präteritum || Ich konnte gestern nicht kommen. || من نەشیا دوهی بهێم.
+P: Wir müssen viel lernen. (früher) || بەرێ دڤیا ئەم گەلەک بخوینین. || Präteritum || Früher mussten wir viel lernen. || بەرێ دڤیا ئەم گەلەک بخوینین.
+P: Er will Arzt werden. (als Kind) || دەمێ زارۆک بوو دڤیا ببیتە نوژدار. || Präteritum || Als Kind wollte er Arzt werden. || دەمێ زارۆک بوو، دڤیا ببیتە نوژدار.
+
+@G 💬 | Nebensatz mit „dass“ | رستەیا لاوەکی ب «dass» (کو)
+E: Nach Verben wie glauben, denken, finden, wissen, hoffen, sagen kommt oft ein dass-Satz. Das Verb steht am Ende. || پشتی کارێن وەکی glauben, finden, wissen, hoffen, sagen گەلەک جاران رستەیا dass دهێت. کار دچیتە دوماهیێ.
+H: Hauptsatz | dass | … Verb (Ende)
+R: Ich glaube, | dass | er recht hat.
+R: Es ist wichtig, | dass | du pünktlich bist.
+R: Ich hoffe, | dass | ich die Stelle bekomme.
+X: Ich finde, dass Deutsch schön ist. || ب دیتنا من ئەلمانی جوانە.
+X: Er sagt, dass er später kommt. || ئەو دبێژیت کو دێ پاشی ئێت.
+X: Weißt du, dass morgen kein Unterricht ist? || دزانی کو سبەی وانە نینە؟
+T: das (Artikel) ≠ dass (Konjunktion)! || das (ئارتیکل) ≠ dass (کو)!
+P: Ich glaube: Das Wetter wird morgen gut. || ئەز هزر دکەم کو سبەی کەش دێ باش بیت. || dass || Ich glaube, dass das Wetter morgen gut wird. || ئەز هزر دکەم کو سبەی کەش دێ باش بیت.
+P: Er hofft: Er findet eine Wohnung. || ئەو هیڤیدارە کو خانیەکێ ببینیت. || dass || Er hofft, dass er eine Wohnung findet. || ئەو هیڤیدارە کو خانیەکێ ببینیت.
+P: Es ist schade: Du kannst nicht kommen. || مخابنە کو تو نەشێی بهێی. || dass || Es ist schade, dass du nicht kommen kannst. || مخابنە کو تو نەشێی بهێی.

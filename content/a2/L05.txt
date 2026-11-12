@@ -1,0 +1,84 @@
+@L 19 | #2E9E6B | وەرزش و ساخلەمی | Sport und Fitness | Sport and fitness
+
+@U a | sports | جۆرێن وەرزشی | Sportarten | Types of sport
+Fußball spielen | فووسبال شپیلن | تۆپا پێ کرن | to play football | ⚽ | Am Wochenende ___ wir Fußball. | spielen | machen; fahren | دوماهیا حەفتیێ ئەم تۆپا پێ دکەین.
+schwimmen gehen | شڤیمن گێن | چوونا مەلەڤانیێ | to go swimming | 🏊
+Rad fahren | رات فارن | پایسکیلێ لێخوڕین | to cycle | 🚴 | Ich ___ jeden Tag Rad zur Arbeit. | fahre | gehe; spiele | ئەز هەر رۆژ ب پایسکیلێ دچمە کاری.
+joggen | جۆگن | غارا سڤک | to jog | 🏃
+Tischtennis | تیشتێنیس | تێنسا سەر مێزێ | table tennis | 🏓
+der Verein | دێر فێرئاین | یانە / کلوب | the club | 🏟️ | Mein Sohn spielt Fußball in einem ___. | Verein | Vertrag; Verkehr | کوڕێ من د یانەکێ دا تۆپا پێ دکەت.
+die Mannschaft | دی مانشافت | تیپ | the team | 👥 | Unsere ___ hat gewonnen! | Mannschaft | Mannheim; Meinung | تیپا مە سەرکەفت!
+Wer hat das Spiel gewonnen? | ڤێر هات داس شپیل گەڤۆنن | کێ یاری بر؟ | Who won the match? | 🏆 | Wer hat das Spiel ___? | gewonnen | gewinnt; gewinnen | کێ یاری بر؟
+
+@U b | health | ساخلەم بمینە | Fit und gesund | Fit and healthy
+sich bewegen | زیش بەڤێگن | لڤین / خۆ لڤاندن | to move / exercise | 🤸 | Du sitzt zu viel. Du solltest dich mehr ___. | bewegen | bewegst; Bewegung | تو گەلەک روینشتی. باشترە تو خۆ پتر بلڤینی.
+das Fitnessstudio | داس فیتنەسشتوودیۆ | هۆلا وەرزشێ (جیم) | the gym | 🏋️
+der Rücken | دێر ریوکن | پشت | the back | 🧍 | Ich sitze viel am Computer, deshalb tut mir der ___ weh. | Rücken | Rock; Rasen | ئەز گەلەک ل بەر کۆمپیوتەری دروینم، لەوما پشتا من دئێشیت.
+Treppen steigen statt Aufzug fahren | ترێپن شتایگن شتات ئاوفتسووگ فارن | ب پەیژێ سەرکەفتن نە ب ئاسانسۆرێ | taking the stairs instead of the lift | 🪜
+Ich trainiere dreimal pro Woche. | ئیش ترێنیرە درایمال پرۆ ڤۆخە | ئەز حەفتیێ سێ جاران راهێنانێ دکەم. | I train three times a week. | 💪 | Ich ___ dreimal pro Woche. | trainiere | trainieren; Training | ئەز حەفتیێ سێ جاران راهێنانێ دکەم.
+Ich ruhe mich nach dem Sport aus. | ئیش رووە میش ناخ دێم شپۆرت ئاوس | پشتی وەرزشێ ئەز بێهنا خۆ ڤەددەم. | I rest after sport. | 🛋️
+Bewegung ist gut für die Gesundheit. | بەڤێگونگ ئیست گووت فیور دی گەزونتهایت | لڤین بۆ ساخلەمیێ باشە. | Exercise is good for your health. | ❤️
+Ich habe keine Lust auf Sport. | ئیش هابە کاینە لوست ئاوف شپۆرت | حەزا من ل وەرزشێ نینە. | I don't feel like doing sport. | 🙄 | Ich habe keine ___ auf Sport. | Lust | Luft; Last | حەزا من ل وەرزشێ نینە.
+
+@U c | mood | خۆ … (کارێن ڤەگەڕ) | sich freuen, sich ärgern … | Reflexive verbs
+Ich freue mich. | ئیش فرۆیە میش | ئەز دلخۆشم. | I'm happy. | 😀
+Er ärgert sich. | ئێر ئێرگەرت زیش | ئەو عێجز دبیت. | He gets annoyed. | 😠 | Er ___ sich über den Lärm. | ärgert | ärgern; ärger | ئەو ژ دەنگ و هەرایێ عێجز دبیت.
+Wir treffen uns um sechs. | ڤیر ترێفن ئونس ئوم زێکس | ئەم دەمژمێر شەش ئێک دبینین. | We're meeting at six. | 🕕 | Wir ___ uns um sechs vor dem Kino. | treffen | trifft; treffe | ئەم دەمژمێر شەش ل بەر سینەمایێ ئێک دبینین.
+Setz dich! | زێتس دیش | روینە! | Sit down! | 🪑
+Ich ziehe mich schnell an. | ئیش تسیە میش شنێل ئان | ئەز ب لەز جلێن خۆ دکەمە بەر خۆ. | I get dressed quickly. | 👕
+Hast du dich verletzt? | هاست دوو دیش فێرلێتست | ئەرێ تو بریندار بووی؟ | Did you hurt yourself? | 🩹 | Hast du ___ verletzt? | dich | dir; mich | ئەرێ تو بریندار بووی؟
+Ich dusche mich nach dem Training. | ئیش دووشە میش ناخ دێم ترێنینگ | پشتی راهێنانێ ئەز خۆ دشۆم. | I shower after training. | 🚿
+Ihr müsst euch beeilen! | ئیر میوست ئۆیش بەئایلن | دڤێت هوین لەز بکەن! | You must hurry! | ⏩ | Ihr müsst ___ beeilen! | euch | uns; sich | دڤێت هوین لەز بکەن!
+
+@U d | tune | حەز ژ …، ل هیڤیا … | sich freuen auf / interessieren für | Verbs with prepositions
+Ich freue mich auf das Wochenende. | ئیش فرۆیە میش ئاوف داس ڤۆخنێندە | ئەز ب هیڤیا دوماهیا حەفتیێ مە (دلخۆشم). | I'm looking forward to the weekend. | 🎈 | Ich freue mich ___ das Wochenende. | auf | über; für | ئەز ب هیڤیا دوماهیا حەفتیێ مە.
+Ich freue mich über das Geschenk. | ئیش فرۆیە میش ئیوبەر داس گەشێنک | ئەز ب دیاریێ دلخۆشم. | I'm happy about the present. | 🎁 | Ich freue mich ___ das Geschenk. | über | auf; an | ئەز ب دیاریێ دلخۆشم.
+Interessierst du dich für Fußball? | ئینتەرێسیرست دوو دیش فیور فووسبال | ئەرێ تو حەز ژ تۆپا پێ دکەی؟ | Are you interested in football? | ⚽ | Interessierst du dich ___ Fußball? | für | auf; mit | ئەرێ تو حەز ژ تۆپا پێ دکەی؟
+Ich warte auf den Bus. | ئیش ڤارتە ئاوف دێن بووس | ئەز ل هیڤیا پاسێ مە. | I'm waiting for the bus. | 🚏 | Ich warte ___ den Bus. | auf | für; an | ئەز ل هیڤیا پاسێ مە.
+Ich träume von einem eigenen Haus. | ئیش ترۆیمە فۆن ئاینەم ئایگنەن هاوس | خەونا من خانیەکێ خۆ یە. | I dream of a house of my own. | 🏡
+Worauf freust du dich? – Auf die Ferien. | ڤۆراوف فرۆیست دوو دیش؟ – ئاوف دی فێریەن | تو ب هیڤیا چ ی؟ – ب هیڤیا بێهنڤەدانێ. | What are you looking forward to? – The holidays. | 🌴 | ___ freust du dich? – Auf die Ferien. | Worauf | Wofür; Woran | تو ب هیڤیا چ ی؟ – ب هیڤیا بێهنڤەدانێ.
+Wofür interessierst du dich? | ڤۆفیور ئینتەرێسیرست دوو دیش | تو حەز ژ چ دکەی؟ | What are you interested in? | 🤔
+Ich denke oft an meine Kindheit. | ئیش دێنکە ئۆفت ئان ماینە کیندهایت | ئەز گەلەک جاران بیرا زارۆکینیا خۆ دکەم. | I often think about my childhood. | 🧸
+@CZ Ich ärgere mich ___ meinen Kollegen, denn er wartet nie ___ mich. | über … auf | auf … über; für … an | ئەز ژ هەڤکارێ خۆ عێجز دبم، چونکی ئەو چ جاران ل هیڤیا من نامینیت.
+
+@D ل یانا وەرزشی
+Dilan: Hallo! Bist du neu hier im Verein? || سلاڤ! ئەرێ تو ل ڤێرێ د یانێ دا نووی؟
+Max: Ja, heute ist mein erstes Training. Ich bin ein bisschen nervös. || بەلێ، ئەڤرۆ راهێنانا من یا ئێکێ یە. ئەز هندەکێ نیگەرانم.
+Dilan: Keine Sorge! Interessierst du dich schon lange für Volleyball? || نە ترسە! ژ مێژە تو حەز ژ ڤۆلیبۆلێ دکەی؟
+Max: Seit der Schule. Aber ich habe lange keinen Sport gemacht. || ژ قوتابخانێ ڤە. بەلێ ژ مێژە من وەرزش نەکرییە.
+Dilan: Dann solltest du dich am Anfang nicht zu viel bewegen. || هنگی باشترە ل دەستپێکێ تو خۆ زێدە نەوەستینی.
+Max: Gute Idee. Wann trefft ihr euch normalerweise? || بیرەکا باشە. هوین ب ئاسایی کەنگی ئێک دبینن؟
+Dilan: Dienstags und donnerstags um sieben. Ich freue mich auf das Spiel am Samstag! || سێشەمب و پێنجشەمبیان دەمژمێر حەفت. ئەز ب هیڤیا یاریا شەمبیێ مە!
+Max: Ich auch! Bis Donnerstag! || ئەز ژی! هەتا پێنجشەمبیێ!
+
+@G 🪞 | Reflexive Verben | کارێن ڤەگەڕ (sich …)
+E: Bei reflexiven Verben bezieht sich das Pronomen auf das Subjekt: ich wasche mich. || د کارێن ڤەگەڕ دا جهێناڤ دزڤڕیتە سەر کارای: ich wasche mich = ئەز خۆ دشۆم.
+H: Person | Akkusativ | Beispiel
+R: ich | mich | Ich freue mich.
+R: du | dich | Du freust dich.
+R: er / sie / es | sich | Sie freut sich.
+R: wir | uns | Wir freuen uns.
+R: ihr | euch | Ihr freut euch.
+R: sie / Sie | sich | Sie freuen sich.
+X: Ich muss mich beeilen. || دڤێت ئەز لەز بکەم.
+X: Wir haben uns im Kurs kennengelernt. || مە ئێک د خولێ دا ناسکر.
+X: Erholt euch gut! || باش بێهنا خۆ ڤەدەن!
+T: Wichtige Verben: sich freuen, sich ärgern, sich ausruhen, sich bewegen, sich setzen, sich treffen, sich beeilen. || کارێن گرنگ: sich freuen, sich ärgern, sich ausruhen, sich bewegen, sich setzen, sich treffen, sich beeilen.
+P: Wir ___ morgen am Bahnhof. (sich treffen) || ئەم سبەی ل وێستگەهێ ئێک دبینین. || uns || Wir treffen uns morgen am Bahnhof. || ئەم سبەی ل وێستگەهێ ئێک دبینین.
+P: Er ___ nach der Arbeit. (sich ausruhen) || ئەو پشتی کاری بێهنا خۆ ڤەددەت. || sich || Er ruht sich nach der Arbeit aus. || ئەو پشتی کاری بێهنا خۆ ڤەددەت.
+P: ___ du dich nicht wohl? (sich fühlen) || تو خۆ باش هەست ناکەی؟ || Fühlst || Fühlst du dich nicht wohl? || ئەرێ تو خۆ باش هەست ناکەی؟
+
+@G 🔗 | Verben mit Präposition · worauf? darauf | کار + پێشگر: ب هیڤیا چ؟ / ب هیڤیا وێ
+E: Viele Verben haben eine feste Präposition: warten auf, sich freuen auf/über, sich interessieren für, denken an, träumen von. Frage: wo(r) + Präposition (worauf, wofür). Antwort: da(r) + Präposition (darauf, dafür). || گەلەک کار پێشگرەکا جێگیر هەنە. پرسیار: worauf, wofür … بەرسڤ: darauf, dafür …
+H: Verb | Frage | Antwort
+R: warten auf | Worauf wartest du? | Ich warte darauf.
+R: sich interessieren für | Wofür interessierst du dich? | Ich interessiere mich dafür.
+R: denken an | Woran denkst du? | Ich denke daran.
+R: sich ärgern über | Worüber ärgerst du dich? | Ich ärgere mich darüber.
+X: Worauf wartest du? – Auf meine Freundin. || تو ل هیڤیا چ ی؟ – ل هیڤیا هەڤالا خۆ.
+X: Denkst du an den Termin? – Ja, ich denke daran. || تو بیرا ژڤانێ دکەی؟ – بەلێ، ئەز بیرا وێ دکەم.
+X: Ich interessiere mich für Musik. Und du? – Ich auch dafür. || ئەز حەز ژ مۆسیقایێ دکەم. و تو؟ – ئەز ژی.
+T: Bei Personen: auf wen? / auf ihn (nicht: worauf / darauf). || بۆ مرۆڤان: auf wen? / auf ihn.
+P: Ich freue mich auf den Urlaub. (Frage) || ئەز ب هیڤیا بێهنڤەدانێ مە. || Wo(r)… || Worauf freust du dich? || تو ب هیڤیا چ ی؟
+P: Interessierst du dich für Politik? – Ja, ich interessiere mich ___. || تو حەز ژ سیاسەتێ دکەی؟ || da(r)… || Ja, ich interessiere mich dafür. || بەلێ، ئەز حەز ژێ دکەم.
+P: Ärgerst du dich über das Wetter? – Ja, ich ärgere mich ___. || تو ژ کەشێ عێجزی؟ || da(r)… || Ja, ich ärgere mich darüber. || بەلێ، ئەز ژێ عێجزم.
