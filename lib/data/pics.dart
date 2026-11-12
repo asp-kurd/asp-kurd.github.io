@@ -43,6 +43,24 @@ const Map<String, String> conceptPics = {
   'a13_07': 'shoes', 'a13_08': 'socks', 'a13_21': 'mountain', 'a13_22': 'village', 'a13_23': 'sea',
   // 🎉 جەژن
   'a14_11': 'gift', 'a14_14': 'rings', 'a14_15': 'invitation',
+  // 🌳 A2
+  'b1_01': 'movebox', 'b2_20': 'trashbin', 'b2_30': 'stairs', 'b3_01': 'plate', 'b3_02': 'knife', 'b3_03': 'fork',
+  'b3_04': 'spoon', 'b3_05': 'waterglass', 'b3_06': 'pot', 'b3_07': 'pan', 'b3_09': 'menu', 'b4_01': 'printer',
+  'b4_02': 'printer', 'b5_01': 'ball', 'b5_02': 'swimmer', 'b5_03': 'cyclist', 'b5_05': 'pingpong',
+  'b5_07': 'trophy', 'b5_10': 'dumbbells', 'b6_01': 'schoolhouse', 'b6_02': 'schoolhouse', 'b6_05': 'report',
+  'b6_06': 'report', 'b6_07': 'gradcap', 'b6_12': 'cv', 'b6_13': 'handshake', 'b7_01': 'weddingrings',
+  'b7_04': 'parents', 'b7_05': 'birthdaycake', 'b7_06': 'weddingrings', 'b7_09': 'giftbox', 'b7_11': 'bouquet',
+  'b7_12': 'perfume', 'b7_13': 'necklace', 'b7_14': 'voucher', 'b9_01': 'backpack', 'b9_02': 'wallet',
+  'b9_04': 'charger', 'b9_05': 'camera', 'b9_06': 'umbrella', 'b9_07': 'sunglasses', 'b9_09': 'drawer',
+  'b10_01': 'charger', 'b10_02': 'smartphone', 'b10_09': 'letter', 'b10_10': 'parcel', 'b10_11': 'stamp',
+  'b10_12': 'letter', 'b10_13': 'parcel', 'b10_14': 'envelope', 'b11_06': 'trafficlight', 'b11_09': 'trafficjam',
+  'b11_10': 'accident', 'b11_13': 'licence', 'b11_17': 'fog', 'b11_18': 'thunderstorm', 'b11_19': 'thunderstorm',
+  'b11_25': 'plane', 'b11_28': 'moped', 'b11_29': 'ticket', 'b12_02': 'mountains', 'b12_03': 'lake',
+  'b12_04': 'island', 'b12_06': 'desert', 'b12_09': 'hotel', 'b12_10': 'hotel', 'b12_11': 'tent',
+  'b12_17': 'suitcase', 'b12_18': 'suitcase', 'b12_21': 'airport', 'b13_02': 'atm', 'b13_03': 'atm',
+  'b13_04': 'bankcard', 'b13_09': 'cash', 'b13_10': 'bankcard', 'b13_11': 'receipt', 'b13_12': 'receipt',
+  'b14_01': 'teddy', 'b14_06': 'grandparents', 'b14_08': 'stroller', 'b14_22': 'trophy', 'b14_25': 'house',
+  'b14_26': 'cat', 'b14_27': 'bread', 'b14_28': 'girl',
 };
 
 String? picName(WordConcept c) => conceptPics[c.id];

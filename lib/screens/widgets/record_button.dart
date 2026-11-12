@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'sound_wave.dart';
+
 import '../../services/voice_service.dart';
 import '../../ui.dart';
 
@@ -121,7 +123,7 @@ class _RecordButtonState extends State<RecordButton> {
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white, width: 3),
                   ),
-                  child: Icon(recording ? Icons.stop_rounded : Icons.mic_rounded, color: Colors.white, size: s * 0.5),
+                  child: Center(child: SoundWave(active: recording, size: s * 0.56, level: recording ? level : null)),
                 ),
               ],
             ),

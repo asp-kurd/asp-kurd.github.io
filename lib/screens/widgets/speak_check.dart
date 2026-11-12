@@ -4,6 +4,7 @@ import '../../models.dart';
 import '../../services/speech_score.dart';
 import '../../services/speech_stub.dart' if (dart.library.js_interop) '../../services/speech_web.dart';
 import '../../ui.dart';
+import 'sound_wave.dart';
 
 export '../../services/speech_stub.dart' if (dart.library.js_interop) '../../services/speech_web.dart' show speechSupported;
 
@@ -70,7 +71,7 @@ class _SpeakCheckState extends State<SpeakCheck> {
             shape: BoxShape.circle,
             boxShadow: [if (listening) BoxShadow(color: AppColors.red.withValues(alpha: 0.5), blurRadius: 24, spreadRadius: 4)],
           ),
-          child: Icon(listening ? Icons.stop_rounded : Icons.mic_rounded, color: Colors.white, size: 48),
+          child: Center(child: SoundWave(active: listening, size: 52)),
         ),
       ),
       const SizedBox(height: 8),

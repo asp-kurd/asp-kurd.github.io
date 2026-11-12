@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+
+import '../widgets/sound_wave.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../../models.dart';
@@ -730,7 +732,7 @@ class _SpeakTaskState extends State<_SpeakTask> {
           width: size,
           height: size,
           decoration: BoxDecoration(color: active ? AppColors.red : AppColors.blue, shape: BoxShape.circle),
-          child: Icon(active ? Icons.stop_rounded : Icons.mic_rounded, color: Colors.white, size: size * 0.5),
+          child: Center(child: SoundWave(active: active, size: size * 0.56)),
         ),
       ),
     );
