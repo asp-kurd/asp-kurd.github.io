@@ -91,28 +91,38 @@ class OptionTile extends StatelessWidget {
   final Color? stateColor; // سەوز/سۆر پشتی پشکنینێ
   final VoidCallback? onTap;
   final TextDirection? textDirection;
-  const OptionTile({super.key, required this.text, required this.selected, this.stateColor, this.onTap, this.textDirection});
+  final String? subtitle; // 💬 رامان ل بن هەلبژارتنێ (هاریکاری)
+  const OptionTile({super.key, required this.text, required this.selected, this.stateColor, this.onTap, this.textDirection, this.subtitle});
 
   @override
   Widget build(BuildContext context) {
-    final c = stateColor ?? (selected ? AppColors.blue : Colors.white24);
+    final c = stateColor ?? (selected ? AppColors.accent : AppColors.fg24);
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
         margin: const EdgeInsets.only(bottom: 12),
-        padding: const EdgeInsets.all(18),
+        padding: EdgeInsets.symmetric(horizontal: 18, vertical: subtitle == null ? 18 : 12),
         decoration: BoxDecoration(
           color: selected || stateColor != null ? c.withValues(alpha: 0.18) : AppColors.card,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: c, width: 2),
         ),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          textDirection: textDirection,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: selected || stateColor != null ? c : AppColors.fg),
-        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            textDirection: textDirection,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: selected || stateColor != null ? c : AppColors.fg),
+          ),
+          if (subtitle != null && subtitle!.isNotEmpty) ...[
+            const SizedBox(height: 4),
+            Text(subtitle!,
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
+                style: TextStyle(fontSize: 14.5, color: AppColors.fg60, fontWeight: FontWeight.w600, height: 1.4)),
+          ],
+        ]),
       ),
     );
   }

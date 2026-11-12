@@ -5,9 +5,8 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("splash", "demo=home"), ("path", "demo=path&theme=dark&quiet=1"), ("path_red", "demo=path&theme=red&quiet=1"), ("path_pink", "demo=path&theme=pink&quiet=1"),
-    ("lesson_dark", "demo=cloze&theme=dark"), ("profile", "demo=profile&theme=pink"), ("links", "demo=links&theme=dark"),
-    ("pathdone", "demo=pathdone&theme=dark&quiet=1"),
+    ("pathgold", "demo=pathgold&theme=dark&quiet=1"), ("pathgold_pink", "demo=pathgold&theme=pink&quiet=1"),
+    ("examhint", "demo=examhint&theme=dark"), ("examtype", "demo=examtype&theme=dark"), ("path", "demo=path&theme=dark&quiet=1"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -52,7 +51,7 @@ with sync_playwright() as p:
                 pg.screenshot(path=f"{out}/{name}.png")
             if name == "gate_ios":
                 pg.mouse.click(214, 592); time.sleep(2.5); pg.screenshot(path=f"{out}/{name}_coach.png")
-            if name.startswith("path"):
+            if name.startswith("path") and not name.startswith("pathgold"):
                 for k in range(3):
                     time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_a{k}.png")
                 pg.mouse.move(214, 500)
@@ -69,6 +68,17 @@ with sync_playwright() as p:
                     time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")
             if name.startswith("combo"):
                 time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
+            if name == "examhint":
+                for k in range(3):
+                    pg.mouse.click(214, 555); time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_h{k+1}.png")
+                pg.mouse.click(214, 700); time.sleep(0.4); pg.mouse.click(214, 880); time.sleep(0.8)
+                pg.screenshot(path=f"{out}/{name}_checked.png")
+            if name == "examtype":
+                pg.mouse.click(214, 470); time.sleep(0.4); pg.keyboard.type("tschüss"); time.sleep(0.4)
+                pg.mouse.click(214, 880); time.sleep(0.9); pg.screenshot(path=f"{out}/{name}_checked.png")
+            if name.startswith("pathgold"):
+                for k in range(6):
+                    time.sleep(0.35); pg.screenshot(path=f"{out}/{name}_f{k}.png")
             if name.startswith("lesson"):
                 # 👆 تبل ل سەر پەیڤەکێ ➔ بالۆنا رامانێ؛ پاشان چاڤ ➔ رامانا رستێ
                 pg.mouse.click(92, 350); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_tap.png")

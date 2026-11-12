@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../data/answer_check.dart';
+import '../data/curriculum.dart';
 import '../data/exams.dart';
 import '../models.dart';
 import '../services/backend.dart';
@@ -43,6 +45,8 @@ class _QuizScreenState extends State<QuizScreen> {
   int? picked;
   bool checked = false;
   bool ok = false;
+  AnswerResult? verdict; // ✅ دروست بەلێ تێبینی هەیە (Tschüss ⇄ Auf Wiedersehen)
+  int hintLevel = 0; // 👁️ چاڤێ هاریکاریێ (٠–٣)
   int quizXp = 0; // XP ل دویف کۆمبۆیێ
   final results = <bool>[];
   final typeCtrl = TextEditingController();
@@ -69,6 +73,8 @@ class _QuizScreenState extends State<QuizScreen> {
     picked = null;
     checked = false;
     ok = false;
+    verdict = null;
+    hintLevel = 0;
     typeCtrl.clear();
     order = [];
     if (q.type == QType.order) {
@@ -94,14 +100,29 @@ class _QuizScreenState extends State<QuizScreen> {
       };
 
   void _check() {
-    final good = switch (q.type) {
-      QType.type => _norm(typeCtrl.text) == _norm(q.answer.toString()),
-      QType.order => _norm(order.map((k) => tiles[k]).join(' ')) == _norm(q.answer.toString()),
-      _ => picked == (q.answer as num).toInt(),
-    };
+    final lang = progress.targetLang;
+    AnswerResult? v;
+    switch (q.type) {
+      case QType.type:
+        v = judgeAnswer(typeCtrl.text, q.answer.toString(), lang, typed: true, ui: ui);
+      case QType.order:
+        v = _norm(order.map((k) => tiles[k]).join(' ')) == _norm(q.answer.toString()) ? const AnswerResult(Verdict.exact) : null;
+      case QType.choice || QType.imgchoice || QType.listen:
+        final a = (q.answer as num).toInt();
+        if (picked == a) {
+          v = const AnswerResult(Verdict.exact);
+        } else if (picked != null) {
+          // هەلبژارتنەکا دی کو هەمان رامان هەیە ➔ دروستە دگەل تێبینیێ
+          v = judgeAnswer(q.options[picked!], q.options[a], lang, ui: ui);
+        }
+      default:
+        v = picked == (q.answer as num).toInt() ? const AnswerResult(Verdict.exact) : null;
+    }
+    final good = v?.accepted ?? false;
     setState(() {
       checked = true;
       ok = good;
+      verdict = v;
     });
     if (good) {
       Sfx.correct();
@@ -186,7 +207,7 @@ class _QuizScreenState extends State<QuizScreen> {
               if (checked) _feedback(),
               BigButton(
                 label: checked ? tr(ui, 'بەردەوام بە', 'Weiter', 'Continue') : tr(ui, 'پشکنین', 'Prüfen', 'Check'),
-                color: checked ? (ok ? AppColors.green : AppColors.red) : AppColors.accent,
+                color: checked ? (ok ? ((verdict?.soft ?? false) ? AppColors.orange : AppColors.green) : AppColors.red) : AppColors.accent,
                 onPressed: checked ? _next : (_canCheck ? _check : null),
               ),
             ]),
@@ -200,7 +221,9 @@ class _QuizScreenState extends State<QuizScreen> {
         QType.choice => tr(ui, 'بەرسڤا دروست هەلبژێرە', 'Wähle die richtige Antwort', 'Choose the right answer'),
         QType.truefalse => tr(ui, 'دروستە یان خەلەتە؟', 'Richtig oder falsch?', 'True or false?'),
         QType.picture => tr(ui, 'وێنەیێ دروست هەلبژێرە 🖼️', 'Wähle das richtige Bild 🖼️', 'Pick the right picture 🖼️'),
-        QType.imgchoice => tr(ui, 'ئەڤ وێنەیە چییە ب ئەلمانی؟', 'Was ist das auf Deutsch?', 'What is this in German?'),
+        QType.imgchoice => _phraseOptions
+            ? tr(ui, 'کیژ رستە دگەل ڤی وێنەی دگونجیت؟ 🖼️', 'Welcher Satz passt zum Bild? 🖼️', 'Which sentence fits the picture? 🖼️')
+            : tr(ui, 'ئەڤ وێنەیە چییە ب ئەلمانی؟', 'Was ist das auf Deutsch?', 'What is this in German?'),
         QType.listen => tr(ui, 'گوهداری بکە و هەلبژێرە 🎧', 'Hör zu und wähle 🎧', 'Listen and choose 🎧'),
         QType.type => tr(ui, 'ب ئەلمانی بنڤیسە ⌨️', 'Schreib auf Deutsch ⌨️', 'Write in German ⌨️'),
         QType.order => tr(ui, 'رستێ رێک بێخە 🧩', 'Bilde den Satz 🧩', 'Put the sentence in order 🧩'),
@@ -237,7 +260,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Color? _state(int k) {
     if (!checked) return null;
     if (k == (q.answer as num).toInt()) return AppColors.green;
-    if (k == picked) return AppColors.red;
+    if (k == picked) return ok ? AppColors.orange : AppColors.red;
     return null;
   }
 
@@ -315,9 +338,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
       case QType.imgchoice:
         return Column(children: [
-          _card(Center(child: Text(q.q, style: const TextStyle(fontSize: 96)))),
+          _card(Column(children: [
+            Center(child: Text(q.q, style: const TextStyle(fontSize: 96))),
+            if (!checked && q.explain.isNotEmpty) _hintEye(),
+          ])),
           const SizedBox(height: 18),
-          ..._textOptions(TextDirection.ltr),
+          ..._textOptions(TextDirection.ltr, meanings: hintLevel >= 3 || checked),
         ]);
 
       case QType.listen:
@@ -414,19 +440,97 @@ class _QuizScreenState extends State<QuizScreen> {
   static final _arabic = RegExp(r'[؀-ۿ]');
   TextDirection _dir(String s) => _arabic.hasMatch(s) ? TextDirection.rtl : TextDirection.ltr;
 
-  List<Widget> _textOptions(TextDirection? dir) => [
+  List<Widget> _textOptions(TextDirection? dir, {bool meanings = false}) => [
         for (var k = 0; k < q.options.length; k++)
           OptionTile(
             text: q.options[k],
             selected: picked == k,
             stateColor: _state(k),
             textDirection: dir ?? _dir(q.options[k]),
+            subtitle: meanings ? _kuOf(q.options[k]) : null,
             onTap: checked ? null : () => setState(() => picked = k),
           ),
       ];
 
+  /// هەلبژارتن رستە نە (نە ئێک پەیڤ) ➔ پرسیار ب «کیژ رستە …؟»
+  bool get _phraseOptions => q.options.any((o) => o.trim().split(RegExp(r'\s+')).length >= 3);
+
+  static Map<String, String>? _kuIndex;
+
+  /// رامانا کوردی یا دەقەکێ ئەلمانی (ژ وانەیان)
+  String _kuOf(String de) {
+    _kuIndex ??= {for (final c in allConcepts) _norm(c.de): c.ku};
+    return _kuIndex![_norm(de)] ?? '';
+  }
+
+  /// 👁️ چاڤێ هاریکاریێ: ٣ جاران — هەر جار پتر دیار دکەت
+  /// ١) پشکەک ژ رامانێ · ٢) هەمی رامانا رستێ · ٣) رامانا هەمی هەلبژارتنان
+  Widget _hintEye() {
+    final ex = q.explain.trim();
+    final words = ex.split(RegExp(r'\s+'));
+    final half = words.length <= 2 ? ex : '${words.take((words.length / 2).ceil()).join(' ')} …';
+    final text = switch (hintLevel) {
+      1 => half,
+      2 || 3 => ex,
+      _ => '',
+    };
+    final left = 3 - hintLevel;
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: Column(children: [
+        InkWell(
+          borderRadius: BorderRadius.circular(22),
+          onTap: left == 0 ? null : () => setState(() => hintLevel++),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+            decoration: BoxDecoration(
+              color: hintLevel > 0 ? AppColors.accent.withValues(alpha: 0.16) : AppColors.cardAlt,
+              borderRadius: BorderRadius.circular(22),
+              border: Border.all(color: hintLevel > 0 ? AppColors.accent : AppColors.fg24, width: 1.5),
+            ),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Icon(hintLevel > 0 ? Icons.visibility_rounded : Icons.visibility_off_rounded,
+                  color: hintLevel > 0 ? AppColors.accent : AppColors.fg60, size: 22),
+              const SizedBox(width: 8),
+              Text(
+                left == 0
+                    ? tr(ui, 'هەمی هاریکاری هاتنە دیتن', 'Alle Hilfen genutzt', 'All hints used')
+                    : tr(ui, 'هاریکاری · ${'●' * left}${'○' * hintLevel}', 'Hilfe · ${'●' * left}', 'Hint · ${'●' * left}'),
+                style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.fg70, fontSize: 14),
+              ),
+            ]),
+          ),
+        ),
+        AnimatedSize(
+          duration: const Duration(milliseconds: 220),
+          child: text.isEmpty
+              ? const SizedBox(width: double.infinity)
+              : Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  decoration: BoxDecoration(color: AppColors.cardAlt, borderRadius: BorderRadius.circular(12)),
+                  child: Column(children: [
+                    Text('💬 $text',
+                        textAlign: TextAlign.center,
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppColors.fg, height: 1.5)),
+                    if (hintLevel == 3)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Text(tr(ui, '👇 رامانا هەر رستەکێ ل بن وێ یە', '👇 Bedeutung unter jeder Antwort', '👇 Meaning under each option'),
+                            style: TextStyle(fontSize: 12.5, color: AppColors.fg54)),
+                      ),
+                  ]),
+                ),
+        ),
+      ]),
+    );
+  }
+
   Widget _feedback() {
-    final c = ok ? AppColors.green : AppColors.red;
+    final soft = ok && (verdict?.soft ?? false);
+    final c = soft ? AppColors.orange : (ok ? AppColors.green : AppColors.red);
     String correct = '';
     if (!ok) {
       correct = switch (q.type) {
@@ -441,14 +545,22 @@ class _QuizScreenState extends State<QuizScreen> {
       decoration: BoxDecoration(
           color: c.withValues(alpha: 0.16), borderRadius: BorderRadius.circular(14), border: Border.all(color: c)),
       child: Row(children: [
-        Icon(ok ? Icons.check_circle : Icons.error, color: c, size: 28),
+        Icon(soft ? Icons.lightbulb_rounded : (ok ? Icons.check_circle : Icons.error), color: c, size: 28),
         const SizedBox(width: 10),
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(ok ? tr(ui, 'دەستخۆش! 🎉', 'Super! 🎉', 'Great! 🎉') : '${tr(ui, 'بەرسڤا دروست:', 'Richtig:', 'Answer:')} $correct',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            if (soft)
+              Text(verdict!.note, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, height: 1.5))
+            else
+              Text(ok ? tr(ui, 'دەستخۆش! 🎉', 'Super! 🎉', 'Great! 🎉') : '${tr(ui, 'بەرسڤا دروست:', 'Richtig:', 'Answer:')} $correct',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            if (!ok && (verdict?.note.isNotEmpty ?? false))
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(verdict!.note, style: TextStyle(color: AppColors.fg, fontWeight: FontWeight.w600, height: 1.5)),
+              ),
             if (q.explain.isNotEmpty)
-              Text(q.explain, style: TextStyle(color: AppColors.fg70)),
+              Text(q.type == QType.type ? '🔊 ${q.explain}' : '💬 ${q.explain}', style: TextStyle(color: AppColors.fg70, height: 1.5)),
           ]),
         ),
       ]),

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../data/answer_check.dart';
 import '../data/cloze_bank.dart';
 import '../data/curriculum.dart';
 import '../data/pics.dart';
@@ -49,6 +50,9 @@ class InteractiveLessonScreen extends StatefulWidget {
 
   /// 👤 پرسیارێن جهێناڤان (ئاست ٠–٥) و چەند پرسیار
   final int pronounTier, pronounCount;
+
+  /// 🏅 زێڕ: هەژمارا پرسیاران (٠ = بێ سنوور) — سێگۆشە ١٥ … شەشگۆشە ٢٢–٢٥
+  final int maxQuestions;
   const InteractiveLessonScreen({
     super.key,
     required this.unit,
@@ -60,6 +64,7 @@ class InteractiveLessonScreen extends StatefulWidget {
     this.redo = false,
     this.pronounTier = -1,
     this.pronounCount = 0,
+    this.maxQuestions = 0,
   });
 
   @override
@@ -94,6 +99,9 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
 
   /// 👁️ رامانا رستێ: یا گرتییە هەتا فێرخواز چاڤی ڤەدکەت (یان بەرسڤێ ددەت)
   bool _showMeaning = false;
+
+  /// ✅ دروست بەلێ ب تێبینی (شێوازەکێ دی / پەیڤەکا نێزیک)
+  AnswerResult? _verdict;
   final List<GestureRecognizer> _tapRec = [];
   void _clearTaps() {
     for (final r in _tapRec) {
@@ -131,6 +139,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         queue.insert(1 + _rng.nextInt(queue.length), Exercise(q.concept, ExerciseType.cloze, cloze: q.cloze));
       }
     }
+    if (widget.maxQuestions > 0) _trimTo(widget.maxQuestions);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) MascotChar.precache(context, MascotChar.forUser());
     });
@@ -254,6 +263,34 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     return list;
   }
 
+  /// ✂️ هەژمارا پرسیاران بکە [n]: پێشی دووبارەیێن هەمان پەیڤێ دچن (هەر پەیڤەک ئێک جار دمینیت)
+  void _trimTo(int n) {
+    while (queue.length > n) {
+      final seen = <String, int>{};
+      for (final e in queue) {
+        seen[e.concept.id] = (seen[e.concept.id] ?? 0) + 1;
+      }
+      var k = -1;
+      for (var i = queue.length - 1; i > 0; i--) {
+        final e = queue[i];
+        if (e.type != ExerciseType.match && (seen[e.concept.id] ?? 0) > 1) {
+          k = i;
+          break;
+        }
+      }
+      if (k < 0) {
+        for (var i = queue.length - 1; i > 0; i--) {
+          if (queue[i].type != ExerciseType.match) {
+            k = i;
+            break;
+          }
+        }
+      }
+      if (k < 0) break;
+      queue.removeAt(k);
+    }
+  }
+
   /// 📝 رستەکا ب جهێ ڤالا: ژ داتایێ (ئەلمانی)، یان ب خۆ ژ رستەیێن ٣+ پەیڤی
   ClozeInfo? _clozeFor(WordConcept c) {
     if (target == AppLanguage.german && c.cloze != null) return c.cloze;
@@ -290,6 +327,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     voice.stopPlayback();
     TapWords.hide();
     _showMeaning = false;
+    _verdict = null;
     selected = null;
     cz = null;
     checked = false;
@@ -439,15 +477,28 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final ex = current;
     _praiseText = native == AppLanguage.badini ? randomPraise() : tr(native, '', 'Super! 🎉', 'Great! 🎉');
     _comfortText = native == AppLanguage.badini ? randomComfort() : tr(native, '', 'Fast! 💪', 'Almost! 💪');
+    AnswerResult? v;
+    // 🇩🇪 بەرسڤ ب زمانێ فێربوونێ: شێوازەکێ دی یێ هەمان رامانێ ژی دروستە (دگەل تێبینیێ)
+    if ((ex.type == ExerciseType.translate || ex.type == ExerciseType.cloze) && selected != null && selected != _correctAnswer) {
+      v = judgeAnswer(selected!, _correctAnswer, target, ui: native);
+    }
+    if (ex.type == ExerciseType.wordBank) {
+      final built = bankPicked.map((i) => bankTiles[i]).join(' ');
+      if (built != ex.concept.text(target)) {
+        final j = judgeAnswer(built, ex.concept.text(target), target, ui: native);
+        if (j.verdict == Verdict.exact) v = j; // تنێ خالبەندی جودا بوو
+      }
+    }
     final ok = switch (ex.type) {
       ExerciseType.speak => true, // 🗣️ ناسینا دەنگی ١٠٠٪ نینە: دل ناچن
       ExerciseType.match => matched.length == ex.group.length,
-      ExerciseType.wordBank => bankPicked.map((i) => bankTiles[i]).join(' ') == ex.concept.text(target),
-      _ => selected == _correctAnswer,
+      ExerciseType.wordBank => bankPicked.map((i) => bankTiles[i]).join(' ') == ex.concept.text(target) || (v?.accepted ?? false),
+      _ => selected == _correctAnswer || (v?.accepted ?? false),
     };
     setState(() {
       checked = true;
       isCorrect = ok;
+      _verdict = v;
     });
     if (ok) {
       Sfx.correct();
@@ -486,9 +537,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       for (final id in matchMissed) {
         final c = ex.group.firstWhere((g) => g.id == id);
         await progress.recordMistake(id);
-        if (_requeued.add(id)) {
+        final room = widget.maxQuestions <= 0 || queue.length < widget.maxQuestions + 2;
+        if (room && _requeued.add(id)) {
           queue.add(Exercise(c, _rng.nextBool() ? ExerciseType.translate : ExerciseType.reverse));
-          if (_clozeFor(c) != null) queue.add(Exercise(c, ExerciseType.cloze));
+          if (widget.maxQuestions <= 0 && _clozeFor(c) != null) queue.add(Exercise(c, ExerciseType.cloze));
         }
       }
       return;
@@ -500,7 +552,9 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     } else {
       await progress.loseHeart();
       await progress.recordMistake(ex.concept.id);
-      if (!_requeued.contains(ex.concept.id)) {
+      // 🏅 زێڕ: پتر ژ ٢ پرسیارێن زێدە نا (دا هەژمار درێژ نەبیت)
+      final room = widget.maxQuestions <= 0 || queue.length < widget.maxQuestions + 2;
+      if (room && !_requeued.contains(ex.concept.id)) {
         _requeued.add(ex.concept.id);
         queue.add(Exercise(ex.concept, ExerciseType.translate));
       }
@@ -659,7 +713,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                   label: !checked
                       ? tr(native, 'پشکنین', 'Prüfen', 'CHECK')
                       : tr(native, 'بەردەوام بە', 'Weiter', 'CONTINUE'),
-                  color: !checked ? AppColors.accent : (isCorrect ? AppColors.green : AppColors.red),
+                  color: !checked ? AppColors.accent : (isCorrect ? ((_verdict?.soft ?? false) ? AppColors.orange : AppColors.green) : AppColors.red),
                   onPressed: !canContinue ? null : (checked ? _continue : _check),
                 ),
               ],
@@ -793,7 +847,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       spans.addAll(TapWords.spans(context, parts[k], target, _tapRec));
       if (k < parts.length - 1) {
         final word = fill == null ? null : (k < fills.length ? fills[k] : fills.last);
-        final color = !checked ? AppColors.accent : (isCorrect ? AppColors.green : AppColors.red);
+        final color = !checked ? AppColors.accent : (isCorrect ? ((_verdict?.soft ?? false) ? AppColors.orange : AppColors.green) : AppColors.red);
         spans.add(WidgetSpan(
           alignment: PlaceholderAlignment.middle,
           child: AnimatedContainer(
@@ -894,7 +948,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     return options.map((o) {
       Color? state;
       if (checked && o == _correctAnswer) state = AppColors.green;
-      if (checked && o == selected && !isCorrect) state = AppColors.red;
+      if (checked && o == selected && o != _correctAnswer) state = isCorrect ? AppColors.orange : AppColors.red;
       return OptionTile(
         text: o,
         selected: selected == o,
@@ -1161,7 +1215,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   }
 
   Widget _feedback(Exercise ex) {
-    final color = isCorrect ? AppColors.green : AppColors.red;
+    final soft = isCorrect && (_verdict?.soft ?? false);
+    final color = soft ? AppColors.orange : (isCorrect ? AppColors.green : AppColors.red);
     final msg = ex.type == ExerciseType.match
         ? (isCorrect
             ? (matchHadMistake
@@ -1190,9 +1245,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ),
       child: Row(
         children: [
-          Icon(isCorrect ? Icons.check_circle : Icons.error, color: color, size: 28),
+          Icon(soft ? Icons.lightbulb_rounded : (isCorrect ? Icons.check_circle : Icons.error), color: color, size: 28),
           const SizedBox(width: 12),
-          Expanded(child: Text(msg, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
+          Expanded(
+              child: Text(soft ? _verdict!.note : msg, style: TextStyle(fontSize: soft ? 15.5 : 16, fontWeight: FontWeight.bold, height: soft ? 1.5 : null))),
         ],
       ),
     );

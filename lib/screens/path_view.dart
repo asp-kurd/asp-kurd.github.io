@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../data/curriculum.dart';
 import '../data/path.dart';
+import '../data/pics.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/rewards_service.dart';
@@ -657,6 +658,7 @@ void startPathLesson(BuildContext context, PathLesson l) {
       // 👤 جهێناڤ د هەمی کۆرسان دا؛ کۆرسا جهێناڤان پتر
       pronounTier: l.isAlphabet ? -1 : pronounTier(max(1, stageNumber(l.stage))),
       pronounCount: pron ? 7 : (done ? 3 : 2),
+      maxQuestions: done ? goldQuestionCount(l) : 0,
     );
   }
   void go() => Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
@@ -911,15 +913,24 @@ class _StageGrid extends StatelessWidget {
           break;
         }
       }
+      // هەر پارچەیەک: ٠ نە · ١ تەمام (وانا بەری وێ تەمام بوو) · ٢ زێڕ (هەردوو لایان زێڕ)
+      final seg = [
+        for (var i = 0; i < items.length - 1; i++)
+          i > doneUpTo ? 0 : (_gold(items[i], p) && _gold(items[i + 1], p) ? 2 : 1),
+      ];
+      // ✨ وانە نوکە تەمام بوو ➔ هێلا وێ بەرەڤ وانا داهاتی درێژ دبیت
+      final jd = PathFx.justDone;
+      final drawSeg = jd == null ? -1 : items.indexWhere((x) => x.kind == _Kind.lesson && x.lesson!.id == jd);
       final children = <Widget>[
         Positioned.fill(
-          child: CustomPaint(
-            painter: _LinkPainter(
-              points: [for (var i = 0; i < items.length; i++) Offset(cx(i), cy(i))],
-              doneUpTo: doneUpTo,
-              color: boost && unlocked ? const Color(0xFFE0405E) : st.color,
-              faded: !unlocked,
-            ),
+          child: _PathLinks(
+            points: [for (var i = 0; i < items.length; i++) Offset(cx(i), cy(i))],
+            seg: seg,
+            color: boost && unlocked ? const Color(0xFFE0405E) : st.color,
+            faded: !unlocked,
+            boost: boost && unlocked,
+            drawSeg: drawSeg >= 0 && drawSeg < items.length - 1 ? drawSeg : -1,
+            drawKey: jd == null ? '' : 'd_$jd',
           ),
         ),
       ];
@@ -1007,6 +1018,12 @@ class _StageGrid extends StatelessWidget {
     });
   }
 
+  bool _gold(_Item it, ProgressService p) => switch (it.kind) {
+        _Kind.lesson => p.lessonGold(it.lesson!),
+        _Kind.review => p.reviewDone(st) && p.stageGold(st),
+        _Kind.exam => (p.examBest(lekTest != null ? 'lek_${lekTest!.n}' : 'st_${st.id}') ?? 0) >= 90,
+      };
+
   bool _done(_Item it, ProgressService p) => switch (it.kind) {
         _Kind.lesson => p.lessonDone(it.lesson!),
         _Kind.review => p.reviewDone(st),
@@ -1014,45 +1031,288 @@ class _StageGrid extends StatelessWidget {
       };
 }
 
-class _LinkPainter extends CustomPainter {
+/// 🛤️ هێلێن دناڤبەرا وانەیان:
+/// - تەمامکری ➔ لوولەکا رەنگین ب رۆناهی و خالێن بچووک
+/// - زێڕ ➔ زێڕ ب بریسکەکا کو ب سەر دا دچیت
+/// - هێشتا نە ➔ خالێن کال
+/// - وانە تەمام بوو ➔ هێل ب ئەنیمەیشن درێژ دبیت بۆ وانا داهاتی
+/// - ×٢/×٣/×٤ ➔ گەب و بریسی ب ناڤ هێلێ دا دچن ⚡
+class _PathLinks extends StatefulWidget {
   final List<Offset> points;
-  final int doneUpTo;
+  final List<int> seg; // بۆ هەر پارچەیەکێ: ٠ نە · ١ تەمام · ٢ زێڕ
   final Color color;
-  final bool faded;
-  _LinkPainter({required this.points, required this.doneUpTo, required this.color, required this.faded});
+  final bool faded, boost;
+  final int drawSeg; // پارچا کو نوکە درێژ دبیت (-1 = چ)
+  final String drawKey;
+  const _PathLinks({
+    required this.points,
+    required this.seg,
+    required this.color,
+    required this.faded,
+    required this.boost,
+    this.drawSeg = -1,
+    this.drawKey = '',
+  });
 
   @override
-  void paint(Canvas canvas, Size size) {
-    if (points.length < 2) return;
-    Path seg(int a, int b) {
-      final path = Path()..moveTo(points[a].dx, points[a].dy);
-      for (var i = a + 1; i <= b; i++) {
-        final p0 = points[i - 1], p1 = points[i];
-        final mid = Offset((p0.dx + p1.dx) / 2, (p0.dy + p1.dy) / 2);
-        path.quadraticBezierTo(p0.dx, mid.dy, mid.dx, mid.dy);
-        path.quadraticBezierTo(p1.dx, mid.dy, p1.dx, p1.dy);
-      }
-      return path;
-    }
+  State<_PathLinks> createState() => _PathLinksState();
+}
 
-    final rest = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5
-      ..strokeCap = StrokeCap.round
-      ..color = (AppColors.dark ? Colors.white : Colors.black).withValues(alpha: faded ? 0.06 : 0.10);
-    canvas.drawPath(seg(0, points.length - 1), rest);
-    if (doneUpTo >= 1) {
-      final on = Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 6
-        ..strokeCap = StrokeCap.round
-        ..color = color.withValues(alpha: 0.85);
-      canvas.drawPath(seg(0, min(doneUpTo + 1, points.length - 1)), on);
+class _PathLinksState extends State<_PathLinks> with TickerProviderStateMixin {
+  static final Set<String> _drawn = {};
+  late final AnimationController _loop = AnimationController(vsync: this, duration: const Duration(milliseconds: 2600));
+  late final AnimationController _draw = AnimationController(vsync: this, duration: const Duration(milliseconds: 1300), value: 1);
+
+  bool get _animated => widget.boost || widget.seg.contains(2);
+
+  @override
+  void initState() {
+    super.initState();
+    _sync();
+  }
+
+  @override
+  void didUpdateWidget(covariant _PathLinks old) {
+    super.didUpdateWidget(old);
+    _sync();
+  }
+
+  void _sync() {
+    if (_animated && !_loop.isAnimating) _loop.repeat();
+    if (!_animated && _loop.isAnimating) _loop.stop();
+    if (widget.drawSeg >= 0 && widget.drawKey.isNotEmpty && _drawn.add(widget.drawKey)) {
+      _draw.value = 0;
+      // پشتی ئەنیمەیشنا شێوەی (ئەلقە) هێل درێژ دبیت
+      Future.delayed(const Duration(milliseconds: 900), () {
+        if (mounted) _draw.forward(from: 0);
+      });
     }
   }
 
   @override
-  bool shouldRepaint(_LinkPainter o) => o.doneUpTo != doneUpTo || o.color != color || o.faded != faded || o.points.length != points.length;
+  void dispose() {
+    _loop.dispose();
+    _draw.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => RepaintBoundary(
+        child: CustomPaint(
+          painter: _LinkPainter(
+            points: widget.points,
+            seg: widget.seg,
+            color: widget.color,
+            faded: widget.faded,
+            boost: widget.boost,
+            drawSeg: widget.drawSeg,
+            loop: _loop,
+            draw: _draw,
+          ),
+        ),
+      );
+}
+
+class _LinkPainter extends CustomPainter {
+  final List<Offset> points;
+  final List<int> seg;
+  final Color color;
+  final bool faded, boost;
+  final int drawSeg;
+  final Animation<double> loop, draw;
+  _LinkPainter({
+    required this.points,
+    required this.seg,
+    required this.color,
+    required this.faded,
+    required this.boost,
+    required this.drawSeg,
+    required this.loop,
+    required this.draw,
+  }) : super(repaint: Listenable.merge([loop, draw]));
+
+  static const _goldA = Color(0xFFFFE9A3), _goldB = Color(0xFFF2B630), _goldC = Color(0xFFB9800E);
+
+  Path _segPath(int i) {
+    final p0 = points[i], p1 = points[i + 1];
+    final mid = Offset((p0.dx + p1.dx) / 2, (p0.dy + p1.dy) / 2);
+    return Path()
+      ..moveTo(p0.dx, p0.dy)
+      ..quadraticBezierTo(p0.dx, mid.dy, mid.dx, mid.dy)
+      ..quadraticBezierTo(p1.dx, mid.dy, p1.dx, p1.dy);
+  }
+
+  /// پارچەیەک ژ هێلێ [a..b] (0..1)
+  Path _sub(Path p, double a, double b) {
+    final out = Path();
+    for (final m in p.computeMetrics()) {
+      out.addPath(m.extractPath(m.length * a.clamp(0, 1), m.length * b.clamp(0, 1)), Offset.zero);
+    }
+    return out;
+  }
+
+  void _tube(Canvas canvas, Path path, List<Color> grad, Color glow, Rect bounds) {
+    canvas.drawPath(
+        path,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 16
+          ..strokeCap = StrokeCap.round
+          ..color = glow.withValues(alpha: AppColors.dark ? 0.28 : 0.20)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 7));
+    // لێڤا تاری (کویراتی)
+    canvas.drawPath(
+        path.shift(const Offset(0, 2.5)),
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 9
+          ..strokeCap = StrokeCap.round
+          ..color = _darken(grad.last, 0.25));
+    canvas.drawPath(
+        path,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 9
+          ..strokeCap = StrokeCap.round
+          ..shader = LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: grad).createShader(bounds));
+    // رۆناهیا ناڤەڕاستێ
+    canvas.drawPath(
+        path.shift(const Offset(0, -1.6)),
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2.6
+          ..strokeCap = StrokeCap.round
+          ..color = Colors.white.withValues(alpha: 0.42));
+  }
+
+  /// خالێن بچووک ل سەر هێلێ (وەکی موورکان)
+  void _beads(Canvas canvas, Path path, Color c, double gap, double r) {
+    final pt = Paint()..color = c;
+    for (final m in path.computeMetrics()) {
+      for (var d = gap / 2; d < m.length; d += gap) {
+        final t = m.getTangentForOffset(d);
+        if (t != null) canvas.drawCircle(t.position, r, pt);
+      }
+    }
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (points.length < 2) return;
+    final bounds = Offset.zero & size;
+    final lit = color;
+    for (var i = 0; i < points.length - 1; i++) {
+      final path = _segPath(i);
+      final state = i < seg.length ? seg[i] : 0;
+      // ١) بنەڕەت: خالێن کال (هەمی پارچە)
+      _beads(canvas, path, (AppColors.dark ? Colors.white : Colors.black).withValues(alpha: faded ? 0.10 : 0.17), 16, 3.2);
+      if (state == 0) continue;
+      final shown = i == drawSeg ? Curves.easeInOutCubic.transform(draw.value) : 1.0;
+      if (shown <= 0) continue;
+      final part = shown >= 1 ? path : _sub(path, 0, shown);
+      if (state == 2) {
+        _tube(canvas, part, const [_goldA, _goldB, _goldC], const Color(0xFFFFC23D), bounds);
+        _beads(canvas, part, Colors.white.withValues(alpha: 0.55), 22, 1.6);
+        // ✨ بریسکا زێڕی کو ب سەر هێلێ دا دچیت
+        final t = (loop.value + i * 0.23) % 1.0;
+        final shine = _sub(path, t - 0.12, t);
+        canvas.drawPath(
+            shine,
+            Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 6
+              ..strokeCap = StrokeCap.round
+              ..color = Colors.white.withValues(alpha: 0.75)
+              ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.5));
+      } else {
+        _tube(canvas, part, [Color.lerp(lit, Colors.white, 0.25)!, lit, _darken(lit, 0.12)], lit, bounds);
+        _beads(canvas, part, Colors.white.withValues(alpha: 0.38), 22, 1.6);
+      }
+      // 🔵 سەرێ هێلێ دەمێ درێژ دبیت (گۆگەکا رۆهن)
+      if (i == drawSeg && shown < 1) {
+        for (final m in part.computeMetrics()) {
+          final t = m.getTangentForOffset(m.length);
+          if (t == null) continue;
+          canvas.drawCircle(t.position, 11, Paint()..color = (state == 2 ? _goldB : lit).withValues(alpha: 0.35)..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6));
+          canvas.drawCircle(t.position, 5.5, Paint()..color = Colors.white);
+        }
+      }
+    }
+    if (boost && !faded) _lightning(canvas);
+  }
+
+  /// ⚡ گەب و بریسی: دوو برووسک ب ناڤ هێلێ دا دچن
+  void _lightning(Canvas canvas) {
+    final full = Path();
+    var last = 0;
+    for (var i = 0; i < seg.length; i++) {
+      if (seg[i] > 0) last = i;
+    }
+    for (var i = 0; i <= last && i < points.length - 1; i++) {
+      full.addPath(_segPath(i), Offset.zero);
+    }
+    final metrics = full.computeMetrics().toList();
+    if (metrics.isEmpty) return;
+    final total = metrics.fold<double>(0, (a, m) => a + m.length);
+    if (total <= 0) return;
+    ui.Tangent? at(double d) {
+      for (final m in metrics) {
+        if (d <= m.length) return m.getTangentForOffset(d);
+        d -= m.length;
+      }
+      return metrics.last.getTangentForOffset(metrics.last.length);
+    }
+
+    for (var b = 0; b < 2; b++) {
+      final head = ((loop.value + b * 0.5) % 1.0) * total;
+      const len = 70.0;
+      final pts = <Offset>[];
+      final seed = (loop.value * 40).floor() + b * 7; // شکلێ برووسکێ هەر چەند فرەیمان دگوهۆڕیت
+      for (var k = 0; k <= 8; k++) {
+        final d = (head - len + len * k / 8).clamp(0.0, total);
+        final t = at(d);
+        if (t == null) continue;
+        final nrm = Offset(-t.vector.dy, t.vector.dx);
+        final j = (k == 0 || k == 8) ? 0.0 : (((seed * 31 + k * 17) % 13) - 6.0);
+        pts.add(t.position + nrm * j);
+      }
+      if (pts.length < 2) continue;
+      final bolt = Path()..addPolygon(pts, false);
+      canvas.drawPath(
+          bolt,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 9
+            ..strokeJoin = StrokeJoin.round
+            ..color = const Color(0xFFFFE066).withValues(alpha: 0.55)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6));
+      canvas.drawPath(
+          bolt,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 3.2
+            ..strokeJoin = StrokeJoin.round
+            ..color = const Color(0xFFFFF7C2));
+      canvas.drawPath(
+          bolt,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.2
+            ..color = Colors.white);
+      // چرووسک ل سەرێ برووسکێ
+      final tip = pts.last;
+      canvas.drawCircle(tip, 7, Paint()..color = const Color(0xFFFFF59D).withValues(alpha: 0.8)..maskFilter = const MaskFilter.blur(BlurStyle.normal, 5));
+      for (var k = 0; k < 3; k++) {
+        final ang = (seed + k * 2.1) % (2 * pi);
+        canvas.drawLine(tip, tip + Offset(cos(ang), sin(ang)) * 9,
+            Paint()..color = Colors.white.withValues(alpha: 0.8)..strokeWidth = 1.4..strokeCap = StrokeCap.round);
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(_LinkPainter o) =>
+      o.color != color || o.faded != faded || o.boost != boost || o.drawSeg != drawSeg || o.points.length != points.length || o.seg.join() != seg.join();
 }
 
 void _lockedTip(BuildContext context, AppLanguage n, {bool exam = false}) {
@@ -1243,7 +1503,7 @@ class _SectionHeader extends StatelessWidget {
       2 => const [Color(0xFF3E6FC2), Color(0xFF2A4B8D)],
       _ => const [Color(0xFF8A4FB8), Color(0xFF5E2F86)],
     };
-    return Container(
+    final card = Container(
       margin: const EdgeInsets.only(top: 18, bottom: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -1279,6 +1539,7 @@ class _SectionHeader extends StatelessWidget {
         Text(switch (sec.n) { 0 => '🔤', 1 => '🌱', 2 => '🌿', _ => '🌳' }, style: const TextStyle(fontSize: 40)),
       ]),
     );
+    return gold ? _GoldShine(radius: 22, margin: const EdgeInsets.only(top: 18, bottom: 16), child: card) : card;
   }
 }
 
@@ -1313,17 +1574,19 @@ class _StageHeader extends StatelessWidget {
     final unlocked = p.stageUnlocked(st);
     final done = p.stageDone(st);
     final g = st.grammarUnit;
-    return Opacity(
-      opacity: unlocked ? 1 : 0.62,
-      child: Container(
+    final pics = [for (final l in st.lessons) ...l.concepts.where(hasPic)].take(5).toList();
+    final box = Container(
         margin: const EdgeInsets.only(top: 6, bottom: 14),
         padding: const EdgeInsets.fromLTRB(16, 12, 12, 12),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: gold ? const [Color(0xFFF2C14E), Color(0xFFC48A12)] : [st.color, _darken(st.color, 0.18)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: gold ? const [Color(0xFFFFE08A), Color(0xFFF2B630), Color(0xFFC48A12)] : [st.color, _darken(st.color, 0.18)],
           ),
           borderRadius: BorderRadius.circular(18),
           border: Border(bottom: BorderSide(color: gold ? _goldLip : _darken(st.color, 0.35), width: 4)),
+          boxShadow: gold ? [BoxShadow(color: const Color(0xFFFFC23D).withValues(alpha: 0.45), blurRadius: 18, spreadRadius: 1)] : null,
         ),
         child: Row(children: [
           Expanded(
@@ -1339,6 +1602,25 @@ class _StageHeader extends StatelessWidget {
               if (n != p.targetLang)
                 Text(st.title(p.targetLang),
                     textDirection: p.targetLang.direction, style: const TextStyle(color: Colors.white70, fontSize: 12)),
+              // 🖼️ پێشچاڤا پەیڤێن ڤێ قۆناغێ (وێنە)
+              if (pics.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Row(children: [
+                  for (final c in pics)
+                    Container(
+                      width: 38,
+                      height: 38,
+                      margin: const EdgeInsetsDirectional.only(end: 6),
+                      padding: const EdgeInsets.all(3),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.92),
+                        shape: BoxShape.circle,
+                        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.18), blurRadius: 4, offset: const Offset(0, 2))],
+                      ),
+                      child: ClipOval(child: ConceptPic(c, size: 32)),
+                    ),
+                ]),
+              ],
             ]),
           ),
           if (!unlocked && st.section > 0)
@@ -1368,9 +1650,93 @@ class _StageHeader extends StatelessWidget {
               ),
             ),
         ]),
-      ),
+      );
+    return Opacity(
+      opacity: unlocked ? 1 : 0.62,
+      // 🏅 قۆناغا زێڕ: بریسکەک ب سەر دا دچیت و چرووسک
+      child: gold ? _GoldShine(radius: 18, margin: const EdgeInsets.only(top: 6, bottom: 14), child: box) : box,
     );
   }
+}
+
+/// ✨ بریسکا زێڕی (بۆ قۆناغ و بەشێن زێڕ)
+class _GoldShine extends StatefulWidget {
+  final Widget child;
+  final double radius;
+  final EdgeInsets margin;
+  const _GoldShine({required this.child, this.radius = 18, this.margin = EdgeInsets.zero});
+  @override
+  State<_GoldShine> createState() => _GoldShineState();
+}
+
+class _GoldShineState extends State<_GoldShine> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 3200))..repeat();
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Stack(children: [
+        widget.child,
+        Positioned.fill(
+          child: IgnorePointer(
+            child: Padding(
+              padding: widget.margin,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(widget.radius),
+                child: AnimatedBuilder(animation: _c, builder: (_, __) => CustomPaint(painter: _ShinePainter(_c.value))),
+              ),
+            ),
+          ),
+        ),
+      ]);
+}
+
+class _ShinePainter extends CustomPainter {
+  final double t;
+  _ShinePainter(this.t);
+  @override
+  void paint(Canvas canvas, Size size) {
+    // تیشکا خوار ب سەر دا دچیت (ل ٤٥٪ ێ دەمی، پاشان بێهنڤەدان)
+    final k = (t / 0.45).clamp(0.0, 1.0);
+    if (k < 1) {
+      final x = -size.width * 0.4 + k * size.width * 1.8;
+      final r = Rect.fromLTWH(x - 60, 0, 120, size.height);
+      canvas.save();
+      canvas.translate(r.center.dx, r.center.dy);
+      canvas.skew(-0.5, 0);
+      canvas.translate(-r.center.dx, -r.center.dy);
+      canvas.drawRect(
+          r,
+          Paint()
+            ..shader = LinearGradient(colors: [
+              Colors.white.withValues(alpha: 0),
+              Colors.white.withValues(alpha: 0.55),
+              Colors.white.withValues(alpha: 0),
+            ]).createShader(r));
+      canvas.restore();
+    }
+    // ✦ چرووسک
+    for (var i = 0; i < 4; i++) {
+      final ph = (t * 2 + i * 0.27) % 1.0;
+      final a = sin(ph * pi);
+      final c = Offset(size.width * (0.12 + 0.25 * i), size.height * (i.isEven ? 0.25 : 0.72));
+      final r = 2 + 4 * a;
+      final pnt = Paint()..color = Colors.white.withValues(alpha: 0.85 * a);
+      final star = Path()
+        ..moveTo(c.dx, c.dy - r * 1.8)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx + r * 1.8, c.dy)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx, c.dy + r * 1.8)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx - r * 1.8, c.dy)
+        ..quadraticBezierTo(c.dx, c.dy, c.dx, c.dy - r * 1.8);
+      canvas.drawPath(star, pnt);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_ShinePainter o) => o.t != t;
 }
 
 class _LektionHeader extends StatelessWidget {

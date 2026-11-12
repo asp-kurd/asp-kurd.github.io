@@ -39,6 +39,7 @@ import 'data/links.dart';
 import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
+import 'screens/quiz_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/social_links.dart';
 import 'screens/widgets/tap_words.dart';
@@ -203,6 +204,28 @@ class ZimanProApp extends StatelessWidget {
       'admintree' => const Scaffold(body: TreeEditor()),
       'chat' => const ChatScreen(),
       'settings' => const SettingsScreen(),
+      'examhint' || 'examtype' => () {
+          // 🧪 پرسیارا وێنەیی (رستە) ب چاڤێ هاریکاریێ / نڤیسین «tschüss»
+          final all = Exams.lektion.values.expand((x) => x).toList();
+          final q = d == 'examhint'
+              ? all.firstWhere((x) => x.type == QType.imgchoice && x.q == '☎️', orElse: () => all.first)
+              : all.firstWhere((x) => x.type == QType.type && '${x.answer}'.startsWith('Auf Wiedersehen'), orElse: () => all.first);
+          return QuizScreen(examId: 'demo', title: '🏁 ئەزموون', questions: [q]);
+        }(),
+      'pathgold' => () {
+          // 🏅 قۆناغا ئێکێ زێڕ + وانەیەک نوکە تەمام بوو (هێل درێژ دبیت) + ⚡×٢
+          final p = ProgressService.instance;
+          final st = pathStages.where((x) => x.section == 1).toList();
+          for (final l in st[0].lessons) {
+            p.pathProg[l.id] = [l.courses, 1];
+          }
+          for (final l in st[1].lessons.take(2)) {
+            p.pathProg[l.id] = [l.courses, 0];
+          }
+          PathFx.justDone = st[1].lessons[1].id;
+          RewardsService.instance.demoBoost();
+          return const HomeScreen();
+        }(),
       'links' => const SocialLinksEditor(),
       'gloss' => const _GlossDemo(),
       'pathdone' => () {

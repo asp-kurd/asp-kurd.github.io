@@ -314,3 +314,16 @@ List<WordConcept> courseConcepts(PathLesson l, int c, {bool hard = false}) {
   }
   return out;
 }
+
+
+/// 🏅 هەژمارا پرسیارێن زێڕکرنێ ل دویف شێوەیێ وانێ:
+/// سێگۆشە ١٥ · چارگۆشە ١٧–٢٠ · پێنجگۆشە ٢٠–٢٢ · شەشگۆشە ٢٢–٢٥
+int goldQuestionCount(PathLesson l) {
+  final (lo, hi) = switch (l.courses) {
+    <= 3 => (15, 15),
+    4 => (17, 20),
+    5 => (20, 22),
+    _ => (22, 25),
+  };
+  return lo + seeded('gq_${l.id}') % (hi - lo + 1);
+}
