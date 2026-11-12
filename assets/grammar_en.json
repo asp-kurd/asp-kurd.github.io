@@ -7,6 +7,139 @@
  },
  "lektionen": [
   {
+   "n": 0,
+   "title": "Pronouns",
+   "titleKu": "👤 هەمی جهێناڤ",
+   "color": "#8E6CC8",
+   "topics": [
+    {
+     "emoji": "🗂️",
+     "title": {
+      "de": "All pronouns at a glance",
+      "ku": "هەمی جهێناڤ ب ئێک جار"
+     },
+     "explain": {
+      "de": "Subject pronouns do the action (I, he). Object pronouns come after the verb or a preposition (me, him). Possessive adjectives say who owns something (my, his). Possessive pronouns stand alone (mine, his).",
+      "ku": "جهێناڤێن کارا کارەکی دکەن (I، he). جهێناڤێن بەرکار پشتی کاری یان پێشگری دهێن (me، him). my، his = یێ کێ (دگەل ناڤی). mine، his = ب تنێ."
+     },
+     "head": [
+      "Subject",
+      "Object",
+      "Possessive",
+      "Pronoun",
+      "کوردی"
+     ],
+     "rows": [
+      [
+       "I",
+       "me",
+       "my",
+       "mine",
+       "ئەز / من"
+      ],
+      [
+       "you",
+       "you",
+       "your",
+       "yours",
+       "تو / تە"
+      ],
+      [
+       "he",
+       "him",
+       "his",
+       "his",
+       "ئەو (نێر) / وی"
+      ],
+      [
+       "she",
+       "her",
+       "her",
+       "hers",
+       "ئەو (مێ) / وێ"
+      ],
+      [
+       "it",
+       "it",
+       "its",
+       "—",
+       "ئەو (تشت)"
+      ],
+      [
+       "we",
+       "us",
+       "our",
+       "ours",
+       "ئەم / مە"
+      ],
+      [
+       "you",
+       "you",
+       "your",
+       "yours",
+       "هوین / هەوە"
+      ],
+      [
+       "they",
+       "them",
+       "their",
+       "theirs",
+       "ئەو / وان"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "She is my sister. I love her.",
+       "ku": "ئەو خویشکا منە. ئەز حەز ژ وێ دکەم."
+      },
+      {
+       "de": "This is our car. It is ours.",
+       "ku": "ئەڤە ترومبێلا مە یە. یا مە یە."
+      },
+      {
+       "de": "Can you help me?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟"
+      }
+     ],
+     "tip": {
+      "de": "I is always a capital letter. his = of him, her = of her.",
+      "ku": "I هەردەم ب پیتا مەزن. his = یێ وی، her = یێ وێ."
+     },
+     "practice": [
+      {
+       "q": "___ am from Duhok. (ئەز)",
+       "qku": "ئەز ژ دهۆکێ مە.",
+       "cue": "I",
+       "a": "I am from Duhok.",
+       "aku": "ئەز ژ دهۆکێ مە."
+      },
+      {
+       "q": "This is ___ book. (she)",
+       "qku": "ئەڤە پەرتووکا وێ یە.",
+       "cue": "her",
+       "a": "This is her book.",
+       "aku": "ئەڤە پەرتووکا وێ یە."
+      },
+      {
+       "q": "Lara sees ___. (he)",
+       "qku": "لارا وی دبینیت.",
+       "cue": "him",
+       "a": "Lara sees him.",
+       "aku": "لارا وی دبینیت."
+      },
+      {
+       "q": "The bag is ___. (I)",
+       "qku": "جانتا یا منە.",
+       "cue": "mine",
+       "a": "The bag is mine.",
+       "aku": "جانتا یا منە."
+      }
+     ],
+     "more": []
+    }
+   ]
+  },
+  {
    "n": 1,
    "title": "Hello! I am …",
    "titleKu": "سلاڤ! ئەز … مە",

@@ -191,8 +191,9 @@ List<PronounQ> germanPronounQuestions(int tier, int count, [Random? rnd]) {
   final out = <PronounQ>[];
   var guard = 0;
   while (out.length < count && guard++ < count * 10) {
-    // ٦٠٪ ئاستێ نوکە، ٤٠٪ ئاستەکێ بەری
-    final t = (tier > 0 && r.nextDouble() < 0.4) ? r.nextInt(tier) : tier;
+    // ١) هەر کۆرسەک: ئێک پرسیار ب ich/du/Sie … (د هەمی قۆناغان دا)
+    // ٢) پاشان: ٦٠٪ ئاستێ نوکە، ٤٠٪ ئاستەکێ بەری
+    final t = out.isEmpty ? min(tier, 2) : ((tier > 0 && r.nextDouble() < 0.4) ? r.nextInt(tier) : tier);
     final q = switch (t) {
       >= 5 => _objQ(r, true),
       4 => _objQ(r, false),
@@ -232,7 +233,7 @@ List<PronounQ> englishPronounQuestions(int tier, int count, [Random? rnd]) {
   final out = <PronounQ>[];
   final maxP = tier == 0 ? 2 : (tier == 1 ? 4 : 6);
   for (var k = 0; k < count * 6 && out.length < count; k++) {
-    final t = (tier > 0 && r.nextDouble() < 0.4) ? r.nextInt(tier) : tier;
+    final t = out.isEmpty ? min(tier, 2) : ((tier > 0 && r.nextDouble() < 0.4) ? r.nextInt(tier) : tier);
     PronounQ q;
     if (t >= 3) {
       // my, your, his … / me, him …

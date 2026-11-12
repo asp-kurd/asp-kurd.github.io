@@ -98,6 +98,7 @@ class ShapePainter extends CustomPainter {
   final bool boost, current, pressed;
   final double t; // ٠..١ ئەنیمەیشن
   final double ring; // ٠..١ پێشکەفتن (تنێ بۆ وانەیا نوکە) یان -1
+  final double outline; // ٠..١ هێلا گرێدای ل دەرڤە (وانەیا تەمام)
   ShapePainter({
     required this.sides,
     required this.filled,
@@ -108,6 +109,7 @@ class ShapePainter extends CustomPainter {
     this.pressed = false,
     this.t = 0,
     this.ring = -1,
+    this.outline = 0,
     super.repaint,
   });
 
@@ -188,7 +190,32 @@ class ShapePainter extends CustomPainter {
     canvas.drawPath(face, faceP);
 
     // ── لایێن شێوەی: هەر کۆرسەکا تەمامکری لایەکێ رۆهن دکەت ──
-    if (state != NodeState.locked && sides < 3) {
+    // ✅ وانە تەمام بوو ➔ هێلێن جودا دبنە ئێک هێلا گرێدای ل دەرڤەیێ شێوەی (شێوە د ناڤ دا)
+    if (outline > 0 && state != NodeState.locked) {
+      final op = ringPath(sides, c + const Offset(0, lipH / 2), r * 1.24);
+      final oc = state == NodeState.gold
+          ? const Color(0xFFFFD84D)
+          : (boost ? const Color(0xFFFF7A93) : _lighten(color, 0.30));
+      final glow = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 9
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..color = oc.withValues(alpha: 0.28)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4);
+      final line = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 5
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round
+        ..color = oc;
+      for (final m in op.computeMetrics()) {
+        final part = m.extractPath(0, m.length * outline.clamp(0.0, 1.0));
+        canvas.drawPath(part, glow);
+        canvas.drawPath(part, line);
+      }
+    }
+    if (state != NodeState.locked && sides < 3 && outline <= 0) {
       // ⭕ بازنە: ئەلقەیەکا ناڤخۆیی (تەمام ➔ سپی)
       canvas.drawCircle(
           c + Offset(0, dy),
@@ -198,7 +225,7 @@ class ShapePainter extends CustomPainter {
             ..strokeWidth = 4
             ..color = filled > 0 ? Colors.white.withValues(alpha: 0.95) : Colors.black.withValues(alpha: 0.18));
     }
-    if (state != NodeState.locked && sides >= 3) {
+    if (state != NodeState.locked && sides >= 3 && outline <= 0) {
       final inner = polyPoints(sides, c + Offset(0, dy), r * 0.80);
       final on = Paint()
         ..style = PaintingStyle.stroke
@@ -240,6 +267,7 @@ class ShapePainter extends CustomPainter {
       o.boost != boost ||
       o.pressed != pressed ||
       o.ring != ring ||
+      o.outline != outline ||
       o.t != t ||
       o.current != current;
 }
@@ -346,6 +374,9 @@ class PathNodeView extends StatefulWidget {
   final double size;
   final IconData icon;
   final VoidCallback? onTap;
+
+  /// ✨ هێلا دەرڤە ب ئەنیمەیشن دهێتە کێشان (جارا ئێکێ پشتی تەمامبوونێ)
+  final bool drawIn;
   const PathNodeView({
     super.key,
     required this.sides,
@@ -357,6 +388,7 @@ class PathNodeView extends StatefulWidget {
     this.size = 112,
     this.icon = Icons.star_rounded,
     this.onTap,
+    this.drawIn = false,
   });
 
   @override
@@ -410,15 +442,8 @@ class _PathNodeViewState extends State<PathNodeView> with SingleTickerProviderSt
       final dy = _down ? ShapePainter.lipH - 2 : 0.0;
       Widget center;
       if (w.state == NodeState.gold) {
-        center = Container(
-          width: rr * 1.05,
-          height: rr * 1.05,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            boxShadow: [BoxShadow(color: const Color(0xFF7A4E00).withValues(alpha: 0.55), blurRadius: 6, offset: const Offset(0, 2))],
-          ),
-          child: ClipOval(child: Image.asset('assets/brand/logo.png', fit: BoxFit.cover)),
-        );
+        // 🏅 لۆگۆ د ناڤ زێڕی دا هاتییە هەلکۆلین (نە وێنەیەکێ پێڤەکری)
+        center = Image.asset('assets/brand/logo_gold.webp', width: rr * (w.sides == 3 ? 1.05 : 1.3), height: rr * (w.sides == 3 ? 1.05 : 1.3));
       } else {
         center = Icon(
           w.state == NodeState.locked ? Icons.lock_rounded : (w.state == NodeState.done ? Icons.check_rounded : w.icon),
@@ -434,16 +459,22 @@ class _PathNodeViewState extends State<PathNodeView> with SingleTickerProviderSt
           height: s,
           child: Stack(clipBehavior: Clip.none, children: [
             Positioned.fill(
-              child: CustomPaint(
-                painter: ShapePainter(
-                  sides: w.sides,
-                  filled: w.filled,
-                  state: w.state,
-                  color: w.color,
-                  boost: w.boost,
-                  current: w.current,
-                  pressed: _down,
-                  ring: w.current ? w.filled / w.sides : -1,
+              child: TweenAnimationBuilder<double>(
+                tween: Tween(begin: w.drawIn ? 0 : 1, end: 1),
+                duration: Duration(milliseconds: w.drawIn ? 1100 : 1),
+                curve: Curves.easeInOutCubic,
+                builder: (_, o, __) => CustomPaint(
+                  painter: ShapePainter(
+                    sides: w.sides,
+                    filled: w.filled,
+                    state: w.state,
+                    color: w.color,
+                    boost: w.boost,
+                    current: w.current,
+                    pressed: _down,
+                    ring: w.current && w.sides > 0 ? w.filled / w.sides : -1,
+                    outline: (w.state == NodeState.done || w.state == NodeState.gold) ? o : 0,
+                  ),
                 ),
               ),
             ),
@@ -482,6 +513,7 @@ class _PathNodeViewState extends State<PathNodeView> with SingleTickerProviderSt
 
 // ═══════════════════════ دەستپێکرنا کۆرسێ ═══════════════════════
 class PathFx {
+  static String? justDone; // ✨ هێلا دەرڤە ب ئەنیمەیشن
   static String? pendingGold;
   static String? pendingStage;
   static bool goldFailed = false;
@@ -595,7 +627,12 @@ void startPathLesson(BuildContext context, PathLesson l) {
   final c = p.coursesDone(l);
   Future<void> after(int pct) async {
     final wasStageDone = p.stageDone(l.stage);
+    final wasDone = p.lessonDone(l);
     final gold = await p.pathCourseDone(l, hard: done, percent: pct);
+    if ((!wasDone && p.lessonDone(l)) || gold) {
+      PathFx.justDone = l.id;
+      Future.delayed(const Duration(seconds: 8), () => PathFx.justDone = null);
+    }
     if (gold) {
       PathFx.pendingGold = l.id;
     } else if (done && !p.lessonGold(l)) {
@@ -761,6 +798,7 @@ class _StageGrid extends StatelessWidget {
               current: isCur,
               boost: boost && lu && !gold,
               size: size,
+              drawIn: PathFx.justDone == l.id,
               icon: l.isAlphabet ? Icons.abc_rounded : Icons.star_rounded,
               onTap: () => _tapLesson(context, l),
             );

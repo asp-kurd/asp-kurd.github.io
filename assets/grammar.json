@@ -6,6 +6,734 @@
  },
  "lektionen": [
   {
+   "n": 0,
+   "topics": [
+    {
+     "emoji": "👤",
+     "title": {
+      "de": "Personalpronomen (Nominativ)",
+      "ku": "جهێناڤێن کەسی: ئەز، تو، ئەو …"
+     },
+     "explain": {
+      "de": "Personalpronomen ersetzen Personen und Dinge. Sie sind das Subjekt des Satzes: Wer macht etwas?",
+      "ku": "جهێناڤ ل جهێ ناڤێ مرۆڤان و تشتان دهێن. ئەو کارای رستێ نە: کێ کارەکی دکەت؟"
+     },
+     "head": [
+      "Deutsch",
+      "کوردی",
+      "Beispiel"
+     ],
+     "rows": [
+      [
+       "ich",
+       "ئەز",
+       "Ich heiße Lana."
+      ],
+      [
+       "du",
+       "تو (هەڤال، مالبات)",
+       "Du bist mein Freund."
+      ],
+      [
+       "er",
+       "ئەو (نێر)",
+       "Er kommt aus Duhok."
+      ],
+      [
+       "sie",
+       "ئەو (مێ)",
+       "Sie wohnt in Berlin."
+      ],
+      [
+       "es",
+       "ئەو (بێلایەن)",
+       "Es ist kalt."
+      ],
+      [
+       "wir",
+       "ئەم",
+       "Wir lernen Deutsch."
+      ],
+      [
+       "ihr",
+       "هوین (کۆ، هەڤال)",
+       "Ihr seid nett."
+      ],
+      [
+       "sie",
+       "ئەو (کۆ)",
+       "Sie spielen Fußball."
+      ],
+      [
+       "Sie",
+       "هوین (ب رێز، فەرمی)",
+       "Woher kommen Sie?"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist Azad. Er ist mein Bruder.",
+       "ku": "ئەڤە ئازادە. ئەو برایێ منە."
+      },
+      {
+       "de": "Das ist Lana. Sie ist Lehrerin.",
+       "ku": "ئەڤە لانایە. ئەو مامۆستایە."
+      },
+      {
+       "de": "Der Tisch ist neu. Er ist schön.",
+       "ku": "مێز یا نوویە. یا جوانە."
+      }
+     ],
+     "tip": {
+      "de": "du = Freunde, Familie, Kinder. Sie (groß) = höflich, fremde Erwachsene. er/sie/es auch für Dinge: der Tisch → er.",
+      "ku": "du = بۆ هەڤال، مالبات و زارۆکان. Sie (ب S ـا مەزن) = ب رێز، بۆ مەزنێن نەناس. er/sie/es بۆ تشتان ژی: der Tisch → er."
+     },
+     "practice": [
+      {
+       "q": "___ heiße Rawand. (ئەز)",
+       "qku": "ئەز ناڤێ من راوەندە.",
+       "cue": "ich",
+       "a": "Ich heiße Rawand.",
+       "aku": "ناڤێ من راوەندە."
+      },
+      {
+       "q": "Das ist Avin. ___ wohnt in Erbil.",
+       "qku": "ئەڤە ئاڤینە. ئەو ل هەولێرێ دژیت.",
+       "cue": "sie",
+       "a": "Sie wohnt in Erbil.",
+       "aku": "ئەو ل هەولێرێ دژیت."
+      },
+      {
+       "q": "Herr Weber, woher kommen ___?",
+       "qku": "کاک ڤێبەر، هوین ژ کیڤەنە؟",
+       "cue": "Sie",
+       "a": "Woher kommen Sie?",
+       "aku": "هوین ژ کیڤەنە؟"
+      },
+      {
+       "q": "Lana und ich, ___ lernen Deutsch.",
+       "qku": "لانا و ئەز، ئەم ئەلمانی فێر دبین.",
+       "cue": "wir",
+       "a": "Wir lernen Deutsch.",
+       "aku": "ئەم ئەلمانی فێر دبین."
+      }
+     ],
+     "more": [
+      {
+       "de": "Wo ist das Buch? – Es liegt auf dem Tisch.",
+       "ku": "پەرتووک ل کیڤەیە؟ – ل سەر مێزێ یە."
+      },
+      {
+       "de": "Kinder, habt ihr Hunger?",
+       "ku": "زارۆکینە، هوین برسینە؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🔁",
+     "title": {
+      "de": "Verb + Pronomen: Konjugation im Präsens",
+      "ku": "کار دگەل جهێناڤان (دەمێ نوکە)"
+     },
+     "explain": {
+      "de": "Das Verb ändert die Endung je nach Person: ich -e, du -st, er/sie/es -t, wir -en, ihr -t, sie/Sie -en.",
+      "ku": "دوماهیکا کاری ل دویف کەسی دگوهۆڕیت: ich -e، du -st، er/sie/es -t، wir -en، ihr -t، sie/Sie -en."
+     },
+     "head": [
+      "",
+      "wohnen",
+      "sein",
+      "haben",
+      "sprechen"
+     ],
+     "rows": [
+      [
+       "ich",
+       "wohne",
+       "bin",
+       "habe",
+       "spreche"
+      ],
+      [
+       "du",
+       "wohnst",
+       "bist",
+       "hast",
+       "sprichst"
+      ],
+      [
+       "er/sie/es",
+       "wohnt",
+       "ist",
+       "hat",
+       "spricht"
+      ],
+      [
+       "wir",
+       "wohnen",
+       "sind",
+       "haben",
+       "sprechen"
+      ],
+      [
+       "ihr",
+       "wohnt",
+       "seid",
+       "habt",
+       "sprecht"
+      ],
+      [
+       "sie/Sie",
+       "wohnen",
+       "sind",
+       "haben",
+       "sprechen"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich wohne in Duhok. Wo wohnst du?",
+       "ku": "ئەز ل دهۆکێ دژیم. تو ل کیڤە دژی؟"
+      },
+      {
+       "de": "Er hat ein Auto.",
+       "ku": "ترومبێلەک ل نک وی هەیە."
+      },
+      {
+       "de": "Sprichst du Kurdisch?",
+       "ku": "تو کوردی دئاخڤی؟"
+      }
+     ],
+     "tip": {
+      "de": "sein und haben sind unregelmäßig – lerne sie auswendig! Bei manchen Verben ändert sich der Vokal (du sprichst, er liest).",
+      "ku": "sein و haben ب یاسا نینن — ژبەر بکە! د هندەک کاران دا دەنگ دگوهۆڕیت (du sprichst، er liest)."
+     },
+     "practice": [
+      {
+       "q": "Du ___ aus Kurdistan. (kommen)",
+       "qku": "تو ژ کوردستانێ یی.",
+       "cue": "-st",
+       "a": "Du kommst aus Kurdistan.",
+       "aku": "تو ژ کوردستانێ یی."
+      },
+      {
+       "q": "Wir ___ müde. (sein)",
+       "qku": "ئەم وەستیاینە.",
+       "cue": "sind",
+       "a": "Wir sind müde.",
+       "aku": "ئەم وەستیاینە."
+      },
+      {
+       "q": "Er ___ ein Buch. (lesen)",
+       "qku": "ئەو پەرتووکەکێ دخوینیت.",
+       "cue": "liest",
+       "a": "Er liest ein Buch.",
+       "aku": "ئەو پەرتووکەکێ دخوینیت."
+      },
+      {
+       "q": "Ihr ___ Hunger. (haben)",
+       "qku": "هوین برسینە.",
+       "cue": "habt",
+       "a": "Ihr habt Hunger.",
+       "aku": "هوین برسینە."
+      }
+     ],
+     "more": [
+      {
+       "de": "Wir trinken Tee, und ihr?",
+       "ku": "ئەم چایێ ڤەدخۆین، و هوین؟"
+      },
+      {
+       "de": "Sie arbeiten heute nicht.",
+       "ku": "ئەو ئەڤرۆ کار ناکەن."
+      }
+     ]
+    },
+    {
+     "emoji": "🎒",
+     "title": {
+      "de": "Possessivartikel: mein, dein, sein …",
+      "ku": "یێ من، یێ تە، یێ وی …"
+     },
+     "explain": {
+      "de": "Possessivartikel zeigen, wem etwas gehört. Bei feminin und Plural kommt -e dazu: meine Mutter, meine Kinder.",
+      "ku": "ئەڤە نیشان ددەن کا تشت یێ کێیە. بۆ مێ و کۆ -e زێدە دبیت: meine Mutter، meine Kinder."
+     },
+     "head": [
+      "Person",
+      "maskulin / neutral",
+      "feminin / Plural",
+      "کوردی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mein",
+       "meine",
+       "یێ / یا من"
+      ],
+      [
+       "du",
+       "dein",
+       "deine",
+       "یێ تە"
+      ],
+      [
+       "er / es",
+       "sein",
+       "seine",
+       "یێ وی"
+      ],
+      [
+       "sie",
+       "ihr",
+       "ihre",
+       "یێ وێ"
+      ],
+      [
+       "wir",
+       "unser",
+       "unsere",
+       "یێ مە"
+      ],
+      [
+       "ihr",
+       "euer",
+       "eure",
+       "یێ هەوە"
+      ],
+      [
+       "sie",
+       "ihr",
+       "ihre",
+       "یێ وان"
+      ],
+      [
+       "Sie",
+       "Ihr",
+       "Ihre",
+       "یێ هەوە (ب رێز)"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Das ist mein Vater und das ist meine Mutter.",
+       "ku": "ئەڤە بابێ منە و ئەڤە دایکا منە."
+      },
+      {
+       "de": "Wo ist dein Handy?",
+       "ku": "مۆبایلا تە ل کیڤەیە؟"
+      },
+      {
+       "de": "Lana und ihre Schwester wohnen in Köln.",
+       "ku": "لانا و خویشکا وێ ل کۆلنێ دژین."
+      }
+     ],
+     "tip": {
+      "de": "sein = von ihm, ihr = von ihr! euer + e = eure (ohne zweites e).",
+      "ku": "sein = یێ وی، ihr = یێ وێ! euer + e = eure."
+     },
+     "practice": [
+      {
+       "q": "Das ist ___ Buch. (ich)",
+       "qku": "ئەڤە پەرتووکا منە.",
+       "cue": "mein",
+       "a": "Das ist mein Buch.",
+       "aku": "ئەڤە پەرتووکا منە."
+      },
+      {
+       "q": "Das ist ___ Schwester. (du)",
+       "qku": "ئەڤە خویشکا تە یە.",
+       "cue": "deine",
+       "a": "Das ist deine Schwester.",
+       "aku": "ئەڤە خویشکا تە یە."
+      },
+      {
+       "q": "Azad und ___ Bruder. (er)",
+       "qku": "ئازاد و برایێ وی.",
+       "cue": "sein",
+       "a": "Azad und sein Bruder.",
+       "aku": "ئازاد و برایێ وی."
+      },
+      {
+       "q": "Ist das ___ Tasche, Frau Kaya? (Sie)",
+       "qku": "ئەرێ ئەڤە جانتایا هەوە یە، خاتوو کایا؟",
+       "cue": "Ihre",
+       "a": "Ist das Ihre Tasche, Frau Kaya?",
+       "aku": "ئەرێ ئەڤە جانتایا هەوە یە؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "Unsere Wohnung ist klein.",
+       "ku": "خانیێ مە بچووکە."
+      },
+      {
+       "de": "Wie heißt euer Lehrer?",
+       "ku": "ناڤێ مامۆستایێ هەوە چییە؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🎯",
+     "title": {
+      "de": "Akkusativ: mich, dich, ihn …",
+      "ku": "جهێناڤ وەکی بەرکار: من، تە، وی (Akkusativ)"
+     },
+     "explain": {
+      "de": "Nach Verben wie sehen, besuchen, fragen, anrufen, lieben und nach für, ohne, durch steht der Akkusativ.",
+      "ku": "پشتی کارێن وەکی sehen، besuchen، fragen، anrufen، lieben و پشتی für، ohne، durch: Akkusativ."
+     },
+     "head": [
+      "Nominativ",
+      "Akkusativ",
+      "کوردی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "من"
+      ],
+      [
+       "du",
+       "dich",
+       "تە"
+      ],
+      [
+       "er",
+       "ihn",
+       "وی"
+      ],
+      [
+       "sie",
+       "sie",
+       "وێ"
+      ],
+      [
+       "es",
+       "es",
+       "وی (بێلایەن)"
+      ],
+      [
+       "wir",
+       "uns",
+       "مە"
+      ],
+      [
+       "ihr",
+       "euch",
+       "هەوە"
+      ],
+      [
+       "sie / Sie",
+       "sie / Sie",
+       "وان / هەوە"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich besuche dich morgen.",
+       "ku": "ئەز سبەی دێ سەرەدانا تە کەم."
+      },
+      {
+       "de": "Der Lehrer fragt ihn.",
+       "ku": "مامۆستا پسیارێ ژ وی دکەت."
+      },
+      {
+       "de": "Das Geschenk ist für euch.",
+       "ku": "دیاری بۆ هەوە یە."
+      }
+     ],
+     "tip": {
+      "de": "Nur er ändert sich stark: er → ihn. sie, es, sie, Sie bleiben gleich.",
+      "ku": "تنێ er گەلەک دگوهۆڕیت: er → ihn. sie، es، Sie وەکی خۆ دمینن."
+     },
+     "practice": [
+      {
+       "q": "Ich liebe ___. (du)",
+       "qku": "ئەز حەز ژ تە دکەم.",
+       "cue": "dich",
+       "a": "Ich liebe dich.",
+       "aku": "ئەز حەز ژ تە دکەم."
+      },
+      {
+       "q": "Lara ruft ___ an. (er)",
+       "qku": "لارا تەلەفۆنێ بۆ وی دکەت.",
+       "cue": "ihn",
+       "a": "Lara ruft ihn an.",
+       "aku": "لارا تەلەفۆنێ بۆ وی دکەت."
+      },
+      {
+       "q": "Kannst du ___ abholen? (wir)",
+       "qku": "تو دشێی بهێیە دویڤ مە؟",
+       "cue": "uns",
+       "a": "Kannst du uns abholen?",
+       "aku": "تو دشێی بهێیە دویڤ مە؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "Ohne dich gehe ich nicht.",
+       "ku": "بێ تە ئەز ناچم."
+      },
+      {
+       "de": "Siehst du mich?",
+       "ku": "تو من دبینی؟"
+      }
+     ]
+    },
+    {
+     "emoji": "🎁",
+     "title": {
+      "de": "Dativ: mir, dir, ihm …",
+      "ku": "جهێناڤ ب Dativ: بۆ من، بۆ تە …"
+     },
+     "explain": {
+      "de": "Dativ nach helfen, danken, gehören, gefallen, schmecken, passen und nach mit, bei, von, zu, aus, nach, seit. Auch bei geben, schenken, zeigen für die Person.",
+      "ku": "Dativ پشتی helfen، danken، gehören، gefallen، schmecken، passen و پشتی mit، bei، von، zu، aus، nach، seit. هەروەسا بۆ کەسی د geben، schenken، zeigen دا."
+     },
+     "head": [
+      "Nominativ",
+      "Dativ",
+      "کوردی"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mir",
+       "بۆ من"
+      ],
+      [
+       "du",
+       "dir",
+       "بۆ تە"
+      ],
+      [
+       "er / es",
+       "ihm",
+       "بۆ وی"
+      ],
+      [
+       "sie",
+       "ihr",
+       "بۆ وێ"
+      ],
+      [
+       "wir",
+       "uns",
+       "بۆ مە"
+      ],
+      [
+       "ihr",
+       "euch",
+       "بۆ هەوە"
+      ],
+      [
+       "sie",
+       "ihnen",
+       "بۆ وان"
+      ],
+      [
+       "Sie",
+       "Ihnen",
+       "بۆ هەوە (ب رێز)"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Wie geht es dir? – Mir geht es gut.",
+       "ku": "تو چاوانی؟ – ئەز باشم."
+      },
+      {
+       "de": "Kannst du mir helfen?",
+       "ku": "تو دشێی هاریکاریا من بکەی؟"
+      },
+      {
+       "de": "Das Kleid gefällt ihr.",
+       "ku": "جلک ب دلێ وێ یە."
+      }
+     ],
+     "tip": {
+      "de": "„Wie geht's dir?“ und „Tut mir leid“ lernst du am Anfang als feste Ausdrücke – hier siehst du die Grammatik dazu.",
+      "ku": "«Wie geht's dir?» و «Tut mir leid» ل دەستپێکێ وەکی گۆتنێن جێگیر هاتنە فێرکرن — ل ڤێرێ رێزمانا وان دبینی."
+     },
+     "practice": [
+      {
+       "q": "Das Buch gehört ___. (ich)",
+       "qku": "ئەڤ پەرتووکە یا منە.",
+       "cue": "mir",
+       "a": "Das Buch gehört mir.",
+       "aku": "ئەڤ پەرتووکە یا منە."
+      },
+      {
+       "q": "Ich danke ___. (du)",
+       "qku": "سوپاس بۆ تە.",
+       "cue": "dir",
+       "a": "Ich danke dir.",
+       "aku": "سوپاس بۆ تە."
+      },
+      {
+       "q": "Wir helfen ___. (sie, Plural)",
+       "qku": "ئەم هاریکاریا وان دکەین.",
+       "cue": "ihnen",
+       "a": "Wir helfen ihnen.",
+       "aku": "ئەم هاریکاریا وان دکەین."
+      },
+      {
+       "q": "Wie geht es ___, Herr Ali? (Sie)",
+       "qku": "هوین چاوانن، کاک عەلی؟",
+       "cue": "Ihnen",
+       "a": "Wie geht es Ihnen, Herr Ali?",
+       "aku": "هوین چاوانن، کاک عەلی؟"
+      }
+     ],
+     "more": [
+      {
+       "de": "Gib ihm bitte das Heft.",
+       "ku": "هیڤییە دەفتەرێ بدە وی."
+      },
+      {
+       "de": "Das Essen schmeckt uns.",
+       "ku": "خوارن ب دلێ مە یە."
+      }
+     ]
+    },
+    {
+     "emoji": "🗂️",
+     "title": {
+      "de": "Übersicht: alle Pronomen",
+      "ku": "هەمی جهێناڤ ب ئێک جار"
+     },
+     "explain": {
+      "de": "Hier siehst du alle Formen zusammen: Nominativ (Subjekt), Akkusativ, Dativ, Possessivartikel und Reflexivpronomen.",
+      "ku": "ل ڤێرێ هەمی شێوە پێکڤە: کارا (Nominativ)، بەرکار (Akkusativ)، Dativ، یێ کێ (Possessiv) و خۆ (Reflexiv)."
+     },
+     "head": [
+      "Nom.",
+      "Akk.",
+      "Dat.",
+      "Possessiv",
+      "Reflexiv"
+     ],
+     "rows": [
+      [
+       "ich",
+       "mich",
+       "mir",
+       "mein",
+       "mich"
+      ],
+      [
+       "du",
+       "dich",
+       "dir",
+       "dein",
+       "dich"
+      ],
+      [
+       "er",
+       "ihn",
+       "ihm",
+       "sein",
+       "sich"
+      ],
+      [
+       "sie",
+       "sie",
+       "ihr",
+       "ihr",
+       "sich"
+      ],
+      [
+       "es",
+       "es",
+       "ihm",
+       "sein",
+       "sich"
+      ],
+      [
+       "wir",
+       "uns",
+       "uns",
+       "unser",
+       "uns"
+      ],
+      [
+       "ihr",
+       "euch",
+       "euch",
+       "euer",
+       "euch"
+      ],
+      [
+       "sie",
+       "sie",
+       "ihnen",
+       "ihr",
+       "sich"
+      ],
+      [
+       "Sie",
+       "Sie",
+       "Ihnen",
+       "Ihr",
+       "sich"
+      ]
+     ],
+     "examples": [
+      {
+       "de": "Ich wasche mich.",
+       "ku": "ئەز خۆ دشۆم."
+      },
+      {
+       "de": "Er gibt ihr sein Buch.",
+       "ku": "ئەو پەرتووکا خۆ ددەتە وێ."
+      },
+      {
+       "de": "Wir sehen euch morgen.",
+       "ku": "ئەم دێ سبەی هەوە بینین."
+      }
+     ],
+     "tip": {
+      "de": "Merke: uns und euch sind im Akkusativ und Dativ gleich.",
+      "ku": "بیرا تە بیت: uns و euch د Akkusativ و Dativ دا وەکی ئێکن."
+     },
+     "practice": [
+      {
+       "q": "Er ruft ___ an. (ich)",
+       "qku": "ئەو تەلەفۆنێ بۆ من دکەت.",
+       "cue": "Akk.",
+       "a": "Er ruft mich an.",
+       "aku": "ئەو تەلەفۆنێ بۆ من دکەت."
+      },
+      {
+       "q": "Sie hilft ___. (ich)",
+       "qku": "ئەو هاریکاریا من دکەت.",
+       "cue": "Dat.",
+       "a": "Sie hilft mir.",
+       "aku": "ئەو هاریکاریا من دکەت."
+      },
+      {
+       "q": "Das ist ___ Auto. (wir)",
+       "qku": "ئەڤە ترومبێلا مە یە.",
+       "cue": "Possessiv",
+       "a": "Das ist unser Auto.",
+       "aku": "ئەڤە ترومبێلا مە یە."
+      },
+      {
+       "q": "Er freut ___. (er)",
+       "qku": "ئەو دلخۆشە.",
+       "cue": "Reflexiv",
+       "a": "Er freut sich.",
+       "aku": "ئەو دلخۆشە."
+      }
+     ],
+     "more": []
+    }
+   ]
+  },
+  {
    "n": 1,
    "topics": [
     {

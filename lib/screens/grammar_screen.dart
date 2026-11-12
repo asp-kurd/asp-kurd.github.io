@@ -73,6 +73,7 @@ class Grammar {
   /// ناڤ و ڕەنگێ وانێ: (کوردی، زمانێ فێربوونێ، ڕەنگ)
   static (String, String, Color)? unitInfo(int n) {
     if (en) return _units[n];
+    if (n == 0) return ('👤 هەمی جهێناڤ ب ئێک جار', 'Pronomen – Übersicht', const Color(0xFF8E6CC8));
     final l = appLektionen.where((l) => l.n == n).firstOrNull;
     return l == null ? null : (l.titleKu, l.titleDe, l.color);
   }
@@ -244,7 +245,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
             CircleAvatar(
               radius: 22,
               backgroundColor: color,
-              child: Text('$n', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
+              child: Text(n == 0 ? '👤' : '$n', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
             ),
             const SizedBox(width: 12),
             Expanded(
