@@ -212,6 +212,94 @@ class ProgressService extends ChangeNotifier {
       final parts = e.split(':');
       if (parts.length == 2) mistakes[parts[0]] = int.tryParse(parts[1]) ?? 0;
     }
+    pathProg = {};
+    try {
+      final raw = _p.getString('path_$_pairKey');
+      if (raw != null) {
+        (jsonDecode(raw) as Map<String, dynamic>).forEach((k, v) {
+          pathProg[k] = (v as List).map((e) => (e as num).toInt()).toList();
+        });
+      }
+    } catch (_) {}
+    pathJumped = (_p.getStringList('pathj_$_pairKey') ?? []).toSet();
+  }
+
+  // ───────── 🛤️ رێکا نوو: شێوە، زێڕ، بازدان ─────────
+  int _pc(PathLesson l) => (pathProg[l.id]?.firstOrNull ?? 0);
+
+  /// وانە تەمامە: هەمی کۆرس، یان ژ پێشکەفتنا کەڤن (قۆناغا وێ هاتبوو تەمامکرن)
+  bool lessonDone(PathLesson l) => _pc(l) >= l.courses || completedUnits.contains(l.unit.id);
+  int coursesDone(PathLesson l) => lessonDone(l) ? l.courses : _pc(l).clamp(0, l.courses);
+  bool lessonGold(PathLesson l) => (pathProg[l.id]?.elementAtOrNull(1) ?? 0) == 1;
+  bool stageDone(PathStage s) => s.lessons.every(lessonDone);
+  bool stageGold(PathStage s) => s.lessons.every(lessonGold);
+  bool stageStarted(PathStage s) => s.lessons.any((l) => lessonDone(l) || _pc(l) > 0);
+  bool stageOpen(PathStage s) => stageStarted(s) && !stageDone(s);
+
+  bool stageUnlocked(PathStage s) {
+    if (s.section == 0 || s.gIndex == 0) return true;
+    if (pathJumped.contains(s.id) || stageStarted(s)) return true;
+    final prev = pathStages[s.gIndex - 1];
+    if (prev.section == 0) return true; // قۆناغا ئێکێ یا بەشا ١: ئەلفوبێ نە مەرجە
+    return stageDone(prev);
+  }
+
+  bool lessonUnlocked(PathLesson l) =>
+      stageUnlocked(l.stage) && (l.index == 0 || lessonDone(l) || _pc(l) > 0 || lessonDone(l.stage.lessons[l.index - 1]));
+
+  /// قۆناغەکا دەستپێکری و تەمام نەکری (ژ بلی ئەلفوبێ) — دڤێت پێشی ئەو بهێتە تەمامکرن
+  PathStage? openStageExcept(PathStage s) {
+    for (final x in pathStages) {
+      if (x.section > 0 && x != s && stageOpen(x)) return x;
+    }
+    return null;
+  }
+
+  /// وانەیا نوکە (بالۆنا «دەستپێبکە» + ئەلقەیا پێشکەفتنێ)
+  PathLesson? get currentLesson {
+    for (final st in pathStages) {
+      if (st.section > 0 && stageOpen(st)) {
+        for (final l in st.lessons) {
+          if (!lessonDone(l)) return l;
+        }
+      }
+    }
+    for (final l in pathLessons) {
+      if (!lessonDone(l) && lessonUnlocked(l)) return l;
+    }
+    return null;
+  }
+
+  Future<void> jumpTo(PathStage s) async {
+    pathJumped.add(s.id);
+    await _p.setStringList('pathj_$_pairKey', pathJumped.toList());
+    notifyListeners();
+  }
+
+  /// کۆرسەک تەمام بوو. [hard] = دووبارەکرنا زێڕ ➔ ب ٧٠٪+ وانە دبیتە زێڕ. ئەگەر نوکە بوو زێڕ ➔ true
+  Future<bool> pathCourseDone(PathLesson l, {bool hard = false, int percent = 100}) async {
+    final cur = [...(pathProg[l.id] ?? const [0, 0])];
+    while (cur.length < 2) {
+      cur.add(0);
+    }
+    var gold = false;
+    if (hard) {
+      if (percent >= 70 && cur[1] == 0) {
+        cur[1] = 1;
+        gold = true;
+      }
+    } else if (!lessonDone(l)) {
+      cur[0] = (cur[0] + 1).clamp(0, l.courses);
+    }
+    pathProg[l.id] = cur;
+    // هەمی وانەیێن ڤێ قۆناغا کەڤن تەمام بوون ➔ قۆناغا کەڤن ژی (بۆ ئەزموون، ئامار و هەڤدەمکرنێ)
+    if (lessonDone(l) && pathLessons.where((x) => x.unit.id == l.unit.id).every(lessonDone)) {
+      completedUnits.add(l.unit.id);
+      await _p.setStringList('done_$_pairKey', completedUnits.toList());
+    }
+    await _p.setString('path_$_pairKey', jsonEncode(pathProg));
+    notifyListeners();
+    return gold;
   }
 
   /// دل هەر رۆژ دبنە ٥، و Streak ئەگەر رۆژەک هاتە بەرزەکرن دبیتە ٠

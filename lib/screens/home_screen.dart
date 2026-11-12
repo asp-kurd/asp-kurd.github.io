@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
@@ -10,10 +9,7 @@ import 'account_screens.dart';
 import 'book_screen.dart';
 import 'character_screen.dart';
 import 'course_screens.dart';
-import 'exam_coin.dart';
-import 'grammar_screen.dart';
 import 'streak_screen.dart';
-import 'widgets/combo.dart' show kuNum;
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
 import 'lesson_screen.dart';
