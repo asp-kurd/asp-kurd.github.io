@@ -8,7 +8,7 @@ import '../services/sfx.dart';
 import '../ui.dart';
 import 'book_screen.dart';
 
-/// ⚡ «A1 mit Poya» — پوختەیێن رێزمانێ یێن A1: یاسا، خشتە، و شیکرنا رستان ب رەنگان.
+/// ⚡ «Deutsch mit Poya» — پوختەیێن رێزمانێ یێن A1: یاسا، خشتە، و شیکرنا رستان ب رەنگان.
 
 class SumPart {
   final String text, kind;
@@ -37,7 +37,7 @@ class SumCard {
 }
 
 class A1Summary {
-  static String title = 'A1 mit Poya', subtitle = '';
+  static String title = 'Deutsch mit Poya', subtitle = '';
   static Map<String, (String ku, String de, Color color)> legend = {};
   static List<SumCard> cards = [];
   static Future<void>? _loading;
@@ -96,7 +96,7 @@ class SummaryBanner extends StatelessWidget {
           SizedBox(width: 12),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('A1 mit Poya — پوختە', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: Colors.white)),
+              Text('Deutsch mit Poya — پوختە', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: Colors.white)),
               SizedBox(height: 4),
               Text('هەمی رێزمانا A1 ب کورتی + شیکرنا رستان ب رەنگان',
                   style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
@@ -140,7 +140,7 @@ class _SummaryListScreenState extends State<SummaryListScreen> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(title: const Text('⚡ A1 mit Poya')),
+        appBar: AppBar(title: const Text('⚡ Deutsch mit Poya')),
         body: A1Summary.cards.isEmpty
             ? const Center(child: CircularProgressIndicator())
             : ListView(padding: const EdgeInsets.fromLTRB(16, 4, 16, 40), children: [

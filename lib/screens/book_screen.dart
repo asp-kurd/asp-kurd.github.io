@@ -9,7 +9,7 @@ import '../ui.dart';
 import 'grammar_screen.dart';
 import 'summary_screen.dart';
 
-/// 📖 پەرتووکا رێزمانێ: «A1.1 mit Poya» — ٢٠ بەش، ژ ئەلفوبێ هەتا Perfekt
+/// 📖 پەرتووکا رێزمانێ: «Deutsch mit Poya» — ٢٠ بەش، ژ ئەلفوبێ هەتا Perfekt
 /// ناڤەرۆک هەردەم ب بادینییە (پەرتووکا ئەلمانی ب بادینی)، لەوما RTL دمینیت.
 
 // ───────── پێشکەفتنا خواندنێ ─────────
@@ -139,7 +139,7 @@ class _BookScreenState extends State<BookScreen> {
                 else
                   Center(
                     child: Column(children: [
-                      const Text('📖 پەرتووکا A1.1 mit Poya بار نەبوو', style: TextStyle(fontSize: 16)),
+                      const Text('📖 پەرتووکا Deutsch mit Poya بار نەبوو', style: TextStyle(fontSize: 16)),
                       if (bookError != null)
                         Padding(
                           padding: const EdgeInsets.all(8),
@@ -190,7 +190,7 @@ class _BookScreenState extends State<BookScreen> {
           Text('📖', style: TextStyle(fontSize: 34)),
           SizedBox(width: 10),
           Expanded(
-            child: Text('A1.1 mit Poya',
+            child: Text('Deutsch mit Poya',
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.right,
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Colors.white)),

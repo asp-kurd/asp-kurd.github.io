@@ -5,7 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../models.dart';
 
-/// 📖 پەرتووکا رێزمانێ «A1.1 mit Poya» ژ assets/book.json
+/// 📖 پەرتووکا رێزمانێ «Deutsch mit Poya» ژ assets/book.json
 /// ئەو فایل ب voice_lab/build_book.py ژ book/A1_mit_Poya.md دهێتە دروستکرن.
 
 class BookPart {
