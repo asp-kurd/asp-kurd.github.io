@@ -16,7 +16,15 @@ s = re.sub(r'(name="apple-mobile-web-app-title" content=")[^"]*', r"\1ASP", s)
 extra = ('  <meta name="apple-mobile-web-app-capable" content="yes">\n'
          '  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
          '  <meta name="theme-color" content="#131F24">\n'
-         '  <style>body{background:#131F24}</style>\n')
+         '  <style>html,body{background:#0d0507;margin:0}</style>\n')
+# 📐 viewport ژ دەستپێکێ (وەکی یێ Flutter) ➔ شاشا دەستپێکێ ناهێتە مەزنکرن/بچووککرن (نابەزیت)
+if 'name="viewport"' not in s:
+    s = s.replace("<head>", '<head>\n  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">', 1)
+s = s.replace("<style>body{background:#131F24}</style>", "<style>html,body{background:#0d0507;margin:0}</style>")
+# 🖤 iPhone: وێنەیێ دەستپێکێ (هەمان رەنگ) ل جهێ شاشا رەش
+_sl = Path("branding/web/splash/startup_links.html")
+if _sl.exists() and "apple-touch-startup-image" not in s:
+    s = s.replace("</head>", _sl.read_text(encoding="utf-8") + "</head>", 1)
 if "black-translucent" not in s:
     s = s.replace("</head>", extra + "</head>", 1)
 i.write_text(s, encoding="utf-8")
