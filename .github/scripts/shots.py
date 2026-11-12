@@ -6,7 +6,7 @@ out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
     ("pathgold", "demo=pathgold&theme=dark&quiet=1"), ("pathgold_pink", "demo=pathgold&theme=pink&quiet=1"),
-    ("examhint", "demo=examhint&theme=dark"), ("examtype", "demo=examtype&theme=dark"), ("path", "demo=path&theme=dark&quiet=1"),
+    ("examhint", "demo=examhint&theme=dark"), ("examtype", "demo=examtype&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -39,6 +39,9 @@ with sync_playwright() as p:
                 # ئەنیمەیشن: وێنە ل دەمێن جودا
                 for k in range(8):
                     time.sleep(0.4); pg.screenshot(path=f"{out}/{name}_{k}.png")
+            if name == "pathgold":
+                for k in range(8):
+                    time.sleep(0.45); pg.screenshot(path=f"{out}/{name}_early{k}.png")
             time.sleep(9)
             pg.screenshot(path=f"{out}/{name}.png")
             if name == "home_hdr":
@@ -70,15 +73,18 @@ with sync_playwright() as p:
                 time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
             if name == "examhint":
                 for k in range(3):
-                    pg.mouse.click(214, 555); time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_h{k+1}.png")
-                pg.mouse.click(214, 700); time.sleep(0.4); pg.mouse.click(214, 880); time.sleep(0.8)
+                    pg.mouse.click(214, 290); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_h{k+1}.png")
+                pg.mouse.wheel(0, 600); time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_h3b.png")
+                pg.mouse.wheel(0, -600); time.sleep(0.4)
+                pg.mouse.click(214, 461); time.sleep(0.4); pg.mouse.click(214, 882); time.sleep(0.8)
                 pg.screenshot(path=f"{out}/{name}_checked.png")
             if name == "examtype":
-                pg.mouse.click(214, 470); time.sleep(0.4); pg.keyboard.type("tschüss"); time.sleep(0.4)
+                pg.mouse.click(214, 313); time.sleep(0.6); pg.keyboard.type("tschüss"); time.sleep(0.5)
                 pg.mouse.click(214, 880); time.sleep(0.9); pg.screenshot(path=f"{out}/{name}_checked.png")
             if name.startswith("pathgold"):
-                for k in range(6):
-                    time.sleep(0.35); pg.screenshot(path=f"{out}/{name}_f{k}.png")
+                pg.mouse.move(214, 500)
+                pg.mouse.wheel(0, -700); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_up.png")
+                time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_up2.png")
             if name.startswith("lesson"):
                 # 👆 تبل ل سەر پەیڤەکێ ➔ بالۆنا رامانێ؛ پاشان چاڤ ➔ رامانا رستێ
                 pg.mouse.click(92, 350); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_tap.png")
