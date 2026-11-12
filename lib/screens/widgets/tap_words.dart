@@ -49,10 +49,19 @@ class TapWords extends StatefulWidget {
   static OverlayEntry? _open;
   static Timer? _timer;
 
+  static bool _routed = false;
+  static void _onPointer(PointerEvent e) {
+    if (e is PointerDownEvent) hide();
+  }
+
   static void hide() {
     _timer?.cancel();
     _open?.remove();
     _open = null;
+    if (_routed) {
+      GestureBinding.instance.pointerRouter.removeGlobalRoute(_onPointer);
+      _routed = false;
+    }
   }
 
   /// 💬 بالۆنا رامانێ ل سەر پەیڤێ
@@ -73,13 +82,13 @@ class TapWords extends StatefulWidget {
     final genderKu = g.plural ? 'کۆم' : switch (g.article) { 'der' => 'نێر', 'die' => 'مێ', 'das' => 'بێلایەن', _ => '' };
     _open = OverlayEntry(
       builder: (_) => Stack(children: [
-        Positioned.fill(child: GestureDetector(behavior: HitTestBehavior.translucent, onTap: hide, onPanDown: (_) => hide())),
         Positioned(
           left: left,
           width: w,
           top: above ? null : at.dy + 22,
           bottom: above ? size.height - at.dy + 20 : null,
-          child: Material(
+          child: IgnorePointer(
+              child: Material(
             color: Colors.transparent,
             child: TweenAnimationBuilder<double>(
               tween: Tween(begin: 0.85, end: 1),
@@ -135,11 +144,14 @@ class TapWords extends StatefulWidget {
                 ]),
               ),
             ),
-          ),
+          )),
         ),
       ]),
     );
     overlay.insert(_open!);
+    // هەر دەستلێدانەک ل هەر جهەکی ➔ بالۆن دهێتە گرتن (و دەستلێدان ب خۆ کارێ خۆ دکەت)
+    GestureBinding.instance.pointerRouter.addGlobalRoute(_onPointer);
+    _routed = true;
     _timer = Timer(const Duration(seconds: 6), hide);
   }
 

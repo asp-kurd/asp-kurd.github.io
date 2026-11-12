@@ -69,6 +69,21 @@ with sync_playwright() as p:
                     time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")
             if name.startswith("combo"):
                 time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
+            if name.startswith("lesson"):
+                # 👆 تبل ل سەر پەیڤەکێ ➔ بالۆنا رامانێ؛ پاشان چاڤ ➔ رامانا رستێ
+                pg.mouse.click(92, 350); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_tap.png")
+                pg.mouse.click(300, 350); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_tap2.png")
+                pg.mouse.click(70, 397); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_eye.png")
+            if name == "links":
+                pg.mouse.click(96, 882); time.sleep(1.2); pg.screenshot(path=f"{out}/{name}_add.png")
+            if name == "path":
+                for k in range(14):
+                    pg.mouse.wheel(0, 5000); time.sleep(0.35)
+                time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_end.png")
+            if name == "pathdone":
+                for k in range(6):
+                    pg.mouse.wheel(0, -6000); time.sleep(0.35)
+                time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_top.png")
             if name.startswith("lesson") or name.startswith("combo"):
                 # بەرسڤەکێ هەلبژێرە و پشکنین بکە
                 for y in (560, 640, 720):
