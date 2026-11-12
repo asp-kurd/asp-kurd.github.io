@@ -33,24 +33,54 @@
 (function(){
   var el=document.getElementById('asp-splash');if(!el)return;
   if(window.__aspOAuthDone){el.remove();return;}
+  var TPL=el.outerHTML; // بۆ نیشاندانا دووبارە پشتی زڤڕینێ ژ پشتێ
   var t0=Date.now(),MIN=2900,ready=false,gone=false;
-  // Flutter دشێت ناڤەرۆکا body بگوهۆڕیت ➔ شاشێ دکەینە د <html> دا و ئەگەر هاتە لادان، دزڤڕینین
-  try{document.documentElement.appendChild(el);}catch(e){}
-  try{new MutationObserver(function(){if(!gone&&!el.isConnected){document.documentElement.appendChild(el);}}).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
-  function hide(){if(gone)return;gone=true;console.log('[splash] hide '+(Date.now()-t0));el.classList.add('out');setTimeout(function(){el.remove();},600);}
+  function soundsOn(){try{return localStorage.getItem('flutter.set_sounds')!=='false';}catch(e){return true;}}
+
+  // 🎵 دەنگ ب Web Audio: پشتی ئێکەم دەستلێدانێ «ڤەدبیت» و پاشان دشێت ب خۆ لێبدەت
+  var AC=window.AudioContext||window.webkitAudioContext, ctx=null, buf=null;
+  try{ if(AC){ ctx=new AC(); fetch('splash/intro.mp3').then(function(r){return r.arrayBuffer();}).then(function(b){
+        return new Promise(function(res,rej){ctx.decodeAudioData(b,res,rej);});}).then(function(d){buf=d;}).catch(function(){}); } }catch(e){ctx=null;}
+  function viaTag(){try{var a=new Audio('splash/intro.mp3');a.volume=.75;var p=a.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
+  function play(){
+    if(!soundsOn())return;
+    if(ctx&&buf){
+      var go=function(){try{var s=ctx.createBufferSource(),g=ctx.createGain();g.gain.value=.75;s.buffer=buf;s.connect(g);g.connect(ctx.destination);s.start(0);}catch(e){viaTag();}};
+      if(ctx.state==='running')go(); else ctx.resume().then(function(){ctx.state==='running'?go():viaTag();}).catch(viaTag);
+    } else viaTag();
+  }
+  // ئێکەم دەستلێدان ل هەر جهەکێ ئەپێ ➔ دەنگ ڤەدبیت (iPhone)
+  var unlocked=false;
+  function unlock(){ if(unlocked||!ctx)return; unlocked=true;
+    try{ctx.resume();var s=ctx.createBufferSource();s.buffer=ctx.createBuffer(1,1,22050);s.connect(ctx.destination);s.start(0);}catch(e){} }
+  ['pointerdown','touchend','keydown'].forEach(function(t){window.addEventListener(t,unlock,{capture:true,passive:true});});
+
+  function attach(node){
+    try{document.documentElement.appendChild(node);}catch(e){}
+  }
+  attach(el);
+  try{new MutationObserver(function(){if(!gone&&!el.isConnected){document.documentElement.appendChild(el);}}).observe(document.documentElement,{childList:true});}catch(e){}
+  function hide(){if(gone)return;gone=true;el.classList.add('out');setTimeout(function(){el.remove();},600);}
   function check(){if(ready&&Date.now()-t0>=MIN)hide();else if(ready)setTimeout(hide,MIN-(Date.now()-t0));}
-  window.addEventListener('flutter-first-frame',function(){console.log('[splash] first frame '+(Date.now()-t0));ready=true;check();});
+  window.addEventListener('flutter-first-frame',function(){ready=true;check();});
   setTimeout(function(){ready=true;check();},14000);
-  // 🎵 ئاوازا دەستپێکێ (هندەک وێبگەڕ بێی دەستلێدانێ دەنگی رێناکەن — هنگێ ب بێدەنگی بەردەوام دبیت)
-  try{
-    if(localStorage.getItem('flutter.set_sounds')!=='false'){
-      var a=new Audio('splash/intro.mp3');a.volume=.75;
-      var p=a.play();
-      if(p&&p.catch)p.catch(function(){
-        var once=function(){if(!gone&&Date.now()-t0<1800){a.play().catch(function(){});}el.removeEventListener('pointerdown',once);};
-        el.addEventListener('pointerdown',once);
-      });
-    }
-  }catch(e){}
+
+  // ئێکەم جار: دەنگ (ئەگەر iPhone رێ نەدا، ب ئێکەم دەستلێدانێ د ناڤ شاشا دەستپێکێ دا)
+  setTimeout(function(){
+    play();
+    el.addEventListener('pointerdown',function(){ if(!gone) play(); },{once:true});
+  },60);
+
+  // 🔁 زڤڕین بۆ ئەپێ پشتی ٣٠+ چرکان ➔ شاشا دەستپێکێ و ئاواز دیسا
+  var hiddenAt=0;
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='hidden'){hiddenAt=Date.now();return;}
+    if(!hiddenAt||Date.now()-hiddenAt<30000||!gone)return;
+    hiddenAt=0;
+    var w=document.createElement('div');w.innerHTML=TPL;el=w.firstChild;gone=false;t0=Date.now();
+    attach(el);
+    play();
+    setTimeout(hide,2600);
+  });
 })();
 </script>
