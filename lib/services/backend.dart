@@ -34,6 +34,10 @@ class Backend extends ChangeNotifier {
   String? get gender => (profile?['gender'] as String?) ?? (enabled ? _p.getString('gender') : null);
   int get unread => messages.where((m) => !m.read).length;
 
+  /// 💬 گفتوگۆیا راستەوخۆ دگەل ئەدمینی
+  List<AppMessage> chat = [];
+  int get chatUnread => chat.where((m) => !m.fromLearner && !m.read).length;
+
   /// 📧 ئیمەیلا هەژمارێ (بۆ هەژمارێن ب ناڤ تنێ: null)
   String? get email {
     final e = (profile?['email'] as String?) ?? (enabled ? _p.getString('sb_email') : null);
@@ -603,10 +607,11 @@ class Backend extends ChangeNotifier {
 
   Future<void> loadMessages() async {
     if (!enabled || userId == null) return;
+    unawaited(loadChat());
     try {
       await _ensureToken();
       final r = await http.get(
-          Uri.parse('$_base/rest/v1/messages?or=(learner_id.eq.$userId,learner_id.is.null)&select=*&order=created_at.desc&limit=50'),
+          Uri.parse('$_base/rest/v1/messages?or=(learner_id.eq.$userId,learner_id.is.null)&kind=neq.chat&select=*&order=created_at.desc&limit=50'),
           headers: _h);
       if (r.statusCode == 200) {
         messages = (jsonDecode(r.body) as List)
@@ -617,6 +622,55 @@ class Backend extends ChangeNotifier {
       }
     } catch (_) {}
   }
+
+  /// 💬 نامێن گفتوگۆیێ (یێن من و ئەدمینی)
+  Future<void> loadChat() async {
+    if (!enabled || userId == null || isAdmin) return;
+    try {
+      await _ensureToken();
+      final r = await http.get(
+          Uri.parse('$_base/rest/v1/messages?learner_id=eq.$userId&kind=eq.chat&select=*&order=created_at.asc&limit=500'),
+          headers: _h);
+      if (r.statusCode == 200) {
+        chat = (jsonDecode(r.body) as List).map((m) => AppMessage.fromJson(m as Map<String, dynamic>, _readBroadcast)).toList();
+        notifyListeners();
+      }
+    } catch (_) {}
+  }
+
+  Future<String?> sendChat(String text) async {
+    if (!enabled || userId == null) return 'offline';
+    final t = text.trim();
+    if (t.isEmpty) return null;
+    try {
+      await _ensureToken();
+      final r = await http.post(Uri.parse('$_base/rest/v1/messages'),
+          headers: {..._h, 'Prefer': 'return=representation'},
+          body: jsonEncode({'learner_id': userId, 'title': '💬 ${name.isEmpty ? 'فێرخواز' : name}', 'body': t, 'kind': 'chat', 'from_learner': true}));
+      if (r.statusCode >= 300) return r.body.contains('from_learner') ? 'setup' : '${r.statusCode}';
+      await loadChat();
+      return null;
+    } catch (e) {
+      return '$e';
+    }
+  }
+
+  /// ئەدمینی نامێن من خواندن ➔ «هاتە خواندن»
+  Future<void> markChatRead() async {
+    final un = chat.where((m) => !m.fromLearner && !m.read).toList();
+    if (un.isEmpty) return;
+    for (final m in un) {
+      m.read = true;
+    }
+    notifyListeners();
+    try {
+      await http.patch(Uri.parse('$_base/rest/v1/messages?learner_id=eq.$userId&kind=eq.chat&from_learner=is.false&read_at=is.null'),
+          headers: _h, body: jsonEncode({'read_at': DateTime.now().toUtc().toIso8601String()}));
+    } catch (_) {}
+  }
+
+  /// ✍️ گوهۆڕینا ناڤی (٢ ناڤ)
+  Future<void> updateName(String n) => _patchLearner({'name': n.trim()});
 
   Future<void> markRead(AppMessage m) async {
     if (m.read) return;
@@ -691,6 +745,41 @@ class Backend extends ChangeNotifier {
     if (l.isEmpty) return null;
     final d = l.first['data'];
     return d is Map<String, dynamic> ? d : null;
+  }
+
+  /// 💬 هەمی گفتوگۆ (ئەدمین)
+  Future<List<Map<String, dynamic>>> adminChats() => _getList('messages?kind=eq.chat&select=*&order=created_at.desc&limit=1000');
+  Future<List<Map<String, dynamic>>> adminChat(String id) =>
+      _getList('messages?learner_id=eq.$id&kind=eq.chat&select=*&order=created_at.asc&limit=500');
+
+  Future<String?> adminSendChat(String learnerId, String text) async {
+    await _ensureToken();
+    final r = await http.post(Uri.parse('$_base/rest/v1/messages'),
+        headers: _h, body: jsonEncode({'learner_id': learnerId, 'title': '💬 ASP', 'body': text.trim(), 'kind': 'chat'}));
+    return r.statusCode < 300 ? null : '${r.statusCode}: ${r.body}';
+  }
+
+  Future<void> adminMarkChatRead(String learnerId) async {
+    try {
+      await _ensureToken();
+      await http.patch(Uri.parse('$_base/rest/v1/messages?learner_id=eq.$learnerId&kind=eq.chat&from_learner=is.true&read_at=is.null'),
+          headers: _h, body: jsonEncode({'read_at': DateTime.now().toUtc().toIso8601String()}));
+    } catch (_) {}
+  }
+
+  Future<String?> adminDeleteChat(String learnerId) async {
+    await _ensureToken();
+    final r = await http.delete(Uri.parse('$_base/rest/v1/messages?learner_id=eq.$learnerId&kind=eq.chat'), headers: _h);
+    return r.statusCode < 300 ? null : '${r.statusCode}: ${r.body}';
+  }
+
+  /// 🗑️ ژێبرنا هەژمارەکێ ژ بنی — پێدڤی ب SQL ـا backend/asp_2_22.sql
+  Future<String?> adminDeleteUser(String id) async {
+    await _ensureToken();
+    final r = await http.post(Uri.parse('$_base/rest/v1/rpc/admin_delete_user'), headers: _h, body: jsonEncode({'p_id': id}));
+    if (r.statusCode < 300) return null;
+    if (r.statusCode == 404 || r.body.contains('admin_delete_user')) return 'setup';
+    return '${r.statusCode}: ${r.body}';
   }
 
   Future<String?> sendMessage({String? learnerId, required String title, required String body}) async {
@@ -787,6 +876,7 @@ class AppMessage {
   final DateTime created;
   final bool broadcast;
   bool read;
+  bool fromLearner = false;
 
   AppMessage(this.id, this.title, this.body, this.kind, this.created, this.broadcast, this.read);
 
@@ -801,6 +891,6 @@ class AppMessage {
       DateTime.tryParse((j['created_at'] as String?) ?? '')?.toLocal() ?? DateTime.now(),
       broadcast,
       broadcast ? readBroadcast.contains(id) : j['read_at'] != null,
-    );
+    )..fromLearner = j['from_learner'] == true;
   }
 }

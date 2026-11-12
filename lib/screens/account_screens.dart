@@ -55,8 +55,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future<void> _go() async {
-    if (name.text.trim().length < 2) {
-      setState(() => error = 'تکایە ناڤێ خۆ بنڤیسە');
+    if (!fullNameOk(name.text)) {
+      setState(() => error = 'تکایە ناڤێ خۆ یێ تەمام بنڤیسە: ٢ ناڤ (ناڤ و ناڤێ بابی) — بۆ نموونە: ئازاد بەرواری');
       return;
     }
     if (gender == null) {
@@ -237,7 +237,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 const SizedBox(height: 14),
               ],
-              TextField(controller: name, textInputAction: TextInputAction.next, decoration: _dec('ناڤێ تە', Icons.person_rounded)),
+              TextField(
+                  controller: name,
+                  textInputAction: TextInputAction.next,
+                  textCapitalization: TextCapitalization.words,
+                  decoration: _dec('ناڤێ تە یێ تەمام (٢ ناڤ)', Icons.person_rounded).copyWith(hintText: 'ئازاد بەرواری')),
               const SizedBox(height: 14),
               Row(children: [
                 _genderBtn('m', '👨', 'نێر'),
@@ -1117,4 +1121,17 @@ class _AfterLogout extends StatelessWidget {
   const _AfterLogout();
   @override
   Widget build(BuildContext context) => const LanguageOnboardingScreen();
+}
+
+
+/// ✍️ ناڤ دڤێت ٢ پەیڤ بن (ناڤ + ناڤێ بابی)، هەر ئێک ب کێمی ٢ پیت
+bool fullNameOk(String s) {
+  final parts = s.trim().split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+  return parts.length >= 2 && parts.every((w) => w.characters.length >= 2);
+}
+
+/// 🏷️ ناڤێ ئەپێ: ناڤێ ئێکێ + asp (بۆ نموونە «ئازاد asp»)
+String aspHandle(String fullName) {
+  final first = fullName.trim().split(RegExp(r'\s+')).firstOrNull ?? '';
+  return first.isEmpty ? 'asp' : '$first asp';
 }

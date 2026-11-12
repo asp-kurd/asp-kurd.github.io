@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+
+import 'chat_screen.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../services/backend.dart';
@@ -120,7 +122,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
   @override
   Widget build(BuildContext context) {
     return _Rtl(DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('🛡️ رێڤەبەریا ASP'),
@@ -136,6 +138,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           ],
           bottom: const TabBar(isScrollable: true, tabs: [
             Tab(text: '👥 فێرخواز'),
+            Tab(text: '💬 گفتوگۆ'),
             Tab(text: '📢 نامە'),
             Tab(text: '✏️ ناڤەرۆک'),
             Tab(text: '🌳 دار'),
@@ -143,6 +146,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         ),
         body: TabBarView(children: [
           _learnersTab(),
+          _ChatsTab(learners: learners),
           const _BroadcastTab(),
           const ContentEditor(),
           const TreeEditor(),
@@ -209,7 +213,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
       color: AppColors.card,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: ListTile(
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => LearnerDetail(learner: l))),
+        onTap: () async {
+          final deleted = await Navigator.push(context, MaterialPageRoute(builder: (_) => LearnerDetail(learner: l)));
+          if (deleted == true) _load();
+        },
         leading: Stack(children: [
           CircleAvatar(
             backgroundColor: AppColors.blue,
@@ -309,7 +316,18 @@ class _LearnerDetailState extends State<LearnerDetail> {
     final maxSec = days.map((d) => ((byDay[d]?['seconds'] as num?) ?? 0).toInt()).fold<int>(60, (a, b) => a > b ? a : b);
 
     return _Rtl(Scaffold(
-      appBar: AppBar(title: Text('${l['name']}')),
+      appBar: AppBar(title: Text('${l['name']}'), actions: [
+        IconButton(
+          tooltip: 'گفتوگۆ',
+          icon: const Icon(Icons.chat_rounded),
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ChatScreen(learnerId: id, name: '${l['name']}'))),
+        ),
+        IconButton(
+          tooltip: 'ژێبرنا هەژمارێ',
+          icon: const Icon(Icons.person_remove_rounded, color: AppColors.red),
+          onPressed: _deleteAccount,
+        ),
+      ]),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: AppColors.gold,
         foregroundColor: Colors.black,
@@ -387,6 +405,46 @@ class _LearnerDetailState extends State<LearnerDetail> {
     ));
   }
 
+  /// 🗑️ ژێبرنا هەژمارێ ژ بنی (پاشان دشێت ب هەمان ئیمەیلێ ژ نوو دروست بکەت)
+  Future<void> _deleteAccount() async {
+    final l = widget.learner;
+    final c = TextEditingController();
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => _Rtl(StatefulBuilder(
+        builder: (ctx, setS) => AlertDialog(
+          title: const Text('🗑️ ژێبرنا هەژمارێ ژ بنی'),
+          content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('هەمی داتایێن «${l['name']}» دێ هێنە ژێبرن: پێشکەفتن، XP، دینار، نامە، ئەزموون، دەنگ و هەژمار.\n'
+                'ئەڤ کارە ناهێتە ڤەگەڕاندن. پاشان ئەو دشێت ب هەمان ئیمەیلێ هەژمارەکا نوو دروست بکەت.'),
+            const SizedBox(height: 12),
+            const Text('بۆ پشتڕاستکرنێ بنڤیسە: ژێببە', style: TextStyle(fontWeight: FontWeight.bold)),
+            TextField(controller: c, onChanged: (_) => setS(() {})),
+          ]),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('نە')),
+            FilledButton(
+              style: FilledButton.styleFrom(backgroundColor: AppColors.red),
+              onPressed: c.text.trim() == 'ژێببە' ? () => Navigator.pop(ctx, true) : null,
+              child: const Text('ژێببە'),
+            ),
+          ],
+        ),
+      )),
+    );
+    if (ok != true || !mounted) return;
+    final err = await b.adminDeleteUser(id);
+    if (!mounted) return;
+    if (err == null) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('✅ هەژمارا «${l['name']}» هاتە ژێبرن')));
+      Navigator.pop(context, true);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          duration: const Duration(seconds: 8),
+          content: Text(err == 'setup' ? '⚙️ پێشی SQL ـا backend/asp_2_22.sql ل Supabase ـێ Run بکە' : '❌ $err')));
+    }
+  }
+
   Widget _info(String e, String k, String v) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 5),
         child: Row(children: [
@@ -397,6 +455,95 @@ class _LearnerDetailState extends State<LearnerDetail> {
           Text(v, style: const TextStyle(fontWeight: FontWeight.bold)),
         ]),
       );
+}
+
+// ───────────────────────── 💬 گفتوگۆ دگەل فێرخوازان ─────────────────────────
+
+class _ChatsTab extends StatefulWidget {
+  final List<Map<String, dynamic>> learners;
+  const _ChatsTab({required this.learners});
+  @override
+  State<_ChatsTab> createState() => _ChatsTabState();
+}
+
+class _ChatsTabState extends State<_ChatsTab> {
+  List<Map<String, dynamic>> msgs = [];
+  bool loading = true;
+  String? error;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      msgs = await Backend.instance.adminChats();
+      error = null;
+    } catch (e) {
+      error = '$e';
+    }
+    if (mounted) setState(() => loading = false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (loading) return const Center(child: CircularProgressIndicator());
+    if (error != null) {
+      return Center(
+          child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(error!.contains('from_learner') ? '⚙️ پێشی SQL ـا backend/asp_2_22.sql ل Supabase ـێ Run بکە' : error!)));
+    }
+    final names = {for (final l in widget.learners) l['id'] as String: '${l['name']}'};
+    // گروپکرن ل دویف فێرخوازی (نوویترین ل سەری)
+    final threads = <String, List<Map<String, dynamic>>>{};
+    for (final m in msgs) {
+      final id = m['learner_id'] as String?;
+      if (id == null) continue;
+      threads.putIfAbsent(id, () => []).add(m);
+    }
+    if (threads.isEmpty) {
+      return RefreshIndicator(
+        onRefresh: _load,
+        child: ListView(children: [
+          const SizedBox(height: 120),
+          Center(child: Text('💬 هێشتا چ گفتوگۆ نینن', style: TextStyle(color: AppColors.fg60))),
+        ]),
+      );
+    }
+    return RefreshIndicator(
+      onRefresh: _load,
+      child: ListView(padding: const EdgeInsets.all(12), children: [
+        for (final e in threads.entries) _thread(e.key, names[e.key] ?? '—', e.value),
+      ]),
+    );
+  }
+
+  Widget _thread(String id, String name, List<Map<String, dynamic>> ms) {
+    final last = ms.first;
+    final unread = ms.where((m) => m['from_learner'] == true && m['read_at'] == null).length;
+    final at = DateTime.tryParse('${last['created_at']}')?.toLocal();
+    return Card(
+      color: AppColors.card,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: ListTile(
+        leading: Badge(
+          isLabelVisible: unread > 0,
+          label: Text('$unread'),
+          child: CircleAvatar(backgroundColor: AppColors.chip, child: Text(name.isEmpty ? '?' : name.characters.first)),
+        ),
+        title: Text(name, style: TextStyle(fontWeight: unread > 0 ? FontWeight.w900 : FontWeight.bold)),
+        subtitle: Text('${last['from_learner'] == true ? '' : 'تو: '}${last['body']}', maxLines: 1, overflow: TextOverflow.ellipsis),
+        trailing: Text(at == null ? '' : agoKu(at), style: TextStyle(fontSize: 11, color: AppColors.fg54)),
+        onTap: () async {
+          await Navigator.push(context, MaterialPageRoute(builder: (_) => ChatScreen(learnerId: id, name: name)));
+          _load();
+        },
+      ),
+    );
+  }
 }
 
 // ───────────────────────── 📢 نامە بۆ هەمییان ─────────────────────────

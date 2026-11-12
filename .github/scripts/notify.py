@@ -73,8 +73,22 @@ def push(learner, title, body):
 
 # ١. نامەیێن نوو
 sent = 0
+# 💬 نامێن فێرخوازان بۆ ئەدمینی ➔ ئاگەهداری بۆ هەژمارێن ئەدمینی (ئەگەر ل سەر مۆبایلێ ئاگەهداری ڤەکربن)
+try:
+    admin_emails = {a["email"].lower() for a in get("admins?select=email")}
+    admin_rows = [l for l in get("learners?select=id,name,email,push_sub") if (l.get("email") or "").lower() in admin_emails]
+except Exception as e:  # ستوونا email نینە
+    admin_rows = []
 for m in get("messages?pushed_at=is.null&select=*&order=created_at.asc&limit=100"):
-    targets = [learners[m["learner_id"]]] if m.get("learner_id") in learners else (list(learners.values()) if m.get("learner_id") is None else [])
+    if m.get("from_learner"):
+        who = learners.get(m.get("learner_id"), {}).get("name", "")
+        targets = admin_rows
+        m = {**m, "title": f"💬 {who}", "body": m.get("body", "")}
+    elif m.get("kind") == "chat":
+        targets = [learners[m["learner_id"]]] if m.get("learner_id") in learners else []
+        m = {**m, "title": "💬 بەرسڤا ئەدمینێ ASP"}
+    else:
+        targets = [learners[m["learner_id"]]] if m.get("learner_id") in learners else (list(learners.values()) if m.get("learner_id") is None else [])
     for l in targets:
         sent += push(l, m["title"], m["body"])
     patch(f"messages?id=eq.{m['id']}", {"pushed_at": datetime.now(timezone.utc).isoformat()})

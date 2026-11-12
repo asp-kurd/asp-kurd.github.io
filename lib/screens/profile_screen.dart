@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'chat_screen.dart';
+
 import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
@@ -27,14 +29,75 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         children: [
           if (Backend.instance.registered) ...[
-            Row(children: [
-              const Text('👋', style: TextStyle(fontSize: 28)),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(Backend.instance.name,
-                    style: const TextStyle(fontFamily: 'Sarchia', fontSize: 24, fontWeight: FontWeight.bold)),
+            ListenableBuilder(
+              listenable: Backend.instance,
+              builder: (_, __) {
+                final nm = Backend.instance.name;
+                final full = fullNameOk(nm);
+                return Row(children: [
+                  CircleAvatar(radius: 26, backgroundColor: AppColors.chip, backgroundImage: AssetImage(MascotChar.forUser().base)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(nm, style: const TextStyle(fontFamily: 'Sarchia', fontSize: 24, fontWeight: FontWeight.bold)),
+                      Container(
+                        margin: const EdgeInsets.only(top: 2),
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                        decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.18), borderRadius: BorderRadius.circular(12)),
+                        child: Text(aspHandle(nm), style: TextStyle(color: AppColors.goldText, fontWeight: FontWeight.bold, fontSize: 13)),
+                      ),
+                      if (!full)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Text('⚠️ ناڤێ خۆ یێ تەمام (٢ ناڤ) بنڤیسە ✏️', style: TextStyle(color: AppColors.orange, fontSize: 12)),
+                        ),
+                    ]),
+                  ),
+                  IconButton(
+                    tooltip: 'گوهۆڕینا ناڤی',
+                    icon: const Icon(Icons.edit_rounded),
+                    onPressed: () => _editName(context),
+                  ),
+                ]);
+              },
+            ),
+            const SizedBox(height: 14),
+            // 💬 پەیوەندی ب ئەدمینی (گفتوگۆیا راستەوخۆ)
+            ListenableBuilder(
+              listenable: Backend.instance,
+              builder: (_, __) => InkWell(
+                borderRadius: BorderRadius.circular(18),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ChatScreen())),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(colors: [Color(0xFF1CB0F6), Color(0xFF2B70C9)]),
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Row(children: [
+                    Badge(
+                      isLabelVisible: Backend.instance.chatUnread > 0,
+                      label: Text('${Backend.instance.chatUnread}'),
+                      child: const Text('💬', style: TextStyle(fontSize: 34)),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        const Text('پەیوەندی ب ئەدمینی', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+                        const SizedBox(height: 2),
+                        Text(
+                          Backend.instance.chatUnread > 0
+                              ? '${Backend.instance.chatUnread} بەرسڤێن نوو 📩'
+                              : 'پرسیار یان پێشنیارەکا تە هەیە؟ راستەوخۆ بنڤیسە 🔒',
+                          style: const TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                      ]),
+                    ),
+                    const Icon(Icons.chevron_left_rounded, color: Colors.white, size: 30),
+                  ]),
+                ),
               ),
-            ]),
+            ),
             const SizedBox(height: 12),
             ListTile(
               tileColor: AppColors.card,
@@ -221,4 +284,48 @@ class ProfileScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+
+/// ✍️ گوهۆڕینا ناڤی: دڤێت ٢ ناڤ بن
+Future<void> _editName(BuildContext context) async {
+  final c = TextEditingController(text: Backend.instance.name);
+  String? err;
+  await showDialog(
+    context: context,
+    builder: (ctx) => StatefulBuilder(
+      builder: (ctx, setS) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: AlertDialog(
+          title: const Text('✏️ ناڤێ تە یێ تەمام'),
+          content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            TextField(
+              controller: c,
+              autofocus: true,
+              textCapitalization: TextCapitalization.words,
+              onChanged: (_) => setS(() => err = null),
+              decoration: InputDecoration(hintText: 'ئازاد بەرواری', errorText: err),
+            ),
+            const SizedBox(height: 8),
+            Text('٢ ناڤ: ناڤێ تە و ناڤێ بابێ تە. ل ئەپێ دێ وەکی «${aspHandle(c.text)}» دیار بیت.',
+                style: TextStyle(fontSize: 12, color: AppColors.fg60)),
+          ]),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('نە')),
+            FilledButton(
+              onPressed: () async {
+                if (!fullNameOk(c.text)) {
+                  setS(() => err = 'دڤێت ٢ ناڤ بن');
+                  return;
+                }
+                await Backend.instance.updateName(c.text);
+                if (ctx.mounted) Navigator.pop(ctx);
+              },
+              child: const Text('پاشەکەفت بکە'),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
 }

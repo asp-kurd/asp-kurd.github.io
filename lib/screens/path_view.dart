@@ -341,7 +341,7 @@ class PathNodeView extends StatefulWidget {
     required this.color,
     this.current = false,
     this.boost = false,
-    this.size = 92,
+    this.size = 112,
     this.icon = Icons.star_rounded,
     this.onTap,
   });
@@ -646,7 +646,7 @@ List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey
         final dx = offs[zig++ % offs.length];
         out.add(Padding(
           key: isCur ? currentKey : null,
-          padding: EdgeInsets.only(top: isCur ? 30 : 4, bottom: 10),
+          padding: EdgeInsets.only(top: isCur ? 34 : 6, bottom: 14),
           child: LayoutBuilder(builder: (ctx, cons) {
             final span = min(cons.maxWidth * 0.30, 110.0);
             return Transform.translate(
