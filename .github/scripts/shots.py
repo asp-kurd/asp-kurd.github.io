@@ -6,8 +6,7 @@ out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
     ("splash", "demo=home"), ("path", "demo=path&theme=dark&quiet=1"), ("path_red", "demo=path&theme=red&quiet=1"), ("path_pink", "demo=path&theme=pink&quiet=1"),
-    ("lesson_dark", "demo=cloze&theme=dark"), ("lesson_pink", "demo=cloze&theme=pink"), ("gloss", "demo=gloss&theme=dark"), ("gloss_red", "demo=gloss&theme=red"),
-    ("settings", "demo=settings&theme=red"), ("profile", "demo=profile&theme=pink"), ("links", "demo=links&theme=dark"), ("home_new", "demo=home&theme=dark"),
+    ("lesson_dark", "demo=cloze&theme=dark"), ("profile", "demo=profile&theme=pink"), ("links", "demo=links&theme=dark"),
     ("pathdone", "demo=pathdone&theme=dark&quiet=1"),
 ]
 with sync_playwright() as p:
@@ -56,6 +55,7 @@ with sync_playwright() as p:
             if name.startswith("path"):
                 for k in range(3):
                     time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_a{k}.png")
+                pg.mouse.move(214, 500)
                 pg.mouse.wheel(0, 900); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_down.png")
                 pg.mouse.wheel(0, 2400); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_down2.png")
             if name.startswith("gloss"):
@@ -77,10 +77,12 @@ with sync_playwright() as p:
             if name == "links":
                 pg.mouse.click(96, 882); time.sleep(1.2); pg.screenshot(path=f"{out}/{name}_add.png")
             if name == "path":
+                pg.mouse.move(214, 500)
                 for k in range(14):
                     pg.mouse.wheel(0, 5000); time.sleep(0.35)
                 time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_end.png")
             if name == "pathdone":
+                pg.mouse.move(214, 500)
                 for k in range(6):
                     pg.mouse.wheel(0, -6000); time.sleep(0.35)
                 time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_top.png")
