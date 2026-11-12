@@ -6,7 +6,7 @@ out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
     ("pathgold", "demo=pathgold&theme=dark&quiet=1"), ("pathgold_pink", "demo=pathgold&theme=pink&quiet=1"),
-    ("examhint", "demo=examhint&theme=dark"), ("examtype", "demo=examtype&theme=dark"),
+
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -83,8 +83,8 @@ with sync_playwright() as p:
                 pg.mouse.click(214, 880); time.sleep(0.9); pg.screenshot(path=f"{out}/{name}_checked.png")
             if name.startswith("pathgold"):
                 pg.mouse.move(214, 500)
-                pg.mouse.wheel(0, -700); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_up.png")
-                time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_up2.png")
+                pg.mouse.wheel(0, -1500); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_up.png")
+                pg.mouse.wheel(0, -700); time.sleep(1.0); pg.screenshot(path=f"{out}/{name}_up2.png")
             if name.startswith("lesson"):
                 # 👆 تبل ل سەر پەیڤەکێ ➔ بالۆنا رامانێ؛ پاشان چاڤ ➔ رامانا رستێ
                 pg.mouse.click(92, 350); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_tap.png")
