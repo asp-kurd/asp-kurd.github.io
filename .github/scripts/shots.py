@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("splash", "demo=home"), ("gate", "demo=gate"), ("path", "demo=path&theme=dark&quiet=1"), ("path_light", "demo=path&theme=light&quiet=1"), ("pathboost", "demo=pathboost&theme=dark&quiet=1"),
+    ("splash", "demo=home"), ("gate_ios", "demo=gate"), ("path", "demo=path&theme=dark&quiet=1"), ("path_light", "demo=path&theme=light&quiet=1"), ("pathboost", "demo=pathboost&theme=dark&quiet=1"),
     ("pathcele", "demo=pathcele&theme=dark&quiet=1"), ("home_new", "demo=home&theme=dark"), ("home_en", "demo=home&target=en"),
     ("profile", "demo=profile"), ("lesson_light", "demo=cloze&theme=light"), ("grammar_list", "demo=grammarlist"),
     ("shop", "demo=shop"), ("gram4", "demo=gram4"), ("home_hdr", "demo=path&theme=light&quiet=1"),
@@ -13,7 +13,9 @@ pages = [
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
     for name, q in pages:
-        pg = b.new_page(viewport={"width": 428, "height": 926}, device_scale_factor=2)
+        ua = ("Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1"
+              if name.startswith("gate_ios") else None)
+        pg = b.new_page(viewport={"width": 428, "height": 926}, device_scale_factor=2, **({"user_agent": ua} if ua else {}))
         logs = []
         pg.on("console", lambda m: logs.append(f"[{m.type}] {m.text}"))
         pg.on("pageerror", lambda e: logs.append(f"[pageerror] {e}"))
@@ -40,6 +42,8 @@ with sync_playwright() as p:
             if name.startswith("home_"):
                 pg.mouse.click(214, 708); time.sleep(1.2)  # 🎁 دیالۆگا ئەرکان بگرە
                 pg.screenshot(path=f"{out}/{name}.png")
+            if name == "gate_ios":
+                pg.mouse.click(214, 592); time.sleep(2.5); pg.screenshot(path=f"{out}/{name}_coach.png")
             if name.startswith("path"):
                 for k in range(3):
                     time.sleep(0.6); pg.screenshot(path=f"{out}/{name}_a{k}.png")
