@@ -27,7 +27,7 @@ class TapWords extends StatefulWidget {
       if (g == null) {
         out.add(TextSpan(text: w));
       } else {
-        final r = TapGestureRecognizer()..onTapUp = (d) => showGloss(context, w, g, d.globalPosition);
+        final r = TapGestureRecognizer()..onTapUp = (d) => showGloss(context, w, g, d.globalPosition, articles: lang == AppLanguage.german);
         recognizers.add(r);
         out.add(TextSpan(
           text: w,
@@ -56,7 +56,7 @@ class TapWords extends StatefulWidget {
   }
 
   /// 💬 بالۆنا رامانێ ل سەر پەیڤێ
-  static void showGloss(BuildContext context, String shown, Gloss g, Offset at) {
+  static void showGloss(BuildContext context, String shown, Gloss g, Offset at, {bool articles = true}) {
     hide();
     final overlay = Overlay.maybeOf(context, rootOverlay: true);
     if (overlay == null) return;
@@ -111,19 +111,20 @@ class TapWords extends StatefulWidget {
                       textDirection: TextDirection.rtl,
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.fg, height: 1.5)),
-                  const SizedBox(height: 8),
-                  // 📌 تێبینی: ئارتیکل هەیە یان نە
-                  Container(
+                  // 📌 تێبینی: ئارتیکل هەیە یان نە (بۆ ئینگلیزی تنێ فۆرما بنەڕەت)
+                  if (articles || g.base.isNotEmpty) const SizedBox(height: 8),
+                  if (articles || g.base.isNotEmpty) Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(color: AppColors.cardAlt, borderRadius: BorderRadius.circular(10)),
                     child: Text(
                       [
-                        if (g.name)
-                          '📛 ناڤ — ئارتیکل نینە'
-                        else if (g.article.isNotEmpty)
-                          '📌 ئارتیکل: ${g.article} ($genderKu)'
-                        else
-                          '📌 ئارتیکل نینە',
+                        if (articles)
+                          if (g.name)
+                            '📛 ناڤ — ئارتیکل نینە'
+                          else if (g.article.isNotEmpty)
+                            '📌 ئارتیکل: ${g.article} ($genderKu)'
+                          else
+                            '📌 ئارتیکل نینە',
                         if (g.base.isNotEmpty) '↩ ژ: ${g.base}',
                       ].join('   ·   '),
                       textDirection: TextDirection.rtl,

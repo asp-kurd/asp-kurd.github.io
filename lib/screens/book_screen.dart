@@ -82,7 +82,7 @@ Widget rich(String s, {double size = 16, Color? color, TextAlign? align, Color? 
 Future<void> sayGerman(String text) => VoiceService.instance.speakText(plain(text), AppLanguage.german);
 
 Color genderColor(String g) => switch (g) {
-      'der' => AppColors.accent,
+      'der' => AppColors.blue,
       'die' => AppColors.red,
       'das' => AppColors.green,
       _ => AppColors.fg,

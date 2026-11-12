@@ -52,7 +52,7 @@ class ArticleGameScreen extends StatefulWidget {
 
 class _ArticleGameScreenState extends State<ArticleGameScreen> {
   static final _re = RegExp(r'^(der|die|das) ([A-ZÄÖÜ][^\s,.;·]*)$');
-  static const _colors = {'der': AppColors.accent, 'die': AppColors.red, 'das': AppColors.green};
+  static const _colors = {'der': AppColors.blue, 'die': AppColors.red, 'das': AppColors.green};
   final _rng = Random();
   late List<WordConcept> round;
   int i = 0, correct = 0, xp = 0, streak = 0;
