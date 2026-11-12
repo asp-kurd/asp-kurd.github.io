@@ -78,7 +78,7 @@ class _InstallGateScreenState extends State<InstallGateScreen> with SingleTicker
         ],
         if (iosNonSafari)
           _step(0, 'باشترە ب Safari ڤەکەی', 'لینکێ کۆپی بکە و د Safari دا ڤەکە', _chip('Safari', Icons.explore_rounded)),
-        _step(1, 'ل سێ خالان «⋯» بدە', 'ل خوارێ Safari، ل لایێ راستێ یێ ناڤنیشانێ (asp-poya.com). ئەگەر دوگمەیا Share دیار بیت، دشێی راستەوخۆ وێ بکەی.',
+        _step(1, 'ل سێ خالان «⋯» بدە', 'ل خوارێ Safari، ل لایێ راستێ یێ ناڤنیشانا ماڵپەڕی. ئەگەر دوگمەیا Share دیار بیت، دشێی راستەوخۆ وێ بکەی.',
             _chip('⋯', Icons.more_horiz_rounded)),
         _step(2, '«Share» هەلبژێرە', 'د لیستا ڤەبووی دا', _chip('Share', Icons.ios_share_rounded)),
         _step(3, '«Add to Home Screen» هەلبژێرە', 'ب خوارێ بچە؛ ئەگەر نەدیت، ل «View More» / «More» بدە',
@@ -291,7 +291,9 @@ class _IosDemoState extends State<_IosDemo> with SingleTickerProviderStateMixin 
                   ),
                 ),
               );
-        return Container(
+        return Directionality(
+          textDirection: TextDirection.ltr, // وەکی iPhone ب ئینگلیزی
+          child: Container(
           width: 210,
           height: 300,
           padding: const EdgeInsets.all(8),
@@ -451,7 +453,7 @@ class _IosDemoState extends State<_IosDemo> with SingleTickerProviderStateMixin 
                 ),
             ]),
           ),
-        );
+        ));
       },
     );
   }
