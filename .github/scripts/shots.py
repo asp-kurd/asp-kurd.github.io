@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("splash", "demo=home"), ("path", "demo=path&theme=dark&quiet=1"), ("path_light", "demo=path&theme=light&quiet=1"), ("pathboost", "demo=pathboost&theme=dark&quiet=1"),
+    ("splash", "demo=home"), ("gate", "demo=gate"), ("path", "demo=path&theme=dark&quiet=1"), ("path_light", "demo=path&theme=light&quiet=1"), ("pathboost", "demo=pathboost&theme=dark&quiet=1"),
     ("pathcele", "demo=pathcele&theme=dark&quiet=1"), ("home_new", "demo=home&theme=dark"), ("home_en", "demo=home&target=en"),
     ("profile", "demo=profile"), ("lesson_light", "demo=cloze&theme=light"), ("grammar_list", "demo=grammarlist"),
     ("shop", "demo=shop"), ("gram4", "demo=gram4"), ("home_hdr", "demo=path&theme=light&quiet=1"),
