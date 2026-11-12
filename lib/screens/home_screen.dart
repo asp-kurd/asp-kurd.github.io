@@ -190,7 +190,10 @@ class _LearnPathState extends State<_LearnPath> {
       if (ctx != null) {
         _seeking = false;
         _scrolled = true;
-        Scrollable.ensureVisible(ctx, alignment: 0.45, duration: Duration(milliseconds: animate ? 450 : 1));
+        Scrollable.ensureVisible(ctx, alignment: 0.45, duration: Duration(milliseconds: animate ? 450 : 1))
+            .then((_) => Future.delayed(const Duration(milliseconds: 120), () {
+                  if (mounted) _onScroll();
+                }));
         return;
       }
       final pos = _scroll.position;

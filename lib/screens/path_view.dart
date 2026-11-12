@@ -512,7 +512,7 @@ void _openLessonSheet(BuildContext context, PathLesson l) {
                 Text(tr(n, 'وانە ${kuNum(l.index + 1)} · قۆناغا ${kuNum(l.stage.no)}', 'Lektion ${l.index + 1} · Stufe ${l.stage.no}',
                     'Lesson ${l.index + 1} · Stage ${l.stage.no}'),
                     style: TextStyle(color: AppColors.fg60, fontSize: 13)),
-                Text(l.unit.title(n), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w900)),
+                Text(l.unit.title(n).replaceFirst(RegExp(r'^(قۆناغا [٠-٩]+: |Einheit \d+: |Unit \d+: )'), ''), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w900)),
                 const SizedBox(height: 2),
                 Text(
                   gold
@@ -646,7 +646,7 @@ List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey
         final dx = offs[zig++ % offs.length];
         out.add(Padding(
           key: isCur ? currentKey : null,
-          padding: EdgeInsets.only(top: isCur ? 34 : 6, bottom: 14),
+          padding: EdgeInsets.only(top: isCur ? 46 : 6, bottom: 14),
           child: LayoutBuilder(builder: (ctx, cons) {
             final span = min(cons.maxWidth * 0.30, 110.0);
             return Transform.translate(
@@ -663,7 +663,7 @@ List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey
                     icon: l.isAlphabet ? Icons.abc_rounded : (l.index == st.lessons.length - 1 ? Icons.emoji_events_rounded : Icons.star_rounded),
                     onTap: () => _tapLesson(context, l),
                   ),
-                  if (isCur) Positioned(top: -30, child: _StartBubble(color: boost ? _maroon : st.color, label: p.coursesDone(l) == 0 ? tr(n, 'دەستپێبکە', 'START', 'START') : '${kuNum(p.coursesDone(l))}/${kuNum(l.courses)}')),
+                  if (isCur) Positioned(top: -44, child: _StartBubble(color: boost ? _maroon : st.color, label: p.coursesDone(l) == 0 ? tr(n, 'دەستپێبکە', 'START', 'START') : '${kuNum(p.coursesDone(l))}/${kuNum(l.courses)}')),
                 ]),
               ),
             );

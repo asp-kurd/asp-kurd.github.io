@@ -49,7 +49,8 @@ class PathStage {
     return out;
   }
 
-  String title(AppLanguage l) => units.map((u) => u.title(l)).toSet().take(2).join(' · ');
+  static final _num = RegExp(r'^(قۆناغا [٠-٩]+: |Einheit \d+: |Unit \d+: )');
+  String title(AppLanguage l) => units.map((u) => u.title(l).replaceFirst(_num, '')).toSet().take(2).join(' · ');
   GrammarCard? get grammar => units.map((u) => u.grammar).whereType<GrammarCard>().firstOrNull;
   LessonUnit? get grammarUnit => units.where((u) => u.grammar != null).firstOrNull;
 }
