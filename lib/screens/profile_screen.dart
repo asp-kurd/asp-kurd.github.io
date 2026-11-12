@@ -33,7 +33,6 @@ class ProfileScreen extends StatelessWidget {
               listenable: Backend.instance,
               builder: (_, __) {
                 final nm = Backend.instance.name;
-                final full = fullNameOk(nm);
                 return Row(children: [
                   CircleAvatar(radius: 26, backgroundColor: AppColors.chip, backgroundImage: AssetImage(MascotChar.forUser().base)),
                   const SizedBox(width: 12),
@@ -46,11 +45,6 @@ class ProfileScreen extends StatelessWidget {
                         decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.18), borderRadius: BorderRadius.circular(12)),
                         child: Text(aspHandle(nm), style: TextStyle(color: AppColors.goldText, fontWeight: FontWeight.bold, fontSize: 13)),
                       ),
-                      if (!full)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 4),
-                          child: Text('⚠️ ناڤێ خۆ یێ تەمام (٢ ناڤ) بنڤیسە ✏️', style: TextStyle(color: AppColors.orange, fontSize: 12)),
-                        ),
                     ]),
                   ),
                   IconButton(
@@ -297,17 +291,17 @@ Future<void> _editName(BuildContext context) async {
       builder: (ctx, setS) => Directionality(
         textDirection: TextDirection.rtl,
         child: AlertDialog(
-          title: const Text('✏️ ناڤێ تە یێ تەمام'),
+          title: const Text('✏️ ناڤێ تە'),
           content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
             TextField(
               controller: c,
               autofocus: true,
               textCapitalization: TextCapitalization.words,
               onChanged: (_) => setS(() => err = null),
-              decoration: InputDecoration(hintText: 'ئازاد بەرواری', errorText: err),
+              decoration: InputDecoration(errorText: err),
             ),
             const SizedBox(height: 8),
-            Text('٢ ناڤ: ناڤێ تە و ناڤێ بابێ تە. ل ئەپێ دێ وەکی «${aspHandle(c.text)}» دیار بیت.',
+            Text('ل ئەپێ دێ وەکی «${aspHandle(c.text)}» دیار بیت.',
                 style: TextStyle(fontSize: 12, color: AppColors.fg60)),
           ]),
           actions: [
@@ -315,7 +309,7 @@ Future<void> _editName(BuildContext context) async {
             FilledButton(
               onPressed: () async {
                 if (!fullNameOk(c.text)) {
-                  setS(() => err = 'دڤێت ٢ ناڤ بن');
+                  setS(() => err = 'ناڤێ خۆ بنڤیسە');
                   return;
                 }
                 await Backend.instance.updateName(c.text);

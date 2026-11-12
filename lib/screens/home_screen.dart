@@ -233,7 +233,7 @@ class _LearnPathState extends State<_LearnPath> {
         if (Backend.instance.registered)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: Text('${tr(n, 'سلاڤ', 'Hallo', 'Hi')} ${Backend.instance.name} 👋',
+            child: Text('${tr(n, 'سلاڤ', 'Hallo', 'Hi')} ${aspHandle(Backend.instance.name)} 👋',
                 style: const TextStyle(fontFamily: 'Sarchia', fontSize: 22, fontWeight: FontWeight.bold)),
           ),
         // 🔒 هەژمارێن ب ناڤ تنێ: ٣ رۆژ — پاشان دڤێت Google / Facebook / ئیمەیل گرێبدەت

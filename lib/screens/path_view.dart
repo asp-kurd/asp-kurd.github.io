@@ -31,6 +31,7 @@ enum NodeState { locked, open, done, gold }
 
 /// چێکرنا شێوەیێ (ب کونجێن نەرم)
 Path polyPath(int n, Offset c, double r, {double round = 0.2}) {
+  if (n < 3) return Path()..addOval(Rect.fromCircle(center: c, radius: r)); // ⭕ بازنە
   final pts = polyPoints(n, c, r);
   final p = Path();
   for (var i = 0; i < n; i++) {
@@ -62,6 +63,7 @@ List<Offset> polyPoints(int n, Offset c, double r) {
 
 /// ئەلقەیا پێشکەفتنێ ب شێوێ وانێ — ژ سەری دەستپێدکەت و ب ئاراستەیا دەمژمێرێ دچیت
 Path ringPath(int n, Offset c, double r) {
+  if (n < 3) return Path()..addArc(Rect.fromCircle(center: c, radius: r), -pi / 2, 2 * pi - 0.001);
   final pts = polyPoints(n, c, r);
   const round = 0.2;
   Offset a(int i) => Offset.lerp(pts[i % n], pts[(i - 1 + n) % n], round)!;
@@ -185,7 +187,17 @@ class ShapePainter extends CustomPainter {
     canvas.drawPath(face, faceP);
 
     // ── لایێن شێوەی: هەر کۆرسەکا تەمامکری لایەکێ رۆهن دکەت ──
-    if (state != NodeState.locked) {
+    if (state != NodeState.locked && sides < 3) {
+      // ⭕ بازنە: ئەلقەیەکا ناڤخۆیی (تەمام ➔ سپی)
+      canvas.drawCircle(
+          c + Offset(0, dy),
+          r * 0.80,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 4
+            ..color = filled > 0 ? Colors.white.withValues(alpha: 0.95) : Colors.black.withValues(alpha: 0.18));
+    }
+    if (state != NodeState.locked && sides >= 3) {
       final inner = polyPoints(sides, c + Offset(0, dy), r * 0.80);
       final on = Paint()
         ..style = PaintingStyle.stroke
@@ -617,13 +629,10 @@ void startPathLesson(BuildContext context, PathLesson l) {
 /// هەمی رێک وەکی لیستا ویجێتان (د ناڤ ListView ـا سەرەکی دا)
 List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey}) {
   final p = ProgressService.instance;
-  final n = p.nativeLang;
   final boost = RewardsService.instance.boostActive && RewardsService.instance.xpMultiplier >= 2;
-  final cur = p.currentLesson;
   final german = p.targetLang == AppLanguage.german;
   final out = <Widget>[];
   if (boost) out.add(const _BoostBanner());
-  var zig = 0;
   for (final sec in pathSections) {
     out.add(_SectionHeader(sec));
     if (sec.comingSoon) {
@@ -634,52 +643,282 @@ List<Widget> buildPathItems(BuildContext context, {required GlobalKey currentKey
       final st = sec.stages[si];
       final lek = st.lektion > 0 ? appLektionen.where((x) => x.n == st.lektion).firstOrNull : null;
       final firstOfLek = si == 0 || sec.stages[si - 1].lektion != st.lektion;
+      final lastOfLek = si == sec.stages.length - 1 || sec.stages[si + 1].lektion != st.lektion;
       if (german && lek != null && firstOfLek) out.add(_LektionHeader(lek));
       out.add(_StageHeader(st));
-      for (final l in st.lessons) {
-        final unlocked = p.lessonUnlocked(l);
-        final done = p.lessonDone(l);
-        final gold = p.lessonGold(l);
-        final isCur = cur == l;
-        final state = gold ? NodeState.gold : (done ? NodeState.done : (unlocked ? NodeState.open : NodeState.locked));
-        const offs = [0.0, 0.55, 0.9, 0.55, 0.0, -0.55, -0.9, -0.55];
-        final dx = offs[zig++ % offs.length];
-        out.add(Padding(
-          key: isCur ? currentKey : null,
-          padding: EdgeInsets.only(top: isCur ? 46 : 6, bottom: 14),
-          child: LayoutBuilder(builder: (ctx, cons) {
-            final span = min(cons.maxWidth * 0.30, 110.0);
-            return Transform.translate(
-              offset: Offset(dx * span * (n.direction == TextDirection.rtl ? -1 : 1), 0),
-              child: Center(
-                child: Stack(clipBehavior: Clip.none, alignment: Alignment.topCenter, children: [
-                  PathNodeView(
-                    sides: l.courses,
-                    filled: p.coursesDone(l),
-                    state: state,
-                    color: st.color,
-                    current: isCur,
-                    boost: boost && unlocked && !gold,
-                    icon: l.isAlphabet ? Icons.abc_rounded : (l.index == st.lessons.length - 1 ? Icons.emoji_events_rounded : Icons.star_rounded),
-                    onTap: () => _tapLesson(context, l),
-                  ),
-                  if (isCur) Positioned(top: -44, child: _StartBubble(color: boost ? _maroon : st.color, label: p.coursesDone(l) == 0 ? tr(n, 'دەستپێبکە', 'START', 'START') : '${kuNum(p.coursesDone(l))}/${kuNum(l.courses)}')),
-                ]),
-              ),
-            );
-          }),
-        ));
-      }
-      // 📝 ئەزموونا Lektionێ: پشتی دوماهیک قۆناغا وێ
-      final lastOfLek = si == sec.stages.length - 1 || sec.stages[si + 1].lektion != st.lektion;
-      if (german && lek != null && lastOfLek) {
-        out.add(_LektionTest(lek));
-        out.add(ExamCoinNode(examId: 'lek_${lek.n}', section: lek.section));
-      }
-      out.add(const SizedBox(height: 10));
+      out.add(_StageGrid(st: st, currentKey: currentKey, boost: boost, lekTest: german && lastOfLek ? lek : null));
+      // 🪙 پشتی ئەزموونا وانێ: پرسیارا دیاریێ
+      if (german && lek != null && lastOfLek) out.add(ExamCoinNode(examId: 'lek_${lek.n}', section: lek.section));
+      out.add(const SizedBox(height: 12));
     }
   }
   return out;
+}
+
+// ═══════════════════════ قۆناغ: دوو ستوون (وەکی خشتێن دیواری) ═══════════════════════
+enum _Kind { lesson, review, exam }
+
+class _Item {
+  final _Kind kind;
+  final PathLesson? lesson;
+  const _Item(this.kind, [this.lesson]);
+}
+
+/// پەیڤێن قۆناغێن بەری ڤێ (بۆ بازنێ دووبارەکرنێ)
+List<WordConcept> reviewConcepts(PathStage st) {
+  final prev = pathStages.where((x) => x.gIndex < st.gIndex && x.section > 0).toList();
+  if (prev.isEmpty) return const [];
+  final rnd = Random();
+  final recent = [for (final x in prev.reversed.take(2)) for (final l in x.lessons) ...l.concepts]..shuffle(rnd);
+  final older = [for (final x in prev.reversed.skip(2)) for (final l in x.lessons) ...l.concepts]..shuffle(rnd);
+  final out = <WordConcept>[...recent.take(older.isEmpty ? 9 : 6), ...older.take(3)];
+  return out..shuffle(rnd);
+}
+
+class _StageGrid extends StatelessWidget {
+  final PathStage st;
+  final GlobalKey currentKey;
+  final bool boost;
+  final LektionInfo? lekTest;
+  const _StageGrid({required this.st, required this.currentKey, required this.boost, this.lekTest});
+
+  List<_Item> _items() {
+    final items = [for (final l in st.lessons) _Item(_Kind.lesson, l)];
+    // 🔁 بازنا دووبارەکرنێ: د ناڤەراستا قۆناغێ دا (ژ قۆناغا دووێ ڤە)
+    if (st.section > 0 && pathStages.any((x) => x.gIndex < st.gIndex && x.section > 0)) {
+      items.insert((st.lessons.length / 2).ceil(), const _Item(_Kind.review));
+    }
+    // 🏁 بازنا ئەزموونێ: دوماهیا قۆناغێ
+    if (st.section > 0) items.add(const _Item(_Kind.exam));
+    return items;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = ProgressService.instance;
+    final n = p.nativeLang;
+    final cur = p.currentLesson;
+    final items = _items();
+    final unlocked = p.stageUnlocked(st);
+    final stageDone = p.stageDone(st);
+    final rtl = n.direction == TextDirection.rtl;
+    return LayoutBuilder(builder: (ctx, cons) {
+      final w = cons.maxWidth;
+      final size = min(w * 0.40, 150.0);
+      final step = size * 0.66;
+      const top = 50.0;
+      double cx(int i) => w * ((i.isEven == rtl) ? 0.72 : 0.28);
+      double cy(int i) => top + i * step + size / 2 - ShapePainter.lipH / 2;
+      final h = top + (items.length - 1) * step + size + 8;
+      // چەند ژ سەری تەمام بوون (بۆ رەنگێ هێلێ)
+      var doneUpTo = -1;
+      for (var i = 0; i < items.length; i++) {
+        if (_done(items[i], p)) {
+          doneUpTo = i;
+        } else {
+          break;
+        }
+      }
+      final children = <Widget>[
+        Positioned.fill(
+          child: CustomPaint(
+            painter: _LinkPainter(
+              points: [for (var i = 0; i < items.length; i++) Offset(cx(i), cy(i))],
+              doneUpTo: doneUpTo,
+              color: boost && unlocked ? const Color(0xFFE0405E) : st.color,
+              faded: !unlocked,
+            ),
+          ),
+        ),
+      ];
+      for (var i = 0; i < items.length; i++) {
+        final it = items[i];
+        final left = cx(i) - size / 2, topY = top + i * step;
+        Widget node;
+        var isCur = false;
+        String? bubble;
+        switch (it.kind) {
+          case _Kind.lesson:
+            final l = it.lesson!;
+            final lu = p.lessonUnlocked(l);
+            final done = p.lessonDone(l);
+            final gold = p.lessonGold(l);
+            isCur = cur == l;
+            if (isCur) bubble = p.coursesDone(l) == 0 ? tr(n, 'دەستپێبکە', 'START', 'START') : '${kuNum(p.coursesDone(l))}/${kuNum(l.courses)}';
+            node = PathNodeView(
+              sides: l.courses,
+              filled: p.coursesDone(l),
+              state: gold ? NodeState.gold : (done ? NodeState.done : (lu ? NodeState.open : NodeState.locked)),
+              color: st.color,
+              current: isCur,
+              boost: boost && lu && !gold,
+              size: size,
+              icon: l.isAlphabet ? Icons.abc_rounded : Icons.star_rounded,
+              onTap: () => _tapLesson(context, l),
+            );
+          case _Kind.review:
+            final open = unlocked && p.lessonDone(st.lessons[(st.lessons.length / 2).ceil() - 1]);
+            final done = p.reviewDone(st);
+            node = PathNodeView(
+              sides: 0,
+              filled: done ? 1 : 0,
+              state: done ? NodeState.done : (open ? NodeState.open : NodeState.locked),
+              color: _darken(st.color, 0.12),
+              size: size * 0.86,
+              icon: Icons.replay_rounded,
+              onTap: () => open ? _openReview(context, st) : _lockedTip(context, n),
+            );
+          case _Kind.exam:
+            final id = lekTest != null ? 'lek_${lekTest!.n}' : 'st_${st.id}';
+            final best = p.examBest(id);
+            final state = !stageDone
+                ? NodeState.locked
+                : (best != null && best >= 90 ? NodeState.gold : (best != null && best >= 60 ? NodeState.done : NodeState.open));
+            node = PathNodeView(
+              sides: 0,
+              filled: best == null ? 0 : 1,
+              state: state,
+              color: _darken(st.color, 0.22),
+              size: size * 0.92,
+              icon: Icons.flag_rounded,
+              onTap: () => stageDone ? _openExam(context, st, lekTest) : _lockedTip(context, n, exam: true),
+            );
+            if (best != null) bubble = '$best%';
+        }
+        final ns = it.kind == _Kind.lesson ? size : size * (it.kind == _Kind.exam ? 0.92 : 0.86);
+        children.add(Positioned(
+          left: cx(i) - ns / 2,
+          top: topY + (size - ns) / 2,
+          width: ns,
+          height: ns,
+          child: isCur ? KeyedSubtree(key: currentKey, child: node) : node,
+        ));
+        if (bubble != null) {
+          children.add(Positioned(
+            left: left - 30,
+            width: size + 60,
+            top: topY - (isCur ? 44 : 30) + (size - ns) / 2,
+            child: Center(
+              child: isCur
+                  ? _StartBubble(color: boost ? _maroon : st.color, label: bubble)
+                  : Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(10)),
+                      child: Text(bubble, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.fg70)),
+                    ),
+            ),
+          ));
+        }
+      }
+      return SizedBox(height: h, child: Stack(clipBehavior: Clip.none, children: children));
+    });
+  }
+
+  bool _done(_Item it, ProgressService p) => switch (it.kind) {
+        _Kind.lesson => p.lessonDone(it.lesson!),
+        _Kind.review => p.reviewDone(st),
+        _Kind.exam => (p.examBest(lekTest != null ? 'lek_${lekTest!.n}' : 'st_${st.id}') ?? 0) >= 60,
+      };
+}
+
+class _LinkPainter extends CustomPainter {
+  final List<Offset> points;
+  final int doneUpTo;
+  final Color color;
+  final bool faded;
+  _LinkPainter({required this.points, required this.doneUpTo, required this.color, required this.faded});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (points.length < 2) return;
+    Path seg(int a, int b) {
+      final path = Path()..moveTo(points[a].dx, points[a].dy);
+      for (var i = a + 1; i <= b; i++) {
+        final p0 = points[i - 1], p1 = points[i];
+        final mid = Offset((p0.dx + p1.dx) / 2, (p0.dy + p1.dy) / 2);
+        path.quadraticBezierTo(p0.dx, mid.dy, mid.dx, mid.dy);
+        path.quadraticBezierTo(p1.dx, mid.dy, p1.dx, p1.dy);
+      }
+      return path;
+    }
+
+    final rest = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 5
+      ..strokeCap = StrokeCap.round
+      ..color = (AppColors.dark ? Colors.white : Colors.black).withValues(alpha: faded ? 0.06 : 0.10);
+    canvas.drawPath(seg(0, points.length - 1), rest);
+    if (doneUpTo >= 1) {
+      final on = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 6
+        ..strokeCap = StrokeCap.round
+        ..color = color.withValues(alpha: 0.85);
+      canvas.drawPath(seg(0, min(doneUpTo + 1, points.length - 1)), on);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_LinkPainter o) => o.doneUpTo != doneUpTo || o.color != color || o.faded != faded || o.points.length != points.length;
+}
+
+void _lockedTip(BuildContext context, AppLanguage n, {bool exam = false}) {
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(exam
+          ? tr(n, 'پێشی هەمی وانەیێن ڤێ قۆناغێ تەمام بکە، پاشان ئەزموون ڤەدبیت 🔒', 'Erst alle Lektionen dieser Stufe 🔒',
+              'Finish all lessons of this stage first 🔒')
+          : tr(n, 'پێشی وانەیێن بەری ڤێ تەمام بکە 🔒', 'Erst die Lektionen davor 🔒', 'Finish the lessons before first 🔒'))));
+}
+
+/// 🔁 دووبارەکرنا قۆناغێن بەری
+void _openReview(BuildContext context, PathStage st) {
+  final p = ProgressService.instance;
+  final cs = reviewConcepts(st);
+  if (cs.isEmpty || p.hearts <= 0) {
+    if (p.hearts <= 0) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr(p.nativeLang, 'دلێن تە نەمان 💔', 'Keine Herzen 💔', 'Out of hearts 💔'))));
+    }
+    return;
+  }
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => InteractiveLessonScreen(
+        unit: null,
+        concepts: cs,
+        countUnit: false,
+        redo: p.reviewDone(st),
+        onDone: (_) => p.markReview(st),
+      ),
+    ),
+  );
+}
+
+/// 🏁 ئەزموونا قۆناغێ (یان ئەزموونا وانێ ل دوماهیا وانەکا پەرتووکێ)
+void _openExam(BuildContext context, PathStage st, LektionInfo? lek) {
+  final p = ProgressService.instance;
+  if (lek != null) {
+    openLektionTest(context, lek);
+    return;
+  }
+  if (p.hearts <= 0) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr(p.nativeLang, 'دلێن تە نەمان 💔', 'Keine Herzen 💔', 'Out of hearts 💔'))));
+    return;
+  }
+  final all = [for (final l in st.lessons) ...l.concepts]..shuffle();
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (_) => InteractiveLessonScreen(
+        unit: st.lessons.first.unit,
+        concepts: all.take(8).toList(),
+        countUnit: false,
+        hard: true,
+        redo: p.examBest('st_${st.id}') != null,
+        onDone: (pct) => p.saveExam('st_${st.id}', pct),
+      ),
+    ),
+  );
 }
 
 void _tapLesson(BuildContext context, PathLesson l) {
@@ -818,16 +1057,7 @@ class _SectionHeader extends StatelessWidget {
       child: Row(children: [
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Row(children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(8)),
-                child: Text(sec.level, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)),
-              ),
-              if (gold) const Text('  👑', style: TextStyle(fontSize: 16)),
-            ]),
-            const SizedBox(height: 6),
-            Text(sec.title(n), style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+            Text('${sec.title(n)}${gold ? '  👑' : ''}', style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
             const SizedBox(height: 8),
             if (sec.comingSoon)
               Text(tr(n, '🔒 زوو دێ ئێت', '🔒 Bald verfügbar', '🔒 Coming soon'),
@@ -952,8 +1182,7 @@ class _LektionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final n = ProgressService.instance.nativeLang;
-    final a2 = lek.n > 14;
-    final title = lek.section - 1 < appSections.length ? appSections[lek.section - 1].title(n) : lek.titleKu;
+    final title = switch (n) { AppLanguage.badini => lek.titleKu, AppLanguage.german => lek.titleDe, AppLanguage.english => lek.titleEn };
     return Container(
       margin: const EdgeInsets.only(top: 10, bottom: 12),
       padding: const EdgeInsets.all(12),
@@ -964,12 +1193,7 @@ class _LektionHeader extends StatelessWidget {
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         Row(children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-            decoration: BoxDecoration(color: lek.color.withValues(alpha: 0.18), borderRadius: BorderRadius.circular(8)),
-            child: Text(a2 ? 'A2 · L${lek.n - 14}' : (lek.n <= 7 ? 'A1.1 · L${lek.n}' : 'A1.2 · L${lek.n}'),
-                textDirection: TextDirection.ltr, style: TextStyle(color: lek.color, fontWeight: FontWeight.w900, fontSize: 12)),
-          ),
+          Text('📖', style: TextStyle(fontSize: 18, color: lek.color)),
           const SizedBox(width: 8),
           Expanded(
             child: Text(title, style: TextStyle(fontFamily: 'Sarchia', fontSize: 16, color: AppColors.fg, fontWeight: FontWeight.bold)),
@@ -996,66 +1220,6 @@ class _LektionHeader extends StatelessWidget {
           ),
         ]),
       ]),
-    );
-  }
-}
-
-class _LektionTest extends StatelessWidget {
-  final LektionInfo lek;
-  const _LektionTest(this.lek);
-  @override
-  Widget build(BuildContext context) {
-    final p = ProgressService.instance;
-    final n = p.nativeLang;
-    final best = p.examBest('lek_${lek.n}');
-    final stages = pathStages.where((s) => s.lektion == lek.n);
-    final ready = stages.isNotEmpty && stages.every(p.stageDone);
-    final passed = best != null && best >= 60;
-    final label = lek.n > 14 ? 'A2 · L${lek.n - 14}' : 'L${lek.n}';
-    return Padding(
-      padding: const EdgeInsets.only(top: 6, bottom: 18),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () {
-          if (!ready) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text(tr(n, 'پێشی قۆناغێن ڤێ وانێ تەمام بکە، پاشان ئەزموون ڤەدبیت 🔒', 'Schließe zuerst die Stufen ab 🔒',
-                    'Finish the stages first 🔒'))));
-            return;
-          }
-          openLektionTest(context, lek);
-        },
-        child: Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            gradient: ready
-                ? LinearGradient(colors: passed ? const [Color(0xFF58CC02), Color(0xFF2E9E00)] : [lek.color, _darken(lek.color, 0.2)])
-                : null,
-            color: ready ? null : AppColors.card,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: ready ? Colors.transparent : AppColors.fg12, width: 1.5),
-          ),
-          child: Row(children: [
-            Text(passed ? '🏆' : (ready ? '📝' : '🔒'), style: const TextStyle(fontSize: 30)),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(tr(n, 'ئەزموونا وانێ · $label', 'Test · $label', 'Test · $label'),
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: ready ? Colors.white : AppColors.fg)),
-                Text(
-                  best != null
-                      ? '${tr(n, 'باشترین ئەنجام', 'Bestes Ergebnis', 'Best')}: $best%'
-                      : (ready
-                          ? tr(n, 'ئەگەر تە بڤێت خۆ تاقی بکە ✨', 'Teste dich, wenn du willst ✨', 'Test yourself if you like ✨')
-                          : tr(n, 'پشتی تەمامکرنا قۆناغێن سەری ڤەدبیت', 'Nach den Stufen oben', 'Unlocks after the stages above')),
-                  style: TextStyle(fontSize: 12, color: ready ? Colors.white70 : AppColors.fg60),
-                ),
-              ]),
-            ),
-            if (ready) const Icon(Icons.play_circle_fill_rounded, color: Colors.white, size: 32),
-          ]),
-        ),
-      ),
     );
   }
 }

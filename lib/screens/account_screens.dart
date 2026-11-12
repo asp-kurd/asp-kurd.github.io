@@ -55,8 +55,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future<void> _go() async {
-    if (!fullNameOk(name.text)) {
-      setState(() => error = 'تکایە ناڤێ خۆ یێ تەمام بنڤیسە: ٢ ناڤ (ناڤ و ناڤێ بابی) — بۆ نموونە: ئازاد بەرواری');
+    if (name.text.trim().isEmpty) {
+      setState(() => error = 'تکایە ناڤێ خۆ بنڤیسە');
       return;
     }
     if (gender == null) {
@@ -241,7 +241,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   controller: name,
                   textInputAction: TextInputAction.next,
                   textCapitalization: TextCapitalization.words,
-                  decoration: _dec('ناڤێ تە یێ تەمام (٢ ناڤ)', Icons.person_rounded).copyWith(hintText: 'ئازاد بەرواری')),
+                  decoration: _dec('ناڤێ تە', Icons.person_rounded)),
               const SizedBox(height: 14),
               Row(children: [
                 _genderBtn('m', '👨', 'نێر'),
@@ -1124,14 +1124,11 @@ class _AfterLogout extends StatelessWidget {
 }
 
 
-/// ✍️ ناڤ دڤێت ٢ پەیڤ بن (ناڤ + ناڤێ بابی)، هەر ئێک ب کێمی ٢ پیت
-bool fullNameOk(String s) {
-  final parts = s.trim().split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
-  return parts.length >= 2 && parts.every((w) => w.characters.length >= 2);
-}
+/// ✍️ ناڤ: هەر زمانەک و هەر تشتەک — تنێ ڤالا نەبیت
+bool fullNameOk(String s) => s.trim().isNotEmpty;
 
-/// 🏷️ ناڤێ ئەپێ: ناڤێ ئێکێ + asp (بۆ نموونە «ئازاد asp»)
+/// 🏷️ نازناڤ: ناڤێ ئێکێ + ASP (بۆ نموونە «Azad ASP»)
 String aspHandle(String fullName) {
   final first = fullName.trim().split(RegExp(r'\s+')).firstOrNull ?? '';
-  return first.isEmpty ? 'asp' : '$first asp';
+  return first.isEmpty ? 'ASP' : '$first ASP';
 }

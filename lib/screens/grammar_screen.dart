@@ -165,7 +165,7 @@ class GrammarBanner extends StatelessWidget {
           const SizedBox(width: 12),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(_en ? 'English Grammar A1' : 'Grammatik — A1 · A2',
+              Text(_en ? 'English Grammar' : 'رێزمان',
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white)),
               const SizedBox(height: 4),
               Text(_en ? 'رێزمانا ئینگلیزی ب ئینگلیزی + کوردی + راهێنان' : 'رێزمانا هەر وانەکێ ب ئەلمانی + کوردی',
@@ -212,12 +212,6 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
                 const SizedBox(height: 14),
               ],
               for (final n in ns) ...[
-                if (!Grammar.en && n == 15)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 10),
-                    child: Text('🌳 A2 · Schritte 3–4', textDirection: TextDirection.ltr,
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.fg70)),
-                  ),
                 _tile(n),
               ],
             ],
@@ -250,7 +244,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
             CircleAvatar(
               radius: 22,
               backgroundColor: color,
-              child: Text(!Grammar.en && n > 14 ? '${n - 14}' : '$n', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
+              child: Text('$n', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18)),
             ),
             const SizedBox(width: 12),
             Expanded(
@@ -303,7 +297,7 @@ class _GrammarLektionScreenState extends State<GrammarLektionScreen> {
         appBar: AppBar(
             title: Text(Grammar.en
                 ? '📘 Unit ${widget.n} · Grammar'
-                : (widget.n > 14 ? '📘 A2 · Lektion ${widget.n - 14}' : '📘 Lektion ${widget.n} · Grammatik'))),
+                : '📘 ${Grammar.unitInfo(widget.n)?.$1 ?? 'رێزمان'}')),
         body: !ready
             ? const Center(child: CircularProgressIndicator())
             : ListView(

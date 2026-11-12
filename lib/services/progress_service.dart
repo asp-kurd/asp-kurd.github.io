@@ -270,6 +270,14 @@ class ProgressService extends ChangeNotifier {
     return null;
   }
 
+  /// 🔁 بازنا دووبارەکرنێ د ناڤ قۆناغێ دا
+  bool reviewDone(PathStage s) => (pathProg['rev_${s.id}']?.firstOrNull ?? 0) > 0;
+  Future<void> markReview(PathStage s) async {
+    pathProg['rev_${s.id}'] = [1, 0];
+    await _p.setString('path_$_pairKey', jsonEncode(pathProg));
+    notifyListeners();
+  }
+
   Future<void> jumpTo(PathStage s) async {
     pathJumped.add(s.id);
     await _p.setStringList('pathj_$_pairKey', pathJumped.toList());

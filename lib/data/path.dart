@@ -192,9 +192,9 @@ List<PathSection> _build() {
       }
     }
     final (ku, de, en, level) = switch (s) {
-      1 => ('بەشا ١ · بنگەه', 'Teil 1 · Grundlagen', 'Section 1 · Basics', 'A1.1'),
-      2 => ('بەشا ٢ · پێشکەفتن', 'Teil 2 · Weiter geht’s', 'Section 2 · Moving on', 'A1.2 · A2'),
-      _ => ('بەشا ٣ · ئاستێ A2', 'Teil 3 · Niveau A2', 'Section 3 · Level A2', 'A2'),
+      1 => ('بەشا ١ · بنگەه', 'Teil 1 · Grundlagen', 'Section 1 · Basics', ''),
+      2 => ('بەشا ٢ · پێشکەفتن', 'Teil 2 · Weiter geht’s', 'Section 2 · Moving on', ''),
+      _ => ('بەشا ٣ · شارەزایی', 'Teil 3 · Sicher sprechen', 'Section 3 · Confident', ''),
     };
     secs.add(PathSection(s, ku, de, en, level, stages,
         comingSoon: stages.isEmpty || (s == 3 && target == AppLanguage.english) || (soon && stages.isEmpty)));
