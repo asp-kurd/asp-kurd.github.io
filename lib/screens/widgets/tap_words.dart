@@ -14,17 +14,29 @@ class TapWords extends StatefulWidget {
   final AppLanguage lang;
   final TextStyle style;
   final TextAlign textAlign;
-  const TapWords(this.text, {super.key, required this.lang, required this.style, this.textAlign = TextAlign.center});
+
+  /// ✨ پەیڤێن نوو (ب پیتێن بچووک): جارا ئێکێ ب نیشانا «نوو» دیار دبن
+  final Set<String> chips;
+  const TapWords(this.text, {super.key, required this.lang, required this.style, this.textAlign = TextAlign.center, this.chips = const {}});
 
   /// پارچەیێن دەقی وەکی span (بۆ Text.rich یێ دەرەکی) — دڤێت [recognizers] پاشی dispose ببن
-  static List<InlineSpan> spans(BuildContext context, String text, AppLanguage lang, List<GestureRecognizer> recognizers) {
+  /// [chips]: پەیڤێن نوو (ب پیتێن بچووک) کو نیشانا «نوو» وەردگرن (ئێک جار)؛ [base] ستایلا دەقی
+  static List<InlineSpan> spans(BuildContext context, String text, AppLanguage lang, List<GestureRecognizer> recognizers,
+      {Set<String>? chips, TextStyle? base}) {
     final out = <InlineSpan>[];
+    final left = {...?chips};
     var last = 0;
     for (final m in Glossary.wordRe.allMatches(text)) {
       if (m.start > last) out.add(TextSpan(text: text.substring(last, m.start)));
       final w = m.group(0)!;
       final g = Glossary.lookup(w, lang);
-      if (g == null) {
+      if (left.remove(w.toLowerCase())) {
+        out.add(WidgetSpan(
+          alignment: PlaceholderAlignment.baseline,
+          baseline: TextBaseline.alphabetic,
+          child: NewWordChip(w, style: base, onTap: g == null ? null : (pos) => showGloss(context, w, g, pos, articles: lang == AppLanguage.german)),
+        ));
+      } else if (g == null) {
         out.add(TextSpan(text: w));
       } else {
         final r = TapGestureRecognizer()..onTapUp = (d) => showGloss(context, w, g, d.globalPosition, articles: lang == AppLanguage.german);
@@ -180,10 +192,78 @@ class _TapWordsState extends State<TapWords> {
   Widget build(BuildContext context) {
     _clear();
     return Text.rich(
-      TextSpan(children: TapWords.spans(context, widget.text, widget.lang, _rec)),
+      TextSpan(children: TapWords.spans(context, widget.text, widget.lang, _rec, chips: widget.chips, base: widget.style)),
       textDirection: widget.lang.direction,
       textAlign: widget.textAlign,
       style: widget.style,
     );
   }
+}
+
+
+/// ✨ پەیڤەکا نوو د رستێ دا: رەنگێ مۆر ب هایلایتەکێ نەرم و نیشانەکا بچووک «نوو»
+/// (تنێ جارا ئێکێ کو ئەڤ پەیڤە دیار دبیت)
+class NewWordChip extends StatelessWidget {
+  final String word;
+  final TextStyle? style;
+  final void Function(Offset)? onTap;
+  const NewWordChip(this.word, {super.key, this.style, this.onTap});
+
+  static const _a = Color(0xFFA855F7), _b = Color(0xFFEC4899);
+
+  @override
+  Widget build(BuildContext context) {
+    final ink = AppColors.dark ? const Color(0xFFE2C2FF) : const Color(0xFF7C2BD9);
+    final base = (style ?? DefaultTextStyle.of(context).style).copyWith(color: ink, fontWeight: FontWeight.w800);
+    return GestureDetector(
+      onTapUp: onTap == null ? null : (d) => onTap!(d.globalPosition),
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0, end: 1),
+        duration: const Duration(milliseconds: 650),
+        curve: Curves.easeOutCubic,
+        builder: (_, v, __) => Stack(clipBehavior: Clip.none, children: [
+          // هایلایتێ نەرم کو ژ چەپێ بۆ راستێ دهێتە کێشان (وەکی قەلەما نیشانکرنێ)
+          Positioned(
+            left: 0,
+            bottom: (base.fontSize ?? 20) * 0.08,
+            child: Container(
+              width: null,
+              height: (base.fontSize ?? 20) * 0.5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                gradient: LinearGradient(colors: [_a.withValues(alpha: 0.38), _b.withValues(alpha: 0.30)]),
+              ),
+              child: Opacity(opacity: 0, child: Text(word, style: base)),
+            ).clipWidth(v),
+          ),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 1), child: Text(word, style: base)),
+          // نیشانا بچووک ل سەر پەیڤێ
+          Positioned(
+            top: -(base.fontSize ?? 20) * 0.42,
+            right: -6,
+            child: Opacity(
+              opacity: v,
+              child: Transform.scale(
+                scale: 0.6 + 0.4 * v,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(colors: [_a, _b]),
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: [BoxShadow(color: _b.withValues(alpha: 0.4), blurRadius: 6)],
+                  ),
+                  child: const Text('نوو', style: TextStyle(fontSize: 10, height: 1.2, fontWeight: FontWeight.w900, color: Colors.white)),
+                ),
+              ),
+            ),
+          ),
+        ]),
+      ),
+    );
+  }
+}
+
+extension on Widget {
+  /// تنێ پشکا [f] (٠–١) ژ پانیێ دیار دکەت
+  Widget clipWidth(double f) => ClipRect(child: Align(alignment: Alignment.centerLeft, widthFactor: f.clamp(0.001, 1.0), child: this));
 }

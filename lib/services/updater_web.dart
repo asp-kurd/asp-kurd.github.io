@@ -6,12 +6,19 @@ import 'package:web/web.dart' as web;
 
 /// 🔄 نوویکرنا ئۆتۆماتیک: دەمێ وەشانەکا نوو هاتە بەلاڤکرن، ئەپ ب خۆ دبیتە یا نوو.
 /// build_id.txt ل گەل هەر build ـەکێ دهێتە نڤیسین. ئەگەر جودا بیت ژ یا ئەپێ ڤەکری ➔ کاش ژێببە و ڤەکەڤە.
+/// ⏸️ نوویکرن ئەپێ ژ نوو بار دکەت (شاشا دەستپێکێ دیار دبیت و وانە دهێتە بڕین)، لەوما تنێ:
+///  - ل دەستپێکا ئەپێ (هێشتا شاشا دەستپێکێ یا ل سەر)، یان
+///  - پشتی زڤڕینێ ژ پشتێ ب ١٥+ خولەکان.
+/// د ناڤبەرێ دا: وەشانا نوو «ل هیڤیێ» دمینیت.
 void startAutoUpdate(String buildId) {
   if (buildId.isEmpty) return;
   var busy = false;
+  var allowReload = true; // ل دەستپێکێ
+  var hiddenAt = 0;
+  Timer(const Duration(seconds: 20), () => allowReload = false);
 
   Future<void> check() async {
-    if (busy) return;
+    if (busy || !allowReload) return;
     busy = true;
     try {
       // ب base href (/) نە ب لینکێ پەڕێ (دا /asp-d7k2/ ژی کار بکەت)
@@ -35,11 +42,19 @@ void startAutoUpdate(String buildId) {
   }
 
   check();
-  Timer.periodic(const Duration(minutes: 5), (_) => check());
   web.document.addEventListener(
     'visibilitychange',
     ((web.Event _) {
-      if (web.document.visibilityState == 'visible') check();
+      if (web.document.visibilityState == 'hidden') {
+        hiddenAt = DateTime.now().millisecondsSinceEpoch;
+        return;
+      }
+      final away = hiddenAt == 0 ? 0 : DateTime.now().millisecondsSinceEpoch - hiddenAt;
+      hiddenAt = 0;
+      if (away >= 15 * 60 * 1000) {
+        allowReload = true;
+        check().whenComplete(() => allowReload = false);
+      }
     }).toJS,
   );
 }

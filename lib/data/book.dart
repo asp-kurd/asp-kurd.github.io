@@ -75,8 +75,8 @@ class BookChapter {
   /// «بەشێ ٥: جێناڤ ...» ➔ («بەشێ ٥»، «جێناڤ ...»)
   (String, String) get split {
     final i = title.indexOf(':');
-    if (i < 0) return ('', title);
-    return (title.substring(0, i).trim(), title.substring(i + 1).trim());
+    if (i < 0) return ('', bidiFix(title));
+    return (title.substring(0, i).trim(), bidiFix(title.substring(i + 1).trim()));
   }
 }
 
@@ -141,4 +141,13 @@ Future<void> _loadBookOnce() async {
     bookParts = const [];
     bookChapters = const [];
   }
+}
+
+
+/// ↔️ «ئەلفوبێ (Alphabet und Aussprache)»: پارچێن لاتینی د ناڤ نڤیسینا کوردی دا
+/// ب LRI…PDI دهێنە پاراستن دا کەڤان و پەیڤ تێکنەچن.
+String bidiFix(String s) {
+  if (!RegExp('[\u0600-\u06FF]').hasMatch(s) || s.contains('\u2066')) return s;
+  return s.replaceAllMapped(RegExp(r"[A-Za-zÄÖÜäöüß0-9][A-Za-zÄÖÜäöüß0-9 ,./'’\-–!?]*[A-Za-zÄÖÜäöüß0-9.!?]|[A-Za-zÄÖÜäöüß]"),
+      (m) => '\u2066${m[0]}\u2069');
 }

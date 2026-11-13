@@ -5,6 +5,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
 import '../data/curriculum.dart';
+import '../data/lesson_resume.dart';
 import '../data/path.dart';
 import '../data/pics.dart';
 import '../models.dart';
@@ -642,6 +643,7 @@ void startPathLesson(BuildContext context, PathLesson l) {
     if (!wasStageDone && p.stageDone(l.stage)) PathFx.pendingStage = l.stage.id;
   }
 
+  final rkey = '${p.targetLang.code}_${l.id}#$c${done ? 'g' : ''}';
   Widget screen;
   if (l.isAlphabet && !done && c == 0) {
     screen = LetterLessonScreen(unit: l.unit, countUnit: false, onDone: after);
@@ -659,9 +661,72 @@ void startPathLesson(BuildContext context, PathLesson l) {
       pronounTier: l.isAlphabet ? -1 : pronounTier(max(1, stageNumber(l.stage))),
       pronounCount: pron ? 7 : (done ? 3 : 2),
       maxQuestions: done ? goldQuestionCount(l) : 0,
+      resumeKey: rkey,
+      resume: true,
     );
   }
-  void go() => Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
+  void push() => Navigator.push(context, MaterialPageRoute(builder: (_) => screen));
+  // ⏯️ وانا نیڤەکری ➔ بەردەوام بکە یان ژ نوو
+  Future<void> go() async {
+    final saved = screen is InteractiveLessonScreen ? await LessonResume.load(rkey) : null;
+    if (saved == null || !context.mounted) {
+      LessonResume.pending = null;
+      return push();
+    }
+    final i = (saved['i'] as num).toInt(), total = (saved['q'] as List).length;
+    final pick = await showModalBottomSheet<bool>(
+      context: context,
+      backgroundColor: AppColors.card,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+      builder: (ctx) => Directionality(
+        textDirection: n.direction,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 22, 20, 26),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Text(tr(n, 'تە ئەڤ وانە ب دوماهی نەئینایە', 'Du hast diese Lektion nicht beendet', 'You didn’t finish this lesson'),
+                style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: AppColors.fg)),
+            const SizedBox(height: 14),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: LinearProgressIndicator(value: i / total, minHeight: 12, color: AppColors.green, backgroundColor: AppColors.chip),
+            ),
+            const SizedBox(height: 6),
+            Text(tr(n, '${kuNum(i)} ژ ${kuNum(total)} پرسیاران', '$i von $total Fragen', '$i of $total questions'),
+                style: TextStyle(color: AppColors.fg60, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 18),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton.icon(
+                style: FilledButton.styleFrom(backgroundColor: AppColors.green, padding: const EdgeInsets.all(15)),
+                onPressed: () => Navigator.pop(ctx, true),
+                icon: const Icon(Icons.play_arrow_rounded),
+                label: Text(tr(n, 'بەردەوام بکە ژ پرسیارا ${kuNum(i + 1)}', 'Weiter ab Frage ${i + 1}', 'Continue from question ${i + 1}'),
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              ),
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(padding: const EdgeInsets.all(14)),
+                onPressed: () => Navigator.pop(ctx, false),
+                icon: const Icon(Icons.refresh_rounded),
+                label: Text(tr(n, 'ژ نوو دەستپێبکە', 'Neu beginnen', 'Start over'), style: const TextStyle(fontSize: 15)),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
+    if (pick == null || !context.mounted) return;
+    if (pick) {
+      LessonResume.pending = saved;
+    } else {
+      LessonResume.pending = null;
+      await LessonResume.clear(rkey);
+    }
+    push();
+  }
   final firstOfUnit = pathLessons.firstWhere((x) => x.unit.id == l.unit.id) == l;
   if (!done && c == 0 && firstOfUnit && l.isAlphabet && !p.grammarSeen('${l.unit.id}_letters')) {
     LetterCardsScreen.open(context, l.unit, onStart: go);

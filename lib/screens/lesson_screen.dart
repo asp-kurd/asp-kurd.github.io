@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../data/answer_check.dart';
 import '../data/cloze_bank.dart';
 import '../data/curriculum.dart';
+import '../data/lesson_resume.dart';
 import '../data/pics.dart';
 import '../data/pronouns.dart';
 import '../models.dart';
@@ -20,6 +21,7 @@ import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 import 'widgets/speak_check.dart';
 import 'widgets/tap_words.dart';
+import '../data/glossary.dart';
 
 /// شاشەیا وانەیێ: ٤ جۆرێن ڕاهێنانان
 /// - وەرگێڕان (دایک ➔ فێربوون)
@@ -53,6 +55,10 @@ class InteractiveLessonScreen extends StatefulWidget {
 
   /// 🏅 زێڕ: هەژمارا پرسیاران (٠ = بێ سنوور) — سێگۆشە ١٥ … شەشگۆشە ٢٢–٢٥
   final int maxQuestions;
+
+  /// ⏯️ کلیلا پاراستنا جهـی (null = ناهێتە پاراستن) و [resume] = ژ جهێ پاراستی بەردەوام بە
+  final String? resumeKey;
+  final bool resume;
   const InteractiveLessonScreen({
     super.key,
     required this.unit,
@@ -65,6 +71,8 @@ class InteractiveLessonScreen extends StatefulWidget {
     this.pronounTier = -1,
     this.pronounCount = 0,
     this.maxQuestions = 0,
+    this.resumeKey,
+    this.resume = false,
   });
 
   @override
@@ -102,6 +110,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
 
   /// ✅ دروست بەلێ ب تێبینی (شێوازەکێ دی / پەیڤەکا نێزیک)
   AnswerResult? _verdict;
+
+  /// ✨ پەیڤێن نوو: ئەوێن فێرخوازی بەری ڤێ وانێ نەدیتین؛ تنێ جارا ئێکێ نیشانا «نوو» وەردگرن
+  Set<String> _newIds = {};
+  final Set<String> _markedNew = {};
+  Set<String> _chipWords = {};
   final List<GestureRecognizer> _tapRec = [];
   void _clearTaps() {
     for (final r in _tapRec) {
@@ -143,8 +156,44 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) MascotChar.precache(context, MascotChar.forUser());
     });
+    _newIds = {
+      for (final e in queue)
+        for (final c in [e.concept, ...e.group])
+          if (!c.id.startsWith('pr_') && !progress.srs.containsKey(c.id)) c.id,
+    };
     totalInitial = queue.length;
+    final pend = LessonResume.pending;
+    LessonResume.pending = null;
+    if (widget.resumeKey != null && widget.resume && pend != null) _applyRestore(pend);
     _prepare();
+    _pickNewChips();
+  }
+
+  // ───────── ⏯️ بەردەوامی ─────────
+  void _applyRestore(Map<String, dynamic> m) {
+    final q = [for (final x in m['q'] as List) LessonResume.exFromJson(x)];
+    if (q.isEmpty || q.any((e) => e == null)) return;
+    queue = q.cast<Exercise>();
+    index = (m['i'] as num).toInt().clamp(0, queue.length - 1);
+    correctCount = (m['cc'] as num?)?.toInt() ?? 0;
+    firstCorrect = (m['fc'] as num?)?.toInt() ?? 0;
+    answerXp = (m['xp'] as num?)?.toInt() ?? 0;
+    totalInitial = (m['ti'] as num?)?.toInt() ?? queue.length;
+    _requeued.addAll([for (final x in (m['rq'] as List? ?? const [])) '$x']);
+  }
+
+  void _saveResume() {
+    final k = widget.resumeKey;
+    if (k == null) return;
+    LessonResume.save(k, {
+      'q': [for (final e in queue) LessonResume.exToJson(e)],
+      'i': index,
+      'cc': correctCount,
+      'fc': firstCorrect,
+      'xp': answerXp,
+      'ti': totalInitial,
+      'rq': _requeued.toList(),
+    });
   }
 
   @override
@@ -321,6 +370,35 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
 
   /// 🔇 هەر پرسیارەکا نوو ژمارەکا نوو: دەنگێ پرسیارا بەرێ ل سەر یا نوو لێنادەت
   int _qToken = 0;
+
+  /// پەیڤا سەرەکی یا پەیڤەکێ (بێ ئارتیکل): «der Tisch» ➔ «tisch»
+  static final _art = RegExp(r'^(der|die|das|the|a|an|to)\s+', caseSensitive: false);
+  String? _core(WordConcept c) {
+    final t = c.text(target).replaceAll(RegExp(r'[!?.,]'), '').trim().replaceFirst(_art, '');
+    if (t.isEmpty || t.contains(' ') || t.contains('/')) return null;
+    return t.toLowerCase();
+  }
+
+  /// ✨ کیژ پەیڤێن نوو د ڤێ پرسیارێ دا ب نیشان دیار دبن (ئێک جار بۆ هەر پەیڤەکێ)
+  void _pickNewChips() {
+    _chipWords = {};
+    final ex = current;
+    final texts = <String>[
+      if (cz != null) cz!.sentence,
+      if (ex.type == ExerciseType.reverse || ex.type == ExerciseType.trueFalse) ex.concept.text(target),
+    ];
+    if (texts.isEmpty) return;
+    final tokens = {for (final t in texts) ...Glossary.wordRe.allMatches(t).map((m) => m.group(0)!.toLowerCase())};
+    for (final id in _newIds) {
+      if (_markedNew.contains(id)) continue;
+      final c = conceptById(id) ?? (ex.concept.id == id ? ex.concept : null);
+      final w = c == null ? null : _core(c);
+      if (w != null && tokens.contains(w)) {
+        _chipWords.add(w);
+        _markedNew.add(id);
+      }
+    }
+  }
 
   void _prepare() {
     _qToken++;
@@ -570,8 +648,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       setState(() {
         index++;
         _prepare();
+        _pickNewChips();
       });
+      _saveResume(); // ⏯️ ئەگەر نوکە دەرکەڤیت، ژ ڤێرێ بەردەوام دبیت
     } else {
+      if (widget.resumeKey != null) await LessonResume.clear(widget.resumeKey!);
       await _finish();
     }
   }
@@ -809,7 +890,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             ],
             if (mainLang == target)
               // 👆 پەیڤێن زمانێ فێربوونێ دهێنە تبلکرن ➔ رامان + ئارتیکل
-              TapWords(c.text(mainLang), lang: target, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg))
+              TapWords(c.text(mainLang), lang: target, chips: _chipWords, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.fg))
             else
               Text(
                 c.text(mainLang),
@@ -844,7 +925,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     final open = checked || _showMeaning;
     for (var k = 0; k < parts.length; k++) {
       // 👆 هەر پەیڤەک دهێتە تبلکرن ➔ رامان + ئارتیکل
-      spans.addAll(TapWords.spans(context, parts[k], target, _tapRec));
+      spans.addAll(TapWords.spans(context, parts[k], target, _tapRec,
+          chips: _chipWords, base: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, height: 1.7, color: AppColors.fg)));
       if (k < parts.length - 1) {
         final word = fill == null ? null : (k < fills.length ? fills[k] : fills.last);
         final color = !checked ? AppColors.accent : (isCorrect ? ((_verdict?.soft ?? false) ? AppColors.orange : AppColors.green) : AppColors.red);

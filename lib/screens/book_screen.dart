@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/book.dart';
+import '../data/book_practice.dart';
+import 'quiz_screen.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
@@ -275,6 +277,11 @@ class ChapterScreen extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
           children: [
             for (final b in c.blocks) Padding(padding: const EdgeInsets.only(bottom: 14), child: _block(b, c.color)),
+            // 🏋️ راهێنان ل سەر ڤی بەشی
+            if (bookPractice(c, seed: 1).length >= 3) ...[
+              _PracticeCard(chapter: c),
+              const SizedBox(height: 14),
+            ],
             const SizedBox(height: 8),
             BigButton(
               label: hasNext ? 'خواند ✓ — بەشێ دی' : 'خواند ✓',
@@ -575,6 +582,53 @@ class _QuizBlockState extends State<_QuizBlock> {
             ),
           ]),
       ]),
+    );
+  }
+}
+
+
+/// 🏋️ کارتا راهێنانێ ل دوماهیا بەشی
+class _PracticeCard extends StatelessWidget {
+  final BookChapter chapter;
+  const _PracticeCard({required this.chapter});
+
+  @override
+  Widget build(BuildContext context) {
+    final c = chapter;
+    final best = ProgressService.instance.examBest('book_${c.id}');
+    return InkWell(
+      borderRadius: BorderRadius.circular(18),
+      onTap: () {
+        final qs = bookPractice(c);
+        Navigator.push(context,
+            MaterialPageRoute(builder: (_) => QuizScreen(examId: 'book_${c.id}', title: '🏋️ ${c.split.$2}', questions: qs)));
+      },
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [c.color.withValues(alpha: 0.22), c.color.withValues(alpha: 0.08)]),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: c.color, width: 2),
+        ),
+        child: Row(children: [
+          Container(
+            width: 52,
+            height: 52,
+            decoration: BoxDecoration(color: c.color, shape: BoxShape.circle),
+            child: const Icon(Icons.fitness_center_rounded, color: Colors.white, size: 28),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text('خۆ تاقی بکە', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: AppColors.fg)),
+              const SizedBox(height: 2),
+              Text(best == null ? '٨ پرسیارێن کورت ل سەر ڤی بەشی' : 'باشترین ئەنجام: ${kuNum(best)}٪ — دیسا تاقی بکە',
+                  style: TextStyle(color: AppColors.fg60, fontSize: 13.5)),
+            ]),
+          ),
+          Icon(Icons.chevron_left_rounded, color: c.color, size: 30),
+        ]),
+      ),
     );
   }
 }

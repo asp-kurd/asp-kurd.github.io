@@ -71,11 +71,11 @@
     el.addEventListener('pointerdown',function(){ if(!gone) play(); },{once:true});
   },60);
 
-  // 🔁 زڤڕین بۆ ئەپێ پشتی ٣٠+ چرکان ➔ شاشا دەستپێکێ و ئاواز دیسا
+  // 🔁 زڤڕین بۆ ئەپێ پشتی ١٥+ خولەکان ➔ شاشا دەستپێکێ و ئاواز دیسا (کێمتر: نا)
   var hiddenAt=0;
   document.addEventListener('visibilitychange',function(){
     if(document.visibilityState==='hidden'){hiddenAt=Date.now();return;}
-    if(!hiddenAt||Date.now()-hiddenAt<30000||!gone)return;
+    if(!hiddenAt||Date.now()-hiddenAt<900000||!gone)return;
     hiddenAt=0;
     var w=document.createElement('div');w.innerHTML=TPL;el=w.firstChild;gone=false;t0=Date.now();
     attach(el);
