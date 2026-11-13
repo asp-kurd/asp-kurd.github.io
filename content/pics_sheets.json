@@ -1,0 +1,1220 @@
+[
+ {
+  "sheet": 1,
+  "items": [
+   {
+    "id": "ab1",
+    "de": "das Mädchen"
+   },
+   {
+    "id": "ab2",
+    "de": "der Käse"
+   },
+   {
+    "id": "ab3",
+    "de": "hören"
+   },
+   {
+    "id": "ab4",
+    "de": "das Öl"
+   },
+   {
+    "id": "ab5",
+    "de": "die Brücke"
+   },
+   {
+    "id": "ab6",
+    "de": "das Glück"
+   },
+   {
+    "id": "ab7",
+    "de": "die Straße"
+   },
+   {
+    "id": "ab8",
+    "de": "heiß"
+   },
+   {
+    "id": "ab9",
+    "de": "das Ei"
+   },
+   {
+    "id": "ab10",
+    "de": "die Liebe"
+   },
+   {
+    "id": "ab11",
+    "de": "Deutschland"
+   },
+   {
+    "id": "ab12",
+    "de": "das Buch"
+   },
+   {
+    "id": "ab14",
+    "de": "schreiben"
+   },
+   {
+    "id": "ab15",
+    "de": "die Stadt"
+   },
+   {
+    "id": "ab16",
+    "de": "der Sport"
+   },
+   {
+    "id": "ab17",
+    "de": "die Welt"
+   }
+  ]
+ },
+ {
+  "sheet": 2,
+  "items": [
+   {
+    "id": "ab18",
+    "de": "der Vogel"
+   },
+   {
+    "id": "ab19",
+    "de": "die Zeit"
+   },
+   {
+    "id": "ab20",
+    "de": "jung"
+   },
+   {
+    "id": "ab21",
+    "de": "die Häuser"
+   },
+   {
+    "id": "ab22",
+    "de": "das Pferd"
+   },
+   {
+    "id": "ab23",
+    "de": "gehen"
+   },
+   {
+    "id": "a1_21",
+    "de": "Österreich"
+   },
+   {
+    "id": "a1_25",
+    "de": "das Alphabet"
+   },
+   {
+    "id": "a1_28",
+    "de": "die Adresse"
+   },
+   {
+    "id": "a1_29",
+    "de": "der Vorname"
+   },
+   {
+    "id": "a1_30",
+    "de": "der Familienname"
+   },
+   {
+    "id": "a1_31",
+    "de": "die Postleitzahl"
+   },
+   {
+    "id": "a2_09",
+    "de": "der Vater"
+   },
+   {
+    "id": "a2_10",
+    "de": "die Mutter"
+   },
+   {
+    "id": "a2_11",
+    "de": "die Eltern"
+   },
+   {
+    "id": "a2_12",
+    "de": "der Sohn"
+   }
+  ]
+ },
+ {
+  "sheet": 3,
+  "items": [
+   {
+    "id": "a2_13",
+    "de": "die Tochter"
+   },
+   {
+    "id": "a2_14",
+    "de": "die Geschwister"
+   },
+   {
+    "id": "a3_01",
+    "de": "das Brot"
+   },
+   {
+    "id": "a3_04",
+    "de": "der Apfel"
+   },
+   {
+    "id": "a3_05",
+    "de": "die Banane"
+   },
+   {
+    "id": "a3_06",
+    "de": "die Tomate"
+   },
+   {
+    "id": "a3_07",
+    "de": "die Kartoffel"
+   },
+   {
+    "id": "a3_08",
+    "de": "der Fisch"
+   },
+   {
+    "id": "a3_09",
+    "de": "das Wasser"
+   },
+   {
+    "id": "a3_10",
+    "de": "die Milch"
+   },
+   {
+    "id": "a3_11",
+    "de": "der Kaffee"
+   },
+   {
+    "id": "a3_12",
+    "de": "der Tee"
+   },
+   {
+    "id": "a3_13",
+    "de": "der Saft"
+   },
+   {
+    "id": "a3_19",
+    "de": "der Einkaufszettel"
+   },
+   {
+    "id": "a4_01",
+    "de": "die Wohnung"
+   },
+   {
+    "id": "a4_02",
+    "de": "die Küche"
+   }
+  ]
+ },
+ {
+  "sheet": 4,
+  "items": [
+   {
+    "id": "a4_03",
+    "de": "das Bad"
+   },
+   {
+    "id": "a4_04",
+    "de": "das Schlafzimmer"
+   },
+   {
+    "id": "a4_05",
+    "de": "das Wohnzimmer"
+   },
+   {
+    "id": "a4_06",
+    "de": "das Kinderzimmer"
+   },
+   {
+    "id": "a4_07",
+    "de": "der Balkon"
+   },
+   {
+    "id": "a4_09",
+    "de": "groß"
+   },
+   {
+    "id": "a4_10",
+    "de": "klein"
+   },
+   {
+    "id": "a4_11",
+    "de": "teuer"
+   },
+   {
+    "id": "a4_12",
+    "de": "billig"
+   },
+   {
+    "id": "a4_13",
+    "de": "neu"
+   },
+   {
+    "id": "a4_14",
+    "de": "alt"
+   },
+   {
+    "id": "a4_15",
+    "de": "hell"
+   },
+   {
+    "id": "a4_16",
+    "de": "dunkel"
+   },
+   {
+    "id": "a4_17",
+    "de": "der Stuhl"
+   },
+   {
+    "id": "a4_18",
+    "de": "das Bett"
+   },
+   {
+    "id": "a4_19",
+    "de": "der Schrank"
+   }
+  ]
+ },
+ {
+  "sheet": 5,
+  "items": [
+   {
+    "id": "a4_20",
+    "de": "der Kühlschrank"
+   },
+   {
+    "id": "a4_21",
+    "de": "die Lampe"
+   },
+   {
+    "id": "a4_22",
+    "de": "rot"
+   },
+   {
+    "id": "a4_23",
+    "de": "blau"
+   },
+   {
+    "id": "a5_01",
+    "de": "aufstehen"
+   },
+   {
+    "id": "a5_02",
+    "de": "frühstücken"
+   },
+   {
+    "id": "a5_03",
+    "de": "aufräumen"
+   },
+   {
+    "id": "a5_04",
+    "de": "einkaufen"
+   },
+   {
+    "id": "a5_05",
+    "de": "kochen"
+   },
+   {
+    "id": "a5_06",
+    "de": "fernsehen"
+   },
+   {
+    "id": "a5_07",
+    "de": "anrufen"
+   },
+   {
+    "id": "a5_08",
+    "de": "schlafen"
+   },
+   {
+    "id": "a5_17",
+    "de": "der Montag"
+   },
+   {
+    "id": "a5_18",
+    "de": "der Dienstag"
+   },
+   {
+    "id": "a5_19",
+    "de": "der Mittwoch"
+   },
+   {
+    "id": "a5_20",
+    "de": "der Donnerstag"
+   }
+  ]
+ },
+ {
+  "sheet": 6,
+  "items": [
+   {
+    "id": "a5_21",
+    "de": "der Freitag"
+   },
+   {
+    "id": "a5_22",
+    "de": "der Samstag"
+   },
+   {
+    "id": "a5_23",
+    "de": "der Sonntag"
+   },
+   {
+    "id": "a6_11",
+    "de": "die Bratwurst"
+   },
+   {
+    "id": "a6_18",
+    "de": "schwimmen"
+   },
+   {
+    "id": "a6_20",
+    "de": "fotografieren"
+   },
+   {
+    "id": "a6_22",
+    "de": "wandern"
+   },
+   {
+    "id": "a7_04",
+    "de": "malen"
+   },
+   {
+    "id": "a7_07",
+    "de": "singen"
+   },
+   {
+    "id": "a7_11",
+    "de": "der Kurs"
+   },
+   {
+    "id": "a7_12",
+    "de": "die Prüfung"
+   },
+   {
+    "id": "a7_14",
+    "de": "der Tipp"
+   },
+   {
+    "id": "a8_04",
+    "de": "der Ingenieur"
+   },
+   {
+    "id": "a8_07",
+    "de": "die Krankenschwester"
+   },
+   {
+    "id": "a8_15",
+    "de": "die Bewerbung"
+   },
+   {
+    "id": "a8_16",
+    "de": "das Praktikum"
+   }
+  ]
+ },
+ {
+  "sheet": 7,
+  "items": [
+   {
+    "id": "a9_01",
+    "de": "das Amt"
+   },
+   {
+    "id": "a9_02",
+    "de": "der Antrag"
+   },
+   {
+    "id": "a9_03",
+    "de": "der Pass"
+   },
+   {
+    "id": "a9_04",
+    "de": "der Ausweis"
+   },
+   {
+    "id": "a9_17",
+    "de": "das Hotel"
+   },
+   {
+    "id": "a9_18",
+    "de": "die Rezeption"
+   },
+   {
+    "id": "a9_20",
+    "de": "der Schlüssel"
+   },
+   {
+    "id": "a10_01",
+    "de": "der Kopf"
+   },
+   {
+    "id": "a10_02",
+    "de": "das Auge"
+   },
+   {
+    "id": "a10_03",
+    "de": "das Ohr"
+   },
+   {
+    "id": "a10_04",
+    "de": "die Nase"
+   },
+   {
+    "id": "a10_05",
+    "de": "der Zahn"
+   },
+   {
+    "id": "a10_06",
+    "de": "die Hand"
+   },
+   {
+    "id": "a10_07",
+    "de": "das Bein"
+   },
+   {
+    "id": "a10_08",
+    "de": "der Bauch"
+   },
+   {
+    "id": "a10_12",
+    "de": "der Husten"
+   }
+  ]
+ },
+ {
+  "sheet": 8,
+  "items": [
+   {
+    "id": "a10_22",
+    "de": "die Versicherungskarte"
+   },
+   {
+    "id": "a10_23",
+    "de": "die Praxis"
+   },
+   {
+    "id": "a11_01",
+    "de": "links"
+   },
+   {
+    "id": "a11_02",
+    "de": "rechts"
+   },
+   {
+    "id": "a11_03",
+    "de": "geradeaus"
+   },
+   {
+    "id": "a11_09",
+    "de": "der Bus"
+   },
+   {
+    "id": "a11_10",
+    "de": "der Zug"
+   },
+   {
+    "id": "a11_11",
+    "de": "die Straßenbahn"
+   },
+   {
+    "id": "a11_12",
+    "de": "die U-Bahn"
+   },
+   {
+    "id": "a11_13",
+    "de": "das Taxi"
+   },
+   {
+    "id": "a11_14",
+    "de": "das Flugzeug"
+   },
+   {
+    "id": "a11_17",
+    "de": "die Bank"
+   },
+   {
+    "id": "a11_18",
+    "de": "die Apotheke"
+   },
+   {
+    "id": "a11_19",
+    "de": "die Post"
+   },
+   {
+    "id": "a11_20",
+    "de": "die Bäckerei"
+   },
+   {
+    "id": "a11_21",
+    "de": "der Supermarkt"
+   }
+  ]
+ },
+ {
+  "sheet": 9,
+  "items": [
+   {
+    "id": "a11_22",
+    "de": "die Tankstelle"
+   },
+   {
+    "id": "a12_12",
+    "de": "die Reparatur"
+   },
+   {
+    "id": "a12_17",
+    "de": "die Rechnung"
+   },
+   {
+    "id": "a12_18",
+    "de": "umtauschen"
+   },
+   {
+    "id": "a12_19",
+    "de": "die Reinigung"
+   },
+   {
+    "id": "a13_01",
+    "de": "das T-Shirt"
+   },
+   {
+    "id": "a13_02",
+    "de": "die Hose"
+   },
+   {
+    "id": "a13_03",
+    "de": "das Kleid"
+   },
+   {
+    "id": "a13_04",
+    "de": "die Jacke"
+   },
+   {
+    "id": "a13_05",
+    "de": "das Hemd"
+   },
+   {
+    "id": "a13_06",
+    "de": "der Pullover"
+   },
+   {
+    "id": "a13_07",
+    "de": "die Schuhe"
+   },
+   {
+    "id": "a13_08",
+    "de": "die Socken"
+   },
+   {
+    "id": "a13_21",
+    "de": "der Berg"
+   },
+   {
+    "id": "a13_22",
+    "de": "das Dorf"
+   },
+   {
+    "id": "a13_23",
+    "de": "das Meer"
+   }
+  ]
+ },
+ {
+  "sheet": 10,
+  "items": [
+   {
+    "id": "a14_01",
+    "de": "der Januar"
+   },
+   {
+    "id": "a14_02",
+    "de": "der April"
+   },
+   {
+    "id": "a14_03",
+    "de": "der Juli"
+   },
+   {
+    "id": "a14_04",
+    "de": "der Oktober"
+   },
+   {
+    "id": "a14_05",
+    "de": "der Dezember"
+   },
+   {
+    "id": "a14_11",
+    "de": "das Geschenk"
+   },
+   {
+    "id": "a14_14",
+    "de": "die Hochzeit"
+   },
+   {
+    "id": "a14_15",
+    "de": "die Einladung"
+   },
+   {
+    "id": "b1_01",
+    "de": "der Umzug"
+   },
+   {
+    "id": "b1_02",
+    "de": "umziehen"
+   },
+   {
+    "id": "b1_03",
+    "de": "ankommen"
+   },
+   {
+    "id": "b1_04",
+    "de": "die Heimat"
+   },
+   {
+    "id": "b1_09",
+    "de": "der Onkel"
+   },
+   {
+    "id": "b1_10",
+    "de": "die Tante"
+   },
+   {
+    "id": "b1_12",
+    "de": "der Neffe"
+   },
+   {
+    "id": "b1_13",
+    "de": "die Nichte"
+   }
+  ]
+ },
+ {
+  "sheet": 11,
+  "items": [
+   {
+    "id": "b1_14",
+    "de": "die Schwiegermutter"
+   },
+   {
+    "id": "b1_15",
+    "de": "der Schwager"
+   },
+   {
+    "id": "b2_09",
+    "de": "stellen"
+   },
+   {
+    "id": "b2_10",
+    "de": "legen"
+   },
+   {
+    "id": "b2_11",
+    "de": "hängen"
+   },
+   {
+    "id": "b2_18",
+    "de": "der Hausmeister"
+   },
+   {
+    "id": "b2_19",
+    "de": "der Müll"
+   },
+   {
+    "id": "b2_20",
+    "de": "die Mülltonne"
+   },
+   {
+    "id": "b2_30",
+    "de": "die Treppe"
+   },
+   {
+    "id": "b2_31",
+    "de": "der Keller"
+   },
+   {
+    "id": "b3_01",
+    "de": "der Teller"
+   },
+   {
+    "id": "b3_02",
+    "de": "das Messer"
+   },
+   {
+    "id": "b3_03",
+    "de": "die Gabel"
+   },
+   {
+    "id": "b3_04",
+    "de": "der Löffel"
+   },
+   {
+    "id": "b3_05",
+    "de": "das Glas"
+   },
+   {
+    "id": "b3_06",
+    "de": "der Topf"
+   }
+  ]
+ },
+ {
+  "sheet": 12,
+  "items": [
+   {
+    "id": "b3_07",
+    "de": "die Pfanne"
+   },
+   {
+    "id": "b3_09",
+    "de": "die Speisekarte"
+   },
+   {
+    "id": "b3_10",
+    "de": "die Vorspeise"
+   },
+   {
+    "id": "b3_11",
+    "de": "das Hauptgericht"
+   },
+   {
+    "id": "b3_12",
+    "de": "der Nachtisch"
+   },
+   {
+    "id": "b4_01",
+    "de": "der Drucker"
+   },
+   {
+    "id": "b4_02",
+    "de": "der Kopierer"
+   },
+   {
+    "id": "b4_03",
+    "de": "die Besprechung"
+   },
+   {
+    "id": "b4_06",
+    "de": "die Mittagspause"
+   },
+   {
+    "id": "b4_07",
+    "de": "der Feierabend"
+   },
+   {
+    "id": "b4_23",
+    "de": "die Überstunde"
+   },
+   {
+    "id": "b4_24",
+    "de": "der Urlaub"
+   },
+   {
+    "id": "b4_31",
+    "de": "der Lohn"
+   },
+   {
+    "id": "b4_32",
+    "de": "die Weiterbildung"
+   },
+   {
+    "id": "b5_04",
+    "de": "joggen"
+   },
+   {
+    "id": "b5_05",
+    "de": "Tischtennis"
+   }
+  ]
+ },
+ {
+  "sheet": 13,
+  "items": [
+   {
+    "id": "b5_06",
+    "de": "der Verein"
+   },
+   {
+    "id": "b5_07",
+    "de": "die Mannschaft"
+   },
+   {
+    "id": "b5_10",
+    "de": "das Fitnessstudio"
+   },
+   {
+    "id": "b5_11",
+    "de": "der Rücken"
+   },
+   {
+    "id": "b6_01",
+    "de": "die Grundschule"
+   },
+   {
+    "id": "b6_02",
+    "de": "das Gymnasium"
+   },
+   {
+    "id": "b6_03",
+    "de": "das Fach"
+   },
+   {
+    "id": "b6_04",
+    "de": "die Note"
+   },
+   {
+    "id": "b6_05",
+    "de": "das Zeugnis"
+   },
+   {
+    "id": "b6_07",
+    "de": "der Schulabschluss"
+   },
+   {
+    "id": "b6_09",
+    "de": "die Ausbildung"
+   },
+   {
+    "id": "b6_10",
+    "de": "das Studium"
+   },
+   {
+    "id": "b6_12",
+    "de": "der Lebenslauf"
+   },
+   {
+    "id": "b6_13",
+    "de": "das Vorstellungsgespräch"
+   },
+   {
+    "id": "b6_14",
+    "de": "die Erfahrung"
+   },
+   {
+    "id": "b7_03",
+    "de": "feiern"
+   }
+  ]
+ },
+ {
+  "sheet": 14,
+  "items": [
+   {
+    "id": "b7_04",
+    "de": "die Gäste"
+   },
+   {
+    "id": "b7_05",
+    "de": "die Torte"
+   },
+   {
+    "id": "b7_06",
+    "de": "das Brautpaar"
+   },
+   {
+    "id": "b7_10",
+    "de": "schenken"
+   },
+   {
+    "id": "b7_11",
+    "de": "die Blumen"
+   },
+   {
+    "id": "b7_12",
+    "de": "das Parfüm"
+   },
+   {
+    "id": "b7_13",
+    "de": "die Kette"
+   },
+   {
+    "id": "b7_14",
+    "de": "der Gutschein"
+   },
+   {
+    "id": "b8_01",
+    "de": "ausschlafen"
+   },
+   {
+    "id": "b8_02",
+    "de": "der Ausflug"
+   },
+   {
+    "id": "b8_03",
+    "de": "das Konzert"
+   },
+   {
+    "id": "b8_04",
+    "de": "die Ausstellung"
+   },
+   {
+    "id": "b8_14",
+    "de": "der Treffpunkt"
+   },
+   {
+    "id": "b9_01",
+    "de": "der Rucksack"
+   },
+   {
+    "id": "b9_02",
+    "de": "die Brieftasche"
+   },
+   {
+    "id": "b9_03",
+    "de": "der Schlüsselbund"
+   }
+  ]
+ },
+ {
+  "sheet": 15,
+  "items": [
+   {
+    "id": "b9_04",
+    "de": "das Ladegerät"
+   },
+   {
+    "id": "b9_05",
+    "de": "die Kamera"
+   },
+   {
+    "id": "b9_06",
+    "de": "der Regenschirm"
+   },
+   {
+    "id": "b9_07",
+    "de": "die Sonnenbrille"
+   },
+   {
+    "id": "b9_14",
+    "de": "bequem"
+   },
+   {
+    "id": "b10_02",
+    "de": "der Akku"
+   },
+   {
+    "id": "b10_05",
+    "de": "das Passwort"
+   },
+   {
+    "id": "b10_09",
+    "de": "der Brief"
+   },
+   {
+    "id": "b10_10",
+    "de": "das Paket"
+   },
+   {
+    "id": "b10_11",
+    "de": "die Briefmarke"
+   },
+   {
+    "id": "b10_12",
+    "de": "der Absender"
+   },
+   {
+    "id": "b10_13",
+    "de": "der Empfänger"
+   },
+   {
+    "id": "b10_24",
+    "de": "die Lieferung"
+   },
+   {
+    "id": "b11_09",
+    "de": "der Stau"
+   },
+   {
+    "id": "b11_10",
+    "de": "der Unfall"
+   },
+   {
+    "id": "b11_11",
+    "de": "die Kreuzung"
+   }
+  ]
+ },
+ {
+  "sheet": 16,
+  "items": [
+   {
+    "id": "b11_12",
+    "de": "tanken"
+   },
+   {
+    "id": "b11_13",
+    "de": "der Führerschein"
+   },
+   {
+    "id": "b11_14",
+    "de": "bremsen"
+   },
+   {
+    "id": "b11_17",
+    "de": "der Nebel"
+   },
+   {
+    "id": "b11_18",
+    "de": "das Gewitter"
+   },
+   {
+    "id": "b11_19",
+    "de": "der Sturm"
+   },
+   {
+    "id": "b11_20",
+    "de": "Glatteis"
+   },
+   {
+    "id": "b11_26",
+    "de": "der Abflug"
+   },
+   {
+    "id": "b11_27",
+    "de": "die Landung"
+   },
+   {
+    "id": "b11_28",
+    "de": "das Moped"
+   },
+   {
+    "id": "b11_29",
+    "de": "die Fahrkarte"
+   },
+   {
+    "id": "b11_30",
+    "de": "umsteigen"
+   },
+   {
+    "id": "b12_09",
+    "de": "die Pension"
+   },
+   {
+    "id": "b12_10",
+    "de": "die Jugendherberge"
+   },
+   {
+    "id": "b12_11",
+    "de": "der Campingplatz"
+   },
+   {
+    "id": "b12_12",
+    "de": "die Übernachtung"
+   }
+  ]
+ },
+ {
+  "sheet": 17,
+  "items": [
+   {
+    "id": "b12_17",
+    "de": "der Koffer"
+   },
+   {
+    "id": "b12_18",
+    "de": "das Handgepäck"
+   },
+   {
+    "id": "b12_19",
+    "de": "die Verspätung"
+   },
+   {
+    "id": "b12_20",
+    "de": "das Gleis"
+   },
+   {
+    "id": "b12_21",
+    "de": "der Flughafen"
+   },
+   {
+    "id": "b12_22",
+    "de": "die Abfahrt"
+   },
+   {
+    "id": "b12_23",
+    "de": "die Ankunft"
+   },
+   {
+    "id": "b13_02",
+    "de": "der Geldautomat"
+   },
+   {
+    "id": "b13_06",
+    "de": "der Kontoauszug"
+   },
+   {
+    "id": "b13_07",
+    "de": "die Zinsen"
+   },
+   {
+    "id": "b13_11",
+    "de": "der Rabatt"
+   },
+   {
+    "id": "b13_12",
+    "de": "die Quittung"
+   },
+   {
+    "id": "b13_14",
+    "de": "die Garantie"
+   },
+   {
+    "id": "b14_01",
+    "de": "die Kindheit"
+   },
+   {
+    "id": "b14_02",
+    "de": "die Jugend"
+   },
+   {
+    "id": "b14_04",
+    "de": "geboren"
+   }
+  ]
+ },
+ {
+  "sheet": 18,
+  "items": [
+   {
+    "id": "b14_05",
+    "de": "heiraten"
+   },
+   {
+    "id": "b14_07",
+    "de": "die Schulzeit"
+   },
+   {
+    "id": "b14_08",
+    "de": "das Baby"
+   },
+   {
+    "id": "b14_22",
+    "de": "das Ziel"
+   },
+   {
+    "id": "b14_23",
+    "de": "die Zukunft"
+   },
+   {
+    "id": "b14_25",
+    "de": "das Häuschen"
+   },
+   {
+    "id": "b14_26",
+    "de": "das Kätzchen"
+   },
+   {
+    "id": "b14_27",
+    "de": "das Brötchen"
+   },
+   {
+    "id": "b14_29",
+    "de": "das Märchen"
+   },
+   {
+    "id": "b14_30",
+    "de": "das Bäumchen"
+   }
+  ]
+ }
+]
