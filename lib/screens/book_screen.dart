@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../data/book.dart';
 import '../data/book_practice.dart';
 import 'quiz_screen.dart';
+import 'widgets/combo.dart' show kuNum;
 import '../models.dart';
 import '../services/progress_service.dart';
 import '../services/voice_service.dart';
