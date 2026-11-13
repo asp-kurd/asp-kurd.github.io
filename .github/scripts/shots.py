@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("matchgame", "demo=matchgame&u=1&theme=red"), ("matchgame3", "demo=matchgame&u=3&theme=red"),
+    ("matchgreet", "demo=matchgame&g=1&theme=red"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])

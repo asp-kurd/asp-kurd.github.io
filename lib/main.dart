@@ -167,7 +167,9 @@ class ZimanProApp extends StatelessWidget {
       // 🧪 جووتان: پەیڤێن وانا ئێکێ یا ئەلمانی (سلاڤ + رستە) ➔ دڤێت رستە ب نڤیسین بن نە ب ئیمۆجی
       'matchgame' => GameSessionScreen(
           kind: GameKind.matchPairs,
-          concepts: [for (final u in appCurriculum.where((u) => u.section >= 1).take(int.tryParse(Uri.base.queryParameters['u'] ?? '') ?? 1)) ...u.concepts]),
+          concepts: Uri.base.queryParameters['g'] == '1'
+              ? allConcepts.where((c) => RegExp(r'^(Hallo|Tschüs|Guten Morgen|Herzlich|Woher|Ich komme aus)').hasMatch(c.de)).take(8).toList()
+              : [for (final u in appCurriculum.where((u) => u.section >= 1).take(int.tryParse(Uri.base.queryParameters['u'] ?? '') ?? 1)) ...u.concepts]),
       'gram4' => const GrammarLektionScreen(n: 4),
       'grammar' => const GrammarLektionScreen(n: 6),
       'grammarlist' => const GrammarListScreen(),
