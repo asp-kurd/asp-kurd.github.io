@@ -32,8 +32,8 @@ class TapWords extends StatefulWidget {
       final g = Glossary.lookup(w, lang);
       if (left.remove(w.toLowerCase())) {
         out.add(WidgetSpan(
-          alignment: PlaceholderAlignment.baseline,
-          baseline: TextBaseline.alphabetic,
+          // middle: نیشانا «نوو» ل سەری بنەڕەتا رێزێ تێکناشکێنیت
+          alignment: PlaceholderAlignment.middle,
           child: NewWordChip(w, style: base, onTap: g == null ? null : (pos) => showGloss(context, w, g, pos, articles: lang == AppLanguage.german)),
         ));
       } else if (g == null) {
