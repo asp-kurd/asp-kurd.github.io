@@ -5,7 +5,14 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("matchgreet", "demo=matchgame&g=1&theme=red"),
+    ("piko_idle", "demo=piko&mood=idle&theme=dark"),
+    ("piko_talk", "demo=piko&mood=talk&theme=dark"),
+    ("piko_happy", "demo=piko&mood=happy&theme=dark"),
+    ("piko_sad", "demo=piko&mood=sad&theme=dark"),
+    ("piko_think", "demo=piko&mood=think&theme=dark"),
+    ("piko_fly", "demo=piko&mood=fly&theme=dark"),
+    ("piko_wave", "demo=piko&mood=wave&theme=dark"),
+    ("piko_walk", "demo=piko&mood=walk&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -70,6 +77,9 @@ with sync_playwright() as p:
                     time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")
             if name.startswith("combo"):
                 time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
+            if name.startswith("piko_"):
+                for k in range(24):
+                    pg.screenshot(path=f"{out}/{name}_f{k:02d}.png", clip={"x": 0, "y": 60, "width": 428, "height": 640}); time.sleep(0.07)
             if name == "chapter":
                 pg.mouse.move(214, 500)
                 for k in range(8):

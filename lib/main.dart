@@ -40,6 +40,7 @@ import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/quiz_screen.dart';
+import 'screens/widgets/piko.dart';
 import 'screens/games/game_session.dart';
 import 'screens/games/game_kind.dart';
 import 'screens/book_screen.dart' show ChapterScreen;
@@ -215,6 +216,7 @@ class ZimanProApp extends StatelessWidget {
       'admintree' => const Scaffold(body: TreeEditor()),
       'chat' => const ChatScreen(),
       'settings' => const SettingsScreen(),
+      'piko' => const _PikoDemo(),
       'bookpractice' => QuizScreen(examId: 'demo', title: '🏋️ demo', questions: bookPractice(bookChapters[int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 5], seed: 3)),
       'chapter' => ChapterScreen(index: int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 1),
       'newword' => InteractiveLessonScreen(
@@ -362,4 +364,33 @@ class _GlossDemoState extends State<_GlossDemo> {
   @override
   Widget build(BuildContext context) => InteractiveLessonScreen(
       unit: null, concepts: allConcepts.where((c) => c.cloze != null).take(4).toList(), onlyType: ExerciseType.cloze);
+}
+
+
+/// 🧪 ?demo=piko&mood=happy&talk=1 — پیکۆ ب هەمی حالەتان
+class _PikoDemo extends StatefulWidget {
+  const _PikoDemo();
+  @override
+  State<_PikoDemo> createState() => _PikoDemoState();
+}
+
+class _PikoDemoState extends State<_PikoDemo> {
+  late PikoMood mood = PikoMood.values.firstWhere((m) => m.name == Uri.base.queryParameters['mood'], orElse: () => PikoMood.idle);
+  late bool talk = Uri.base.queryParameters['talk'] == '1';
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: SafeArea(
+          child: Column(children: [
+            const SizedBox(height: 20),
+            Expanded(child: Center(child: Piko(size: 380, mood: mood, talking: talk))),
+            Wrap(spacing: 8, runSpacing: 8, alignment: WrapAlignment.center, children: [
+              for (final m in PikoMood.values)
+                ChoiceChip(label: Text(m.name), selected: mood == m, onSelected: (_) => setState(() => mood = m)),
+              FilterChip(label: const Text('💬 talk'), selected: talk, onSelected: (v) => setState(() => talk = v)),
+            ]),
+            const SizedBox(height: 24),
+          ]),
+        ),
+      );
 }
