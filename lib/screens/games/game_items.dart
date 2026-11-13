@@ -162,6 +162,9 @@ class _MatchPairs extends StatefulWidget {
 
 class _MatchPairsState extends State<_MatchPairs> {
   late final List<WordConcept> left = [...widget.g.item.words]..shuffle();
+
+  /// 🖼️ وێنە تنێ ئەگەر هەمی پەیڤ ب وێنەیەکێ ڕوون بهێنە ناسین؛ یان نە ➔ رامانا کوردی ⇄ ئەلمانی
+  late final bool pics = widget.g.item.words.every(picturable) && widget.g.item.words.map((c) => c.pic).toSet().length == widget.g.item.words.length;
   late final List<WordConcept> right = [...widget.g.item.words]..shuffle();
   WordConcept? selL, selR;
   final matched = <String>{};
@@ -173,7 +176,7 @@ class _MatchPairsState extends State<_MatchPairs> {
     final l = selL, r = selR;
     if (l == null || r == null) return;
     final g = widget.g;
-    if (l.id == r.id || l.pic == r.pic) {
+    if (l.id == r.id || (pics && l.pic == r.pic)) {
       setState(() {
         matched..add(l.id)..add(r.id);
         selL = selR = null;
@@ -232,7 +235,14 @@ class _MatchPairsState extends State<_MatchPairs> {
               border: Border.all(color: color, width: 2.5),
             ),
             child: isLeft
-                ? ConceptPic(c, size: 52)
+                ? (pics
+                    ? ConceptPic(c, size: hasPic(c) ? 64 : 52)
+                    : Text(c.text(g.native),
+                        textAlign: TextAlign.center,
+                        textDirection: g.native.direction,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.bold, height: 1.35, color: AppColors.fg)))
                 : Text(c.text(g.target),
                     textAlign: TextAlign.center,
                     textDirection: g.target.direction,

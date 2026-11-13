@@ -102,11 +102,15 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
     }
     switch (k) {
       case GameKind.pickPicture:
-        // 🖼️ پێشی پەیڤێن ب وێنەیێن 3D (تشتێن بەرچاڤ)
+        // 🖼️ پێشی پەیڤێن ب وێنەیێن 3D (تشتێن بەرچاڤ)؛ رستە و سلاڤ ب وێنە نابن ➔ نڤیسین
         final withPic = cs.where(hasPic).toList();
-        return [for (final c in (withPic.length >= 3 ? withPic : cs).take(10)) _pickItem(c, cs)];
+        final clear = cs.where(picturable).toList();
+        final use = withPic.length >= 3 ? withPic : clear;
+        if (use.length < 3) return [for (final c in cs.take(10)) GameItem(GameKind.typeWord, [c])];
+        return [for (final c in use.take(10)) _pickItem(c, use)];
       case GameKind.matchPairs:
-        final pool = _distinctPics(cs);
+        // 🧩 پێشی پەیڤێن ب وێنەیێن ڕوون (وێنە ⇄ پەیڤ)؛ پاشان رستە (کوردی ⇄ ئەلمانی)
+        final pool = [..._distinctPics(cs.where(picturable).toList()), ...cs.where((c) => !picturable(c))];
         final out = <GameItem>[];
         for (var i = 0; i < pool.length; i += 4) {
           final chunk = pool.sublist(i, min(i + 4, pool.length));
@@ -143,7 +147,7 @@ class _GameSessionScreenState extends State<GameSessionScreen> {
     // ئەگەر وێنەیێ 3D هەبیت، هەمی هەلبژارتن ژی وێنەیێن 3D دبن
     final real = hasPic(c);
     String key(WordConcept d) => picName(d) ?? d.pic;
-    bool ok(WordConcept d) => real ? hasPic(d) : d.emoji.isNotEmpty;
+    bool ok(WordConcept d) => real ? hasPic(d) : picturable(d);
     final pics = <String>{key(c)};
     final distract = <WordConcept>[];
     bool fresh(WordConcept d) => d.id != c.id && ok(d) && !_recentPics.contains(key(d));

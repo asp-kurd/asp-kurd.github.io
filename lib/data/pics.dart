@@ -85,3 +85,16 @@ class ConceptPic extends StatelessWidget {
         errorBuilder: (_, __, ___) => Text(concept.pic, style: TextStyle(fontSize: size * 0.85)));
   }
 }
+
+
+/// 🖼️ ئایا ئەڤ پەیڤە ب وێنەیەکێ ب تنێ ب ڕوونی دهێتە ناسین؟
+/// ✅ وێنەیێ 3D (تشتێن بەرچاڤ)، یان ناڤەکێ ب تنێ ب ئیمۆجی (der Apfel 🍎)
+/// ❌ رستە و سلاڤ (Hallo! · Woher kommen Sie?) — ئیمۆجیا وان (👋 🗺️) بێ رامانە و تێکەل دبیت
+bool picturable(WordConcept c) {
+  if (hasPic(c)) return true;
+  if (c.emoji.isEmpty) return false;
+  final de = c.de.trim();
+  if (RegExp(r'[!?.,…]').hasMatch(de)) return false;
+  final w = de.split(RegExp(r'\s+')).where((x) => !const {'der', 'die', 'das'}.contains(x)).toList();
+  return w.length == 1;
+}

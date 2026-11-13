@@ -40,6 +40,8 @@ import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/quiz_screen.dart';
+import 'screens/games/game_session.dart';
+import 'screens/games/game_kind.dart';
 import 'screens/book_screen.dart' show ChapterScreen;
 import 'data/book.dart';
 import 'data/book_practice.dart';
@@ -162,6 +164,10 @@ class ZimanProApp extends StatelessWidget {
       'conj' => const ConjugationGameScreen(),
       'goethe' => const GoetheMockScreen(),
       'games' => const Scaffold(body: GamesHubScreen()),
+      // 🧪 جووتان: پەیڤێن وانا ئێکێ یا ئەلمانی (سلاڤ + رستە) ➔ دڤێت رستە ب نڤیسین بن نە ب ئیمۆجی
+      'matchgame' => GameSessionScreen(
+          kind: GameKind.matchPairs,
+          concepts: [for (final u in appCurriculum.where((u) => u.section >= 1).take(int.tryParse(Uri.base.queryParameters['u'] ?? '') ?? 1)) ...u.concepts]),
       'gram4' => const GrammarLektionScreen(n: 4),
       'grammar' => const GrammarLektionScreen(n: 6),
       'grammarlist' => const GrammarListScreen(),
