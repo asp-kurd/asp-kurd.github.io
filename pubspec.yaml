@@ -45,6 +45,7 @@ flutter:
     # لۆگۆیا ASP
     - assets/brand/
     - assets/piko/
+    - assets/piko/anim/
     - assets/mascot/
     # دەنگێ AI (Piper / MMS) — ب GitHub Actions دهێتە دروستکرن
     - assets/tts/de/

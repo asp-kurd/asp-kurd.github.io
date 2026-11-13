@@ -217,6 +217,7 @@ class ZimanProApp extends StatelessWidget {
       'chat' => const ChatScreen(),
       'settings' => const SettingsScreen(),
       'piko' => const _PikoDemo(),
+      'pikovid' => const _PikoVideoDemo(),
       'bookpractice' => QuizScreen(examId: 'demo', title: '🏋️ demo', questions: bookPractice(bookChapters[int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 5], seed: 3)),
       'chapter' => ChapterScreen(index: int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 1),
       'newword' => InteractiveLessonScreen(
@@ -388,6 +389,41 @@ class _PikoDemoState extends State<_PikoDemo> {
               for (final m in PikoMood.values)
                 ChoiceChip(label: Text(m.name), selected: mood == m, onSelected: (_) => setState(() => mood = m)),
               FilterChip(label: const Text('💬 talk'), selected: talk, onSelected: (v) => setState(() => talk = v)),
+            ]),
+            const SizedBox(height: 24),
+          ]),
+        ),
+      );
+}
+
+
+/// 🧪 ?demo=pikovid — پیکۆ ژ ڤیدیۆیا AI (پشتا سەوز لاچوویی) ل سەر رەنگێن ئەپێ
+class _PikoVideoDemo extends StatefulWidget {
+  const _PikoVideoDemo();
+  @override
+  State<_PikoVideoDemo> createState() => _PikoVideoDemoState();
+}
+
+class _PikoVideoDemoState extends State<_PikoVideoDemo> {
+  int bg = 0;
+  static const _bgs = [Color(0xFF131F24), Color(0xFFF4F7F8), Color(0xFF1C080C), Color(0xFFFFF6F9)];
+  static const _names = ['🌙 تاری', '☀️ رۆهن', '🌹 سۆر', '🌸 پەمبەیی'];
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        backgroundColor: _bgs[bg],
+        body: SafeArea(
+          child: Column(children: [
+            const SizedBox(height: 16),
+            Text('🦜 پیکۆ', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: bg.isOdd ? Colors.black87 : Colors.white)),
+            Expanded(
+              child: Center(
+                child: Image.asset('assets/piko/anim/wave.webp', height: 440, filterQuality: FilterQuality.medium, gaplessPlayback: true),
+              ),
+            ),
+            Wrap(spacing: 8, children: [
+              for (var i = 0; i < _bgs.length; i++)
+                ChoiceChip(label: Text(_names[i]), selected: bg == i, onSelected: (_) => setState(() => bg = i)),
             ]),
             const SizedBox(height: 24),
           ]),
