@@ -40,6 +40,9 @@ import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/quiz_screen.dart';
+import 'screens/book_screen.dart' show ChapterScreen;
+import 'data/book.dart';
+import 'data/book_practice.dart';
 import 'screens/settings_screen.dart';
 import 'screens/social_links.dart';
 import 'screens/widgets/tap_words.dart';
@@ -204,6 +207,14 @@ class ZimanProApp extends StatelessWidget {
       'admintree' => const Scaffold(body: TreeEditor()),
       'chat' => const ChatScreen(),
       'settings' => const SettingsScreen(),
+      'bookpractice' => QuizScreen(examId: 'demo', title: '🏋️ demo', questions: bookPractice(bookChapters[int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 5], seed: 3)),
+      'chapter' => ChapterScreen(index: int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 1),
+      'newword' => InteractiveLessonScreen(
+          unit: null,
+          concepts: allConcepts.where((c) => RegExp(r'^(der|die|das) [A-ZÄÖÜ][a-zäöüß]+$').hasMatch(c.de)).take(4).toList(),
+          onlyType: ExerciseType.reverse),
+      'newcloze' => InteractiveLessonScreen(
+          unit: null, concepts: allConcepts.where((c) => c.cloze != null).skip(20).take(6).toList(), onlyType: ExerciseType.cloze),
       'examhint' || 'examtype' => () {
           // 🧪 پرسیارا وێنەیی (رستە) ب چاڤێ هاریکاریێ / نڤیسین «tschüss»
           final all = Exams.lektion.values.expand((x) => x).toList();

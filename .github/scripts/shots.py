@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("pathgold", "demo=pathgold&theme=dark&quiet=1"), ("pathgold_pink", "demo=pathgold&theme=pink&quiet=1"),
-
+    ("bookpractice", "demo=bookpractice&ch=5&theme=dark"), ("bookpractice10", "demo=bookpractice&ch=10&theme=dark"),
+    ("chapter", "demo=chapter&ch=1&theme=dark"), ("newword", "demo=newword&theme=dark"), ("newcloze", "demo=newcloze&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -71,6 +71,14 @@ with sync_playwright() as p:
                     time.sleep(0.5); pg.screenshot(path=f"{out}/{name}_{k}.png")
             if name.startswith("combo"):
                 time.sleep(0.3); pg.screenshot(path=f"{out}/{name}_b.png")
+            if name == "chapter":
+                pg.mouse.move(214, 500)
+                for k in range(8):
+                    pg.mouse.wheel(0, 3000); time.sleep(0.3)
+                time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_end.png")
+            if name.startswith("bookpractice"):
+                pg.mouse.click(214, 560); time.sleep(0.4); pg.mouse.click(214, 882); time.sleep(0.9)
+                pg.screenshot(path=f"{out}/{name}_checked.png")
             if name == "examhint":
                 for k in range(3):
                     pg.mouse.click(214, 290); time.sleep(0.7); pg.screenshot(path=f"{out}/{name}_h{k+1}.png")
