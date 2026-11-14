@@ -241,8 +241,12 @@ class _CharEditScreenState extends State<CharEditScreen> {
     return widget.char!.img(kind);
   }
 
-  bool _hasOwn(String kind) =>
-      pending.containsKey(kind) || (!removed.contains(kind) && (isCustom ? CastStore.images[id]?[kind] != null : CastStore.overrides(id).contains(kind)));
+  bool _hasOwn(String kind) {
+    if (pending.containsKey(kind)) return true;
+    if (removed.contains(kind)) return false;
+    if (isCustom) return (CastStore.images[id] ?? const {})[kind] != null;
+    return CastStore.overrides(id).contains(kind);
+  }
 
   void _syncPreview() {
     if (!isCustom) return;

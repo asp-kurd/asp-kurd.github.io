@@ -5,14 +5,13 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("piko_idle", "demo=piko&mood=idle&theme=dark"),
-    ("piko_talk", "demo=piko&mood=talk&theme=dark"),
-    ("piko_happy", "demo=piko&mood=happy&theme=dark"),
-    ("piko_sad", "demo=piko&mood=sad&theme=dark"),
-    ("piko_think", "demo=piko&mood=think&theme=dark"),
-    ("piko_fly", "demo=piko&mood=fly&theme=dark"),
-    ("piko_wave", "demo=piko&mood=wave&theme=dark"),
-    ("piko_walk", "demo=piko&mood=walk&theme=dark"),
+    ("castadmin", "demo=castadmin&theme=dark"),
+    ("chareditor_new", "demo=chareditor&theme=dark"),
+    ("chareditor_poya", "demo=chareditor&c=poya&theme=dark"),
+    ("picker", "demo=pick&theme=dark"),
+    ("ch3", "demo=chapter&ch=3&theme=dark"),
+    ("ch3_rn", "demo=chapter&ch=3&theme=dark&rn=avin:Rojin:ڕۆژین"),
+    ("ch4_rn", "demo=chapter&ch=4&theme=dark&rn=avin:Rojin:ڕۆژین"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
