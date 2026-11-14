@@ -234,6 +234,18 @@ class ZimanProApp extends StatelessWidget {
       'piko' => const _PikoDemo(),
       'pikovid' => const _PikoVideoDemo(),
       'bookpractice' => QuizScreen(examId: 'demo', title: '🏋️ demo', questions: bookPractice(bookChapters[int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 5], seed: 3)),
+      'renametest' => Scaffold(
+          body: SafeArea(
+              child: ListView(padding: const EdgeInsets.all(16), children: [
+            for (final t in [
+              '{"de":"Mein Name ist Avin.","ku":"ناڤێ من ئاڤینە.","kuLat":"Navê min Avîn e."}',
+              '{"q":"Was liest Avin?","qku":"ئاڤین چ دخوینیت؟"}',
+              '{"de":"Hallo Safin! Wie geht\'s?","ku":"سلاڤ سەفین! چاوانی؟ ئەز سەفینم. سەفینێ تەلەفۆن کر."}',
+              '{"de":"Das ist Safins Buch.","ku":"ئەڤە پەرتووکا سەفینی یە. ئازادی و ئاڤ"}',
+              '{"de":"Ich bin Poya.","ku":"ئەز پۆیامە. ناڤێ من پۆیایە."}',
+            ])
+              Padding(padding: const EdgeInsets.only(bottom: 14), child: Text(CastStore.text(t), style: const TextStyle(fontSize: 15))),
+          ]))),
       'castadmin' => Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(appBar: AppBar(title: const Text('👥 کاراکتەر')), body: const CastAdminTab(offline: true))),

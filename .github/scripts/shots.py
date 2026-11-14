@@ -5,6 +5,9 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
+    ("rn_safin", "demo=renametest&theme=dark&rn=safin:Rojda:ڕۆژدا"),
+    ("rn_avin", "demo=renametest&theme=dark&rn=avin:Rojin:ڕۆژین"),
+    ("rn_poya", "demo=renametest&theme=dark&rn=poya:Rebaz:ڕێباز"),
     ("castadmin", "demo=castadmin&theme=dark"),
     ("chareditor_new", "demo=chareditor&theme=dark"),
     ("chareditor_poya", "demo=chareditor&c=poya&theme=dark"),
