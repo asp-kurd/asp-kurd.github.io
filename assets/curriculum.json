@@ -1626,13 +1626,13 @@
      "enHint": "گێرڵ",
      "emoji": "👧",
      "cloze": {
-      "de": "Das ___ heißt Lara.",
+      "de": "Das ___ heißt Dilin.",
       "a": "Mädchen",
       "d": [
        "Buch",
        "Brot"
       ],
-      "ku": "ناڤێ کچێ لارایە."
+      "ku": "ناڤێ کچێ دیلینە."
      }
     },
     {
@@ -2196,32 +2196,32 @@
     },
     {
      "id": "a1_11",
-     "ku": "ناڤێ من ئازادە.",
-     "kuLat": "Navê min Azad e.",
-     "de": "Ich heiße Azad.",
-     "deHint": "ئیش هایسە ئازاد",
-     "en": "My name is Azad.",
-     "enHint": "مای نەیم ئیز ئازاد",
+     "ku": "ناڤێ من سەفینە.",
+     "kuLat": "Navê min Safîn e.",
+     "de": "Ich heiße Safin.",
+     "deHint": "ئیش هایسە سەفین",
+     "en": "My name is Safin.",
+     "enHint": "مای نەیم ئیز سەفین",
      "emoji": "🙋‍♂️"
     },
     {
      "id": "a1_12",
-     "ku": "ئەز لارامە.",
-     "kuLat": "Ez Lara me.",
-     "de": "Ich bin Lara.",
-     "deHint": "ئیش بین لارا",
-     "en": "I am Lara.",
-     "enHint": "ئای ئێم لارا",
+     "ku": "ئەز دیلینم.",
+     "kuLat": "Ez Dilîn me.",
+     "de": "Ich bin Dilin.",
+     "deHint": "ئیش بین دیلین",
+     "en": "I am Dilin.",
+     "enHint": "ئای ئێم دیلین",
      "emoji": "🙋‍♀️"
     },
     {
      "id": "a1_13",
-     "ku": "ناڤێ من سارا کورتە.",
-     "kuLat": "Navê min Sara Kurt e.",
-     "de": "Mein Name ist Sara Kurt.",
+     "ku": "ناڤێ من هوودا کورتە.",
+     "kuLat": "Navê min Hûda Kurt e.",
+     "de": "Mein Name ist Huda Kurt.",
      "deHint": "ماین نامە ئیست زارا کورت",
-     "en": "My name is Sara Kurt.",
-     "enHint": "مای نەیم ئیز سارا کورت",
+     "en": "My name is Huda Kurt.",
+     "enHint": "مای نەیم ئیز هوودا کورت",
      "emoji": "🪪"
     },
     {
@@ -2260,7 +2260,7 @@
     "titleDe": "Aussage & W-Frage",
     "lines": [
      "د رستا ئەلمانی دا کار هەردەم ل جهێ ٢ یە:",
-     "Ich | heiße | Azad.   —   Mein Name | ist | Sara.",
+     "Ich | heiße | Poya.   —   Mein Name | ist | Avin.",
      "پرسیارا W ژی: Wie | heißen | Sie?  —  Wer | ist | das?"
     ],
     "table": [
@@ -2483,13 +2483,13 @@
      "enHint": "ذە فێرست نەیم",
      "emoji": "📛",
      "cloze": {
-      "de": "Mein ___ ist Azad.",
+      "de": "Mein ___ ist Safin.",
       "a": "Vorname",
       "d": [
        "Kühlschrank",
        "Bauch"
       ],
-      "ku": "ناڤێ من یێ ئێکێ ئازادە."
+      "ku": "ناڤێ من یێ ئێکێ سەفینە."
      }
     },
     {
@@ -2502,13 +2502,13 @@
      "enHint": "ذە سێرنەیم",
      "emoji": "👪",
      "cloze": {
-      "de": "Mein ___ ist Barwari.",
+      "de": "Mein ___ ist Nerweyi.",
       "a": "Familienname",
       "d": [
        "Supermarkt",
        "Pullover"
       ],
-      "ku": "ناڤێ بنەمالا من بەرواری یە."
+      "ku": "ناڤێ بنەمالا من نێروەیی یە."
      }
     },
     {
@@ -2714,13 +2714,13 @@
      "enHint": "ذە فاذەر",
      "emoji": "👨",
      "cloze": {
-      "de": "Mein ___ heißt Karim.",
+      "de": "Mein ___ heißt Poya.",
       "a": "Vater",
       "d": [
        "Tee",
        "Bus"
       ],
-      "ku": "ناڤێ بابێ من کەریمە."
+      "ku": "ناڤێ بابێ من پۆیایە."
      }
     },
     {
@@ -4048,7 +4048,7 @@
     "titleDe": "Trennbare Verben",
     "lines": [
      "aufstehen → Ich stehe um 7 Uhr auf.",
-     "einkaufen → Lara kauft am Samstag ein.",
+     "einkaufen → Dilin kauft am Samstag ein.",
      "پێشگر (auf, ein, an, fern) دچیتە دویماهیا رستێ."
     ],
     "table": null
@@ -4837,13 +4837,13 @@
      "enHint": "تو سینگ",
      "emoji": "🎤",
      "cloze": {
-      "de": "Lara ___ sehr schön.",
+      "de": "Dilin ___ sehr schön.",
       "a": "singt",
       "d": [
        "isst",
        "kocht"
       ],
-      "ku": "لارا گەلەک جوان دستریت."
+      "ku": "دیلین گەلەک جوان دستریت."
      }
     },
     {
@@ -7849,7 +7849,7 @@
     "titleDe": "Konjunktion denn",
     "lines": [
      "denn دوو رستان گرێ ددەت. کار ل جهێ ٢ دمینیت:",
-     "Wir feiern, denn Lara und Tim fahren nach Hause.",
+     "Wir feiern, denn Dilin und Tim fahren nach Hause.",
      "werden: ich werde · du wirst · er wird — Ich werde 30. (ئەز دبمە ٣٠ سالی)"
     ],
     "table": null
@@ -8306,7 +8306,7 @@
     "lines": [
      "ب ناڤان: ناڤ + s (Peters Bruder = برایێ پێتەری). یان: von + Dativ (der Bruder von meiner Frau).",
      "Das ist Annas Neffe. — ئەڤە برازایێ ئانایە.",
-     "Die Schwester von meinem Mann heißt Dilan. — ناڤێ خویشکا زەلامێ من دیلانە."
+     "Die Schwester von meinem Mann heißt Dilhin. — ناڤێ خویشکا زەلامێ من دیلهینە."
     ],
     "table": [
      [
@@ -9839,11 +9839,11 @@
    "concepts": [
     {
      "id": "b4_09",
-     "ku": "کۆمپانیا ڤایگاند، هوین دگەل خاتوو کایا دئاخڤن.",
+     "ku": "کۆمپانیا ڤایگاند، هوین دگەل خاتوو کۆچەر دئاخڤن.",
      "kuLat": "Kompanya vaygand, huîn dgel xatû kaya daxvn.",
-     "de": "Firma Weigand, Sie sprechen mit Frau Kaya.",
-     "deHint": "فیرما ڤایگانت، زی شپرێشن میت فراو کایا",
-     "en": "Weigand company, you're speaking to Ms Kaya.",
+     "de": "Firma Weigand, Sie sprechen mit Frau Koçer.",
+     "deHint": "فیرما ڤایگانت، زی شپرێشن میت فراو کۆچەر",
+     "en": "Weigand company, you're speaking to Ms Koçer.",
      "enHint": "",
      "emoji": "☎️"
     },
@@ -16198,9 +16198,9 @@
      },
      {
       "id": "dl1_2",
-      "who": "Azad",
-      "de": "Ich heiße Azad Barwari.",
-      "ku": "ناڤێ من ئازاد بەرواری یە."
+      "who": "Safin",
+      "de": "Ich heiße Safin Nerweyi.",
+      "ku": "ناڤێ من سەفین نێروەیی یە."
      },
      {
       "id": "dl1_3",
@@ -16210,7 +16210,7 @@
      },
      {
       "id": "dl1_4",
-      "who": "Azad",
+      "who": "Safin",
       "de": "B – A – R – W – A – R – I.",
       "ku": "ب – ا – ر – و – ا – ر – ی."
      },
@@ -16222,7 +16222,7 @@
      },
      {
       "id": "dl1_6",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Ich komme aus Kurdistan, aus Duhok.",
       "ku": "ئەز ژ کوردستانێمە، ژ دهۆکێ."
      },
@@ -16246,37 +16246,37 @@
     "lines": [
      {
       "id": "dl2_1",
-      "who": "Sara",
-      "de": "Hallo Azad! Wie geht's?",
-      "ku": "سلاڤ ئازاد! چاوانی؟"
+      "who": "Avin",
+      "de": "Hallo Poya! Wie geht's?",
+      "ku": "سلاڤ پۆیا! چاوانی؟"
      },
      {
       "id": "dl2_2",
-      "who": "Azad",
+      "who": "Poya",
       "de": "Danke, gut! Und dir?",
       "ku": "سوپاس، باشم! و تو؟"
      },
      {
       "id": "dl2_3",
-      "who": "Sara",
+      "who": "Avin",
       "de": "Auch gut. Wer ist das auf dem Foto?",
       "ku": "ئەز ژی باشم. ئەڤە کێیە ل سەر وێنەی؟"
      },
      {
       "id": "dl2_4",
-      "who": "Azad",
+      "who": "Poya",
       "de": "Das ist meine Familie. Das ist mein Vater und das ist meine Mutter.",
       "ku": "ئەڤە مالباتا منە. ئەڤە بابێ منە و ئەڤە دایکا منە."
      },
      {
       "id": "dl2_5",
-      "who": "Sara",
+      "who": "Avin",
       "de": "Und wer ist das?",
       "ku": "و ئەڤە کێیە؟"
      },
      {
       "id": "dl2_6",
-      "who": "Azad",
+      "who": "Poya",
       "de": "Das ist mein Bruder Rawa. Er lebt in Hamburg.",
       "ku": "ئەڤە برایێ منە راوا. ئەو ل هامبورگ دژیت."
      }
@@ -16386,7 +16386,7 @@
    "titleEn": "My day",
    "color": "#2B70C9",
    "dialog": {
-    "titleKu": "رۆژا لارا",
+    "titleKu": "رۆژا دیلینێ",
     "lines": [
      {
       "id": "dl5_1",
@@ -16396,7 +16396,7 @@
      },
      {
       "id": "dl5_2",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Um halb sieben. Dann frühstücke ich.",
       "ku": "ل شەش و نیڤێ. پاشان تێشتێ دخۆم."
      },
@@ -16408,7 +16408,7 @@
      },
      {
       "id": "dl5_4",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Um neun. Von Montag bis Freitag.",
       "ku": "ل نەهێ. ژ دووشەمبێ هەتا ئەینیێ."
      },
@@ -16420,7 +16420,7 @@
      },
      {
       "id": "dl5_6",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Ich koche und sehe ein bisschen fern.",
       "ku": "ئەز خوارنێ چێدکەم و هندەکێ تەماشەی تەلەفزیۆنێ دکەم."
      }
@@ -16444,7 +16444,7 @@
      },
      {
       "id": "dl6_2",
-      "who": "Karim",
+      "who": "Poya",
       "de": "Die Sonne scheint! Es sind 22 Grad.",
       "ku": "رۆژ هەیە! ٢٢ پلەیە."
      },
@@ -16456,7 +16456,7 @@
      },
      {
       "id": "dl6_4",
-      "who": "Karim",
+      "who": "Poya",
       "de": "Nein, ich schwimme nicht gern. Ich fahre lieber Fahrrad.",
       "ku": "نە، ئەز حەز ژ مەلەڤانیێ ناکەم. پتر حەز ژ پاسکیلێ دکەم."
      },
@@ -16468,7 +16468,7 @@
      },
      {
       "id": "dl6_6",
-      "who": "Karim",
+      "who": "Poya",
       "de": "Gute Idee!",
       "ku": "بیرەکا باشە!"
      }
@@ -16486,7 +16486,7 @@
     "lines": [
      {
       "id": "dl7_1",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Was hast du am Wochenende gemacht?",
       "ku": "تە ل دویماهیا حەفتیێ چ کر؟"
      },
@@ -16498,7 +16498,7 @@
      },
      {
       "id": "dl7_3",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Toll! Kannst du jetzt gut kochen?",
       "ku": "گەلەک باشە! نوکە تو دشێی باش خوارنێ چێکەی؟"
      },
@@ -16510,7 +16510,7 @@
      },
      {
       "id": "dl7_5",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Ich bin nach Köln gefahren. Ich will dort einen Deutschkurs machen.",
       "ku": "ئەز چوومە کۆلن. ئەز دخوازم ل وێرێ خولەکا ئەلمانی بکەم."
      }
@@ -16529,12 +16529,12 @@
      {
       "id": "dl8_1",
       "who": "Herr Koch",
-      "de": "Was sind Sie von Beruf, Frau Ahmad?",
-      "ku": "خاتوو ئەحمەد، کارێ هەوە چییە؟"
+      "de": "Was sind Sie von Beruf, Frau Samad?",
+      "ku": "خاتوو سەمەد، کارێ هەوە چییە؟"
      },
      {
       "id": "dl8_2",
-      "who": "Frau Ahmad",
+      "who": "Frau Samad",
       "de": "Ich bin Krankenschwester. Ich arbeite seit drei Jahren im Krankenhaus.",
       "ku": "ئەز پەرستارم. سێ سالە ئەز ل نەخۆشخانێ کار دکەم."
      },
@@ -16546,7 +16546,7 @@
      },
      {
       "id": "dl8_4",
-      "who": "Frau Ahmad",
+      "who": "Frau Samad",
       "de": "Vorher war ich in Duhok. Dort hatte ich eine eigene Praxis.",
       "ku": "بەری هنگێ ئەز ل دهۆکێ بووم. ل وێرێ کلینیکەکا من یا تایبەت هەبوو."
      },
@@ -16558,7 +16558,7 @@
      },
      {
       "id": "dl8_6",
-      "who": "Frau Ahmad",
+      "who": "Frau Samad",
       "de": "Ja, sehr. Die Kollegen sind sehr nett.",
       "ku": "بەلێ، گەلەک. هەڤالێن کاری گەلەک باشن."
      }
@@ -16577,8 +16577,8 @@
      {
       "id": "dl9_1",
       "who": "Gast",
-      "de": "Guten Abend! Ich habe ein Zimmer reserviert. Mein Name ist Barwari.",
-      "ku": "ئێڤار باش! من ژوورەک گرتییە. ناڤێ من بەرواری یە."
+      "de": "Guten Abend! Ich habe ein Zimmer reserviert. Mein Name ist Nerweyi.",
+      "ku": "ئێڤار باش! من ژوورەک گرتییە. ناڤێ من نێروەیی یە."
      },
      {
       "id": "dl9_2",
@@ -16625,8 +16625,8 @@
      {
       "id": "dl10_1",
       "who": "Ärztin",
-      "de": "Guten Tag, Herr Hassan. Was fehlt Ihnen?",
-      "ku": "رۆژ باش بەڕێز حەسەن. هوین چ دئێشن؟"
+      "de": "Guten Tag, Herr Mohammed. Was fehlt Ihnen?",
+      "ku": "رۆژ باش بەڕێز محەمەد. هوین چ دئێشن؟"
      },
      {
       "id": "dl10_2",
@@ -16774,7 +16774,7 @@
     "lines": [
      {
       "id": "dl13_1",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Sieh mal, die Jacke da! Die ist super!",
       "ku": "بەرێخۆ بدە، ئەو جاکێتە! گەلەک جوانە!"
      },
@@ -16786,7 +16786,7 @@
      },
      {
       "id": "dl13_3",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Nein, die rote. Kann ich sie anprobieren?",
       "ku": "نە، یا سۆر. ئەز دشێم ل بەر خۆ تاقی بکەم؟"
      },
@@ -16798,7 +16798,7 @@
      },
      {
       "id": "dl13_5",
-      "who": "Lara",
+      "who": "Dilin",
       "de": "Größe 38. … Und? Wie steht sie mir?",
       "ku": "قەبارێ ٣٨. … و؟ ل من چاوایە؟"
      },
@@ -16822,37 +16822,37 @@
     "lines": [
      {
       "id": "dl14_1",
-      "who": "Dilan",
-      "de": "Hallo Sara! Am Samstag werde ich 30. Ich lade dich zu meiner Party ein!",
-      "ku": "سلاڤ سارا! شەمبیێ ئەز دبمە ٣٠ سالی. ئەز تە بۆ ئاهەنگا خۆ بانگهێشت دکەم!"
+      "who": "Dilhin",
+      "de": "Hallo Huda! Am Samstag werde ich 30. Ich lade dich zu meiner Party ein!",
+      "ku": "سلاڤ هوودا! شەمبیێ ئەز دبمە ٣٠ سالی. ئەز تە بۆ ئاهەنگا خۆ بانگهێشت دکەم!"
      },
      {
       "id": "dl14_2",
-      "who": "Sara",
+      "who": "Huda",
       "de": "Oh, toll! Herzlichen Glückwunsch! Wann beginnt die Party?",
       "ku": "ئۆ، گەلەک باشە! پیرۆز بیت! ئاهەنگ کەنگی دەستپێدکەت؟"
      },
      {
       "id": "dl14_3",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Um 19 Uhr bei mir zu Hause.",
       "ku": "ل دەمژمێر ١٩، ل مالا من."
      },
      {
       "id": "dl14_4",
-      "who": "Sara",
+      "who": "Huda",
       "de": "Ich komme gern! Soll ich etwas mitbringen?",
       "ku": "ب کەیفخۆشی دێ هێم! تشتەکی دگەل خۆ بینم؟"
      },
      {
       "id": "dl14_5",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Vielleicht einen Salat?",
       "ku": "بەلکی زەڵاتەکێ؟"
      },
      {
       "id": "dl14_6",
-      "who": "Sara",
+      "who": "Huda",
       "de": "Kein Problem. Bis Samstag!",
       "ku": "چ ئاریشە نینن. هەتا شەمبیێ!"
      }
@@ -16871,12 +16871,12 @@
      {
       "id": "dl15_1",
       "who": "Lana",
-      "de": "Hallo Azad! Wie lange wohnst du schon in Leipzig?",
-      "ku": "سلاڤ ئازاد! چەند دەمە تو ل لایپزیگێ دژی؟"
+      "de": "Hallo Safin! Wie lange wohnst du schon in Leipzig?",
+      "ku": "سلاڤ سەفین! چەند دەمە تو ل لایپزیگێ دژی؟"
      },
      {
       "id": "dl15_2",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Seit drei Monaten. Ich bin im Sommer umgezogen.",
       "ku": "ژ سێ هەیڤان ڤە. ئەز هاڤینێ هاتمە ڤێرێ."
      },
@@ -16888,7 +16888,7 @@
      },
      {
       "id": "dl15_4",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Ja, aber am Anfang war es schwer, weil ich niemanden kannte.",
       "ku": "بەلێ، بەلێ ل دەستپێکێ ب زەحمەت بوو، چونکی من کەس نەدناسی."
      },
@@ -16900,7 +16900,7 @@
      },
      {
       "id": "dl15_6",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Sehr! Ich telefoniere jeden Abend mit meiner Mutter.",
       "ku": "گەلەک! هەر ئێڤار ئەز دگەل دایکا خۆ تەلەفۆنێ دکەم."
      },
@@ -16912,7 +16912,7 @@
      },
      {
       "id": "dl15_8",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Gern! Vielen Dank für die Einladung.",
       "ku": "ب دل! گەلەک سوپاس بۆ داخوازیێ."
      }
@@ -16996,13 +16996,13 @@
      },
      {
       "id": "dl17_2",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Ja. Als Vorspeise hätte ich gern einen Salat.",
       "ku": "بەلێ. وەکی خوارنا دەستپێکێ ئەز سەلاتەکێ دخوازم."
      },
      {
       "id": "dl17_3",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Und ich nehme die Linsensuppe.",
       "ku": "و ئەز شۆربا نیسکێ دبەم."
      },
@@ -17014,13 +17014,13 @@
      },
      {
       "id": "dl17_5",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Das Gemüse mit Reis, bitte. Ich esse kein Fleisch.",
       "ku": "سەوزە دگەل برنجی، هیڤییە. ئەز گۆشتی ناخۆم."
      },
      {
       "id": "dl17_6",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Für mich das Hähnchen. Haben Sie auch scharfe Soße?",
       "ku": "بۆ من مریشک. سۆسا تیژ ژی ل نک هەوە هەیە؟"
      },
@@ -17032,7 +17032,7 @@
      },
      {
       "id": "dl17_8",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Zwei Gläser Wasser, bitte. Und später zahlen wir zusammen.",
       "ku": "دوو پەرداخێن ئاڤێ، هیڤییە. و پاشی ئەم پێکڤە پارەی ددەین."
      }
@@ -17050,49 +17050,49 @@
     "lines": [
      {
       "id": "dl18_1",
-      "who": "Frau Kaya",
-      "de": "Firma Weigand, guten Tag. Sie sprechen mit Frau Kaya.",
-      "ku": "کۆمپانیا ڤایگاند، رۆژ باش. هوین دگەل خاتوو کایا دئاخڤن."
+      "who": "Frau Koçer",
+      "de": "Firma Weigand, guten Tag. Sie sprechen mit Frau Koçer.",
+      "ku": "کۆمپانیا ڤایگاند، رۆژ باش. هوین دگەل خاتوو کۆچەر دئاخڤن."
      },
      {
       "id": "dl18_2",
-      "who": "Herr Ahmadi",
-      "de": "Guten Tag, hier ist Ahmadi. Kann ich bitte mit Herrn Schulz sprechen?",
-      "ku": "رۆژ باش، ئەز ئەحمەدیمە. دشێم دگەل کاک شولتس باخڤم؟"
+      "who": "Herr Duski",
+      "de": "Guten Tag, hier ist Duski. Kann ich bitte mit Herrn Schulz sprechen?",
+      "ku": "رۆژ باش، ئەز دۆسکیمە. دشێم دگەل کاک شولتس باخڤم؟"
      },
      {
       "id": "dl18_3",
-      "who": "Frau Kaya",
+      "who": "Frau Koçer",
       "de": "Herr Schulz ist leider in einer Besprechung. Kann ich etwas ausrichten?",
       "ku": "مخابن کاک شولتس د کۆبوونێ دایە. دشێم پەیامەکێ بگەهینمێ؟"
      },
      {
       "id": "dl18_4",
-      "who": "Herr Ahmadi",
+      "who": "Herr Duski",
       "de": "Ja, bitte. Mein Paket ist noch nicht angekommen.",
       "ku": "بەلێ، هیڤییە. پاکەتا من هێشتا نەگەهشتییە."
      },
      {
       "id": "dl18_5",
-      "who": "Frau Kaya",
+      "who": "Frau Koçer",
       "de": "Das tut mir leid. Wenn Sie mir Ihre Nummer geben, ruft er Sie zurück.",
       "ku": "ببوورە. ئەگەر ژمارا خۆ بدەنە من، ئەو دێ تەلەفۆنێ بۆ هەوە کەتەڤە."
      },
      {
       "id": "dl18_6",
-      "who": "Herr Ahmadi",
+      "who": "Herr Duski",
       "de": "Gern: null-eins-sieben-sechs, drei-vier-fünf-zwei-acht.",
       "ku": "ب دل: ٠١٧٦، ٣٤٥٢٨."
      },
      {
       "id": "dl18_7",
-      "who": "Frau Kaya",
+      "who": "Frau Koçer",
       "de": "Danke. Wenn er fertig ist, sage ich ihm Bescheid.",
       "ku": "سوپاس. دەمێ ئەو خلاس دبیت، ئەز دێ بێژمێ."
      },
      {
       "id": "dl18_8",
-      "who": "Herr Ahmadi",
+      "who": "Herr Duski",
       "de": "Vielen Dank! Auf Wiederhören!",
       "ku": "گەلەک سوپاس! ب خاترا هەوە!"
      }
@@ -17110,7 +17110,7 @@
     "lines": [
      {
       "id": "dl19_1",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Hallo! Bist du neu hier im Verein?",
       "ku": "سلاڤ! ئەرێ تو ل ڤێرێ د یانێ دا نووی؟"
      },
@@ -17122,7 +17122,7 @@
      },
      {
       "id": "dl19_3",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Keine Sorge! Interessierst du dich schon lange für Volleyball?",
       "ku": "نە ترسە! ژ مێژە تو حەز ژ ڤۆلیبۆلێ دکەی؟"
      },
@@ -17134,7 +17134,7 @@
      },
      {
       "id": "dl19_5",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Dann solltest du dich am Anfang nicht zu viel bewegen.",
       "ku": "هنگی باشترە ل دەستپێکێ تو خۆ زێدە نەوەستینی."
      },
@@ -17146,7 +17146,7 @@
      },
      {
       "id": "dl19_7",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Dienstags und donnerstags um sieben. Ich freue mich auf das Spiel am Samstag!",
       "ku": "سێشەمب و پێنجشەمبیان دەمژمێر حەفت. ئەز ب هیڤیا یاریا شەمبیێ مە!"
      },
@@ -17171,12 +17171,12 @@
      {
       "id": "dl20_1",
       "who": "Frau Neumann",
-      "de": "Guten Tag, Frau Barzani. Bitte setzen Sie sich.",
-      "ku": "رۆژ باش، خاتوو بارزانی. هیڤییە روینن."
+      "de": "Guten Tag, Frau Duski. Bitte setzen Sie sich.",
+      "ku": "رۆژ باش، خاتوو دۆسکی. هیڤییە روینن."
      },
      {
       "id": "dl20_2",
-      "who": "Shilan",
+      "who": "Huda",
       "de": "Danke. Ich freue mich, dass ich hier sein darf.",
       "ku": "سوپاس. ئەز دلخۆشم کو ئەز دشێم ل ڤێرێ بم."
      },
@@ -17188,7 +17188,7 @@
      },
      {
       "id": "dl20_4",
-      "who": "Shilan",
+      "who": "Huda",
       "de": "In Duhok habe ich Informatik studiert. Danach musste ich zwei Jahre arbeiten.",
       "ku": "ل دهۆکێ من کۆمپیوتەر خواند. پاشی دڤیا دوو سالان کار بکەم."
      },
@@ -17200,7 +17200,7 @@
      },
      {
       "id": "dl20_6",
-      "who": "Shilan",
+      "who": "Huda",
       "de": "Ich wollte neue Erfahrungen sammeln. Ich glaube, dass ich hier viel lernen kann.",
       "ku": "من دڤیا ئەزموونێن نوو کۆم بکەم. ئەز هزر دکەم کو ئەز دشێم ل ڤێرێ گەلەک فێر ببم."
      },
@@ -17212,7 +17212,7 @@
      },
      {
       "id": "dl20_8",
-      "who": "Shilan",
+      "who": "Huda",
       "de": "Ja, gern!",
       "ku": "بەلێ، ب دل!"
      }
@@ -17230,7 +17230,7 @@
     "lines": [
      {
       "id": "dl21_1",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Nächste Woche hat Mama Geburtstag. Was schenken wir ihr?",
       "ku": "حەفتیا بهێت رۆژبوونا دایکێ یە. ئەم دێ چ دیاری دەینێ؟"
      },
@@ -17242,19 +17242,19 @@
      },
      {
       "id": "dl21_3",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Gute Idee! Und ich backe ihr eine Torte.",
       "ku": "بیرەکا باشە! و ئەز دێ کێکەکێ بۆ چێکەم."
      },
      {
       "id": "dl21_4",
       "who": "Sherwan",
-      "de": "Laden wir auch Onkel Karim ein?",
-      "ku": "ئەرێ ئەم مامێ کەریم ژی داخواز بکەین؟"
+      "de": "Laden wir auch Onkel Poya ein?",
+      "ku": "ئەرێ ئەم مامێ پۆیا ژی داخواز بکەین؟"
      },
      {
       "id": "dl21_5",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Ja, natürlich. Ich schicke ihm heute eine Nachricht.",
       "ku": "بەلێ، هەلبەت. ئەز ئەڤرۆ پەیامەکێ بۆ دهنێرم."
      },
@@ -17266,7 +17266,7 @@
      },
      {
       "id": "dl21_7",
-      "who": "Avin",
+      "who": "Huda",
       "de": "Das mache ich. Ich kann das gut.",
       "ku": "ئەز دێ کەم. ئەز ڤێ باش دزانم."
      },
@@ -17290,7 +17290,7 @@
     "lines": [
      {
       "id": "dl22_1",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Hey Lana, hast du am Samstag schon was vor?",
       "ku": "هەی لانا، ئەرێ تە شەمبیێ چ پلان هەیە؟"
      },
@@ -17302,7 +17302,7 @@
      },
      {
       "id": "dl22_3",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Und am Nachmittag? Hast du Lust auf ein Konzert?",
       "ku": "و پشتی نیڤرۆ؟ حەزا تە ل کۆنسێرتەکێ هەیە؟"
      },
@@ -17314,7 +17314,7 @@
      },
      {
       "id": "dl22_5",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Kurdische Musik im Park. Der Eintritt ist frei.",
       "ku": "مۆسیقا کوردی ل پارکێ. چوونەژوور ب بێ پارە یە."
      },
@@ -17326,7 +17326,7 @@
      },
      {
       "id": "dl22_7",
-      "who": "Rawand",
+      "who": "Metin",
       "de": "Ich gehe trotzdem hin. Wir könnten einen Schirm mitnehmen.",
       "ku": "ئەز دیسا ژی دچم. ئەم دشێین سیبەرەکێ دگەل خۆ ببەین."
      },
@@ -17356,7 +17356,7 @@
      },
      {
       "id": "dl23_2",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Ja, ich suche eine neue Kamera. Meine alte ist kaputt.",
       "ku": "بەلێ، ئەز ل کامێرایەکا نوو دگەڕێم. یا من یا کەڤن خراب بوو."
      },
@@ -17368,7 +17368,7 @@
      },
      {
       "id": "dl23_4",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Und die andere? Ist sie besser?",
       "ku": "و یا دی؟ ئەرێ باشترە؟"
      },
@@ -17380,7 +17380,7 @@
      },
      {
       "id": "dl23_6",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Hm. Ich möchte eine praktische Kamera für die Reise.",
       "ku": "هم. من کامێرایەکا ب کێر هاتی بۆ گەشتێ دڤێت."
      },
@@ -17392,7 +17392,7 @@
      },
      {
       "id": "dl23_8",
-      "who": "Dilan",
+      "who": "Dilhin",
       "de": "Gut, die nehme ich. Kann ich mit Karte zahlen?",
       "ku": "باشە، ئەز وێ دبەم. دشێم ب کارتێ پارەی بدەم؟"
      }
@@ -17410,7 +17410,7 @@
     "lines": [
      {
       "id": "dl24_1",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Entschuldigung, mein Handy ist kaputt. Können Sie es reparieren?",
       "ku": "ببوورە، مۆبایلا من یا خرابە. هوین دشێن چاک بکەن؟"
      },
@@ -17422,7 +17422,7 @@
      },
      {
       "id": "dl24_3",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Der Akku lädt nicht mehr, und der Bildschirm bleibt schwarz.",
       "ku": "پاتری ئیدی شەحن نابیت، و شاشە رەش دمینیت."
      },
@@ -17434,7 +17434,7 @@
      },
      {
       "id": "dl24_5",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Und meine Fotos? Werden die gelöscht?",
       "ku": "و وێنەیێن من؟ ئەرێ دێ هێنە ژێبرن؟"
      },
@@ -17446,7 +17446,7 @@
      },
      {
       "id": "dl24_7",
-      "who": "Azad",
+      "who": "Safin",
       "de": "Super. Und was kostet die Reparatur?",
       "ku": "زۆر باشە. و چاککرن ب چەندە؟"
      },
@@ -17531,8 +17531,8 @@
      {
       "id": "dl26_1",
       "who": "Gast",
-      "de": "Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Ahmed.",
-      "ku": "ئێڤار باش. من ژوورەک گرتییە. ناڤێ من ئەحمەدە."
+      "de": "Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Bnar.",
+      "ku": "ئێڤار باش. من ژوورەک گرتییە. ناڤێ من بنارە."
      },
      {
       "id": "dl26_2",

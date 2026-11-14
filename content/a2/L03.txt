@@ -44,13 +44,13 @@ Alles war lecker! | ئالەس ڤار لێکەر | هەمی تشت ب تام ب�
 
 @D ل خوارنگەهێ
 Kellner: Guten Abend! Haben Sie schon gewählt? || ئێڤار باش! هەوە هەلبژارت؟
-Avin: Ja. Als Vorspeise hätte ich gern einen Salat. || بەلێ. وەکی خوارنا دەستپێکێ ئەز سەلاتەکێ دخوازم.
-Rawand: Und ich nehme die Linsensuppe. || و ئەز شۆربا نیسکێ دبەم.
+Huda: Ja. Als Vorspeise hätte ich gern einen Salat. || بەلێ. وەکی خوارنا دەستپێکێ ئەز سەلاتەکێ دخوازم.
+Metin: Und ich nehme die Linsensuppe. || و ئەز شۆربا نیسکێ دبەم.
 Kellner: Gern. Und als Hauptgericht? || ب دل. و خوارنا سەرەکی؟
-Avin: Das Gemüse mit Reis, bitte. Ich esse kein Fleisch. || سەوزە دگەل برنجی، هیڤییە. ئەز گۆشتی ناخۆم.
-Rawand: Für mich das Hähnchen. Haben Sie auch scharfe Soße? || بۆ من مریشک. سۆسا تیژ ژی ل نک هەوە هەیە؟
+Huda: Das Gemüse mit Reis, bitte. Ich esse kein Fleisch. || سەوزە دگەل برنجی، هیڤییە. ئەز گۆشتی ناخۆم.
+Metin: Für mich das Hähnchen. Haben Sie auch scharfe Soße? || بۆ من مریشک. سۆسا تیژ ژی ل نک هەوە هەیە؟
 Kellner: Ja, natürlich. Und zu trinken? || بەلێ، هەلبەت. و بۆ ڤەخوارنێ؟
-Avin: Zwei Gläser Wasser, bitte. Und später zahlen wir zusammen. || دوو پەرداخێن ئاڤێ، هیڤییە. و پاشی ئەم پێکڤە پارەی ددەین.
+Huda: Zwei Gläser Wasser, bitte. Und später zahlen wir zusammen. || دوو پەرداخێن ئاڤێ، هیڤییە. و پاشی ئەم پێکڤە پارەی ددەین.
 
 @G 🧩 | Indefinitpronomen: einer, eins, eine, welche, keiner | جهێناڤێن نەدیار: ئێک، هندەک، چ
 E: Statt Nomen: einer/eins/eine (ein-), keiner/keins/keine (kein-), welche (Plural ohne Artikel). || ل جهێ ناڤی: einer/eins/eine = ئێک، keiner = چ … نینە، welche = هندەک (کۆ).

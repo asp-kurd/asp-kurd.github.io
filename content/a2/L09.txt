@@ -43,13 +43,13 @@ Das alte Sofa war genauso bequem wie das neue. | داس ئالتە زۆفا ڤا
 
 @D ل فرۆشگەها ئەلێکترۆنیکێ
 Verkäufer: Kann ich Ihnen helfen? || دشێم هاریکاریا هەوە بکەم؟
-Dilan: Ja, ich suche eine neue Kamera. Meine alte ist kaputt. || بەلێ، ئەز ل کامێرایەکا نوو دگەڕێم. یا من یا کەڤن خراب بوو.
+Dilhin: Ja, ich suche eine neue Kamera. Meine alte ist kaputt. || بەلێ، ئەز ل کامێرایەکا نوو دگەڕێم. یا من یا کەڤن خراب بوو.
 Verkäufer: Diese hier ist sehr gut und leicht. || ئەڤە گەلەک باشە و سڤکە.
-Dilan: Und die andere? Ist sie besser? || و یا دی؟ ئەرێ باشترە؟
+Dilhin: Und die andere? Ist sie besser? || و یا دی؟ ئەرێ باشترە؟
 Verkäufer: Sie macht schärfere Fotos, aber sie ist auch teurer. || وێنەیێن رۆهنتر دگریت، بەلێ ب بهاترە ژی.
-Dilan: Hm. Ich möchte eine praktische Kamera für die Reise. || هم. من کامێرایەکا ب کێر هاتی بۆ گەشتێ دڤێت.
+Dilhin: Hm. Ich möchte eine praktische Kamera für die Reise. || هم. من کامێرایەکا ب کێر هاتی بۆ گەشتێ دڤێت.
 Verkäufer: Dann nehmen Sie die kleine. Sie ist fast so gut wie die große. || هنگی یا بچووک ببەن. هۆسا وەکی یا مەزن باشە.
-Dilan: Gut, die nehme ich. Kann ich mit Karte zahlen? || باشە، ئەز وێ دبەم. دشێم ب کارتێ پارەی بدەم؟
+Dilhin: Gut, die nehme ich. Kann ich mit Karte zahlen? || باشە، ئەز وێ دبەم. دشێم ب کارتێ پارەی بدەم؟
 
 @G 🎨 | Adjektivdeklination nach ein-, kein-, mein- | سالۆخ پشتی ein / kein / mein
 E: Nach ein-/kein-/mein- zeigt das Adjektiv das Genus: -er (m, Nom.), -es (n), -e (f). Im Akkusativ maskulin: -en. Im Dativ und Plural: -en. || پشتی ein/kein/mein، سالۆخ رەگەزێ نیشان ددەت: -er (نێر)، -es (بێلایەن)، -e (مێ). Akkusativ نێر: -en. Dativ و کۆ: -en.

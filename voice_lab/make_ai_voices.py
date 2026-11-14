@@ -227,6 +227,19 @@ def quiz_filled(q: str, a: str) -> str:
     return re.sub(r"\s+([.?!,])", lambda m: m.group(1), q)
 
 
+# 🗣️ ناڤێن کوردی بۆ خواندنا دروست ل دەنگێ ئەلمانی / ئینگلیزی (تنێ دەنگ، نە نڤیسین)
+SAY_AS = {
+    "de": {"Koçer": "Kotscher"}, "de_f": {"Koçer": "Kotscher"},
+    "en": {"Koçer": "Kotcher"}, "en_m": {"Koçer": "Kotcher"},
+}
+
+
+def say_as(t: str, lang: str) -> str:
+    for a, b in SAY_AS.get(lang, {}).items():
+        t = t.replace(a, b)
+    return t
+
+
 def clean(t: str) -> str:
     t = t.replace("...", " ").replace("…", " ").replace("___", " ").replace(" / ", ", ").replace("–", ",")
     return " ".join(t.split())
@@ -356,7 +369,7 @@ def main():
             with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as t:
                 tmp = t.name
             try:
-                say(engine, clean(text), tmp, scale)
+                say(engine, say_as(clean(text), lang), tmp, scale)
                 to_mp3(tmp, OUT / lang / f"{fnv(key)}.mp3", lang)
                 total_new += 1
             except Exception as e:  # ئێک دەنگ سەرنەکەفت: بەردەوام بە

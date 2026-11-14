@@ -1127,7 +1127,7 @@ class _AfterLogout extends StatelessWidget {
 /// ✍️ ناڤ: هەر زمانەک و هەر تشتەک — تنێ ڤالا نەبیت
 bool fullNameOk(String s) => s.trim().isNotEmpty;
 
-/// 🏷️ نازناڤ: ناڤێ ئێکێ + ASP (بۆ نموونە «Azad ASP»)
+/// 🏷️ نازناڤ: ناڤێ ئێکێ + ASP (بۆ نموونە «Safin ASP»)
 String aspHandle(String fullName) {
   final first = fullName.trim().split(RegExp(r'\s+')).firstOrNull ?? '';
   return first.isEmpty ? 'ASP' : '$first ASP';

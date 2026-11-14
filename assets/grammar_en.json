@@ -121,11 +121,11 @@
        "aku": "ئەڤە پەرتووکا وێ یە."
       },
       {
-       "q": "Lara sees ___. (he)",
-       "qku": "لارا وی دبینیت.",
+       "q": "Dilin sees ___. (he)",
+       "qku": "دیلین وی دبینیت.",
        "cue": "him",
-       "a": "Lara sees him.",
-       "aku": "لارا وی دبینیت."
+       "a": "Dilin sees him.",
+       "aku": "دیلین وی دبینیت."
       },
       {
        "q": "The bag is ___. (I)",
@@ -189,8 +189,8 @@
      ],
      "examples": [
       {
-       "de": "I am Azad.",
-       "ku": "ئەز ئازادم."
+       "de": "I am Poya.",
+       "ku": "ئەز پۆیامە."
       },
       {
        "de": "She is a teacher.",
@@ -205,13 +205,13 @@
       {
        "q": "Who are you?",
        "qku": "تو کیی؟",
-       "cue": "Azad",
-       "a": "I am Azad.",
-       "aku": "ئەز ئازادم."
+       "cue": "Poya",
+       "a": "I am Poya.",
+       "aku": "ئەز پۆیامە."
       },
       {
-       "q": "Where is Sara from?",
-       "qku": "سارا ژ کیڤەیە؟",
+       "q": "Where is Avin from?",
+       "qku": "ئاڤین ژ کیڤەیە؟",
        "cue": "Iraq",
        "a": "She is from Iraq.",
        "aku": "ئەو ژ عیراقێ یە."
@@ -346,7 +346,7 @@
       [
        "What",
        "What is your name?",
-       "My name is Lara."
+       "My name is Dilin."
       ],
       [
        "Where",
@@ -380,7 +380,7 @@
      ],
      "practice": [
       {
-       "q": "My name is Sara. → Question?",
+       "q": "My name is Huda. → Question?",
        "qku": "پرسیارێ چێکە",
        "cue": "what",
        "a": "What is your name?",
@@ -670,11 +670,11 @@
        "aku": "ئەڤە خویشکا منە."
       },
       {
-       "q": "What is his name? (Karim)",
+       "q": "What is his name? (Poya)",
        "qku": "ناڤێ وی چییە؟",
        "cue": "",
-       "a": "His name is Karim.",
-       "aku": "ناڤێ وی کەریمە."
+       "a": "His name is Poya.",
+       "aku": "ناڤێ وی پۆیایە."
       },
       {
        "q": "Is this their car?",
@@ -828,8 +828,8 @@
        "aku": "بەلێ، دوو زارۆک من هەنە."
       },
       {
-       "q": "Does Karim have a car?",
-       "qku": "ئەرێ ترومبێلا کەریمی هەیە؟",
+       "q": "Does Poya have a car?",
+       "qku": "ئەرێ ترومبێلا پۆیای هەیە؟",
        "cue": "yes",
        "a": "Yes, he has a car.",
        "aku": "بەلێ، ترومبێلا وی هەیە."
@@ -918,8 +918,8 @@
        "aku": "ئەز دەمژمێر حەفت ڕادبم."
       },
       {
-       "q": "Where does Sara work?",
-       "qku": "سارا ل کیڤە کار دکەت؟",
+       "q": "Where does Avin work?",
+       "qku": "ئاڤین ل کیڤە کار دکەت؟",
        "cue": "a hospital",
        "a": "She works in a hospital.",
        "aku": "ئەو ل نەخۆشخانەکێ کار دکەت."
@@ -1767,8 +1767,8 @@
        "aku": "ئەز پەرتووکەکێ دخوینم."
       },
       {
-       "q": "What is Sara doing? (cook)",
-       "qku": "سارا چ دکەت؟",
+       "q": "What is Avin doing? (cook)",
+       "qku": "ئاڤین چ دکەت؟",
        "cue": "",
        "a": "She is cooking.",
        "aku": "ئەو خوارنێ چێدکەت."
@@ -1939,8 +1939,8 @@
        "ku": "رۆژا ئەینیێ ئەم چووینە دهۆکێ."
       },
       {
-       "de": "Did you see Karim? – No, I didn't.",
-       "ku": "ئەرێ تە کەریم دیت؟ – نەخێر."
+       "de": "Did you see Poya? – No, I didn't.",
+       "ku": "ئەرێ تە پۆیا دیت؟ – نەخێر."
       }
      ],
      "practice": [
@@ -2041,15 +2041,15 @@
      ],
      "practice": [
       {
-       "q": "Do you know Karim? (yes)",
-       "qku": "ئەرێ تو کەریمی دناسی؟",
+       "q": "Do you know Poya? (yes)",
+       "qku": "ئەرێ تو پۆیای دناسی؟",
        "cue": "",
        "a": "Yes, I know him.",
        "aku": "بەلێ، ئەز وی دناسم."
       },
       {
-       "q": "Do you like Sara? (yes)",
-       "qku": "ئەرێ تو حەز ژ سارایێ دکەی؟",
+       "q": "Do you like Huda? (yes)",
+       "qku": "ئەرێ تو حەز ژ هوودایێ دکەی؟",
        "cue": "",
        "a": "Yes, I like her.",
        "aku": "بەلێ، حەز ژ وێ دکەم."
@@ -2144,11 +2144,11 @@
        "aku": "باشتر"
       },
       {
-       "q": "Who is the tallest? (Karim)",
+       "q": "Who is the tallest? (Poya)",
        "qku": "کی درێژترینە؟",
        "cue": "",
-       "a": "Karim is the tallest.",
-       "aku": "کەریم درێژترینە."
+       "a": "Poya is the tallest.",
+       "aku": "پۆیا درێژترینە."
       }
      ],
      "more": [

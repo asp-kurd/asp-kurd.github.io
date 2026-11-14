@@ -380,14 +380,14 @@
       [
        "Wie heißen Sie?",
        "ناڤێ هەوە چییە؟ (فەرمی)",
-       "Ich heiße Azad.",
-       "ناڤێ من ئازادە."
+       "Ich heiße Poya.",
+       "ناڤێ من پۆیایە."
       ],
       [
        "Wie heißt du?",
        "ناڤێ تە چییە؟",
-       "Mein Name ist Sara.",
-       "ناڤێ من سارایە."
+       "Mein Name ist Avin.",
+       "ناڤێ من ئاڤینە."
       ],
       [
        "Woher kommen Sie?",
@@ -3174,9 +3174,9 @@
        "وێ ئیمەیلەک نڤیسی."
       ],
       [
-       "Ali repariert das Auto.",
-       "Ali hat das Auto repariert.",
-       "عەلی ترومبێل چێکر."
+       "Poya repariert das Auto.",
+       "Poya hat das Auto repariert.",
+       "پۆیا ترومبێل چێکر."
       ],
       [
        "Er bezahlt die Rechnung.",
@@ -3184,9 +3184,9 @@
        "وی پارێ حسابێ دا."
       ],
       [
-       "Sara ruft mich an.",
-       "Sara hat mich angerufen.",
-       "سارایێ تەلەفۆن بۆ من کر."
+       "Avin ruft mich an.",
+       "Avin hat mich angerufen.",
+       "ئاڤینێ تەلەفۆن بۆ من کر."
       ]
      ]
     },
@@ -3612,9 +3612,9 @@
     {
      "t": "ul",
      "items": [
-      "**Azad:** Hast du meinen Schlüssel gesehen? — ئەرێ تە کلیلا من دیتییە؟",
-      "**Sara:** Nein, ich habe deinen Schlüssel nicht gesehen. Suchst du auch deinen Pass? — نەخێر، من کلیلا تە نەدیتییە. ئەرێ تو ل پاسپۆرتا خۆ ژی دگەڕی؟",
-      "**Azad:** Ja, ich habe meinen Pass gestern auf den Tisch gelegt. — بەلێ، دوهی من پاسپۆرتا خۆ دانابوو سەر مێزێ."
+      "**Poya:** Hast du meinen Schlüssel gesehen? — ئەرێ تە کلیلا من دیتییە؟",
+      "**Avin:** Nein, ich habe deinen Schlüssel nicht gesehen. Suchst du auch deinen Pass? — نەخێر، من کلیلا تە نەدیتییە. ئەرێ تو ل پاسپۆرتا خۆ ژی دگەڕی؟",
+      "**Poya:** Ja, ich habe meinen Pass gestern auf den Tisch gelegt. — بەلێ، دوهی من پاسپۆرتا خۆ دانابوو سەر مێزێ."
      ]
     },
     {
@@ -4983,7 +4983,7 @@
        "a": "einen"
       },
       {
-       "q": "Das ist ______ Auto (das) von Ali.",
+       "q": "Das ist ______ Auto (das) von Poya.",
        "a": "ein"
       },
       {
@@ -5139,7 +5139,7 @@
        "a": "haben / gewohnt"
       },
       {
-       "q": "Ali geht nach Hause. → Ali ______ nach Hause ______.",
+       "q": "Poya geht nach Hause. → Poya ______ nach Hause ______.",
        "a": "ist / gegangen"
       },
       {

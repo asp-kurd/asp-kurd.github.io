@@ -42,14 +42,14 @@ Meine Eltern sagen, dass ich mehr lernen soll. | ماینە ئێلتەرن زا�
 Ich bin sicher, dass du es schaffst. | ئیش بین زیشەر، داس دوو ئێس شافست | ئەز پشتڕاستم کو تو دێ شێی. | I'm sure you'll make it. | 💪
 
 @D دیدارا کاری
-Frau Neumann: Guten Tag, Frau Barzani. Bitte setzen Sie sich. || رۆژ باش، خاتوو بارزانی. هیڤییە روینن.
-Shilan: Danke. Ich freue mich, dass ich hier sein darf. || سوپاس. ئەز دلخۆشم کو ئەز دشێم ل ڤێرێ بم.
+Frau Neumann: Guten Tag, Frau Duski. Bitte setzen Sie sich. || رۆژ باش، خاتوو دۆسکی. هیڤییە روینن.
+Huda: Danke. Ich freue mich, dass ich hier sein darf. || سوپاس. ئەز دلخۆشم کو ئەز دشێم ل ڤێرێ بم.
 Frau Neumann: Erzählen Sie doch etwas über Ihre Ausbildung. || تشتەکی ل سەر خواندنا خۆ یا پیشەیی بێژن.
-Shilan: In Duhok habe ich Informatik studiert. Danach musste ich zwei Jahre arbeiten. || ل دهۆکێ من کۆمپیوتەر خواند. پاشی دڤیا دوو سالان کار بکەم.
+Huda: In Duhok habe ich Informatik studiert. Danach musste ich zwei Jahre arbeiten. || ل دهۆکێ من کۆمپیوتەر خواند. پاشی دڤیا دوو سالان کار بکەم.
 Frau Neumann: Und warum wollten Sie nach Deutschland kommen? || و بۆچی هەوە دڤیا بهێنە ئەلمانیا؟
-Shilan: Ich wollte neue Erfahrungen sammeln. Ich glaube, dass ich hier viel lernen kann. || من دڤیا ئەزموونێن نوو کۆم بکەم. ئەز هزر دکەم کو ئەز دشێم ل ڤێرێ گەلەک فێر ببم.
+Huda: Ich wollte neue Erfahrungen sammeln. Ich glaube, dass ich hier viel lernen kann. || من دڤیا ئەزموونێن نوو کۆم بکەم. ئەز هزر دکەم کو ئەز دشێم ل ڤێرێ گەلەک فێر ببم.
 Frau Neumann: Sehr gut. Können Sie schon im Mai anfangen? || گەلەک باشە. هوین دشێن ژ گولانێ دەستپێبکەن؟
-Shilan: Ja, gern! || بەلێ، ب دل!
+Huda: Ja, gern! || بەلێ، ب دل!
 
 @G ⏮️ | Präteritum der Modalverben | دەمێ بۆری یێ کارێن یاریدەدەر
 E: Im Präteritum haben Modalverben kein Umlaut und die Endung -te: können ➔ konnte. || د دەمێ بۆری دا: Umlaut نامینیت و -te زێدە دبیت: können ➔ konnte.

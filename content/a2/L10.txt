@@ -42,13 +42,13 @@ Die Verbindung ist schlecht. | دی فێربیندونگ ئیست شلێشت | �
 Er ist sehr unfreundlich. | ئێر ئیست زێر ئونفرۆیندلیش | ئەو گەلەک بێ رێزە. | He is very unfriendly. | 😒
 
 @D مۆبایلا خراب
-Azad: Entschuldigung, mein Handy ist kaputt. Können Sie es reparieren? || ببوورە، مۆبایلا من یا خرابە. هوین دشێن چاک بکەن؟
+Safin: Entschuldigung, mein Handy ist kaputt. Können Sie es reparieren? || ببوورە، مۆبایلا من یا خرابە. هوین دشێن چاک بکەن؟
 Mitarbeiterin: Was für ein Problem hat es denn? || چ کێشە پێڤە هەیە؟
-Azad: Der Akku lädt nicht mehr, und der Bildschirm bleibt schwarz. || پاتری ئیدی شەحن نابیت، و شاشە رەش دمینیت.
+Safin: Der Akku lädt nicht mehr, und der Bildschirm bleibt schwarz. || پاتری ئیدی شەحن نابیت، و شاشە رەش دمینیت.
 Mitarbeiterin: Das Handy wird zuerst getestet. Das dauert zwei Tage. || پێشی مۆبایل دهێتە تاقیکرن. دوو رۆژان دکێشیت.
-Azad: Und meine Fotos? Werden die gelöscht? || و وێنەیێن من؟ ئەرێ دێ هێنە ژێبرن؟
+Safin: Und meine Fotos? Werden die gelöscht? || و وێنەیێن من؟ ئەرێ دێ هێنە ژێبرن؟
 Mitarbeiterin: Nein, keine Sorge. Ihre Daten werden gespeichert. || نەخێر، نە ترسە. زانیاریێن هەوە دهێنە پاراستن.
-Azad: Super. Und was kostet die Reparatur? || زۆر باشە. و چاککرن ب چەندە؟
+Safin: Super. Und was kostet die Reparatur? || زۆر باشە. و چاککرن ب چەندە؟
 Mitarbeiterin: Das sagen wir Ihnen, wenn das Handy getestet ist. Wir rufen Sie an. || دەمێ مۆبایل هاتە تاقیکرن، ئەم دێ بێژینە هەوە. ئەم دێ تەلەفۆنێ بۆ هەوە کەین.
 
 @G 🏭 | Passiv Präsens | Passiv (دهێتە کرن)

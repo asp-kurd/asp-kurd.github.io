@@ -42,7 +42,7 @@ Gute Erholung! | گووتە ئێرهۆلونگ | بێهنڤەدانەکا خۆش
 @CZ Ich fahre ___ Wochen in Urlaub, ___ meinen Laptop. | für zwei … ohne | in zwei … mit; für zwei … mit | ئەز دوو حەفتییان دچمە بێهنڤەدانێ، بێ لاپتۆپا خۆ.
 
 @D ل رێسەپشنا هۆتێلێ
-Gast: Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Ahmed. || ئێڤار باش. من ژوورەک گرتییە. ناڤێ من ئەحمەدە.
+Gast: Guten Abend. Ich habe ein Zimmer reserviert. Mein Name ist Bnar. || ئێڤار باش. من ژوورەک گرتییە. ناڤێ من بنارە.
 Rezeption: Herzlich willkommen! Ein Einzelzimmer mit Frühstück für drei Nächte, richtig? || ب خێر بێن! ژوورەکا ئێک کەسی دگەل تێشتێ بۆ سێ شەڤان، راستە؟
 Gast: Ja, genau. Ab wann gibt es Frühstück? || بەلێ، تەمام. تێشت ژ دەمژمێر چەند هەیە؟
 Rezeption: Von sieben Uhr an, im Erdgeschoss. || ژ دەمژمێر حەفت ڤە، ل قاتا ئێکێ.

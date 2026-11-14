@@ -106,13 +106,13 @@
 "unit_s1a": {
 "de": [
 {
-"s": "___! Ich heiße Azad.",
+"s": "___! Ich heiße Safin.",
 "a": "Hallo",
 "d": [
 "Danke",
 "Bitte"
 ],
-"ku": "سلاڤ! ناڤێ من ئازادە.",
+"ku": "سلاڤ! ناڤێ من سەفینە.",
 "c": "a1_01"
 },
 {
@@ -158,13 +158,13 @@
 ],
 "en": [
 {
-"s": "___! My name is Azad.",
+"s": "___! My name is Safin.",
 "a": "Hello",
 "d": [
 "Thanks",
 "Please"
 ],
-"ku": "سلاڤ! ناڤێ من ئازادە.",
+"ku": "سلاڤ! ناڤێ من سەفینە.",
 "c": "a1_01"
 },
 {
@@ -202,23 +202,23 @@
 "c": "a1_10"
 },
 {
-"s": "Ich ___ Lara.",
+"s": "Ich ___ Dilin.",
 "a": "bin",
 "d": [
 "heißt",
 "ist"
 ],
-"ku": "ئەز لارامە.",
+"ku": "ئەز دیلینم.",
 "c": "a1_12"
 },
 {
-"s": "Mein ___ ist Sara.",
+"s": "Mein ___ ist Huda.",
 "a": "Name",
 "d": [
 "Mann",
 "Haus"
 ],
-"ku": "ناڤێ من سارایە.",
+"ku": "ناڤێ من هوودایە.",
 "c": "a1_13"
 },
 {
@@ -254,13 +254,13 @@
 "c": "a1_09"
 },
 {
-"s": "I ___ Lara.",
+"s": "I ___ Dilin.",
 "a": "am",
 "d": [
 "is",
 "are"
 ],
-"ku": "ئەز لارامە.",
+"ku": "ئەز دیلینم.",
 "c": "a1_12"
 },
 {
@@ -384,13 +384,13 @@
 "c": "a1_26"
 },
 {
-"s": "Mein ___ ist Lara, mein Familienname ist Kurt.",
+"s": "Mein ___ ist Dilin, mein Familienname ist Kurt.",
 "a": "Vorname",
 "d": [
 "Adresse",
 "Alphabet"
 ],
-"ku": "ناڤێ من لارایە، پاشناڤێ من کورتە.",
+"ku": "ناڤێ من دیلینە، پاشناڤێ من کورتە.",
 "c": "a1_29"
 },
 {
@@ -426,13 +426,13 @@
 "c": "a1_26"
 },
 {
-"s": "My first ___ is Lara.",
+"s": "My first ___ is Dilin.",
 "a": "name",
 "d": [
 "address",
 "street"
 ],
-"ku": "ناڤێ من یێ ئێکێ لارایە.",
+"ku": "ناڤێ من یێ ئێکێ دیلینە.",
 "c": "a1_29"
 },
 {
@@ -536,13 +536,13 @@
 "unit_s2b": {
 "de": [
 {
-"s": "Mein ___ heißt Ali.",
+"s": "Mein ___ heißt Poya.",
 "a": "Vater",
 "d": [
 "Mutter",
 "Tochter"
 ],
-"ku": "ناڤێ بابێ من عەلییە.",
+"ku": "ناڤێ بابێ من پۆیایە.",
 "c": "a2_09"
 },
 {
@@ -588,13 +588,13 @@
 ],
 "en": [
 {
-"s": "My ___ is called Ali.",
+"s": "My ___ is called Poya.",
 "a": "father",
 "d": [
 "mother",
 "daughter"
 ],
-"ku": "ناڤێ بابێ من عەلییە.",
+"ku": "ناڤێ بابێ من پۆیایە.",
 "c": "a2_09"
 },
 {
@@ -642,13 +642,13 @@
 "c": "a2_18"
 },
 {
-"s": "Ich bin ___. Meine Frau heißt Sara.",
+"s": "Ich bin ___. Meine Frau heißt Avin.",
 "a": "verheiratet",
 "d": [
 "ledig",
 "alt"
 ],
-"ku": "ئەز ژن ئینایمە. ناڤێ ژنا من سارایە.",
+"ku": "ئەز ژن ئینایمە. ناڤێ ژنا من ئاڤینە.",
 "c": "a2_20"
 },
 {

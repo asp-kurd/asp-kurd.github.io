@@ -94,21 +94,21 @@
        "audio": [
         {
          "g": "m",
-         "t": "Hallo Sara, kommst du am Samstag zu meiner Party?"
+         "t": "Hallo Huda, kommst du am Samstag zu meiner Party?"
         },
         {
          "g": "f",
          "t": "Am Samstag arbeite ich leider. Aber am Sonntag habe ich Zeit."
         }
        ],
-       "q": "Wann hat Sara Zeit?",
+       "q": "Wann hat Huda Zeit?",
        "options": [
         "Am Freitag",
         "Am Samstag",
         "Am Sonntag"
        ],
        "answer": 2,
-       "ku": "سارا کەنگی دەمێ وێ هەیە؟"
+       "ku": "هوودا کەنگی دەمێ وێ هەیە؟"
       },
       {
        "t": "mc",
@@ -195,12 +195,12 @@
        "audio": [
         {
          "g": "f",
-         "t": "Herr Ali, bitte kommen Sie zur Information im Erdgeschoss."
+         "t": "Herr Poya, bitte kommen Sie zur Information im Erdgeschoss."
         }
        ],
-       "q": "Herr Ali soll zur Information kommen.",
+       "q": "Herr Poya soll zur Information kommen.",
        "answer": true,
-       "ku": "دڤێت کاک عەلی بچیتە پشکا پێزانینان."
+       "ku": "دڤێت کاک پۆیا بچیتە پشکا پێزانینان."
       },
       {
        "t": "rf",
@@ -227,7 +227,7 @@
        "audio": [
         {
          "g": "f",
-         "t": "Hallo Azad, hier ist Lina. Wir treffen uns nicht um sechs, sondern um halb sieben vor dem Kino. Bis dann!"
+         "t": "Hallo Poya, hier ist Lina. Wir treffen uns nicht um sechs, sondern um halb sieben vor dem Kino. Bis dann!"
         }
        ],
        "q": "Wann treffen sie sich?",
@@ -278,17 +278,17 @@
        "audio": [
         {
          "g": "m",
-         "t": "Hallo Sara, hier ist Karim. Ich brauche für morgen noch Brot und Milch. Kannst du das bitte kaufen? Danke!"
+         "t": "Hallo Avin, hier ist Poya. Ich brauche für morgen noch Brot und Milch. Kannst du das bitte kaufen? Danke!"
         }
        ],
-       "q": "Was soll Sara kaufen?",
+       "q": "Was soll Avin kaufen?",
        "options": [
         "Brot und Käse",
         "Milch und Eier",
         "Brot und Milch"
        ],
        "answer": 2,
-       "ku": "دڤێت سارا چ بکڕیت؟"
+       "ku": "دڤێت ئاڤین چ بکڕیت؟"
       },
       {
        "t": "mc",
@@ -324,15 +324,15 @@
      "items": [
       {
        "t": "rf",
-       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nDilin",
        "audio": null,
-       "q": "Lara wohnt jetzt in Berlin.",
+       "q": "Dilin wohnt jetzt in Berlin.",
        "answer": true,
-       "ku": "لارا نوکە ل بەرلینێ دژیت."
+       "ku": "دیلین نوکە ل بەرلینێ دژیت."
       },
       {
        "t": "rf",
-       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nDilin",
        "audio": null,
        "q": "Die Wohnung hat drei Zimmer.",
        "answer": false,
@@ -340,15 +340,15 @@
       },
       {
        "t": "rf",
-       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nLara",
+       "text": "Liebe Mina,\nich wohne jetzt in Berlin! Meine Wohnung ist klein, aber sehr schön. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich arbeite in einem Hotel. Am Wochenende habe ich frei. Besuchst du mich im Mai?\nViele Grüße\nDilin",
        "audio": null,
-       "q": "Lara arbeitet am Wochenende.",
+       "q": "Dilin arbeitet am Wochenende.",
        "answer": false,
-       "ku": "لارا ل دویماهیا هەفتیێ کار دکەت."
+       "ku": "دیلین ل دویماهیا هەفتیێ کار دکەت."
       },
       {
        "t": "rf",
-       "text": "Sehr geehrte Frau Ahmad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
+       "text": "Sehr geehrte Frau Samad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
        "audio": null,
        "q": "Herr Koch kann am Freitag nicht kommen.",
        "answer": true,
@@ -356,7 +356,7 @@
       },
       {
        "t": "rf",
-       "text": "Sehr geehrte Frau Ahmad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
+       "text": "Sehr geehrte Frau Samad,\nleider kann ich am Freitag nicht zum Deutschkurs kommen. Ich bin krank und muss zum Arzt gehen. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nMit freundlichen Grüßen\nTim Koch",
        "audio": null,
        "q": "Er möchte die Hausaufgaben per Post bekommen.",
        "answer": false,
@@ -627,7 +627,7 @@
          "mache"
         ]
        ],
-       "example": "Ich heiße Azad. Ich bin 25 Jahre alt. Ich komme aus Kurdistan und wohne in Duhok. Ich spreche Kurdisch, Arabisch und ein bisschen Deutsch. Ich bin Student. Mein Hobby ist Fußball."
+       "example": "Ich heiße Safin. Ich bin 25 Jahre alt. Ich komme aus Kurdistan und wohne in Duhok. Ich spreche Kurdisch, Arabisch und ein bisschen Deutsch. Ich bin Student. Mein Hobby ist Fußball."
       }
      ]
     },

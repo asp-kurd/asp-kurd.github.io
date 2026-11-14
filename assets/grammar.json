@@ -72,8 +72,8 @@
      ],
      "examples": [
       {
-       "de": "Das ist Azad. Er ist mein Bruder.",
-       "ku": "ئەڤە ئازادە. ئەو برایێ منە."
+       "de": "Das ist Safin. Er ist mein Bruder.",
+       "ku": "ئەڤە سەفینە. ئەو برایێ منە."
       },
       {
        "de": "Das ist Lana. Sie ist Lehrerin.",
@@ -90,11 +90,11 @@
      },
      "practice": [
       {
-       "q": "___ heiße Rawand. (ئەز)",
-       "qku": "ئەز ناڤێ من راوەندە.",
+       "q": "___ heiße Metin. (ئەز)",
+       "qku": "ئەز ناڤێ من مەتینە.",
        "cue": "ich",
-       "a": "Ich heiße Rawand.",
-       "aku": "ناڤێ من راوەندە."
+       "a": "Ich heiße Metin.",
+       "aku": "ناڤێ من مەتینە."
       },
       {
        "q": "Das ist Avin. ___ wohnt in Erbil.",
@@ -349,17 +349,17 @@
        "aku": "ئەڤە خویشکا تە یە."
       },
       {
-       "q": "Azad und ___ Bruder. (er)",
-       "qku": "ئازاد و برایێ وی.",
+       "q": "Safin und ___ Bruder. (er)",
+       "qku": "سەفین و برایێ وی.",
        "cue": "sein",
-       "a": "Azad und sein Bruder.",
-       "aku": "ئازاد و برایێ وی."
+       "a": "Safin und sein Bruder.",
+       "aku": "سەفین و برایێ وی."
       },
       {
-       "q": "Ist das ___ Tasche, Frau Kaya? (Sie)",
-       "qku": "ئەرێ ئەڤە جانتایا هەوە یە، خاتوو کایا؟",
+       "q": "Ist das ___ Tasche, Frau Koçer? (Sie)",
+       "qku": "ئەرێ ئەڤە جانتایا هەوە یە، خاتوو کۆچەر؟",
        "cue": "Ihre",
-       "a": "Ist das Ihre Tasche, Frau Kaya?",
+       "a": "Ist das Ihre Tasche, Frau Koçer?",
        "aku": "ئەرێ ئەڤە جانتایا هەوە یە؟"
       }
      ],
@@ -458,11 +458,11 @@
        "aku": "ئەز حەز ژ تە دکەم."
       },
       {
-       "q": "Lara ruft ___ an. (er)",
-       "qku": "لارا تەلەفۆنێ بۆ وی دکەت.",
+       "q": "Dilin ruft ___ an. (er)",
+       "qku": "دیلین تەلەفۆنێ بۆ وی دکەت.",
        "cue": "ihn",
-       "a": "Lara ruft ihn an.",
-       "aku": "لارا تەلەفۆنێ بۆ وی دکەت."
+       "a": "Dilin ruft ihn an.",
+       "aku": "دیلین تەلەفۆنێ بۆ وی دکەت."
       },
       {
        "q": "Kannst du ___ abholen? (wir)",
@@ -581,11 +581,11 @@
        "aku": "ئەم هاریکاریا وان دکەین."
       },
       {
-       "q": "Wie geht es ___, Herr Ali? (Sie)",
-       "qku": "هوین چاوانن، کاک عەلی؟",
+       "q": "Wie geht es ___, Herr Poya? (Sie)",
+       "qku": "هوین چاوانن، کاک پۆیا؟",
        "cue": "Ihnen",
-       "a": "Wie geht es Ihnen, Herr Ali?",
-       "aku": "هوین چاوانن، کاک عەلی؟"
+       "a": "Wie geht es Ihnen, Herr Poya?",
+       "aku": "هوین چاوانن، کاک پۆیا؟"
       }
      ],
      "more": [
@@ -778,8 +778,8 @@
      ],
      "examples": [
       {
-       "de": "Ich heiße Azad.",
-       "ku": "ناڤێ من ئازادە."
+       "de": "Ich heiße Safin.",
+       "ku": "ناڤێ من سەفینە."
       },
       {
        "de": "Woher kommst du?",
@@ -798,9 +798,9 @@
       {
        "q": "Wie heißt du?",
        "qku": "ناڤێ تە چییە؟",
-       "cue": "Azad",
-       "a": "Ich heiße Azad.",
-       "aku": "ناڤێ من ئازادە."
+       "cue": "Safin",
+       "a": "Ich heiße Safin.",
+       "aku": "ناڤێ من سەفینە."
       },
       {
        "q": "Woher kommst du?",
@@ -896,7 +896,7 @@
      ],
      "practice": [
       {
-       "q": "Ich heiße Sara. → Frage?",
+       "q": "Ich heiße Avin. → Frage?",
        "qku": "پرسیارێ بۆ ڤێ بەرسڤێ چێکە",
        "cue": "wie",
        "a": "Wie heißt du?",
@@ -955,7 +955,7 @@
       [
        "Ich",
        "heiße",
-       "Sara."
+       "Huda."
       ],
       [
        "Ich",
@@ -965,7 +965,7 @@
       [
        "Mein Name",
        "ist",
-       "Lara."
+       "Dilin."
       ]
      ],
      "examples": [
@@ -974,8 +974,8 @@
        "ku": "ئەز ژ عیراقێ مە."
       },
       {
-       "de": "Mein Name ist Karim.",
-       "ku": "ناڤێ من کەریمە."
+       "de": "Mein Name ist Poya.",
+       "ku": "ناڤێ من پۆیایە."
       },
       {
        "de": "Ich spreche Kurdisch und Deutsch.",
@@ -988,11 +988,11 @@
      },
      "practice": [
       {
-       "q": "Bilde einen Satz: ich / heißen / Lara",
+       "q": "Bilde einen Satz: ich / heißen / Dilin",
        "qku": "رستەکێ چێکە",
        "cue": "",
-       "a": "Ich heiße Lara.",
-       "aku": "ناڤێ من لارایە."
+       "a": "Ich heiße Dilin.",
+       "aku": "ناڤێ من دیلینە."
       },
       {
        "q": "Bilde einen Satz: ich / kommen / aus dem Irak",
@@ -1002,11 +1002,11 @@
        "aku": "ئەز ژ عیراقێ مە."
       },
       {
-       "q": "Bilde einen Satz: mein Name / sein / Karim",
+       "q": "Bilde einen Satz: mein Name / sein / Poya",
        "qku": "رستەکێ چێکە",
        "cue": "",
-       "a": "Mein Name ist Karim.",
-       "aku": "ناڤێ من کەریمە."
+       "a": "Mein Name ist Poya.",
+       "aku": "ناڤێ من پۆیایە."
       }
      ],
      "more": [
@@ -1023,8 +1023,8 @@
        "ku": "ئەم نوکە ئەلمانی فێر دبین."
       },
       {
-       "de": "Sara spricht Arabisch.",
-       "ku": "سارا ب عەرەبی دئاخڤیت."
+       "de": "Huda spricht Arabisch.",
+       "ku": "هوودا ب عەرەبی دئاخڤیت."
       }
      ]
     },
@@ -1072,15 +1072,15 @@
      ],
      "practice": [
       {
-       "q": "Woher kommt Azad?",
-       "qku": "ئازاد ژ کیڤەیە؟",
+       "q": "Woher kommt Safin?",
+       "qku": "سەفین ژ کیڤەیە؟",
        "cue": "Kurdistan",
        "a": "Er kommt aus Kurdistan.",
        "aku": "ئەو ژ کوردستانێ یە."
       },
       {
-       "q": "Woher kommt Ali?",
-       "qku": "عەلی ژ کیڤەیە؟",
+       "q": "Woher kommt Poya?",
+       "qku": "پۆیا ژ کیڤەیە؟",
        "cue": "der Irak",
        "a": "Er kommt aus dem Irak.",
        "aku": "ئەو ژ عیراقێ یە."
@@ -1935,8 +1935,8 @@
        "aku": "ئەز حەز ژ خوارنا برنجی دکەم."
       },
       {
-       "q": "Was isst Lara?",
-       "qku": "لارا چ دخوت؟",
+       "q": "Was isst Dilin?",
+       "qku": "دیلین چ دخوت؟",
        "cue": "Pizza",
        "a": "Sie isst Pizza.",
        "aku": "ئەو پیتزایێ دخوت."
@@ -3049,15 +3049,15 @@
        "aku": "ئەز چایەکێ دبەم."
       },
       {
-       "q": "Was liest Sara?",
-       "qku": "سارا چ دخوینیت؟",
+       "q": "Was liest Avin?",
+       "qku": "ئاڤین چ دخوینیت؟",
        "cue": "ein Buch",
        "a": "Sie liest ein Buch.",
        "aku": "ئەو پەرتووکەکێ دخوینیت."
       },
       {
-       "q": "Wohin fährt Karim?",
-       "qku": "کەریم دچیتە کیڤە؟",
+       "q": "Wohin fährt Poya?",
+       "qku": "پۆیا دچیتە کیڤە؟",
        "cue": "nach Köln",
        "a": "Er fährt nach Köln.",
        "aku": "ئەو دچیتە کۆلن."
@@ -3077,8 +3077,8 @@
        "ku": "تو چ دبەی؟ – چایەکێ."
       },
       {
-       "de": "Triffst du heute Karim?",
-       "ku": "ئەرێ تو ئەڤرۆ کەریمی دبینی؟"
+       "de": "Triffst du heute Poya?",
+       "ku": "ئەرێ تو ئەڤرۆ پۆیای دبینی؟"
       }
      ]
     },
@@ -3447,8 +3447,8 @@
        "aku": "ئەم دخوازین بچینە بەرلینێ."
       },
       {
-       "q": "Was will Sara machen?",
-       "qku": "سارا دخوازیت چ بکەت؟",
+       "q": "Was will Avin machen?",
+       "qku": "ئاڤین دخوازیت چ بکەت؟",
        "cue": "Sport",
        "a": "Sie will Sport machen.",
        "aku": "ئەو دخوازیت وەرزشێ بکەت."
@@ -3533,8 +3533,8 @@
        "aku": "من ئەلمانی خواند."
       },
       {
-       "q": "Was hat Lara gekocht?",
-       "qku": "لارایێ چ چێکر؟",
+       "q": "Was hat Dilin gekocht?",
+       "qku": "دیلینێ چ چێکر؟",
        "cue": "Suppe",
        "a": "Sie hat Suppe gekocht.",
        "aku": "وێ شۆرباڤ چێکر."
@@ -4092,8 +4092,8 @@
        "aku": "ئەز وەکی شۆفێر کار دکەم."
       },
       {
-       "q": "Wo arbeitet Lara?",
-       "qku": "لارا ل کیڤە کار دکەت؟",
+       "q": "Wo arbeitet Dilin?",
+       "qku": "دیلین ل کیڤە کار دکەت؟",
        "cue": "eine Bank",
        "a": "Sie arbeitet bei einer Bank.",
        "aku": "ئەو ل بانکەکێ کار دکەت."
@@ -4471,8 +4471,8 @@
        "aku": "بەلێ، ئەز هاریکاریا تە دکەم."
       },
       {
-       "q": "Wem hilft Karim?",
-       "qku": "کەریم هاریکاریا کێ دکەت؟",
+       "q": "Wem hilft Poya?",
+       "qku": "پۆیا هاریکاریا کێ دکەت؟",
        "cue": "seine Mutter",
        "a": "Er hilft seiner Mutter.",
        "aku": "ئەو هاریکاریا دایکا خۆ دکەت."
@@ -4567,15 +4567,15 @@
      ],
      "practice": [
       {
-       "q": "Was tut Karim weh?",
-       "qku": "کەریم چ دئێشیت؟",
+       "q": "Was tut Poya weh?",
+       "qku": "پۆیا چ دئێشیت؟",
        "cue": "Kopf",
        "a": "Sein Kopf tut weh.",
        "aku": "سەرێ وی دئێشیت."
       },
       {
-       "q": "Was tut Sara weh?",
-       "qku": "سارا چ دئێشیت؟",
+       "q": "Was tut Avin weh?",
+       "qku": "ئاڤین چ دئێشیت؟",
        "cue": "Hand",
        "a": "Ihre Hand tut weh.",
        "aku": "دەستێ وێ دئێشیت."
@@ -4850,8 +4850,8 @@
        "aku": "ئەم ب شەمەندەفەرێ دچین."
       },
       {
-       "q": "Wie kommt Sara?",
-       "qku": "سارا چەوا دهێت؟",
+       "q": "Wie kommt Avin?",
+       "qku": "ئاڤین چەوا دهێت؟",
        "cue": "die U-Bahn",
        "a": "Sie kommt mit der U-Bahn.",
        "aku": "ئەو ب مەترۆیێ دهێت."
@@ -5127,8 +5127,8 @@
        "aku": "ئەم دچینە بەرلینێ."
       },
       {
-       "q": "Wohin geht Lara?",
-       "qku": "لارا دچیتە کیڤە؟",
+       "q": "Wohin geht Dilin?",
+       "qku": "دیلین دچیتە کیڤە؟",
        "cue": "die Post",
        "a": "Sie geht zur Post.",
        "aku": "ئەو دچیتە پۆستێ."
@@ -5876,8 +5876,8 @@
        "aku": "بەلێ، ئەز حەز ژ جینزی دکەم."
       },
       {
-       "q": "Mag Sara Röcke?",
-       "qku": "ئەرێ سارا حەز ژ تەنووران دکەت؟",
+       "q": "Mag Avin Röcke?",
+       "qku": "ئەرێ ئاڤین حەز ژ تەنووران دکەت؟",
        "cue": "nein",
        "a": "Nein, sie mag keine Röcke.",
        "aku": "نەخێر، ئەو حەز ژ تەنووران ناکەت."
@@ -6086,15 +6086,15 @@
        "aku": "بەلێ، ئەز دێ سەرا تە دەم."
       },
       {
-       "q": "Kennst du Karim?",
-       "qku": "ئەرێ تو کەریمی دناسی؟",
+       "q": "Kennst du Poya?",
+       "qku": "ئەرێ تو پۆیای دناسی؟",
        "cue": "ja",
        "a": "Ja, ich kenne ihn.",
        "aku": "بەلێ، ئەز وی دناسم."
       },
       {
-       "q": "Lädst du Sara ein?",
-       "qku": "ئەرێ تو سارایێ داخواز دکەی؟",
+       "q": "Lädst du Huda ein?",
+       "qku": "ئەرێ تو هوودایێ داخواز دکەی؟",
        "cue": "ja",
        "a": "Ja, ich lade sie ein.",
        "aku": "بەلێ، ئەز وێ داخواز دکەم."
@@ -6138,7 +6138,7 @@
       [
        "Wir feiern Abschied,",
        "denn",
-       "Lara und Tim fahren nach Hause."
+       "Dilin und Tim fahren nach Hause."
       ],
       [
        "Ich komme nicht,",
@@ -6591,12 +6591,12 @@
        "ku": "ئەڤە برازایێ ئانایە."
       },
       {
-       "de": "Die Schwester von meinem Mann heißt Dilan.",
-       "ku": "ناڤێ خویشکا زەلامێ من دیلانە."
+       "de": "Die Schwester von meinem Mann heißt Dilhin.",
+       "ku": "ناڤێ خویشکا زەلامێ من دیلهینە."
       },
       {
-       "de": "Azads Cousine wohnt in Erbil.",
-       "ku": "دۆتماما ئازادی ل هەولێرێ دژیت."
+       "de": "Safins Cousine wohnt in Erbil.",
+       "ku": "دۆتماما سەفینی ل هەولێرێ دژیت."
       }
      ],
      "practice": [

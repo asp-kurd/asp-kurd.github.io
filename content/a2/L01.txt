@@ -43,14 +43,14 @@ Was für ein Pech! | ڤاس فیور ئاین پێش | چ بەختەکێ رەش�
 @CZ Ich ___ heute früh ___ und habe den Bus verpasst. | habe … verschlafen | bin … verschlafen; habe … geschlafen | ئەڤرۆ سپێدێ ئەز مامە نڤستی و پاس ل من چوو.
 
 @D ل باژێڕێ نوو
-Lana: Hallo Azad! Wie lange wohnst du schon in Leipzig? || سلاڤ ئازاد! چەند دەمە تو ل لایپزیگێ دژی؟
-Azad: Seit drei Monaten. Ich bin im Sommer umgezogen. || ژ سێ هەیڤان ڤە. ئەز هاڤینێ هاتمە ڤێرێ.
+Lana: Hallo Safin! Wie lange wohnst du schon in Leipzig? || سلاڤ سەفین! چەند دەمە تو ل لایپزیگێ دژی؟
+Safin: Seit drei Monaten. Ich bin im Sommer umgezogen. || ژ سێ هەیڤان ڤە. ئەز هاڤینێ هاتمە ڤێرێ.
 Lana: Und? Gefällt es dir hier? || ئەرێ؟ ل ڤێرێ ب دلێ تە یە؟
-Azad: Ja, aber am Anfang war es schwer, weil ich niemanden kannte. || بەلێ، بەلێ ل دەستپێکێ ب زەحمەت بوو، چونکی من کەس نەدناسی.
+Safin: Ja, aber am Anfang war es schwer, weil ich niemanden kannte. || بەلێ، بەلێ ل دەستپێکێ ب زەحمەت بوو، چونکی من کەس نەدناسی.
 Lana: Das kenne ich. Vermisst du deine Familie? || ئەز ڤێ دزانم. ئەرێ تو بیرا مالباتا خۆ دکەی؟
-Azad: Sehr! Ich telefoniere jeden Abend mit meiner Mutter. || گەلەک! هەر ئێڤار ئەز دگەل دایکا خۆ تەلەفۆنێ دکەم.
+Safin: Sehr! Ich telefoniere jeden Abend mit meiner Mutter. || گەلەک! هەر ئێڤار ئەز دگەل دایکا خۆ تەلەفۆنێ دکەم.
 Lana: Komm doch am Samstag zu uns. Meine Cousine kocht. || شەمبیێ وەرە نک مە. دۆتماما من خوارنێ چێدکەت.
-Azad: Gern! Vielen Dank für die Einladung. || ب دل! گەلەک سوپاس بۆ داخوازیێ.
+Safin: Gern! Vielen Dank für die Einladung. || ب دل! گەلەک سوپاس بۆ داخوازیێ.
 
 @G 🔗 | weil | weil (چونکی)
 E: Mit „weil“ nennen wir einen Grund. Im Nebensatz steht das Verb am Ende. || ب «weil» ئەم ئەگەرەکێ دبێژین. د رستەیا لاوەکی دا کار دچیتە دوماهیێ.
@@ -93,8 +93,8 @@ R: Peters Bruder | der Bruder von Peter
 R: Lanas Tante | die Tante von Lana
 R: — | das Auto von meinem Vater
 X: Das ist Annas Neffe. || ئەڤە برازایێ ئانایە.
-X: Die Schwester von meinem Mann heißt Dilan. || ناڤێ خویشکا زەلامێ من دیلانە.
-X: Azads Cousine wohnt in Erbil. || دۆتماما ئازادی ل هەولێرێ دژیت.
+X: Die Schwester von meinem Mann heißt Dilhin. || ناڤێ خویشکا زەلامێ من دیلهینە.
+X: Safins Cousine wohnt in Erbil. || دۆتماما سەفینی ل هەولێرێ دژیت.
 P: die Mutter / Maria || دایکا ماریایێ || Genitiv || Marias Mutter || دایکا ماریایێ
 P: das Haus / mein Onkel || خانیێ مامێ من || von + Dativ || das Haus von meinem Onkel || خانیێ مامێ من
 P: der Hund / Jonas || سەیێ یۆناسی || Genitiv || Jonas’ Hund || سەیێ یۆناسی

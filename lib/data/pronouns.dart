@@ -161,18 +161,18 @@ const _dat = [
   ('ihnen', 'وان', ['sie', 'ihr']),
 ];
 const _accT = [
-  ('Lara besucht ___ morgen.', 'لارا سبەی دێ سەرەدانا {o} کەت.'),
+  ('Dilin besucht ___ morgen.', 'دیلین سبەی دێ سەرەدانا {o} کەت.'),
   ('Der Lehrer fragt ___.', 'مامۆستا پسیارێ ژ {o} دکەت.'),
-  ('Azad sieht ___ im Park.', 'ئازاد {o} ل پارکێ دبینیت.'),
+  ('Safin sieht ___ im Park.', 'سەفین {o} ل پارکێ دبینیت.'),
   ('Die Kinder suchen ___.', 'زارۆک ل {o} دگەڕێن.'),
   ('Mama ruft ___ heute an.', 'دایک ئەڤرۆ تەلەفۆنێ بۆ {o} دکەت.'),
 ];
 const _datT = [
-  ('Lara hilft ___.', 'لارا هاریکاریا {o} دکەت.'),
+  ('Dilin hilft ___.', 'دیلین هاریکاریا {o} دکەت.'),
   ('Das Buch gehört ___.', 'ئەڤ پەرتووکە یا {o} یە.'),
   ('Der Lehrer gibt ___ ein Heft.', 'مامۆستا دەفتەرەکێ ددەتە {o}.'),
   ('Die Jacke gefällt ___.', 'چاکێت ب دلێ {o} یە.'),
-  ('Azad schreibt ___ eine Nachricht.', 'ئازاد پەیامەکێ بۆ {o} دنڤیسیت.'),
+  ('Safin schreibt ___ eine Nachricht.', 'سەفین پەیامەکێ بۆ {o} دنڤیسیت.'),
 ];
 
 PronounQ _objQ(Random r, bool dative) {
@@ -248,9 +248,9 @@ List<PronounQ> englishPronounQuestions(int tier, int count, [Random? rnd]) {
         q = PronounQ(_wc('This is ${poss[i]} book.', ku, cz), cz);
       } else {
         final wrong = <String>{_enPron[i], poss[i] == obj[i] ? poss[(i + 2) % 6] : poss[i]}.toList();
-        final ku = 'لارا {o} دبینیت.'.replaceAll('{o}', own[i]);
-        final cz = ClozeInfo('Lara sees ___.', obj[i], wrong, ku);
-        q = PronounQ(_wc('Lara sees ${obj[i]}.', ku, cz), cz);
+        final ku = 'دیلین {o} دبینیت.'.replaceAll('{o}', own[i]);
+        final cz = ClozeInfo('Dilin sees ___.', obj[i], wrong, ku);
+        q = PronounQ(_wc('Dilin sees ${obj[i]}.', ku, cz), cz);
       }
     } else {
       final v = _enVerbs[r.nextInt(_enVerbs.length)];

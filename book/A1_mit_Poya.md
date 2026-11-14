@@ -97,8 +97,8 @@
 
 | پرسیار | بادینی | بەرسڤ | رامانا بەرسڤێ |
 | --- | --- | --- | --- |
-| Wie heißen Sie? | ناڤێ هەوە چییە؟ (فەرمی) | Ich heiße Azad. | ناڤێ من ئازادە. |
-| Wie heißt du? | ناڤێ تە چییە؟ | Mein Name ist Sara. | ناڤێ من سارایە. |
+| Wie heißen Sie? | ناڤێ هەوە چییە؟ (فەرمی) | Ich heiße Poya. | ناڤێ من پۆیایە. |
+| Wie heißt du? | ناڤێ تە چییە؟ | Mein Name ist Avin. | ناڤێ من ئاڤینە. |
 | Woher kommen Sie? | هوین ژ کیڤەنە؟ (فەرمی) | Ich komme aus Kurdistan. | ئەز ژ کوردستانێمە. |
 | Woher kommst du? | تو ژ کیڤەیی؟ | Ich komme aus dem Irak. | ئەز ژ عیراقێمە. |
 | Wo wohnen Sie? | هوین ل کیڤە دژین؟ | Ich wohne in Berlin. | ئەز ل بەرلین دژیم. |
@@ -770,9 +770,9 @@ Perfekt دەمێ بۆرییە بۆ ئاخفتنا رۆژانە: پتر ژ ٨٠٪
 | Er trinkt einen Tee. | Er hat einen Tee getrunken. | وی چایەک ڤەخوار. |
 | Wir lernen Deutsch. | Wir haben Deutsch gelernt. | مە ئەلمانی خواند. |
 | Sie schreibt eine E-Mail. | Sie hat eine E-Mail geschrieben. | وێ ئیمەیلەک نڤیسی. |
-| Ali repariert das Auto. | Ali hat das Auto repariert. | عەلی ترومبێل چێکر. |
+| Poya repariert das Auto. | Poya hat das Auto repariert. | پۆیا ترومبێل چێکر. |
 | Er bezahlt die Rechnung. | Er hat die Rechnung bezahlt. | وی پارێ حسابێ دا. |
-| Sara ruft mich an. | Sara hat mich angerufen. | سارایێ تەلەفۆن بۆ من کر. |
+| Avin ruft mich an. | Avin hat mich angerufen. | ئاڤینێ تەلەفۆن بۆ من کر. |
 
 ### ١٥.٣ haben یان sein؟
 
@@ -893,9 +893,9 @@ werden ل جهێ دووێ دهێتە گوهۆڕین، و کارێ سەرەکی �
 
 ### دیالۆگ ٥: کلیلا بەرزە
 
-- **Azad:** Hast du meinen Schlüssel gesehen? — ئەرێ تە کلیلا من دیتییە؟
-- **Sara:** Nein, ich habe deinen Schlüssel nicht gesehen. Suchst du auch deinen Pass? — نەخێر، من کلیلا تە نەدیتییە. ئەرێ تو ل پاسپۆرتا خۆ ژی دگەڕی؟
-- **Azad:** Ja, ich habe meinen Pass gestern auf den Tisch gelegt. — بەلێ، دوهی من پاسپۆرتا خۆ دانابوو سەر مێزێ.
+- **Poya:** Hast du meinen Schlüssel gesehen? — ئەرێ تە کلیلا من دیتییە؟
+- **Avin:** Nein, ich habe deinen Schlüssel nicht gesehen. Suchst du auch deinen Pass? — نەخێر، من کلیلا تە نەدیتییە. ئەرێ تو ل پاسپۆرتا خۆ ژی دگەڕی؟
+- **Poya:** Ja, ich habe meinen Pass gestern auf den Tisch gelegt. — بەلێ، دوهی من پاسپۆرتا خۆ دانابوو سەر مێزێ.
 
 ### ١٧.٤ هەڤۆکێن فریاکەفتنێ
 
@@ -1098,7 +1098,7 @@ werden ل جهێ دووێ دهێتە گوهۆڕین، و کارێ سەرەکی �
 2. Hier ist \_\_\_\_\_\_ Tisch (der) aus Holz.
 3. Er kauft \_\_\_\_\_\_ Fernseher (der) für das Wohnzimmer.
 4. Hast du \_\_\_\_\_\_ Bruder (der)?
-5. Das ist \_\_\_\_\_\_ Auto (das) von Ali.
+5. Das ist \_\_\_\_\_\_ Auto (das) von Poya.
 6. Wir trinken \_\_\_\_\_\_ Tee (der) zusammen.
 7. Sie sucht \_\_\_\_\_\_ Wohnung (die) in Berlin.
 
@@ -1139,7 +1139,7 @@ werden ل جهێ دووێ دهێتە گوهۆڕین، و کارێ سەرەکی �
 1. Ich kaufe ein Buch. → Ich \_\_\_\_\_\_ ein Buch \_\_\_\_\_\_.
 2. Er trinkt einen Kaffee. → Er \_\_\_\_\_\_ einen Kaffee \_\_\_\_\_\_.
 3. Wir wohnen in München. → Wir \_\_\_\_\_\_ in München \_\_\_\_\_\_.
-4. Ali geht nach Hause. → Ali \_\_\_\_\_\_ nach Hause \_\_\_\_\_\_.
+4. Poya geht nach Hause. → Poya \_\_\_\_\_\_ nach Hause \_\_\_\_\_\_.
 5. Sie schreibt eine E-Mail. → Sie \_\_\_\_\_\_ eine E-Mail \_\_\_\_\_\_.
 6. Wann stehst du auf? → Wann \_\_\_\_\_\_ du \_\_\_\_\_\_?
 7. Der Mechaniker repariert das Auto. → Er \_\_\_\_\_\_ das Auto \_\_\_\_\_\_.

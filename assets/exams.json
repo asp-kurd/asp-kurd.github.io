@@ -73,9 +73,9 @@
    },
    {
     "type": "order",
-    "q": "Name | Mein | ist | Lara",
+    "q": "Name | Mein | ist | Dilin",
     "options": null,
-    "answer": "Mein Name ist Lara",
+    "answer": "Mein Name ist Dilin",
     "explain": "کار ل جهێ ٢"
    },
    {
@@ -91,7 +91,7 @@
    },
    {
     "type": "choice",
-    "q": "Ich ___ Azad.",
+    "q": "Ich ___ Safin.",
     "options": [
      "heiße",
      "heißt",
@@ -1409,7 +1409,7 @@
      "پاسپۆرت",
      "کراس",
      "مووچە چەندە؟",
-     "ناڤێ من ئازادە."
+     "ناڤێ من سەفینە."
     ],
     "answer": 0,
     "explain": "der Pass",
@@ -2731,10 +2731,10 @@
    },
    {
     "type": "order",
-    "q": "mit | sprechen | Frau | Weigand, | Sie | Kaya | Firma",
+    "q": "mit | sprechen | Frau | Weigand, | Sie | Koçer | Firma",
     "options": null,
-    "answer": "Firma Weigand, Sie sprechen mit Frau Kaya",
-    "explain": "کۆمپانیا ڤایگاند، هوین دگەل خاتوو کایا دئاخڤن."
+    "answer": "Firma Weigand, Sie sprechen mit Frau Koçer",
+    "explain": "کۆمپانیا ڤایگاند، هوین دگەل خاتوو کۆچەر دئاخڤن."
    },
    {
     "type": "truefalse",
@@ -4447,7 +4447,7 @@
      },
      {
       "type": "truefalse",
-      "q": "✉️ Liebe Sara, ich habe am Samstag Geburtstag. Kommst du um 19 Uhr? Viele Grüße, Dilan\n\nDie Party ist am Samstagabend.",
+      "q": "✉️ Liebe Huda, ich habe am Samstag Geburtstag. Kommst du um 19 Uhr? Viele Grüße, Dilhin\n\nDie Party ist am Samstagabend.",
       "options": [
        "Richtig",
        "Falsch"
@@ -4457,7 +4457,7 @@
      },
      {
       "type": "truefalse",
-      "q": "✉️ Hallo Tim, ich bin krank und kann heute nicht zum Kurs kommen. Lara\n\nLara kommt heute zum Kurs.",
+      "q": "✉️ Hallo Tim, ich bin krank und kann heute nicht zum Kurs kommen. Dilin\n\nDilin kommt heute zum Kurs.",
       "options": [
        "Richtig",
        "Falsch"
@@ -4493,23 +4493,23 @@
     "items": [
      {
       "type": "type",
-      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nWohnort: ___",
+      "q": "🪪 Safin Nerweyi kommt aus Duhok und wohnt jetzt in Köln.\n\nWohnort: ___",
       "options": null,
       "answer": "Köln",
       "explain": "Wohnort = جهێ ئاکنجیبوونێ"
      },
      {
       "type": "type",
-      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nVorname: ___",
+      "q": "🪪 Safin Nerweyi kommt aus Duhok und wohnt jetzt in Köln.\n\nVorname: ___",
       "options": null,
-      "answer": "Azad",
+      "answer": "Safin",
       "explain": "Vorname = ناڤێ ئێکێ"
      },
      {
       "type": "type",
-      "q": "🪪 Azad Barwari kommt aus Duhok und wohnt jetzt in Köln.\n\nFamilienname: ___",
+      "q": "🪪 Safin Nerweyi kommt aus Duhok und wohnt jetzt in Köln.\n\nFamilienname: ___",
       "options": null,
-      "answer": "Barwari",
+      "answer": "Nerweyi",
       "explain": ""
      },
      {
@@ -4567,7 +4567,7 @@
  "placement": [
   {
    "type": "choice",
-   "q": "Ich ___ Azad.",
+   "q": "Ich ___ Safin.",
    "options": [
     "heiße",
     "heißt",

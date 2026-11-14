@@ -58,7 +58,7 @@ class MascotChar {
   }
 
   static const _female = {
-    'Dilan', 'Frau', 'Frau Ahmad', 'Kundin', 'Lara', 'Lehrerin', 'Lina', 'Mina', 'Sara', 'Verkäuferin', 'Ärztin', 'Rezeption'
+    'Dilhin', 'Frau', 'Frau Samad', 'Kundin', 'Dilin', 'Lehrerin', 'Lina', 'Mina', 'Avin', 'Huda', 'Lana', 'Oma', 'Mitarbeiterin', 'Verkäuferin', 'Ärztin', 'Rezeption'
   };
   static bool _isFemale(String who) => _female.contains(who) || who.startsWith('Frau');
 

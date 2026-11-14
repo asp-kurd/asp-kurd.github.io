@@ -11,7 +11,7 @@ der Feierabend | دێر فایەرئابنت | دوماهیا کاری یا رۆ
 Ich arbeite Teilzeit. | ئیش ئاربایتە تایلتسایت | ئەز نیڤ دەمژمێر کار دکەم. | I work part-time. | ⏳ | Ich arbeite nur 20 Stunden, also ___. | Teilzeit | Vollzeit; Freizeit | ئەز تنێ ٢٠ دەمژمێران کار دکەم، واتە نیڤ دەم.
 
 @U b | chat | ل سەر تەلەفۆنێ | Am Telefon | On the phone
-Firma Weigand, Sie sprechen mit Frau Kaya. | فیرما ڤایگانت، زی شپرێشن میت فراو کایا | کۆمپانیا ڤایگاند، هوین دگەل خاتوو کایا دئاخڤن. | Weigand company, you're speaking to Ms Kaya. | ☎️
+Firma Weigand, Sie sprechen mit Frau Koçer. | فیرما ڤایگانت، زی شپرێشن میت فراو کۆچەر | کۆمپانیا ڤایگاند، هوین دگەل خاتوو کۆچەر دئاخڤن. | Weigand company, you're speaking to Ms Koçer. | ☎️
 Kann ich bitte mit Herrn Schulz sprechen? | کان ئیش بیتە میت هێرن شولتس شپرێشن | دشێم دگەل کاک شولتس باخڤم؟ | Can I speak to Mr Schulz, please? | 🗣️ | Kann ich bitte mit Herrn Schulz ___? | sprechen | spreche; gesprochen | دشێم دگەل کاک شولتس باخڤم؟
 Einen Moment, ich verbinde Sie. | ئاینن مۆمێنت، ئیش فێربیندە زی | ب دەمەکێ کێم، ئەز هەوە دگەهینمە وی. | One moment, I'll put you through. | 🔌 | Einen Moment, ich ___ Sie. | verbinde | verbunden; finde | ب دەمەکێ کێم، ئەز هەوە دگەهینمە وی.
 Er ist gerade nicht da. | ئێر ئیست گەرادە نیشت دا | ئەو نوکە ل ڤێرێ نینە. | He isn't here right now. | 🚫
@@ -43,14 +43,14 @@ die Weiterbildung | دی ڤایتەربیلدونگ | خولا پێشکەفتن�
 @CZ Du hustest so viel. Du ___ zum Arzt gehen und weniger ___. | solltest … rauchen | sollst … rauchst; solltest … geraucht | تو گەلەک دکۆخی. باشترە بچییە نک نوژداری و کێمتر جگارە بکێشی.
 
 @D تەلەفۆنەک بۆ نڤیسینگەهێ
-Frau Kaya: Firma Weigand, guten Tag. Sie sprechen mit Frau Kaya. || کۆمپانیا ڤایگاند، رۆژ باش. هوین دگەل خاتوو کایا دئاخڤن.
-Herr Ahmadi: Guten Tag, hier ist Ahmadi. Kann ich bitte mit Herrn Schulz sprechen? || رۆژ باش، ئەز ئەحمەدیمە. دشێم دگەل کاک شولتس باخڤم؟
-Frau Kaya: Herr Schulz ist leider in einer Besprechung. Kann ich etwas ausrichten? || مخابن کاک شولتس د کۆبوونێ دایە. دشێم پەیامەکێ بگەهینمێ؟
-Herr Ahmadi: Ja, bitte. Mein Paket ist noch nicht angekommen. || بەلێ، هیڤییە. پاکەتا من هێشتا نەگەهشتییە.
-Frau Kaya: Das tut mir leid. Wenn Sie mir Ihre Nummer geben, ruft er Sie zurück. || ببوورە. ئەگەر ژمارا خۆ بدەنە من، ئەو دێ تەلەفۆنێ بۆ هەوە کەتەڤە.
-Herr Ahmadi: Gern: null-eins-sieben-sechs, drei-vier-fünf-zwei-acht. || ب دل: ٠١٧٦، ٣٤٥٢٨.
-Frau Kaya: Danke. Wenn er fertig ist, sage ich ihm Bescheid. || سوپاس. دەمێ ئەو خلاس دبیت، ئەز دێ بێژمێ.
-Herr Ahmadi: Vielen Dank! Auf Wiederhören! || گەلەک سوپاس! ب خاترا هەوە!
+Frau Koçer: Firma Weigand, guten Tag. Sie sprechen mit Frau Koçer. || کۆمپانیا ڤایگاند، رۆژ باش. هوین دگەل خاتوو کۆچەر دئاخڤن.
+Herr Duski: Guten Tag, hier ist Duski. Kann ich bitte mit Herrn Schulz sprechen? || رۆژ باش، ئەز دۆسکیمە. دشێم دگەل کاک شولتس باخڤم؟
+Frau Koçer: Herr Schulz ist leider in einer Besprechung. Kann ich etwas ausrichten? || مخابن کاک شولتس د کۆبوونێ دایە. دشێم پەیامەکێ بگەهینمێ؟
+Herr Duski: Ja, bitte. Mein Paket ist noch nicht angekommen. || بەلێ، هیڤییە. پاکەتا من هێشتا نەگەهشتییە.
+Frau Koçer: Das tut mir leid. Wenn Sie mir Ihre Nummer geben, ruft er Sie zurück. || ببوورە. ئەگەر ژمارا خۆ بدەنە من، ئەو دێ تەلەفۆنێ بۆ هەوە کەتەڤە.
+Herr Duski: Gern: null-eins-sieben-sechs, drei-vier-fünf-zwei-acht. || ب دل: ٠١٧٦، ٣٤٥٢٨.
+Frau Koçer: Danke. Wenn er fertig ist, sage ich ihm Bescheid. || سوپاس. دەمێ ئەو خلاس دبیت، ئەز دێ بێژمێ.
+Herr Duski: Vielen Dank! Auf Wiederhören! || گەلەک سوپاس! ب خاترا هەوە!
 
 @G 🔀 | Nebensatz mit „wenn“ | رستەیا ئەگەرێ ب «wenn»
 E: „wenn“ = Bedingung oder Zeit (immer wenn). Im wenn-Satz steht das Verb am Ende. Beginnt der Satz mit „wenn“, steht danach Verb + Subjekt. || «wenn» = ئەگەر یان دەمێ (هەر جارا). کار د رستەیا wenn دا دچیتە دوماهیێ. ئەگەر رستە ب wenn دەستپێبکەت، پاشی کار + کارا.
