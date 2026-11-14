@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/cast.dart';
 import '../services/backend.dart';
 import '../services/progress_service.dart';
 import '../ui.dart';
@@ -29,8 +30,9 @@ class _CharacterPickerScreenState extends State<CharacterPickerScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       for (final c in MascotChar.values) {
-        precacheImage(AssetImage(c.base), context);
-        precacheImage(AssetImage(c.happy), context);
+        if (c.custom) CastStore.ensureImages(c.id);
+        precacheImage(c.img('base'), context);
+        precacheImage(c.img('happy'), context);
       }
     });
   }
@@ -108,7 +110,10 @@ class _CharacterPickerScreenState extends State<CharacterPickerScreen> {
               child: AnimatedScale(
                 scale: on ? 1.06 : 1,
                 duration: const Duration(milliseconds: 180),
-                child: Image.asset(c.base, fit: BoxFit.contain),
+                child: ValueListenableBuilder<int>(
+                  valueListenable: CastStore.changed,
+                  builder: (_, __, ___) => Image(image: c.img('base'), fit: BoxFit.contain, gaplessPlayback: true),
+                ),
               ),
             ),
           ),

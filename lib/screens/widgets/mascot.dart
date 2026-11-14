@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../../services/backend.dart';
 import '../../services/progress_service.dart';
 import '../../services/voice_service.dart';
+import '../../data/cast.dart';
 import '../../ui.dart';
 
 /// 🧑‍🏫 کاریکاتێرێن ASP — وەکی Duolingo: چاڤان دقوچینن، دەڤێ خۆ دلڤینن دەمێ دئاخڤن،
@@ -13,8 +14,13 @@ import '../../ui.dart';
 enum MascotMood { ask, listen, speak, happy, sad, think }
 
 class MascotChar {
-  final String id, name, note, gender; // gender: 'm' / 'f'
-  const MascotChar(this.id, this.name, this.note, this.gender);
+  final String id, baseName, note, gender; // gender: 'm' / 'f'
+  /// کاراکتەرێ نوو یێ ئەدمینی (وێنە ژ سێرڤەری)
+  final bool custom;
+  const MascotChar(this.id, this.baseName, this.note, this.gender, {this.custom = false});
+
+  /// ناڤ (ئەدمین دشێت بگوهۆڕیت)
+  String get name => CastStore.nameOverride(id) ?? (custom ? (CastStore.customById(id)?.name ?? baseName) : baseName);
 
   String get base => 'assets/mascot/${id}_base.webp';
   String get blink => 'assets/mascot/${id}_blink.webp';
@@ -27,6 +33,9 @@ class MascotChar {
   String get flyFull => 'assets/mascot/${id}_fly_full.webp';
   String get landFull => 'assets/mascot/${id}_land_full.webp';
   List<String> get all => [base, blink, talk, happy, sad, think];
+
+  /// وێنە ب جۆری: base · blink · talk · happy · sad · think · full · happy_full · fly_full · land_full
+  ImageProvider img(String kind) => castImage(id, custom, kind);
 
   // 🦸 کاراکتەرێن ASP
   static const hawraz = MascotChar('hawraz', 'هەوراز', 'ئەوێ سمبێل', 'm');
@@ -43,12 +52,27 @@ class MascotChar {
   static const dile = MascotChar('dile', 'دلێ', 'کراسێ گول گول', 'f');
   static const avin = MascotChar('avin', 'ئەڤین', 'کچکا پرچ سۆر', 'f');
   static const hajya = MascotChar('hajya', 'حجیا', 'کچکا حیجاب', 'f');
-  static const values = [
+  static const builtIn = [
     hawraz, shaho, poya, abusafin, safin, //
     nazdar, hani, banu, shahyan, warxaz, hene, dile, avin, hajya,
   ];
 
-  static MascotChar byId(String? id) => values.firstWhere((c) => c.id == id, orElse: () => hawraz);
+  /// هەمی کاراکتەر: یێن ئەپێ + یێن نوو یێن ئەدمینی (بێ یێن ڤەشارتی)
+  static List<MascotChar> get values => [
+        for (final c in builtIn)
+          if (!CastStore.hidden(c.id)) c,
+        for (final c in CastStore.custom)
+          if (!CastStore.hidden(c.id)) MascotChar(c.id, c.name, '', c.gender, custom: true),
+      ];
+
+  /// هەمی (دگەل یێن ڤەشارتی) — بۆ ئەدمینی
+  static List<MascotChar> get everyone => [
+        ...builtIn,
+        for (final c in CastStore.custom) MascotChar(c.id, c.name, '', c.gender, custom: true),
+      ];
+
+  static MascotChar byId(String? id) =>
+      everyone.firstWhere((c) => c.id == id, orElse: () => hawraz);
 
   /// کاراکتەرێ بکارهێنەری: یێ وی هەلبژارتی، یان ل دویف ڕەگەزی
   static MascotChar forUser() {
@@ -60,11 +84,21 @@ class MascotChar {
   static const _female = {
     'Dilhin', 'Frau', 'Frau Samad', 'Kundin', 'Dilin', 'Lehrerin', 'Lina', 'Mina', 'Avin', 'Huda', 'Lana', 'Oma', 'Mitarbeiterin', 'Verkäuferin', 'Ärztin', 'Rezeption'
   };
-  static bool _isFemale(String who) => _female.contains(who) || who.startsWith('Frau');
+  static bool _isFemale(String who) => _female.contains(who) || who.startsWith('Frau') || CastStore.isFemaleName(who);
 
   /// بۆ دیالۆگان: هەر ئاخفتنکەرەکی کاراکتەرەکێ جودا ل دویف ڕەگەزی
   static Map<String, MascotChar> castFor(List<String> speakers) {
-    final men = [hawraz, abusafin, poya, shaho], women = [nazdar, hene, banu, dile, shahyan, avin, warxaz, hani, hajya];
+    final extra = [for (final c in values) if (c.custom) c];
+    final men = [
+      for (final c in [hawraz, abusafin, poya, shaho]) if (!CastStore.hidden(c.id)) c,
+      for (final c in extra) if (c.gender != 'f') c,
+    ];
+    final women = [
+      for (final c in [nazdar, hene, banu, dile, shahyan, avin, warxaz, hani, hajya]) if (!CastStore.hidden(c.id)) c,
+      for (final c in extra) if (c.gender == 'f') c,
+    ];
+    if (men.isEmpty) men.add(hawraz);
+    if (women.isEmpty) women.add(nazdar);
     var mi = 0, wi = 0;
     return {
       for (final s in speakers) s: _isFemale(s) ? women[wi++ % women.length] : men[mi++ % men.length],
@@ -76,8 +110,8 @@ class MascotChar {
   /// هەمی وێنەیان پێشوەخت بار بکە دا لڤین نەڕاوەستیت
   static void precache(BuildContext context, [MascotChar? only]) {
     for (final c in only != null ? [only] : values) {
-      for (final p in c.all) {
-        precacheImage(AssetImage(p), context);
+      for (final k in const ['base', 'blink', 'talk', 'happy', 'sad', 'think']) {
+        precacheImage(c.img(k), context);
       }
     }
   }
@@ -135,12 +169,20 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
     _armThink();
     if (widget.mood == MascotMood.happy) _react.repeat(period: const Duration(milliseconds: 1400));
     if (widget.lipSync) _voice.speaking.addListener(_onSpeaking);
+    CastStore.changed.addListener(_onCast);
+    if (widget.mood == MascotMood.speak) _startTalk();
+  }
+
+  void _onCast() {
+    if (mounted) setState(() {});
   }
 
   @override
   void didUpdateWidget(MascotView old) {
     super.didUpdateWidget(old);
     if (old.mood != widget.mood) _armThink();
+    if (old.mood != widget.mood && widget.mood == MascotMood.speak) _startTalk();
+    if (old.mood == MascotMood.speak && widget.mood != MascotMood.speak && !_voice.speaking.value) _stopTalk();
     if (old.mood != widget.mood) {
       if (widget.mood == MascotMood.happy || widget.mood == MascotMood.sad) {
         _react.forward(from: 0);
@@ -162,7 +204,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   void _onSpeaking() {
     if (_voice.speaking.value) {
       _startTalk();
-    } else if (!_cheering) {
+    } else if (!_cheering && widget.mood != MascotMood.speak) {
       _stopTalk();
     }
   }
@@ -201,6 +243,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   @override
   void dispose() {
     _voice.speaking.removeListener(_onSpeaking);
+    CastStore.changed.removeListener(_onCast);
     _blinkTimer?.cancel();
     _thinkTimer?.cancel();
     _talkTimer?.cancel();
@@ -212,20 +255,19 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
   }
 
   String get _frame {
-    final c = widget.char;
-    if (_mouth > 0) return c.talk;
+    if (_mouth > 0) return 'talk';
     switch (widget.mood) {
       case MascotMood.happy:
-        return c.happy;
+        return 'happy';
       case MascotMood.sad:
-        return c.sad;
+        return 'sad';
       case MascotMood.think:
-        return c.think;
+        return 'think';
       default:
-        if (_thinking) return c.think;
+        if (_thinking) return 'think';
     }
-    if (_blinking) return c.blink;
-    return c.base;
+    if (_blinking) return 'blink';
+    return 'base';
   }
 
   @override
@@ -287,7 +329,7 @@ class _MascotViewState extends State<MascotView> with TickerProviderStateMixin {
                   transform: Matrix4.identity()
                     ..rotateZ(rot)
                     ..scale(sx, sy),
-                  child: Image.asset(_frame, height: h, gaplessPlayback: true, filterQuality: FilterQuality.medium),
+                  child: Image(image: widget.char.img(_frame), height: h, gaplessPlayback: true, filterQuality: FilterQuality.medium),
                 ),
               ),
               if (widget.mood == MascotMood.listen)
@@ -467,7 +509,7 @@ class MascotAvatar extends StatelessWidget {
           maxHeight: size * 1.35 * 1.12,
           child: talking
               ? MascotView(char: char, height: size * 1.35 * 1.12, mood: MascotMood.speak)
-              : Image.asset(char.base, height: size * 1.35 * 1.12, fit: BoxFit.fitHeight),
+              : Image(image: char.img('base'), height: size * 1.35 * 1.12, fit: BoxFit.fitHeight),
         ),
       ),
     );

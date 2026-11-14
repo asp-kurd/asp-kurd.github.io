@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/cast.dart';
 import '../data/curriculum.dart';
 import '../models.dart';
 import '../services/progress_service.dart';
@@ -89,7 +90,7 @@ class Grammar {
   }
 
   static Future<void> _load() async {
-        final m = jsonDecode(await rootBundle.loadString(en ? 'assets/grammar_en.json' : 'assets/grammar.json')) as Map<String, dynamic>;
+        final m = jsonDecode(CastStore.text(await rootBundle.loadString(en ? 'assets/grammar_en.json' : 'assets/grammar.json'))) as Map<String, dynamic>;
         _units.clear();
         if (en) {
           for (final l in m['lektionen'] as List) {
@@ -99,7 +100,7 @@ class Grammar {
         List<String> strs(dynamic v) => ((v as List?) ?? const []).map((e) => e.toString()).toList();
         komm = {};
         if (!en) try {
-          final k = jsonDecode(await rootBundle.loadString('assets/kommunikation.json')) as Map<String, dynamic>;
+          final k = jsonDecode(CastStore.text(await rootBundle.loadString('assets/kommunikation.json'))) as Map<String, dynamic>;
           komm = {
             for (final l in k['lektionen'] as List)
               l['n'] as int: [

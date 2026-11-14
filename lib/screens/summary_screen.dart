@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+import '../data/cast.dart';
 import '../services/sfx.dart';
 import '../ui.dart';
 import 'book_screen.dart';
@@ -45,7 +46,7 @@ class A1Summary {
   static Color _hex(String s) => Color(int.parse('FF${s.replaceAll('#', '')}', radix: 16));
 
   static Future<void> load() => _loading ??= () async {
-        final m = jsonDecode(await rootBundle.loadString('assets/a1_summary.json')) as Map<String, dynamic>;
+        final m = jsonDecode(CastStore.text(await rootBundle.loadString('assets/a1_summary.json'))) as Map<String, dynamic>;
         title = m['title'] as String;
         subtitle = (m['subtitle'] as String?) ?? '';
         legend = {

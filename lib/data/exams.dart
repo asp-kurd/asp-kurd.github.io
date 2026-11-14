@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 
+import 'cast.dart';
+
 /// جۆرێن پرسیاران د ئەزموونان دا
 enum QType { choice, truefalse, picture, imgchoice, listen, type, order }
 
@@ -52,7 +54,7 @@ class Exams {
 
   static Future<void> load() async {
     try {
-      final j = jsonDecode(await rootBundle.loadString('assets/exams.json')) as Map<String, dynamic>;
+      final j = jsonDecode(CastStore.text(await rootBundle.loadString('assets/exams.json'))) as Map<String, dynamic>;
       lektion = (j['lektion'] as Map<String, dynamic>).map((k, v) => MapEntry(
           int.parse(k), (v as List).map((e) => ExamQuestion.fromJson(e as Map<String, dynamic>)).toList()));
       final f = j['final'] as Map<String, dynamic>;

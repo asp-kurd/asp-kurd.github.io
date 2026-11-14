@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 import '../models.dart';
+import 'cast.dart';
 
 /// 📝 رستەیێن جهێ ڤالا یێن زێدە بۆ هەر قۆناغەکێ (assets/cloze.json)
 /// «Ich ___ gern Musik.» ➔ höre — و ژ قۆناغا ~٢٠ ڤە هندەک ب ٢ جهێن ڤالا: «Ich ___ um 7 Uhr ___.» ➔ stehe … auf
@@ -17,7 +18,7 @@ final Map<String, Map<String, List<ClozeEntry>>> _bank = {};
 
 Future<void> loadClozeBank() async {
   try {
-    final raw = jsonDecode(await rootBundle.loadString('assets/cloze.json')) as Map<String, dynamic>;
+    final raw = jsonDecode(CastStore.text(await rootBundle.loadString('assets/cloze.json'))) as Map<String, dynamic>;
     final units = raw['units'] as Map<String, dynamic>;
     for (final u in units.entries) {
       final m = <String, List<ClozeEntry>>{};

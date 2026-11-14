@@ -9,6 +9,7 @@ import 'services/rewards_service.dart';
 import 'data/exams.dart';
 import 'screens/account_screens.dart';
 import 'screens/profile_screen.dart';
+import 'screens/admin_cast.dart';
 import 'screens/admin_screens.dart';
 import 'services/backend.dart';
 import 'services/push_stub.dart' if (dart.library.js_interop) 'services/push_web.dart';
@@ -34,12 +35,14 @@ import 'screens/onboarding_screen.dart';
 import 'services/clone_service.dart';
 import 'services/progress_service.dart';
 import 'services/sfx.dart';
+import 'data/cast.dart';
 import 'data/glossary.dart';
 import 'data/links.dart';
 import 'services/theme_service.dart';
 import 'services/voice_service.dart';
 import 'screens/lesson_screen.dart';
 import 'screens/quiz_screen.dart';
+import 'screens/widgets/mascot.dart' show MascotChar;
 import 'screens/widgets/piko.dart';
 import 'screens/games/game_session.dart';
 import 'screens/games/game_kind.dart';
@@ -73,6 +76,13 @@ Future<void> main() async {
   startAutoUpdate(const String.fromEnvironment('BUILD_ID'));
   await Backend.instance.init();
   // ⚡ هەمی پێکڤە (نە ل دویڤ ئێک) ➔ ئەپ زووتر ڤەدبیت
+  await CastStore.load(); // 👥 ناڤێن کاراکتەران (بەری ناڤەرۆکێ)
+  // تاقیکرن: ?demo=…&rn=safin:Rebaz:ڕێباز
+  final rn = Uri.base.queryParameters['rn'];
+  if (Uri.base.queryParameters['demo'] != null && rn != null) {
+    final p = rn.split(':');
+    if (p.length == 3) CastStore.names[p[0]] = {'l': p[1], 'k': p[2]};
+  }
   await Future.wait<void>([
     Backend.instance.contentOverride('curriculum', fresh: false).then(loadCurriculum),
     loadClozeBank(),
@@ -87,6 +97,11 @@ Future<void> main() async {
   ]);
   Backend.instance.contentOverride('tree', fresh: false).then(loadTree); // 🌳 ناڤێن دارێ ژ ئەدمینی
   await ProgressService.instance.init();
+  // 👥 کاراکتەرێ نوو یێ ئەدمینی: وێنەیێن وی ل پشتێ بار بکە
+  final myChar = ProgressService.instance.mascotId;
+  if (myChar != null && (CastStore.customById(myChar) != null || CastStore.overrides(myChar).isNotEmpty)) {
+    unawaited(CastStore.ensureImages(myChar));
+  }
   // 📲 iPhone: ئەپا سەر شاشێ ب کۆدێ لینکی هەمان هەژمار بەردەوام دکەت (نە ژ نوی)
   final handoff = Uri.base.queryParameters['h'];
   if (adminMode && !isAdminPage) prepareAdminHomeScreen();
@@ -219,6 +234,12 @@ class ZimanProApp extends StatelessWidget {
       'piko' => const _PikoDemo(),
       'pikovid' => const _PikoVideoDemo(),
       'bookpractice' => QuizScreen(examId: 'demo', title: '🏋️ demo', questions: bookPractice(bookChapters[int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 5], seed: 3)),
+      'castadmin' => Directionality(
+          textDirection: TextDirection.rtl,
+          child: Scaffold(appBar: AppBar(title: const Text('👥 کاراکتەر')), body: const CastAdminTab(offline: true))),
+      'chareditor' => CharEditScreen(
+          offline: true,
+          char: Uri.base.queryParameters['c'] == null ? null : MascotChar.byId(Uri.base.queryParameters['c'])),
       'chapter' => ChapterScreen(index: int.tryParse(Uri.base.queryParameters['ch'] ?? '') ?? 1),
       'newword' => InteractiveLessonScreen(
           unit: null,

@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../models.dart';
 import '../services/progress_service.dart';
+import 'cast.dart';
 
 /// هەمی وانە ژ assets/curriculum.json دهێنە خواندن.
 /// هەمان فایل د voice_lab/ دا ژی بۆ دروستکرنا دەنگێ کلۆنکری ب کار دهێت.
@@ -101,13 +102,13 @@ Future<void> loadCurriculum([String? override]) async {
   if (override != null) {
     try {
       // ناڤەرۆکا ئەدمینی یا کەڤن (بەری نوویکرنا ئەپێ) نابیت یا نوو بشێلیت
-      _parse(override, minVersion: _bundledVersion);
+      _parse(CastStore.text(override), minVersion: _bundledVersion);
       return;
     } catch (_) {
       // ئەگەر ناڤەرۆکا سێرڤەری خراب یان کەڤن بیت، یا ئەسلی ب کار بینە
     }
   }
-  _parse(bundled);
+  _parse(CastStore.text(bundled));
 }
 
 void _parse(String raw, {int minVersion = 0}) {

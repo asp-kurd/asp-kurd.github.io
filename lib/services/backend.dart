@@ -912,6 +912,27 @@ class Backend extends ChangeNotifier {
     return r.statusCode < 300 ? null : '${r.statusCode}: ${r.body}';
   }
 
+  /// هەمی ریزێن content یێن کلیلا وان ب [prefix] دەستپێدکەت (بێ پاشەکەفتکرن — وێنەیێن مەزن)
+  Future<Map<String, dynamic>> contentByPrefix(String prefix) async {
+    if (!enabled) return {};
+    try {
+      final r = await http
+          .get(Uri.parse('$_base/rest/v1/content?key=like.${Uri.encodeComponent(prefix)}*&select=key,value'),
+              headers: {'apikey': AppConfig.supabaseAnonKey})
+          .timeout(const Duration(seconds: 30));
+      if (r.statusCode == 200) {
+        return {for (final e in jsonDecode(r.body) as List) '${(e as Map)['key']}': e['value']};
+      }
+    } catch (_) {}
+    return {};
+  }
+
+  Future<String?> deleteContentPrefix(String prefix) async {
+    await _ensureToken();
+    final r = await http.delete(Uri.parse('$_base/rest/v1/content?key=like.${Uri.encodeComponent(prefix)}*'), headers: _h);
+    return r.statusCode < 300 ? null : '${r.statusCode}: ${r.body}';
+  }
+
   Future<String?> resetContent(String key) async {
     await _ensureToken();
     final r = await http.delete(Uri.parse('$_base/rest/v1/content?key=eq.$key'), headers: _h);

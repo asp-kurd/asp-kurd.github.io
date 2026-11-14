@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
+import '../../data/cast.dart';
 import '../widgets/sound_wave.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -58,7 +59,7 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
   @override
   void initState() {
     super.initState();
-    rootBundle.loadString('assets/goethe.json').then((s) {
+    rootBundle.loadString('assets/goethe.json').then(CastStore.text).then((s) {
       if (mounted) setState(() => data = jsonDecode(s) as Map<String, dynamic>);
     });
   }

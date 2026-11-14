@@ -449,7 +449,7 @@ class _ComboToastState extends State<_ComboToast> with SingleTickerProviderState
   /// 🦸 کاریکاتێر وەکی قارەمانی
   Widget _hero(double t, Size size, MascotChar char, Color accent) {
     const h = 150.0;
-    final img = Image.asset(widget.style == _HeroStyle.fly ? char.flyFull : (widget.style == _HeroStyle.drop ? char.landFull : char.happyFull), height: h);
+    final img = Image(image: char.img(widget.style == _HeroStyle.fly ? 'fly_full' : (widget.style == _HeroStyle.drop ? 'land_full' : 'happy_full')), height: h);
     switch (widget.style) {
       case _HeroStyle.fly:
         // ژ لایەکی دفڕیت بۆ لایێ دی ب کەپ و خەتێن لەزێ
@@ -474,7 +474,7 @@ class _ComboToastState extends State<_ComboToast> with SingleTickerProviderState
                       opacity: 0.12 * (4 - k),
                       child: ColorFiltered(
                         colorFilter: ColorFilter.mode(accent, BlendMode.srcATop),
-                        child: Image.asset(char.flyFull, height: h),
+                        child: Image(image: char.img('fly_full'), height: h),
                       ),
                     ),
                   ),

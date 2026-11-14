@@ -1558,7 +1558,7 @@ class _PerfectHeroState extends State<_PerfectHero> with SingleTickerProviderSta
         },
         child: Container(
           decoration: BoxDecoration(boxShadow: [BoxShadow(color: AppColors.gold.withValues(alpha: 0.35), blurRadius: 40)]),
-          child: Image.asset(widget.char.happyFull, height: 200),
+          child: Image(image: widget.char.img('happy_full'), height: 200),
         ),
       );
 }

@@ -8,6 +8,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import '../services/backend.dart';
 import '../services/rewards_service.dart';
 import '../ui.dart';
+import 'admin_cast.dart';
 import 'admin_tools.dart';
 import 'social_links.dart';
 import 'account_screens.dart' show agoKu;
@@ -123,7 +124,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
   @override
   Widget build(BuildContext context) {
     return _Rtl(DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('🛡️ رێڤەبەریا ASP'),
@@ -148,6 +149,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             Tab(text: '📢 نامە'),
             Tab(text: '✏️ ناڤەرۆک'),
             Tab(text: '🌳 دار'),
+            Tab(text: '👥 کاراکتەر'),
           ]),
         ),
         body: TabBarView(children: [
@@ -156,6 +158,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           const _BroadcastTab(),
           const ContentEditor(),
           const TreeEditor(),
+          const CastAdminTab(),
         ]),
       ),
     ));

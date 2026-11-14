@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../models.dart';
+import 'cast.dart';
 
 /// 📖 پەرتووکا رێزمانێ «Deutsch mit Poya» ژ assets/book.json
 /// ئەو فایل ب voice_lab/build_book.py ژ book/A1_mit_Poya.md دهێتە دروستکرن.
@@ -120,7 +121,7 @@ Future<void> loadBook({int tries = 3}) async {
 Future<void> _loadBookOnce() async {
   try {
     bookError = null;
-    final data = jsonDecode(await rootBundle.loadString('assets/book.json', cache: false)) as Map<String, dynamic>;
+    final data = jsonDecode(CastStore.text(await rootBundle.loadString('assets/book.json', cache: false))) as Map<String, dynamic>;
     bookParts = (data['parts'] as List)
         .map((p) => BookPart((p['id'] as num).toInt(), p['ku'] as String, p['de'] as String, p['en'] as String))
         .toList();

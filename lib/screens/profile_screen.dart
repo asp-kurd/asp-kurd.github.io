@@ -36,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
               builder: (_, __) {
                 final nm = Backend.instance.name;
                 return Row(children: [
-                  CircleAvatar(radius: 26, backgroundColor: AppColors.chip, backgroundImage: AssetImage(MascotChar.forUser().base)),
+                  CircleAvatar(radius: 26, backgroundColor: AppColors.chip, backgroundImage: MascotChar.forUser().img('base')),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -103,7 +103,7 @@ class ProfileScreen extends StatelessWidget {
               leading: CircleAvatar(
                 radius: 24,
                 backgroundColor: AppColors.chip,
-                backgroundImage: AssetImage(MascotChar.forUser().base),
+                backgroundImage: MascotChar.forUser().img('base'),
               ),
               title: Text('🦸 کاراکتەرێ من: ${MascotChar.forUser().name}', style: const TextStyle(fontWeight: FontWeight.bold)),
               subtitle: const Text('بگوهۆڕە'),
