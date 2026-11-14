@@ -1,0 +1,3 @@
+[debug] Injecting <script> tag. Using callback.
+[warning] The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio
+[log] Got object store box in database audio.
