@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("home_tiles", "demo=home&theme=dark"),
-    ("home_tiles_light", "demo=home&theme=light"),
+    ("home_tiles", "demo=home&quiet=1&theme=dark"),
+    ("home_tiles_light", "demo=home&quiet=1&theme=light"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -50,8 +50,6 @@ with sync_playwright() as p:
                     pg.mouse.wheel(0, 0)
                 pg.screenshot(path=f"{out}/{name}_1.png")
             if name.startswith("home_tiles"):
-                pg.mouse.click(214, 606); time.sleep(1.5)  # 🎁 دیالۆگا دیاریێ بگرە
-                pg.mouse.click(214, 712); time.sleep(1.5)  # 🎯 ئەرکێن ئەڤرۆ بگرە
                 pg.mouse.move(214, 400)
                 for _ in range(12):
                     pg.mouse.wheel(0, -900); time.sleep(0.15)
