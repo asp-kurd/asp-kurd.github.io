@@ -51,6 +51,7 @@ with sync_playwright() as p:
                 pg.screenshot(path=f"{out}/{name}_1.png")
             if name.startswith("home_tiles"):
                 pg.mouse.click(214, 606); time.sleep(1.5)  # 🎁 دیالۆگا دیاریێ بگرە
+                pg.mouse.click(214, 712); time.sleep(1.5)  # 🎯 ئەرکێن ئەڤرۆ بگرە
                 pg.mouse.move(214, 400)
                 for _ in range(12):
                     pg.mouse.wheel(0, -900); time.sleep(0.15)
