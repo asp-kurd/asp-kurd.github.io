@@ -47,7 +47,16 @@ void startTeacherTask(BuildContext context, AppMessage m, AdminTask t) {
   final n = ProgressService.instance.nativeLang;
   Backend.instance.markRead(m);
   void done(int percent) {
-    if (t.type == 'quiz' && percent < 60) return; // دڤێت ٦٠٪+ بیت
+    if (t.type == 'quiz' && percent < 60) {
+      // دڤێت ٦٠٪+ بیت — بێژە فێرخوازی بۆچی هێشتا یا مای
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(tr(n, '🎁 بۆ وەرگرتنا خەلاتی دڤێت ٦٠٪ بەرسڤێن تە دروست بن ($percent٪). جارەکا دی تاقی بکە!',
+                '🎁 Für die Belohnung brauchst du 60% ($percent%). Versuch es nochmal!',
+                '🎁 You need 60% for the reward ($percent%). Try again!'))));
+      }
+      return;
+    }
     RewardsService.instance.rewardTask(m.id, t.reward, m.title);
   }
 
@@ -72,6 +81,11 @@ class TeacherTaskCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 🔁 دەمێ خەلات هاتە وەرگرتن، کارت ئێکسەر بزر دبیت
+    return ListenableBuilder(listenable: RewardsService.instance, builder: (context, _) => _build(context));
+  }
+
+  Widget _build(BuildContext context) {
     final n = ProgressService.instance.nativeLang;
     final tasks = openTeacherTasks();
     if (tasks.isEmpty) return const SizedBox.shrink();

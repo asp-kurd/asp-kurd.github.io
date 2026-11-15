@@ -63,6 +63,7 @@ flutter:
     # 📝 رستەیێن جهێ ڤالا (زێدە) بۆ هەر قۆناغەکێ
     - assets/cloze.json
     - assets/glossary.json
+    - assets/jobs.json
     # 🖼️ وێنەیێن 3D: پەیڤ، دینار، ئاگر/قەشا
     - assets/img/vocab/
     - assets/img/fx/

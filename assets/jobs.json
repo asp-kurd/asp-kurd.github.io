@@ -1,0 +1,2091 @@
+{
+ "version": 1,
+ "jobs": [
+  {
+   "id": "supermarkt",
+   "emoji": "🛒",
+   "ku": "سوپەرمارکێت",
+   "de": "Supermarkt",
+   "en": "Supermarket",
+   "items": [
+    {
+     "id": "job_supermarkt_w0",
+     "de": "die Kasse",
+     "ku": "سندووقا پارەی",
+     "kuLat": "",
+     "deHint": "دی کاسە",
+     "en": "the checkout",
+     "emoji": "💶"
+    },
+    {
+     "id": "job_supermarkt_w1",
+     "de": "der Kunde",
+     "ku": "کڕیار",
+     "kuLat": "",
+     "deHint": "دێر کوندە",
+     "en": "the customer",
+     "emoji": "🧑"
+    },
+    {
+     "id": "job_supermarkt_w2",
+     "de": "das Regal",
+     "ku": "ڕەفک",
+     "kuLat": "",
+     "deHint": "داس ڕێگال",
+     "en": "the shelf",
+     "emoji": "🗄️"
+    },
+    {
+     "id": "job_supermarkt_w3",
+     "de": "der Einkaufswagen",
+     "ku": "عەرەبانەیا کڕینێ",
+     "kuLat": "",
+     "deHint": "دێر ئاینکاوفسڤاگن",
+     "en": "the shopping cart",
+     "emoji": "🛒"
+    },
+    {
+     "id": "job_supermarkt_w4",
+     "de": "die Tüte",
+     "ku": "کیس",
+     "kuLat": "",
+     "deHint": "دی تووتە",
+     "en": "the bag",
+     "emoji": "🛍️"
+    },
+    {
+     "id": "job_supermarkt_w5",
+     "de": "das Preisschild",
+     "ku": "نیشانا بهای",
+     "kuLat": "",
+     "deHint": "داس پرایسشیلت",
+     "en": "the price tag",
+     "emoji": "🏷️"
+    },
+    {
+     "id": "job_supermarkt_w6",
+     "de": "das Lager",
+     "ku": "کۆگە",
+     "kuLat": "",
+     "deHint": "داس لاگەر",
+     "en": "the storeroom",
+     "emoji": "📦"
+    },
+    {
+     "id": "job_supermarkt_w7",
+     "de": "die Quittung",
+     "ku": "پسوولە",
+     "kuLat": "",
+     "deHint": "دی کڤیتونگ",
+     "en": "the receipt",
+     "emoji": "🧾"
+    },
+    {
+     "id": "job_supermarkt_w8",
+     "de": "das Angebot",
+     "ku": "داشکاندن",
+     "kuLat": "",
+     "deHint": "داس ئانگەبۆت",
+     "en": "the special offer",
+     "emoji": "🔖"
+    },
+    {
+     "id": "job_supermarkt_w9",
+     "de": "die Waage",
+     "ku": "تەرازی",
+     "kuLat": "",
+     "deHint": "دی ڤاگە",
+     "en": "the scale",
+     "emoji": "⚖️"
+    },
+    {
+     "id": "job_supermarkt_p0",
+     "de": "Kann ich Ihnen helfen?",
+     "ku": "ئەرێ دشێم هاریکاریا هەوە بکەم؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Can I help you?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_supermarkt_p1",
+     "de": "Das kostet fünf Euro.",
+     "ku": "ئەڤە ب پێنج یۆرۆیانە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "That costs five euros.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_supermarkt_p2",
+     "de": "Möchten Sie eine Tüte?",
+     "ku": "ئەرێ هوین کیسەکێ دخوازن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Would you like a bag?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_supermarkt_p3",
+     "de": "Bar oder mit Karte?",
+     "ku": "ب نەقدی یان ب کارتێ؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Cash or card?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_supermarkt_p4",
+     "de": "Die Milch ist dort im Regal.",
+     "ku": "شیر ل وێرێ ل سەر ڕەفکێ یە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The milk is on the shelf over there.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "hausmeister",
+   "emoji": "🔧",
+   "ku": "چاکسازی و هەستا",
+   "de": "Hausmeister",
+   "en": "Maintenance",
+   "items": [
+    {
+     "id": "job_hausmeister_w0",
+     "de": "der Hammer",
+     "ku": "چەکووچ",
+     "kuLat": "",
+     "deHint": "دێر هامەر",
+     "en": "the hammer",
+     "emoji": "🔨"
+    },
+    {
+     "id": "job_hausmeister_w1",
+     "de": "der Schraubenzieher",
+     "ku": "دەرنەڤیس",
+     "kuLat": "",
+     "deHint": "دێر شراوبنتسیەر",
+     "en": "the screwdriver",
+     "emoji": "🪛"
+    },
+    {
+     "id": "job_hausmeister_w2",
+     "de": "die Leiter",
+     "ku": "پەیژە",
+     "kuLat": "",
+     "deHint": "دی لایتەر",
+     "en": "the ladder",
+     "emoji": "🪜"
+    },
+    {
+     "id": "job_hausmeister_w3",
+     "de": "die Lampe",
+     "ku": "گلۆپ",
+     "kuLat": "",
+     "deHint": "دی لامپە",
+     "en": "the lamp",
+     "emoji": "💡"
+    },
+    {
+     "id": "job_hausmeister_w4",
+     "de": "das Werkzeug",
+     "ku": "ئامیر",
+     "kuLat": "",
+     "deHint": "داس ڤێرکتسۆیگ",
+     "en": "the tools",
+     "emoji": "🧰"
+    },
+    {
+     "id": "job_hausmeister_w5",
+     "de": "die Heizung",
+     "ku": "ئامیرێ گەرمکرنێ",
+     "kuLat": "",
+     "deHint": "دی هایتسونگ",
+     "en": "the heating",
+     "emoji": "♨️"
+    },
+    {
+     "id": "job_hausmeister_w6",
+     "de": "der Wasserhahn",
+     "ku": "شێرێ ئاڤێ",
+     "kuLat": "",
+     "deHint": "دێر ڤاسەرهان",
+     "en": "the tap",
+     "emoji": "🚰"
+    },
+    {
+     "id": "job_hausmeister_w7",
+     "de": "der Schlüssel",
+     "ku": "کلیل",
+     "kuLat": "",
+     "deHint": "دێر شلووسل",
+     "en": "the key",
+     "emoji": "🔑"
+    },
+    {
+     "id": "job_hausmeister_w8",
+     "de": "die Tür",
+     "ku": "دەرگەهـ",
+     "kuLat": "",
+     "deHint": "دی توور",
+     "en": "the door",
+     "emoji": "🚪"
+    },
+    {
+     "id": "job_hausmeister_w9",
+     "de": "kaputt",
+     "ku": "خەراب",
+     "kuLat": "",
+     "deHint": "کاپوت",
+     "en": "broken",
+     "emoji": "🛠️"
+    },
+    {
+     "id": "job_hausmeister_p0",
+     "de": "Die Heizung ist kaputt.",
+     "ku": "ئامیرێ گەرمکرنێ خەراب بوویە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The heating is broken.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_hausmeister_p1",
+     "de": "Ich repariere das sofort.",
+     "ku": "ئەز ئێکسەر ڤێ چاک دکەم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'll repair it right away.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_hausmeister_p2",
+     "de": "Wo ist das Problem?",
+     "ku": "ئاریشە ل کیڤەیە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Where is the problem?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_hausmeister_p3",
+     "de": "Ich brauche eine Leiter.",
+     "ku": "پێدڤیا من ب پەیژەکێ هەیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I need a ladder.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_hausmeister_p4",
+     "de": "Ich komme morgen um neun Uhr.",
+     "ku": "ئەز سوبەهی دەمژمێر نەهـ دێ هێم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'll come tomorrow at nine.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "krankenhaus",
+   "emoji": "🏥",
+   "ku": "نەخۆشخانە و پەرستار",
+   "de": "Krankenhaus",
+   "en": "Hospital",
+   "items": [
+    {
+     "id": "job_krankenhaus_w0",
+     "de": "die Krankenschwester",
+     "ku": "پەرستار",
+     "kuLat": "",
+     "deHint": "دی کرانکنشڤێستەر",
+     "en": "the nurse",
+     "emoji": "👩‍⚕️"
+    },
+    {
+     "id": "job_krankenhaus_w1",
+     "de": "der Patient",
+     "ku": "نەخۆش",
+     "kuLat": "",
+     "deHint": "دێر پاتسیێنت",
+     "en": "the patient",
+     "emoji": "🛌"
+    },
+    {
+     "id": "job_krankenhaus_w2",
+     "de": "das Bett",
+     "ku": "تەخت",
+     "kuLat": "",
+     "deHint": "داس بێت",
+     "en": "the bed",
+     "emoji": "🛏️"
+    },
+    {
+     "id": "job_krankenhaus_w3",
+     "de": "die Spritze",
+     "ku": "دەرزی",
+     "kuLat": "",
+     "deHint": "دی شپریتسە",
+     "en": "the injection",
+     "emoji": "💉"
+    },
+    {
+     "id": "job_krankenhaus_w4",
+     "de": "das Fieber",
+     "ku": "تا",
+     "kuLat": "",
+     "deHint": "داس فیبەر",
+     "en": "the fever",
+     "emoji": "🤒"
+    },
+    {
+     "id": "job_krankenhaus_w5",
+     "de": "die Tablette",
+     "ku": "حەب",
+     "kuLat": "",
+     "deHint": "دی تابلێتە",
+     "en": "the pill",
+     "emoji": "💊"
+    },
+    {
+     "id": "job_krankenhaus_w6",
+     "de": "der Schmerz",
+     "ku": "ئێش",
+     "kuLat": "",
+     "deHint": "دێر شمێرتس",
+     "en": "the pain",
+     "emoji": "🤕"
+    },
+    {
+     "id": "job_krankenhaus_w7",
+     "de": "das Thermometer",
+     "ku": "پیڤەرا گەرمیێ",
+     "kuLat": "",
+     "deHint": "داس تێرمۆمێتەر",
+     "en": "the thermometer",
+     "emoji": "🌡️"
+    },
+    {
+     "id": "job_krankenhaus_w8",
+     "de": "der Notfall",
+     "ku": "فریاکەفتن",
+     "kuLat": "",
+     "deHint": "دێر نۆتفال",
+     "en": "the emergency",
+     "emoji": "🚑"
+    },
+    {
+     "id": "job_krankenhaus_w9",
+     "de": "das Blut",
+     "ku": "خوین",
+     "kuLat": "",
+     "deHint": "داس بلووت",
+     "en": "the blood",
+     "emoji": "🩸"
+    },
+    {
+     "id": "job_krankenhaus_p0",
+     "de": "Wie geht es Ihnen heute?",
+     "ku": "ئەڤرۆ هوین چاوانن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "How are you today?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_krankenhaus_p1",
+     "de": "Haben Sie Schmerzen?",
+     "ku": "ئەرێ ئێش هەیە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Are you in pain?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_krankenhaus_p2",
+     "de": "Bitte nehmen Sie diese Tablette.",
+     "ku": "هیڤیە ڤێ حەبێ بخۆن.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please take this pill.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_krankenhaus_p3",
+     "de": "Ich messe jetzt Fieber.",
+     "ku": "نوکە ئەز تایا هەوە دپیڤم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'm taking your temperature now.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_krankenhaus_p4",
+     "de": "Ich komme gleich.",
+     "ku": "ئەز نوکە دهێم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'm coming right away.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "arztpraxis",
+   "emoji": "🩺",
+   "ku": "دکتۆر و نۆڕینگەهـ",
+   "de": "Arztpraxis",
+   "en": "Doctor's office",
+   "items": [
+    {
+     "id": "job_arztpraxis_w0",
+     "de": "der Arzt",
+     "ku": "دکتۆر",
+     "kuLat": "",
+     "deHint": "دێر ئارتست",
+     "en": "the doctor",
+     "emoji": "🧑‍⚕️"
+    },
+    {
+     "id": "job_arztpraxis_w1",
+     "de": "der Termin",
+     "ku": "ژڤان",
+     "kuLat": "",
+     "deHint": "دێر تێرمین",
+     "en": "the appointment",
+     "emoji": "📅"
+    },
+    {
+     "id": "job_arztpraxis_w2",
+     "de": "das Wartezimmer",
+     "ku": "ژوورا چاڤەڕێکرنێ",
+     "kuLat": "",
+     "deHint": "داس ڤارتەتسیمەر",
+     "en": "the waiting room",
+     "emoji": "🪑"
+    },
+    {
+     "id": "job_arztpraxis_w3",
+     "de": "die Versichertenkarte",
+     "ku": "کارتا بیمەیێ",
+     "kuLat": "",
+     "deHint": "دی فێرزیشەرتنکارتە",
+     "en": "the insurance card",
+     "emoji": "💳"
+    },
+    {
+     "id": "job_arztpraxis_w4",
+     "de": "das Rezept",
+     "ku": "ڕەچەتە",
+     "kuLat": "",
+     "deHint": "داس ڕێتسێپت",
+     "en": "the prescription",
+     "emoji": "📝"
+    },
+    {
+     "id": "job_arztpraxis_w5",
+     "de": "die Apotheke",
+     "ku": "دەرمانخانە",
+     "kuLat": "",
+     "deHint": "دی ئاپۆتێکە",
+     "en": "the pharmacy",
+     "emoji": "⚕️"
+    },
+    {
+     "id": "job_arztpraxis_w6",
+     "de": "der Kopf",
+     "ku": "سەر",
+     "kuLat": "",
+     "deHint": "دێر کۆپف",
+     "en": "the head",
+     "emoji": "🙆"
+    },
+    {
+     "id": "job_arztpraxis_w7",
+     "de": "der Bauch",
+     "ku": "زک",
+     "kuLat": "",
+     "deHint": "دێر باوخ",
+     "en": "the stomach",
+     "emoji": "🤢"
+    },
+    {
+     "id": "job_arztpraxis_w8",
+     "de": "krank",
+     "ku": "نەخۆش",
+     "kuLat": "",
+     "deHint": "کرانک",
+     "en": "sick",
+     "emoji": "🤧"
+    },
+    {
+     "id": "job_arztpraxis_w9",
+     "de": "die Krankmeldung",
+     "ku": "ڕاپۆرتا نەخۆشیێ",
+     "kuLat": "",
+     "deHint": "دی کرانکمێلدونگ",
+     "en": "the sick note",
+     "emoji": "📄"
+    },
+    {
+     "id": "job_arztpraxis_p0",
+     "de": "Ich möchte einen Termin.",
+     "ku": "ئەز ژڤانەکێ دخوازم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'd like an appointment.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_arztpraxis_p1",
+     "de": "Haben Sie Ihre Versichertenkarte?",
+     "ku": "ئەرێ کارتا بیمەیا هەوە دگەل هەوە یە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Do you have your insurance card?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_arztpraxis_p2",
+     "de": "Bitte warten Sie im Wartezimmer.",
+     "ku": "هیڤیە ل ژوورا چاڤەڕێکرنێ چاڤەڕێ بکەن.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please wait in the waiting room.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_arztpraxis_p3",
+     "de": "Mein Kopf tut weh.",
+     "ku": "سەرێ من دئێشیت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "My head hurts.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_arztpraxis_p4",
+     "de": "Seit wann sind Sie krank?",
+     "ku": "ژ کەنگی ڤە هوین نەخۆشن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Since when have you been sick?",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "kita",
+   "emoji": "🧸",
+   "ku": "باخچێ زارۆکان",
+   "de": "Kita",
+   "en": "Kindergarten",
+   "items": [
+    {
+     "id": "job_kita_w0",
+     "de": "das Kind",
+     "ku": "زارۆک",
+     "kuLat": "",
+     "deHint": "داس کیند",
+     "en": "the child",
+     "emoji": "🧒"
+    },
+    {
+     "id": "job_kita_w1",
+     "de": "die Erzieherin",
+     "ku": "پەروەردەکار",
+     "kuLat": "",
+     "deHint": "دی ئێرتسیەرین",
+     "en": "the educator",
+     "emoji": "👩‍🏫"
+    },
+    {
+     "id": "job_kita_w2",
+     "de": "das Spielzeug",
+     "ku": "یاریک",
+     "kuLat": "",
+     "deHint": "داس شپیلتسۆیگ",
+     "en": "the toy",
+     "emoji": "🧸"
+    },
+    {
+     "id": "job_kita_w3",
+     "de": "der Ball",
+     "ku": "تۆپ",
+     "kuLat": "",
+     "deHint": "دێر بال",
+     "en": "the ball",
+     "emoji": "⚽"
+    },
+    {
+     "id": "job_kita_w4",
+     "de": "die Windel",
+     "ku": "پەمپەرز",
+     "kuLat": "",
+     "deHint": "دی ڤیندل",
+     "en": "the diaper",
+     "emoji": "👶"
+    },
+    {
+     "id": "job_kita_w5",
+     "de": "das Buch",
+     "ku": "پەرتووک",
+     "kuLat": "",
+     "deHint": "داس بووخ",
+     "en": "the book",
+     "emoji": "📖"
+    },
+    {
+     "id": "job_kita_w6",
+     "de": "malen",
+     "ku": "وێنە کێشان",
+     "kuLat": "",
+     "deHint": "مالن",
+     "en": "to paint",
+     "emoji": "🎨"
+    },
+    {
+     "id": "job_kita_w7",
+     "de": "schlafen",
+     "ku": "نڤستن",
+     "kuLat": "",
+     "deHint": "شلافن",
+     "en": "to sleep",
+     "emoji": "😴"
+    },
+    {
+     "id": "job_kita_w8",
+     "de": "der Spielplatz",
+     "ku": "جهێ یاریان",
+     "kuLat": "",
+     "deHint": "دێر شپیلپلاتس",
+     "en": "the playground",
+     "emoji": "🛝"
+    },
+    {
+     "id": "job_kita_w9",
+     "de": "die Eltern",
+     "ku": "دایک و باب",
+     "kuLat": "",
+     "deHint": "دی ئێلتەرن",
+     "en": "the parents",
+     "emoji": "👨‍👩‍👧"
+    },
+    {
+     "id": "job_kita_p0",
+     "de": "Guten Morgen! Wie heißt du?",
+     "ku": "سپێدە باش! ناڤێ تە چیە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Good morning! What's your name?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_kita_p1",
+     "de": "Wasch dir bitte die Hände.",
+     "ku": "هیڤیە دەستێن خۆ بشۆ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please wash your hands.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_kita_p2",
+     "de": "Jetzt essen wir zusammen.",
+     "ku": "نوکە ئەم پێکڤە دخۆین.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Now we eat together.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_kita_p3",
+     "de": "Deine Mama kommt um drei Uhr.",
+     "ku": "دایکا تە دەمژمێر سێ دهێت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Your mum comes at three.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_kita_p4",
+     "de": "Wir gehen auf den Spielplatz.",
+     "ku": "ئەم دچینە جهێ یاریان.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "We're going to the playground.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "altenpflege",
+   "emoji": "👵",
+   "ku": "خانیێ پیران",
+   "de": "Altenpflege",
+   "en": "Elderly care",
+   "items": [
+    {
+     "id": "job_altenpflege_w0",
+     "de": "die Bewohnerin",
+     "ku": "ئاکنجی",
+     "kuLat": "",
+     "deHint": "دی بەڤۆنەرین",
+     "en": "the resident",
+     "emoji": "👵"
+    },
+    {
+     "id": "job_altenpflege_w1",
+     "de": "der Rollstuhl",
+     "ku": "کورسیکا ب تەکەر",
+     "kuLat": "",
+     "deHint": "دێر ڕۆلشتوول",
+     "en": "the wheelchair",
+     "emoji": "🦽"
+    },
+    {
+     "id": "job_altenpflege_w2",
+     "de": "das Medikament",
+     "ku": "دەرمان",
+     "kuLat": "",
+     "deHint": "داس مێدیکامێنت",
+     "en": "the medicine",
+     "emoji": "💊"
+    },
+    {
+     "id": "job_altenpflege_w3",
+     "de": "waschen",
+     "ku": "شویشتن",
+     "kuLat": "",
+     "deHint": "ڤاشن",
+     "en": "to wash",
+     "emoji": "🧼"
+    },
+    {
+     "id": "job_altenpflege_w4",
+     "de": "das Handtuch",
+     "ku": "خاولی",
+     "kuLat": "",
+     "deHint": "داس هانتووخ",
+     "en": "the towel",
+     "emoji": "🧺"
+    },
+    {
+     "id": "job_altenpflege_w5",
+     "de": "der Stock",
+     "ku": "گۆچان",
+     "kuLat": "",
+     "deHint": "دێر شتۆک",
+     "en": "the walking stick",
+     "emoji": "🦯"
+    },
+    {
+     "id": "job_altenpflege_w6",
+     "de": "das Essen",
+     "ku": "خوارن",
+     "kuLat": "",
+     "deHint": "داس ئێسن",
+     "en": "the food",
+     "emoji": "🍲"
+    },
+    {
+     "id": "job_altenpflege_w7",
+     "de": "trinken",
+     "ku": "ڤەخوارن",
+     "kuLat": "",
+     "deHint": "ترینکن",
+     "en": "to drink",
+     "emoji": "🥤"
+    },
+    {
+     "id": "job_altenpflege_w8",
+     "de": "spazieren gehen",
+     "ku": "گەڕیان",
+     "kuLat": "",
+     "deHint": "شپاتسیرن گێەن",
+     "en": "to go for a walk",
+     "emoji": "🚶"
+    },
+    {
+     "id": "job_altenpflege_w9",
+     "de": "die Brille",
+     "ku": "بەرچاڤک",
+     "kuLat": "",
+     "deHint": "دی بریلە",
+     "en": "the glasses",
+     "emoji": "👓"
+    },
+    {
+     "id": "job_altenpflege_p0",
+     "de": "Guten Morgen! Haben Sie gut geschlafen?",
+     "ku": "سپێدە باش! ئەرێ هوین باش نڤستن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Good morning! Did you sleep well?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_altenpflege_p1",
+     "de": "Möchten Sie etwas trinken?",
+     "ku": "ئەرێ هوین دخوازن تشتەکی ڤەخۆن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Would you like something to drink?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_altenpflege_p2",
+     "de": "Ich helfe Ihnen beim Aufstehen.",
+     "ku": "ئەز هاریکاریا هەوە دکەم دا ڕابن.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'll help you get up.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_altenpflege_p3",
+     "de": "Hier ist Ihre Brille.",
+     "ku": "ئەڤە بەرچاڤکا هەوە یە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Here are your glasses.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_altenpflege_p4",
+     "de": "Wir gehen jetzt spazieren.",
+     "ku": "نوکە ئەم دچینە گەڕیانێ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "We're going for a walk now.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "restaurant",
+   "emoji": "🍽️",
+   "ku": "خوارنگەهـ",
+   "de": "Restaurant",
+   "en": "Restaurant",
+   "items": [
+    {
+     "id": "job_restaurant_w0",
+     "de": "die Speisekarte",
+     "ku": "لیستا خوارنێ",
+     "kuLat": "",
+     "deHint": "دی شپایزەکارتە",
+     "en": "the menu",
+     "emoji": "📋"
+    },
+    {
+     "id": "job_restaurant_w1",
+     "de": "der Kellner",
+     "ku": "گارسۆن",
+     "kuLat": "",
+     "deHint": "دێر کێلنەر",
+     "en": "the waiter",
+     "emoji": "🤵"
+    },
+    {
+     "id": "job_restaurant_w2",
+     "de": "die Küche",
+     "ku": "مەتبەخ",
+     "kuLat": "",
+     "deHint": "دی کووشە",
+     "en": "the kitchen",
+     "emoji": "🍳"
+    },
+    {
+     "id": "job_restaurant_w3",
+     "de": "der Teller",
+     "ku": "قاپ",
+     "kuLat": "",
+     "deHint": "دێر تێلەر",
+     "en": "the plate",
+     "emoji": "🍽️"
+    },
+    {
+     "id": "job_restaurant_w4",
+     "de": "das Glas",
+     "ku": "پەرداخ",
+     "kuLat": "",
+     "deHint": "داس گلاس",
+     "en": "the glass",
+     "emoji": "🥛"
+    },
+    {
+     "id": "job_restaurant_w5",
+     "de": "die Rechnung",
+     "ku": "حسێب",
+     "kuLat": "",
+     "deHint": "دی ڕێشنونگ",
+     "en": "the bill",
+     "emoji": "🧾"
+    },
+    {
+     "id": "job_restaurant_w6",
+     "de": "der Tisch",
+     "ku": "مێز",
+     "kuLat": "",
+     "deHint": "دێر تیش",
+     "en": "the table",
+     "emoji": "🪑"
+    },
+    {
+     "id": "job_restaurant_w7",
+     "de": "bestellen",
+     "ku": "داخوازکرن",
+     "kuLat": "",
+     "deHint": "بەشتێلن",
+     "en": "to order",
+     "emoji": "✍️"
+    },
+    {
+     "id": "job_restaurant_w8",
+     "de": "der Koch",
+     "ku": "ئاشپێژ",
+     "kuLat": "",
+     "deHint": "دێر کۆخ",
+     "en": "the cook",
+     "emoji": "👨‍🍳"
+    },
+    {
+     "id": "job_restaurant_w9",
+     "de": "das Trinkgeld",
+     "ku": "بەخشیش",
+     "kuLat": "",
+     "deHint": "داس ترینکگێلت",
+     "en": "the tip",
+     "emoji": "💶"
+    },
+    {
+     "id": "job_restaurant_p0",
+     "de": "Was möchten Sie trinken?",
+     "ku": "هوین دخوازن چ ڤەخۆن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "What would you like to drink?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_restaurant_p1",
+     "de": "Einen Tisch für zwei, bitte.",
+     "ku": "مێزەک بۆ دوو کەسان، هیڤیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "A table for two, please.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_restaurant_p2",
+     "de": "Hat es Ihnen geschmeckt?",
+     "ku": "ئەرێ خوارن ب دلێ هەوە بوو؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Did you enjoy the food?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_restaurant_p3",
+     "de": "Die Rechnung, bitte.",
+     "ku": "حسێب، هیڤیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The bill, please.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_restaurant_p4",
+     "de": "Das Essen kommt gleich.",
+     "ku": "خوارن نوکە دهێت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The food is coming soon.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "lager",
+   "emoji": "📦",
+   "ku": "کۆگە و پاکێت",
+   "de": "Lager",
+   "en": "Warehouse",
+   "items": [
+    {
+     "id": "job_lager_w0",
+     "de": "das Paket",
+     "ku": "پاکێت",
+     "kuLat": "",
+     "deHint": "داس پاکێت",
+     "en": "the package",
+     "emoji": "📦"
+    },
+    {
+     "id": "job_lager_w1",
+     "de": "der Karton",
+     "ku": "کارتۆن",
+     "kuLat": "",
+     "deHint": "دێر کارتۆن",
+     "en": "the box",
+     "emoji": "🗃️"
+    },
+    {
+     "id": "job_lager_w2",
+     "de": "der Gabelstapler",
+     "ku": "فۆرکلیفت",
+     "kuLat": "",
+     "deHint": "دێر گابلشتاپلەر",
+     "en": "the forklift",
+     "emoji": "🚜"
+    },
+    {
+     "id": "job_lager_w3",
+     "de": "schwer",
+     "ku": "گران",
+     "kuLat": "",
+     "deHint": "شڤێر",
+     "en": "heavy",
+     "emoji": "🏋️"
+    },
+    {
+     "id": "job_lager_w4",
+     "de": "leicht",
+     "ku": "سڤک",
+     "kuLat": "",
+     "deHint": "لایشت",
+     "en": "light",
+     "emoji": "🪶"
+    },
+    {
+     "id": "job_lager_w5",
+     "de": "der Scanner",
+     "ku": "سکانەر",
+     "kuLat": "",
+     "deHint": "دێر سکێنەر",
+     "en": "the scanner",
+     "emoji": "📟"
+    },
+    {
+     "id": "job_lager_w6",
+     "de": "die Lieferung",
+     "ku": "گەهاندن",
+     "kuLat": "",
+     "deHint": "دی لیفەرونگ",
+     "en": "the delivery",
+     "emoji": "🚚"
+    },
+    {
+     "id": "job_lager_w7",
+     "de": "die Schicht",
+     "ku": "دەوام",
+     "kuLat": "",
+     "deHint": "دی شیشت",
+     "en": "the shift",
+     "emoji": "⏰"
+    },
+    {
+     "id": "job_lager_w8",
+     "de": "der Helm",
+     "ku": "کلاڤێ پاراستنێ",
+     "kuLat": "",
+     "deHint": "دێر هێلم",
+     "en": "the helmet",
+     "emoji": "⛑️"
+    },
+    {
+     "id": "job_lager_w9",
+     "de": "die Handschuhe",
+     "ku": "دەستکێش",
+     "kuLat": "",
+     "deHint": "دی هانتشووە",
+     "en": "the gloves",
+     "emoji": "🧤"
+    },
+    {
+     "id": "job_lager_p0",
+     "de": "Das Paket ist sehr schwer.",
+     "ku": "ئەڤ پاکێتە گەلەک گرانە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "This package is very heavy.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_lager_p1",
+     "de": "Wo soll ich das hinstellen?",
+     "ku": "ئەز ڤێ ل کیڤە دانم؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Where should I put this?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_lager_p2",
+     "de": "Meine Schicht beginnt um sechs Uhr.",
+     "ku": "دەوامێ من دەمژمێر شەش دەست پێ دکەت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "My shift starts at six.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_lager_p3",
+     "de": "Bitte tragen Sie Handschuhe.",
+     "ku": "هیڤیە دەستکێشان بکەنە دەستێن خۆ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please wear gloves.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_lager_p4",
+     "de": "Die Lieferung kommt heute.",
+     "ku": "گەهاندن ئەڤرۆ دهێت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The delivery comes today.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "reinigung",
+   "emoji": "🧹",
+   "ku": "پاقژکرن",
+   "de": "Reinigung",
+   "en": "Cleaning",
+   "items": [
+    {
+     "id": "job_reinigung_w0",
+     "de": "der Besen",
+     "ku": "گسک",
+     "kuLat": "",
+     "deHint": "دێر بێزن",
+     "en": "the broom",
+     "emoji": "🧹"
+    },
+    {
+     "id": "job_reinigung_w1",
+     "de": "der Eimer",
+     "ku": "سەتل",
+     "kuLat": "",
+     "deHint": "دێر ئایمەر",
+     "en": "the bucket",
+     "emoji": "🪣"
+    },
+    {
+     "id": "job_reinigung_w2",
+     "de": "der Staubsauger",
+     "ku": "ماکینا پاقژکرنێ",
+     "kuLat": "",
+     "deHint": "دێر شتاوبزاوگەر",
+     "en": "the vacuum cleaner",
+     "emoji": "🌀"
+    },
+    {
+     "id": "job_reinigung_w3",
+     "de": "putzen",
+     "ku": "پاقژکرن",
+     "kuLat": "",
+     "deHint": "پوتسن",
+     "en": "to clean",
+     "emoji": "🧽"
+    },
+    {
+     "id": "job_reinigung_w4",
+     "de": "der Müll",
+     "ku": "زبل",
+     "kuLat": "",
+     "deHint": "دێر موول",
+     "en": "the trash",
+     "emoji": "🗑️"
+    },
+    {
+     "id": "job_reinigung_w5",
+     "de": "das Fenster",
+     "ku": "پەنجەرە",
+     "kuLat": "",
+     "deHint": "داس فێنستەر",
+     "en": "the window",
+     "emoji": "🪟"
+    },
+    {
+     "id": "job_reinigung_w6",
+     "de": "der Boden",
+     "ku": "ئەرد",
+     "kuLat": "",
+     "deHint": "دێر بۆدن",
+     "en": "the floor",
+     "emoji": "🟫"
+    },
+    {
+     "id": "job_reinigung_w7",
+     "de": "die Toilette",
+     "ku": "تەوالێت",
+     "kuLat": "",
+     "deHint": "دی تۆئالێتە",
+     "en": "the toilet",
+     "emoji": "🚽"
+    },
+    {
+     "id": "job_reinigung_w8",
+     "de": "sauber",
+     "ku": "پاقژ",
+     "kuLat": "",
+     "deHint": "زاوبەر",
+     "en": "clean",
+     "emoji": "✨"
+    },
+    {
+     "id": "job_reinigung_w9",
+     "de": "schmutzig",
+     "ku": "پیس",
+     "kuLat": "",
+     "deHint": "شموتسیش",
+     "en": "dirty",
+     "emoji": "🦠"
+    },
+    {
+     "id": "job_reinigung_p0",
+     "de": "Ich putze zuerst die Küche.",
+     "ku": "پێشی ئەز مەتبەخێ پاقژ دکەم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "First I clean the kitchen.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_reinigung_p1",
+     "de": "Der Boden ist noch nass.",
+     "ku": "ئەرد هێشتا تەڕە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The floor is still wet.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_reinigung_p2",
+     "de": "Wo ist der Müll?",
+     "ku": "زبل ل کیڤەیە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Where is the trash?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_reinigung_p3",
+     "de": "Das Fenster ist jetzt sauber.",
+     "ku": "پەنجەرە نوکە پاقژە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The window is clean now.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_reinigung_p4",
+     "de": "Brauchen Sie noch etwas?",
+     "ku": "ئەرێ تشتەکێ دی پێدڤی یە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Do you need anything else?",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "friseur",
+   "emoji": "💈",
+   "ku": "سەرتاش",
+   "de": "Friseur",
+   "en": "Hairdresser",
+   "items": [
+    {
+     "id": "job_friseur_w0",
+     "de": "die Haare",
+     "ku": "پرچ",
+     "kuLat": "",
+     "deHint": "دی هارە",
+     "en": "the hair",
+     "emoji": "💇"
+    },
+    {
+     "id": "job_friseur_w1",
+     "de": "die Schere",
+     "ku": "مقەس",
+     "kuLat": "",
+     "deHint": "دی شێرە",
+     "en": "the scissors",
+     "emoji": "✂️"
+    },
+    {
+     "id": "job_friseur_w2",
+     "de": "der Kamm",
+     "ku": "شە",
+     "kuLat": "",
+     "deHint": "دێر کام",
+     "en": "the comb",
+     "emoji": "🪮"
+    },
+    {
+     "id": "job_friseur_w3",
+     "de": "der Bart",
+     "ku": "ڕیهـ",
+     "kuLat": "",
+     "deHint": "دێر بارت",
+     "en": "the beard",
+     "emoji": "🧔"
+    },
+    {
+     "id": "job_friseur_w4",
+     "de": "kurz",
+     "ku": "کورت",
+     "kuLat": "",
+     "deHint": "کورتس",
+     "en": "short",
+     "emoji": "📏"
+    },
+    {
+     "id": "job_friseur_w5",
+     "de": "lang",
+     "ku": "درێژ",
+     "kuLat": "",
+     "deHint": "لانگ",
+     "en": "long",
+     "emoji": "〰️"
+    },
+    {
+     "id": "job_friseur_w6",
+     "de": "der Föhn",
+     "ku": "سێشوار",
+     "kuLat": "",
+     "deHint": "دێر فۆن",
+     "en": "the hair dryer",
+     "emoji": "💨"
+    },
+    {
+     "id": "job_friseur_w7",
+     "de": "der Spiegel",
+     "ku": "نەینک",
+     "kuLat": "",
+     "deHint": "دێر شپیگل",
+     "en": "the mirror",
+     "emoji": "🪞"
+    },
+    {
+     "id": "job_friseur_w8",
+     "de": "der Rasierer",
+     "ku": "ماکینا ڕیهێ",
+     "kuLat": "",
+     "deHint": "دێر ڕازیرەر",
+     "en": "the razor",
+     "emoji": "🪒"
+    },
+    {
+     "id": "job_friseur_w9",
+     "de": "schneiden",
+     "ku": "بڕین",
+     "kuLat": "",
+     "deHint": "شنایدن",
+     "en": "to cut",
+     "emoji": "💇‍♂️"
+    },
+    {
+     "id": "job_friseur_p0",
+     "de": "Wie möchten Sie die Haare?",
+     "ku": "هوین پرچا خۆ چاوا دخوازن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "How would you like your hair?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_friseur_p1",
+     "de": "Nur ein bisschen kürzer, bitte.",
+     "ku": "تنێ هندەکێ کورتتر، هیڤیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Just a little shorter, please.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_friseur_p2",
+     "de": "Den Bart auch?",
+     "ku": "ڕیهـ ژی؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The beard too?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_friseur_p3",
+     "de": "Das macht fünfzehn Euro.",
+     "ku": "ئەڤە دبیتە پازدە یۆرۆ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "That's fifteen euros.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_friseur_p4",
+     "de": "Gefällt es Ihnen?",
+     "ku": "ئەرێ ب دلێ هەوە یە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Do you like it?",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "fahrer",
+   "emoji": "🚚",
+   "ku": "شۆفێر و گەهاندن",
+   "de": "Fahrer",
+   "en": "Driver",
+   "items": [
+    {
+     "id": "job_fahrer_w0",
+     "de": "das Auto",
+     "ku": "ترومبێل",
+     "kuLat": "",
+     "deHint": "داس ئاوتۆ",
+     "en": "the car",
+     "emoji": "🚗"
+    },
+    {
+     "id": "job_fahrer_w1",
+     "de": "der Lkw",
+     "ku": "لۆری",
+     "kuLat": "",
+     "deHint": "دێر ئێلکاڤێ",
+     "en": "the truck",
+     "emoji": "🚛"
+    },
+    {
+     "id": "job_fahrer_w2",
+     "de": "die Straße",
+     "ku": "جادە",
+     "kuLat": "",
+     "deHint": "دی شتراسە",
+     "en": "the street",
+     "emoji": "🛣️"
+    },
+    {
+     "id": "job_fahrer_w3",
+     "de": "die Adresse",
+     "ku": "ناڤنیشان",
+     "kuLat": "",
+     "deHint": "دی ئادرێسە",
+     "en": "the address",
+     "emoji": "📍"
+    },
+    {
+     "id": "job_fahrer_w4",
+     "de": "links",
+     "ku": "چەپ",
+     "kuLat": "",
+     "deHint": "لینکس",
+     "en": "left",
+     "emoji": "⬅️"
+    },
+    {
+     "id": "job_fahrer_w5",
+     "de": "rechts",
+     "ku": "ڕاست",
+     "kuLat": "",
+     "deHint": "ڕێشتس",
+     "en": "right",
+     "emoji": "➡️"
+    },
+    {
+     "id": "job_fahrer_w6",
+     "de": "geradeaus",
+     "ku": "ڕاستەوخۆ",
+     "kuLat": "",
+     "deHint": "گەرادەئاوس",
+     "en": "straight ahead",
+     "emoji": "⬆️"
+    },
+    {
+     "id": "job_fahrer_w7",
+     "de": "der Führerschein",
+     "ku": "ئیجازا شۆفێریێ",
+     "kuLat": "",
+     "deHint": "دێر فوورەرشاین",
+     "en": "the driving licence",
+     "emoji": "🪪"
+    },
+    {
+     "id": "job_fahrer_w8",
+     "de": "tanken",
+     "ku": "بەنزین تێکرن",
+     "kuLat": "",
+     "deHint": "تانکن",
+     "en": "to refuel",
+     "emoji": "⛽"
+    },
+    {
+     "id": "job_fahrer_w9",
+     "de": "die Ampel",
+     "ku": "گلۆپێن هاتووچوونێ",
+     "kuLat": "",
+     "deHint": "دی ئامپل",
+     "en": "the traffic light",
+     "emoji": "🚦"
+    },
+    {
+     "id": "job_fahrer_p0",
+     "de": "Wo ist die Hausnummer zwölf?",
+     "ku": "خانیێ ژمارە دوازدە ل کیڤەیە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Where is house number twelve?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_fahrer_p1",
+     "de": "Ich habe ein Paket für Sie.",
+     "ku": "پاکێتەک بۆ هەوە ل نک من هەیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I have a package for you.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_fahrer_p2",
+     "de": "Bitte hier unterschreiben.",
+     "ku": "هیڤیە ل ڤێرێ ئیمزا بکەن.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please sign here.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_fahrer_p3",
+     "de": "An der Ampel links.",
+     "ku": "ل گلۆپێن هاتووچوونێ بچە لایێ چەپێ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Turn left at the traffic light.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_fahrer_p4",
+     "de": "Ich komme in zehn Minuten.",
+     "ku": "ئەز پشتی دەهـ خولەکان دگەهم.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "I'll be there in ten minutes.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "bau",
+   "emoji": "🏗️",
+   "ku": "ئاڤاکرن",
+   "de": "Baustelle",
+   "en": "Construction",
+   "items": [
+    {
+     "id": "job_bau_w0",
+     "de": "die Baustelle",
+     "ku": "جهێ ئاڤاکرنێ",
+     "kuLat": "",
+     "deHint": "دی باوشتێلە",
+     "en": "the construction site",
+     "emoji": "🏗️"
+    },
+    {
+     "id": "job_bau_w1",
+     "de": "der Ziegel",
+     "ku": "بلۆک",
+     "kuLat": "",
+     "deHint": "دێر تسیگل",
+     "en": "the brick",
+     "emoji": "🧱"
+    },
+    {
+     "id": "job_bau_w2",
+     "de": "der Zement",
+     "ku": "چیمەنتۆ",
+     "kuLat": "",
+     "deHint": "دێر تسێمێنت",
+     "en": "the cement",
+     "emoji": "🪨"
+    },
+    {
+     "id": "job_bau_w3",
+     "de": "die Schaufel",
+     "ku": "مەڕ",
+     "kuLat": "",
+     "deHint": "دی شاوفل",
+     "en": "the shovel",
+     "emoji": "⛏️"
+    },
+    {
+     "id": "job_bau_w4",
+     "de": "der Kran",
+     "ku": "کرێن",
+     "kuLat": "",
+     "deHint": "دێر کران",
+     "en": "the crane",
+     "emoji": "🪝"
+    },
+    {
+     "id": "job_bau_w5",
+     "de": "der Bohrer",
+     "ku": "دریل",
+     "kuLat": "",
+     "deHint": "دێر بۆرەر",
+     "en": "the drill",
+     "emoji": "🔩"
+    },
+    {
+     "id": "job_bau_w6",
+     "de": "das Holz",
+     "ku": "دار",
+     "kuLat": "",
+     "deHint": "داس هۆلتس",
+     "en": "the wood",
+     "emoji": "🪵"
+    },
+    {
+     "id": "job_bau_w7",
+     "de": "die Wand",
+     "ku": "دیوار",
+     "kuLat": "",
+     "deHint": "دی ڤاند",
+     "en": "the wall",
+     "emoji": "🏠"
+    },
+    {
+     "id": "job_bau_w8",
+     "de": "der Helm",
+     "ku": "کلاڤێ پاراستنێ",
+     "kuLat": "",
+     "deHint": "دێر هێلم",
+     "en": "the helmet",
+     "emoji": "⛑️"
+    },
+    {
+     "id": "job_bau_w9",
+     "de": "tragen",
+     "ku": "هەلگرتن",
+     "kuLat": "",
+     "deHint": "تراگن",
+     "en": "to carry",
+     "emoji": "💪"
+    },
+    {
+     "id": "job_bau_p0",
+     "de": "Vorsicht! Das ist gefährlich.",
+     "ku": "ئاگەهدار بە! ئەڤە مەترسیدارە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Careful! That's dangerous.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_bau_p1",
+     "de": "Wir brauchen mehr Zement.",
+     "ku": "پێدڤیا مە ب چیمەنتۆیێ پتر هەیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "We need more cement.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_bau_p2",
+     "de": "Bitte trag den Helm.",
+     "ku": "هیڤیە کلاڤێ پاراستنێ بکە سەرێ خۆ.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Please wear the helmet.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_bau_p3",
+     "de": "Die Pause ist um zwölf Uhr.",
+     "ku": "پشوو دەمژمێر دوازدە یە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The break is at twelve.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_bau_p4",
+     "de": "Kannst du mir helfen?",
+     "ku": "دشێی هاریکاریا من بکەی؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Can you help me?",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "baeckerei",
+   "emoji": "🥨",
+   "ku": "نانەواخانە",
+   "de": "Bäckerei",
+   "en": "Bakery",
+   "items": [
+    {
+     "id": "job_baeckerei_w0",
+     "de": "das Brot",
+     "ku": "نان",
+     "kuLat": "",
+     "deHint": "داس برۆت",
+     "en": "the bread",
+     "emoji": "🍞"
+    },
+    {
+     "id": "job_baeckerei_w1",
+     "de": "das Brötchen",
+     "ku": "سەموون",
+     "kuLat": "",
+     "deHint": "داس برۆتشن",
+     "en": "the bread roll",
+     "emoji": "🥖"
+    },
+    {
+     "id": "job_baeckerei_w2",
+     "de": "der Kuchen",
+     "ku": "کێک",
+     "kuLat": "",
+     "deHint": "دێر کووخن",
+     "en": "the cake",
+     "emoji": "🍰"
+    },
+    {
+     "id": "job_baeckerei_w3",
+     "de": "das Mehl",
+     "ku": "ئارد",
+     "kuLat": "",
+     "deHint": "داس مێل",
+     "en": "the flour",
+     "emoji": "🌾"
+    },
+    {
+     "id": "job_baeckerei_w4",
+     "de": "der Ofen",
+     "ku": "فڕن",
+     "kuLat": "",
+     "deHint": "دێر ئۆفن",
+     "en": "the oven",
+     "emoji": "🫓"
+    },
+    {
+     "id": "job_baeckerei_w5",
+     "de": "backen",
+     "ku": "پێژان",
+     "kuLat": "",
+     "deHint": "باکن",
+     "en": "to bake",
+     "emoji": "🧑‍🍳"
+    },
+    {
+     "id": "job_baeckerei_w6",
+     "de": "frisch",
+     "ku": "تازە",
+     "kuLat": "",
+     "deHint": "فریش",
+     "en": "fresh",
+     "emoji": "🌿"
+    },
+    {
+     "id": "job_baeckerei_w7",
+     "de": "das Croissant",
+     "ku": "کرواسان",
+     "kuLat": "",
+     "deHint": "داس کرواسان",
+     "en": "the croissant",
+     "emoji": "🥐"
+    },
+    {
+     "id": "job_baeckerei_w8",
+     "de": "der Zucker",
+     "ku": "شەکر",
+     "kuLat": "",
+     "deHint": "دێر تسوکەر",
+     "en": "the sugar",
+     "emoji": "🍬"
+    },
+    {
+     "id": "job_baeckerei_w9",
+     "de": "die Brezel",
+     "ku": "بریتسل",
+     "kuLat": "",
+     "deHint": "دی برێتسل",
+     "en": "the pretzel",
+     "emoji": "🥨"
+    },
+    {
+     "id": "job_baeckerei_p0",
+     "de": "Was darf es sein?",
+     "ku": "هوین چ دخوازن؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "What can I get you?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_baeckerei_p1",
+     "de": "Sechs Brötchen, bitte.",
+     "ku": "شەش سەموون، هیڤیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Six rolls, please.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_baeckerei_p2",
+     "de": "Das Brot ist ganz frisch.",
+     "ku": "نان گەلەک تازەیە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The bread is very fresh.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_baeckerei_p3",
+     "de": "Noch etwas?",
+     "ku": "تشتەکێ دی؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "Anything else?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_baeckerei_p4",
+     "de": "Wir öffnen um sechs Uhr.",
+     "ku": "ئەم دەمژمێر شەش ڤەدکەین.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "We open at six.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  },
+  {
+   "id": "werkstatt",
+   "emoji": "🚗",
+   "ku": "مێکانیکێ ترومبێلان",
+   "de": "Autowerkstatt",
+   "en": "Car workshop",
+   "items": [
+    {
+     "id": "job_werkstatt_w0",
+     "de": "die Werkstatt",
+     "ku": "گەراج",
+     "kuLat": "",
+     "deHint": "دی ڤێرکشتات",
+     "en": "the workshop",
+     "emoji": "🏭"
+    },
+    {
+     "id": "job_werkstatt_w1",
+     "de": "der Reifen",
+     "ku": "تایە",
+     "kuLat": "",
+     "deHint": "دێر ڕایفن",
+     "en": "the tyre",
+     "emoji": "🛞"
+    },
+    {
+     "id": "job_werkstatt_w2",
+     "de": "der Motor",
+     "ku": "مەکینە",
+     "kuLat": "",
+     "deHint": "دێر مۆتۆر",
+     "en": "the engine",
+     "emoji": "⚙️"
+    },
+    {
+     "id": "job_werkstatt_w3",
+     "de": "das Öl",
+     "ku": "زەیت",
+     "kuLat": "",
+     "deHint": "داس ئۆل",
+     "en": "the oil",
+     "emoji": "🛢️"
+    },
+    {
+     "id": "job_werkstatt_w4",
+     "de": "die Bremse",
+     "ku": "بریک",
+     "kuLat": "",
+     "deHint": "دی برێمزە",
+     "en": "the brake",
+     "emoji": "🛑"
+    },
+    {
+     "id": "job_werkstatt_w5",
+     "de": "die Batterie",
+     "ku": "پاتری",
+     "kuLat": "",
+     "deHint": "دی باتەری",
+     "en": "the battery",
+     "emoji": "🔋"
+    },
+    {
+     "id": "job_werkstatt_w6",
+     "de": "der Schraubenschlüssel",
+     "ku": "سپانە",
+     "kuLat": "",
+     "deHint": "دێر شراوبنشلووسل",
+     "en": "the wrench",
+     "emoji": "🔧"
+    },
+    {
+     "id": "job_werkstatt_w7",
+     "de": "das Licht",
+     "ku": "گلۆپ",
+     "kuLat": "",
+     "deHint": "داس لیشت",
+     "en": "the light",
+     "emoji": "💡"
+    },
+    {
+     "id": "job_werkstatt_w8",
+     "de": "reparieren",
+     "ku": "چاککرن",
+     "kuLat": "",
+     "deHint": "ڕێپاریرن",
+     "en": "to repair",
+     "emoji": "🛠️"
+    },
+    {
+     "id": "job_werkstatt_w9",
+     "de": "das Lenkrad",
+     "ku": "سەکان",
+     "kuLat": "",
+     "deHint": "داس لێنکرات",
+     "en": "the steering wheel",
+     "emoji": "🎯"
+    },
+    {
+     "id": "job_werkstatt_p0",
+     "de": "Was ist kaputt?",
+     "ku": "چ خەراب بوویە؟",
+     "kuLat": "",
+     "deHint": "",
+     "en": "What's broken?",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_werkstatt_p1",
+     "de": "Die Bremsen sind alt.",
+     "ku": "بریک کەڤن بووینە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The brakes are old.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_werkstatt_p2",
+     "de": "Wir wechseln das Öl.",
+     "ku": "ئەم زەیتێ دگوهۆڕین.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "We'll change the oil.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_werkstatt_p3",
+     "de": "Das Auto ist morgen fertig.",
+     "ku": "ترومبێل سوبەهی ئامادە دبیت.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The car will be ready tomorrow.",
+     "emoji": "",
+     "phrase": true
+    },
+    {
+     "id": "job_werkstatt_p4",
+     "de": "Der Reifen hat keine Luft.",
+     "ku": "با د تایەی دا نینە.",
+     "kuLat": "",
+     "deHint": "",
+     "en": "The tyre has no air.",
+     "emoji": "",
+     "phrase": true
+    }
+   ]
+  }
+ ]
+}

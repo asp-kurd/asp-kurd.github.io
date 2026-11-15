@@ -21,3 +21,4 @@ bool get inAppBrowser => false;
 bool get iosNonSafari => false;
 Future<void> copyText(String t) async {}
 Future<bool> openShareSheet() async => false;
+String get browserLang => '';

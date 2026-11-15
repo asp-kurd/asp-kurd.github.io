@@ -22,6 +22,7 @@ import 'screens/games/goethe_mock.dart';
 import 'screens/grammar_screen.dart';
 import 'screens/voice_backup_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/jobs_screen.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/admin_tools.dart' show TreeEditor;
 import 'screens/install_gate.dart';
@@ -190,6 +191,14 @@ class ZimanProApp extends StatelessWidget {
       'grammar' => const GrammarLektionScreen(n: 6),
       'grammarlist' => const GrammarListScreen(),
       'home' => const HomeScreen(),
+      'jobs' => const JobsScreen(),
+      'job' => FutureBuilder<List<JobInfo>>(
+          future: loadJobs(),
+          builder: (_, s) => s.data == null
+              ? const SizedBox()
+              : JobDetailScreen(
+                  job: s.data!.firstWhere((j) => j.id == (Uri.base.queryParameters['j'] ?? 'supermarkt')),
+                  colors: const [Color(0xFF58CC02), Color(0xFF3A9A00)])),
       'summary' => const SummaryListScreen(),
       'streak' => const StreakScreen(from: 3, to: 4),
       'toast' => const ToastDemo(),

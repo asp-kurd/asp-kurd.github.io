@@ -188,6 +188,13 @@ def collect():
                         full = full.replace("___", part, 1)
                     full = re.sub(r"\s*\([^)]*\)\s*$", "", full).strip()
                     jobs[lang][full] = full
+    # 💼 پەیڤێن کاری (assets/jobs.json): ئەلمانی + ئینگلیزی
+    jb = ROOT / "assets/jobs.json"
+    if jb.exists():
+        for job in json.loads(jb.read_text(encoding="utf-8"))["jobs"]:
+            for it in job["items"]:
+                jobs["de"][it["de"]] = it["de"]
+                jobs["en"][it["en"]] = it["en"]
     for k, src in SAME_TEXT.items():
         jobs[k] = {**jobs[src], **jobs[k]}
     return jobs

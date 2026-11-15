@@ -15,6 +15,7 @@ on:
       - assets/kommunikation.json
       - assets/goethe.json
       - assets/cloze.json
+      - assets/jobs.json
       - voice_lab/make_ai_voices.py
       - .github/workflows/voices.yml
   workflow_dispatch:

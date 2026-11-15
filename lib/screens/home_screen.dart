@@ -12,6 +12,7 @@ import 'course_screens.dart';
 import 'streak_screen.dart';
 import 'games/game_session.dart';
 import 'games/games_hub.dart';
+import 'jobs_screen.dart';
 import 'lesson_screen.dart';
 import 'path_view.dart';
 import 'dart:math' show min;
@@ -279,42 +280,7 @@ class _LearnPathState extends State<_LearnPath> {
             ),
           ),
         const TeacherTaskCards(),
-        _dailyGoalCard(p),
-        const SizedBox(height: 12),
-        if (p.dueConcepts.isNotEmpty)
-          Card(
-            color: AppColors.card,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-              side: BorderSide(color: AppColors.green.withValues(alpha: 0.6)),
-            ),
-            child: ListTile(
-              leading: const Icon(Icons.autorenew_rounded, color: AppColors.green),
-              title: Text(tr(n, 'دووبارەکرنا ب دەم', 'Wiederholung', 'Spaced repetition'),
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(tr(n, '${p.dueConcepts.length} پەیڤ ئەڤرۆ دڤێت بهێنە دووبارەکرن',
-                  '${p.dueConcepts.length} Wörter sind heute fällig', '${p.dueConcepts.length} words are due today')),
-              trailing: const Icon(Icons.play_arrow_rounded),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => GameSessionScreen(kind: null, concepts: p.dueConcepts.take(10).toList())),
-              ),
-            ),
-          ),
-        if (weak.isNotEmpty)
-          Card(
-            color: AppColors.card,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            child: ListTile(
-              leading: const Icon(Icons.fitness_center_rounded, color: AppColors.orange),
-              title: Text(tr(n, 'دووبارەکرنا خەلەتیان', 'Fehler wiederholen', 'Review mistakes'),
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(tr(n, '${weak.length} پەیڤ', '${weak.length} Wörter', '${weak.length} words')),
-              trailing: const Icon(Icons.play_arrow_rounded),
-              onTap: () => _open(context, null, weak),
-            ),
-          ),
-        _practiceCard(context, p),
+        _quickRow(context, p, weak),
         const SizedBox(height: 8),
         // 🇩🇪 تاقیکرنا ئاستی و ئەزموونا A1 یێن ئەلمانینە
         if (p.targetLang == AppLanguage.german) ...[_examCards(context, p), const SizedBox(height: 12)],
@@ -372,78 +338,78 @@ class _LearnPathState extends State<_LearnPath> {
     ]);
   }
 
-  /// 🔁 ڕاهێنانا ئازاد — ٨ پەیڤێن هەڕەمەکی ژ قۆناغێن تە دیتین (هەرگیز ب دویماهی نائێت)
-  Widget _practiceCard(BuildContext context, ProgressService p) {
+  /// 🔁 دووبارەکرن · خەلەتی · ڕاهێنانا ئازاد · 💼 کار — کارتێن بچووک، دوو ل ڕەخ ئێک
+  Widget _quickRow(BuildContext context, ProgressService p, List<WordConcept> weak) {
     final n = p.nativeLang;
-    return Card(
-      color: AppColors.card,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: ListTile(
-        leading: Icon(Icons.all_inclusive_rounded, color: AppColors.accent),
-        title: Text(tr(n, 'ڕاهێنانا ئازاد', 'Freies Training', 'Free practice'),
-            style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Text(tr(n, '٨ پەیڤێن هەڕەمەکی ژ وانەیێن تە', '8 zufällige Wörter', '8 random words from your lessons')),
-        trailing: const Icon(Icons.play_arrow_rounded),
-        onTap: () {
-          final pool = [
-            for (final l in pathLessons)
-              if (p.lessonDone(l) || p.coursesDone(l) > 0) ...l.concepts,
-          ]..shuffle();
-          if (pool.length < 4) pool.addAll(pathLessons.take(3).expand((l) => l.concepts));
-          _open(context, null, pool.take(8).toList());
-        },
-      ),
-    );
+    final tiles = <Widget>[
+      if (p.dueConcepts.isNotEmpty)
+        _mini(Icons.autorenew_rounded, AppColors.green, tr(n, 'دووبارەکرن', 'Wiederholen', 'Review'),
+            tr(n, '${p.dueConcepts.length} پەیڤ', '${p.dueConcepts.length} Wörter', '${p.dueConcepts.length} words'),
+            () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => GameSessionScreen(kind: null, concepts: p.dueConcepts.take(10).toList()))),
+            highlight: true),
+      if (weak.isNotEmpty)
+        _mini(Icons.fitness_center_rounded, AppColors.orange, tr(n, 'خەلەتی', 'Fehler', 'Mistakes'),
+            tr(n, '${weak.length} پەیڤ', '${weak.length} Wörter', '${weak.length} words'), () => _open(context, null, weak)),
+      _mini(Icons.all_inclusive_rounded, AppColors.accent, tr(n, 'ڕاهێنانا ئازاد', 'Freies Training', 'Free practice'),
+          tr(n, '٨ پەیڤ', '8 Wörter', '8 words'), () {
+        final pool = [
+          for (final l in pathLessons)
+            if (p.lessonDone(l) || p.coursesDone(l) > 0) ...l.concepts,
+        ]..shuffle();
+        if (pool.length < 4) pool.addAll(pathLessons.take(3).expand((l) => l.concepts));
+        _open(context, null, pool.take(8).toList());
+      }),
+      if (p.targetLang == AppLanguage.german)
+        _mini(Icons.work_rounded, const Color(0xFFCE82FF), tr(n, 'پەیڤێن کاری', 'Beruf', 'Work words'),
+            tr(n, '١٤ کار · A1', '14 Berufe · A1', '14 jobs · A1'),
+            () => Navigator.push(context, MaterialPageRoute(builder: (_) => const JobsScreen()))),
+    ];
+    return Column(children: [
+      for (var i = 0; i < tiles.length; i += 2)
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: IntrinsicHeight(
+            child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              Expanded(child: tiles[i]),
+              const SizedBox(width: 10),
+              Expanded(child: i + 1 < tiles.length ? tiles[i + 1] : const SizedBox()),
+            ]),
+          ),
+        ),
+    ]);
   }
 
-  /// ☀️ ئارمانجا رۆژانە — شێوازێ تایبەت یێ ZimanPro: رۆژا کوردی کو ب XP رۆهن دبیت
-  Widget _dailyGoalCard(ProgressService p) {
-    final n = p.nativeLang;
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: p.dailyGoalMet
-              ? const [Color(0xFFFFC800), Color(0xFFFF9600)]
-              : switch (AppColors.mode) {
-                  'light' => const [Color(0xFF1CB0F6), Color(0xFF2B70C9)],
-                  'red' => const [Color(0xFF3A1219), Color(0xFF6A1826)],
-                  'pink' => const [Color(0xFFF472B6), Color(0xFFDB2777)],
-                  _ => const [Color(0xFF202F36), Color(0xFF1A3A4A)],
-                },
-        ),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(children: [
-        SizedBox(
-          width: 64,
-          height: 64,
-          child: Stack(alignment: Alignment.center, children: [
-            CircularProgressIndicator(
-              value: p.dailyProgress,
-              strokeWidth: 7,
-              backgroundColor: AppColors.fg12,
-              valueColor: const AlwaysStoppedAnimation(AppColors.gold),
+  Widget _mini(IconData icon, Color color, String title, String sub, VoidCallback onTap, {bool highlight = false}) => Material(
+        color: AppColors.card,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: highlight ? color.withValues(alpha: 0.7) : AppColors.fg12, width: highlight ? 1.6 : 1),
             ),
-            Text(p.dailyGoalMet ? '☀️' : '🌤️', style: const TextStyle(fontSize: 26)),
-          ]),
+            child: Row(children: [
+              Container(
+                padding: const EdgeInsets.all(7),
+                decoration: BoxDecoration(color: color.withValues(alpha: 0.16), borderRadius: BorderRadius.circular(12)),
+                child: Icon(icon, color: color, size: 22),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(title, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  const SizedBox(height: 2),
+                  Text(sub, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: AppColors.fg60, fontSize: 12)),
+                ]),
+              ),
+            ]),
+          ),
         ),
-        const SizedBox(width: 14),
-        Expanded(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(
-              p.dailyGoalMet
-                  ? tr(n, 'رۆژا تە رۆهن بوو! ☀️', 'Tagesziel erreicht! ☀️', 'Daily goal reached! ☀️')
-                  : tr(n, 'ئارمانجا ئەڤرۆ', 'Tagesziel', "Today's goal"),
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: Colors.white),
-            ),
-            const SizedBox(height: 4),
-            Text('${p.todayXp} / ${p.dailyGoal} XP', style: TextStyle(color: AppColors.fg70)),
-          ]),
-        ),
-      ]),
-    );
-  }
+      );
 
   void _open(BuildContext context, LessonUnit? unit, List<WordConcept> concepts) {
     final p = ProgressService.instance;

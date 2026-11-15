@@ -5,16 +5,12 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("rn_safin", "demo=renametest&theme=dark&rn=safin:Rojda:ڕۆژدا"),
-    ("rn_avin", "demo=renametest&theme=dark&rn=avin:Rojin:ڕۆژین"),
-    ("rn_poya", "demo=renametest&theme=dark&rn=poya:Rebaz:ڕێباز"),
-    ("castadmin", "demo=castadmin&theme=dark"),
-    ("chareditor_new", "demo=chareditor&theme=dark"),
-    ("chareditor_poya", "demo=chareditor&c=poya&theme=dark"),
-    ("picker", "demo=pick&theme=dark"),
-    ("ch3", "demo=chapter&ch=3&theme=dark"),
-    ("ch3_rn", "demo=chapter&ch=3&theme=dark&rn=avin:Rojin:ڕۆژین"),
-    ("ch4_rn", "demo=chapter&ch=4&theme=dark&rn=avin:Rojin:ڕۆژین"),
+    ("home", "demo=home&theme=dark"),
+    ("jobs", "demo=jobs&theme=dark"),
+    ("job", "demo=job&j=altenpflege&theme=dark"),
+    ("gate_ios_ku", "demo=gate&gl=ku&theme=dark"),
+    ("gate_ios_ar", "demo=gate&gl=ar&theme=dark"),
+    ("gate_ios_de", "demo=gate&gl=de&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])

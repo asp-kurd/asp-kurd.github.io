@@ -174,3 +174,12 @@ Future<bool> openShareSheet() async {
     return false;
   }
 }
+
+/// 🌐 زمانێ مۆبایلێ (بۆ رێنمایێن دامەزراندنێ): ar · de · en · tr · ku …
+String get browserLang {
+  try {
+    return web.window.navigator.language.toLowerCase();
+  } catch (_) {
+    return '';
+  }
+}
