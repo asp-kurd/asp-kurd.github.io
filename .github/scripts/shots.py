@@ -7,8 +7,6 @@ os.makedirs(out, exist_ok=True)
 pages = [
     ("home_tiles", "demo=home&theme=dark"),
     ("home_tiles_light", "demo=home&theme=light"),
-    ("chareditor_poya", "demo=chareditor&c=poya&theme=dark"),
-    ("gate_ios_ckb", "demo=gate&gl=ckb&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -51,7 +49,14 @@ with sync_playwright() as p:
                 for y in range(300, 800, 60):
                     pg.mouse.wheel(0, 0)
                 pg.screenshot(path=f"{out}/{name}_1.png")
-            if name.startswith("home_"):
+            if name.startswith("home_tiles"):
+                pg.mouse.click(214, 606); time.sleep(1.5)  # 🎁 دیالۆگا دیاریێ بگرە
+                pg.mouse.move(214, 400)
+                for _ in range(12):
+                    pg.mouse.wheel(0, -900); time.sleep(0.15)
+                time.sleep(1.5)
+                pg.screenshot(path=f"{out}/{name}.png")
+            elif name.startswith("home_"):
                 pg.mouse.click(214, 708); time.sleep(1.2)  # 🎁 دیالۆگا ئەرکان بگرە
                 pg.screenshot(path=f"{out}/{name}.png")
             if name == "gate_ios":
