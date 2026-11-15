@@ -135,6 +135,7 @@ Future<void> main() async {
   // 🔔 نامەکا نوو ➔ ئاوازا ASP
   Backend.onIncoming = Sfx.notify;
   listenPush(() => Backend.instance.loadMessages());
+  onBackOnline(ProgressService.instance.flushNow); // 📶 پێشکەفتنا نەهاتییە ناردن
   // Safari ل iPhone: لینکێ ئامادە بکە دا «Add to Home Screen» هەژمارێ دگەل خۆ ببەت
   if (!adminMode && platformKind == 'ios' && !isStandalone && Backend.instance.registered && !Backend.instance.isAdmin) {
     unawaited(Backend.instance.handoffCode().then((c) {

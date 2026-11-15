@@ -183,3 +183,15 @@ String get browserLang {
     return '';
   }
 }
+
+/// 📶 دەمێ ئینتەرنێت دزڤڕیت یان ئەپ دیسا دهێتە دیتن ➔ [cb]
+void onBackOnline(void Function() cb) {
+  try {
+    web.window.addEventListener('online', ((web.Event _) => cb()).toJS);
+    web.document.addEventListener(
+        'visibilitychange',
+        ((web.Event _) {
+          if (web.document.visibilityState == 'visible') cb();
+        }).toJS);
+  } catch (_) {}
+}

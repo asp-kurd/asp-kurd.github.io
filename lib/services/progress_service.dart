@@ -143,14 +143,24 @@ class ProgressService extends ChangeNotifier {
     // throttle: نە debounce (دلێن دزڤڕن هەر چرکەکێ notify دکەن)
     if (!immediate && (_cloudTimer?.isActive ?? false)) return;
     _cloudTimer?.cancel();
-    _cloudTimer = Timer(Duration(seconds: immediate ? 1 : 8), () {
+    _cloudTimer = Timer(Duration(seconds: immediate ? 1 : 8), () async {
       final s = exportState();
       final j = jsonEncode(s);
       if (j == _lastCloud) return;
-      _lastCloud = j;
-      Backend.instance.pushProgress(s, xp);
+      // 📶 تنێ پشتی گەهشتنێ «هاتە ناردن» دهێتە نیشانکرن — ئەگەر ئینتەرنێت نەبیت، دیسا دهێتە ناردن
+      if (await Backend.instance.pushProgress(s, xp)) {
+        _lastCloud = j;
+      } else {
+        _retryTimer?.cancel();
+        _retryTimer = Timer(const Duration(seconds: 45), () => _scheduleCloud(immediate: true));
+      }
     });
   }
+
+  Timer? _retryTimer;
+
+  /// 📶 ئینتەرنێت زڤڕی / ئەپ دیسا هاتە ڤەکرن ➔ پێشکەفتنا نەهاتییە ناردن ئێکسەر بهنێرە
+  void flushNow() => _scheduleCloud(immediate: true);
 
   @override
   void notifyListeners() {

@@ -476,14 +476,20 @@ class Backend extends ChangeNotifier {
 
   // ───────────────────────── ☁️ پاراستنا پێشکەفتنێ ─────────────────────────
 
-  Future<void> pushProgress(Map<String, Object> data, int xp) async {
-    if (!enabled || userId == null || isAdmin || profile == null) return;
+  /// true = گەهشتە سێرڤەری (یان پێدڤی نینە). false = ئینتەرنێت نەبوو ➔ پاشان دیسا
+  Future<bool> pushProgress(Map<String, Object> data, int xp) async {
+    if (!enabled || userId == null || isAdmin || profile == null) return true;
     try {
       await _ensureToken();
-      await http.post(Uri.parse('$_base/rest/v1/progress'),
-          headers: {..._h, 'Prefer': 'resolution=merge-duplicates'},
-          body: jsonEncode({'user_id': userId, 'data': data, 'xp': xp, 'updated_at': DateTime.now().toUtc().toIso8601String()}));
-    } catch (_) {}
+      final r = await http
+          .post(Uri.parse('$_base/rest/v1/progress'),
+              headers: {..._h, 'Prefer': 'resolution=merge-duplicates'},
+              body: jsonEncode({'user_id': userId, 'data': data, 'xp': xp, 'updated_at': DateTime.now().toUtc().toIso8601String()}))
+          .timeout(const Duration(seconds: 20));
+      return r.statusCode < 300;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<Map<String, dynamic>?> pullProgress() async {
@@ -913,11 +919,13 @@ class Backend extends ChangeNotifier {
   }
 
   /// هەمی ریزێن content یێن کلیلا وان ب [prefix] دەستپێدکەت (بێ پاشەکەفتکرن — وێنەیێن مەزن)
-  Future<Map<String, dynamic>> contentByPrefix(String prefix) async {
+  /// [version]: بۆ پاشەکەفتکرنێ ل سەر مۆبایلێ (Service Worker) — هەر وەشانەک ئێک جار دهێتە بارکرن
+  Future<Map<String, dynamic>> contentByPrefix(String prefix, {int? version}) async {
     if (!enabled) return {};
     try {
+      final v = version == null ? '' : '&key=neq.__v$version';
       final r = await http
-          .get(Uri.parse('$_base/rest/v1/content?key=like.${Uri.encodeComponent(prefix)}*&select=key,value'),
+          .get(Uri.parse('$_base/rest/v1/content?key=like.${Uri.encodeComponent(prefix)}*$v&select=key,value'),
               headers: {'apikey': AppConfig.supabaseAnonKey})
           .timeout(const Duration(seconds: 30));
       if (r.statusCode == 200) {

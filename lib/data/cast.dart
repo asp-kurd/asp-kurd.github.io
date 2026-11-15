@@ -258,7 +258,9 @@ class CastStore {
   static Future<void> ensureImages(String id) {
     if (images.containsKey(id)) return Future.value();
     return _loading[id] ??= () async {
-      final m = await Backend.instance.contentByPrefix('charimg_${id}_');
+      // 🪶 وەشان ➔ Service Worker وێنەیان ل سەر مۆبایلێ دپارێزیت (جارا دووێ بێ ئینتەرنێت)
+      final ver = customById(id)?.version ?? (chars[id]?['v'] as num?)?.toInt();
+      final m = await Backend.instance.contentByPrefix('charimg_${id}_', version: ver);
       final out = <String, Uint8List>{};
       for (final e in m.entries) {
         final kind = e.key.substring('charimg_${id}_'.length);

@@ -340,6 +340,7 @@ class _CharEditScreenState extends State<CharEditScreen> {
         } else {
           entry['n'] = n;
         }
+        if (pending.isNotEmpty || removed.isNotEmpty) entry['v'] = DateTime.now().millisecondsSinceEpoch;
         final over = {...CastStore.overrides(id), ...pending.keys}..removeAll(removed);
         if (over.isEmpty) {
           entry.remove('k');

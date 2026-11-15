@@ -44,6 +44,8 @@ if B.exists():
     if (B / "push-sw.js").exists():
         Path("web/push").mkdir(parents=True, exist_ok=True)
         shutil.copy(B / "push-sw.js", "web/push-sw.js")
+    if (B / "asp-sw.js").exists():
+        shutil.copy(B / "asp-sw.js", "web/asp-sw.js")  # 📶 بێ ئینتەرنێت
     s = i.read_text(encoding="utf-8")
     if "apple-touch-icon.png" not in s:
         s = re.sub(r'<link rel="apple-touch-icon"[^>]*>', "", s)
@@ -106,3 +108,14 @@ if "asp-preload" not in s:
     s = s.replace("</head>", pre + "</head>", 1)
     i.write_text(s, encoding="utf-8")
     print("preload hints added")
+
+# 📶 Service Worker بۆ کار کرن بێ ئینتەرنێت + داخوازا «پاراستنا داتایان» (Safari ژێ نەبەت)
+s = i.read_text(encoding="utf-8")
+if "asp-sw.js" not in s:
+    js = ("<script>(function(){try{if('serviceWorker' in navigator){window.addEventListener('load',function(){"
+          "navigator.serviceWorker.register('/asp-sw.js',{scope:'/'}).catch(function(){});});}"
+          "if(navigator.storage&&navigator.storage.persist){navigator.storage.persisted().then(function(p){if(!p)navigator.storage.persist();});}"
+          "}catch(e){}})();</script>\n")
+    s = s.replace("</head>", "  " + js + "</head>", 1)
+    i.write_text(s, encoding="utf-8")
+    print("offline service worker registered")
