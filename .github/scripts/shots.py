@@ -9,6 +9,9 @@ pages = [
     ("write_caps", "demo=write&theme=dark"),
     ("job_stages", "demo=job&j=restaurant&theme=dark"),
     ("job_dialog", "demo=jobdialog&j=restaurant&theme=dark"),
+    ("league", "demo=league&theme=dark"),
+    ("path_shapes", "demo=path&theme=dark&quiet=1"),
+    ("ceremony_mid", "demo=ceremony&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -68,6 +71,10 @@ with sync_playwright() as p:
             elif name.startswith("home_"):
                 pg.mouse.click(214, 708); time.sleep(1.2)  # 🎁 دیالۆگا ئەرکان بگرە
                 pg.screenshot(path=f"{out}/{name}.png")
+            if name == "league":
+                pg.mouse.move(214, 500)
+                for k in range(1, 7):
+                    pg.mouse.wheel(0, 800); time.sleep(0.8); pg.screenshot(path=f"{out}/{name}_s{k}.png")
             if name == "gate_ios":
                 pg.mouse.click(214, 592); time.sleep(2.5); pg.screenshot(path=f"{out}/{name}_coach.png")
             if name.startswith("path") and not name.startswith("pathgold"):

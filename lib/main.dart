@@ -23,6 +23,7 @@ import 'screens/grammar_screen.dart';
 import 'screens/voice_backup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/jobs_screen.dart';
+import 'screens/league_preview.dart';
 import 'screens/mascot_demo.dart';
 import 'screens/admin_tools.dart' show TreeEditor;
 import 'screens/install_gate.dart';
@@ -263,6 +264,8 @@ class ZimanProApp extends StatelessWidget {
             ])
               Padding(padding: const EdgeInsets.only(bottom: 14), child: Text(CastStore.text(t), style: const TextStyle(fontSize: 15))),
           ]))),
+      'league' => const LeaguePreviewScreen(),
+      'ceremony' => const LeagueCeremony(),
       'castadmin' => Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(appBar: AppBar(title: const Text('👥 کاراکتەر')), body: const CastAdminTab(offline: true))),

@@ -8,6 +8,7 @@ import '../data/cast.dart';
 import '../services/backend.dart';
 import '../services/char_image.dart';
 import '../ui.dart';
+import 'league_preview.dart';
 import 'widgets/mascot.dart';
 
 // ───────────────────────── 👥 کاراکتەر (ئەدمین) ─────────────────────────
@@ -101,6 +102,19 @@ class _CastAdminTabState extends State<CastAdminTab> {
     return ValueListenableBuilder<int>(
       valueListenable: CastStore.changed,
       builder: (_, __, ___) => ListView(padding: const EdgeInsets.all(14), children: [
+        // 🏆 پێشبینینا لیگێ (تنێ ئەدمین)
+        Card(
+          color: AppColors.gold.withValues(alpha: 0.16),
+          margin: const EdgeInsets.only(bottom: 16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: BorderSide(color: AppColors.gold, width: 1.5)),
+          child: ListTile(
+            leading: const Text('🏆', style: TextStyle(fontSize: 28)),
+            title: const Text('پێشبینینا لیگا هەفتانە', style: TextStyle(fontWeight: FontWeight.w900)),
+            subtitle: const Text('مەدال، نیشان، سەکۆ و ئاهەنگ — هێشتا بۆ فێرخوازان نینە'),
+            trailing: const Icon(Icons.chevron_left_rounded),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LeaguePreviewScreen())),
+          ),
+        ),
         _head('🦸 کاراکتەر', 'دەست ل کاراکتەرەکی بدە بۆ گوهۆڕینا ناڤی، وێنەیان یان ڤەشارتنێ.'),
         const SizedBox(height: 8),
         SizedBox(

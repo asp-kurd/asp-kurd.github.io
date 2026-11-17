@@ -273,7 +273,7 @@ List<PathLesson> _lessonsFor(String sid, List<(LessonUnit, WordConcept)> part) {
     alloc[best]++;
     left--;
   }
-  final out = <PathLesson>[];
+  final parts = <(String, LessonUnit, List<WordConcept>)>[];
   for (var i = 0; i < chunks.length; i++) {
     final (u, cs) = chunks[i];
     final m = alloc[i];
@@ -282,10 +282,44 @@ List<PathLesson> _lessonsFor(String sid, List<(LessonUnit, WordConcept)> part) {
       final sub = cs.sublist(a, b);
       if (sub.isEmpty) continue;
       final id = '${u.id}@${sub.first.id}';
-      out.add(PathLesson(id, u, sub, 3 + seeded(id) % 4));
+      parts.add((id, u, sub));
     }
   }
-  return out;
+  final shapes = stageShapes(sid, parts.length);
+  return [for (var i = 0; i < parts.length; i++) PathLesson(parts[i].$1, parts[i].$2, parts[i].$3, shapes[i])];
+}
+
+/// شێوێن کەڤن (بەری تێکەلکرنێ) — تنێ بۆ ڤەگوهاستنا پێشکەفتنێ
+int legacyCourses(String id) => 3 + seeded(id) % 4;
+
+/// 🔺🔺◼️⬟⬢ — هەر قۆناغەک تێکەل: ٢ سێگۆشە، ١ چوارگۆشە، ١ پێنجگۆشە، ١ شەشگۆشە (+ سێگۆشە بۆ وانەیا ٦ێ)
+/// وانەیا ئێکێ هەردەم سڤک (سێگۆشە)، شەشگۆشە هەرگز ل دەستپێکێ نینە
+List<int> stageShapes(String sid, int n) {
+  if (n <= 0) return const [];
+  const base = [3, 3, 4, 5, 6, 3, 4, 5];
+  final pool = [for (var i = 0; i < n; i++) base[i % base.length]];
+  pool.sort();
+  final first = pool.removeAt(0); // سێگۆشە
+  // تێکەلکرن ب seed (هەمان رێز هەردەم بۆ هەمان قۆناغ)
+  for (var i = pool.length - 1; i > 0; i--) {
+    final j = seeded('$sid#$i') % (i + 1);
+    final t = pool[i];
+    pool[i] = pool[j];
+    pool[j] = t;
+  }
+  // دوو شێوێن مەزن (٥/٦) ل دویڤ ئێک نەبن ئەگەر ب کار بێت
+  for (var i = 1; i < pool.length; i++) {
+    if (pool[i] >= 5 && pool[i - 1] >= 5) {
+      final k = pool.indexWhere((x) => x < 5, i + 1);
+      final k2 = k >= 0 ? k : pool.indexWhere((x) => x < 5);
+      if (k2 >= 0 && k2 != i - 1) {
+        final t = pool[i];
+        pool[i] = pool[k2];
+        pool[k2] = t;
+      }
+    }
+  }
+  return [first, ...pool];
 }
 
 /// ژمارا قۆناغێ (١ = قۆناغا ئێکێ یا بەشا ١؛ ئەلفوبێ = ٠)

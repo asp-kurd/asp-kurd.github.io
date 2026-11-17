@@ -203,6 +203,26 @@ class ProgressService extends ChangeNotifier {
     }
   }
 
+  /// 🔺◼️⬟⬢ شێوێن وانەیان هاتنە تێکەلکرن: وانەیێن تە بەری نوکە ب شێوەیێ کەڤن تەمام کرین، تەمام دمینن
+  void _migrateShapes() {
+    if (pathProg.containsKey('__v')) return;
+    try {
+      if (pathLessons.isEmpty) return;
+      for (final l in pathLessons) {
+        if (l.isAlphabet) continue;
+        final cur = pathProg[l.id];
+        if (cur == null || cur.isEmpty) continue;
+        final legacy = legacyCourses(l.id);
+        if (cur[0] >= legacy && cur[0] < l.courses) cur[0] = l.courses;
+        if (cur[0] > l.courses) cur[0] = l.courses;
+      }
+    } catch (_) {
+      return; // دەرس هێشتا بار نەبووینە — جارەکا دی
+    }
+    pathProg['__v'] = [2, 0];
+    _p.setString('path_$_pairKey', jsonEncode(pathProg));
+  }
+
   void _loadPair() {
     completedUnits = (_p.getStringList('done_$_pairKey') ?? []).toSet();
     // ئینگلیزی: ئەلفوبێیا نوو ب ناڤێن جودا — یێن بەری نوکە تەمامکرین ب جهـ بینە
@@ -231,6 +251,7 @@ class ProgressService extends ChangeNotifier {
         });
       }
     } catch (_) {}
+    _migrateShapes();
     pathJumped = (_p.getStringList('pathj_$_pairKey') ?? []).toSet();
   }
 
