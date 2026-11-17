@@ -11,7 +11,10 @@ enum Verdict { exact, close, near, wrong }
 class AnswerResult {
   final Verdict verdict;
   final String note;
-  const AnswerResult(this.verdict, [this.note = '']);
+
+  /// ✍️ پەیڤێن ب خەلەتی هاتینە نڤیسین: (یا تە نڤیسی، یا دروست) ➔ پیت ب پیت دهێنە نیشاندان
+  final List<(String, String)> fixes;
+  const AnswerResult(this.verdict, [this.note = '', this.fixes = const []]);
   bool get accepted => verdict != Verdict.wrong;
   bool get soft => verdict == Verdict.close || verdict == Verdict.near; // دروستە بەلێ تێبینی هەیە
 }
@@ -199,7 +202,21 @@ AnswerResult judgeAnswer(String given, String expected, AppLanguage lang, {bool 
   if (g.isEmpty) return const AnswerResult(Verdict.wrong);
   final alts = expected.split(RegExp(r'\s+/\s+|\s+–\s+')).map(_norm).where((e) => e.isNotEmpty).toList();
   final best = expected.split(RegExp(r'\s+/\s+')).first.trim();
-  if (alts.contains(g) || _norm(expected) == g) return const AnswerResult(Verdict.exact);
+  if (alts.contains(g) || _norm(expected) == g) {
+    // 🔠 ئەلمانی: ناڤ ب پیتا مەزن دەست پێ دکەن (Kino نە kino)
+    if (typed && lang == AppLanguage.german) {
+      final caps = _capFixes(given, best);
+      if (caps.isNotEmpty) {
+        return AnswerResult(
+            Verdict.close,
+            tr(ui, 'دروستە ✅ — بەلێ ل ئەلمانی ناڤ ب پیتا مەزن دەست پێ دکەن: ${caps.map((f) => '«${f.$2}»').join(' · ')}',
+                'Richtig ✅ — aber Nomen schreibt man groß: ${caps.map((f) => '„${f.$2}“').join(' · ')}',
+                'Correct ✅ — but German nouns start with a capital letter: ${caps.map((f) => '“${f.$2}”').join(' · ')}'),
+            caps);
+      }
+    }
+    return const AnswerResult(Verdict.exact);
+  }
 
   // ١) نڤیسینا ب شێوەیەکێ دی: ß ⇄ ss · ä ⇄ ae
   if (alts.any((e) => _deep(e) == _deep(g))) {
@@ -254,14 +271,61 @@ AnswerResult judgeAnswer(String given, String expected, AppLanguage lang, {bool 
                   'Right word 👍 but the article is “$ae”: “$best”'));
         }
       }
-      // ٤) خەلەتیەکا بچووک یا نڤیسینێ
+      // ٤) خەلەتیێن نڤیسینێ پەیڤ ب پەیڤ: «ich gehe ins keno» ➔ دروستە، بەلێ «keno ➔ Kino»
+      final wf = _wordFixes(given, expected.split(RegExp(r'\s+/\s+')).firstWhere((x) => _norm(x) == e, orElse: () => best));
+      if (wf != null) {
+        final list = wf.map((f) => '«${f.$1}» ➔ «${f.$2}»').join('  ·  ');
+        return AnswerResult(
+            Verdict.close,
+            wf.length == 1
+                ? tr(ui, 'دروستە ✅ — بەلێ نڤیسینا ئێک پەیڤێ خەلەتە: $list', 'Richtig ✅ — aber ein Wort ist falsch geschrieben: $list',
+                    'Correct ✅ — but one word is misspelled: $list')
+                : tr(ui, 'دروستە ✅ — بەلێ نڤیسینا ${wf.length} پەیڤان خەلەتە: $list', 'Richtig ✅ — aber ${wf.length} Wörter sind falsch geschrieben: $list',
+                    'Correct ✅ — but ${wf.length} words are misspelled: $list'),
+            wf);
+      }
+      // ٥) خەلەتیەکا بچووک یا نڤیسینێ
       final a = _deep(g), b = _deep(e);
       if (b.length >= 4 && _lev(a, b) <= (b.length >= 9 ? 2 : 1)) {
-        return AnswerResult(Verdict.close,
-            tr(ui, 'دروستە ✅ — خەلەتیەکا بچووک یا نڤیسینێ هەبوو. دروست: «$best»', 'Richtig ✅ — kleiner Tippfehler. Richtig: „$best“',
-                'Correct ✅ — small typo. Spelled: “$best”'));
+        return AnswerResult(
+            Verdict.close,
+            tr(ui, 'دروستە ✅ — بەلێ نڤیسین خەلەتە. یا دروست: «$best»', 'Richtig ✅ — aber falsch geschrieben. Richtig: „$best“',
+                'Correct ✅ — but misspelled. Spelled: “$best”'),
+            [(given.trim(), best)]);
       }
     }
   }
   return const AnswerResult(Verdict.wrong);
+}
+
+
+List<String> _toks(String s) =>
+    s.trim().split(RegExp(r'\s+')).map((w) => w.replaceAll(RegExp(r'^[«»„“"(¿¡]+|[.,!?;:«»“”"()]+$'), '')).where((w) => w.isNotEmpty).toList();
+
+/// 🔠 پەیڤێن کو پیتا مەزن ژ بیر چوو (نە پەیڤا ئێکێ یا رستێ)
+List<(String, String)> _capFixes(String given, String expected) {
+  final g = _toks(given), e = _toks(expected);
+  if (g.length != e.length) return const [];
+  final out = <(String, String)>[];
+  for (var i = 1; i < e.length; i++) {
+    if (g[i] != e[i] && g[i].toLowerCase() == e[i].toLowerCase() && e[i][0] != e[i][0].toLowerCase()) out.add((g[i], e[i]));
+  }
+  return out;
+}
+
+/// ✍️ هەمان پەیڤ (ب هەمان ریزێ) بەلێ هندەک ب خەلەتی هاتینە نڤیسین ➔ لیستا راستکرنێ
+/// null = نە نێزیکە (پەیڤ کێم/زێدەنە یان گەلەک جودانە)
+List<(String, String)>? _wordFixes(String given, String expected) {
+  final g = _toks(given), e = _toks(expected);
+  if (g.length != e.length || e.isEmpty) return null;
+  final out = <(String, String)>[];
+  for (var i = 0; i < e.length; i++) {
+    final a = _deep(g[i]), b = _deep(e[i]);
+    if (a == b) continue;
+    final max = b.length >= 7 ? 2 : (b.length >= 3 ? 1 : 0);
+    if (max == 0 || _lev(a, b) > max) return null;
+    out.add((g[i], e[i]));
+  }
+  if (out.isEmpty || out.length > (e.length / 3).ceil().clamp(1, 3)) return null;
+  return out;
 }

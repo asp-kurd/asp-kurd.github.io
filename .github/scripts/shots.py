@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 out = "/tmp/shots"
 os.makedirs(out, exist_ok=True)
 pages = [
-    ("home_tiles", "demo=home&quiet=1&theme=dark"),
-    ("home_tiles_light", "demo=home&quiet=1&theme=light"),
+    ("write_typo", "demo=write&theme=dark"),
+    ("write_caps", "demo=write&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -49,7 +49,15 @@ with sync_playwright() as p:
                 for y in range(300, 800, 60):
                     pg.mouse.wheel(0, 0)
                 pg.screenshot(path=f"{out}/{name}_1.png")
-            if name.startswith("home_tiles"):
+            if name.startswith("write_"):
+                # ✍️ نڤیسین: خانەیێ بگرە ➔ بنڤیسە ➔ پشکنین
+                txt = "Ich gehe ins keno" if name == "write_typo" else "ich gehe ins kino"
+                pg.mouse.click(214, 500); time.sleep(0.8)
+                pg.keyboard.type(txt, delay=40); time.sleep(0.6)
+                pg.screenshot(path=f"{out}/{name}_typed.png")
+                pg.keyboard.press("Enter"); time.sleep(2.5)
+                pg.screenshot(path=f"{out}/{name}.png")
+            elif name.startswith("home_tiles"):
                 pg.mouse.move(214, 400)
                 for _ in range(12):
                     pg.mouse.wheel(0, -900); time.sleep(0.15)

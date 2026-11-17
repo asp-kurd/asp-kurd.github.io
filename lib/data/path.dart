@@ -320,10 +320,10 @@ List<WordConcept> courseConcepts(PathLesson l, int c, {bool hard = false}) {
 /// سێگۆشە ١٥ · چارگۆشە ١٧–٢٠ · پێنجگۆشە ٢٠–٢٢ · شەشگۆشە ٢٢–٢٥
 int goldQuestionCount(PathLesson l) {
   final (lo, hi) = switch (l.courses) {
-    <= 3 => (15, 15),
-    4 => (17, 20),
-    5 => (20, 22),
-    _ => (22, 25),
+    <= 3 => (12, 15), // سێگۆشە
+    4 => (13, 16), // چوارگۆشە
+    5 => (17, 19), // پێنجگۆشە
+    _ => (18, 20), // شەشگۆشە
   };
   return lo + seeded('gq_${l.id}') % (hi - lo + 1);
 }

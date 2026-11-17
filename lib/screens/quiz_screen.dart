@@ -13,6 +13,8 @@ import '../services/voice_service.dart';
 import '../ui.dart';
 import 'streak_screen.dart';
 import 'widgets/combo.dart';
+import 'widgets/reorder_wrap.dart';
+import 'widgets/spell_diff.dart';
 
 /// 📝 ئەزموون: ئەزموونا وانێ، ئەزموونا A1، و تاقیکرنا ئاستی.
 /// جۆرێن جودا: هەلبژارتن، دروست/خەلەت، وێنە (٢–٦)، ئیمۆجی ➔ پەیڤ، گوهداری، نڤیسین، رێزکرنا رستێ.
@@ -404,13 +406,16 @@ class _QuizScreenState extends State<QuizScreen> {
               constraints: const BoxConstraints(minHeight: 70),
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(border: Border(bottom: BorderSide(color: AppColors.fg24, width: 2))),
-              child: Wrap(spacing: 6, runSpacing: 6, children: [
-                for (final k in order)
-                  ActionChip(
-                    label: Text(tiles[k], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
-                    onPressed: checked ? null : () => setState(() => order.remove(k)),
-                  ),
-              ]),
+              child: ReorderWrap(
+                spacing: 6,
+                items: order,
+                enabled: !checked,
+                onMove: (f, t) => setState(() => moveItem(order, f, t)),
+                build: (k) => ActionChip(
+                  label: Text(tiles[k], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+                  onPressed: checked ? null : () => setState(() => order.remove(k)),
+                ),
+              ),
             ),
             const SizedBox(height: 22),
             Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
@@ -559,6 +564,11 @@ class _QuizScreenState extends State<QuizScreen> {
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(verdict!.note, style: TextStyle(color: AppColors.fg, fontWeight: FontWeight.w600, height: 1.5)),
               ),
+            // ✍️ پیت ب پیت: یا تە ➔ یا دروست
+            if ((verdict?.fixes ?? const []).isNotEmpty)
+              Padding(padding: const EdgeInsets.only(top: 8), child: SpellDiff(verdict!.fixes))
+            else if (!ok && q.type == QType.type && typeCtrl.text.trim().isNotEmpty)
+              Padding(padding: const EdgeInsets.only(top: 8), child: SpellDiff([(typeCtrl.text.trim(), '$correct')])),
             if (q.explain.isNotEmpty)
               Text(q.type == QType.type ? '🔊 ${q.explain}' : '💬 ${q.explain}', style: TextStyle(color: AppColors.fg70, height: 1.5)),
           ]),

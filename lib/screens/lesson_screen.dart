@@ -20,6 +20,7 @@ import 'widgets/reward_fx.dart';
 import 'widgets/mascot.dart';
 import 'widgets/record_button.dart';
 import 'widgets/speak_check.dart';
+import 'widgets/spell_diff.dart';
 import 'widgets/tap_words.dart';
 import '../data/glossary.dart';
 
@@ -202,10 +203,21 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     progress.addStudyTime(_watch.elapsed);
     _clearTaps();
     TapWords.hide();
+    _writeCtrl.dispose();
+    _writeFocus.dispose();
     super.dispose();
   }
 
   static List<String> _words(String s) => s.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+
+  /// ✍️ نڤیسین تنێ بۆ پەیڤ/رستێن کورت (نە پیتێن ئەلفوبێیێ و نە رستێن درێژ)
+  bool _canWrite(WordConcept c) {
+    final t = c.text(target).trim();
+    return t.length >= 3 && t.length <= 40 && _words(t).length <= 5 && RegExp(r'[A-Za-zÄÖÜäöüß]{2}').hasMatch(t);
+  }
+
+  final TextEditingController _writeCtrl = TextEditingController();
+  final FocusNode _writeFocus = FocusNode();
 
   /// ریزبەندیا قۆناغێ د لیستێ دا (بۆ «ژ قۆناغا ٢٠ ڤە ٢ جهێن ڤالا»)
   int get _unitNo => widget.unit == null ? 99 : appCurriculum.indexWhere((u) => u.id == widget.unit!.id) + 1;
@@ -219,6 +231,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ExerciseType.listen,
       ExerciseType.trueFalse,
       ExerciseType.reverse,
+      ExerciseType.write,
       ExerciseType.cloze,
       ExerciseType.speak,
     ];
@@ -245,6 +258,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       // 🖼️ پرسیارا وێنەیی تنێ بۆ پەیڤێن بەرچاڤ کو وێنەیێ وان هەیە
       if (type == ExerciseType.pickPicture && !hasPic(c)) type = ExerciseType.reverse;
       if (type == ExerciseType.cloze && _clozeFor(c) == null) type = ExerciseType.translate;
+      if (type == ExerciseType.write && !_canWrite(c)) type = ExerciseType.translate;
       // رستەیێن ٣+ پەیڤی ➔ ئاڤاکرنا رستێ
       if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
       list.add(Exercise(c, type));
@@ -280,7 +294,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ExerciseType.listen,
       ExerciseType.cloze,
       ExerciseType.reverse,
-      ExerciseType.translate,
+      ExerciseType.write,
       ExerciseType.speak,
       ExerciseType.cloze,
     ];
@@ -294,6 +308,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         if (type == ExerciseType.listen && (!voice.canSpeak(c, target) || progress.listenPaused)) type = ExerciseType.translate;
         if (type == ExerciseType.speak && progress.speakPaused) type = ExerciseType.translate;
         if (type == ExerciseType.cloze && _clozeFor(c) == null) type = ExerciseType.translate;
+        if (type == ExerciseType.write && !_canWrite(c)) type = ExerciseType.translate;
         if (type == ExerciseType.translate && _words(c.text(target)).length >= 3) type = ExerciseType.wordBank;
         list.add(Exercise(c, type));
       }
@@ -407,6 +422,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     _showMeaning = false;
     _verdict = null;
     selected = null;
+    _writeCtrl.clear();
     cz = null;
     checked = false;
     isCorrect = false;
@@ -545,8 +561,10 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         ExerciseType.pickPicture => current.concept.id,
         ExerciseType.trueFalse => tfCandidate?.id == current.concept.id ? 'yes' : 'no',
         ExerciseType.cloze => cz?.answer ?? '',
-        _ => current.concept
-            .text(current.type == ExerciseType.translate || current.type == ExerciseType.wordBank ? target : native),
+        _ => current.concept.text(
+            current.type == ExerciseType.translate || current.type == ExerciseType.wordBank || current.type == ExerciseType.write
+                ? target
+                : native),
       };
 
   String _praiseText = '', _comfortText = '';
@@ -560,6 +578,11 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
     if ((ex.type == ExerciseType.translate || ex.type == ExerciseType.cloze) && selected != null && selected != _correctAnswer) {
       v = judgeAnswer(selected!, _correctAnswer, target, ui: native);
     }
+    // ✍️ نڤیسین: پیت ب پیت + پیتا مەزن (ناڤ) + خەلەتیێن بچووک ب نیشاندانا راستکرنێ
+    if (ex.type == ExerciseType.write) {
+      _writeFocus.unfocus();
+      v = judgeAnswer(selected ?? '', _correctAnswer, target, typed: true, ui: native);
+    }
     if (ex.type == ExerciseType.wordBank) {
       final built = bankPicked.map((i) => bankTiles[i]).join(' ');
       if (built != ex.concept.text(target)) {
@@ -571,6 +594,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ExerciseType.speak => true, // 🗣️ ناسینا دەنگی ١٠٠٪ نینە: دل ناچن
       ExerciseType.match => matched.length == ex.group.length,
       ExerciseType.wordBank => bankPicked.map((i) => bankTiles[i]).join(' ') == ex.concept.text(target) || (v?.accepted ?? false),
+      ExerciseType.write => v?.accepted ?? false,
       _ => selected == _correctAnswer || (v?.accepted ?? false),
     };
     setState(() {
@@ -715,6 +739,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
       ExerciseType.speak => hasPracticeRecording,
       ExerciseType.match => checked,
       ExerciseType.wordBank => bankPicked.isNotEmpty,
+      ExerciseType.write => (selected ?? '').trim().isNotEmpty,
       _ => selected != null,
     };
 
@@ -781,6 +806,8 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
                             _trueFalseButtons()
                           else if (ex.type == ExerciseType.wordBank)
                             _wordBankArea(ex)
+                          else if (ex.type == ExerciseType.write)
+                            _writeArea(ex)
                           else
                             ..._optionTiles(),
                           if (ex.type == ExerciseType.listen) _skipButton(ExerciseType.listen),
@@ -815,6 +842,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         ExerciseType.pickPicture => tr(native, 'وێنەیێ دروست هەلبژێرە 🖼️', 'Wähle das richtige Bild 🖼️', 'Pick the right picture 🖼️'),
         ExerciseType.trueFalse => tr(native, 'ئەڤە دروستە یان خەلەتە؟', 'Richtig oder falsch?', 'True or false?'),
         ExerciseType.cloze => tr(native, 'جهێ ڤالا پڕ بکە دا رستە تەمام ببیت 📝', 'Ergänze die Lücke 📝', 'Fill in the blank 📝'),
+        ExerciseType.write => tr(native, 'ب ${target.title} بنڤیسە ✍️', 'Schreib es auf ${target.title} ✍️', 'Type it in ${target.title} ✍️'),
       };
 
   Widget _promptCard(Exercise ex) {
@@ -857,7 +885,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
         ]),
       );
     }
-    final showNative = ex.type == ExerciseType.translate || ex.type == ExerciseType.wordBank;
+    final showNative = ex.type == ExerciseType.translate || ex.type == ExerciseType.wordBank || ex.type == ExerciseType.write;
     final isListen = ex.type == ExerciseType.listen;
     final mainLang = showNative ? native : target;
 
@@ -903,7 +931,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
               Text(c.text(native), textDirection: native.direction, style: TextStyle(color: AppColors.fg60)),
               const SizedBox(height: 6),
             ],
-            if (ex.type != ExerciseType.wordBank || checked)
+            if ((ex.type != ExerciseType.wordBank && ex.type != ExerciseType.write) || checked)
               Text('💡 ${c.hint(target)}', textAlign: TextAlign.center, style: TextStyle(fontSize: 14, color: AppColors.accent)),
             if (!showNative && voice.canSpeak(c, target)) ...[
               const SizedBox(height: 10),
@@ -1240,6 +1268,88 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
   }
 
   // ───────── 🧩 ئاڤاکرنا رستێ ─────────
+  /// ✍️ خانەیا نڤیسینێ + پیتێن تایبەت یێن ئەلمانی
+  Widget _writeArea(Exercise ex) {
+    void insert(String ch) {
+      final sel = _writeCtrl.selection;
+      final t = _writeCtrl.text;
+      final start = sel.isValid ? sel.start : t.length, end = sel.isValid ? sel.end : t.length;
+      final nt = t.replaceRange(start, end, ch);
+      _writeCtrl.value = TextEditingValue(text: nt, selection: TextSelection.collapsed(offset: start + ch.length));
+      setState(() => selected = nt);
+      _writeFocus.requestFocus();
+    }
+
+    final border = !checked
+        ? AppColors.accent
+        : (isCorrect ? ((_verdict?.soft ?? false) ? AppColors.orange : AppColors.green) : AppColors.red);
+    return Directionality(
+      textDirection: target.direction,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        TextField(
+          controller: _writeCtrl,
+          focusNode: _writeFocus,
+          readOnly: checked,
+          autocorrect: false,
+          enableSuggestions: false,
+          textCapitalization: TextCapitalization.sentences,
+          textInputAction: TextInputAction.done,
+          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+          minLines: 1,
+          maxLines: 3,
+          onChanged: (t) => setState(() => selected = t),
+          onSubmitted: (_) {
+            if (!checked && (selected ?? '').trim().isNotEmpty) _check();
+          },
+          decoration: InputDecoration(
+            hintText: tr(native, 'ل ڤێرێ بنڤیسە…', 'Hier schreiben…', 'Type here…'),
+            filled: true,
+            fillColor: AppColors.card,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: border, width: 2)),
+            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: border, width: 2.5)),
+          ),
+        ),
+        if (target == AppLanguage.german && !checked) ...[
+          const SizedBox(height: 10),
+          Wrap(alignment: WrapAlignment.center, spacing: 6, runSpacing: 6, children: [
+            for (final ch in const ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü'])
+              ActionChip(
+                label: Text(ch, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                backgroundColor: AppColors.card,
+                side: BorderSide(color: AppColors.fg24, width: 1.5),
+                onPressed: () => insert(ch),
+              ),
+          ]),
+        ],
+      ]),
+    );
+  }
+
+  /// ↔️ پەیڤەکا د ریزا بەرسڤێ دا: بکێشە و ل سەر پەیڤەکا دی بهێلە ➔ دچیتە جهێ وێ
+  Widget _dragChip(int k, Widget child) {
+    if (checked) return child;
+    return DragTarget<int>(
+      onWillAcceptWithDetails: (d) => d.data != k,
+      onAcceptWithDetails: (d) => setState(() {
+        final item = bankPicked.removeAt(d.data);
+        bankPicked.insert(k, item);
+      }),
+      builder: (_, cand, __) => Draggable<int>(
+        data: k,
+        feedback: Material(color: Colors.transparent, child: Opacity(opacity: 0.9, child: child)),
+        childWhenDragging: Opacity(opacity: 0.25, child: child),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 150),
+          decoration: cand.isEmpty
+              ? null
+              : BoxDecoration(border: Border(left: BorderSide(color: AppColors.accent, width: 3), right: BorderSide(color: AppColors.accent, width: 3))),
+          child: child,
+        ),
+      ),
+    );
+  }
+
   Widget _wordBankArea(Exercise ex) {
     Widget chip(int i, {required bool inAnswer}) => Padding(
           padding: const EdgeInsets.all(4),
@@ -1271,8 +1381,31 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
             decoration: BoxDecoration(
               border: Border(bottom: BorderSide(color: AppColors.fg24, width: 2)),
             ),
-            child: Wrap(children: [for (final i in bankPicked) chip(i, inAnswer: true)]),
+            // ↔️ پەیڤان بکێشە دا جهێ وان د ریزێ دا بگوهۆڕی (پێدڤی نینە هەمیان راکەی)
+            child: Wrap(children: [
+              for (var k = 0; k < bankPicked.length; k++) _dragChip(k, chip(bankPicked[k], inAnswer: true)),
+              if (bankPicked.isNotEmpty && !checked)
+                DragTarget<int>(
+                  onWillAcceptWithDetails: (d) => d.data != bankPicked.length - 1,
+                  onAcceptWithDetails: (d) => setState(() => bankPicked.add(bankPicked.removeAt(d.data))),
+                  builder: (_, cand, __) => Container(
+                    width: cand.isEmpty ? 30 : 56,
+                    height: 44,
+                    margin: const EdgeInsets.all(4),
+                    decoration: cand.isEmpty
+                        ? null
+                        : BoxDecoration(
+                            border: Border.all(color: AppColors.accent, width: 2), borderRadius: BorderRadius.circular(10)),
+                  ),
+                ),
+            ]),
           ),
+          if (bankPicked.length >= 2 && !checked)
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: Text(tr(native, '↔️ دشێی پەیڤەکێ بکێشی دا جهێ وێ بگوهۆڕی', '↔️ Ziehe ein Wort, um es zu verschieben', '↔️ Drag a word to move it'),
+                  textAlign: TextAlign.center, textDirection: native.direction, style: TextStyle(color: AppColors.fg54, fontSize: 12)),
+            ),
           const SizedBox(height: 24),
           // پارچە
           Wrap(
@@ -1330,7 +1463,18 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
           Icon(soft ? Icons.lightbulb_rounded : (isCorrect ? Icons.check_circle : Icons.error), color: color, size: 28),
           const SizedBox(width: 12),
           Expanded(
-              child: Text(soft ? _verdict!.note : msg, style: TextStyle(fontSize: soft ? 15.5 : 16, fontWeight: FontWeight.bold, height: soft ? 1.5 : null))),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+              Text(soft ? _verdict!.note : msg, style: TextStyle(fontSize: soft ? 15.5 : 16, fontWeight: FontWeight.bold, height: soft ? 1.5 : null)),
+              // ✍️ پیت ب پیت: یا تە ➔ یا دروست
+              if ((_verdict?.fixes ?? const []).isNotEmpty) ...[
+                const SizedBox(height: 8),
+                SpellDiff(_verdict!.fixes),
+              ] else if (!isCorrect && ex.type == ExerciseType.write && (selected ?? '').trim().isNotEmpty) ...[
+                const SizedBox(height: 8),
+                SpellDiff([(selected!.trim(), _correctAnswer)]),
+              ],
+            ]),
+          ),
         ],
       ),
     );

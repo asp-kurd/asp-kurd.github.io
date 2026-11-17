@@ -15,6 +15,7 @@ import '../ui.dart';
 import 'book_screen.dart' show BookTable;
 import 'widgets/combo.dart' show showXpPop;
 import 'widgets/mascot.dart';
+import 'widgets/reorder_wrap.dart';
 
 /// 📘 رێزمان ل دویف وانێ (Lektion 1–14): ڕوونکرن ب ئەلمانی، ب دوگمەیەکێ دبیتە کوردی.
 
@@ -893,7 +894,8 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
           width: double.infinity,
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(border: Border(bottom: BorderSide(color: AppColors.fg24, width: 2))),
-          child: Wrap(children: [for (final i in picked) chip(i, true)]),
+          child: ReorderWrap(
+              items: picked, onMove: (f, t) => setState(() => moveItem(picked, f, t)), build: (i) => chip(i, true)),
         ),
         const SizedBox(height: 14),
         Wrap(alignment: WrapAlignment.center, children: [

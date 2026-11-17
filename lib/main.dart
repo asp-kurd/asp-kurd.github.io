@@ -267,6 +267,13 @@ class ZimanProApp extends StatelessWidget {
           unit: null,
           concepts: allConcepts.where((c) => RegExp(r'^(der|die|das) [A-ZÄÖÜ][a-zäöüß]+$').hasMatch(c.de)).take(4).toList(),
           onlyType: ExerciseType.reverse),
+      'write' || 'wordorder' => InteractiveLessonScreen(
+          unit: null,
+          concepts: const [
+            WordConcept('demo_w1', emoji: '🎬', ku: 'ئەز دچمە سینەمایێ.', kuLat: '', de: 'Ich gehe ins Kino.', deHint: '', en: 'I go to the cinema.', enHint: ''),
+            WordConcept('demo_w2', emoji: '🍞', ku: 'ئەز نانی دخۆم.', kuLat: '', de: 'Ich esse Brot.', deHint: '', en: 'I eat bread.', enHint: ''),
+          ],
+          onlyType: d == 'write' ? ExerciseType.write : ExerciseType.wordBank),
       'newcloze' => InteractiveLessonScreen(
           unit: null, concepts: allConcepts.where((c) => c.cloze != null).skip(20).take(6).toList(), onlyType: ExerciseType.cloze),
       'examhint' || 'examtype' => () {
