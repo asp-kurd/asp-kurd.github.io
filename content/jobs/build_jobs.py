@@ -269,15 +269,31 @@ def rows(block, n):
     return out
 
 
-data = {"version": 1, "jobs": []}
+import sys
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from extra import EXTRA  # noqa: E402
+
+data = {"version": 2, "jobs": []}
 for jid, emo, ku, de, en, words, phrases in JOBS:
     items = []
     for k, (wde, wku, hint, wen, wemo) in enumerate(rows(words, 5)):
         items.append({"id": f"job_{jid}_w{k}", "de": wde, "ku": wku, "kuLat": "", "deHint": hint, "en": wen, "emoji": wemo})
     for k, (pde, pku, pen) in enumerate(rows(phrases, 3)):
         items.append({"id": f"job_{jid}_p{k}", "de": pde, "ku": pku, "kuLat": "", "deHint": "", "en": pen, "emoji": "", "phrase": True})
-    assert len(items) == 15
-    data["jobs"].append({"id": jid, "emoji": emo, "ku": ku, "de": de, "en": en, "items": items})
+    # ➕ قۆناغێن زێدە: ٥ ناڤ (قۆناغا ١) + ١٠ کار/ڕەنگدان (قۆناغا ٢)، ٧ رستە، دیالۆگ
+    xw, xp, xd = EXTRA[jid]
+    words = [it for it in items if not it.get("phrase")]
+    phrases = [it for it in items if it.get("phrase")]
+    for k, (wde, wku, hint, wen, wemo) in enumerate(rows(xw, 5)):
+        words.append({"id": f"job_{jid}_w{10 + k}", "de": wde, "ku": wku, "kuLat": "", "deHint": hint, "en": wen, "emoji": wemo})
+    for k, (pde, pku, pen) in enumerate(rows(xp, 3)):
+        phrases.append({"id": f"job_{jid}_p{5 + k}", "de": pde, "ku": pku, "kuLat": "", "deHint": "", "en": pen, "emoji": "", "phrase": True})
+    dialog = [{"id": f"job_{jid}_d{k}", "who": who, "de": dde, "ku": dku, "kuLat": "", "deHint": "", "en": "", "emoji": "", "dialog": True}
+              for k, (who, dde, dku) in enumerate(rows(xd, 3))]
+    assert len(words) == 25 and len(phrases) == 12 and 6 <= len(dialog) <= 8, (jid, len(words), len(phrases), len(dialog))
+    data["jobs"].append({"id": jid, "emoji": emo, "ku": ku, "de": de, "en": en, "items": words + phrases + dialog,
+                         "stages": [[w["id"] for w in words[:15]], [w["id"] for w in words[15:]], [p["id"] for p in phrases], [d["id"] for d in dialog]]})
 
 (ROOT / "assets/jobs.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 print(len(data["jobs"]), "jobs,", sum(len(j["items"]) for j in data["jobs"]), "items")
+ids = [i["id"] for j in data["jobs"] for i in j["items"]]; assert len(ids) == len(set(ids))

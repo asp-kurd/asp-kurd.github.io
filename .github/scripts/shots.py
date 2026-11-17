@@ -7,7 +7,8 @@ os.makedirs(out, exist_ok=True)
 pages = [
     ("write_typo", "demo=write&theme=dark"),
     ("write_caps", "demo=write&theme=dark"),
-    ("goethe_pick", "demo=goethe&theme=dark"),
+    ("job_stages", "demo=job&j=restaurant&theme=dark"),
+    ("job_dialog", "demo=jobdialog&j=restaurant&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
@@ -53,7 +54,7 @@ with sync_playwright() as p:
             if name.startswith("write_"):
                 # ✍️ نڤیسین: خانەیێ بگرە ➔ بنڤیسە ➔ پشکنین
                 txt = "Ich gehe ins keno" if name == "write_typo" else "ich gehe ins kino"
-                pg.mouse.click(214, 500); time.sleep(0.8)
+                pg.mouse.click(214, 465); time.sleep(1.2)
                 pg.keyboard.type(txt, delay=40); time.sleep(0.6)
                 pg.screenshot(path=f"{out}/{name}_typed.png")
                 pg.keyboard.press("Enter"); time.sleep(2.5)

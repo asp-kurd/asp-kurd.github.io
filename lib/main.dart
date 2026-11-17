@@ -193,6 +193,13 @@ class ZimanProApp extends StatelessWidget {
       'grammarlist' => const GrammarListScreen(),
       'home' => const HomeScreen(),
       'jobs' => const JobsScreen(),
+      'jobdialog' => FutureBuilder<List<JobInfo>>(
+          future: loadJobs(),
+          builder: (_, s) => s.data == null
+              ? const SizedBox()
+              : JobDialogScreen(
+                  job: s.data!.firstWhere((j) => j.id == (Uri.base.queryParameters['j'] ?? 'supermarkt')),
+                  color: const Color(0xFF58CC02))),
       'job' => FutureBuilder<List<JobInfo>>(
           future: loadJobs(),
           builder: (_, s) => s.data == null

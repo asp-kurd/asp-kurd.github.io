@@ -195,7 +195,8 @@ def collect():
         for job in json.loads(jb.read_text(encoding="utf-8"))["jobs"]:
             for it in job["items"]:
                 jobs["de"][it["de"]] = it["de"]
-                jobs["en"][it["en"]] = it["en"]
+                if it.get("en"):
+                    jobs["en"][it["en"]] = it["en"]
     for k, src in SAME_TEXT.items():
         jobs[k] = {**jobs[src], **jobs[k]}
     return jobs

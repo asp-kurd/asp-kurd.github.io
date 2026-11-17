@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'jobs_screen.dart' show JobBadgesRow;
 import 'chat_screen.dart';
 
 import '../data/curriculum.dart';
@@ -96,6 +97,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             // 🔗 لینکێن ASP (Facebook، TikTok … — ئەدمین ددانیت)
             const SocialLinksRow(),
+            const JobBadgesRow(), // 🏅 نیشانێن کاری
             const SizedBox(height: 12),
             ListTile(
               tileColor: AppColors.card,
