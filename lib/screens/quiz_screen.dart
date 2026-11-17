@@ -567,7 +567,7 @@ class _QuizScreenState extends State<QuizScreen> {
             // ✍️ پیت ب پیت: یا تە ➔ یا دروست
             if ((verdict?.fixes ?? const []).isNotEmpty)
               Padding(padding: const EdgeInsets.only(top: 8), child: SpellDiff(verdict!.fixes))
-            else if (!ok && q.type == QType.type && typeCtrl.text.trim().isNotEmpty)
+            else if (!ok && q.type == QType.type && looksClose(typeCtrl.text, '$correct'))
               Padding(padding: const EdgeInsets.only(top: 8), child: SpellDiff([(typeCtrl.text.trim(), '$correct')])),
             if (q.explain.isNotEmpty)
               Text(q.type == QType.type ? '🔊 ${q.explain}' : '💬 ${q.explain}', style: TextStyle(color: AppColors.fg70, height: 1.5)),

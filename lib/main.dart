@@ -279,9 +279,9 @@ class ZimanProApp extends StatelessWidget {
           onlyType: ExerciseType.reverse),
       'write' || 'wordorder' => InteractiveLessonScreen(
           unit: null,
-          concepts: const [
-            WordConcept('demo_w1', emoji: '🎬', ku: 'ئەز دچمە سینەمایێ.', kuLat: '', de: 'Ich gehe ins Kino.', deHint: '', en: 'I go to the cinema.', enHint: ''),
-            WordConcept('demo_w2', emoji: '🍞', ku: 'ئەز نانی دخۆم.', kuLat: '', de: 'Ich esse Brot.', deHint: '', en: 'I eat bread.', enHint: ''),
+          concepts: [
+            const WordConcept('demo_w1', emoji: '🎬', ku: 'ئەز دچمە سینەمایێ.', kuLat: '', de: 'Ich gehe ins Kino.', deHint: '', en: 'I go to the cinema.', enHint: ''),
+            if (d != 'write') const WordConcept('demo_w2', emoji: '🍞', ku: 'ئەز نانی دخۆم.', kuLat: '', de: 'Ich esse Brot.', deHint: '', en: 'I eat bread.', enHint: ''),
           ],
           onlyType: d == 'write' ? ExerciseType.write : ExerciseType.wordBank),
       'newcloze' => InteractiveLessonScreen(

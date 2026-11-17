@@ -329,3 +329,11 @@ List<(String, String)>? _wordFixes(String given, String expected) {
   if (out.isEmpty || out.length > (e.length / 3).ceil().clamp(1, 3)) return null;
   return out;
 }
+
+/// ✍️ ئایا بەرسڤا تە نێزیکی یا دروستە؟ (بۆ نیشاندانا جوداهیێ پیت ب پیت — نە بۆ رستەیەکا هەمی جودا)
+bool looksClose(String given, String correct) {
+  final a = given.trim().toLowerCase(), b = correct.trim().toLowerCase();
+  if (a.isEmpty || b.isEmpty) return false;
+  final m = a.length > b.length ? a.length : b.length;
+  return _lev(a, b) <= (m * 0.4).ceil();
+}

@@ -1469,7 +1469,7 @@ class _InteractiveLessonScreenState extends State<InteractiveLessonScreen> {
               if ((_verdict?.fixes ?? const []).isNotEmpty) ...[
                 const SizedBox(height: 8),
                 SpellDiff(_verdict!.fixes),
-              ] else if (!isCorrect && ex.type == ExerciseType.write && (selected ?? '').trim().isNotEmpty) ...[
+              ] else if (!isCorrect && ex.type == ExerciseType.write && looksClose(selected ?? '', _correctAnswer)) ...[
                 const SizedBox(height: 8),
                 SpellDiff([(selected!.trim(), _correctAnswer)]),
               ],
