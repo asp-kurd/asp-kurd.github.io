@@ -6,16 +6,16 @@ import '../../ui.dart';
 /// (پێدڤی نینە هەمی پەیڤان راکەی و ژ نوی هەلبژێری)
 class ReorderWrap extends StatelessWidget {
   final List<int> items;
-  final Widget Function(int item) build;
+  final Widget Function(int item) itemBuilder;
   final void Function(int from, int to) onMove;
   final bool enabled;
   final double spacing;
-  const ReorderWrap({super.key, required this.items, required this.build, required this.onMove, this.enabled = true, this.spacing = 0});
+  const ReorderWrap({super.key, required this.items, required this.itemBuilder, required this.onMove, this.enabled = true, this.spacing = 0});
 
   @override
   Widget build(BuildContext context) {
     Widget cell(int k) {
-      final child = build(items[k]);
+      final child = itemBuilder(items[k]);
       if (!enabled) return child;
       return DragTarget<int>(
         onWillAcceptWithDetails: (d) => d.data != k,

@@ -71,7 +71,14 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
     super.dispose();
   }
 
-  List get parts => data!['parts'] as List;
+  /// 📚 ٥ تاقیکرن: Modelltest 1 (parts) + tests
+  int test = 0;
+  List<Map<String, dynamic>> get tests => [
+        {'id': 't1', 'title': 'Modelltest 1', 'parts': data!['parts']},
+        for (final t in (data!['tests'] as List? ?? const [])) t as Map<String, dynamic>,
+      ];
+  String get _examId => test == 0 ? 'goethe' : 'goethe_${tests[test]['id']}';
+  List get parts => tests[test]['parts'] as List;
   Map<String, dynamic> get cp => parts[part] as Map<String, dynamic>;
 
   void _startPart(int k) {
@@ -210,8 +217,9 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
     setState(() => part = parts.length);
     final pts = _partPoints.values.fold<double>(0, (a, b) => a + b);
     final pct = (pts * 100 / 60).round();
-    await ProgressService.instance.saveExam('goethe', pct);
-    Backend.instance.examResult('goethe', pts.round(), 60);
+    await ProgressService.instance.saveExam(_examId, pct);
+    if (test != 0) await ProgressService.instance.saveExam('goethe', pct); // باشترین ئەنجاما گشتی
+    Backend.instance.examResult(_examId, pts.round(), 60);
     await ProgressService.instance.earn((pts / 2).round());
   }
 
@@ -222,7 +230,9 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(part >= 0 && part < (data == null ? 0 : parts.length) ? '🎓 ${cp['title']}' : '🎓 Goethe A1 — Modelltest'),
+          title: Text(part >= 0 && part < (data == null ? 0 : parts.length)
+              ? '🎓 ${cp['title']}'
+              : (data == null ? '🎓 Goethe A1' : '🎓 Goethe A1 — ${tests[test]['title']}')),
           actions: [
             if (part >= 0 && data != null && part < parts.length && !partIntro)
               Padding(
@@ -253,6 +263,16 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
   Widget _intro() => ListView(padding: const EdgeInsets.all(20), children: [
         MascotSays(mood: MascotMood.ask, height: 120, text: 'ئەڤە ئەزموونەکا وەکی Goethe A1 یا ڕاستییە. بەرهەڤی؟ 💪'),
         const SizedBox(height: 14),
+        // 📚 کیژ تاقیکرن؟
+        Text('تاقیکرنەکێ هەلبژێرە:', style: TextStyle(color: AppColors.fg60, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        SizedBox(
+          height: 92,
+          child: ListView(scrollDirection: Axis.horizontal, children: [
+            for (var k = 0; k < tests.length; k++) _testChip(k),
+          ]),
+        ),
+        const SizedBox(height: 14),
         for (final p in parts)
           Card(
             color: AppColors.card,
@@ -266,15 +286,42 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
         const SizedBox(height: 6),
         Text('🏁 کۆی گشتی ٦٠ خالە. بۆ دەرچوونێ ٣٦ خال (٦٠٪) پێدڤینە. دەمێ هەر پشکەکێ ب دوماهی بهێت، پشکا دی دەستپێدکەت.',
             style: TextStyle(color: AppColors.fg70, height: 1.5)),
-        if (ProgressService.instance.examBest('goethe') != null)
+        if (ProgressService.instance.examBest(_examId) != null)
           Padding(
             padding: const EdgeInsets.only(top: 8),
-            child: Text('باشترین ئەنجاما تە: ${_ku(ProgressService.instance.examBest('goethe')!)}٪',
+            child: Text('باشترین ئەنجاما تە د ڤێ تاقیکرنێ دا: ${_ku(ProgressService.instance.examBest(_examId)!)}٪',
                 style: TextStyle(color: AppColors.goldText, fontWeight: FontWeight.bold)),
           ),
         const SizedBox(height: 18),
         BigButton(label: 'دەستپێکرن', color: AppColors.red, onPressed: () => _startPart(0)),
       ]);
+
+  Widget _testChip(int k) {
+    final sel = k == test;
+    final best = ProgressService.instance.examBest(k == 0 ? 'goethe' : 'goethe_${tests[k]['id']}');
+    final passed = (best ?? 0) >= 60;
+    return GestureDetector(
+      onTap: () => setState(() => test = k),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        width: 104,
+        margin: const EdgeInsetsDirectional.only(end: 10),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: sel ? AppColors.red.withValues(alpha: 0.16) : AppColors.card,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: sel ? AppColors.red : AppColors.fg24, width: sel ? 2.4 : 1.4),
+        ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(best == null ? '📝' : (passed ? '🏅' : '🔁'), style: const TextStyle(fontSize: 24)),
+          const SizedBox(height: 2),
+          Text('تاقیکرن ${_ku(k + 1)}', style: const TextStyle(fontWeight: FontWeight.bold)),
+          Text(best == null ? 'نوو' : '${_ku(best)}٪',
+              style: TextStyle(fontSize: 12, color: passed ? AppColors.green : AppColors.fg54, fontWeight: FontWeight.bold)),
+        ]),
+      ),
+    );
+  }
 
   Widget _partIntro() => ListView(padding: const EdgeInsets.all(20), children: [
         Text('${cp['ku']} — ${cp['title']}', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
@@ -354,6 +401,35 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
         ]),
       );
 
+  Widget _picChoice(_Flat f, int value, String pic, String letter, String label) {
+    final sel = answers[f] == value;
+    return GestureDetector(
+      onTap: () => setState(() => answers[f] = value),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        padding: const EdgeInsets.fromLTRB(6, 10, 6, 10),
+        decoration: BoxDecoration(
+          color: sel ? AppColors.accent.withValues(alpha: 0.15) : AppColors.card,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: sel ? AppColors.accent : AppColors.fg24, width: sel ? 2.6 : 1.6),
+        ),
+        child: Column(children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(letter, style: TextStyle(fontWeight: FontWeight.w900, color: sel ? AppColors.accent : AppColors.fg54)),
+          ),
+          Text(pic, style: const TextStyle(fontSize: 52)),
+          const SizedBox(height: 4),
+          Text(label,
+              textAlign: TextAlign.center,
+              textDirection: TextDirection.ltr,
+              maxLines: 2,
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+        ]),
+      ),
+    );
+  }
+
   Widget _choice(_Flat f, Object value, String label, {String? sub}) {
     final sel = answers[f] == value;
     return GestureDetector(
@@ -383,6 +459,22 @@ class _GoetheMockScreenState extends State<GoetheMockScreen> {
     switch (it['t']) {
       case 'mc':
         final opts = it['options'] as List;
+        final pics = it['pics'] as List?;
+        if (pics != null) {
+          // 🖼️ وەکی ئەزموونا ڕاستی: ٣ وێنە (a · b · c)
+          return [
+            _q(it['q'] as String, (it['ku'] ?? '') as String),
+            Row(textDirection: TextDirection.ltr, children: [
+              for (var k = 0; k < opts.length; k++)
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: k == 0 ? 0 : 5, right: k == opts.length - 1 ? 0 : 5),
+                    child: _picChoice(f, k, '${pics[k]}', '${'abc'[k]}', '${opts[k]}'),
+                  ),
+                ),
+            ]),
+          ];
+        }
         return [
           _q(it['q'] as String, (it['ku'] ?? '') as String),
           for (var k = 0; k < opts.length; k++) _choice(f, k, '${'abc'[k]})  ${opts[k]}'),

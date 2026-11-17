@@ -122,7 +122,8 @@ def collect():
                             jobs["de"][txt] = txt
     goe = ROOT / "assets/goethe.json"
     if goe.exists():  # 🎓 Goethe Modelltest: دەنگێ گوهداریێ (ب ڕەگەزێ ئاخفتنکەری)
-        for part in json.loads(goe.read_text(encoding="utf-8"))["parts"]:
+        gd = json.loads(goe.read_text(encoding="utf-8"))
+        for part in gd["parts"] + [p for t in gd.get("tests", []) for p in t["parts"]]:
             for sec in part["sections"]:
                 for it in sec["items"]:
                     for ln in it.get("audio") or []:

@@ -411,7 +411,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 items: order,
                 enabled: !checked,
                 onMove: (f, t) => setState(() => moveItem(order, f, t)),
-                build: (k) => ActionChip(
+                itemBuilder: (k) => ActionChip(
                   label: Text(tiles[k], style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
                   onPressed: checked ? null : () => setState(() => order.remove(k)),
                 ),

@@ -895,7 +895,7 @@ class _GrammarPracticeScreenState extends State<GrammarPracticeScreen> {
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(border: Border(bottom: BorderSide(color: AppColors.fg24, width: 2))),
           child: ReorderWrap(
-              items: picked, onMove: (f, t) => setState(() => moveItem(picked, f, t)), build: (i) => chip(i, true)),
+              items: picked, onMove: (f, t) => setState(() => moveItem(picked, f, t)), itemBuilder: (i) => chip(i, true)),
         ),
         const SizedBox(height: 14),
         Wrap(alignment: WrapAlignment.center, children: [

@@ -7,6 +7,7 @@ os.makedirs(out, exist_ok=True)
 pages = [
     ("write_typo", "demo=write&theme=dark"),
     ("write_caps", "demo=write&theme=dark"),
+    ("goethe_pick", "demo=goethe&theme=dark"),
 ]
 with sync_playwright() as p:
     b = p.chromium.launch(args=["--use-gl=swiftshader", "--enable-unsafe-swiftshader"])
