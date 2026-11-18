@@ -239,7 +239,7 @@ class _FriendsPlan extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Row(children: [
-          Expanded(child: Text('$teamXp / $goal XP', textDirection: TextDirection.ltr, style: const TextStyle(fontWeight: FontWeight.bold))),
+          Expanded(child: Text('$teamXp / $goal XP', textDirection: TextDirection.ltr, textAlign: TextAlign.right, style: const TextStyle(fontWeight: FontWeight.bold))),
           const Text('🎁 سندوقا تیمێ'),
         ]),
         const SizedBox(height: 8),
